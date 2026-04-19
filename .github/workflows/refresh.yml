@@ -34,6 +34,7 @@ jobs:
           python scripts/fetch_intl_rugby.py
           python scripts/fetch_provinces.py
           python scripts/fetch_schools.py
+          python scripts/fetch_news.py
           exit 0
 
       - name: Commit refreshed data

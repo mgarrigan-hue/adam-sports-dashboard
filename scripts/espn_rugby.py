@@ -40,6 +40,8 @@ def parse_events(data, competition_label: str | None = None):
             "date": ev.get("date"),
             "home": home["team"].get("displayName") or home["team"].get("name"),
             "away": away["team"].get("displayName") or away["team"].get("name"),
+            "home_logo": home.get("team", {}).get("logo") or "",
+            "away_logo": away.get("team", {}).get("logo") or "",
             "competition": competition_label or league_name,
         }
         if completed:

@@ -62,6 +62,33 @@
     ],
     "note": "Generic schools fallback — match streamed on Leinster Rugby YouTube if covered."
   },
+  "Metro Invitational": {
+    "live": [],
+    "note": "Local Dublin youth tournament — usually no public stream; check the host club's social channels."
+  },
+  "School Youth": {
+    "live": [
+      { "label": "Leinster Rugby YouTube (selected)", "url": "https://www.youtube.com/@LeinsterRugbyVideos" }
+    ],
+    "note": "Leinster School Youth — finals are sometimes streamed on Leinster Rugby YouTube."
+  },
+  "AIL": {
+    "live": [
+      { "label": "Premier Sports", "channel": true },
+      { "label": "Irish Rugby YouTube (highlights)", "url": "https://www.youtube.com/@IrishRugbyTV" }
+    ],
+    "highlights": [
+      { "label": "Irish Rugby YouTube", "url": "https://www.youtube.com/@IrishRugbyTV" }
+    ],
+    "note": "Energia All-Ireland League — selected matches on Premier Sports."
+  },
+  "Dublin Club": {
+    "live": [],
+    "highlights": [
+      { "label": "St Mary's College RFC site", "url": "https://www.stmaryscollegerfc.ie/results/" }
+    ],
+    "note": "Local club rugby — check the host club's social media for any stream."
+  },
   "_default": {
     "note": "Check local listings or the competition's official site."
   }

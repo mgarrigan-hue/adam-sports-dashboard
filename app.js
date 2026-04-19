@@ -16,6 +16,7 @@ const DATA_FILES = {
   schools: "data/schools.json",
   news: "data/news.json",
   watch: "data/watch.json",
+  club: "data/dublin_club.json",
 };
 
 let WATCH = {};
@@ -29,6 +30,16 @@ function watchInfo(competition) {
     if (c.includes(k.toLowerCase())) return WATCH[k];
   }
   return WATCH._default || null;
+}
+
+function highlightsSearchUrl(query) {
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(query + " highlights");
+}
+function highlightsChipHtml(query, label) {
+  if (!query) return "";
+  const url = highlightsSearchUrl(query);
+  const lbl = label || "Highlights";
+  return `<a class="watch-chip is-link is-highlights" href="${escapeAttr(url)}" target="_blank" rel="noopener" title="Search YouTube for ${escapeAttr(query)} highlights">🎬 ${escapeHtml(lbl)} ↗</a>`;
 }
 
 function watchChipsHtml(competition, opts = {}) {
@@ -197,6 +208,9 @@ function buildFeed(all) {
         title: `🏆 ${r.race_name} — Winner: ${r.winner}`,
         meta: r.podium ? `Podium: ${r.podium.join(" · ")}` : "",
         fav: isFavF1(r.winner) || (r.podium || []).some(isFavF1),
+        watch: "Formula 1",
+        isResult: true,
+        highlightsQuery: `F1 ${r.race_name} ${(new Date(r.date)).getFullYear() || ""}`,
       });
     });
     (all.f1.upcoming || []).forEach(r => {
@@ -221,6 +235,9 @@ function buildFeed(all) {
       fav: isFavRugby(m.home) || isFavRugby(m.away) || isFavSchool(m.home) || isFavSchool(m.away),
       watch: m.competition || defaultComp,
       isResult: m.home_score != null,
+      highlightsQuery: m.home_score != null
+        ? `${m.home} v ${m.away} ${m.competition || defaultComp}`
+        : null,
     });
   };
   if (all.intl) {
@@ -239,6 +256,7 @@ function buildFeed(all) {
       fav: isFavSchool(m.home) || isFavSchool(m.away),
       watch: m.competition || "Schools",
       isResult: true,
+      highlightsQuery: `${m.home} v ${m.away} Leinster schools rugby`,
     }));
     (all.schools.fixtures || []).forEach(m => items.push({
       date: m.date, tag: "schools",
@@ -248,6 +266,26 @@ function buildFeed(all) {
       watch: m.competition || "Schools",
       isResult: false,
     }));
+  }
+  if (all.club) {
+    const pushClub = (m, isResult) => {
+      const homeCell = `<span class="team-cell">${escapeHtml(m.home)}</span>`;
+      const awayCell = `<span class="team-cell">${escapeHtml(m.away)}</span>`;
+      const titleHtml = isResult
+        ? `${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell}`
+        : `${homeCell} v ${awayCell}`;
+      items.push({
+        date: m.date, tag: "club",
+        titleHtml,
+        meta: m.competition || "St Mary's College RFC",
+        fav: m.involves_smc !== false,
+        watch: m.competition || "Dublin Club",
+        isResult,
+        highlightsQuery: isResult ? `${m.home} v ${m.away} ${m.competition || "rugby"}` : null,
+      });
+    };
+    (all.club.results || []).slice(0, 25).forEach(m => pushClub(m, true));
+    (all.club.fixtures || []).slice(0, 25).forEach(m => pushClub(m, false));
   }
   items.sort((a, b) => {
     const da = a.date ? new Date(a.date).getTime() : -Infinity;
@@ -267,6 +305,8 @@ function renderFeed(items) {
     const isPast = i.date && new Date(i.date).getTime() < Date.now();
     // For past events, show highlights link (where applicable) instead of live channels.
     const watch = i.watch ? watchChipsHtml(i.watch, { includeHighlights: isPast || i.isResult }) : "";
+    const hl = (i.isResult || isPast) && i.highlightsQuery ? highlightsChipHtml(i.highlightsQuery) : "";
+    const extraRow = hl ? `<div class="watch-row">${hl}</div>` : "";
     return `
     <li class="${i.fav ? "fav" : ""}">
       <span class="when">${i.date ? `${fmtDate(i.date)}<br><small>${relTime(i.date)}</small>` : "TBD"}</span>
@@ -274,6 +314,7 @@ function renderFeed(items) {
         <div class="what">${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="who">${escapeHtml(i.meta || "")}</div>
         ${watch}
+        ${extraRow}
       </span>
       <span class="tag ${i.tag}">${i.tag}</span>
     </li>
@@ -501,13 +542,15 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
 
   const rec = (d.results || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label, { includeHighlights: true });
+    const hl = highlightsChipHtml(`${m.home} v ${m.away} ${m.competition || label}`);
+    const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     return `
     <tr class="${isFav(m) ? "fav-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : ""}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
       <td class="score">${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}</td>
       <td>${teamCell(m.away, m.away_logo)}</td>
-    </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
+    </tr>${subContent ? `<tr class="watch-sub"><td colspan="4">${subContent}</td></tr>` : ""}`;
   }).join("");
   const upc = (d.fixtures || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label);
@@ -522,6 +565,35 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     <table>${rec || `<tr><td>—</td></tr>`}</table>
     <div class="sub">Upcoming fixtures</div>
     <table>${upc || `<tr><td>—</td></tr>`}</table>
+  `;
+}
+
+function renderClub(d) {
+  const el = document.getElementById("club-body");
+  if (!d) { el.textContent = "No club data yet."; return; }
+  const fmtRow = (m, isResult) => {
+    const watch = watchChipsHtml(m.competition || "Dublin Club", { includeHighlights: isResult });
+    const hl = isResult ? highlightsChipHtml(`${m.home} v ${m.away} ${m.competition || "rugby"}`) : "";
+    const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
+    const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
+    return `
+    <tr class="${m.involves_smc ? "fav-row" : ""}">
+      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")}</td>
+      <td>${escapeHtml(m.home)}</td>
+      <td class="score">${score}</td>
+      <td>${escapeHtml(m.away)}</td>
+      <td class="muted small">${escapeHtml(m.competition || "")}</td>
+    </tr>${subContent ? `<tr class="watch-sub"><td colspan="5">${subContent}</td></tr>` : ""}`;
+  };
+  const recRows = (d.results || []).slice(0, 8).map(m => fmtRow(m, true)).join("");
+  const upcRows = (d.fixtures || []).slice(0, 8).map(m => fmtRow(m, false)).join("");
+  el.innerHTML = `
+    <div class="club-blurb">Adam Garrigan plays here. Showing recent &amp; upcoming matches across all St Mary's teams.</div>
+    <div class="sub">Recent results</div>
+    <table>${recRows || `<tr><td>—</td></tr>`}</table>
+    <div class="sub">Upcoming fixtures</div>
+    <table>${upcRows || `<tr><td>—</td></tr>`}</table>
+    <div class="muted small" style="margin-top:8px">Source: <a href="https://www.stmaryscollegerfc.ie/results/" target="_blank" rel="noopener">stmaryscollegerfc.ie</a></div>
   `;
 }
 
@@ -619,6 +691,7 @@ function rerenderAll() {
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
+  renderClub(DATA.club);
 }
 
 (async function main() {
@@ -626,18 +699,19 @@ function rerenderAll() {
   bindInstallPrompt();
   registerSW();
 
-  const [f1, intl, prov, schools, news, watch] = await Promise.all([
+  const [f1, intl, prov, schools, news, watch, club] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.intl),
     loadJson(DATA_FILES.prov),
     loadJson(DATA_FILES.schools),
     loadJson(DATA_FILES.news),
     loadJson(DATA_FILES.watch),
+    loadJson(DATA_FILES.club),
   ]);
-  DATA = { f1, intl, prov, schools, news };
+  DATA = { f1, intl, prov, schools, news, club };
   WATCH = watch || {};
 
-  const stamps = [f1, intl, prov, schools, news].map(d => d?.generated_at).filter(Boolean);
+  const stamps = [f1, intl, prov, schools, news, club].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   document.getElementById("last-updated").textContent = stamps.length
     ? `Updated ${relTime(stamps.sort().pop())}`
     : "Awaiting first data refresh";
@@ -649,6 +723,6 @@ function rerenderAll() {
 
   const greet = document.createElement("div");
   greet.style.cssText = "color:var(--muted);font-size:12px;margin-top:4px";
-  greet.textContent = "Hi Adam 👋 — Up the Blues, and Forza Hadjar!";
+  greet.textContent = "Hi Adam 👋 — Up the Blues, MARYS abú, and Forza Hadjar!";
   document.querySelector(".tagline").after(greet);
 })();

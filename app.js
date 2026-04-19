@@ -292,7 +292,16 @@ function buildFeed(all) {
     const db = b.date ? new Date(b.date).getTime() : -Infinity;
     return db - da;
   });
-  return items;
+  // "Latest action" = things that have actually happened, with the
+  // freshest at the top. Upcoming stuff lives in the hero / sport panels.
+  const now = Date.now();
+  const past = items.filter(it => it.date && new Date(it.date).getTime() <= now);
+  if (past.length) return past.slice(0, 30);
+  // Fallback: if we somehow have no past results yet, show nearest upcoming.
+  return items
+    .filter(it => it.date)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 10);
 }
 
 function feedDateBlockHtml(iso) {

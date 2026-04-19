@@ -81,20 +81,16 @@
       </ul>
     </section>
 
-    <section class="card card-news" id="news">
+    <section class="card card-feed">
       <div class="section-head">
         <div class="section-title">
-          <span class="accent-bar accent-bar--news"></span>
-          <h2>News</h2>
+          <span class="accent-bar accent-bar--upcoming"></span>
+          <h2>Upcoming fixtures</h2>
         </div>
-        <div class="filters" id="news-filters" role="tablist">
-          <button class="chip active" data-filter="all">All</button>
-          <button class="chip" data-filter="f1">F1</button>
-          <button class="chip" data-filter="rugby">Rugby</button>
-        </div>
+        <p class="section-sub">Soonest first</p>
       </div>
-      <ul class="news" id="news-list">
-        <li class="empty">Loading the latest headlines…</li>
+      <ul class="feed" id="upcoming-feed">
+        <li class="empty">Loading upcoming fixtures…</li>
       </ul>
     </section>
   </div>
@@ -150,6 +146,29 @@
   </div>
   <section class="card card-wide" id="panel-club">
     <div class="panel-body" id="club-body">Loading…</div>
+  </section>
+</section>
+
+<!-- NEWS ============================================================== -->
+<section class="section" id="news">
+  <div class="section-head section-head--page">
+    <div class="section-title">
+      <span class="accent-bar accent-bar--news"></span>
+      <h2>📰 News</h2>
+    </div>
+    <p class="section-sub">Latest headlines across F1 and rugby</p>
+  </div>
+  <section class="card card-wide card-news">
+    <div class="section-head">
+      <div class="filters" id="news-filters" role="tablist">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="f1">F1</button>
+        <button class="chip" data-filter="rugby">Rugby</button>
+      </div>
+    </div>
+    <ul class="news" id="news-list">
+      <li class="empty">Loading the latest headlines…</li>
+    </ul>
   </section>
 </section>
 

@@ -348,6 +348,36 @@ function bindNewsFilters() {
 
 // ---------- Latest unified feed ----------
 function buildFeed(all) {
+  const items = _collectFeedItems(all);
+  items.sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : -Infinity;
+    const db = b.date ? new Date(b.date).getTime() : -Infinity;
+    return db - da;
+  });
+  // "Latest action" = things that have actually happened, with the
+  // freshest at the top. Upcoming stuff is exposed via buildUpcoming().
+  const now = Date.now();
+  const past = items.filter(it => it.date && new Date(it.date).getTime() <= now);
+  if (past.length) return past.slice(0, 30);
+  return items
+    .filter(it => it.date)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 10);
+}
+
+// Mirror of buildFeed but for future events. Sorted soonest-first, capped at 30.
+function buildUpcoming(all) {
+  const raw = _collectFeedItems(all);
+  const now = Date.now();
+  return raw
+    .filter(it => it.date && new Date(it.date).getTime() > now)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 30);
+}
+
+// Internal: same item collection logic as buildFeed, factored so both
+// past + future feeds can share it without duplication.
+function _collectFeedItems(all) {
   const items = [];
   if (all.f1) {
     (all.f1.recent_results || []).forEach(r => {
@@ -447,20 +477,7 @@ function buildFeed(all) {
     (all.club.results || []).slice(0, 25).forEach(m => pushClub(m, true));
     (all.club.fixtures || []).slice(0, 25).forEach(m => pushClub(m, false));
   }
-  items.sort((a, b) => {
-    const da = a.date ? new Date(a.date).getTime() : -Infinity;
-    const db = b.date ? new Date(b.date).getTime() : -Infinity;
-    return db - da;
-  });
-  // "Latest action" = things that have actually happened, with the
-  // freshest at the top. Upcoming stuff lives in the hero / sport panels.
-  const now = Date.now();
-  const past = items.filter(it => it.date && new Date(it.date).getTime() <= now);
-  if (past.length) return past.slice(0, 30);
-  return items
-    .filter(it => it.date)
-    .sort((a, b) => new Date(a.date) - new Date(b.date))
-    .slice(0, 10);
+  return items;
 }
 
 // ---------- F1 detail formatters ----------
@@ -523,10 +540,11 @@ function feedDateBlockHtml(iso) {
   </div>`;
 }
 
-function renderFeed(items) {
-  const ul = document.getElementById("latest-feed");
+function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet — the GitHub Action will populate this on next refresh.") {
+  const ul = document.getElementById(targetId);
+  if (!ul) return;
   if (!items.length) {
-    ul.innerHTML = `<li class="empty">No data yet — the GitHub Action will populate this on next refresh.</li>`;
+    ul.innerHTML = `<li class="empty">${escapeHtml(emptyMsg)}</li>`;
     return;
   }
   ul.innerHTML = items.slice(0, 25).map(i => {
@@ -1234,6 +1252,7 @@ let DATA = {};
 function rerenderAll() {
   renderHero(DATA);
   renderFeed(buildFeed(DATA));
+  renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.");
   renderF1(DATA.f1);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });

@@ -196,8 +196,9 @@ main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex
 .accent-bar--f1     { background: linear-gradient(180deg, var(--f1), var(--f1-2)); box-shadow: 0 0 14px rgba(255,59,48,.4); }
 .accent-bar--rugby  { background: linear-gradient(180deg, var(--rugby), var(--rugby-2)); box-shadow: 0 0 14px rgba(45,208,120,.35); }
 .accent-bar--club   { background: linear-gradient(180deg, #1d8d4a, #6dd4a3); box-shadow: 0 0 14px rgba(45,208,120,.45); }
-.accent-bar--news   { background: linear-gradient(180deg, var(--news), #d8b8ff); box-shadow: 0 0 14px rgba(176,122,255,.35); }
-.accent-bar--mixed  { background: linear-gradient(180deg, var(--accent), var(--rugby)); box-shadow: 0 0 14px rgba(255,203,5,.3); }
+.accent-bar--news     { background: linear-gradient(180deg, var(--news), #d8b8ff); box-shadow: 0 0 14px rgba(176,122,255,.35); }
+.accent-bar--mixed    { background: linear-gradient(180deg, var(--accent), var(--rugby)); box-shadow: 0 0 14px rgba(255,203,5,.3); }
+.accent-bar--upcoming { background: linear-gradient(180deg, #4ea1ff, #4ade80); box-shadow: 0 0 14px rgba(74,222,128,.35); }
 
 /* =====================================================================
    Hero

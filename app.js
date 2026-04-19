@@ -462,11 +462,15 @@ function _collectFeedItems(all) {
       const titleHtml = isResult
         ? `${badge}${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell}`
         : `${homeCell} v ${awayCell}`;
+      const adamsTeam = m.involves_smc !== false;
+      const u14 = isU14(m.competition || "");
       items.push({
         date: m.date, tag: "club",
         titleHtml,
         meta: m.competition || "St Mary's College RFC",
-        fav: m.involves_smc !== false,
+        fav: adamsTeam,
+        adamsTeam,
+        u14,
         outcome: isResult ? favOutcome(m) : null,
         watch: m.competition || "Dublin Club",
         competition: m.competition || "Dublin Club",
@@ -555,13 +559,15 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
     const scorers = i.scoringSummary ? scorerTimelineHtml(i.scoringSummary, i.fav) : "";
     const rel = i.date ? relTime(i.date) : "";
     const livePill = i.live ? `<span class="live-pill" aria-label="Live now">🔴 LIVE</span> ` : "";
+    const adamsPill = i.adamsTeam ? `<span class="adams-pill" aria-label="Adam's team">🟢⚪ My team</span> ` : "";
+    const u14Pill = i.u14 ? `<span class="u14-pill" aria-label="U14 squad">U14</span> ` : "";
     const titleSearch = (i.title || "") + " " + (i.titleHtml || "") + " " + (i.meta || "");
     const favStar = (isFavF1(titleSearch) || isFavRugby(titleSearch)) ? `<span class="fav-star" aria-label="Favourite">⭐</span> ` : "";
     return `
-    <li class="feed-item ${i.fav ? "fav" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
+    <li class="feed-item ${i.fav ? "fav" : ""} ${i.adamsTeam ? "adams-team" : ""} ${i.u14 ? "u14" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
       ${feedDateBlockHtml(i.date)}
       <div class="feed-body">
-        <div class="feed-title">${livePill}${favStar}${i.titleHtml || escapeHtml(i.title)}</div>
+        <div class="feed-title">${livePill}${adamsPill}${u14Pill}${favStar}${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="feed-meta">${escapeHtml(i.meta || "")}</div>
         ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}
@@ -613,6 +619,8 @@ function collectUpcoming(all) {
     title: `🟢⚪ ${m.home} v ${m.away}`,
     meta: m.competition || "St Mary's College RFC",
     boost: m.involves_smc !== false,
+    isAdamsTeam: m.involves_smc !== false,
+    isU14: isU14(m.competition || ""),
     watch: m.competition || "Dublin Club",
   }));
   return upcoming
@@ -636,6 +644,27 @@ function renderHero(all) {
   }
 
   HERO_EVENTS = future.slice(0, 3);
+
+  // Always pin Adam's next team match into the rotation. Prefer U14 if one
+  // exists within the soonest 3 club fixtures (so we don't leap past a more
+  // imminent senior game just to reach a far-future U14 one).
+  const adamsFixtures = future.filter(e => e.isAdamsTeam);
+  if (adamsFixtures.length) {
+    const soonest3 = adamsFixtures.slice(0, 3);
+    const u14Pick = soonest3.find(e => e.isU14);
+    const adamPick = u14Pick || adamsFixtures[0];
+    adamPick.label = adamPick.isU14
+      ? "🟢⚪ Adam's U14 — Next match"
+      : "🟢⚪ Adam's team — Next match";
+    if (!HERO_EVENTS.includes(adamPick)) {
+      // Replace the last slot so the two soonest events still lead.
+      HERO_EVENTS = HERO_EVENTS.slice(0, 2).concat(adamPick);
+    } else {
+      // Already in the rotation — just make sure the special label sticks.
+      HERO_EVENTS = HERO_EVENTS.map(e => e === adamPick ? adamPick : e);
+    }
+  }
+
   HERO_IDX = 0;
 
   dotsEl.innerHTML = HERO_EVENTS.map((_, i) => `<span class="dot ${i === 0 ? "active" : ""}" data-idx="${i}"></span>`).join("");
@@ -670,6 +699,8 @@ function showHero(idx) {
     startCountdown(new Date(ev.date));
     // Sport-themed background
     if (ev.sport) card.dataset.sport = ev.sport; else delete card.dataset.sport;
+    // Adam's team gets its own pronounced highlight on top of sport theming.
+    card.classList.toggle("is-adams-team", !!ev.isAdamsTeam);
     // Favourite highlight: title or meta references the fav driver/team
     const favHit = isFavF1(ev.title) || isFavF1(ev.meta) || isFavRugby(ev.title) || isFavRugby(ev.meta);
     card.classList.toggle("is-favorite", !!favHit);

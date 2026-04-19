@@ -6,11 +6,13 @@
 <meta name="theme-color" content="#0a0d18"/>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="x-dns-prefetch-control" content="on"/>
 <meta name="description" content="A personal sports dashboard — F1, International Rugby, Irish Provinces and Leinster Schools."/>
 <meta name="robots" content="noindex, nofollow"/>
 <title>Adam's Sports Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" href="styles.css" as="style"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css"/>
 <link rel="manifest" href="manifest.json"/>
@@ -186,6 +188,6 @@
   <p>Built for Adam · refreshes every 30 min via GitHub Actions</p>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>

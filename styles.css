@@ -430,7 +430,6 @@ main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex
   width: 22px; height: 22px; object-fit: contain; vertical-align: middle;
   background: rgba(255,255,255,0.05); border-radius: 4px; padding: 1px;
 }
-.team-logo.lg { width: 28px; height: 28px; }
 .team-cell { display: inline-flex; align-items: center; gap: 8px; }
 
 /* =====================================================================

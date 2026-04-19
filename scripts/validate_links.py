@@ -118,11 +118,11 @@ def main() -> int:
 
     if failures:
         print()
-        print(f"❌ {len(failures)} broken link(s):")
+        print(f"[FAIL] {len(failures)} broken link(s):")
         for line in failures:
             print(f"  - {line}")
         return 1
-    print("✅ All YouTube links valid.")
+    print("[OK] All YouTube links valid.")
     return 0
 
 

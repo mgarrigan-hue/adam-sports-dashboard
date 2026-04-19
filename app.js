@@ -203,10 +203,44 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) { return escapeHtml(s); }
 
-function logoImg(url, name) {
-  if (!url) return "";
-  return `<img class="team-logo" loading="lazy" src="${escapeAttr(url)}" alt="" onerror="this.style.display='none'"/>`;
+// Whitelist of trusted hosts for team/competition logos. We only render
+// images served over https from these domains; anything else (including
+// javascript:/data: URIs from a hypothetical compromised upstream API) is
+// silently dropped instead of being injected into the DOM.
+const LOGO_HOST_ALLOWLIST = [
+  "espncdn.com",
+  "espn.com",
+  "a.espncdn.com",
+  "a1.espncdn.com",
+  "a2.espncdn.com",
+  "a3.espncdn.com",
+  "a4.espncdn.com",
+  "secure.espncdn.com",
+  "ichef.bbci.co.uk",
+  "static.files.bbci.co.uk",
+  "media.formula1.com",
+  "www.formula1.com"
+];
+function isSafeLogoUrl(url) {
+  try {
+    const u = new URL(url, location.href);
+    if (u.protocol !== "https:") return false;
+    const host = u.hostname.toLowerCase();
+    return LOGO_HOST_ALLOWLIST.some(h => host === h || host.endsWith("." + h));
+  } catch { return false; }
 }
+function logoImg(url, name) {
+  if (!url || !isSafeLogoUrl(url)) return "";
+  return `<img class="team-logo" loading="lazy" src="${escapeAttr(url)}" alt=""/>`;
+}
+// CSP-safe replacement for the old inline onerror handler: hide any team
+// logo that fails to load via a single delegated listener.
+window.addEventListener("error", (e) => {
+  const t = e.target;
+  if (t && t.tagName === "IMG" && t.classList && t.classList.contains("team-logo")) {
+    t.style.display = "none";
+  }
+}, true);
 
 // ---------- News ----------
 function newsCategoryLabel(c) {

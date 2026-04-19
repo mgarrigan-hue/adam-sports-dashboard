@@ -164,6 +164,47 @@ function isFavSchool(text) {
   return FAVS.schools.some(s => s && t.includes(s.toLowerCase()));
 }
 
+// ---------- Live-match detection ----------
+// Rugby (ESPN): prefer an explicit status if scripts emit it; otherwise
+// fall back to a date-window heuristic (kickoff up to ~2.5h ago and no final score yet).
+function isLiveRugby(m) {
+  if (!m) return false;
+  const st = (m.status || m.status_state || "").toString().toLowerCase();
+  if (st === "in" || st === "in_progress" || st === "status_in_progress" ||
+      st === "status_first_half" || st === "status_second_half" ||
+      st === "status_halftime" || st === "live") return true;
+  if (!m.date) return false;
+  const start = new Date(m.date).getTime();
+  if (isNaN(start)) return false;
+  const now = Date.now();
+  const finished = m.home_score != null && m.away_score != null && (now - start) > 2.5 * 3600 * 1000;
+  return now >= start && now - start <= 2.5 * 3600 * 1000 && !finished;
+}
+// F1 session: live if now ∈ [start, start + duration]. Sessions are typed by name.
+function f1SessionDurationMs(name) {
+  const n = (name || "").toLowerCase();
+  if (n.includes("race") && !n.includes("sprint")) return 130 * 60 * 1000;
+  if (n.includes("sprint qualifying") || n.includes("sprint shootout")) return 75 * 60 * 1000;
+  if (n.includes("sprint")) return 75 * 60 * 1000;
+  if (n.includes("qualif")) return 100 * 60 * 1000;
+  return 95 * 60 * 1000; // FP1/FP2/FP3 default
+}
+function isLiveF1Session(sess) {
+  if (!sess || !sess.datetime) return false;
+  const start = new Date(sess.datetime).getTime();
+  if (isNaN(start)) return false;
+  const now = Date.now();
+  return now >= start && now <= start + f1SessionDurationMs(sess.name);
+}
+// F1 race in feed: live if start ≤ now ≤ start + ~2.5h.
+function isLiveF1Race(date) {
+  if (!date) return false;
+  const start = new Date(date).getTime();
+  if (isNaN(start)) return false;
+  const now = Date.now();
+  return now >= start && now <= start + 150 * 60 * 1000;
+}
+
 // ---------- Match-outcome highlighting (wins/losses for the team we follow) ----------
 // Patterns that identify "us" on either side of a result. These are the teams
 // Mark/Adam want visually called out across the whole site.
@@ -328,6 +369,7 @@ function buildFeed(all) {
         meta: r.location || "", fav: false,
         watch: "Formula 1",
         competition: "Formula 1",
+        live: isLiveF1Race(r.date),
       });
     });
   }
@@ -349,6 +391,7 @@ function buildFeed(all) {
       competition: m.competition || defaultComp,
       isResult: m.home_score != null,
       scoringSummary: m.scoring_summary || null,
+      live: isLiveRugby(m),
     });
   };
   if (all.intl) {
@@ -398,6 +441,7 @@ function buildFeed(all) {
         watch: m.competition || "Dublin Club",
         competition: m.competition || "Dublin Club",
         isResult,
+        live: isLiveRugby(m),
       });
     };
     (all.club.results || []).slice(0, 25).forEach(m => pushClub(m, true));
@@ -492,11 +536,12 @@ function renderFeed(items) {
     const extraRow = hl ? `<div class="watch-row">${hl}</div>` : "";
     const scorers = i.scoringSummary ? scorerTimelineHtml(i.scoringSummary, i.fav) : "";
     const rel = i.date ? relTime(i.date) : "";
+    const livePill = i.live ? `<span class="live-pill" aria-label="Live now">🔴 LIVE</span> ` : "";
     return `
-    <li class="feed-item ${i.fav ? "fav" : ""} ${i.outcome ? "fav-" + i.outcome : ""}">
+    <li class="feed-item ${i.fav ? "fav" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
       ${feedDateBlockHtml(i.date)}
       <div class="feed-body">
-        <div class="feed-title">${i.titleHtml || escapeHtml(i.title)}</div>
+        <div class="feed-title">${livePill}${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="feed-meta">${escapeHtml(i.meta || "")}</div>
         ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}

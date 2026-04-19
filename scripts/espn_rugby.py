@@ -34,6 +34,7 @@ def parse_events(data, competition_label: str | None = None):
         if not home or not away:
             continue
         status = ev.get("status", {}).get("type", {}).get("name", "")
+        state = ev.get("status", {}).get("type", {}).get("state", "")
         completed = status in ("STATUS_FINAL", "STATUS_FULL_TIME") or ev.get("status", {}).get("type", {}).get("completed")
         league_name = (data.get("leagues", [{}])[0] or {}).get("name") or competition_label or ""
         entry = {
@@ -43,6 +44,8 @@ def parse_events(data, competition_label: str | None = None):
             "home_logo": home.get("team", {}).get("logo") or "",
             "away_logo": away.get("team", {}).get("logo") or "",
             "competition": competition_label or league_name,
+            "status": status or None,
+            "status_state": state or None,
         }
         if completed:
             try:

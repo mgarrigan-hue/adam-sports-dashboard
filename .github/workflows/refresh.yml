@@ -38,6 +38,12 @@ jobs:
           python scripts/fetch_news.py
           exit 0
 
+      - name: Validate links (warn-only)
+        run: |
+          # Warn-only: never fails the data refresh, but surfaces broken
+          # YouTube handles in the run log so we notice early.
+          python scripts/validate_links.py || echo "::warning::validate_links.py reported broken link(s) — see log."
+
       - name: Commit refreshed data
         run: |
           git config user.name "github-actions[bot]"

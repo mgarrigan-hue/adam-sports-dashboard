@@ -3,46 +3,85 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<meta name="theme-color" content="#0b0f1a"/>
-<meta name="description" content="Adam's Sports Dashboard — F1, International Rugby, Irish Provinces and Leinster Schools."/>
+<meta name="theme-color" content="#0a0d18"/>
+<meta name="description" content="Adam's Sports Dashboard — F1, International Rugby, Irish Provinces, Leinster Schools, and St Mary's College RFC."/>
 <title>Adam's Sports Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg"/>
 <link rel="apple-touch-icon" href="icons/icon-192.svg"/>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <span class="logo">🏁🏉</span>
-    <div>
+
+<header class="topbar" role="banner">
+  <a class="brand" href="#home">
+    <span class="brand-mark" aria-hidden="true">
+      <span class="brand-mark-bg"></span>
+      <span class="brand-mark-emoji">🏁</span>
+    </span>
+    <div class="brand-text">
       <h1>Adam's Sports Dashboard</h1>
-      <p class="tagline">F1 · International Rugby · Irish Provinces · Leinster Schools</p>
+      <p class="tagline">F1 · International Rugby · Provinces · Schools · St Mary's College RFC</p>
     </div>
-  </div>
+  </a>
+
+  <nav class="nav-tabs" id="nav-tabs" role="tablist" aria-label="Sections">
+    <a class="nav-tab active" data-target="home"   href="#home"   role="tab" aria-selected="true">Home</a>
+    <a class="nav-tab"        data-target="f1"     href="#f1"     role="tab">F1</a>
+    <a class="nav-tab"        data-target="rugby"  href="#rugby"  role="tab">Rugby</a>
+    <a class="nav-tab"        data-target="club"   href="#club"   role="tab">Adam's Club</a>
+    <a class="nav-tab"        data-target="news"   href="#news"   role="tab">News</a>
+    <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+  </nav>
+
   <div class="topbar-actions">
-    <button id="install-btn" class="btn btn-ghost" hidden>⬇️ Install app</button>
-    <button id="settings-btn" class="btn btn-ghost" aria-label="Settings" title="Following / favorites">⚙️</button>
+    <button id="install-btn" class="btn btn-ghost" hidden>⬇️ Install</button>
+    <button id="settings-btn" class="btn btn-icon" aria-label="Following / favorites" title="Following / favorites">⚙️</button>
     <div class="last-updated" id="last-updated">Loading…</div>
   </div>
 </header>
 
-<section class="hero" id="hero">
-  <div class="hero-card" id="hero-card">
-    <div class="hero-label" id="hero-label">Next Up</div>
-    <div class="hero-title" id="hero-title">—</div>
-    <div class="hero-meta" id="hero-meta"></div>
-    <div class="hero-countdown" id="hero-countdown"></div>
-    <div class="hero-watch" id="hero-watch"></div>
-    <div class="hero-dots" id="hero-dots"></div>
-  </div>
-</section>
-
 <main>
+
+<!-- HOME ============================================================== -->
+<section class="section section-hero" id="home">
+  <div class="hero" id="hero">
+    <div class="hero-card" id="hero-card">
+      <div class="hero-eyebrow">
+        <span class="hero-label" id="hero-label">Next Up</span>
+      </div>
+      <div class="hero-title" id="hero-title">—</div>
+      <div class="hero-meta" id="hero-meta"></div>
+      <div class="hero-countdown" id="hero-countdown"></div>
+      <div class="hero-watch" id="hero-watch"></div>
+      <div class="hero-dots" id="hero-dots"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </div>
+  </div>
+
   <div class="main-grid">
-    <section class="news-section" id="news-section">
+    <section class="card card-feed">
       <div class="section-head">
-        <h2>📰 News</h2>
+        <div class="section-title">
+          <span class="accent-bar accent-bar--mixed"></span>
+          <h2>Latest action</h2>
+        </div>
+        <p class="section-sub">Most recent first</p>
+      </div>
+      <ul class="feed" id="latest-feed">
+        <li class="empty">Loading the latest action…</li>
+      </ul>
+    </section>
+
+    <section class="card card-news" id="news">
+      <div class="section-head">
+        <div class="section-title">
+          <span class="accent-bar accent-bar--news"></span>
+          <h2>News</h2>
+        </div>
         <div class="filters" id="news-filters" role="tablist">
           <button class="chip active" data-filter="all">All</button>
           <button class="chip" data-filter="f1">F1</button>
@@ -53,48 +92,69 @@
         <li class="empty">Loading the latest headlines…</li>
       </ul>
     </section>
-
-    <section class="latest">
-      <h2>🗓️ Latest action — most recent first</h2>
-      <ul class="feed" id="latest-feed">
-        <li class="empty">Loading the latest action…</li>
-      </ul>
-    </section>
   </div>
+</section>
 
-  <div class="grid">
-    <section class="panel panel-wide" id="panel-f1">
+<!-- F1 ================================================================ -->
+<section class="section" id="f1">
+  <div class="section-head section-head--page">
+    <div class="section-title">
+      <span class="accent-bar accent-bar--f1"></span>
       <h2>🏎️ Formula 1</h2>
-      <div class="panel-body" id="f1-body">Loading…</div>
-    </section>
+    </div>
+    <p class="section-sub">Race weekend, standings, last qualifying</p>
+  </div>
+  <section class="card card-wide" id="panel-f1">
+    <div class="panel-body" id="f1-body">Loading…</div>
+  </section>
+</section>
 
-    <section class="panel" id="panel-intl">
-      <h2>🌍 International Rugby</h2>
+<!-- RUGBY ============================================================= -->
+<section class="section" id="rugby">
+  <div class="section-head section-head--page">
+    <div class="section-title">
+      <span class="accent-bar accent-bar--rugby"></span>
+      <h2>🏉 Rugby</h2>
+    </div>
+    <p class="section-sub">International · Provinces · Schools</p>
+  </div>
+  <div class="grid">
+    <section class="card" id="panel-intl">
+      <div class="card-head"><h3>🌍 International</h3></div>
       <div class="panel-body" id="intl-body">Loading…</div>
     </section>
-
-    <section class="panel" id="panel-prov">
-      <h2>☘️ Irish Provinces (URC)</h2>
+    <section class="card" id="panel-prov">
+      <div class="card-head"><h3>☘️ Irish Provinces (URC)</h3></div>
       <div class="panel-body" id="prov-body">Loading…</div>
     </section>
-
-    <section class="panel" id="panel-schools">
-      <h2>🎓 Leinster Schools Rugby</h2>
+    <section class="card" id="panel-schools">
+      <div class="card-head"><h3>🎓 Leinster Schools</h3></div>
       <div class="panel-body" id="schools-body">Loading…</div>
     </section>
-
-    <section class="panel panel-wide" id="panel-club">
-      <h2>🟢⚪ Adam's Club — St Mary's College RFC</h2>
-      <div class="panel-body" id="club-body">Loading…</div>
-    </section>
   </div>
+</section>
+
+<!-- CLUB ============================================================== -->
+<section class="section" id="club">
+  <div class="section-head section-head--page">
+    <div class="section-title">
+      <span class="accent-bar accent-bar--club"></span>
+      <h2>🟢⚪ Adam's Club</h2>
+    </div>
+    <p class="section-sub">St Mary's College RFC — every team, every match</p>
+  </div>
+  <section class="card card-wide" id="panel-club">
+    <div class="panel-body" id="club-body">Loading…</div>
+  </section>
+</section>
+
 </main>
 
 <aside id="settings-panel" class="settings-panel" hidden>
   <div class="settings-card">
     <div class="settings-head">
       <h3>⚙️ Following</h3>
-      <button class="btn btn-ghost" id="settings-close" aria-label="Close">✕</button>
+      <button class="btn btn-icon" id="settings-close" aria-label="Close">✕</button>
     </div>
     <label class="field">
       <span>Favorite F1 driver</span>
@@ -120,7 +180,7 @@
 </aside>
 
 <footer>
-  <p>Built for Adam · data refreshes every 30 min via GitHub Actions</p>
+  <p>Built for Adam · refreshes every 30 min via GitHub Actions</p>
 </footer>
 
 <script src="app.js"></script>

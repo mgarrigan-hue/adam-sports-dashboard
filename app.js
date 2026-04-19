@@ -295,6 +295,24 @@ function buildFeed(all) {
   return items;
 }
 
+function feedDateBlockHtml(iso) {
+  if (!iso) return `<div class="feed-when"><div class="feed-day">—</div><div class="feed-month">TBD</div></div>`;
+  const d = new Date(iso);
+  if (isNaN(d)) return `<div class="feed-when"><div class="feed-day">—</div><div class="feed-month">TBD</div></div>`;
+  const now = new Date();
+  const sameDay = d.toDateString() === now.toDateString();
+  const past = d.getTime() < now.getTime();
+  const cls = sameDay ? "today" : "";
+  const day = d.toLocaleString(undefined, { day: "numeric" });
+  const mon = d.toLocaleString(undefined, { month: "short" }).toUpperCase();
+  const tm = past ? "" : d.toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" });
+  return `<div class="feed-when ${cls}">
+    <div class="feed-day">${day}</div>
+    <div class="feed-month">${mon}</div>
+    ${tm ? `<div class="feed-time">${tm}</div>` : ""}
+  </div>`;
+}
+
 function renderFeed(items) {
   const ul = document.getElementById("latest-feed");
   if (!items.length) {
@@ -303,22 +321,22 @@ function renderFeed(items) {
   }
   ul.innerHTML = items.slice(0, 25).map(i => {
     const isPast = i.date && new Date(i.date).getTime() < Date.now();
-    // For past events, show highlights link (where applicable) instead of live channels.
     const watch = i.watch ? watchChipsHtml(i.watch, { includeHighlights: isPast || i.isResult }) : "";
     const hl = (i.isResult || isPast) && i.highlightsQuery ? highlightsChipHtml(i.highlightsQuery) : "";
     const extraRow = hl ? `<div class="watch-row">${hl}</div>` : "";
+    const rel = i.date ? relTime(i.date) : "";
     return `
-    <li class="${i.fav ? "fav" : ""}">
-      <span class="when">${i.date ? `${fmtDate(i.date)}<br><small>${relTime(i.date)}</small>` : "TBD"}</span>
-      <span>
-        <div class="what">${i.titleHtml || escapeHtml(i.title)}</div>
-        <div class="who">${escapeHtml(i.meta || "")}</div>
+    <li class="feed-item ${i.fav ? "fav" : ""}">
+      ${feedDateBlockHtml(i.date)}
+      <div class="feed-body">
+        <div class="feed-title">${i.titleHtml || escapeHtml(i.title)}</div>
+        <div class="feed-meta">${escapeHtml(i.meta || "")}</div>
+        ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}
         ${extraRow}
-      </span>
-      <span class="tag ${i.tag}">${i.tag}</span>
-    </li>
-  `;
+      </div>
+      <span class="feed-tag ${i.tag}">${i.tag}</span>
+    </li>`;
   }).join("");
 }
 
@@ -331,31 +349,38 @@ let CD_TIMER = null;
 function collectUpcoming(all) {
   const upcoming = [];
   (all.f1?.upcoming || []).forEach(r => upcoming.push({
-    date: r.date, label: "Next Up · F1",
+    date: r.date, label: "Next Up · F1", sport: "f1",
     title: `🏁 ${r.race_name}`,
     meta: `${r.circuit || ""}${r.location ? " · " + r.location : ""}`,
     watch: "Formula 1",
   }));
   (all.intl?.fixtures || []).forEach(m => upcoming.push({
-    date: m.date, label: "Next Up · International Rugby",
+    date: m.date, label: "Next Up · International Rugby", sport: "rugby",
     title: `🌍 ${m.home} v ${m.away}`,
     meta: m.competition || "International",
     boost: isFavRugby(m.home) || isFavRugby(m.away),
     watch: m.competition || "International",
   }));
   (all.prov?.fixtures || []).forEach(m => upcoming.push({
-    date: m.date, label: "Next Up · URC",
+    date: m.date, label: "Next Up · URC", sport: "rugby",
     title: `☘️ ${m.home} v ${m.away}`,
     meta: m.competition || "URC",
     boost: isFavRugby(m.home) || isFavRugby(m.away),
     watch: m.competition || "URC",
   }));
   (all.schools?.fixtures || []).forEach(m => upcoming.push({
-    date: m.date, label: "Next Up · Schools",
+    date: m.date, label: "Next Up · Schools", sport: "rugby",
     title: `🎓 ${m.home} v ${m.away}`,
     meta: m.competition || "Leinster Schools",
     boost: isFavSchool(m.home) || isFavSchool(m.away),
     watch: m.competition || "Schools",
+  }));
+  (all.club?.fixtures || []).forEach(m => upcoming.push({
+    date: m.date, label: "Next Up · Adam's Club", sport: "club",
+    title: `🟢⚪ ${m.home} v ${m.away}`,
+    meta: m.competition || "St Mary's College RFC",
+    boost: m.involves_smc !== false,
+    watch: m.competition || "Dublin Club",
   }));
   return upcoming
     .filter(e => e.date && new Date(e.date).getTime() > Date.now())
@@ -410,6 +435,8 @@ function showHero(idx) {
     metaEl.textContent = `${ev.meta} · ${fmtDate(ev.date)}`;
     dotsEl.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === idx));
     startCountdown(new Date(ev.date));
+    // Sport-themed background
+    if (ev.sport) card.dataset.sport = ev.sport; else delete card.dataset.sport;
     // Watch info under the meta line
     const watchEl = document.getElementById("hero-watch");
     if (watchEl) watchEl.innerHTML = ev.watch ? watchChipsHtml(ev.watch) : "";
@@ -439,12 +466,12 @@ function renderF1(d) {
   if (!d) { el.textContent = "No F1 data yet."; return; }
 
   const driverRows = (d.driver_standings || []).slice(0, 10).map((s, i) => `
-    <tr class="${isFavF1(s.driver) ? "fav-row" : ""}">
+    <tr data-team="${escapeAttr((s.team || "").toLowerCase())}" class="${isFavF1(s.driver) ? "fav-row" : ""}">
       <td>${i + 1}</td><td>${escapeHtml(s.driver)}</td>
       <td>${escapeHtml(s.team || "")}</td><td>${s.points ?? ""}</td>
     </tr>`).join("");
   const teamRows = (d.constructor_standings || []).slice(0, 10).map((s, i) => `
-    <tr class="${(s.team || "").toLowerCase().includes("red bull") || (s.team || "").toLowerCase().includes("racing bull") ? "fav-row" : ""}">
+    <tr data-team="${escapeAttr((s.team || "").toLowerCase())}" class="${(s.team || "").toLowerCase().includes("red bull") || (s.team || "").toLowerCase().includes("racing bull") ? "fav-row" : ""}">
       <td>${i + 1}</td><td>${escapeHtml(s.team)}</td><td>${s.points ?? ""}</td>
     </tr>`).join("");
 
@@ -457,14 +484,19 @@ function renderF1(d) {
       <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""}</div>
       ${watch}
       <ul class="timeline">
-        ${ns.sessions.map(sess => {
-          const past = sess.datetime && new Date(sess.datetime).getTime() < Date.now();
-          return `<li class="${past ? "past" : ""}">
-            <div class="sess-name">${escapeHtml(sess.name)}</div>
-            <div class="sess-when">${fmtTime(sess.datetime)}</div>
-            ${past ? "" : `<div class="sess-cd">${relTime(sess.datetime)}</div>`}
-          </li>`;
-        }).join("")}
+        ${(() => {
+          let nextMarked = false;
+          return ns.sessions.map(sess => {
+            const past = sess.datetime && new Date(sess.datetime).getTime() < Date.now();
+            let cls = past ? "past" : "";
+            if (!past && !nextMarked) { cls += " next"; nextMarked = true; }
+            return `<li class="${cls.trim()}">
+              <div class="sess-name">${escapeHtml(sess.name)}</div>
+              <div class="sess-when">${fmtTime(sess.datetime)}</div>
+              ${past ? "" : `<div class="sess-cd">${relTime(sess.datetime)}</div>`}
+            </li>`;
+          }).join("");
+        })()}
       </ul>`;
   }
 
@@ -520,11 +552,11 @@ function renderF1(d) {
     <div class="standings-grid">
       <div>
         <div class="sub">Driver standings</div>
-        <table><tr><th>#</th><th>Driver</th><th>Team</th><th>Pts</th></tr>${driverRows || `<tr><td colspan="4">—</td></tr>`}</table>
+        <table class="standings"><tr><th>#</th><th>Driver</th><th>Team</th><th>Pts</th></tr>${driverRows || `<tr><td colspan="4">—</td></tr>`}</table>
       </div>
       <div>
         <div class="sub">Constructors</div>
-        <table><tr><th>#</th><th>Team</th><th>Pts</th></tr>${teamRows || `<tr><td colspan="3">—</td></tr>`}</table>
+        <table class="standings"><tr><th>#</th><th>Team</th><th>Pts</th></tr>${teamRows || `<tr><td colspan="3">—</td></tr>`}</table>
       </div>
     </div>
   `;
@@ -568,6 +600,29 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
   `;
 }
 
+function clubQuickStats(d) {
+  if (!d || !Array.isArray(d.results) || !d.results.length) return "";
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  const isOurs = (m) => m.involves_smc !== false;
+  const recent = d.results.filter(m => isOurs(m) && new Date(m.date).getTime() >= cutoff);
+  let w = 0, l = 0, dr = 0;
+  for (const m of recent) {
+    if (m.home_score == null || m.away_score == null) continue;
+    const homeIsUs = /st mary|smtc|smc/i.test(m.home);
+    const us = homeIsUs ? m.home_score : m.away_score;
+    const them = homeIsUs ? m.away_score : m.home_score;
+    if (us > them) w++; else if (us < them) l++; else dr++;
+  }
+  return `
+    <div class="club-strip">
+      <div class="club-strip-title">St Mary's College RFC <small>· last 30 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
+      <div class="club-stat win"><div class="stat-num">${w}</div><div class="stat-lbl">Wins</div></div>
+      <div class="club-stat loss"><div class="stat-num">${l}</div><div class="stat-lbl">Losses</div></div>
+      <div class="club-stat draw"><div class="stat-num">${dr}</div><div class="stat-lbl">Draws</div></div>
+      <div class="club-stat"><div class="stat-num">${recent.length}</div><div class="stat-lbl">Played</div></div>
+    </div>`;
+}
+
 function renderClub(d) {
   const el = document.getElementById("club-body");
   if (!d) { el.textContent = "No club data yet."; return; }
@@ -588,6 +643,7 @@ function renderClub(d) {
   const recRows = (d.results || []).slice(0, 8).map(m => fmtRow(m, true)).join("");
   const upcRows = (d.fixtures || []).slice(0, 8).map(m => fmtRow(m, false)).join("");
   el.innerHTML = `
+    ${clubQuickStats(d)}
     <div class="club-blurb">Adam Garrigan plays here. Showing recent &amp; upcoming matches across all St Mary's teams.</div>
     <div class="sub">Recent results</div>
     <table>${recRows || `<tr><td>—</td></tr>`}</table>
@@ -681,6 +737,68 @@ function registerSW() {
   });
 }
 
+// ---------- Sticky nav: scroll-spy + sliding indicator ----------
+function bindNav() {
+  const tabs = Array.from(document.querySelectorAll(".nav-tab"));
+  const indicator = document.getElementById("nav-indicator");
+  const tabsWrap = document.getElementById("nav-tabs");
+  if (!tabs.length || !indicator || !tabsWrap) return;
+
+  const moveIndicator = (tab) => {
+    if (!tab) return;
+    const wrapRect = tabsWrap.getBoundingClientRect();
+    const tabRect = tab.getBoundingClientRect();
+    const left = tabRect.left - wrapRect.left + tabsWrap.scrollLeft;
+    indicator.style.transform = `translateX(${left - 4}px)`;
+    indicator.style.width = `${tabRect.width}px`;
+  };
+
+  const setActive = (id) => {
+    tabs.forEach(t => {
+      const on = t.dataset.target === id;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      if (on) moveIndicator(t);
+    });
+  };
+
+  // Initial active = home
+  requestAnimationFrame(() => setActive("home"));
+  window.addEventListener("resize", () => {
+    const cur = tabs.find(t => t.classList.contains("active"));
+    if (cur) moveIndicator(cur);
+  });
+
+  tabs.forEach(t => t.addEventListener("click", () => {
+    // setActive happens via observer too, but click should be instant
+    setActive(t.dataset.target);
+  }));
+
+  // Scroll-spy
+  const sections = tabs
+    .map(t => document.getElementById(t.dataset.target))
+    .filter(Boolean);
+  if (!("IntersectionObserver" in window) || !sections.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    // Pick the topmost intersecting section (lowest top >= 0-ish)
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    if (visible[0]) setActive(visible[0].target.id);
+  }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+  sections.forEach(s => obs.observe(s));
+}
+
+// ---------- Staggered fade-in ----------
+function applyFadeIn() {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const els = document.querySelectorAll(".section, .card, .feed-item, .news li");
+  els.forEach((el, i) => {
+    el.classList.add("fade-up");
+    el.style.animationDelay = `${Math.min(i * 60, 600)}ms`;
+  });
+}
+
 // ---------- Boot ----------
 let DATA = {};
 
@@ -720,6 +838,8 @@ function rerenderAll() {
   renderNews();
   rerenderAll();
   bindSettings(rerenderAll);
+  bindNav();
+  applyFadeIn();
 
   const greet = document.createElement("div");
   greet.style.cssText = "color:var(--muted);font-size:12px;margin-top:4px";

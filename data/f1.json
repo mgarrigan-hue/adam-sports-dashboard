@@ -1,0 +1,318 @@
+{
+  "generated_at": "2026-04-19T14:40:18Z",
+  "season": "2026",
+  "upcoming": [
+    {
+      "round": "4",
+      "race_name": "Miami Grand Prix",
+      "circuit": "Miami International Autodrome",
+      "location": "Miami, USA",
+      "date": "2026-05-03T20:00:00Z"
+    },
+    {
+      "round": "5",
+      "race_name": "Canadian Grand Prix",
+      "circuit": "Circuit Gilles Villeneuve",
+      "location": "Montreal, Canada",
+      "date": "2026-05-24T20:00:00Z"
+    },
+    {
+      "round": "6",
+      "race_name": "Monaco Grand Prix",
+      "circuit": "Circuit de Monaco",
+      "location": "Monte Carlo, Monaco",
+      "date": "2026-06-07T13:00:00Z"
+    },
+    {
+      "round": "7",
+      "race_name": "Barcelona Grand Prix",
+      "circuit": "Circuit de Barcelona-Catalunya",
+      "location": "Barcelona, Spain",
+      "date": "2026-06-14T13:00:00Z"
+    },
+    {
+      "round": "8",
+      "race_name": "Austrian Grand Prix",
+      "circuit": "Red Bull Ring",
+      "location": "Spielberg, Austria",
+      "date": "2026-06-28T13:00:00Z"
+    },
+    {
+      "round": "9",
+      "race_name": "British Grand Prix",
+      "circuit": "Silverstone Circuit",
+      "location": "Silverstone, UK",
+      "date": "2026-07-05T14:00:00Z"
+    },
+    {
+      "round": "10",
+      "race_name": "Belgian Grand Prix",
+      "circuit": "Circuit de Spa-Francorchamps",
+      "location": "Spa, Belgium",
+      "date": "2026-07-19T13:00:00Z"
+    },
+    {
+      "round": "11",
+      "race_name": "Hungarian Grand Prix",
+      "circuit": "Hungaroring",
+      "location": "Budapest, Hungary",
+      "date": "2026-07-26T13:00:00Z"
+    }
+  ],
+  "recent_results": [
+    {
+      "race_name": "Japanese Grand Prix",
+      "date": "2026-03-29T05:00:00Z",
+      "winner": "Andrea Kimi Antonelli",
+      "podium": [
+        "Andrea Kimi Antonelli",
+        "Oscar Piastri",
+        "Charles Leclerc"
+      ]
+    },
+    {
+      "race_name": "Chinese Grand Prix",
+      "date": "2026-03-15T07:00:00Z",
+      "winner": "Andrea Kimi Antonelli",
+      "podium": [
+        "Andrea Kimi Antonelli",
+        "George Russell",
+        "Lewis Hamilton"
+      ]
+    },
+    {
+      "race_name": "Australian Grand Prix",
+      "date": "2026-03-08T04:00:00Z",
+      "winner": "George Russell",
+      "podium": [
+        "George Russell",
+        "Andrea Kimi Antonelli",
+        "Charles Leclerc"
+      ]
+    }
+  ],
+  "driver_standings": [
+    {
+      "position": "1",
+      "driver": "Andrea Kimi Antonelli",
+      "team": "Mercedes",
+      "points": "72",
+      "wins": "2"
+    },
+    {
+      "position": "2",
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "points": "63",
+      "wins": "1"
+    },
+    {
+      "position": "3",
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "points": "49",
+      "wins": "0"
+    },
+    {
+      "position": "4",
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": "41",
+      "wins": "0"
+    },
+    {
+      "position": "5",
+      "driver": "Lando Norris",
+      "team": "McLaren",
+      "points": "25",
+      "wins": "0"
+    },
+    {
+      "position": "6",
+      "driver": "Oscar Piastri",
+      "team": "McLaren",
+      "points": "21",
+      "wins": "0"
+    },
+    {
+      "position": "7",
+      "driver": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "points": "17",
+      "wins": "0"
+    },
+    {
+      "position": "8",
+      "driver": "Pierre Gasly",
+      "team": "Alpine F1 Team",
+      "points": "15",
+      "wins": "0"
+    },
+    {
+      "position": "9",
+      "driver": "Max Verstappen",
+      "team": "Red Bull",
+      "points": "12",
+      "wins": "0"
+    },
+    {
+      "position": "10",
+      "driver": "Liam Lawson",
+      "team": "RB F1 Team",
+      "points": "10",
+      "wins": "0"
+    },
+    {
+      "position": "11",
+      "driver": "Arvid Lindblad",
+      "team": "RB F1 Team",
+      "points": "4",
+      "wins": "0"
+    },
+    {
+      "position": "12",
+      "driver": "Isack Hadjar",
+      "team": "Red Bull",
+      "points": "4",
+      "wins": "0"
+    },
+    {
+      "position": "13",
+      "driver": "Gabriel Bortoleto",
+      "team": "Audi",
+      "points": "2",
+      "wins": "0"
+    },
+    {
+      "position": "14",
+      "driver": "Carlos Sainz",
+      "team": "Williams",
+      "points": "2",
+      "wins": "0"
+    },
+    {
+      "position": "15",
+      "driver": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "points": "1",
+      "wins": "0"
+    },
+    {
+      "position": "16",
+      "driver": "Franco Colapinto",
+      "team": "Alpine F1 Team",
+      "points": "1",
+      "wins": "0"
+    },
+    {
+      "position": "17",
+      "driver": "Nico H\u00fclkenberg",
+      "team": "Audi",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "18",
+      "driver": "Alexander Albon",
+      "team": "Williams",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "19",
+      "driver": "Valtteri Bottas",
+      "team": "Cadillac F1 Team",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "20",
+      "driver": "Sergio P\u00e9rez",
+      "team": "Cadillac F1 Team",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "21",
+      "driver": "Fernando Alonso",
+      "team": "Aston Martin",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "22",
+      "driver": "Lance Stroll",
+      "team": "Aston Martin",
+      "points": "0",
+      "wins": "0"
+    }
+  ],
+  "constructor_standings": [
+    {
+      "position": "1",
+      "team": "Mercedes",
+      "points": "135",
+      "wins": "3"
+    },
+    {
+      "position": "2",
+      "team": "Ferrari",
+      "points": "90",
+      "wins": "0"
+    },
+    {
+      "position": "3",
+      "team": "McLaren",
+      "points": "46",
+      "wins": "0"
+    },
+    {
+      "position": "4",
+      "team": "Haas F1 Team",
+      "points": "18",
+      "wins": "0"
+    },
+    {
+      "position": "5",
+      "team": "Alpine F1 Team",
+      "points": "16",
+      "wins": "0"
+    },
+    {
+      "position": "6",
+      "team": "Red Bull",
+      "points": "16",
+      "wins": "0"
+    },
+    {
+      "position": "7",
+      "team": "RB F1 Team",
+      "points": "14",
+      "wins": "0"
+    },
+    {
+      "position": "8",
+      "team": "Audi",
+      "points": "2",
+      "wins": "0"
+    },
+    {
+      "position": "9",
+      "team": "Williams",
+      "points": "2",
+      "wins": "0"
+    },
+    {
+      "position": "10",
+      "team": "Cadillac F1 Team",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "11",
+      "team": "Aston Martin",
+      "points": "0",
+      "wins": "0"
+    }
+  ]
+}

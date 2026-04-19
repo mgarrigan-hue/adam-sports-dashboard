@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-04-19T14:40:20Z",
+  "results": [
+    {
+      "date": "2026-03-14T20:10Z",
+      "home": "France",
+      "away": "England",
+      "competition": "Six Nations",
+      "home_score": 48,
+      "away_score": 46
+    },
+    {
+      "date": "2026-03-14T16:40Z",
+      "home": "Wales",
+      "away": "Italy",
+      "competition": "Six Nations",
+      "home_score": 31,
+      "away_score": 17
+    },
+    {
+      "date": "2026-03-14T14:10Z",
+      "home": "Ireland",
+      "away": "Scotland",
+      "competition": "Six Nations",
+      "home_score": 43,
+      "away_score": 21
+    },
+    {
+      "date": "2026-03-07T16:40Z",
+      "home": "Italy",
+      "away": "England",
+      "competition": "Six Nations",
+      "home_score": 23,
+      "away_score": 18
+    },
+    {
+      "date": "2026-03-07T14:10Z",
+      "home": "Scotland",
+      "away": "France",
+      "competition": "Six Nations",
+      "home_score": 50,
+      "away_score": 40
+    },
+    {
+      "date": "2026-03-06T20:10Z",
+      "home": "Ireland",
+      "away": "Wales",
+      "competition": "Six Nations",
+      "home_score": 27,
+      "away_score": 17
+    },
+    {
+      "date": "2026-02-22T15:10Z",
+      "home": "France",
+      "away": "Italy",
+      "competition": "Six Nations",
+      "home_score": 33,
+      "away_score": 8
+    },
+    {
+      "date": "2026-02-21T16:40Z",
+      "home": "Wales",
+      "away": "Scotland",
+      "competition": "Six Nations",
+      "home_score": 23,
+      "away_score": 26
+    },
+    {
+      "date": "2026-02-21T14:10Z",
+      "home": "England",
+      "away": "Ireland",
+      "competition": "Six Nations",
+      "home_score": 21,
+      "away_score": 42
+    },
+    {
+      "date": "2026-02-15T15:10Z",
+      "home": "Wales",
+      "away": "France",
+      "competition": "Six Nations",
+      "home_score": 12,
+      "away_score": 54
+    },
+    {
+      "date": "2026-02-14T16:40Z",
+      "home": "Scotland",
+      "away": "England",
+      "competition": "Six Nations",
+      "home_score": 31,
+      "away_score": 20
+    },
+    {
+      "date": "2026-02-14T14:10Z",
+      "home": "Ireland",
+      "away": "Italy",
+      "competition": "Six Nations",
+      "home_score": 20,
+      "away_score": 13
+    },
+    {
+      "date": "2026-02-07T16:40Z",
+      "home": "England",
+      "away": "Wales",
+      "competition": "Six Nations",
+      "home_score": 48,
+      "away_score": 7
+    },
+    {
+      "date": "2026-02-07T14:10Z",
+      "home": "Italy",
+      "away": "Scotland",
+      "competition": "Six Nations",
+      "home_score": 18,
+      "away_score": 15
+    },
+    {
+      "date": "2026-02-05T20:10Z",
+      "home": "France",
+      "away": "Ireland",
+      "competition": "Six Nations",
+      "home_score": 36,
+      "away_score": 14
+    }
+  ],
+  "fixtures": []
+}

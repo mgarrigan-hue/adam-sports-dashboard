@@ -1,0 +1,49 @@
+name: Refresh sports data
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/**
+      - .github/workflows/refresh.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run fetchers
+        run: |
+          set +e
+          python scripts/fetch_f1.py
+          python scripts/fetch_intl_rugby.py
+          python scripts/fetch_provinces.py
+          python scripts/fetch_schools.py
+          exit 0
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore(data): refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

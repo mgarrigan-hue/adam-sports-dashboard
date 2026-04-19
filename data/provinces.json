@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-04-19T14:40:22Z",
+  "results": [
+    {
+      "date": "2026-04-18T18:45Z",
+      "home": "Benetton Treviso",
+      "away": "Munster",
+      "competition": "URC",
+      "home_score": 15,
+      "away_score": 45
+    },
+    {
+      "date": "2026-04-18T11:45Z",
+      "home": "Stormers",
+      "away": "Connacht",
+      "competition": "URC",
+      "home_score": 24,
+      "away_score": 33
+    },
+    {
+      "date": "2026-04-17T18:45Z",
+      "home": "Ulster",
+      "away": "Leinster",
+      "competition": "URC",
+      "home_score": 21,
+      "away_score": 29
+    },
+    {
+      "date": "2026-04-11T16:30Z",
+      "home": "Leinster",
+      "away": "Sale Sharks",
+      "competition": "Champions Cup",
+      "home_score": 43,
+      "away_score": 13
+    },
+    {
+      "date": "2026-04-05T16:30Z",
+      "home": "Leinster",
+      "away": "Edinburgh",
+      "competition": "Champions Cup",
+      "home_score": 49,
+      "away_score": 31
+    },
+    {
+      "date": "2026-03-28T19:45Z",
+      "home": "Zebre",
+      "away": "Ulster",
+      "competition": "URC",
+      "home_score": 12,
+      "away_score": 28
+    },
+    {
+      "date": "2026-03-28T14:15Z",
+      "home": "Connacht",
+      "away": "Ospreys",
+      "competition": "URC",
+      "home_score": 21,
+      "away_score": 14
+    },
+    {
+      "date": "2026-03-28T12:00Z",
+      "home": "Bulls",
+      "away": "Munster",
+      "competition": "URC",
+      "home_score": 34,
+      "away_score": 31
+    },
+    {
+      "date": "2026-03-27T19:45Z",
+      "home": "Leinster",
+      "away": "Scarlets",
+      "competition": "URC",
+      "home_score": 36,
+      "away_score": 19
+    },
+    {
+      "date": "2026-03-21T17:30Z",
+      "home": "Glasgow Warriors",
+      "away": "Leinster",
+      "competition": "URC",
+      "home_score": 38,
+      "away_score": 17
+    },
+    {
+      "date": "2026-03-21T15:00Z",
+      "home": "Sharks",
+      "away": "Munster",
+      "competition": "URC",
+      "home_score": 45,
+      "away_score": 0
+    },
+    {
+      "date": "2026-03-20T19:45Z",
+      "home": "Ulster",
+      "away": "Connacht",
+      "competition": "URC",
+      "home_score": 19,
+      "away_score": 26
+    },
+    {
+      "date": "2026-03-13T19:45Z",
+      "home": "Connacht",
+      "away": "Scarlets",
+      "competition": "URC",
+      "home_score": 31,
+      "away_score": 14
+    },
+    {
+      "date": "2026-03-13T19:45Z",
+      "home": "Edinburgh",
+      "away": "Ulster",
+      "competition": "URC",
+      "home_score": 19,
+      "away_score": 40
+    },
+    {
+      "date": "2026-02-28T19:45Z",
+      "home": "Ospreys",
+      "away": "Ulster",
+      "competition": "URC",
+      "home_score": 21,
+      "away_score": 10
+    },
+    {
+      "date": "2026-02-28T17:30Z",
+      "home": "Munster",
+      "away": "Zebre",
+      "competition": "URC",
+      "home_score": 21,
+      "away_score": 7
+    },
+    {
+      "date": "2026-02-28T15:00Z",
+      "home": "Connacht",
+      "away": "Glasgow Warriors",
+      "competition": "URC",
+      "home_score": 15,
+      "away_score": 10
+    },
+    {
+      "date": "2026-02-27T19:00Z",
+      "home": "Cardiff Blues",
+      "away": "Leinster",
+      "competition": "URC",
+      "home_score": 8,
+      "away_score": 7
+    },
+    {
+      "date": "2026-01-31T19:45Z",
+      "home": "Ulster",
+      "away": "Cardiff Blues",
+      "competition": "URC",
+      "home_score": 21,
+      "away_score": 14
+    },
+    {
+      "date": "2026-01-31T17:30Z",
+      "home": "Leinster",
+      "away": "Edinburgh",
+      "competition": "URC",
+      "home_score": 28,
+      "away_score": 20
+    },
+    {
+      "date": "2026-01-31T15:00Z",
+      "home": "Zebre",
+      "away": "Connacht",
+      "competition": "URC",
+      "home_score": 15,
+      "away_score": 31
+    },
+    {
+      "date": "2026-01-30T19:45Z",
+      "home": "Glasgow Warriors",
+      "away": "Munster",
+      "competition": "URC",
+      "home_score": 31,
+      "away_score": 22
+    },
+    {
+      "date": "2026-01-24T17:30Z",
+      "home": "Connacht",
+      "away": "Leinster",
+      "competition": "URC",
+      "home_score": 23,
+      "away_score": 34
+    },
+    {
+      "date": "2026-01-24T15:00Z",
+      "home": "Scarlets",
+      "away": "Ulster",
+      "competition": "URC",
+      "home_score": 27,
+      "away_score": 22
+    },
+    {
+      "date": "2026-01-23T19:45Z",
+      "home": "Munster",
+      "away": "Dragons",
+      "competition": "URC",
+      "home_score": 22,
+      "away_score": 20
+    },
+    {
+      "date": "2026-01-17T17:30Z",
+      "home": "Munster",
+      "away": "Castres Olympique",
+      "competition": "Champions Cup",
+      "home_score": 29,
+      "away_score": 31
+    },
+    {
+      "date": "2026-01-17T15:15Z",
+      "home": "Bayonne",
+      "away": "Leinster",
+      "competition": "Champions Cup",
+      "home_score": 13,
+      "away_score": 22
+    },
+    {
+      "date": "2026-01-11T13:00Z",
+      "home": "Toulon",
+      "away": "Munster",
+      "competition": "Champions Cup",
+      "home_score": 27,
+      "away_score": 25
+    },
+    {
+      "date": "2026-01-10T17:30Z",
+      "home": "Leinster",
+      "away": "La Rochelle",
+      "competition": "Champions Cup",
+      "home_score": 25,
+      "away_score": 24
+    },
+    {
+      "date": "2026-01-03T17:30Z",
+      "home": "Leinster",
+      "away": "Connacht",
+      "competition": "URC",
+      "home_score": 52,
+      "away_score": 17
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-04-25T14:00Z",
+      "home": "Lions",
+      "away": "Connacht",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-04-25T16:30Z",
+      "home": "Munster",
+      "away": "Ulster",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-04-25T18:45Z",
+      "home": "Benetton Treviso",
+      "away": "Leinster",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-02T14:00Z",
+      "home": "Leinster",
+      "away": "Toulon",
+      "competition": "Champions Cup"
+    },
+    {
+      "date": "2026-05-08T18:45Z",
+      "home": "Ulster",
+      "away": "Stormers",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-09T16:30Z",
+      "home": "Leinster",
+      "away": "Lions",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-09T18:45Z",
+      "home": "Connacht",
+      "away": "Munster",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-15T18:45Z",
+      "home": "Ulster",
+      "away": "Glasgow Warriors",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-15T18:45Z",
+      "home": "Edinburgh",
+      "away": "Connacht",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-16T16:15Z",
+      "home": "Leinster",
+      "away": "Ospreys",
+      "competition": "URC"
+    },
+    {
+      "date": "2026-05-16T18:45Z",
+      "home": "Munster",
+      "away": "Lions",
+      "competition": "URC"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adam's Sports Dashboard</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🏁🏉</span>
+    <div>
+      <h1>Adam's Sports Dashboard</h1>
+      <p class="tagline">F1 · International Rugby · Irish Provinces · Leinster Schools</p>
+    </div>
+  </div>
+  <div class="last-updated" id="last-updated">Loading…</div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-card" id="hero-card">
+    <div class="hero-label">Next Up</div>
+    <div class="hero-title" id="hero-title">—</div>
+    <div class="hero-meta" id="hero-meta"></div>
+    <div class="hero-countdown" id="hero-countdown"></div>
+  </div>
+</section>
+
+<main>
+  <section class="latest">
+    <h2>📰 Latest — most recent first</h2>
+    <ul class="feed" id="latest-feed">
+      <li class="empty">Loading the latest action…</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+    <section class="panel" id="panel-f1">
+      <h2>🏎️ Formula 1</h2>
+      <div class="panel-body" id="f1-body">Loading…</div>
+    </section>
+
+    <section class="panel" id="panel-intl">
+      <h2>🌍 International Rugby</h2>
+      <div class="panel-body" id="intl-body">Loading…</div>
+    </section>
+
+    <section class="panel" id="panel-prov">
+      <h2>☘️ Irish Provinces (URC)</h2>
+      <div class="panel-body" id="prov-body">Loading…</div>
+    </section>
+
+    <section class="panel" id="panel-schools">
+      <h2>🎓 Leinster Schools Rugby</h2>
+      <div class="panel-body" id="schools-body">Loading…</div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>Built for Adam · data refreshes every 30 min via GitHub Actions</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

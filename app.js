@@ -899,11 +899,11 @@ function bindNav() {
 
   const moveIndicator = (tab) => {
     if (!tab) return;
-    const wrapRect = tabsWrap.getBoundingClientRect();
-    const tabRect = tab.getBoundingClientRect();
-    const left = tabRect.left - wrapRect.left + tabsWrap.scrollLeft;
-    indicator.style.transform = `translateX(${left - 4}px)`;
-    indicator.style.width = `${tabRect.width}px`;
+    // offsetLeft/offsetWidth are layout-stable and relative to the
+    // positioned offsetParent (.nav-tabs has position: relative), so they
+    // don't race with viewport scroll, font-swap reflow, or transforms.
+    indicator.style.transform = `translateX(${tab.offsetLeft - 4}px)`;
+    indicator.style.width = `${tab.offsetWidth}px`;
   };
 
   const setActive = (id) => {
@@ -915,15 +915,23 @@ function bindNav() {
     });
   };
 
-  // Initial active = home
-  requestAnimationFrame(() => setActive("home"));
-  window.addEventListener("resize", () => {
-    const cur = tabs.find(t => t.classList.contains("active"));
-    if (cur) moveIndicator(cur);
-  });
+  // Single source of truth used by reorderSections + font-load + resize.
+  const refresh = () => {
+    const cur = document.querySelector(".nav-tab.active") || tabs[0];
+    moveIndicator(cur);
+  };
+  window.__refreshNavIndicator = refresh;
+
+  // Initial active = home (or whatever .active is in HTML)
+  requestAnimationFrame(refresh);
+  window.addEventListener("resize", refresh);
+
+  // Re-position after web fonts swap in — Inter changes tab widths.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => requestAnimationFrame(refresh));
+  }
 
   tabs.forEach(t => t.addEventListener("click", () => {
-    // setActive happens via observer too, but click should be instant
     setActive(t.dataset.target);
   }));
 
@@ -933,7 +941,6 @@ function bindNav() {
     .filter(Boolean);
   if (!("IntersectionObserver" in window) || !sections.length) return;
   const obs = new IntersectionObserver((entries) => {
-    // Pick the topmost intersecting section (lowest top >= 0-ish)
     const visible = entries
       .filter(e => e.isIntersecting)
       .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -1052,13 +1059,9 @@ function reorderSections(all) {
     }
   }
 
-  // 4. Refresh nav indicator position
-  const cur = tabsWrap?.querySelector(".nav-tab.active");
-  if (cur) {
-    requestAnimationFrame(() => {
-      const evt = new Event("resize");
-      window.dispatchEvent(evt);
-    });
+  // 4. Refresh nav indicator position (DOM order changed → tab offsets shifted)
+  if (typeof window.__refreshNavIndicator === "function") {
+    requestAnimationFrame(window.__refreshNavIndicator);
   }
 }
 

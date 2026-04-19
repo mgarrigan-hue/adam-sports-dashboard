@@ -43,19 +43,19 @@
   },
   "Schools Senior Cup": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" },
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugby", "tier": "free" },
       { "label": "TG4 (finals)", "url": "https://www.tg4.ie/en/", "tier": "free" }
     ],
     "note": "Most rounds streamed free on Leinster Rugby YouTube; finals usually on TG4."
   },
   "Schools Junior Cup": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugby", "tier": "free" }
     ]
   },
   "Schools": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugby", "tier": "free" }
     ],
     "note": "Generic schools fallback — match streamed on Leinster Rugby YouTube if covered."
   },
@@ -65,7 +65,7 @@
   },
   "School Youth": {
     "live": [
-      { "label": "Leinster Rugby YouTube (selected)", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
+      { "label": "Leinster Rugby YouTube (selected)", "url": "https://www.youtube.com/@LeinsterRugby", "tier": "free" }
     ],
     "note": "Leinster School Youth — finals are sometimes streamed on Leinster Rugby YouTube."
   },

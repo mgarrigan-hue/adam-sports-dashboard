@@ -26,32 +26,32 @@
       "label": "World Rugby"
     },
     "URC": {
-      "url": "https://www.youtube.com/@URCRugby",
+      "url": "https://www.youtube.com/@UnitedRugbyChampionship",
       "label": "URC TV"
     },
     "United Rugby Championship": {
-      "url": "https://www.youtube.com/@URCRugby",
+      "url": "https://www.youtube.com/@UnitedRugbyChampionship",
       "label": "URC TV"
     },
     "Champions Cup": {
-      "url": "https://www.youtube.com/@ChampionsCup",
+      "url": "https://www.youtube.com/@ChampionsCupRugby",
       "label": "EPCR Champions Cup"
     },
     "Schools Senior Cup": {
-      "url": "https://www.youtube.com/@LeinsterRugbyTV",
-      "label": "Leinster Rugby TV"
+      "url": "https://www.youtube.com/@LeinsterRugby",
+      "label": "Leinster Rugby"
     },
     "Schools Junior Cup": {
-      "url": "https://www.youtube.com/@LeinsterRugbyTV",
-      "label": "Leinster Rugby TV"
+      "url": "https://www.youtube.com/@LeinsterRugby",
+      "label": "Leinster Rugby"
     },
     "Leinster Schools": {
-      "url": "https://www.youtube.com/@LeinsterRugbyTV",
-      "label": "Leinster Rugby TV"
+      "url": "https://www.youtube.com/@LeinsterRugby",
+      "label": "Leinster Rugby"
     },
     "Schools": {
-      "url": "https://www.youtube.com/@LeinsterRugbyTV",
-      "label": "Leinster Rugby TV"
+      "url": "https://www.youtube.com/@LeinsterRugby",
+      "label": "Leinster Rugby"
     }
   },
   "matches": {}

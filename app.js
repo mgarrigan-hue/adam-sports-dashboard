@@ -723,6 +723,39 @@ function clubQuickStats(d) {
     </div>`;
 }
 
+function isU14(competition) {
+  return /\bU\s?14\b/i.test(competition || "");
+}
+
+function clubU14Stats(d) {
+  if (!d || !Array.isArray(d.results) || !d.results.length) {
+    return { html: "", count: 0 };
+  }
+  const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
+  const recent = d.results.filter(m =>
+    m.involves_smc !== false &&
+    isU14(m.competition) &&
+    m.date && new Date(m.date).getTime() >= cutoff
+  );
+  let w = 0, l = 0, dr = 0;
+  for (const m of recent) {
+    if (m.home_score == null || m.away_score == null) continue;
+    const homeIsUs = /st mary|smtc|smc/i.test(m.home);
+    const us = homeIsUs ? m.home_score : m.away_score;
+    const them = homeIsUs ? m.away_score : m.home_score;
+    if (us > them) w++; else if (us < them) l++; else dr++;
+  }
+  const html = `
+    <div class="club-strip u14-strip">
+      <div class="club-strip-title">🟢⚪ Adam's squad — U14 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
+      <div class="club-stat win"><div class="stat-num">${w}</div><div class="stat-lbl">Wins</div></div>
+      <div class="club-stat loss"><div class="stat-num">${l}</div><div class="stat-lbl">Losses</div></div>
+      <div class="club-stat draw"><div class="stat-num">${dr}</div><div class="stat-lbl">Draws</div></div>
+      <div class="club-stat"><div class="stat-num">${recent.length}</div><div class="stat-lbl">Played</div></div>
+    </div>`;
+  return { html, count: recent.length };
+}
+
 function renderClub(d) {
   const el = document.getElementById("club-body");
   if (!d) { el.textContent = "No club data yet."; return; }
@@ -731,23 +764,43 @@ function renderClub(d) {
     const hl = isResult ? highlightsChipHtml(m.competition || "Dublin Club") : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
+    const u14Tag = isU14(m.competition) ? `<span class="u14-pill" title="Adam's age grade">U14</span>` : "";
     return `
-    <tr class="${m.involves_smc ? "fav-row" : ""}">
+    <tr class="${m.involves_smc ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")}</td>
       <td>${escapeHtml(m.home)}</td>
       <td class="score">${score}</td>
       <td>${escapeHtml(m.away)}</td>
-      <td class="muted small">${escapeHtml(m.competition || "")}</td>
+      <td class="muted small">${escapeHtml(m.competition || "")} ${u14Tag}</td>
     </tr>${subContent ? `<tr class="watch-sub"><td colspan="5">${subContent}</td></tr>` : ""}`;
   };
+
+  // Adam's U14 squad — pinned card at top
+  const u14Results = (d.results || []).filter(m => isU14(m.competition) && m.involves_smc !== false);
+  const u14Fixtures = (d.fixtures || []).filter(m => isU14(m.competition) && m.involves_smc !== false);
+  const u14Stats = clubU14Stats(d);
+  const u14RecRows = u14Results.slice(0, 5).map(m => fmtRow(m, true)).join("");
+  const u14UpcRows = u14Fixtures.slice(0, 5).map(m => fmtRow(m, false)).join("");
+  const u14Card = (u14Results.length || u14Fixtures.length) ? `
+    <section class="u14-card">
+      <div class="u14-card-head">
+        <h3>🟢⚪ Adam's U14 squad</h3>
+        <span class="muted small">St Mary's College RFC · Under-14</span>
+      </div>
+      ${u14Stats.html}
+      ${u14RecRows ? `<div class="sub">Recent U14 results</div><table>${u14RecRows}</table>` : ""}
+      ${u14UpcRows ? `<div class="sub">Upcoming U14 fixtures</div><table>${u14UpcRows}</table>` : ""}
+    </section>` : "";
+
   const recRows = (d.results || []).slice(0, 8).map(m => fmtRow(m, true)).join("");
   const upcRows = (d.fixtures || []).slice(0, 8).map(m => fmtRow(m, false)).join("");
   el.innerHTML = `
+    ${u14Card}
     ${clubQuickStats(d)}
-    <div class="club-blurb">Adam Garrigan plays here. Showing recent &amp; upcoming matches across all St Mary's teams.</div>
-    <div class="sub">Recent results</div>
+    <div class="club-blurb">Adam Garrigan (U14) plays here. His squad is pinned at the top; below is everything across the club.</div>
+    <div class="sub">Recent results — all teams</div>
     <table>${recRows || `<tr><td>—</td></tr>`}</table>
-    <div class="sub">Upcoming fixtures</div>
+    <div class="sub">Upcoming fixtures — all teams</div>
     <table>${upcRows || `<tr><td>—</td></tr>`}</table>
     <div class="muted small" style="margin-top:8px">Source: <a href="https://www.stmaryscollegerfc.ie/results/" target="_blank" rel="noopener">stmaryscollegerfc.ie</a></div>
   `;

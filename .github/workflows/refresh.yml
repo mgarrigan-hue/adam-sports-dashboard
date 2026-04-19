@@ -50,8 +50,9 @@ jobs:
           # Retry push with rebase to handle races with other commits.
           for i in 1 2 3 4 5; do
             if git push; then exit 0; fi
-            echo "push failed, attempt $i — pulling with rebase and retrying"
-            git pull --rebase origin main
+            echo "push failed, attempt $i — pulling with rebase (preferring our fresh data) and retrying"
+            # -X theirs: when rebasing OUR commit on top of remote, "theirs" = our changes, win the conflict.
+            git pull --rebase -X theirs origin main || git rebase --abort
             sleep 3
           done
           echo "::error::Failed to push refreshed data after retries"

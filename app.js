@@ -17,9 +17,11 @@ const DATA_FILES = {
   news: "data/news.json",
   watch: "data/watch.json",
   club: "data/dublin_club.json",
+  highlights: "data/highlights.json",
 };
 
 let WATCH = {};
+let HIGHLIGHTS = { competitions: {}, matches: {} };
 
 function watchInfo(competition) {
   if (!competition || !WATCH) return null;
@@ -32,14 +34,25 @@ function watchInfo(competition) {
   return WATCH._default || null;
 }
 
-function highlightsSearchUrl(query) {
-  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(query + " highlights");
+function highlightsForCompetition(competition, matchKey) {
+  if (matchKey && HIGHLIGHTS.matches && HIGHLIGHTS.matches[matchKey]) {
+    return HIGHLIGHTS.matches[matchKey];
+  }
+  if (!competition) return null;
+  const comps = HIGHLIGHTS.competitions || {};
+  const c = competition.toLowerCase();
+  const keys = Object.keys(comps).sort((a, b) => b.length - a.length);
+  for (const k of keys) {
+    if (c.includes(k.toLowerCase())) return comps[k];
+  }
+  return null;
 }
-function highlightsChipHtml(query, label) {
-  if (!query) return "";
-  const url = highlightsSearchUrl(query);
-  const lbl = label || "Highlights";
-  return `<a class="watch-chip is-link is-highlights" href="${escapeAttr(url)}" target="_blank" rel="noopener" title="Search YouTube for ${escapeAttr(query)} highlights">🎬 ${escapeHtml(lbl)} ↗</a>`;
+
+function highlightsChipHtml(competition, matchKey) {
+  const entry = highlightsForCompetition(competition, matchKey);
+  if (!entry || !entry.url) return "";
+  const lbl = entry.label || "Recaps";
+  return `<a class="watch-chip is-link is-highlights" href="${escapeAttr(entry.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(lbl)} for highlights">🎬 Recaps on ${escapeHtml(lbl)} ↗</a>`;
 }
 
 function watchChipsHtml(competition, opts = {}) {
@@ -50,11 +63,19 @@ function watchChipsHtml(competition, opts = {}) {
   if (opts.includeHighlights) (info.highlights || []).forEach(x => items.push(x));
   if (!items.length && !info.note) return "";
 
+  const tierMeta = {
+    free: { cls: "tier-free", lbl: "Free TV" },
+    sky:  { cls: "tier-sky",  lbl: "Sky" },
+    sub:  { cls: "tier-sub",  lbl: "Subscription" },
+  };
   const chips = items.map(x => {
+    const meta = tierMeta[x.tier] || null;
+    const tierTag = meta ? `<span class="chip-tier">${meta.lbl}</span>` : "";
+    const tierCls = meta ? meta.cls : "";
     if (x.url) {
-      return `<a class="watch-chip is-link" href="${escapeAttr(x.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(x.label)}">📺 ${escapeHtml(x.label)} ↗</a>`;
+      return `<a class="watch-chip is-link ${tierCls}" href="${escapeAttr(x.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(x.label)}">📺 ${escapeHtml(x.label)} ${tierTag} ↗</a>`;
     }
-    return `<span class="watch-chip" title="On TV via Sky Signature">📺 ${escapeHtml(x.label)}</span>`;
+    return `<span class="watch-chip ${tierCls}" title="On TV (Sky Signature)">📺 ${escapeHtml(x.label)} ${tierTag}</span>`;
   }).join("");
   const note = info.note ? `<span class="watch-note">${escapeHtml(info.note)}</span>` : "";
   return `<div class="watch-row">${chips}${note}</div>`;
@@ -203,14 +224,15 @@ function buildFeed(all) {
   const items = [];
   if (all.f1) {
     (all.f1.recent_results || []).forEach(r => {
+      const detail = f1RaceDetailLine(r);
       items.push({
         date: r.date, tag: "f1",
         title: `🏆 ${r.race_name} — Winner: ${r.winner}`,
-        meta: r.podium ? `Podium: ${r.podium.join(" · ")}` : "",
+        meta: detail || (r.podium ? `Podium: ${r.podium.join(" · ")}` : ""),
         fav: isFavF1(r.winner) || (r.podium || []).some(isFavF1),
         watch: "Formula 1",
         isResult: true,
-        highlightsQuery: `F1 ${r.race_name} ${(new Date(r.date)).getFullYear() || ""}`,
+        competition: "Formula 1",
       });
     });
     (all.f1.upcoming || []).forEach(r => {
@@ -219,14 +241,16 @@ function buildFeed(all) {
         title: `🏁 ${r.race_name} — ${r.circuit || ""}`,
         meta: r.location || "", fav: false,
         watch: "Formula 1",
+        competition: "Formula 1",
       });
     });
   }
   const pushRugby = (m, tag, defaultComp) => {
     const homeCell = `<span class="team-cell">${logoImg(m.home_logo)}${escapeHtml(m.home)}</span>`;
     const awayCell = `<span class="team-cell">${logoImg(m.away_logo)}${escapeHtml(m.away)}</span>`;
+    const htChip = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
     const titleHtml = m.home_score != null
-      ? `${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell}`
+      ? `${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell} ${htChip}`
       : `${homeCell} v ${awayCell}`;
     items.push({
       date: m.date, tag,
@@ -234,10 +258,9 @@ function buildFeed(all) {
       meta: m.competition || defaultComp,
       fav: isFavRugby(m.home) || isFavRugby(m.away) || isFavSchool(m.home) || isFavSchool(m.away),
       watch: m.competition || defaultComp,
+      competition: m.competition || defaultComp,
       isResult: m.home_score != null,
-      highlightsQuery: m.home_score != null
-        ? `${m.home} v ${m.away} ${m.competition || defaultComp}`
-        : null,
+      scoringSummary: m.scoring_summary || null,
     });
   };
   if (all.intl) {
@@ -255,8 +278,8 @@ function buildFeed(all) {
       meta: m.competition || "Leinster Schools",
       fav: isFavSchool(m.home) || isFavSchool(m.away),
       watch: m.competition || "Schools",
+      competition: m.competition || "Schools",
       isResult: true,
-      highlightsQuery: `${m.home} v ${m.away} Leinster schools rugby`,
     }));
     (all.schools.fixtures || []).forEach(m => items.push({
       date: m.date, tag: "schools",
@@ -264,6 +287,7 @@ function buildFeed(all) {
       meta: m.competition || "Leinster Schools",
       fav: isFavSchool(m.home) || isFavSchool(m.away),
       watch: m.competition || "Schools",
+      competition: m.competition || "Schools",
       isResult: false,
     }));
   }
@@ -280,8 +304,8 @@ function buildFeed(all) {
         meta: m.competition || "St Mary's College RFC",
         fav: m.involves_smc !== false,
         watch: m.competition || "Dublin Club",
+        competition: m.competition || "Dublin Club",
         isResult,
-        highlightsQuery: isResult ? `${m.home} v ${m.away} ${m.competition || "rugby"}` : null,
       });
     };
     (all.club.results || []).slice(0, 25).forEach(m => pushClub(m, true));
@@ -297,11 +321,52 @@ function buildFeed(all) {
   const now = Date.now();
   const past = items.filter(it => it.date && new Date(it.date).getTime() <= now);
   if (past.length) return past.slice(0, 30);
-  // Fallback: if we somehow have no past results yet, show nearest upcoming.
   return items
     .filter(it => it.date)
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .slice(0, 10);
+}
+
+// ---------- F1 detail formatters ----------
+function f1RaceDetailLine(r) {
+  const bits = [];
+  if (r.pole?.driver) {
+    const t = r.pole.time ? ` (${r.pole.time})` : "";
+    bits.push(`Pole: ${r.pole.driver}${t}`);
+  }
+  if (r.fastest_lap?.driver) {
+    const t = r.fastest_lap.time ? ` (${r.fastest_lap.time})` : "";
+    bits.push(`Fastest: ${r.fastest_lap.driver}${t}`);
+  }
+  if (r.top3 && r.top3.length >= 2) {
+    const p2 = r.top3[1];
+    if (p2 && p2.time && p2.time.startsWith("+")) bits.push(`P2 gap ${p2.time}`);
+  }
+  return bits.join(" · ");
+}
+
+// ---------- Rugby scorers timeline ----------
+const RUGBY_ICONS = {
+  "try": "🟢",
+  "penalty try": "🟢",
+  "conversion": "✅",
+  "penalty goal": "🎯",
+  "drop goal": "⚡",
+  "yellow card": "🟨",
+  "red card": "🟥",
+};
+function scorerTimelineHtml(summary, isFav) {
+  if (!summary || !summary.length) return "";
+  const items = summary.map(s => {
+    const icon = RUGBY_ICONS[s.type] || "•";
+    const team = s.team ? `<span class="scorer-team">${escapeHtml(s.team)}</span>` : "";
+    const player = s.player ? `<span class="scorer-name">${escapeHtml(s.player)}</span>` : "";
+    return `<li><span class="scorer-min">${escapeHtml(s.minute || "")}</span> <span class="scorer-icon">${icon}</span> ${team} ${player}</li>`;
+  }).join("");
+  return `<details class="scorers"${isFav ? " open" : ""}>
+    <summary>📋 Scoring summary (${summary.length})</summary>
+    <ol class="scorer-list">${items}</ol>
+  </details>`;
 }
 
 function feedDateBlockHtml(iso) {
@@ -331,8 +396,9 @@ function renderFeed(items) {
   ul.innerHTML = items.slice(0, 25).map(i => {
     const isPast = i.date && new Date(i.date).getTime() < Date.now();
     const watch = i.watch ? watchChipsHtml(i.watch, { includeHighlights: isPast || i.isResult }) : "";
-    const hl = (i.isResult || isPast) && i.highlightsQuery ? highlightsChipHtml(i.highlightsQuery) : "";
+    const hl = (i.isResult || isPast) ? highlightsChipHtml(i.competition || i.watch) : "";
     const extraRow = hl ? `<div class="watch-row">${hl}</div>` : "";
+    const scorers = i.scoringSummary ? scorerTimelineHtml(i.scoringSummary, i.fav) : "";
     const rel = i.date ? relTime(i.date) : "";
     return `
     <li class="feed-item ${i.fav ? "fav" : ""}">
@@ -343,6 +409,7 @@ function renderFeed(items) {
         ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}
         ${extraRow}
+        ${scorers}
       </div>
       <span class="feed-tag ${i.tag}">${i.tag}</span>
     </li>`;
@@ -550,6 +617,27 @@ function renderF1(d) {
       </table>`;
   }
 
+  // Recent races (with pole + fastest + gap)
+  let recentHtml = "";
+  if (d.recent_results?.length) {
+    const items = d.recent_results.slice(0, 4).map(r => {
+      const detail = f1RaceDetailLine(r);
+      const top3 = (r.top3 || []).map(t => {
+        const teamLc = (t.team || "").toLowerCase();
+        return `<li data-team="${escapeAttr(teamLc)}"><span class="pos">P${t.position}</span> <span class="drv">${escapeHtml(t.driver)}</span> <span class="muted">${escapeHtml(t.team || "")}</span> <span class="gap tabular">${escapeHtml(t.time || "")}</span></li>`;
+      }).join("");
+      return `<div class="f1-race-card">
+        <div class="f1-race-head">
+          <div class="f1-race-name">🏆 ${escapeHtml(r.race_name)}</div>
+          <div class="muted small">${fmtDate(r.date)}</div>
+        </div>
+        ${detail ? `<div class="f1-race-detail">${escapeHtml(detail)}</div>` : ""}
+        ${top3 ? `<ol class="f1-podium">${top3}</ol>` : ""}
+      </div>`;
+    }).join("");
+    recentHtml = `<div class="sub">Recent races</div><div class="f1-races">${items}</div>`;
+  }
+
   el.innerHTML = `
     <div class="f1-weekend">
       <div>${timelineHtml || `<div class="sub">No upcoming weekend on file</div>`}</div>
@@ -558,6 +646,7 @@ function renderF1(d) {
         ${sprintHtml}
       </div>
     </div>
+    ${recentHtml}
     <div class="standings-grid">
       <div>
         <div class="sub">Driver standings</div>
@@ -583,13 +672,15 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
 
   const rec = (d.results || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label, { includeHighlights: true });
-    const hl = highlightsChipHtml(`${m.home} v ${m.away} ${m.competition || label}`);
-    const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
+    const hl = highlightsChipHtml(m.competition || label);
+    const scorers = scorerTimelineHtml(m.scoring_summary, isFav(m));
+    const ht = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
+    const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : "", scorers].filter(Boolean).join("");
     return `
     <tr class="${isFav(m) ? "fav-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : ""}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
-      <td class="score">${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}</td>
+      <td class="score">${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
       <td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${subContent ? `<tr class="watch-sub"><td colspan="4">${subContent}</td></tr>` : ""}`;
   }).join("");
@@ -637,7 +728,7 @@ function renderClub(d) {
   if (!d) { el.textContent = "No club data yet."; return; }
   const fmtRow = (m, isResult) => {
     const watch = watchChipsHtml(m.competition || "Dublin Club", { includeHighlights: isResult });
-    const hl = isResult ? highlightsChipHtml(`${m.home} v ${m.away} ${m.competition || "rugby"}`) : "";
+    const hl = isResult ? highlightsChipHtml(m.competition || "Dublin Club") : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
     return `
@@ -937,7 +1028,7 @@ function rerenderAll() {
   bindInstallPrompt();
   registerSW();
 
-  const [f1, intl, prov, schools, news, watch, club] = await Promise.all([
+  const [f1, intl, prov, schools, news, watch, club, highlights] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.intl),
     loadJson(DATA_FILES.prov),
@@ -945,9 +1036,11 @@ function rerenderAll() {
     loadJson(DATA_FILES.news),
     loadJson(DATA_FILES.watch),
     loadJson(DATA_FILES.club),
+    loadJson(DATA_FILES.highlights),
   ]);
   DATA = { f1, intl, prov, schools, news, club };
   WATCH = watch || {};
+  HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
   const stamps = [f1, intl, prov, schools, news, club].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   document.getElementById("last-updated").textContent = stamps.length

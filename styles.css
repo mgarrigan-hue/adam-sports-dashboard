@@ -638,3 +638,111 @@ footer { padding: 24px 28px; color: var(--muted); font-size: 12px; text-align: c
   .card-wide { grid-column: auto; }
   .btn { min-height: 40px; }
 }
+
+/* ====== Detail layer: HT chip, scorers timeline, F1 race cards, tier tags ====== */
+
+.ht-chip {
+  display: inline-block; margin-left: 8px;
+  padding: 2px 8px; font-size: 11px; font-weight: 700;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+.scorers {
+  margin-top: 8px;
+  font-size: 13px;
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+}
+.scorers > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 600;
+  list-style: none;
+  padding: 4px 0;
+  user-select: none;
+}
+.scorers > summary::-webkit-details-marker { display: none; }
+.scorers > summary::before { content: "▸ "; transition: transform 0.15s; display: inline-block; }
+.scorers[open] > summary::before { content: "▾ "; }
+.scorer-list { list-style: none; padding: 6px 0 0; margin: 0; display: grid; gap: 4px; }
+.scorer-list li {
+  display: grid;
+  grid-template-columns: 38px 22px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+.scorer-list li:hover { background: rgba(255,255,255,0.03); }
+.scorer-min { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; }
+.scorer-icon { text-align: center; }
+.scorer-team { font-size: 12px; color: var(--muted); }
+.scorer-name { font-weight: 600; }
+
+/* F1 race-card list (recent races, with pole/fastest/podium) */
+.f1-races {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.f1-race-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.f1-race-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+  margin-bottom: 6px;
+}
+.f1-race-name { font-weight: 700; font-size: 14px; }
+.f1-race-detail {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 8px; padding: 4px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.f1-podium { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; font-size: 13px; }
+.f1-podium li {
+  display: grid;
+  grid-template-columns: 32px 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border-left: 3px solid var(--border);
+}
+.f1-podium li[data-team*="ferrari"]      { border-left-color: #ED1C24; }
+.f1-podium li[data-team*="mclaren"]      { border-left-color: #FF8000; }
+.f1-podium li[data-team*="mercedes"]     { border-left-color: #00D2BE; }
+.f1-podium li[data-team*="red bull"]     { border-left-color: #1E41FF; }
+.f1-podium li[data-team*="aston"]        { border-left-color: #006F62; }
+.f1-podium li[data-team*="alpine"]       { border-left-color: #2293D1; }
+.f1-podium li[data-team*="williams"]     { border-left-color: #37BEDD; }
+.f1-podium li[data-team*="haas"]         { border-left-color: #B6BABD; }
+.f1-podium li[data-team*="sauber"]       { border-left-color: #00E700; }
+.f1-podium li[data-team*="rb"],
+.f1-podium li[data-team*="racing bull"]  { border-left-color: #2B4562; }
+.f1-podium .pos { font-weight: 700; color: var(--muted); font-size: 12px; }
+.f1-podium .drv { font-weight: 600; }
+.f1-podium .gap { color: var(--muted); font-size: 12px; }
+
+/* Watch-chip tier tags */
+.chip-tier {
+  display: inline-block; margin-left: 4px;
+  padding: 1px 6px; font-size: 10px; font-weight: 700;
+  border-radius: 999px;
+  vertical-align: middle;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.watch-chip.tier-free .chip-tier { background: rgba(76,175,80,0.18); color: #81c784; border: 1px solid rgba(76,175,80,0.35); }
+.watch-chip.tier-sky  .chip-tier { background: rgba(255,193,7,0.16); color: #ffd166; border: 1px solid rgba(255,193,7,0.35); }
+.watch-chip.tier-sub  .chip-tier { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border); }
+.watch-chip.tier-free { border-color: rgba(76,175,80,0.30); }
+.watch-chip.tier-sky  { border-color: rgba(255,193,7,0.30); }

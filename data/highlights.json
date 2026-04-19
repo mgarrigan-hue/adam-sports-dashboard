@@ -1,0 +1,58 @@
+{
+  "_comment": "Curated official recap channels per competition. Only entries here will render a Highlights chip — no generic YouTube searches.",
+  "competitions": {
+    "Formula 1": {
+      "url": "https://www.formula1.com/en/video.html",
+      "label": "F1.com video"
+    },
+    "Six Nations": {
+      "url": "https://www.youtube.com/@SixNationsRugby",
+      "label": "Six Nations TV"
+    },
+    "Six Nations U20": {
+      "url": "https://www.youtube.com/@SixNationsRugby",
+      "label": "Six Nations TV"
+    },
+    "Rugby Championship": {
+      "url": "https://www.youtube.com/@WorldRugby",
+      "label": "World Rugby"
+    },
+    "Rugby World Cup": {
+      "url": "https://www.youtube.com/@WorldRugby",
+      "label": "World Rugby"
+    },
+    "International": {
+      "url": "https://www.youtube.com/@WorldRugby",
+      "label": "World Rugby"
+    },
+    "URC": {
+      "url": "https://www.youtube.com/@URCRugby",
+      "label": "URC TV"
+    },
+    "United Rugby Championship": {
+      "url": "https://www.youtube.com/@URCRugby",
+      "label": "URC TV"
+    },
+    "Champions Cup": {
+      "url": "https://www.youtube.com/@ChampionsCup",
+      "label": "EPCR Champions Cup"
+    },
+    "Schools Senior Cup": {
+      "url": "https://www.youtube.com/@LeinsterRugbyTV",
+      "label": "Leinster Rugby TV"
+    },
+    "Schools Junior Cup": {
+      "url": "https://www.youtube.com/@LeinsterRugbyTV",
+      "label": "Leinster Rugby TV"
+    },
+    "Leinster Schools": {
+      "url": "https://www.youtube.com/@LeinsterRugbyTV",
+      "label": "Leinster Rugby TV"
+    },
+    "Schools": {
+      "url": "https://www.youtube.com/@LeinsterRugbyTV",
+      "label": "Leinster Rugby TV"
+    }
+  },
+  "matches": {}
+}

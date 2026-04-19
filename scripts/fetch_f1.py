@@ -141,14 +141,68 @@ def fetch_recent_results(season: str, limit: int = 5):
         results = r.get("Results", [])
         podium = [f"{x['Driver']['givenName']} {x['Driver']['familyName']}" for x in results[:3]]
         winner = podium[0] if podium else ""
+        winner_team = results[0].get("Constructor", {}).get("name", "") if results else ""
         date = r.get("date", "")
         time = r.get("time", "")
         iso = f"{date}T{time}" if date and time else date
+
+        # Top-3 with gap to leader (P1 shows total time, P2/P3 show "+x.xxx")
+        top3 = []
+        for x in results[:3]:
+            t = x.get("Time", {}) or {}
+            top3.append({
+                "position": int(x.get("position", 0)),
+                "driver": f"{x['Driver']['givenName']} {x['Driver']['familyName']}",
+                "team": x.get("Constructor", {}).get("name", ""),
+                "time": t.get("time", ""),  # e.g. "1:28:03.403" for P1, "+5.234" for P2/P3
+                "status": x.get("status", ""),
+            })
+
+        # Fastest lap across all classified finishers
+        fastest = None
+        for x in results:
+            fl = x.get("FastestLap")
+            if not fl:
+                continue
+            try:
+                rank = int(fl.get("rank", 0))
+            except (TypeError, ValueError):
+                rank = 0
+            if rank == 1:
+                fastest = {
+                    "driver": f"{x['Driver']['givenName']} {x['Driver']['familyName']}",
+                    "time": (fl.get("Time") or {}).get("time", ""),
+                    "lap": fl.get("lap", ""),
+                }
+                break
+
+        # Pole = qualifying P1 — needs an extra call but worth it
+        pole = None
+        try:
+            qd = get(f"{BASE}/{season}/{r.get('round')}/qualifying.json")
+            qraces = qd["MRData"]["RaceTable"]["Races"]
+            if qraces:
+                qres = qraces[0].get("QualifyingResults", [])
+                if qres:
+                    p = qres[0]
+                    pole = {
+                        "driver": f"{p['Driver']['givenName']} {p['Driver']['familyName']}",
+                        "team": p.get("Constructor", {}).get("name", ""),
+                        "time": p.get("Q3") or p.get("Q2") or p.get("Q1") or "",
+                    }
+        except Exception as e:
+            print(f"pole fetch failed for round {r.get('round')}: {e}", file=sys.stderr)
+
         out.append({
             "race_name": r.get("raceName"),
+            "round": r.get("round"),
             "date": iso,
             "winner": winner,
+            "winner_team": winner_team,
             "podium": podium,
+            "top3": top3,
+            "fastest_lap": fastest,
+            "pole": pole,
         })
     return out
 

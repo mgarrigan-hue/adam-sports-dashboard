@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:34:50Z",
+  "generated_at": "2026-04-19T16:10:30Z",
   "season": "2026",
   "upcoming": [
     {
@@ -62,33 +62,138 @@
   "recent_results": [
     {
       "race_name": "Japanese Grand Prix",
+      "round": "3",
       "date": "2026-03-29T05:00:00Z",
       "winner": "Andrea Kimi Antonelli",
+      "winner_team": "Mercedes",
       "podium": [
         "Andrea Kimi Antonelli",
         "Oscar Piastri",
         "Charles Leclerc"
-      ]
+      ],
+      "top3": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "team": "Mercedes",
+          "time": "1:28:03.403",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Oscar Piastri",
+          "team": "McLaren",
+          "time": "+13.722",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "time": "+15.270",
+          "status": "Finished"
+        }
+      ],
+      "fastest_lap": {
+        "driver": "Andrea Kimi Antonelli",
+        "time": "1:32.432",
+        "lap": "49"
+      },
+      "pole": {
+        "driver": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "time": "1:28.778"
+      }
     },
     {
       "race_name": "Chinese Grand Prix",
+      "round": "2",
       "date": "2026-03-15T07:00:00Z",
       "winner": "Andrea Kimi Antonelli",
+      "winner_team": "Mercedes",
       "podium": [
         "Andrea Kimi Antonelli",
         "George Russell",
         "Lewis Hamilton"
-      ]
+      ],
+      "top3": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "team": "Mercedes",
+          "time": "1:33:15.607",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "time": "+5.515",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Lewis Hamilton",
+          "team": "Ferrari",
+          "time": "+25.267",
+          "status": "Finished"
+        }
+      ],
+      "fastest_lap": {
+        "driver": "Andrea Kimi Antonelli",
+        "time": "1:35.275",
+        "lap": "52"
+      },
+      "pole": {
+        "driver": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "time": "1:32.064"
+      }
     },
     {
       "race_name": "Australian Grand Prix",
+      "round": "1",
       "date": "2026-03-08T04:00:00Z",
       "winner": "George Russell",
+      "winner_team": "Mercedes",
       "podium": [
         "George Russell",
         "Andrea Kimi Antonelli",
         "Charles Leclerc"
-      ]
+      ],
+      "top3": [
+        {
+          "position": 1,
+          "driver": "George Russell",
+          "team": "Mercedes",
+          "time": "1:23:06.801",
+          "status": "Finished"
+        },
+        {
+          "position": 2,
+          "driver": "Andrea Kimi Antonelli",
+          "team": "Mercedes",
+          "time": "+2.974",
+          "status": "Finished"
+        },
+        {
+          "position": 3,
+          "driver": "Charles Leclerc",
+          "team": "Ferrari",
+          "time": "+15.519",
+          "status": "Finished"
+        }
+      ],
+      "fastest_lap": {
+        "driver": "Max Verstappen",
+        "time": "1:22.091",
+        "lap": "43"
+      },
+      "pole": {
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "time": "1:18.518"
+      }
     }
   ],
   "driver_standings": [

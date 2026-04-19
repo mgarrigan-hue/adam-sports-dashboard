@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:34:52Z",
+  "generated_at": "2026-04-19T16:11:22Z",
   "results": [
     {
       "date": "2026-04-18T18:45Z",
@@ -9,7 +9,117 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "URC",
       "home_score": 15,
-      "away_score": 45
+      "away_score": 45,
+      "scoring_summary": [
+        {
+          "minute": "7'",
+          "team": "Munster",
+          "player": "C. Nash",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "17'",
+          "team": "Munster",
+          "player": "T. Farrell",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "34'",
+          "team": "Munster",
+          "player": "G. Coombes",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "46'",
+          "team": "Munster",
+          "player": "J. Kleyn",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Benetton Treviso",
+          "player": "B. Bernasconi",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "56'",
+          "team": "Munster",
+          "player": "A. Kendellen",
+          "type": "try"
+        },
+        {
+          "minute": "59'",
+          "team": "Munster",
+          "player": "T. Beirne",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "63'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "yellow card"
+        },
+        {
+          "minute": "65'",
+          "team": "Munster",
+          "player": "C. Casey",
+          "type": "yellow card"
+        },
+        {
+          "minute": "77'",
+          "team": "Munster",
+          "player": "B. Gleeson",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "80'",
+          "team": "Benetton Treviso",
+          "player": "A. Garbisi",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-04-18T11:45Z",
@@ -19,7 +129,111 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
       "competition": "URC",
       "home_score": 24,
-      "away_score": 33
+      "away_score": 33,
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Stormers",
+          "player": "D. Fourie",
+          "type": "yellow card"
+        },
+        {
+          "minute": "7'",
+          "team": "Connacht",
+          "player": "S. Hurley-Langton",
+          "type": "try"
+        },
+        {
+          "minute": "7'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "14'",
+          "team": "Stormers",
+          "player": "E. Roos",
+          "type": "try"
+        },
+        {
+          "minute": "14'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "41'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "47'",
+          "team": "Stormers",
+          "player": "N. Mchunu",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "55'",
+          "team": "Connacht",
+          "player": "P. Boyle",
+          "type": "try"
+        },
+        {
+          "minute": "55'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "62'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "try"
+        },
+        {
+          "minute": "63'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "64'",
+          "team": "Connacht",
+          "player": "J. Devine",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Connacht",
+          "player": "B. Murphy",
+          "type": "try"
+        },
+        {
+          "minute": "71'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "77'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-04-17T18:45Z",
@@ -29,7 +243,105 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "URC",
       "home_score": 21,
-      "away_score": 29
+      "away_score": 29,
+      "scoring_summary": [
+        {
+          "minute": "17'",
+          "team": "Leinster",
+          "player": "J. Culhane",
+          "type": "try"
+        },
+        {
+          "minute": "17'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "24'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "38'",
+          "team": "Leinster",
+          "player": "J. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "44'",
+          "team": "Ulster",
+          "player": "H. Sheridan",
+          "type": "yellow card"
+        },
+        {
+          "minute": "45'",
+          "team": "Leinster",
+          "player": "R. Henshaw",
+          "type": "try"
+        },
+        {
+          "minute": "46'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "51'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "55'",
+          "team": "Ulster",
+          "player": "B. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "56'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "60'",
+          "team": "Leinster",
+          "player": "M. Deegan",
+          "type": "red card"
+        },
+        {
+          "minute": "62'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "63'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "65'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-04-11T16:30Z",
@@ -39,7 +351,117 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25908.png",
       "competition": "Champions Cup",
       "home_score": 43,
-      "away_score": 13
+      "away_score": 13,
+      "scoring_summary": [
+        {
+          "minute": "10'",
+          "team": "Leinster",
+          "player": "D. Sheehan",
+          "type": "try"
+        },
+        {
+          "minute": "11'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Sale Sharks",
+          "player": "G. Ford",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "36'",
+          "team": "Sale Sharks",
+          "player": "D. du Preez",
+          "type": "yellow card"
+        },
+        {
+          "minute": "43'",
+          "team": "Sale Sharks",
+          "player": "S. McIntyre",
+          "type": "yellow card"
+        },
+        {
+          "minute": "44'",
+          "team": "Leinster",
+          "player": "H. Keenan",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Sale Sharks",
+          "player": "G. Ford",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "54'",
+          "team": "Leinster",
+          "player": "R. Baird",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Leinster",
+          "player": "R. Ioane",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "63'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "64'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "Sale Sharks",
+          "player": "A. Wills",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Sale Sharks",
+          "player": "G. Ford",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "80'",
+          "team": "Leinster",
+          "player": "J. Osborne",
+          "type": "try"
+        },
+        {
+          "minute": "81'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-04-05T16:30Z",
@@ -49,7 +471,142 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25951.png",
       "competition": "Champions Cup",
       "home_score": 49,
-      "away_score": 31
+      "away_score": 31,
+      "half_time": "28-24",
+      "scoring_summary": [
+        {
+          "minute": "2'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "3'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "9'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "16'",
+          "team": "Edinburgh",
+          "player": "C. Shiel",
+          "type": "try"
+        },
+        {
+          "minute": "20'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "try"
+        },
+        {
+          "minute": "21'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "25'",
+          "team": "Leinster",
+          "player": "J. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "26'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "28'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "37'",
+          "team": "Leinster",
+          "player": "H. Keenan",
+          "type": "try"
+        },
+        {
+          "minute": "38'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "40'",
+          "team": "Edinburgh",
+          "player": "M. Currie",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Edinburgh",
+          "player": "D. Graham",
+          "type": "try"
+        },
+        {
+          "minute": "56'",
+          "team": "Leinster",
+          "player": "J. van der Flier",
+          "type": "try"
+        },
+        {
+          "minute": "57'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "63'",
+          "team": "Leinster",
+          "player": "T. Clarkson",
+          "type": "try"
+        },
+        {
+          "minute": "64'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "Leinster",
+          "player": "R. Ioane",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-03-28T19:45Z",
@@ -59,7 +616,87 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
       "competition": "URC",
       "home_score": 12,
-      "away_score": 28
+      "away_score": 28,
+      "scoring_summary": [
+        {
+          "minute": "11'",
+          "team": "Zebre",
+          "player": "T. Di Bartolomeo",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Zebre",
+          "player": "M. Roger",
+          "type": "conversion"
+        },
+        {
+          "minute": "20'",
+          "team": "Ulster",
+          "player": "T. McAllister",
+          "type": "try"
+        },
+        {
+          "minute": "21'",
+          "team": "Ulster",
+          "player": "J. Humphreys",
+          "type": "conversion"
+        },
+        {
+          "minute": "28'",
+          "team": "Zebre",
+          "player": "S. Gesi",
+          "type": "red card"
+        },
+        {
+          "minute": "44'",
+          "team": "Ulster",
+          "player": "R. Herring",
+          "type": "try"
+        },
+        {
+          "minute": "45'",
+          "team": "Ulster",
+          "player": "J. Humphreys",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "Ulster",
+          "player": "W. Kok",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Zebre",
+          "player": "J. Trulla",
+          "type": "try"
+        },
+        {
+          "minute": "84'",
+          "team": "Ulster",
+          "player": "S. Wilson",
+          "type": "yellow card"
+        }
+      ]
     },
     {
       "date": "2026-03-28T14:15Z",
@@ -69,7 +706,81 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25968.png",
       "competition": "URC",
       "home_score": 21,
-      "away_score": 14
+      "away_score": 14,
+      "scoring_summary": [
+        {
+          "minute": "11'",
+          "team": "Connacht",
+          "player": "S. Hurley-Langton",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Ospreys",
+          "player": "D. Kasende",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "Ospreys",
+          "player": "D. Edwards",
+          "type": "conversion"
+        },
+        {
+          "minute": "45'",
+          "team": "Connacht",
+          "player": "S. Hurley-Langton",
+          "type": "try"
+        },
+        {
+          "minute": "46'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "48'",
+          "team": "Connacht",
+          "player": "D. Murray",
+          "type": "yellow card"
+        },
+        {
+          "minute": "56'",
+          "team": "Ospreys",
+          "player": "L. Morgan",
+          "type": "try"
+        },
+        {
+          "minute": "57'",
+          "team": "Ospreys",
+          "player": "D. Edwards",
+          "type": "conversion"
+        },
+        {
+          "minute": "72'",
+          "team": "Ospreys",
+          "player": "J. Morgan",
+          "type": "yellow card"
+        },
+        {
+          "minute": "74'",
+          "team": "Connacht",
+          "player": "M. Devine",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-03-28T12:00Z",
@@ -79,7 +790,123 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "URC",
       "home_score": 34,
-      "away_score": 31
+      "away_score": 31,
+      "scoring_summary": [
+        {
+          "minute": "20'",
+          "team": "Munster",
+          "player": "S. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "21'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "30'",
+          "team": "Bulls",
+          "player": "E. Papier",
+          "type": "try"
+        },
+        {
+          "minute": "31'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "33'",
+          "team": "Bulls",
+          "player": "R. Nortje",
+          "type": "yellow card"
+        },
+        {
+          "minute": "35'",
+          "team": "Bulls",
+          "player": "C. Moodie",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "Munster",
+          "player": "T. Ahern",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Bulls",
+          "player": "E. Papier",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Munster",
+          "player": "T. Ahern",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "58'",
+          "team": "Bulls",
+          "player": "C. Jooste",
+          "type": "try"
+        },
+        {
+          "minute": "59'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "61'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "67'",
+          "team": "Munster",
+          "player": "B. O'Connor",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "73'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "75'",
+          "team": "Munster",
+          "player": "E. Edogbo",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-03-27T19:45Z",
@@ -89,7 +916,111 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25966.png",
       "competition": "URC",
       "home_score": 36,
-      "away_score": 19
+      "away_score": 19,
+      "scoring_summary": [
+        {
+          "minute": "17'",
+          "team": "Leinster",
+          "player": "B. Deeny",
+          "type": "yellow card"
+        },
+        {
+          "minute": "17'",
+          "team": "Scarlets",
+          "player": "J. Roberts",
+          "type": "try"
+        },
+        {
+          "minute": "18'",
+          "team": "Scarlets",
+          "player": "J. Hawkins",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Scarlets",
+          "player": "J. Roberts",
+          "type": "yellow card"
+        },
+        {
+          "minute": "28'",
+          "team": "Scarlets",
+          "player": "J. Taylor",
+          "type": "yellow card"
+        },
+        {
+          "minute": "29'",
+          "team": "Leinster",
+          "player": "G. Ringrose",
+          "type": "try"
+        },
+        {
+          "minute": "30'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "34'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        },
+        {
+          "minute": "43'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "46'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "57'",
+          "team": "Scarlets",
+          "player": "T. Rogers",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "M. Deegan",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "72'",
+          "team": "Scarlets",
+          "player": "M. Douglas",
+          "type": "try"
+        },
+        {
+          "minute": "73'",
+          "team": "Scarlets",
+          "player": "J. Hawkins",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        },
+        {
+          "minute": "76'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-03-21T17:30Z",
@@ -99,7 +1030,118 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "URC",
       "home_score": 38,
-      "away_score": 17
+      "away_score": 17,
+      "half_time": "26-5",
+      "scoring_summary": [
+        {
+          "minute": "17'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        },
+        {
+          "minute": "26'",
+          "team": "Leinster",
+          "player": "B. Deeny",
+          "type": "yellow card"
+        },
+        {
+          "minute": "27'",
+          "team": "Glasgow Warriors",
+          "player": "M. Duncan",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "conversion"
+        },
+        {
+          "minute": "29'",
+          "team": "Leinster",
+          "player": "R. Kelleher",
+          "type": "yellow card"
+        },
+        {
+          "minute": "31'",
+          "team": "Glasgow Warriors",
+          "player": "G. Hiddleston",
+          "type": "try"
+        },
+        {
+          "minute": "34'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "conversion"
+        },
+        {
+          "minute": "37'",
+          "team": "Glasgow Warriors",
+          "player": "K. Rowe",
+          "type": "try"
+        },
+        {
+          "minute": "38'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "conversion"
+        },
+        {
+          "minute": "41'",
+          "team": "Leinster",
+          "player": "H. Keenan",
+          "type": "try"
+        },
+        {
+          "minute": "42'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "Glasgow Warriors",
+          "player": "O. Smith",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Leinster",
+          "player": "C. Frawley",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Glasgow Warriors",
+          "player": "G. Horne",
+          "type": "try"
+        },
+        {
+          "minute": "79'",
+          "team": "Leinster",
+          "player": "R. Slimani",
+          "type": "yellow card"
+        },
+        {
+          "minute": "79'",
+          "team": "Glasgow Warriors",
+          "player": "A. Hastings",
+          "type": "yellow card"
+        }
+      ]
     },
     {
       "date": "2026-03-21T15:00Z",
@@ -109,7 +1151,82 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "URC",
       "home_score": 45,
-      "away_score": 0
+      "away_score": 0,
+      "half_time": "12-0",
+      "scoring_summary": [
+        {
+          "minute": "7'",
+          "team": "Sharks",
+          "player": "P. Buthelezi",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Sharks",
+          "player": "J. Hendrikse",
+          "type": "conversion"
+        },
+        {
+          "minute": "28'",
+          "team": "Sharks",
+          "player": "L. Giliomee",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Sharks",
+          "player": "P. Ganyane",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Sharks",
+          "player": "J. Hendrikse",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Sharks",
+          "player": "E. van Heerden",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "Sharks",
+          "player": "J. Hendrikse",
+          "type": "conversion"
+        },
+        {
+          "minute": "77'",
+          "team": "Sharks",
+          "player": "L. Malan",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Sharks",
+          "player": "J. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "79'",
+          "team": "Sharks",
+          "player": "M. Mapimpi",
+          "type": "try"
+        },
+        {
+          "minute": "80'",
+          "team": "Sharks",
+          "player": "J. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "81'",
+          "team": "Sharks",
+          "player": "M. Mapimpi",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-03-20T19:45Z",
@@ -119,7 +1236,87 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
       "competition": "URC",
       "home_score": 19,
-      "away_score": 26
+      "away_score": 26,
+      "scoring_summary": [
+        {
+          "minute": "19'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "20'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "24'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "try"
+        },
+        {
+          "minute": "25'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "39'",
+          "team": "Connacht",
+          "player": "F. Bealham",
+          "type": "yellow card"
+        },
+        {
+          "minute": "57'",
+          "team": "Connacht",
+          "player": "F. Bealham",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "61'",
+          "team": "Connacht",
+          "player": "F. Treacy",
+          "type": "try"
+        },
+        {
+          "minute": "65'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Connacht",
+          "player": "F. Treacy",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "76'",
+          "team": "Ulster",
+          "player": "A. Bell",
+          "type": "try"
+        },
+        {
+          "minute": "76'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-03-13T19:45Z",
@@ -129,7 +1326,81 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25966.png",
       "competition": "URC",
       "home_score": 31,
-      "away_score": 14
+      "away_score": 14,
+      "scoring_summary": [
+        {
+          "minute": "16'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "17'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "37'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "46'",
+          "team": "Connacht",
+          "player": "J. Aungier",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        },
+        {
+          "minute": "49'",
+          "team": "Scarlets",
+          "player": "J. Roberts",
+          "type": "try"
+        },
+        {
+          "minute": "50'",
+          "team": "Scarlets",
+          "player": "C. Leggatt-Jones",
+          "type": "conversion"
+        },
+        {
+          "minute": "53'",
+          "team": "Scarlets",
+          "player": "I. Jones",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "Scarlets",
+          "player": "C. Leggatt-Jones",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Connacht",
+          "player": "F. Barrett",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Connacht",
+          "player": "E. de Buitlear",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Connacht",
+          "player": "S. Naughton",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-03-13T19:45Z",
@@ -139,7 +1410,123 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
       "competition": "URC",
       "home_score": 19,
-      "away_score": 40
+      "away_score": 40,
+      "scoring_summary": [
+        {
+          "minute": "1'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "yellow card"
+        },
+        {
+          "minute": "6'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "10'",
+          "team": "Ulster",
+          "player": "C. Irvine",
+          "type": "try"
+        },
+        {
+          "minute": "11'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "21'",
+          "team": "Edinburgh",
+          "player": "H. Paterson",
+          "type": "try"
+        },
+        {
+          "minute": "22'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "31'",
+          "team": "Edinburgh",
+          "player": "W. Goosen",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Ulster",
+          "player": "J. Augustus",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "45'",
+          "team": "Ulster",
+          "player": "H. Sheridan",
+          "type": "red card"
+        },
+        {
+          "minute": "50'",
+          "team": "Ulster",
+          "player": "J. Flannery",
+          "type": "try"
+        },
+        {
+          "minute": "62'",
+          "team": "Ulster",
+          "player": "S. Wilson",
+          "type": "try"
+        },
+        {
+          "minute": "63'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "64'",
+          "team": "Edinburgh",
+          "player": "H. Morris",
+          "type": "red card"
+        },
+        {
+          "minute": "69'",
+          "team": "Ulster",
+          "player": "C. McKee",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Ulster",
+          "player": "B. Carson",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-02-28T19:45Z",
@@ -149,7 +1536,63 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
       "competition": "URC",
       "home_score": 21,
-      "away_score": 10
+      "away_score": 10,
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Ospreys",
+          "player": "C. Foley",
+          "type": "try"
+        },
+        {
+          "minute": "4'",
+          "team": "Ospreys",
+          "player": "J. Walsh",
+          "type": "conversion"
+        },
+        {
+          "minute": "9'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Ulster",
+          "player": "T. Stewart",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Ospreys",
+          "player": "J. Ratti",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Ospreys",
+          "player": "J. Walsh",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Ulster",
+          "player": "M. Rea",
+          "type": "yellow card"
+        },
+        {
+          "minute": "77'",
+          "team": "Ospreys",
+          "player": "D. Kasende",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Ospreys",
+          "player": "J. Walsh",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-02-28T17:30Z",
@@ -159,7 +1602,63 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/167124.png",
       "competition": "URC",
       "home_score": 21,
-      "away_score": 7
+      "away_score": 7,
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Zebre",
+          "player": "G. Bertaccini",
+          "type": "yellow card"
+        },
+        {
+          "minute": "7'",
+          "team": "Munster",
+          "player": "S. Daly",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "32'",
+          "team": "Zebre",
+          "player": "B. Stavile",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "Zebre",
+          "player": "G. Da Re",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "Munster",
+          "player": "A. Kendellen",
+          "type": "try"
+        },
+        {
+          "minute": "65'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "71'",
+          "team": "Munster",
+          "player": "L. Barron",
+          "type": "try"
+        },
+        {
+          "minute": "72'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-02-28T15:00Z",
@@ -169,7 +1668,51 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25952.png",
       "competition": "URC",
       "home_score": 15,
-      "away_score": 10
+      "away_score": 10,
+      "scoring_summary": [
+        {
+          "minute": "25'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "57'",
+          "team": "Connacht",
+          "player": "J. Joyce",
+          "type": "yellow card"
+        },
+        {
+          "minute": "61'",
+          "team": "Glasgow Warriors",
+          "player": "K. Rowe",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Glasgow Warriors",
+          "player": "K. Rowe",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "Connacht",
+          "player": "J. Murphy",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "81'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-02-27T19:00Z",
@@ -179,7 +1722,45 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "URC",
       "home_score": 8,
-      "away_score": 7
+      "away_score": 7,
+      "scoring_summary": [
+        {
+          "minute": "13'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "yellow card"
+        },
+        {
+          "minute": "19'",
+          "team": "Cardiff Blues",
+          "player": "C. Sheedy",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "54'",
+          "team": "Cardiff Blues",
+          "player": "A. Davies",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "Cardiff Blues",
+          "player": "J. Beetham",
+          "type": "yellow card"
+        },
+        {
+          "minute": "68'",
+          "team": "Leinster",
+          "player": "L. McGrath",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-31T19:45Z",
@@ -189,7 +1770,69 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25965.png",
       "competition": "URC",
       "home_score": 21,
-      "away_score": 14
+      "away_score": 14,
+      "scoring_summary": [
+        {
+          "minute": "12'",
+          "team": "Ulster",
+          "player": "S. Wilson",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "19'",
+          "team": "Ulster",
+          "player": "A. Bell",
+          "type": "try"
+        },
+        {
+          "minute": "19'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "54'",
+          "team": "Cardiff Blues",
+          "player": "J. Mulder",
+          "type": "try"
+        },
+        {
+          "minute": "55'",
+          "team": "Cardiff Blues",
+          "player": "C. Sheedy",
+          "type": "conversion"
+        },
+        {
+          "minute": "66'",
+          "team": "Ulster",
+          "player": "C. Irvine",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Ulster",
+          "player": "J. Murphy",
+          "type": "conversion"
+        },
+        {
+          "minute": "68'",
+          "team": "Cardiff Blues",
+          "player": "S. Emanuel",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Cardiff Blues",
+          "player": "C. Sheedy",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-31T17:30Z",
@@ -199,7 +1842,94 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25951.png",
       "competition": "URC",
       "home_score": 28,
-      "away_score": 20
+      "away_score": 20,
+      "half_time": "7-15",
+      "scoring_summary": [
+        {
+          "minute": "8'",
+          "team": "Edinburgh",
+          "player": "C. Hunter-Hill",
+          "type": "yellow card"
+        },
+        {
+          "minute": "13'",
+          "team": "Leinster",
+          "player": "M. Deegan",
+          "type": "try"
+        },
+        {
+          "minute": "14'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "conversion"
+        },
+        {
+          "minute": "20'",
+          "team": "Edinburgh",
+          "player": "D. van der Merwe",
+          "type": "try"
+        },
+        {
+          "minute": "23'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "39'",
+          "team": "Edinburgh",
+          "player": "M. Satala-Navlivou",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Edinburgh",
+          "player": "R. Thompson",
+          "type": "conversion"
+        },
+        {
+          "minute": "44'",
+          "team": "Leinster",
+          "player": "S. Penny",
+          "type": "try"
+        },
+        {
+          "minute": "45'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "S. Penny",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Leinster",
+          "player": "S. Penny",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "conversion"
+        },
+        {
+          "minute": "81'",
+          "team": "Edinburgh",
+          "player": "C. Shiel",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-01-31T15:00Z",
@@ -209,7 +1939,106 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
       "competition": "URC",
       "home_score": 15,
-      "away_score": 31
+      "away_score": 31,
+      "half_time": "3-0",
+      "scoring_summary": [
+        {
+          "minute": "26'",
+          "team": "Zebre",
+          "player": "M. Roger",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "41'",
+          "team": "Connacht",
+          "player": "J. Joyce",
+          "type": "try"
+        },
+        {
+          "minute": "42'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "50'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "56'",
+          "team": "Zebre",
+          "player": "G. Garcia",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Zebre",
+          "player": "G. Garcia",
+          "type": "yellow card"
+        },
+        {
+          "minute": "61'",
+          "team": "Connacht",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "62'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "72'",
+          "team": "Connacht",
+          "player": "C. Mullins",
+          "type": "yellow card"
+        },
+        {
+          "minute": "73'",
+          "team": "Zebre",
+          "player": "B. Stavile",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "Zebre",
+          "player": "M. Roger",
+          "type": "conversion"
+        },
+        {
+          "minute": "78'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "89'",
+          "team": "Zebre",
+          "player": "M. Zanon",
+          "type": "yellow card"
+        },
+        {
+          "minute": "91'",
+          "team": "Connacht",
+          "player": "O. McCormack",
+          "type": "try"
+        },
+        {
+          "minute": "92'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-30T19:45Z",
@@ -219,7 +2048,105 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "URC",
       "home_score": 31,
-      "away_score": 22
+      "away_score": 22,
+      "scoring_summary": [
+        {
+          "minute": "7'",
+          "team": "Glasgow Warriors",
+          "player": "O. Smith",
+          "type": "try"
+        },
+        {
+          "minute": "7'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "conversion"
+        },
+        {
+          "minute": "9'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "try"
+        },
+        {
+          "minute": "9'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "conversion"
+        },
+        {
+          "minute": "12'",
+          "team": "Munster",
+          "player": "E. Coughlan",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "Glasgow Warriors",
+          "player": "O. Oguntibeju",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "conversion"
+        },
+        {
+          "minute": "39'",
+          "team": "Munster",
+          "player": "T. Abrahams",
+          "type": "yellow card"
+        },
+        {
+          "minute": "40'",
+          "team": "Glasgow Warriors",
+          "player": "J. McKay",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "conversion"
+        },
+        {
+          "minute": "51'",
+          "team": "Munster",
+          "player": "D. Kelly",
+          "type": "try"
+        },
+        {
+          "minute": "61'",
+          "team": "Munster",
+          "player": "B. Gleeson",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Munster",
+          "player": "D. Kilgallen",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Munster",
+          "player": "T. Wood",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Glasgow Warriors",
+          "player": "D. Lancaster",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "83'",
+          "team": "Munster",
+          "player": "J. O'Donoghue",
+          "type": "yellow card"
+        }
+      ]
     },
     {
       "date": "2026-01-24T17:30Z",
@@ -229,7 +2156,111 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "URC",
       "home_score": 23,
-      "away_score": 34
+      "away_score": 34,
+      "scoring_summary": [
+        {
+          "minute": "8'",
+          "team": "Leinster",
+          "player": "F. Gunne",
+          "type": "try"
+        },
+        {
+          "minute": "9'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "11'",
+          "team": "Connacht",
+          "player": "D. Tierney-Martin",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "27'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "31'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "33'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "48'",
+          "team": "Connacht",
+          "player": "H. West",
+          "type": "try"
+        },
+        {
+          "minute": "49'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Leinster",
+          "player": "R. Snyman",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "60'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "try"
+        },
+        {
+          "minute": "61'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "70'",
+          "team": "Leinster",
+          "player": "C. Frawley",
+          "type": "try"
+        },
+        {
+          "minute": "71'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-24T15:00Z",
@@ -239,7 +2270,106 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
       "competition": "URC",
       "home_score": 27,
-      "away_score": 22
+      "away_score": 22,
+      "half_time": "17-12",
+      "scoring_summary": [
+        {
+          "minute": "6'",
+          "team": "Scarlets",
+          "player": "S. Costelow",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "10'",
+          "team": "Scarlets",
+          "player": "B. Murray",
+          "type": "try"
+        },
+        {
+          "minute": "11'",
+          "team": "Scarlets",
+          "player": "S. Costelow",
+          "type": "conversion"
+        },
+        {
+          "minute": "19'",
+          "team": "Ulster",
+          "player": "T. Stewart",
+          "type": "try"
+        },
+        {
+          "minute": "27'",
+          "team": "Ulster",
+          "player": "B. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "27'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "33'",
+          "team": "Scarlets",
+          "player": "J. MacLeod",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "Scarlets",
+          "player": "S. Costelow",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "Scarlets",
+          "player": "T. Plumtree",
+          "type": "yellow card"
+        },
+        {
+          "minute": "68'",
+          "team": "Ulster",
+          "player": "S. Wilson",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "71'",
+          "team": "Scarlets",
+          "player": "S. Costelow",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "76'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "82'",
+          "team": "Ulster",
+          "player": "W. Kok",
+          "type": "yellow card"
+        },
+        {
+          "minute": "84'",
+          "team": "Scarlets",
+          "player": "E. Mee",
+          "type": "try"
+        },
+        {
+          "minute": "85'",
+          "team": "Scarlets",
+          "player": "S. Costelow",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-23T19:45Z",
@@ -249,7 +2379,87 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25967.png",
       "competition": "URC",
       "home_score": 22,
-      "away_score": 20
+      "away_score": 20,
+      "scoring_summary": [
+        {
+          "minute": "11'",
+          "team": "Dragons",
+          "player": "A. O'Brien",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "17'",
+          "team": "Dragons",
+          "player": "B. Coghlan",
+          "type": "try"
+        },
+        {
+          "minute": "18'",
+          "team": "Dragons",
+          "player": "A. O'Brien",
+          "type": "conversion"
+        },
+        {
+          "minute": "19'",
+          "team": "Dragons",
+          "player": "H. Beddall",
+          "type": "yellow card"
+        },
+        {
+          "minute": "30'",
+          "team": "Dragons",
+          "player": "A. O'Brien",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "39'",
+          "team": "Munster",
+          "player": "B. Gleeson",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Munster",
+          "player": "T. Butler",
+          "type": "conversion"
+        },
+        {
+          "minute": "53'",
+          "team": "Dragons",
+          "player": "D. Richards",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "Dragons",
+          "player": "A. O'Brien",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Munster",
+          "player": "G. Coombes",
+          "type": "try"
+        },
+        {
+          "minute": "64'",
+          "team": "Munster",
+          "player": "G. Coombes",
+          "type": "try"
+        },
+        {
+          "minute": "65'",
+          "team": "Munster",
+          "player": "T. Butler",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Munster",
+          "player": "T. Butler",
+          "type": "penalty goal"
+        }
+      ]
     },
     {
       "date": "2026-01-17T17:30Z",
@@ -259,7 +2469,117 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25916.png",
       "competition": "Champions Cup",
       "home_score": 29,
-      "away_score": 31
+      "away_score": 31,
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Castres Olympique",
+          "player": "J. Fernandez",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "11'",
+          "team": "Castres Olympique",
+          "player": "V. Karawalevu",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Castres Olympique",
+          "player": "J. Fernandez",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "Munster",
+          "player": "C. Casey",
+          "type": "try"
+        },
+        {
+          "minute": "19'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Munster",
+          "player": "C. Casey",
+          "type": "try"
+        },
+        {
+          "minute": "39'",
+          "team": "Castres Olympique",
+          "player": "T. Chabouni",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Castres Olympique",
+          "player": "J. Fernandez",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "Munster",
+          "player": "T. Abrahams",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Munster",
+          "player": "E. Edogbo",
+          "type": "try"
+        },
+        {
+          "minute": "64'",
+          "team": "Munster",
+          "player": "T. Farrell",
+          "type": "yellow card"
+        },
+        {
+          "minute": "68'",
+          "team": "Castres Olympique",
+          "player": "G. Palis",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Castres Olympique",
+          "player": "E. Herve",
+          "type": "conversion"
+        },
+        {
+          "minute": "73'",
+          "team": "Castres Olympique",
+          "player": "C. Ambadiang",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "Castres Olympique",
+          "player": "E. Herve",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Castres Olympique",
+          "player": "L. Nakarawa",
+          "type": "yellow card"
+        },
+        {
+          "minute": "78'",
+          "team": "Munster",
+          "player": "E. Edogbo",
+          "type": "try"
+        },
+        {
+          "minute": "79'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-01-17T15:15Z",
@@ -269,7 +2589,76 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "Champions Cup",
       "home_score": 13,
-      "away_score": 22
+      "away_score": 22,
+      "half_time": "10-3",
+      "scoring_summary": [
+        {
+          "minute": "15'",
+          "team": "Bayonne",
+          "player": "S. Maqala",
+          "type": "try"
+        },
+        {
+          "minute": "16'",
+          "team": "Bayonne",
+          "player": "J. Segonds",
+          "type": "conversion"
+        },
+        {
+          "minute": "21'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "24'",
+          "team": "Bayonne",
+          "player": "J. Segonds",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "50'",
+          "team": "Bayonne",
+          "player": "H. Jantjies",
+          "type": "yellow card"
+        },
+        {
+          "minute": "56'",
+          "team": "Leinster",
+          "player": "D. Sheehan",
+          "type": "try"
+        },
+        {
+          "minute": "57'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "60'",
+          "team": "Bayonne",
+          "player": "J. Segonds",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "80'",
+          "team": "Leinster",
+          "player": "M. Deegan",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-01-11T13:00Z",
@@ -279,7 +2668,123 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "Champions Cup",
       "home_score": 27,
-      "away_score": 25
+      "away_score": 25,
+      "scoring_summary": [
+        {
+          "minute": "17'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "32'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "36'",
+          "team": "Munster",
+          "player": "T. Beirne",
+          "type": "yellow card"
+        },
+        {
+          "minute": "40'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "conversion"
+        },
+        {
+          "minute": "44'",
+          "team": "Toulon",
+          "player": "B. White",
+          "type": "try"
+        },
+        {
+          "minute": "45'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "Munster",
+          "player": "C. Nash",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "50'",
+          "team": "Toulon",
+          "player": "G. Drean",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "conversion"
+        },
+        {
+          "minute": "55'",
+          "team": "Munster",
+          "player": "A. Nankivell",
+          "type": "yellow card"
+        },
+        {
+          "minute": "57'",
+          "team": "Toulon",
+          "player": "E. Abadie",
+          "type": "yellow card"
+        },
+        {
+          "minute": "65'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "68'",
+          "team": "Toulon",
+          "player": "C. Ollivon",
+          "type": "yellow card"
+        },
+        {
+          "minute": "68'",
+          "team": "Munster",
+          "player": "J. O'Donoghue",
+          "type": "try"
+        },
+        {
+          "minute": "72'",
+          "team": "Munster",
+          "player": "T. Farrell",
+          "type": "try"
+        },
+        {
+          "minute": "73'",
+          "team": "Munster",
+          "player": "J. Crowley",
+          "type": "conversion"
+        },
+        {
+          "minute": "76'",
+          "team": "Toulon",
+          "player": "M. Domon",
+          "type": "penalty goal"
+        }
+      ]
     },
     {
       "date": "2026-01-10T17:30Z",
@@ -289,7 +2794,99 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/119318.png",
       "competition": "Champions Cup",
       "home_score": 25,
-      "away_score": 24
+      "away_score": 24,
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        },
+        {
+          "minute": "9'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "12'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "yellow card"
+        },
+        {
+          "minute": "29'",
+          "team": "La Rochelle",
+          "player": "D. Niniashvili",
+          "type": "try"
+        },
+        {
+          "minute": "30'",
+          "team": "La Rochelle",
+          "player": "N. Le Garrec",
+          "type": "conversion"
+        },
+        {
+          "minute": "37'",
+          "team": "Leinster",
+          "player": "J. McCarthy",
+          "type": "yellow card"
+        },
+        {
+          "minute": "54'",
+          "team": "La Rochelle",
+          "player": "N. Le Garrec",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "59'",
+          "team": "La Rochelle",
+          "player": "I. West",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "La Rochelle",
+          "player": "N. Le Garrec",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "J. van der Flier",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Leinster",
+          "player": "R. Henshaw",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "La Rochelle",
+          "player": "I. West",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "La Rochelle",
+          "player": "N. Le Garrec",
+          "type": "conversion"
+        },
+        {
+          "minute": "82'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        }
+      ]
     },
     {
       "date": "2026-01-03T17:30Z",
@@ -299,7 +2896,130 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
       "competition": "URC",
       "home_score": 52,
-      "away_score": 17
+      "away_score": 17,
+      "half_time": "19-17",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Leinster",
+          "player": "D. Sheehan",
+          "type": "try"
+        },
+        {
+          "minute": "5'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "8'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "19'",
+          "team": "Connacht",
+          "player": "D. Tierney-Martin",
+          "type": "try"
+        },
+        {
+          "minute": "20'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "26'",
+          "team": "Leinster",
+          "player": "J. McCarthy",
+          "type": "yellow card"
+        },
+        {
+          "minute": "27'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "36'",
+          "team": "Connacht",
+          "player": "F. Bealham",
+          "type": "try"
+        },
+        {
+          "minute": "37'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "39'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "try"
+        },
+        {
+          "minute": "44'",
+          "team": "Leinster",
+          "player": "B. Deeny",
+          "type": "try"
+        },
+        {
+          "minute": "45'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "62'",
+          "team": "Leinster",
+          "player": "C. Tector",
+          "type": "try"
+        },
+        {
+          "minute": "63'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "75'",
+          "team": "Leinster",
+          "player": "J. Kenny",
+          "type": "try"
+        }
+      ]
     }
   ],
   "fixtures": [

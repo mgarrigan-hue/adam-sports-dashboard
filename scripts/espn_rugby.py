@@ -50,6 +50,60 @@ def parse_events(data, competition_label: str | None = None):
                 entry["away_score"] = int(away.get("score", 0))
             except (TypeError, ValueError):
                 pass
+
+            # Half-time score from per-period linescores (period 1 = first half).
+            # Only emit if linescores actually exist for both teams; some feeds
+            # return empty arrays which would produce a misleading "0-0".
+            def _ht(team):
+                ls_arr = team.get("linescores") or []
+                if not ls_arr:
+                    return None
+                for ls in ls_arr:
+                    if ls.get("period") == 1:
+                        try:
+                            return int(ls.get("value") or 0)
+                        except (TypeError, ValueError):
+                            return None
+                return None
+            ht_h = _ht(home)
+            ht_a = _ht(away)
+            if ht_h is not None and ht_a is not None:
+                # Suppress if both 0 but the final wasn't 0-0 (means feed didn't provide HT)
+                final_total = (entry.get("home_score") or 0) + (entry.get("away_score") or 0)
+                if ht_h + ht_a > 0 or final_total == 0:
+                    entry["half_time"] = f"{ht_h}-{ht_a}"
+
+            # Scoring summary (player-level plays) from competitions[0].details.
+            # Filter to actual scoring/discipline events — skip substitutions etc.
+            SCORING_TYPES = {
+                "try", "penalty try", "conversion", "penalty goal",
+                "drop goal", "yellow card", "red card",
+            }
+            id_to_team = {
+                str(home.get("team", {}).get("id")): entry["home"],
+                str(away.get("team", {}).get("id")): entry["away"],
+            }
+            scorers = []
+            for det in comp.get("details", []) or []:
+                t = ((det.get("type") or {}).get("text") or "").lower()
+                if t not in SCORING_TYPES:
+                    continue
+                clk = (det.get("clock") or {}).get("displayValue") or ""
+                team_id = str((det.get("team") or {}).get("id") or "")
+                team_name = id_to_team.get(team_id, "")
+                ath = (det.get("athletesInvolved") or [])
+                player = ""
+                if ath:
+                    a = ath[0]
+                    player = a.get("shortName") or a.get("displayName") or a.get("fullName") or ""
+                scorers.append({
+                    "minute": clk,
+                    "team": team_name,
+                    "player": player,
+                    "type": t,
+                })
+            if scorers:
+                entry["scoring_summary"] = scorers
         out.append(entry)
     return out
 

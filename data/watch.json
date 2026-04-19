@@ -1,64 +1,61 @@
 {
-  "_comment": "Curated 'where to watch' mapping. Edit freely. Keys are matched case-insensitively against competition names using includes(), so partial matches work (e.g. 'Bank of Ireland Schools Senior Cup' matches the 'Schools Senior Cup' key).",
+  "_comment": "Curated 'where to watch' mapping. Tiers: 'free' (terrestrial / free streaming), 'sky' (Sky Signature pack), 'sub' (separate paid subscription). Keys matched case-insensitively via includes() with longest-key-first specificity.",
   "Formula 1": {
     "live": [
-      { "label": "Sky Sports F1", "channel": true }
-    ],
-    "highlights": [
-      { "label": "F1 official YouTube", "url": "https://www.youtube.com/@Formula1" },
-      { "label": "F1.com video", "url": "https://www.formula1.com/en/video.html" }
+      { "label": "Sky Sports F1", "tier": "sky" },
+      { "label": "Channel 4 (highlights)", "url": "https://www.channel4.com/", "tier": "free" }
     ]
   },
   "Six Nations": {
     "live": [
-      { "label": "Virgin Media Player (IRE)", "url": "https://www.virginmediaplayer.com/" },
-      { "label": "RTÉ Player", "url": "https://www.rte.ie/player/" },
-      { "label": "ITVX (UK)", "url": "https://www.itv.com/" },
-      { "label": "BBC iPlayer (UK)", "url": "https://www.bbc.co.uk/iplayer" }
+      { "label": "Virgin Media One (IRE)", "url": "https://www.virginmediaplayer.com/", "tier": "free" },
+      { "label": "RTÉ Player", "url": "https://www.rte.ie/player/", "tier": "free" },
+      { "label": "ITVX (UK)", "url": "https://www.itv.com/", "tier": "free" },
+      { "label": "BBC iPlayer (UK)", "url": "https://www.bbc.co.uk/iplayer", "tier": "free" }
     ],
     "note": "Free with an Irish/UK IP. Coverage split across broadcasters by match."
   },
   "Rugby Championship": {
     "live": [
-      { "label": "Sky Sports Action", "channel": true }
+      { "label": "Sky Sports Action", "tier": "sky" }
     ]
   },
   "Rugby World Cup": {
     "live": [
-      { "label": "Virgin Media Player", "url": "https://www.virginmediaplayer.com/" },
-      { "label": "ITVX", "url": "https://www.itv.com/" }
+      { "label": "Virgin Media Player", "url": "https://www.virginmediaplayer.com/", "tier": "free" },
+      { "label": "ITVX", "url": "https://www.itv.com/", "tier": "free" }
     ],
     "note": "Free coverage in IRE/UK during the tournament."
   },
   "URC": {
     "live": [
-      { "label": "TG4 (free, selected IRE games)", "url": "https://www.tg4.ie/en/player/live/" },
-      { "label": "Premier Sports (Sky channel)", "channel": true },
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos" }
+      { "label": "TG4 (selected IRE games)", "url": "https://www.tg4.ie/en/player/live/", "tier": "free" },
+      { "label": "RTÉ Player (selected)", "url": "https://www.rte.ie/player/", "tier": "free" },
+      { "label": "Premier Sports", "tier": "sky" }
     ],
-    "note": "TG4 streams chosen Irish-province matches free. Most others on Premier Sports (included with Sky Signature add-on)."
+    "note": "TG4/RTÉ stream chosen Irish-province matches free. Most others on Premier Sports — included with the Sky Sports + Premier Sports add-on (Signature pack)."
   },
   "Champions Cup": {
     "live": [
-      { "label": "RTÉ Player (Irish teams)", "url": "https://www.rte.ie/player/" },
-      { "label": "Premier Sports (Sky channel)", "channel": true }
+      { "label": "RTÉ Player (Irish teams)", "url": "https://www.rte.ie/player/", "tier": "free" },
+      { "label": "Premier Sports", "tier": "sky" }
     ]
   },
   "Schools Senior Cup": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos" },
-      { "label": "TG4 (finals)", "url": "https://www.tg4.ie/en/" }
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" },
+      { "label": "TG4 (finals)", "url": "https://www.tg4.ie/en/", "tier": "free" }
     ],
-    "note": "Most rounds are streamed free on Leinster Rugby's YouTube; finals usually on TG4."
+    "note": "Most rounds streamed free on Leinster Rugby YouTube; finals usually on TG4."
   },
   "Schools Junior Cup": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos" }
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
     ]
   },
   "Schools": {
     "live": [
-      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos" }
+      { "label": "Leinster Rugby YouTube", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
     ],
     "note": "Generic schools fallback — match streamed on Leinster Rugby YouTube if covered."
   },
@@ -68,25 +65,19 @@
   },
   "School Youth": {
     "live": [
-      { "label": "Leinster Rugby YouTube (selected)", "url": "https://www.youtube.com/@LeinsterRugbyVideos" }
+      { "label": "Leinster Rugby YouTube (selected)", "url": "https://www.youtube.com/@LeinsterRugbyVideos", "tier": "free" }
     ],
     "note": "Leinster School Youth — finals are sometimes streamed on Leinster Rugby YouTube."
   },
   "AIL": {
     "live": [
-      { "label": "Premier Sports", "channel": true },
-      { "label": "Irish Rugby YouTube (highlights)", "url": "https://www.youtube.com/@IrishRugbyTV" }
-    ],
-    "highlights": [
-      { "label": "Irish Rugby YouTube", "url": "https://www.youtube.com/@IrishRugbyTV" }
+      { "label": "Premier Sports", "tier": "sky" },
+      { "label": "Irish Rugby YouTube (highlights)", "url": "https://www.youtube.com/@IrishRugbyTV", "tier": "free" }
     ],
     "note": "Energia All-Ireland League — selected matches on Premier Sports."
   },
   "Dublin Club": {
     "live": [],
-    "highlights": [
-      { "label": "St Mary's College RFC site", "url": "https://www.stmaryscollegerfc.ie/results/" }
-    ],
     "note": "Local club rugby — check the host club's social media for any stream."
   },
   "_default": {

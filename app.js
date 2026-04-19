@@ -1160,7 +1160,7 @@ function rerenderAll() {
   applyFadeIn();
 
   const greet = document.createElement("div");
-  greet.style.cssText = "color:var(--muted);font-size:12px;margin-top:4px";
-  greet.textContent = "Hi Adam 👋 — Up the Blues, MARYS abú, and Forza Hadjar!";
+  greet.className = "adam-greet";
+  greet.innerHTML = `Hi Adam 👋 — Go <strong>Leinster</strong> 💙, come on <strong>St Mary's</strong> 🟢⚪, and <strong>Go Hadjar</strong> 🏎️`;
   document.querySelector(".tagline").after(greet);
 })();

@@ -799,6 +799,116 @@ function applyFadeIn() {
   });
 }
 
+// ---------- Activity-based section reordering ----------
+function sportActivity(all) {
+  const now = Date.now();
+  const DAY = 86400000;
+
+  function bestDates(matches) {
+    let lastPast = null, nextFuture = null;
+    for (const m of matches || []) {
+      if (!m?.date) continue;
+      const t = new Date(m.date).getTime();
+      if (isNaN(t)) continue;
+      if (t <= now) { if (lastPast === null || t > lastPast) lastPast = t; }
+      else { if (nextFuture === null || t < nextFuture) nextFuture = t; }
+    }
+    return { lastPast, nextFuture };
+  }
+
+  function scoreFor(past, future) {
+    // Lower is "more active right now". Live (within ~6h either side) wins outright.
+    const liveWindow = 6 * 3600 * 1000;
+    if (past !== null && now - past < liveWindow) return -1;
+    if (future !== null && future - now < liveWindow) return -1;
+    const dPast = past !== null ? (now - past) / DAY : Infinity;
+    const dFut = future !== null ? (future - now) / DAY : Infinity;
+    // Bias slightly toward upcoming (future events feel "active" sooner)
+    return Math.min(dPast, dFut * 0.85);
+  }
+
+  const f1Past = (all.f1?.last_results || all.f1?.recent || []);
+  const f1Fut = (all.f1?.upcoming || []);
+  const f1 = bestDates([
+    ...f1Past.map(r => ({ date: r.date })),
+    ...f1Fut.map(r => ({ date: r.date })),
+  ]);
+
+  const rugbyPast = [
+    ...(all.intl?.results || []),
+    ...(all.prov?.results || []),
+    ...(all.schools?.results || []),
+  ];
+  const rugbyFut = [
+    ...(all.intl?.fixtures || []),
+    ...(all.prov?.fixtures || []),
+    ...(all.schools?.fixtures || []),
+  ];
+  const rugby = bestDates([...rugbyPast, ...rugbyFut]);
+
+  const club = bestDates([
+    ...(all.club?.results || []),
+    ...(all.club?.fixtures || []),
+  ]);
+
+  const items = [
+    { id: "f1",    score: scoreFor(f1.lastPast,    f1.nextFuture) },
+    { id: "rugby", score: scoreFor(rugby.lastPast, rugby.nextFuture) },
+    { id: "club",  score: scoreFor(club.lastPast,  club.nextFuture) },
+  ];
+  items.sort((a, b) => a.score - b.score);
+  return items;
+}
+
+function reorderSections(all) {
+  const order = sportActivity(all);
+
+  // 1. Reorder the section panels via CSS `order`
+  document.getElementById("home")?.style.setProperty("order", "0");
+  order.forEach((it, i) => {
+    const sec = document.getElementById(it.id);
+    if (sec) sec.style.order = String(i + 1);
+  });
+
+  // 2. Reorder the nav tabs (keep Home first, News last)
+  const tabsWrap = document.getElementById("nav-tabs");
+  if (tabsWrap) {
+    const indicator = document.getElementById("nav-indicator");
+    const home = tabsWrap.querySelector('[data-target="home"]');
+    const news = tabsWrap.querySelector('[data-target="news"]');
+    const sportTabs = order
+      .map(it => tabsWrap.querySelector(`[data-target="${it.id}"]`))
+      .filter(Boolean);
+    if (home) tabsWrap.appendChild(home);
+    sportTabs.forEach(t => tabsWrap.appendChild(t));
+    if (news) tabsWrap.appendChild(news);
+    if (indicator) tabsWrap.appendChild(indicator);
+  }
+
+  // 3. Tag the most-active section with an "Active now" chip
+  document.querySelectorAll(".section .live-now-chip").forEach(n => n.remove());
+  const top = order[0];
+  if (top && isFinite(top.score)) {
+    const sec = document.getElementById(top.id);
+    const head = sec?.querySelector(".section-title");
+    if (head) {
+      const chip = document.createElement("span");
+      chip.className = "live-now-chip";
+      chip.textContent = top.score < 0 ? "🔴 Live window" : "🔥 Most active";
+      head.appendChild(chip);
+    }
+  }
+
+  // 4. Refresh nav indicator position
+  const cur = tabsWrap?.querySelector(".nav-tab.active");
+  if (cur) {
+    requestAnimationFrame(() => {
+      const evt = new Event("resize");
+      window.dispatchEvent(evt);
+    });
+  }
+}
+
 // ---------- Boot ----------
 let DATA = {};
 
@@ -810,6 +920,7 @@ function rerenderAll() {
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
   renderClub(DATA.club);
+  reorderSections(DATA);
 }
 
 (async function main() {

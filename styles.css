@@ -220,7 +220,8 @@ main { padding: 24px 28px 60px; }
 
 /* ---------- Settings panel ---------- */
 .settings-panel { position: fixed; inset: 0; z-index: 50; display: flex; justify-content: flex-end; }
-.settings-backdrop { position: absolute; inset: 0; background: rgba(5,8,18,0.55); backdrop-filter: blur(2px); }
+.settings-panel[hidden] { display: none; }   /* override class's display:flex when hidden */
+.settings-backdrop { position: absolute; inset: 0; background: rgba(5,8,18,0.55); backdrop-filter: blur(2px); z-index: 0; }
 .settings-card {
   position: relative; z-index: 1;
   width: min(420px, 100%); height: 100%;

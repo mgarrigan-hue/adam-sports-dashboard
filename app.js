@@ -497,6 +497,9 @@ function bindSettings(rerender) {
   document.getElementById("settings-btn").addEventListener("click", openSettings);
   document.getElementById("settings-close").addEventListener("click", closeSettings);
   document.getElementById("settings-backdrop").addEventListener("click", closeSettings);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !document.getElementById("settings-panel").hidden) closeSettings();
+  });
   document.getElementById("schools-add").addEventListener("click", () => {
     const inp = document.getElementById("schools-input");
     const v = inp.value.trim();

@@ -15,7 +15,39 @@ const DATA_FILES = {
   prov: "data/provinces.json",
   schools: "data/schools.json",
   news: "data/news.json",
+  watch: "data/watch.json",
 };
+
+let WATCH = {};
+
+function watchInfo(competition) {
+  if (!competition || !WATCH) return null;
+  const c = competition.toLowerCase();
+  // exact-ish then partial match across keys (longest key first for specificity)
+  const keys = Object.keys(WATCH).filter(k => !k.startsWith("_")).sort((a, b) => b.length - a.length);
+  for (const k of keys) {
+    if (c.includes(k.toLowerCase())) return WATCH[k];
+  }
+  return WATCH._default || null;
+}
+
+function watchChipsHtml(competition, opts = {}) {
+  const info = watchInfo(competition);
+  if (!info) return "";
+  const items = [];
+  (info.live || []).forEach(x => items.push(x));
+  if (opts.includeHighlights) (info.highlights || []).forEach(x => items.push(x));
+  if (!items.length && !info.note) return "";
+
+  const chips = items.map(x => {
+    if (x.url) {
+      return `<a class="watch-chip is-link" href="${escapeAttr(x.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(x.label)}">📺 ${escapeHtml(x.label)} ↗</a>`;
+    }
+    return `<span class="watch-chip" title="On TV via Sky Signature">📺 ${escapeHtml(x.label)}</span>`;
+  }).join("");
+  const note = info.note ? `<span class="watch-note">${escapeHtml(info.note)}</span>` : "";
+  return `<div class="watch-row">${chips}${note}</div>`;
+}
 
 function loadFavs() {
   try {
@@ -172,6 +204,7 @@ function buildFeed(all) {
         date: r.date, tag: "f1",
         title: `🏁 ${r.race_name} — ${r.circuit || ""}`,
         meta: r.location || "", fav: false,
+        watch: "Formula 1",
       });
     });
   }
@@ -186,6 +219,8 @@ function buildFeed(all) {
       titleHtml,
       meta: m.competition || defaultComp,
       fav: isFavRugby(m.home) || isFavRugby(m.away) || isFavSchool(m.home) || isFavSchool(m.away),
+      watch: m.competition || defaultComp,
+      isResult: m.home_score != null,
     });
   };
   if (all.intl) {
@@ -202,12 +237,16 @@ function buildFeed(all) {
       title: `${m.home} ${m.home_score ?? ""} – ${m.away_score ?? ""} ${m.away}`,
       meta: m.competition || "Leinster Schools",
       fav: isFavSchool(m.home) || isFavSchool(m.away),
+      watch: m.competition || "Schools",
+      isResult: true,
     }));
     (all.schools.fixtures || []).forEach(m => items.push({
       date: m.date, tag: "schools",
       title: `${m.home} v ${m.away}`,
       meta: m.competition || "Leinster Schools",
       fav: isFavSchool(m.home) || isFavSchool(m.away),
+      watch: m.competition || "Schools",
+      isResult: false,
     }));
   }
   items.sort((a, b) => {
@@ -224,16 +263,22 @@ function renderFeed(items) {
     ul.innerHTML = `<li class="empty">No data yet — the GitHub Action will populate this on next refresh.</li>`;
     return;
   }
-  ul.innerHTML = items.slice(0, 25).map(i => `
+  ul.innerHTML = items.slice(0, 25).map(i => {
+    const isPast = i.date && new Date(i.date).getTime() < Date.now();
+    // For past events, show highlights link (where applicable) instead of live channels.
+    const watch = i.watch ? watchChipsHtml(i.watch, { includeHighlights: isPast || i.isResult }) : "";
+    return `
     <li class="${i.fav ? "fav" : ""}">
       <span class="when">${i.date ? `${fmtDate(i.date)}<br><small>${relTime(i.date)}</small>` : "TBD"}</span>
       <span>
         <div class="what">${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="who">${escapeHtml(i.meta || "")}</div>
+        ${watch}
       </span>
       <span class="tag ${i.tag}">${i.tag}</span>
     </li>
-  `).join("");
+  `;
+  }).join("");
 }
 
 // ---------- Hero (rotating) ----------
@@ -248,24 +293,28 @@ function collectUpcoming(all) {
     date: r.date, label: "Next Up · F1",
     title: `🏁 ${r.race_name}`,
     meta: `${r.circuit || ""}${r.location ? " · " + r.location : ""}`,
+    watch: "Formula 1",
   }));
   (all.intl?.fixtures || []).forEach(m => upcoming.push({
     date: m.date, label: "Next Up · International Rugby",
     title: `🌍 ${m.home} v ${m.away}`,
     meta: m.competition || "International",
     boost: isFavRugby(m.home) || isFavRugby(m.away),
+    watch: m.competition || "International",
   }));
   (all.prov?.fixtures || []).forEach(m => upcoming.push({
     date: m.date, label: "Next Up · URC",
     title: `☘️ ${m.home} v ${m.away}`,
     meta: m.competition || "URC",
     boost: isFavRugby(m.home) || isFavRugby(m.away),
+    watch: m.competition || "URC",
   }));
   (all.schools?.fixtures || []).forEach(m => upcoming.push({
     date: m.date, label: "Next Up · Schools",
     title: `🎓 ${m.home} v ${m.away}`,
     meta: m.competition || "Leinster Schools",
     boost: isFavSchool(m.home) || isFavSchool(m.away),
+    watch: m.competition || "Schools",
   }));
   return upcoming
     .filter(e => e.date && new Date(e.date).getTime() > Date.now())
@@ -320,6 +369,9 @@ function showHero(idx) {
     metaEl.textContent = `${ev.meta} · ${fmtDate(ev.date)}`;
     dotsEl.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === idx));
     startCountdown(new Date(ev.date));
+    // Watch info under the meta line
+    const watchEl = document.getElementById("hero-watch");
+    if (watchEl) watchEl.innerHTML = ev.watch ? watchChipsHtml(ev.watch) : "";
     card.classList.remove("fading");
   }, 250);
 }
@@ -359,8 +411,10 @@ function renderF1(d) {
   let timelineHtml = "";
   if (d.next_race_sessions?.sessions?.length) {
     const ns = d.next_race_sessions;
+    const watch = watchChipsHtml("Formula 1");
     timelineHtml = `
       <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""}</div>
+      ${watch}
       <ul class="timeline">
         ${ns.sessions.map(sess => {
           const past = sess.datetime && new Date(sess.datetime).getTime() < Date.now();
@@ -445,18 +499,24 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     ? `<span class="team-cell">${logoImg(logo)}${escapeHtml(name)}</span>`
     : escapeHtml(name);
 
-  const rec = (d.results || []).slice(0, 5).map(m => `
+  const rec = (d.results || []).slice(0, 5).map(m => {
+    const watch = watchChipsHtml(m.competition || label, { includeHighlights: true });
+    return `
     <tr class="${isFav(m) ? "fav-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : ""}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
       <td class="score">${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}</td>
       <td>${teamCell(m.away, m.away_logo)}</td>
-    </tr>`).join("");
-  const upc = (d.fixtures || []).slice(0, 5).map(m => `
+    </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
+  }).join("");
+  const upc = (d.fixtures || []).slice(0, 5).map(m => {
+    const watch = watchChipsHtml(m.competition || label);
+    return `
     <tr class="${isFav(m) ? "fav-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : "TBD"}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
-    </tr>`).join("");
+    </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
+  }).join("");
   el.innerHTML = `
     <div class="sub">Recent results</div>
     <table>${rec || `<tr><td>—</td></tr>`}</table>
@@ -566,14 +626,16 @@ function rerenderAll() {
   bindInstallPrompt();
   registerSW();
 
-  const [f1, intl, prov, schools, news] = await Promise.all([
+  const [f1, intl, prov, schools, news, watch] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.intl),
     loadJson(DATA_FILES.prov),
     loadJson(DATA_FILES.schools),
     loadJson(DATA_FILES.news),
+    loadJson(DATA_FILES.watch),
   ]);
   DATA = { f1, intl, prov, schools, news };
+  WATCH = watch || {};
 
   const stamps = [f1, intl, prov, schools, news].map(d => d?.generated_at).filter(Boolean);
   document.getElementById("last-updated").textContent = stamps.length

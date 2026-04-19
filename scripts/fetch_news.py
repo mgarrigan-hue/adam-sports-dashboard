@@ -15,6 +15,14 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+# Use defusedxml to harden against entity-expansion / billion-laughs attacks
+# from any compromised upstream feed. Falls back to stdlib for local dev if
+# defusedxml isn't installed (CI installs it).
+try:
+    from defusedxml.ElementTree import fromstring as _safe_fromstring
+except ImportError:  # pragma: no cover
+    _safe_fromstring = ET.fromstring
+
 OUT = Path(__file__).resolve().parent.parent / "data" / "news.json"
 USER_AGENT = "Mozilla/5.0 (compatible; adam-dashboard/1.0)"
 TIMEOUT = 20
@@ -155,7 +163,7 @@ def _make_item(title, desc, url, source, category, published):
 
 
 def parse_feed(raw: bytes, source: str, category: str):
-    root = ET.fromstring(raw)
+    root = _safe_fromstring(raw)
     tag = localname(root.tag).lower()
     if tag == "rss":
         return parse_rss(root, source, category)

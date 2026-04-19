@@ -17,6 +17,12 @@ def fetch():
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())
 
+def _to_int(v):
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
+
 def normalize(m):
     return {
         "date": m.get("kickoffAt"),
@@ -25,8 +31,8 @@ def normalize(m):
         "competition": (m.get("competition") or {}).get("name") or "Schools Rugby",
         "venue": m.get("venue") or "",
         "round": m.get("round") or "",
-        "home_score": m.get("homeScore"),
-        "away_score": m.get("awayScore"),
+        "home_score": _to_int(m.get("homeScore")),
+        "away_score": _to_int(m.get("awayScore")),
         "status": m.get("status"),
     }
 

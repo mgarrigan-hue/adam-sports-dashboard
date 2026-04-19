@@ -52,7 +52,7 @@ function highlightsChipHtml(competition, matchKey) {
   const entry = highlightsForCompetition(competition, matchKey);
   if (!entry || !entry.url) return "";
   const lbl = entry.label || "Recaps";
-  return `<a class="watch-chip is-link is-highlights" href="${escapeAttr(entry.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(lbl)} for highlights">🎬 Recaps on ${escapeHtml(lbl)} ↗</a>`;
+  return `<a class="watch-chip is-link is-highlights" href="${escapeAttr(safeHref(entry.url))}" target="_blank" rel="noopener" title="Open ${escapeAttr(lbl)} for highlights">🎬 Recaps on ${escapeHtml(lbl)} ↗</a>`;
 }
 
 function watchChipsHtml(competition, opts = {}) {
@@ -73,12 +73,22 @@ function watchChipsHtml(competition, opts = {}) {
     const tierTag = meta ? `<span class="chip-tier">${meta.lbl}</span>` : "";
     const tierCls = meta ? meta.cls : "";
     if (x.url) {
-      return `<a class="watch-chip is-link ${tierCls}" href="${escapeAttr(x.url)}" target="_blank" rel="noopener" title="Open ${escapeAttr(x.label)}">📺 ${escapeHtml(x.label)} ${tierTag} ↗</a>`;
+      return `<a class="watch-chip is-link ${tierCls}" href="${escapeAttr(safeHref(x.url))}" target="_blank" rel="noopener" title="Open ${escapeAttr(x.label)}">📺 ${escapeHtml(x.label)} ${tierTag} ↗</a>`;
     }
     return `<span class="watch-chip ${tierCls}" title="On TV (Sky Signature)">📺 ${escapeHtml(x.label)} ${tierTag}</span>`;
   }).join("");
   const note = info.note ? `<span class="watch-note">${escapeHtml(info.note)}</span>` : "";
   return `<div class="watch-row">${chips}${note}</div>`;
+}
+
+// Restrict any URL coming from external JSON to http(s) before it hits an href.
+// Anything else (javascript:, data:, custom schemes) collapses to "#".
+function safeHref(u) {
+  if (!u) return "#";
+  try {
+    const url = new URL(u, location.href);
+    return (url.protocol === "https:" || url.protocol === "http:") ? url.href : "#";
+  } catch { return "#"; }
 }
 
 function loadFavs() {
@@ -273,7 +283,7 @@ function renderNews() {
 
   ul.innerHTML = filtered.map(n => `
     <li>
-      <a href="${escapeAttr(n.url)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
+      <a href="${escapeAttr(safeHref(n.url))}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
       <span class="cat-badge ${escapeAttr(n.category || "")}">${escapeHtml(newsCategoryLabel(n.category))}</span>
       <div class="news-meta">
         <span>${escapeHtml(n.source || "")}</span>
@@ -829,7 +839,7 @@ function clubU14Stats(d) {
   }
   const html = `
     <div class="club-strip u14-strip">
-      <div class="club-strip-title">🟢⚪ Adam's squad — U14 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
+      <div class="club-strip-title">🟢⚪ My squad — U14 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
       <div class="club-stat win"><div class="stat-num">${w}</div><div class="stat-lbl">Wins</div></div>
       <div class="club-stat loss"><div class="stat-num">${l}</div><div class="stat-lbl">Losses</div></div>
       <div class="club-stat draw"><div class="stat-num">${dr}</div><div class="stat-lbl">Draws</div></div>
@@ -846,7 +856,7 @@ function renderClub(d) {
     const hl = isResult ? highlightsChipHtml(m.competition || "Dublin Club") : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
-    const u14Tag = isU14(m.competition) ? `<span class="u14-pill" title="Adam's age grade">U14</span>` : "";
+    const u14Tag = isU14(m.competition) ? `<span class="u14-pill">U14</span>` : "";
     const badge = isResult ? outcomeBadge(m) : "";
     return `
     <tr class="${m.involves_smc ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
@@ -867,8 +877,8 @@ function renderClub(d) {
   const u14Card = (u14Results.length || u14Fixtures.length) ? `
     <section class="u14-card">
       <div class="u14-card-head">
-        <h3>🟢⚪ Adam's U14 squad</h3>
-        <span class="muted small">St Mary's College RFC · Under-14</span>
+        <h3>🟢⚪ My U14 squad</h3>
+        <span class="muted small">St Mary's College RFC</span>
       </div>
       ${u14Stats.html}
       ${u14RecRows ? `<div class="sub">Recent U14 results</div><table>${u14RecRows}</table>` : ""}
@@ -880,7 +890,7 @@ function renderClub(d) {
   el.innerHTML = `
     ${u14Card}
     ${clubQuickStats(d)}
-    <div class="club-blurb">Adam Garrigan (U14) plays here. His squad is pinned at the top; below is everything across the club.</div>
+    <div class="club-blurb">My squad is pinned at the top; below is everything across the club.</div>
     <div class="sub">Recent results — all teams</div>
     <table>${recRows || `<tr><td>—</td></tr>`}</table>
     <div class="sub">Upcoming fixtures — all teams</div>

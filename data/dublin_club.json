@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-04-19T14:00:00+01:00",
+      "home": "BL Rugby",
+      "away": "St Marys College RFC",
+      "home_score": 29,
+      "away_score": 17,
+      "competition": "Leinster School Youth U15 Div1 Finals",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-19T12:30:00+01:00",
       "home": "Seapoint",
       "away": "SMTC",
@@ -1237,15 +1246,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-19T14:00:00+01:00",
-      "home": "BL Rugby",
-      "away": "St Marys College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth U15 Div1 Finals",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-22T11:00:00+01:00",
       "home": "Christian Brothers Cork",
       "away": "St Marys College",
@@ -1300,5 +1300,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-19T15:34:55+00:00"
+  "fetched_at": "2026-04-19T16:15:24+00:00"
 }

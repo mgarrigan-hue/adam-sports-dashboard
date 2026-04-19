@@ -537,11 +537,13 @@ function renderFeed(items) {
     const scorers = i.scoringSummary ? scorerTimelineHtml(i.scoringSummary, i.fav) : "";
     const rel = i.date ? relTime(i.date) : "";
     const livePill = i.live ? `<span class="live-pill" aria-label="Live now">🔴 LIVE</span> ` : "";
+    const titleSearch = (i.title || "") + " " + (i.titleHtml || "") + " " + (i.meta || "");
+    const favStar = (isFavF1(titleSearch) || isFavRugby(titleSearch)) ? `<span class="fav-star" aria-label="Favourite">⭐</span> ` : "";
     return `
     <li class="feed-item ${i.fav ? "fav" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
       ${feedDateBlockHtml(i.date)}
       <div class="feed-body">
-        <div class="feed-title">${livePill}${i.titleHtml || escapeHtml(i.title)}</div>
+        <div class="feed-title">${livePill}${favStar}${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="feed-meta">${escapeHtml(i.meta || "")}</div>
         ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}
@@ -650,6 +652,9 @@ function showHero(idx) {
     startCountdown(new Date(ev.date));
     // Sport-themed background
     if (ev.sport) card.dataset.sport = ev.sport; else delete card.dataset.sport;
+    // Favourite highlight: title or meta references the fav driver/team
+    const favHit = isFavF1(ev.title) || isFavF1(ev.meta) || isFavRugby(ev.title) || isFavRugby(ev.meta);
+    card.classList.toggle("is-favorite", !!favHit);
     // Watch info under the meta line
     const watchEl = document.getElementById("hero-watch");
     if (watchEl) watchEl.innerHTML = ev.watch ? watchChipsHtml(ev.watch) : "";
@@ -802,6 +807,7 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
   const el = document.getElementById(elId);
   if (!d) { el.textContent = `No ${label} data yet.`; return; }
   const isFav = (m) => isFavRugby(m.home) || isFavRugby(m.away) || (schoolsFav && (isFavSchool(m.home) || isFavSchool(m.away)));
+  const isFavTeamRow = (m) => isFavRugby(m.home) || isFavRugby(m.away);
 
   const teamCell = (name, logo) => withLogos
     ? `<span class="team-cell">${logoImg(logo)}${escapeHtml(name)}</span>`
@@ -814,7 +820,7 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     const ht = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : "", scorers].filter(Boolean).join("");
     return `
-    <tr class="${isFav(m) ? "fav-row" : ""} ${outcomeClass(m)}">
+    <tr class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""} ${outcomeClass(m)}">
       <td>${m.date ? fmtDate(m.date) : ""}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
       <td class="score">${outcomeBadge(m)}${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
@@ -824,7 +830,7 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
   const upc = (d.fixtures || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label);
     return `
-    <tr class="${isFav(m) ? "fav-row" : ""}">
+    <tr class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : "TBD"}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
@@ -866,22 +872,32 @@ function isU14(competition) {
 
 function clubU14Stats(d) {
   if (!d || !Array.isArray(d.results) || !d.results.length) {
-    return { html: "", count: 0 };
+    return { html: "", html2: "", count: 0, scored: 0, conceded: 0, diff: 0, streak: 0 };
   }
   const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
-  const recent = d.results.filter(m =>
-    m.involves_smc !== false &&
-    isU14(m.competition) &&
-    m.date && new Date(m.date).getTime() >= cutoff
-  );
-  let w = 0, l = 0, dr = 0;
+  const recent = d.results
+    .filter(m =>
+      m.involves_smc !== false &&
+      isU14(m.competition) &&
+      m.date && new Date(m.date).getTime() >= cutoff
+    )
+    .slice()
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  let w = 0, l = 0, dr = 0, scored = 0, conceded = 0;
+  let streak = 0, streakLocked = false;
   for (const m of recent) {
     if (m.home_score == null || m.away_score == null) continue;
     const homeIsUs = /st mary|smtc|smc/i.test(m.home);
     const us = homeIsUs ? m.home_score : m.away_score;
     const them = homeIsUs ? m.away_score : m.home_score;
-    if (us > them) w++; else if (us < them) l++; else dr++;
+    scored += us;
+    conceded += them;
+    if (us > them) { w++; if (!streakLocked) streak++; }
+    else if (us < them) { l++; streakLocked = true; }
+    else { dr++; streakLocked = true; }
   }
+  const diff = scored - conceded;
+  const diffStr = (diff >= 0 ? "+" : "") + diff;
   const html = `
     <div class="club-strip u14-strip">
       <div class="club-strip-title">🟢⚪ My squad — U14 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
@@ -890,7 +906,15 @@ function clubU14Stats(d) {
       <div class="club-stat draw"><div class="stat-num">${dr}</div><div class="stat-lbl">Draws</div></div>
       <div class="club-stat"><div class="stat-num">${recent.length}</div><div class="stat-lbl">Played</div></div>
     </div>`;
-  return { html, count: recent.length };
+  const html2 = `
+    <div class="club-strip u14-strip u14-strip-pts">
+      <div class="club-strip-title">Points & form <small>· same window</small></div>
+      <div class="club-stat"><div class="stat-num">${scored}</div><div class="stat-lbl">For</div></div>
+      <div class="club-stat"><div class="stat-num">${conceded}</div><div class="stat-lbl">Against</div></div>
+      <div class="club-stat ${diff > 0 ? "win" : diff < 0 ? "loss" : "draw"}"><div class="stat-num">${diffStr}</div><div class="stat-lbl">Diff</div></div>
+      <div class="club-stat ${streak > 0 ? "win" : ""}"><div class="stat-num">${streak}</div><div class="stat-lbl">Win streak</div></div>
+    </div>`;
+  return { html, html2, count: recent.length, scored, conceded, diff, streak };
 }
 
 function renderClub(d) {
@@ -926,6 +950,7 @@ function renderClub(d) {
         <span class="muted small">St Mary's College RFC</span>
       </div>
       ${u14Stats.html}
+      ${u14Stats.html2}
       ${u14RecRows ? `<div class="sub">Recent U14 results</div><table>${u14RecRows}</table>` : ""}
       ${u14UpcRows ? `<div class="sub">Upcoming U14 fixtures</div><table>${u14UpcRows}</table>` : ""}
     </section>` : "";

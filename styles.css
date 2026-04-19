@@ -870,3 +870,32 @@ tr.u14-row.fav-win td:first-child { box-shadow: inset 4px 0 0 #22c55e, inset 8px
   color: var(--text);
   font-weight: 700;
 }
+
+/* ====== Favourite-team highlighting (TODO 2) ====== */
+.fav-star {
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 4px rgba(255,203,5,0.55));
+  font-size: 0.95em;
+  vertical-align: middle;
+}
+tr.fav-team-row td {
+  background: linear-gradient(90deg, rgba(0,60,113,0.32), rgba(0,60,113,0.10) 70%, transparent);
+}
+tr.fav-team-row td:first-child {
+  box-shadow: inset 4px 0 0 var(--leinster);
+}
+.hero-card.is-favorite {
+  border-color: rgba(255,203,5,0.55);
+  animation: pulse 2.4s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-card.is-favorite { animation: none; }
+}
+
+/* Second u14 stats strip variant */
+.club-strip.u14-strip-pts {
+  margin-top: 6px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+}

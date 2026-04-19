@@ -154,6 +154,48 @@ function isFavSchool(text) {
   return FAVS.schools.some(s => s && t.includes(s.toLowerCase()));
 }
 
+// ---------- Match-outcome highlighting (wins/losses for the team we follow) ----------
+// Patterns that identify "us" on either side of a result. These are the teams
+// Mark/Adam want visually called out across the whole site.
+const FAV_TEAM_PATTERNS = [
+  { key: "smc",      re: /\b(st\.?\s*mary'?s|saint\s*mary'?s|smtc|smc|st mary's college)\b/i },
+  { key: "leinster", re: /\bleinster\b/i },
+];
+function matchSide(text) {
+  if (!text) return null;
+  for (const p of FAV_TEAM_PATTERNS) if (p.re.test(text)) return p.key;
+  if (isFavSchool(text)) return "school";
+  return null;
+}
+// Returns "win" | "loss" | "draw" | null for a match where one of our teams
+// played and the result is known.
+function favOutcome(m) {
+  if (!m || m.home_score == null || m.away_score == null) return null;
+  const homeKey = matchSide(m.home);
+  const awayKey = matchSide(m.away);
+  if (!homeKey && !awayKey) return null;
+  // If both sides match (e.g. Leinster vs Leinster A in pre-season), bail.
+  if (homeKey && awayKey) return null;
+  const usHome = !!homeKey;
+  const us  = usHome ? Number(m.home_score) : Number(m.away_score);
+  const them = usHome ? Number(m.away_score) : Number(m.home_score);
+  if (!isFinite(us) || !isFinite(them)) return null;
+  if (us > them) return "win";
+  if (us < them) return "loss";
+  return "draw";
+}
+function outcomeClass(m) {
+  const o = favOutcome(m);
+  return o ? `fav-${o}` : "";
+}
+function outcomeBadge(m) {
+  const o = favOutcome(m);
+  if (!o) return "";
+  if (o === "win")  return `<span class="outcome-badge win">🏆 WIN</span>`;
+  if (o === "loss") return `<span class="outcome-badge loss">L</span>`;
+  return `<span class="outcome-badge draw">DRAW</span>`;
+}
+
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -249,14 +291,16 @@ function buildFeed(all) {
     const homeCell = `<span class="team-cell">${logoImg(m.home_logo)}${escapeHtml(m.home)}</span>`;
     const awayCell = `<span class="team-cell">${logoImg(m.away_logo)}${escapeHtml(m.away)}</span>`;
     const htChip = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
+    const badge = outcomeBadge(m);
     const titleHtml = m.home_score != null
-      ? `${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell} ${htChip}`
+      ? `${badge}${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell} ${htChip}`
       : `${homeCell} v ${awayCell}`;
     items.push({
       date: m.date, tag,
       titleHtml,
       meta: m.competition || defaultComp,
       fav: isFavRugby(m.home) || isFavRugby(m.away) || isFavSchool(m.home) || isFavSchool(m.away),
+      outcome: favOutcome(m),
       watch: m.competition || defaultComp,
       competition: m.competition || defaultComp,
       isResult: m.home_score != null,
@@ -275,8 +319,10 @@ function buildFeed(all) {
     (all.schools.results || []).forEach(m => items.push({
       date: m.date, tag: "schools",
       title: `${m.home} ${m.home_score ?? ""} – ${m.away_score ?? ""} ${m.away}`,
+      titleHtml: `${outcomeBadge(m)}${escapeHtml(m.home)} <strong>${m.home_score ?? "-"} – ${m.away_score ?? "-"}</strong> ${escapeHtml(m.away)}`,
       meta: m.competition || "Leinster Schools",
       fav: isFavSchool(m.home) || isFavSchool(m.away),
+      outcome: favOutcome(m),
       watch: m.competition || "Schools",
       competition: m.competition || "Schools",
       isResult: true,
@@ -295,14 +341,16 @@ function buildFeed(all) {
     const pushClub = (m, isResult) => {
       const homeCell = `<span class="team-cell">${escapeHtml(m.home)}</span>`;
       const awayCell = `<span class="team-cell">${escapeHtml(m.away)}</span>`;
+      const badge = isResult ? outcomeBadge(m) : "";
       const titleHtml = isResult
-        ? `${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell}`
+        ? `${badge}${homeCell} <strong>${m.home_score} – ${m.away_score}</strong> ${awayCell}`
         : `${homeCell} v ${awayCell}`;
       items.push({
         date: m.date, tag: "club",
         titleHtml,
         meta: m.competition || "St Mary's College RFC",
         fav: m.involves_smc !== false,
+        outcome: isResult ? favOutcome(m) : null,
         watch: m.competition || "Dublin Club",
         competition: m.competition || "Dublin Club",
         isResult,
@@ -401,7 +449,7 @@ function renderFeed(items) {
     const scorers = i.scoringSummary ? scorerTimelineHtml(i.scoringSummary, i.fav) : "";
     const rel = i.date ? relTime(i.date) : "";
     return `
-    <li class="feed-item ${i.fav ? "fav" : ""}">
+    <li class="feed-item ${i.fav ? "fav" : ""} ${i.outcome ? "fav-" + i.outcome : ""}">
       ${feedDateBlockHtml(i.date)}
       <div class="feed-body">
         <div class="feed-title">${i.titleHtml || escapeHtml(i.title)}</div>
@@ -677,10 +725,10 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     const ht = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : "", scorers].filter(Boolean).join("");
     return `
-    <tr class="${isFav(m) ? "fav-row" : ""}">
+    <tr class="${isFav(m) ? "fav-row" : ""} ${outcomeClass(m)}">
       <td>${m.date ? fmtDate(m.date) : ""}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
-      <td class="score">${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
+      <td class="score">${outcomeBadge(m)}${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
       <td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${subContent ? `<tr class="watch-sub"><td colspan="4">${subContent}</td></tr>` : ""}`;
   }).join("");
@@ -765,11 +813,12 @@ function renderClub(d) {
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
     const u14Tag = isU14(m.competition) ? `<span class="u14-pill" title="Adam's age grade">U14</span>` : "";
+    const badge = isResult ? outcomeBadge(m) : "";
     return `
-    <tr class="${m.involves_smc ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""}">
+    <tr class="${m.involves_smc ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
       <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")}</td>
       <td>${escapeHtml(m.home)}</td>
-      <td class="score">${score}</td>
+      <td class="score">${badge}${score}</td>
       <td>${escapeHtml(m.away)}</td>
       <td class="muted small">${escapeHtml(m.competition || "")} ${u14Tag}</td>
     </tr>${subContent ? `<tr class="watch-sub"><td colspan="5">${subContent}</td></tr>` : ""}`;

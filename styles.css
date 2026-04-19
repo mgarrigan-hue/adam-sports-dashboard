@@ -783,3 +783,62 @@ footer { padding: 24px 28px; color: var(--muted); font-size: 12px; text-align: c
   vertical-align: middle;
 }
 tr.u14-row td:first-child { box-shadow: inset 3px 0 0 rgba(76,175,80,0.55); }
+
+/* ====== Match-outcome highlighting (St Mary's / Leinster wins) ====== */
+.outcome-badge {
+  display: inline-block; vertical-align: middle;
+  padding: 2px 8px; margin-right: 8px;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.06em;
+  border-radius: 999px; line-height: 1.4;
+  text-transform: uppercase;
+}
+.outcome-badge.win {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #051a0c;
+  box-shadow: 0 0 0 1px rgba(34,197,94,0.35), 0 4px 14px rgba(34,197,94,0.45);
+  animation: winPulse 2.4s ease-in-out infinite;
+}
+.outcome-badge.loss {
+  background: rgba(239,68,68,0.15); color: #fca5a5;
+  border: 1px solid rgba(239,68,68,0.4);
+}
+.outcome-badge.draw {
+  background: rgba(234,179,8,0.15); color: #fde68a;
+  border: 1px solid rgba(234,179,8,0.4);
+}
+@keyframes winPulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(34,197,94,0.35), 0 4px 14px rgba(34,197,94,0.45); }
+  50%      { box-shadow: 0 0 0 1px rgba(34,197,94,0.55), 0 6px 20px rgba(34,197,94,0.65); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outcome-badge.win { animation: none; }
+}
+
+/* Feed cards */
+.feed-item.fav-win {
+  background: linear-gradient(135deg, rgba(34,197,94,0.16), rgba(34,197,94,0.04));
+  border-color: rgba(34,197,94,0.45);
+  box-shadow: 0 0 0 1px rgba(34,197,94,0.25), 0 8px 22px rgba(34,197,94,0.18);
+}
+.feed-item.fav-win::before {
+  background: linear-gradient(180deg, #22c55e, #16a34a) !important;
+}
+.feed-item.fav-loss {
+  background: linear-gradient(135deg, rgba(239,68,68,0.10), rgba(239,68,68,0.02));
+  border-color: rgba(239,68,68,0.30);
+}
+.feed-item.fav-draw {
+  background: linear-gradient(135deg, rgba(234,179,8,0.10), rgba(234,179,8,0.02));
+  border-color: rgba(234,179,8,0.30);
+}
+
+/* Table rows */
+tr.fav-win  td { background: rgba(34,197,94,0.10); }
+tr.fav-win  td:first-child { box-shadow: inset 4px 0 0 #22c55e; }
+tr.fav-loss td { background: rgba(239,68,68,0.05); }
+tr.fav-loss td:first-child { box-shadow: inset 4px 0 0 rgba(239,68,68,0.6); }
+tr.fav-draw td { background: rgba(234,179,8,0.05); }
+tr.fav-draw td:first-child { box-shadow: inset 4px 0 0 rgba(234,179,8,0.6); }
+
+/* If a U14 row is also a win, show both stripes */
+tr.u14-row.fav-win td:first-child { box-shadow: inset 4px 0 0 #22c55e, inset 8px 0 0 rgba(76,175,80,0.55); }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T14:44:07Z",
+  "generated_at": "2026-04-19T14:56:53Z",
   "season": "2026",
   "upcoming": [
     {
@@ -314,5 +314,120 @@
       "points": "0",
       "wins": "0"
     }
-  ]
+  ],
+  "last_qualifying": {
+    "race_name": "Japanese Grand Prix",
+    "round": "3",
+    "date": "2026-03-29T05:00:00Z",
+    "results": [
+      {
+        "position": 1,
+        "driver": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "q1": "1:30.035",
+        "q2": "1:29.048",
+        "q3": "1:28.778"
+      },
+      {
+        "position": 2,
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "q1": "1:29.967",
+        "q2": "1:29.686",
+        "q3": "1:29.076"
+      },
+      {
+        "position": 3,
+        "driver": "Oscar Piastri",
+        "team": "McLaren",
+        "q1": "1:30.200",
+        "q2": "1:29.451",
+        "q3": "1:29.132"
+      },
+      {
+        "position": 4,
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "q1": "1:29.915",
+        "q2": "1:29.303",
+        "q3": "1:29.405"
+      },
+      {
+        "position": 5,
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "q1": "1:30.401",
+        "q2": "1:29.795",
+        "q3": "1:29.409"
+      },
+      {
+        "position": 6,
+        "driver": "Lewis Hamilton",
+        "team": "Ferrari",
+        "q1": "1:30.309",
+        "q2": "1:29.589",
+        "q3": "1:29.567"
+      },
+      {
+        "position": 7,
+        "driver": "Pierre Gasly",
+        "team": "Alpine F1 Team",
+        "q1": "1:30.584",
+        "q2": "1:29.874",
+        "q3": "1:29.691"
+      },
+      {
+        "position": 8,
+        "driver": "Isack Hadjar",
+        "team": "Red Bull",
+        "q1": "1:30.662",
+        "q2": "1:30.104",
+        "q3": "1:29.978"
+      },
+      {
+        "position": 9,
+        "driver": "Gabriel Bortoleto",
+        "team": "Audi",
+        "q1": "1:30.359",
+        "q2": "1:29.990",
+        "q3": "1:30.274"
+      },
+      {
+        "position": 10,
+        "driver": "Arvid Lindblad",
+        "team": "RB F1 Team",
+        "q1": "1:30.781",
+        "q2": "1:30.109",
+        "q3": "1:30.319"
+      }
+    ]
+  },
+  "last_sprint": null,
+  "next_race_sessions": {
+    "race_name": "Miami Grand Prix",
+    "round": "4",
+    "circuit": "Miami International Autodrome",
+    "sessions": [
+      {
+        "name": "Practice 1",
+        "datetime": "2026-05-01T16:30:00Z"
+      },
+      {
+        "name": "Qualifying",
+        "datetime": "2026-05-02T20:00:00Z"
+      },
+      {
+        "name": "Sprint Qualifying",
+        "datetime": "2026-05-01T20:30:00Z"
+      },
+      {
+        "name": "Sprint",
+        "datetime": "2026-05-02T16:00:00Z"
+      },
+      {
+        "name": "Race",
+        "datetime": "2026-05-03T20:00:00Z"
+      }
+    ]
+  }
 }

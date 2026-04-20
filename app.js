@@ -1230,8 +1230,9 @@ function bindNav() {
     setActive(t.dataset.target);
   }));
 
-  // Scroll-spy
+  // Scroll-spy — skip "inline" tabs like Upcoming that point inside another section
   const sections = tabs
+    .filter(t => !t.hasAttribute("data-nav-inline"))
     .map(t => document.getElementById(t.dataset.target))
     .filter(Boolean);
   if (!("IntersectionObserver" in window) || !sections.length) return;
@@ -1330,11 +1331,13 @@ function reorderSections(all) {
   if (tabsWrap) {
     const indicator = document.getElementById("nav-indicator");
     const home = tabsWrap.querySelector('[data-target="home"]');
+    const upcoming = tabsWrap.querySelector('[data-target="upcoming"]');
     const news = tabsWrap.querySelector('[data-target="news"]');
     const sportTabs = order
       .map(it => tabsWrap.querySelector(`[data-target="${it.id}"]`))
       .filter(Boolean);
     if (home) tabsWrap.appendChild(home);
+    if (upcoming) tabsWrap.appendChild(upcoming);
     sportTabs.forEach(t => tabsWrap.appendChild(t));
     if (news) tabsWrap.appendChild(news);
     if (indicator) tabsWrap.appendChild(indicator);

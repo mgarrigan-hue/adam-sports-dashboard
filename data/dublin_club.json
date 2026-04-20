@@ -1282,15 +1282,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-24T00:00:00+01:00",
-      "home": "SMTC",
-      "away": "MU Barnhall",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths U16 Metro Cup",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-24T19:45:00+01:00",
       "home": "MU Barnhall",
       "away": "St Marys College RFC",
@@ -1318,5 +1309,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-20T10:43:46+00:00"
+  "fetched_at": "2026-04-20T12:00:16+00:00"
 }

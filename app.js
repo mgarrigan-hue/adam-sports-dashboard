@@ -544,7 +544,26 @@ function feedDateBlockHtml(iso) {
   </div>`;
 }
 
-function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet — the GitHub Action will populate this on next refresh.") {
+function soonPillHtml(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const startOfTarget = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const dayDiff = Math.round((startOfTarget - startOfToday) / 86400000);
+  if (dayDiff < 0) return "";
+  if (dayDiff === 0) return `<span class="soon-pill soon-pill--today">Today</span> `;
+  if (dayDiff === 1) return `<span class="soon-pill soon-pill--tomorrow">Tomorrow</span> `;
+  if (dayDiff <= 6) {
+    const wk = d.toLocaleString(undefined, { weekday: "short" });
+    return `<span class="soon-pill soon-pill--week">${escapeHtml(wk)}</span> `;
+  }
+  return "";
+}
+
+function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet — the GitHub Action will populate this on next refresh.", opts = {}) {
+  const { withSoonPills = false } = opts;
   const ul = document.getElementById(targetId);
   if (!ul) return;
   if (!items.length) {
@@ -561,13 +580,14 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
     const livePill = i.live ? `<span class="live-pill" aria-label="Live now">🔴 LIVE</span> ` : "";
     const adamsPill = i.adamsTeam ? `<span class="adams-pill" aria-label="Adam's team">🟢⚪ My team</span> ` : "";
     const u14Pill = i.u14 ? `<span class="u14-pill" aria-label="U14 squad">U14</span> ` : "";
+    const soonPill = withSoonPills && !isPast ? soonPillHtml(i.date) : "";
     const titleSearch = (i.title || "") + " " + (i.titleHtml || "") + " " + (i.meta || "");
     const favStar = (isFavF1(titleSearch) || isFavRugby(titleSearch)) ? `<span class="fav-star" aria-label="Favourite">⭐</span> ` : "";
     return `
     <li class="feed-item ${i.fav ? "fav" : ""} ${i.adamsTeam ? "adams-team" : ""} ${i.u14 ? "u14" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
       ${feedDateBlockHtml(i.date)}
       <div class="feed-body">
-        <div class="feed-title">${livePill}${adamsPill}${u14Pill}${favStar}${i.titleHtml || escapeHtml(i.title)}</div>
+        <div class="feed-title">${livePill}${adamsPill}${u14Pill}${soonPill}${favStar}${i.titleHtml || escapeHtml(i.title)}</div>
         <div class="feed-meta">${escapeHtml(i.meta || "")}</div>
         ${rel ? `<div class="feed-rel">${escapeHtml(rel)}</div>` : ""}
         ${watch}
@@ -634,11 +654,30 @@ function renderHero(all) {
   const metaEl = document.getElementById("hero-meta");
   const labelEl = document.getElementById("hero-label");
   const dotsEl = document.getElementById("hero-dots");
+  const cdEl = document.getElementById("hero-countdown");
+
+  // One-time a11y setup on the carousel-dots container and countdown.
+  if (dotsEl && !dotsEl.dataset.a11yInit) {
+    dotsEl.setAttribute("aria-label", "Carousel controls");
+    dotsEl.addEventListener("keydown", onHeroDotsKeydown);
+    dotsEl.dataset.a11yInit = "1";
+  }
+  if (cdEl && !cdEl.dataset.a11yInit) {
+    // Intentionally NOT aria-live: the countdown text changes every second,
+    // which would spam screen readers. Instead we describe the slide via
+    // aria-label (updated per slide) with the absolute target date.
+    cdEl.setAttribute("aria-live", "off");
+    cdEl.setAttribute("aria-atomic", "true");
+    cdEl.dataset.a11yInit = "1";
+  }
 
   if (!future.length) {
     titleEl.textContent = "Nothing scheduled right now";
     metaEl.textContent = "Check back soon!";
-    document.getElementById("hero-countdown").textContent = "";
+    if (cdEl) {
+      cdEl.textContent = "";
+      cdEl.removeAttribute("aria-label");
+    }
     dotsEl.innerHTML = "";
     return;
   }
@@ -667,16 +706,48 @@ function renderHero(all) {
 
   HERO_IDX = 0;
 
-  dotsEl.innerHTML = HERO_EVENTS.map((_, i) => `<span class="dot ${i === 0 ? "active" : ""}" data-idx="${i}"></span>`).join("");
+  dotsEl.innerHTML = HERO_EVENTS.map((ev, i) => {
+    const label = `${ev.label || "Next Up"} — ${ev.title || ""}`;
+    const current = i === 0 ? ' aria-current="true"' : "";
+    const active = i === 0 ? " active" : "";
+    return `<button type="button" class="dot${active}" data-idx="${i}" aria-label="${escapeAttr(label)}"${current}></button>`;
+  }).join("");
   dotsEl.querySelectorAll(".dot").forEach(d => {
-    d.addEventListener("click", () => showHero(parseInt(d.dataset.idx, 10)));
+    d.addEventListener("click", () => {
+      showHero(parseInt(d.dataset.idx, 10));
+      resetHeroTimer();
+    });
   });
 
   showHero(0);
+  resetHeroTimer();
+}
+
+function resetHeroTimer() {
   clearInterval(HERO_TIMER);
   if (HERO_EVENTS.length > 1) {
     HERO_TIMER = setInterval(() => showHero((HERO_IDX + 1) % HERO_EVENTS.length), 8000);
   }
+}
+
+function onHeroDotsKeydown(event) {
+  if (!event.target.classList || !event.target.classList.contains("dot")) return;
+  const n = HERO_EVENTS.length;
+  if (!n) return;
+  let next = null;
+  switch (event.key) {
+    case "ArrowRight": case "ArrowDown": next = (HERO_IDX + 1) % n; break;
+    case "ArrowLeft":  case "ArrowUp":   next = (HERO_IDX - 1 + n) % n; break;
+    case "Home": next = 0; break;
+    case "End":  next = n - 1; break;
+    default: return;
+  }
+  event.preventDefault();
+  showHero(next);
+  resetHeroTimer();
+  const dotsEl = document.getElementById("hero-dots");
+  const btn = dotsEl && dotsEl.querySelector(`.dot[data-idx="${next}"]`);
+  if (btn) btn.focus();
 }
 
 function showHero(idx) {
@@ -695,7 +766,19 @@ function showHero(idx) {
     labelEl.textContent = ev.label || "Next Up";
     titleEl.textContent = ev.title;
     metaEl.textContent = `${ev.meta} · ${fmtDate(ev.date)}`;
-    dotsEl.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === idx));
+    dotsEl.querySelectorAll(".dot").forEach((d, i) => {
+      const on = i === idx;
+      d.classList.toggle("active", on);
+      if (on) d.setAttribute("aria-current", "true");
+      else d.removeAttribute("aria-current");
+    });
+    // Describe the countdown for assistive tech using an absolute date rather
+    // than the ticking "Xd Yh Zm Ns" text (which would spam a live region).
+    const cdEl = document.getElementById("hero-countdown");
+    if (cdEl) {
+      const abs = fmtDate(ev.date);
+      cdEl.setAttribute("aria-label", `${ev.label || "Next Up"} — ${ev.title} — ${abs}`);
+    }
     startCountdown(new Date(ev.date));
     // Sport-themed background
     if (ev.sport) card.dataset.sport = ev.sport; else delete card.dataset.sport;
@@ -1283,7 +1366,7 @@ let DATA = {};
 function rerenderAll() {
   renderHero(DATA);
   renderFeed(buildFeed(DATA));
-  renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.");
+  renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true });
   renderF1(DATA.f1);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });

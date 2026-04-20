@@ -269,12 +269,20 @@ main {
 
 .hero-dots { margin-top: 18px; display: flex; gap: 8px; }
 .hero-dots .dot {
+  /* reset native <button> styles */
+  appearance: none; -webkit-appearance: none;
+  border: 0; padding: 0; margin: 0; font: inherit; color: inherit;
   width: 8px; height: 8px; border-radius: 50%;
   background: rgba(255,255,255,0.30); cursor: pointer;
   transition: background 0.18s ease, transform 0.18s ease;
 }
 .hero-dots .dot:hover { background: rgba(255,255,255,0.55); }
 .hero-dots .dot.active { background: #fff; transform: scale(1.25); }
+.hero-dots .dot:focus { outline: none; }
+.hero-dots .dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 @media (max-width: 640px) {
   .hero-title { font-size: 24px; }
@@ -1029,4 +1037,38 @@ tr.fav-team-row td:first-child {
 .club-strip.u14-strip-pts {
   margin-top: 6px;
   background: linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+}
+
+
+/* ---------------------------------------------------------------------
+   Upcoming-feed "soon" pills: Today / Tomorrow / <weekday>
+   (appended; referenced only by renderFeed(..., { withSoonPills: true }))
+   --------------------------------------------------------------------- */
+.soon-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  white-space: nowrap;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.soon-pill--today {
+  background: rgba(255,203,5,0.22);
+  border-color: rgba(255,203,5,0.6);
+  color: #ffe27a;
+}
+.soon-pill--tomorrow {
+  background: rgba(255,154,54,0.18);
+  border-color: rgba(255,154,54,0.55);
+  color: #ffcb96;
+}
+.soon-pill--week {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+  color: var(--text-2);
 }

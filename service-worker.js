@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v20-upcoming-nav";
+const VERSION = "v21-adam-page";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

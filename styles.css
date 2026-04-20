@@ -43,7 +43,10 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(86px + env(safe-area-inset-top, 0px));
+}
 
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -58,6 +61,14 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01", "cv11";
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a, .nav-tab, .chip, .feed-item, .hero-dots .dot { touch-action: manipulation; }
+
+/* Mobile Safari jank: fixed bg repaints on scroll. Coarse pointers get a static bg. */
+@media (hover: none) and (pointer: coarse) {
+  body { background-attachment: scroll; }
 }
 
 a { color: inherit; }
@@ -82,6 +93,9 @@ h1, h2, h3, .display, .hero-title, .hero-countdown, .score, .stat-num {
   align-items: center;
   gap: 18px;
   padding: 12px 24px;
+  padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  padding-left: calc(24px + env(safe-area-inset-left, 0px));
+  padding-right: calc(24px + env(safe-area-inset-right, 0px));
   background: rgba(10, 13, 24, 0.72);
   border-bottom: 1px solid var(--border);
   backdrop-filter: saturate(140%) blur(14px);
@@ -164,7 +178,14 @@ h1, h2, h3, .display, .hero-title, .hero-countdown, .score, .stat-num {
 /* =====================================================================
    Section layout
    ===================================================================== */
-main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; }
+main {
+  padding: 24px 28px 80px;
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
+  padding-bottom: max(80px, calc(60px + env(safe-area-inset-bottom, 0px)));
+  max-width: 1400px; margin: 0 auto;
+  display: flex; flex-direction: column;
+}
 .section { padding-top: 28px; }
 .section + .section { margin-top: 12px; }
 
@@ -258,6 +279,25 @@ main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex
 @media (max-width: 640px) {
   .hero-title { font-size: 24px; }
   .hero-card { padding: 22px 20px; }
+  .hero-countdown { font-size: 18px; padding: 8px 14px; margin-top: 14px; }
+  .hero-meta { font-size: 13px; }
+  .hero-glow { width: 220px; height: 220px; right: -80px; top: -80px; }
+  .hero-watch { margin-top: 10px; gap: 6px; display: flex; flex-wrap: wrap; }
+  .hero-watch .watch-chip { padding: 3px 9px; font-size: 10.5px; }
+  /* Bigger tap target around each 8px hero dot (≥24px hit area) */
+  .hero-dots { gap: 2px; margin-top: 14px; }
+  .hero-dots .dot {
+    width: 24px; height: 24px; background: transparent;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .hero-dots .dot::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.30);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .hero-dots .dot:hover::before { background: rgba(255,255,255,0.55); }
+  .hero-dots .dot.active { background: transparent; transform: none; }
+  .hero-dots .dot.active::before { background: #fff; transform: scale(1.25); }
 }
 
 /* =====================================================================
@@ -287,6 +327,10 @@ main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex
 }
 @media (max-width: 980px) {
   .main-grid { grid-template-columns: 1fr; }
+  /* When stacked, promote "Upcoming fixtures" above "Latest action" — 
+     it's the more actionable glanceable content on small screens. */
+  .main-grid > .card-feed:nth-of-type(1) { order: 2; }
+  .main-grid > .card-feed:nth-of-type(2) { order: 1; }
 }
 
 .grid {
@@ -620,7 +664,14 @@ main { padding: 24px 28px 80px; max-width: 1400px; margin: 0 auto; display: flex
 /* =====================================================================
    Footer
    ===================================================================== */
-footer { padding: 24px 28px; color: var(--muted); font-size: 12px; text-align: center; border-top: 1px solid var(--border); margin-top: 40px; }
+footer {
+  padding: 24px 28px;
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
+  padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  color: var(--muted); font-size: 12px; text-align: center;
+  border-top: 1px solid var(--border); margin-top: 40px;
+}
 
 /* =====================================================================
    Stagger fade-in
@@ -634,10 +685,15 @@ footer { padding: 24px 28px; color: var(--muted); font-size: 12px; text-align: c
    Mobile
    ===================================================================== */
 @media (max-width: 880px) {
+  /* Sticky topbar is now 2 rows tall — bump anchor-jump offset to clear it */
+  html { scroll-padding-top: calc(130px + env(safe-area-inset-top, 0px)); }
   .topbar {
     grid-template-columns: 1fr auto;
     grid-template-areas: "brand actions" "nav nav";
     padding: 10px 14px;
+    padding-top: calc(10px + env(safe-area-inset-top, 0px));
+    padding-left: calc(14px + env(safe-area-inset-left, 0px));
+    padding-right: calc(14px + env(safe-area-inset-right, 0px));
   }
   .brand { grid-area: brand; }
   .topbar-actions { grid-area: actions; }
@@ -645,13 +701,36 @@ footer { padding: 24px 28px; color: var(--muted); font-size: 12px; text-align: c
   .last-updated { display: none; }
 }
 @media (max-width: 640px) {
-  main { padding: 18px 14px 60px; }
+  main {
+    padding: 18px 14px 60px;
+    padding-left: max(14px, env(safe-area-inset-left, 0px));
+    padding-right: max(14px, env(safe-area-inset-right, 0px));
+    padding-bottom: max(60px, calc(40px + env(safe-area-inset-bottom, 0px)));
+  }
   .section { padding-top: 22px; }
   .brand-text h1 { font-size: 16px; }
   .brand-text .tagline { display: none; }
   .grid { grid-template-columns: 1fr; }
   .card-wide { grid-column: auto; }
   .btn { min-height: 40px; }
+  .nav-tab { padding: 9px 14px; font-size: 13px; }
+  .card { padding: 14px 14px; }
+  .card-feed { padding: 14px 12px; }
+  footer {
+    padding: 20px 14px;
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 380px) {
+  .brand-text h1 { font-size: 15px; }
+  .brand-mark { width: 38px; height: 38px; }
+  .brand-mark-emoji { font-size: 20px; }
+  .hero-title { font-size: 22px; }
+  .hero-card { padding: 20px 16px; }
+  main {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
 }
 
 /* ====== Detail layer: HT chip, scorers timeline, F1 race cards, tier tags ====== */

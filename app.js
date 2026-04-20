@@ -269,118 +269,6 @@ function isAdamsMatch(m) {
   return !!m && m.involves_smc !== false;
 }
 
-// ---------- ICS (iCalendar) single-event export — RFC 5545 compliant ----------
-// Produces a minimal VCALENDAR with one VEVENT. Handles:
-//   - CRLF line endings (REQUIRED by spec)
-//   - TEXT value escaping: backslash, comma, semicolon, newline
-//   - 75-octet line folding (UTF-8 safe)
-//   - UID per event (host-unique)
-//   - DTSTAMP in UTC
-//   - DTSTART/DTEND in UTC (basic format YYYYMMDDTHHMMSSZ)
-function icsEscapeText(s) {
-  return String(s || "")
-    .replace(/\\/g, "\\\\")
-    .replace(/\r?\n/g, "\\n")
-    .replace(/,/g, "\\,")
-    .replace(/;/g, "\\;");
-}
-function icsFormatUtc(d) {
-  const pad = (n) => String(n).padStart(2, "0");
-  return (
-    d.getUTCFullYear().toString() +
-    pad(d.getUTCMonth() + 1) +
-    pad(d.getUTCDate()) +
-    "T" +
-    pad(d.getUTCHours()) +
-    pad(d.getUTCMinutes()) +
-    pad(d.getUTCSeconds()) +
-    "Z"
-  );
-}
-// Fold lines to 75 octets (UTF-8 byte-safe — split at code points, not chars).
-function icsFold(line) {
-  const bytes = new TextEncoder().encode(line);
-  if (bytes.length <= 75) return line;
-  const out = [];
-  let buf = [];
-  let bufLen = 0;
-  const limitFirst = 75;
-  const limitCont = 74; // continuation lines start with a single space
-  let first = true;
-  // Walk original string by code point so we don't split multi-byte chars.
-  for (const ch of line) {
-    const chBytes = new TextEncoder().encode(ch).length;
-    const cap = first ? limitFirst : limitCont;
-    if (bufLen + chBytes > cap) {
-      out.push((first ? "" : " ") + buf.join(""));
-      buf = [];
-      bufLen = 0;
-      first = false;
-    }
-    buf.push(ch);
-    bufLen += chBytes;
-  }
-  if (buf.length) out.push((first ? "" : " ") + buf.join(""));
-  return out.join("\r\n");
-}
-function buildIcs({ title, start, durationMin = 120, location, description }) {
-  const dtStart = new Date(start);
-  if (isNaN(dtStart)) return null;
-  const dtEnd = new Date(dtStart.getTime() + durationMin * 60 * 1000);
-  const dtStamp = new Date();
-  const uid = `asd-${dtStart.getTime()}-${Math.random().toString(36).slice(2, 10)}@adam.garrigan.me`;
-  const lines = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Adam Sports Dashboard//EN",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
-    `UID:${uid}`,
-    `DTSTAMP:${icsFormatUtc(dtStamp)}`,
-    `DTSTART:${icsFormatUtc(dtStart)}`,
-    `DTEND:${icsFormatUtc(dtEnd)}`,
-    `SUMMARY:${icsEscapeText(title)}`,
-    location ? `LOCATION:${icsEscapeText(location)}` : null,
-    description ? `DESCRIPTION:${icsEscapeText(description)}` : null,
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].filter(Boolean).map(icsFold);
-  return lines.join("\r\n") + "\r\n";
-}
-function downloadIcs(ics, filename = "fixture.ics") {
-  if (!ics) return;
-  try {
-    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    a.rel = "noopener";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    // Defer revoke — iOS Safari may still be reading the blob when the click
-    // handler returns. 60s is more than enough for the download/calendar
-    // hand-off to complete.
-    setTimeout(() => URL.revokeObjectURL(url), 60 * 1000);
-  } catch (err) {
-    console.warn("[ics] download failed", err);
-  }
-}
-function icsFilenameFrom(title, iso) {
-  const d = new Date(iso);
-  const yyyymmdd = isNaN(d)
-    ? "fixture"
-    : `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-  const slug = String(title || "fixture")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 40) || "fixture";
-  return `${yyyymmdd}-${slug}.ics`;
-}
-
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -699,14 +587,14 @@ function soonPillHtml(iso) {
 }
 
 function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet — the GitHub Action will populate this on next refresh.", opts = {}) {
-  const { withSoonPills = false, withIcs = false } = opts;
+  const { withSoonPills = false } = opts;
   const ul = document.getElementById(targetId);
   if (!ul) return;
   if (!items.length) {
     ul.innerHTML = `<li class="empty">${escapeHtml(emptyMsg)}</li>`;
     return;
   }
-  ul.innerHTML = items.slice(0, 25).map((i, idx) => {
+  ul.innerHTML = items.slice(0, 25).map((i) => {
     const isPast = i.date && new Date(i.date).getTime() < Date.now();
     const watch = i.watch ? watchChipsHtml(i.watch, { includeHighlights: isPast || i.isResult }) : "";
     const hl = (i.isResult || isPast) ? highlightsChipHtml(i.competition || i.watch) : "";
@@ -719,11 +607,6 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
     const soonPill = withSoonPills && !isPast ? soonPillHtml(i.date) : "";
     const titleSearch = (i.title || "") + " " + (i.titleHtml || "") + " " + (i.meta || "");
     const favStar = (isFavF1(titleSearch) || isFavRugby(titleSearch)) ? `<span class="fav-star" aria-label="Favourite">⭐</span> ` : "";
-    // ICS export button — only on upcoming feeds, only for future events with valid dates.
-    let icsBtn = "";
-    if (withIcs && !isPast && i.date && !isNaN(new Date(i.date))) {
-      icsBtn = `<button class="ics-btn" type="button" data-ics-idx="${idx}" aria-label="Add to calendar">➕ .ics</button>`;
-    }
     return `
     <li class="feed-item ${i.fav ? "fav" : ""} ${i.adamsTeam ? "adams-team" : ""} ${i.u14 ? "u14" : ""} ${i.outcome ? "fav-" + i.outcome : ""} ${i.live ? "live" : ""}">
       ${feedDateBlockHtml(i.date)}
@@ -734,33 +617,10 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
         ${watch}
         ${extraRow}
         ${scorers}
-        ${icsBtn ? `<div class="feed-actions">${icsBtn}</div>` : ""}
       </div>
       <span class="feed-tag ${i.tag}">${i.tag}</span>
     </li>`;
   }).join("");
-
-  // Event delegation for .ics buttons — lives on the ul, survives re-renders.
-  if (withIcs && !ul.dataset.icsBound) {
-    ul.dataset.icsBound = "1";
-    ul.addEventListener("click", (ev) => {
-      const btn = ev.target.closest(".ics-btn");
-      if (!btn) return;
-      const idx = Number(btn.dataset.icsIdx);
-      const item = ul.__icsItems?.[idx];
-      if (!item) return;
-      const plainTitle = (item.title || (item.titleHtml || "").replace(/<[^>]*>/g, "")).trim() || "Fixture";
-      const ics = buildIcs({
-        title: plainTitle,
-        start: item.date,
-        durationMin: item.tag === "f1" ? 150 : 120,
-        location: item.meta || "",
-        description: `${item.meta || ""}\nAdded from Adam's Sports Dashboard`,
-      });
-      downloadIcs(ics, icsFilenameFrom(plainTitle, item.date));
-    });
-  }
-  if (withIcs) ul.__icsItems = items.slice(0, 25);
 }
 
 // ---------- Adam page (focused view: Adam's club + U14 + form) ----------
@@ -820,9 +680,6 @@ function renderAdam(all) {
         <div class="adam-next-eyebrow">🟢⚪ Adam's next match${u14Tag}</div>
         <div class="adam-next-title">${escapeHtml(title)}</div>
         <div class="adam-next-meta">${escapeHtml(nextMatch.competition || "")} · ${escapeHtml(when.toLocaleString(undefined, { weekday: "long", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</div>
-        <div class="adam-next-cta">
-          <button class="btn ics-btn-primary" type="button" id="adam-next-ics">➕ Add to calendar</button>
-        </div>
       </div>`;
   } else {
     nextHtml = `<div class="adam-next empty"><div class="adam-next-eyebrow">🟢⚪ Adam's next match</div><div class="adam-next-meta">No upcoming SMC fixtures right now — enjoy the off-season. 🌴</div></div>`;
@@ -876,7 +733,7 @@ function renderAdam(all) {
             <span class="accent-bar accent-bar--upcoming"></span>
             <h2>Upcoming — Adam's team</h2>
           </div>
-          <p class="section-sub">Soonest first · tap ➕ to add to your calendar</p>
+          <p class="section-sub">Soonest first</p>
         </div>
         <ul class="feed" id="adam-upcoming-feed"></ul>
       </section>
@@ -894,30 +751,12 @@ function renderAdam(all) {
     </div>
   `;
 
-  // Wire the hero "Add to calendar" button
-  if (nextMatch) {
-    const icsBtn = document.getElementById("adam-next-ics");
-    if (icsBtn) {
-      icsBtn.addEventListener("click", () => {
-        const title = `${normTeam(nextMatch.home)} v ${normTeam(nextMatch.away)}`;
-        const ics = buildIcs({
-          title,
-          start: nextMatch.date,
-          durationMin: 120,
-          location: nextMatch.competition || "",
-          description: `${nextMatch.competition || "St Mary's College RFC"}\nAdded from Adam's Sports Dashboard`,
-        });
-        downloadIcs(ics, icsFilenameFrom(title, nextMatch.date));
-      });
-    }
-  }
-
-  // Render the two feeds (reuse renderFeed for consistent styling + ics buttons)
+  // Render the two feeds (reuse renderFeed for consistent styling)
   renderFeed(
     upcoming.map(m => buildAdamItem(m, false)),
     "adam-upcoming-feed",
     "No upcoming SMC fixtures — off-season or data not yet refreshed.",
-    { withSoonPills: true, withIcs: true }
+    { withSoonPills: true }
   );
   renderFeed(
     recent10.map(m => buildAdamItem(m, true)),
@@ -1700,7 +1539,7 @@ let DATA = {};
 function rerenderAll() {
   renderHero(DATA);
   renderFeed(buildFeed(DATA));
-  renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true, withIcs: true });
+  renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true });
   renderAdam(DATA);
   renderF1(DATA.f1);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });

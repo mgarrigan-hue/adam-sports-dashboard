@@ -20,6 +20,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-04-19T12:30:00+01:00",
+      "home": "SMTC",
+      "away": "MU Barnhall",
+      "home_score": 45,
+      "away_score": 33,
+      "competition": "Leinster School Youths U16 Metro Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-19T12:00:00+01:00",
       "home": "Clontarf",
       "away": "St Marys College RFC",
@@ -44,6 +53,15 @@
       "home_score": 20,
       "away_score": 19,
       "competition": "Winters Cup (Metro J4)",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-04-18T14:00:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Terenure College RFC",
+      "home_score": 20,
+      "away_score": 13,
+      "competition": "Energia AIL Mens Div 1A S/F",
       "involves_smc": true
     },
     {
@@ -1289,7 +1307,16 @@
       "away_score": null,
       "competition": "Leinster School Youth U16 Prem/D1 Playoffs",
       "involves_smc": true
+    },
+    {
+      "date": "2026-04-26T16:00:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Clontarf",
+      "home_score": null,
+      "away_score": null,
+      "competition": "AIL Final",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-20T08:32:28+00:00"
+  "fetched_at": "2026-04-20T10:43:46+00:00"
 }

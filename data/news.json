@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T19:39:09Z",
+  "generated_at": "2026-04-20T20:40:26Z",
   "items": [
     {
       "title": "Dad's poor geography leads to De Vera's Wales debut",
@@ -16,6 +16,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-04-20T17:47:09Z"
+    },
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "We saw 54 Prem tries at the weekend, but why so many blowouts? Danny, Ugo & Chris discuss",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nfkcb3?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-20T17:15:00Z"
     },
     {
       "title": "France centre Vernier ruled out of Six Nations",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-16T17:09:08Z"
-    },
-    {
-      "title": "Munster's McMillan defends Randle coaching appointment",
-      "summary": "Munster head coach Clayton McMillan says he stands by his decision to hire Roger Randle as the province's new attack coach.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0416/1568623-munsters-mcmillan-defends-randle-coaching-appointment/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-16T16:31:09Z"
     }
   ]
 }

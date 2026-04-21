@@ -79,7 +79,7 @@
       "away": "SMTC",
       "home_score": 8,
       "away_score": 14,
-      "competition": "Leinster School Youth U16 Prem/D1 Playoffs",
+      "competition": "Leinster School Youth U16 Prem Final",
       "involves_smc": true
     },
     {
@@ -1273,12 +1273,12 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-26T00:00:00+01:00",
+      "date": "2026-04-26T10:00:00+01:00",
       "home": "MU Barnhall",
       "away": "SMTC",
       "home_score": null,
       "away_score": null,
-      "competition": "Leinster School Youth U16 Prem/D1 Playoffs",
+      "competition": "Leinster School Youth U16 Prem Final",
       "involves_smc": true
     },
     {
@@ -1300,5 +1300,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-21T15:08:20+00:00"
+  "fetched_at": "2026-04-21T16:35:32+00:00"
 }

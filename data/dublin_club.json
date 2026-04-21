@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-04-22T00:00:00+01:00",
+      "home": "SMTC",
+      "away": "MU Barnhall",
+      "home_score": 45,
+      "away_score": 33,
+      "competition": "Leinster School Youths U16 Metro Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-19T14:00:00+01:00",
       "home": "BL Rugby",
       "away": "St Marys College RFC",
@@ -1233,24 +1242,6 @@
       "away_score": 32,
       "competition": "Metro League - Division 3",
       "involves_smc": true
-    },
-    {
-      "date": "2025-11-21T20:00:00+01:00",
-      "home": "Blackrock College RFC 2",
-      "away": "St Marys College RFC 2",
-      "home_score": 28,
-      "away_score": 21,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-21T20:00:00+01:00",
-      "home": "Blackrock College RFC 3",
-      "away": "St Marys College RFC 5",
-      "home_score": 20,
-      "away_score": 16,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -1300,5 +1291,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-21T22:06:29+00:00"
+  "fetched_at": "2026-04-21T23:04:55+00:00"
 }

@@ -1255,7 +1255,7 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-24T19:45:00+01:00",
+      "date": "2026-04-24T19:30:00+01:00",
       "home": "MU Barnhall",
       "away": "St Marys College RFC",
       "home_score": null,
@@ -1291,5 +1291,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-22T20:29:26+00:00"
+  "fetched_at": "2026-04-22T21:27:58+00:00"
 }

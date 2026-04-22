@@ -1233,15 +1233,6 @@
       "away_score": 67,
       "competition": "Leinster School Youth U15 Grading Group D",
       "involves_smc": true
-    },
-    {
-      "date": "2025-11-22T14:30:00+01:00",
-      "home": "Terenure College RFC 3",
-      "away": "St Marys College RFC 3",
-      "home_score": 20,
-      "away_score": 32,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -1291,5 +1282,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-22T22:11:11+00:00"
+  "fetched_at": "2026-04-22T23:12:29+00:00"
 }

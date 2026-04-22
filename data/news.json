@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-04-22T21:28:16Z",
+  "generated_at": "2026-04-22T22:11:18Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "We are seeing record crowds and viewing figures, but are we getting the rugby to match?",
+      "url": "https://www.bbc.co.uk/sounds/play/p0ng04y3?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-22T21:00:00Z"
+    },
     {
       "title": "Verstappen leaving F1 would not be great look - Piastri",
       "summary": "Max Verstappen leaving Formula 1 would be \"not a great look\" for the sport, says McLaren driver Oscar Piastri.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-18T16:12:22Z"
-    },
-    {
-      "title": "Rugby Union Weekly: Ruthless Red Roses thrash Scotland",
-      "summary": "Sara Orchard is joined by Katy Daley-McLean and Lisa Martin as England beat Scotland 84-7",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nf75c4?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-18T15:46:00Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T03:52:31Z",
+  "generated_at": "2026-04-23T06:02:53Z",
   "items": [
     {
       "title": "Rugby Union Weekly",
@@ -64,6 +64,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-22T17:17:21Z"
+    },
+    {
+      "title": "'I'd be worried if I was them' - Flood backs Irish belief",
+      "summary": "Ireland full-back Stacey Flood believes their first-half hammering of Italy will have put France on notice ahead of this Saturday's crunch meeting in Clermont-Ferrand.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0422/1569613-id-be-worried-if-i-was-them-flood-backs-irish-belief/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-04-22T16:01:58Z"
     },
     {
       "title": "Deegan banned for Leinster's Champions Cup semi-final",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-18T16:30:16Z"
-    },
-    {
-      "title": "Last-gasp try gives leaders Northampton victory at Exeter",
-      "summary": "Fin Smith's try with five seconds to go sees Prem leaders Northampton beat Exeter 35-28 at Sandy Park.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c5yvvxj0v07o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-18T16:12:22Z"
     }
   ]
 }

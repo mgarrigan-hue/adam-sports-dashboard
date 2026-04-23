@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-04-23T10:03:38Z",
+  "generated_at": "2026-04-23T11:38:20Z",
   "items": [
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "F1 title contender George Russell sits down for an in-depth chat with Andrew Benson.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0ng3159?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-04-23T10:30:00Z"
+    },
+    {
+      "title": "McGhie starts as Scots make five changes for Italy",
+      "summary": "Scotland make five changes to the side who were overwhelmed by England for their Women's Six Nations trip to face Italy on Saturday.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c0kr0n4k022o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-23T10:16:58Z"
+    },
+    {
+      "title": "Joyce set for Wales comeback after birth of son",
+      "summary": "Alisha Joyce is on the bench for Wales to face England just five months after giving birth to her son Ralphie.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cqj8nr91wnyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-23T10:00:07Z"
+    },
     {
       "title": "Dowson plays down Bath rivalry ahead of re-match",
       "summary": "Phil Dowson plays down talk of a growing rivalry with Bath ahead of their third meeting of the season.",
@@ -8,6 +32,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-23T09:54:49Z"
+    },
+    {
+      "title": "Ireland make one change for France game in Clermont",
+      "summary": "Ireland head coach Scott Bemand makes one change to his starting XV for Saturday's Women's Six Nations trip to France.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c7vqplzmmgvo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-23T09:05:18Z"
     },
     {
       "title": "One change for Ireland as Wall returns for France",
@@ -314,14 +346,6 @@
       "published": "2026-04-20T17:15:00Z"
     },
     {
-      "title": "France centre Vernier ruled out of Six Nations",
-      "summary": "France centre Gabrielle Vernier will miss the remainder of the Women's Six Nations with a shoulder injury.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cqxl770q3pdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-20T15:01:01Z"
-    },
-    {
       "title": "Ireland international Edogbo signs new Munster deal",
       "summary": "Edwin Edogbo has signed a contract extension with Munster that will keep the Cork man at the province until at least 2027.",
       "url": "https://www.rte.ie/sport/rugby/2026/0420/1569215-ireland-international-edogbo-signs-new-munster-deal/",
@@ -434,14 +458,6 @@
       "published": "2026-04-18T23:33:43Z"
     },
     {
-      "title": "'Dream come true' for Parsons as Ireland turn on style",
-      "summary": "Ireland winger Beibhinn Parsons says it is a \"dream come true\" as she marks her Galway homecoming with a hat-trick in an emphatic Six Nations win over Italy.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cy91r225qjvo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-18T21:33:52Z"
-    },
-    {
       "title": "Bemand thrilled after 'significant' Irish improvement",
       "summary": "Head coach Scott Bemand praised his team's ruthless streak as they picked up their first win in this year's Women's Six Nations championship, a 57-20 thrashing of Italy.",
       "url": "https://www.rte.ie/sport/rugby/2026/0418/1568959-bemand-thrilled-after-significant-irish-improvement/",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-18T19:15:51Z"
-    },
-    {
-      "title": "France score five second-half tries to cruise to win over Wales",
-      "summary": "France score five second-half tries as they beat Wales 38-7 in the Women's Six Nations at Cardiff Arms Park.",
-      "url": "https://www.bbc.com/sport/rugby-union/videos/cy0165rrd06o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-18T18:40:59Z"
-    },
-    {
-      "title": "Ireland turn on the style to hammer Italy in Galway",
-      "summary": "Ireland produced a statement performance to get their Guinness Women's Six Nations up and running, with a sensational first half setting them on their way for a 57-20 win against Italy at Dexcom Stadi…",
-      "url": "https://www.rte.ie/sport/rugby/2026/0418/1568905-ireland-turn-on-the-style-to-hammer-italy-in-galway/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-18T18:36:16Z"
     }
   ]
 }

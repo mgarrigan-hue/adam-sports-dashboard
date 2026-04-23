@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-04-23T19:00:00+01:00",
+      "home": "Donnybrook Rangers",
+      "away": "SMTC",
+      "home_score": 43,
+      "away_score": 29,
+      "competition": "Leinster School Youth Boys U14 Plate",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-22T00:00:00+01:00",
       "home": "SMTC",
       "away": "MU Barnhall",
@@ -1237,15 +1246,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-04-23T19:00:00+01:00",
-      "home": "Donnybrook Rangers",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Plate",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-24T19:30:00+01:00",
       "home": "MU Barnhall",
       "away": "St Marys College RFC",
@@ -1282,5 +1282,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-23T18:07:52+00:00"
+  "fetched_at": "2026-04-23T19:48:56+00:00"
 }

@@ -1179,69 +1179,6 @@
       "away_score": 28,
       "competition": "Metro League - Division 3",
       "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T14:30:00+01:00",
-      "home": "Blackrock College RFC U20",
-      "away": "St Marys College RFC U20",
-      "home_score": 17,
-      "away_score": 28,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T14:30:00+01:00",
-      "home": "St Marys College RFC U20 2",
-      "away": "Wicklow U20",
-      "home_score": 26,
-      "away_score": 27,
-      "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T12:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Newbridge",
-      "home_score": 28,
-      "away_score": 7,
-      "competition": "Leinster School Youths 18s League Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T12:00:00+01:00",
-      "home": "St Marys College RFC A",
-      "away": "Malahide A",
-      "home_score": 7,
-      "away_score": 21,
-      "competition": "U13 Leinster SY League Boys Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T12:00:00+01:00",
-      "home": "SMTC",
-      "away": "Suttonians",
-      "home_score": 19,
-      "away_score": 41,
-      "competition": "Leinster School Youth U16 Cup",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T11:30:00+01:00",
-      "home": "Old Belvedere B",
-      "away": "St Marys College RFC B",
-      "home_score": 19,
-      "away_score": 48,
-      "competition": "U13 Leinster SY League Boys Division 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-23T11:00:00+01:00",
-      "home": "Clontarf",
-      "away": "St Marys College RFC",
-      "home_score": 10,
-      "away_score": 67,
-      "competition": "Leinster School Youth U15 Grading Group D",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -1282,5 +1219,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-23T22:39:07+00:00"
+  "fetched_at": "2026-04-23T23:40:16+00:00"
 }

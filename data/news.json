@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T17:28:48Z",
+  "generated_at": "2026-04-24T18:06:32Z",
   "items": [
     {
       "title": "Wales face arguably biggest task in sport - stopping England",
@@ -354,14 +354,6 @@
       "published": "2026-04-22T20:00:50Z"
     },
     {
-      "title": "Leadership, injury and pet peeves - the making of Ireland's King",
-      "summary": "From a career-threatening knee injury to Ireland captain in the space of a year, it has been a whirlwind 12 months for Erin King.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/ceqw8y9g1jpo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-22T19:30:03Z"
-    },
-    {
       "title": "Moody announces 500-mile MND ride with World Cup-winning team-mates",
       "summary": "Former England captain Lewis Moody, who was diagnosed with motor neurone disease last year, announces a cycling challenge to raise money.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/c4g5lgj12d9o?at_medium=RSS&at_campaign=rss",
@@ -408,14 +400,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-22T14:34:38Z"
-    },
-    {
-      "title": "Cardiff takeover deal with Ospreys owners collapses",
-      "summary": "The Welsh Rugby Union says negotiations with the owners of Ospreys to also buy Cardiff have fallen through.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cr41vw1pex0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-22T11:00:22Z"
     },
     {
       "title": "Connacht blow URC open, bullish Ireland's French rematch",
@@ -480,6 +464,22 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-04-21T07:00:38Z"
+    },
+    {
+      "title": "Connacht the Irish wildcard in URC run-in",
+      "summary": "Interprovincial challenges will continue this weekend as Munster host Ulster in the next round of the United Rugby Championship on Saturday. In Johannesburg, Connacht take on the Lions.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0420/1569268-connacht-the-irish-wildcard-in-urc-run-in/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-04-20T20:54:20Z"
+    },
+    {
+      "title": "F1 makes changes to address new engine rules concerns",
+      "summary": "Formula 1 makes a series of rule changes to address concerns about the new engine regulations that were introduced for this season.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cp84xd25wg9o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-04-20T17:47:09Z"
     }
   ]
 }

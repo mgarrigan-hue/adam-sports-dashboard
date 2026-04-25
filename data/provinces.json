@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T17:07:28Z",
+  "generated_at": "2026-04-25T18:02:28Z",
   "results": [
     {
       "date": "2026-04-25T14:00Z",
@@ -12,6 +12,7 @@
       "status_state": "post",
       "home_score": 33,
       "away_score": 21,
+      "half_time": "19-0",
       "scoring_summary": [
         {
           "minute": "5'",

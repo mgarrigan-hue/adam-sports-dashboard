@@ -1,6 +1,111 @@
 {
-  "generated_at": "2026-04-25T19:24:18Z",
+  "generated_at": "2026-04-25T20:00:11Z",
   "results": [
+    {
+      "date": "2026-04-25T16:30Z",
+      "home": "Munster",
+      "away": "Ulster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
+      "competition": "URC",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 41,
+      "away_score": 14,
+      "half_time": "12-7",
+      "scoring_summary": [
+        {
+          "minute": "13'",
+          "team": "Ulster",
+          "player": "A. King",
+          "type": "try"
+        },
+        {
+          "minute": "13'",
+          "team": "Ulster",
+          "player": "J. Flannery",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Ulster",
+          "player": "T. Brigg",
+          "type": "yellow card"
+        },
+        {
+          "minute": "24'",
+          "team": "Munster",
+          "player": "J. Hodnett",
+          "type": "try"
+        },
+        {
+          "minute": "29'",
+          "team": "Munster",
+          "player": "J. Hodnett",
+          "type": "try"
+        },
+        {
+          "minute": "30'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "Munster",
+          "player": "A. Kendellen",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Munster",
+          "player": "A. Kendellen",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "55'",
+          "team": "Munster",
+          "player": "J. Hodnett",
+          "type": "try"
+        },
+        {
+          "minute": "65'",
+          "team": "Ulster",
+          "player": "J. Andrew",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "Ulster",
+          "player": "J. Flannery",
+          "type": "conversion"
+        },
+        {
+          "minute": "68'",
+          "team": "Munster",
+          "player": "J. Hodnett",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Munster",
+          "player": "A. Kendellen",
+          "type": "try"
+        },
+        {
+          "minute": "70'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        }
+      ]
+    },
     {
       "date": "2026-04-25T14:00Z",
       "home": "Lions",
@@ -2949,110 +3054,6 @@
           "minute": "76'",
           "team": "Toulon",
           "player": "M. Domon",
-          "type": "penalty goal"
-        }
-      ]
-    },
-    {
-      "date": "2026-01-10T17:30Z",
-      "home": "Leinster",
-      "away": "La Rochelle",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/119318.png",
-      "competition": "Champions Cup",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 25,
-      "away_score": 24,
-      "scoring_summary": [
-        {
-          "minute": "3'",
-          "team": "Leinster",
-          "player": "J. Kenny",
-          "type": "try"
-        },
-        {
-          "minute": "9'",
-          "team": "Leinster",
-          "player": "J. Kenny",
-          "type": "try"
-        },
-        {
-          "minute": "10'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "12'",
-          "team": "Leinster",
-          "player": "T. O'Brien",
-          "type": "yellow card"
-        },
-        {
-          "minute": "29'",
-          "team": "La Rochelle",
-          "player": "D. Niniashvili",
-          "type": "try"
-        },
-        {
-          "minute": "30'",
-          "team": "La Rochelle",
-          "player": "N. Le Garrec",
-          "type": "conversion"
-        },
-        {
-          "minute": "37'",
-          "team": "Leinster",
-          "player": "J. McCarthy",
-          "type": "yellow card"
-        },
-        {
-          "minute": "54'",
-          "team": "La Rochelle",
-          "player": "N. Le Garrec",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "59'",
-          "team": "La Rochelle",
-          "player": "I. West",
-          "type": "try"
-        },
-        {
-          "minute": "60'",
-          "team": "La Rochelle",
-          "player": "N. Le Garrec",
-          "type": "conversion"
-        },
-        {
-          "minute": "67'",
-          "team": "Leinster",
-          "player": "J. van der Flier",
-          "type": "try"
-        },
-        {
-          "minute": "70'",
-          "team": "Leinster",
-          "player": "R. Henshaw",
-          "type": "try"
-        },
-        {
-          "minute": "77'",
-          "team": "La Rochelle",
-          "player": "I. West",
-          "type": "try"
-        },
-        {
-          "minute": "78'",
-          "team": "La Rochelle",
-          "player": "N. Le Garrec",
-          "type": "conversion"
-        },
-        {
-          "minute": "82'",
-          "team": "Leinster",
-          "player": "H. Byrne",
           "type": "penalty goal"
         }
       ]

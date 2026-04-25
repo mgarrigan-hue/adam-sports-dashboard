@@ -1,6 +1,110 @@
 {
-  "generated_at": "2026-04-25T21:03:07Z",
+  "generated_at": "2026-04-25T21:59:25Z",
   "results": [
+    {
+      "date": "2026-04-25T18:45Z",
+      "home": "Benetton Treviso",
+      "away": "Leinster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25927.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
+      "competition": "URC",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 29,
+      "away_score": 26,
+      "scoring_summary": [
+        {
+          "minute": "9'",
+          "team": "Benetton Treviso",
+          "player": "A. Garbisi",
+          "type": "try"
+        },
+        {
+          "minute": "14'",
+          "team": "Leinster",
+          "player": "C. O'Tighearnaigh",
+          "type": "try"
+        },
+        {
+          "minute": "15'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "36'",
+          "team": "Leinster",
+          "player": "J. van der Flier",
+          "type": "try"
+        },
+        {
+          "minute": "37'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "43'",
+          "team": "Leinster",
+          "player": "J. Gibson-Park",
+          "type": "try"
+        },
+        {
+          "minute": "47'",
+          "team": "Benetton Treviso",
+          "player": "I. Mendy",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "61'",
+          "team": "Benetton Treviso",
+          "player": "N. Gasperini",
+          "type": "try"
+        },
+        {
+          "minute": "62'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "66'",
+          "team": "Leinster",
+          "player": "C. Frawley",
+          "type": "try"
+        },
+        {
+          "minute": "67'",
+          "team": "Leinster",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "71'",
+          "team": "Benetton Treviso",
+          "player": "N. Gasperini",
+          "type": "try"
+        },
+        {
+          "minute": "72'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "83'",
+          "team": "Benetton Treviso",
+          "player": "J. Umaga",
+          "type": "penalty goal"
+        }
+      ]
+    },
     {
       "date": "2026-04-25T16:30Z",
       "home": "Munster",
@@ -2927,134 +3031,6 @@
           "team": "Leinster",
           "player": "M. Deegan",
           "type": "try"
-        }
-      ]
-    },
-    {
-      "date": "2026-01-11T13:00Z",
-      "home": "Toulon",
-      "away": "Munster",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25986.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
-      "competition": "Champions Cup",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 27,
-      "away_score": 25,
-      "scoring_summary": [
-        {
-          "minute": "17'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "32'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "36'",
-          "team": "Munster",
-          "player": "T. Beirne",
-          "type": "yellow card"
-        },
-        {
-          "minute": "40'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "try"
-        },
-        {
-          "minute": "41'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "conversion"
-        },
-        {
-          "minute": "44'",
-          "team": "Toulon",
-          "player": "B. White",
-          "type": "try"
-        },
-        {
-          "minute": "45'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "conversion"
-        },
-        {
-          "minute": "47'",
-          "team": "Munster",
-          "player": "C. Nash",
-          "type": "try"
-        },
-        {
-          "minute": "48'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "conversion"
-        },
-        {
-          "minute": "50'",
-          "team": "Toulon",
-          "player": "G. Drean",
-          "type": "try"
-        },
-        {
-          "minute": "51'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "conversion"
-        },
-        {
-          "minute": "55'",
-          "team": "Munster",
-          "player": "A. Nankivell",
-          "type": "yellow card"
-        },
-        {
-          "minute": "57'",
-          "team": "Toulon",
-          "player": "E. Abadie",
-          "type": "yellow card"
-        },
-        {
-          "minute": "65'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "68'",
-          "team": "Toulon",
-          "player": "C. Ollivon",
-          "type": "yellow card"
-        },
-        {
-          "minute": "68'",
-          "team": "Munster",
-          "player": "J. O'Donoghue",
-          "type": "try"
-        },
-        {
-          "minute": "72'",
-          "team": "Munster",
-          "player": "T. Farrell",
-          "type": "try"
-        },
-        {
-          "minute": "73'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "conversion"
-        },
-        {
-          "minute": "76'",
-          "team": "Toulon",
-          "player": "M. Domon",
-          "type": "penalty goal"
         }
       ]
     }

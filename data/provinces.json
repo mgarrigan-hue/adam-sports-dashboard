@@ -1,6 +1,116 @@
 {
-  "generated_at": "2026-04-25T16:03:00Z",
+  "generated_at": "2026-04-25T17:07:28Z",
   "results": [
+    {
+      "date": "2026-04-25T14:00Z",
+      "home": "Lions",
+      "away": "Connacht",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25958.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
+      "competition": "URC",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 33,
+      "away_score": 21,
+      "scoring_summary": [
+        {
+          "minute": "5'",
+          "team": "Lions",
+          "player": "A. Davids",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "Lions",
+          "player": "C. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "22'",
+          "team": "Lions",
+          "player": "H. van Wyk",
+          "type": "try"
+        },
+        {
+          "minute": "23'",
+          "team": "Lions",
+          "player": "C. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "40'",
+          "team": "Lions",
+          "player": "S. Mahashe",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "Lions",
+          "player": "C. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "44'",
+          "team": "Lions",
+          "player": "E. Cronje",
+          "type": "try"
+        },
+        {
+          "minute": "45'",
+          "team": "Lions",
+          "player": "C. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "Lions",
+          "player": "S. Kotze",
+          "type": "yellow card"
+        },
+        {
+          "minute": "49'",
+          "team": "Connacht",
+          "player": "M. Devine",
+          "type": "try"
+        },
+        {
+          "minute": "49'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "72'",
+          "team": "Lions",
+          "player": "H. van Wyk",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "Connacht",
+          "player": "M. Devine",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        },
+        {
+          "minute": "81'",
+          "team": "Connacht",
+          "player": "P. Boyle",
+          "type": "try"
+        },
+        {
+          "minute": "82'",
+          "team": "Connacht",
+          "player": "S. Gilbert",
+          "type": "conversion"
+        }
+      ]
+    },
     {
       "date": "2026-04-18T18:45Z",
       "home": "Benetton Treviso",
@@ -2945,154 +3055,9 @@
           "type": "penalty goal"
         }
       ]
-    },
-    {
-      "date": "2026-01-03T17:30Z",
-      "home": "Leinster",
-      "away": "Connacht",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 52,
-      "away_score": 17,
-      "half_time": "19-17",
-      "scoring_summary": [
-        {
-          "minute": "4'",
-          "team": "Leinster",
-          "player": "D. Sheehan",
-          "type": "try"
-        },
-        {
-          "minute": "5'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "8'",
-          "team": "Leinster",
-          "player": "C. Tector",
-          "type": "try"
-        },
-        {
-          "minute": "8'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "19'",
-          "team": "Connacht",
-          "player": "D. Tierney-Martin",
-          "type": "try"
-        },
-        {
-          "minute": "20'",
-          "team": "Connacht",
-          "player": "S. Gilbert",
-          "type": "conversion"
-        },
-        {
-          "minute": "26'",
-          "team": "Leinster",
-          "player": "J. McCarthy",
-          "type": "yellow card"
-        },
-        {
-          "minute": "27'",
-          "team": "Connacht",
-          "player": "S. Gilbert",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "36'",
-          "team": "Connacht",
-          "player": "F. Bealham",
-          "type": "try"
-        },
-        {
-          "minute": "37'",
-          "team": "Connacht",
-          "player": "S. Gilbert",
-          "type": "conversion"
-        },
-        {
-          "minute": "39'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "try"
-        },
-        {
-          "minute": "44'",
-          "team": "Leinster",
-          "player": "B. Deeny",
-          "type": "try"
-        },
-        {
-          "minute": "45'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "52'",
-          "team": "Leinster",
-          "player": "T. O'Brien",
-          "type": "try"
-        },
-        {
-          "minute": "52'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "62'",
-          "team": "Leinster",
-          "player": "C. Tector",
-          "type": "try"
-        },
-        {
-          "minute": "63'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "67'",
-          "team": "Leinster",
-          "player": "T. O'Brien",
-          "type": "try"
-        },
-        {
-          "minute": "67'",
-          "team": "Leinster",
-          "player": "S. Prendergast",
-          "type": "conversion"
-        },
-        {
-          "minute": "75'",
-          "team": "Leinster",
-          "player": "J. Kenny",
-          "type": "try"
-        }
-      ]
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-04-25T16:30Z",
-      "home": "Munster",
-      "away": "Ulster",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
-      "competition": "URC",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-04-25T18:45Z",
       "home": "Benetton Treviso",

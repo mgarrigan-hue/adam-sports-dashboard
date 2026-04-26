@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-04-26T10:00:00+01:00",
+      "home": "MU Barnhall",
+      "away": "SMTC",
+      "home_score": 28,
+      "away_score": 26,
+      "competition": "Leinster School Youth U16 Prem Final",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-23T19:00:00+01:00",
       "home": "Donnybrook Rangers",
       "away": "SMTC",
@@ -1184,15 +1193,6 @@
   "fixtures": [
     {
       "date": "2026-04-26T10:00:00+01:00",
-      "home": "MU Barnhall",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth U16 Prem Final",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-04-26T10:00:00+01:00",
       "home": "SMTC",
       "away": "Seapoint",
       "home_score": null,
@@ -1210,5 +1210,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-26T10:40:26+00:00"
+  "fetched_at": "2026-04-26T11:35:42+00:00"
 }

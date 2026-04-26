@@ -187,7 +187,7 @@
       "away": "St Marys College RFC",
       "home_score": 17,
       "away_score": 12,
-      "competition": "Leinster School Youths U18s League Prem Play Offs",
+      "competition": "Leinster School Youths 18s League Prem Play Offs",
       "involves_smc": true
     },
     {
@@ -1208,7 +1208,16 @@
       "away_score": null,
       "competition": "AIL Final",
       "involves_smc": true
+    },
+    {
+      "date": "2026-05-01T00:00:00+01:00",
+      "home": "SMTC",
+      "away": "Malahide",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths U16 Metro Cup",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-26T11:35:42+00:00"
+  "fetched_at": "2026-04-26T12:55:28+00:00"
 }

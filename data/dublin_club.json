@@ -1188,15 +1188,6 @@
       "away_score": 15,
       "competition": "Energia All Ireland League 1A 25/26",
       "involves_smc": true
-    },
-    {
-      "date": "2025-11-27T20:00:00+01:00",
-      "home": "St Marys College RFC 3",
-      "away": "MU Barnhall 3",
-      "home_score": 27,
-      "away_score": 28,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -1210,5 +1201,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-27T22:45:40+00:00"
+  "fetched_at": "2026-04-27T23:47:59+00:00"
 }

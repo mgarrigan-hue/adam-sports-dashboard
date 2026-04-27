@@ -11,6 +11,24 @@
       "involves_smc": true
     },
     {
+      "date": "2026-04-26T10:00:00+01:00",
+      "home": "SMTC",
+      "away": "Seapoint",
+      "home_score": 29,
+      "away_score": 30,
+      "competition": "Metro U14 Cup",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-04-26T10:00:00+01:00",
+      "home": "SMTC",
+      "away": "Seapoint",
+      "home_score": 29,
+      "away_score": 30,
+      "competition": "Metro U14 Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-23T19:00:00+01:00",
       "home": "Donnybrook Rangers",
       "away": "SMTC",
@@ -1201,5 +1219,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-27T07:12:29+00:00"
+  "fetched_at": "2026-04-27T09:36:15+00:00"
 }

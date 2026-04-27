@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-04-26T16:00:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Clontarf",
+      "home_score": 46,
+      "away_score": 31,
+      "competition": "AIL Final",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-26T10:00:00+01:00",
       "home": "MU Barnhall",
       "away": "SMTC",
@@ -1219,5 +1228,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-27T09:36:15+00:00"
+  "fetched_at": "2026-04-27T11:41:31+00:00"
 }

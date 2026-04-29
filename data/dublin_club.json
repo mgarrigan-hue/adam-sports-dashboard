@@ -1192,7 +1192,7 @@
   ],
   "fixtures": [
     {
-      "date": "2026-05-01T00:00:00+01:00",
+      "date": "2026-05-04T17:30:00+01:00",
       "home": "SMTC",
       "away": "Malahide",
       "home_score": null,
@@ -1201,5 +1201,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-29T14:06:23+00:00"
+  "fetched_at": "2026-04-29T16:11:14+00:00"
 }

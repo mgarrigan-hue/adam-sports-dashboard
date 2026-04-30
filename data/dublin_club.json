@@ -1125,60 +1125,6 @@
       "away_score": 26,
       "competition": "Boys Schools U19 Friendly",
       "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T14:30:00+01:00",
-      "home": "UCD 2",
-      "away": "St Marys College RFC 2",
-      "home_score": 51,
-      "away_score": 17,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T14:30:00+01:00",
-      "home": "Clontarf U20",
-      "away": "St Marys College RFC U20",
-      "home_score": 26,
-      "away_score": 48,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T12:00:00+01:00",
-      "home": "MU Barnhall",
-      "away": "St Marys College RFC",
-      "home_score": 27,
-      "away_score": 31,
-      "competition": "Leinster School Youths 18s League Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T12:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "BL Rugby",
-      "home_score": 19,
-      "away_score": 20,
-      "competition": "Leinster School Youth U15 Grading Group D",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T12:00:00+01:00",
-      "home": "Terenure College RFC A",
-      "away": "St Marys College RFC A",
-      "home_score": 35,
-      "away_score": 5,
-      "competition": "U13 Leinster SY League Boys Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-11-30T12:00:00+01:00",
-      "home": "St Marys College RFC B",
-      "away": "Terenure College RFC B",
-      "home_score": 5,
-      "away_score": 22,
-      "competition": "U13 Leinster SY League Boys Division 3",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -1192,5 +1138,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-04-30T22:48:41+00:00"
+  "fetched_at": "2026-04-30T23:47:20+00:00"
 }

@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-05-01T16:51:53Z",
+  "generated_at": "2026-05-01T17:55:05Z",
   "items": [
+    {
+      "title": "Ferrari's Leclerc fastest in Miami practice",
+      "summary": "Ferrari's Charles Leclerc is fastest in the only practice session for the Miami Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cjep0wkjpp2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-01T17:45:06Z"
+    },
+    {
+      "title": "Champions Cup: Leinster v Toulon - All You Need to Know",
+      "summary": "We're down to the final four in both the Investec Champions and Challenge Cup, and there is Irish interest across both competitions on Saturday afternoon and evening.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0501/1571271-champions-cup-leinster-v-toulon-all-you-need-to-know/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-01T16:58:15Z"
+    },
     {
       "title": "Women's Six Nations attendance record broken",
       "summary": "Attendance at this year's Women's Six Nations tournament has reached a record high, with a cumulative crowd of 194,466 spectators across the first three rounds, tournament organisers said .",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-04-26T15:17:15Z"
-    },
-    {
-      "title": "Hampson and team complete London Marathon feat",
-      "summary": "Former Under-21 England rugby star Matt Hampson and his team, including former jockey Sir AP McCoy, reflect on completing the 2026 London Marathon to raise awareness for their work in supporting young…",
-      "url": "https://www.bbc.com/sport/athletics/videos/czjwjn8npw9o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-26T15:12:26Z"
-    },
-    {
-      "title": "'I take losses quite personally'- Wafer promises reaction",
-      "summary": "The physical tone for Saturday's Guinness Women's Six Nations meeting between France and Ireland was set – quite literally – four seconds into the game.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0426/1570290-i-take-losses-quite-personally-wafer-promises-reaction/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-26T13:25:29Z"
     }
   ]
 }

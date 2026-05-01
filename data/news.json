@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T19:04:45Z",
+  "generated_at": "2026-05-01T20:14:01Z",
   "items": [
     {
       "title": "Ferrari's Leclerc fastest in Miami practice",
@@ -136,6 +136,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-01T06:23:27Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry Benjamin and the team look ahead to F1’s return after its five-week enforced break.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nhpzg4?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-01T03:47:00Z"
     },
     {
       "title": "Randle's move to Munster off by 'mutual agreement'",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-26T15:31:15Z"
-    },
-    {
-      "title": "Alonso hopes to stay in F1 beyond this season",
-      "summary": "Two-time world champion Fernando Alonso says he hopes 2026 will not be his final season in Formula 1.",
-      "url": "https://www.bbc.com/sport/formula1/articles/cz7879zze0no?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-04-26T15:17:15Z"
     }
   ]
 }

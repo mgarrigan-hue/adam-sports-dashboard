@@ -1,6 +1,38 @@
 {
-  "generated_at": "2026-05-02T16:07:53Z",
+  "generated_at": "2026-05-02T17:12:43Z",
   "items": [
+    {
+      "title": "Norris takes dominant win in Miami sprint race",
+      "summary": "Lando Norris takes McLaren's first victory of the 2026 season with a dominant drive from pole position in the Miami Grand Prix sprint race.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cx217qz4rpzo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-02T16:52:49Z"
+    },
+    {
+      "title": "Challenge Cup: Ulster v Exeter Chiefs latest score",
+      "summary": "Keep up with the latest score from the Challenge Cup semi-final between Ulster and Exeter",
+      "url": "https://www.rte.ie/sport/results/rugby/european-rugby-challenge-cup/27241/report-5327903/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-02T16:39:17Z"
+    },
+    {
+      "title": "Leinster survive Toulon scare to reach Champions Cup final",
+      "summary": "Leinster exorcised their demons of 12 months ago and reached their fourth Champions Cup final in five seaons with a nervy win over Toulon.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cvgzw02p8x2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-02T16:22:22Z"
+    },
+    {
+      "title": "Lucky Leinster hang on to book Champions Cup final spot",
+      "summary": "Leinster's quest for a fifth star will go to the final day after scraping past Toulon 29-25 in the Investec Champions Cup semi-final at Aviva Stadium.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0502/1571416-leinster-beat-toulon-champions-cup-semi-final/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-02T16:09:52Z"
+    },
     {
       "title": "Champions Cup: Leinster 29-25 Toulon - recap",
       "summary": "Leinster are chasing a final spot in Bilbao, but they must be careful to avoid more Champions Cup heartache against three-time champions Toulon.",
@@ -354,6 +386,14 @@
       "published": "2026-04-29T20:51:47Z"
     },
     {
+      "title": "Bath could call on teenager Mears for semi-final",
+      "summary": "Injury-hit Bath could give 18-year-old prospect Isaac Mears his first-team debut in Sunday's Champions Cup semi-final away to Bordeaux-Begles.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c232k8x780eo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-04-29T18:12:58Z"
+    },
+    {
       "title": "Leinster's latest Euro tilt, Ireland run into French wall",
       "summary": "Neil Treacy is joined by Bernard Jackman and Johne Murphy to preview Leinster's Investec Champions Cup semi-final against Toulon, as well as recapping the rest of the provincial action, while Hannah O…",
       "url": "https://www.rte.ie/sport/rugby/2026/0429/1570816-leinsters-latest-euro-tilt-ireland-run-into-french-wall/",
@@ -440,46 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-28T10:12:50Z"
-    },
-    {
-      "title": "‘We Learn Fast And We Go Again’ – Wafer",
-      "summary": "Aoife Wafer is backing this Ireland squad to get the best out of themselves against Wales in Belfast on Saturday week, as they look to right the wrongs of their scoreless second-half performance away…",
-      "url": "https://www.irishrugby.ie/2026/04/28/we-learn-fast-and-we-go-again-wafer/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-28T07:17:36Z"
-    },
-    {
-      "title": "Tickets And Travel Update For Leinster’s Champions Cup Semi Final",
-      "summary": "The Leinster Supporters Club are planning for a sea of blue at Aviva Stadium on Saturday as their team face Toulon in the semi final of the Investec Champions Cup. There was mixed news on the playing…",
-      "url": "https://www.irishrugby.ie/2026/04/28/tickets-and-travel-update-for-leinsters-champions-cup-semi-final/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-28T07:15:08Z"
-    },
-    {
-      "title": "Ulster Ready To Host Exciting Semi Final In Belfast",
-      "summary": "There was positive news for Ulster this week as Tom O&#8217;Toole, Nick Timoney and Jude Postlethwaite were all decalred available for selection ahead of their Challenge Cup semi final against Exeter…",
-      "url": "https://www.irishrugby.ie/2026/04/28/ulster-ready-to-host-exciting-semi-final-in-belfast/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-28T07:00:01Z"
-    },
-    {
-      "title": "Finals Experience Stood To Bohs As Pearse And Quin Praise ‘Amazing Group’",
-      "summary": "UL Bohemian head coach Sarah Quin and captain Chloe Pearse both highlighted the squad&#8217;s experience of recent finals as a key reason why they edged out Blackrock College in Sunday&#8217;s Energia…",
-      "url": "https://www.irishrugby.ie/2026/04/28/finals-experience-stood-to-bohs-as-pearse-and-quin-praise-amazing-group/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-28T06:41:50Z"
-    },
-    {
-      "title": "Will rule changes make noticeable difference in Miami? F1 Q&A",
-      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions before the Miami Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/c87w70zp5l0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-04-28T05:56:22Z"
     }
   ]
 }

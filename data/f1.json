@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:12:30Z",
+  "generated_at": "2026-05-02T18:07:48Z",
   "season": "2026",
   "upcoming": [
     {
@@ -201,42 +201,42 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "72",
+      "points": "75",
       "wins": "2"
     },
     {
       "position": "2",
       "driver": "George Russell",
       "team": "Mercedes",
-      "points": "63",
+      "points": "68",
       "wins": "1"
     },
     {
       "position": "3",
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "49",
+      "points": "55",
       "wins": "0"
     },
     {
       "position": "4",
       "driver": "Lewis Hamilton",
       "team": "Ferrari",
-      "points": "41",
+      "points": "43",
       "wins": "0"
     },
     {
       "position": "5",
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "25",
+      "points": "33",
       "wins": "0"
     },
     {
       "position": "6",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "21",
+      "points": "28",
       "wins": "0"
     },
     {
@@ -250,14 +250,14 @@
       "position": "8",
       "driver": "Pierre Gasly",
       "team": "Alpine F1 Team",
-      "points": "15",
+      "points": "16",
       "wins": "0"
     },
     {
       "position": "9",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "12",
+      "points": "16",
       "wins": "0"
     },
     {
@@ -356,37 +356,37 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "135",
+      "points": "143",
       "wins": "3"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "90",
+      "points": "98",
       "wins": "0"
     },
     {
       "position": "3",
       "team": "McLaren",
-      "points": "46",
+      "points": "61",
       "wins": "0"
     },
     {
       "position": "4",
+      "team": "Red Bull",
+      "points": "20",
+      "wins": "0"
+    },
+    {
+      "position": "5",
       "team": "Haas F1 Team",
       "points": "18",
       "wins": "0"
     },
     {
-      "position": "5",
-      "team": "Alpine F1 Team",
-      "points": "16",
-      "wins": "0"
-    },
-    {
       "position": "6",
-      "team": "Red Bull",
-      "points": "16",
+      "team": "Alpine F1 Team",
+      "points": "17",
       "wins": "0"
     },
     {

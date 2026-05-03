@@ -1,13 +1,21 @@
 {
-  "generated_at": "2026-05-03T21:36:37Z",
+  "generated_at": "2026-05-03T22:35:19Z",
   "items": [
+    {
+      "title": "'Antonelli puts Russell in shade' - Miami GP driver ratings",
+      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Miami Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/c0m20k4xp4no?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-03T22:33:26Z"
+    },
     {
       "title": "Antonelli wins in Miami to extend title lead",
       "summary": "Mercedes' Kimi Antonelli holds off Lando Norris in a race-long battle to win the Miami Grand Prix and take a commanding championship lead.",
       "url": "https://www.bbc.com/sport/formula1/articles/cx21n879zlxo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-05-03T19:05:50Z"
+      "published": "2026-05-03T22:05:42Z"
     },
     {
       "title": "Bordeaux see off Bath to tee up final date with Leinster",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-30T07:49:55Z"
-    },
-    {
-      "title": "Rugby Union Weekly",
-      "summary": "Chris and Ashy preview the Champions Cup semi-finals with Bath’s Henry Arundell.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nhfl2d?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-30T06:00:00Z"
     }
   ]
 }

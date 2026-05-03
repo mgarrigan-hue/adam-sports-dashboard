@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-03T07:54:36Z",
+  "generated_at": "2026-05-03T09:18:47Z",
   "items": [
+    {
+      "title": "The Scot helping drive forward a new Formula 1 team",
+      "summary": "Allan McNish knows more than most about motorsport's highs and lows as he starts a new role with Audi.",
+      "url": "https://www.bbc.com/news/articles/c042p3vvn34o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-03T08:14:25Z"
+    },
     {
       "title": "Arundell on long route to Bath's big day and hometown glory",
       "summary": "Henry Arundell was always destined to play for Bath but has found his way into the blue, black and white via a lonely stint in Paris.",
@@ -32,6 +40,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-02T22:17:50Z"
+    },
+    {
+      "title": "Leinster aim to summon 'spirit of Bilbao' for next battle",
+      "summary": "Hugo Keenan had just two senior club appearances to his name the last time Leinster conquered Europe and looked on with pride as Isa Nacewa and his team-mates lifted the trophy in Bilbao.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0502/1571497-leinster-aim-to-summon-spirit-of-bilbao-for-next-battle/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-02T22:06:59Z"
     },
     {
       "title": "Resurgent Ulster not burdened by past as Bilbao final awaits",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-04-29T17:12:18Z"
-    },
-    {
-      "title": "Jackman: Leinster need a fifth star to repair scar tissue",
-      "summary": "Bernard Jackman believes the \"scar tissue\" of Leinster's recent Investec Champions Cup pain will only heal if Leo Cullen's side end their long wait for a fifth title.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0429/1570872-jackman-leinster-need-a-fifth-star-to-repair-scar-tissue/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-04-29T13:11:26Z"
-    },
-    {
-      "title": "Prem 'will be unrecognisable in 10 years' - Tigers CEO",
-      "summary": "Leicester Tigers CEO Andrea Pinchen says the \"future is bright\" for The Prem after changes to England's top-flight structure were adopted.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cdrpl1v6x3jo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-04-29T11:45:28Z"
     }
   ]
 }

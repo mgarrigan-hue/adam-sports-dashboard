@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T23:38:52Z",
+  "generated_at": "2026-05-04T02:25:45Z",
   "season": "2026",
   "upcoming": [
     {
@@ -8,13 +8,6 @@
       "circuit": "Circuit Gilles Villeneuve",
       "location": "Montreal, Canada",
       "date": "2026-05-24T20:00:00Z"
-    },
-    {
-      "round": "6",
-      "race_name": "Monaco Grand Prix",
-      "circuit": "Circuit de Monaco",
-      "location": "Monte Carlo, Monaco",
-      "date": "2026-06-07T13:00:00Z"
     },
     {
       "round": "7",
@@ -57,6 +50,13 @@
       "circuit": "Circuit Park Zandvoort",
       "location": "Zandvoort, Netherlands",
       "date": "2026-08-23T13:00:00Z"
+    },
+    {
+      "round": "13",
+      "race_name": "Italian Grand Prix",
+      "circuit": "Autodromo Nazionale di Monza",
+      "location": "Monza, Italy",
+      "date": "2026-09-06T13:00:00Z"
     }
   ],
   "recent_results": [
@@ -260,7 +260,7 @@
       "position": "3",
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "63",
+      "points": "59",
       "wins": "0"
     },
     {
@@ -274,7 +274,7 @@
       "position": "5",
       "driver": "Lewis Hamilton",
       "team": "Ferrari",
-      "points": "49",
+      "points": "51",
       "wins": "0"
     },
     {
@@ -316,7 +316,7 @@
       "position": "11",
       "driver": "Franco Colapinto",
       "team": "Alpine F1 Team",
-      "points": "5",
+      "points": "7",
       "wins": "0"
     },
     {
@@ -407,7 +407,7 @@
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "112",
+      "points": "110",
       "wins": "0"
     },
     {
@@ -425,7 +425,7 @@
     {
       "position": "5",
       "team": "Alpine F1 Team",
-      "points": "21",
+      "points": "23",
       "wins": "0"
     },
     {
@@ -465,148 +465,8 @@
       "wins": "0"
     }
   ],
-  "last_qualifying": {
-    "race_name": "Miami Grand Prix",
-    "round": "4",
-    "date": "2026-05-03T20:00:00Z",
-    "results": [
-      {
-        "position": 1,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "q1": "1:28.653",
-        "q2": "1:28.289",
-        "q3": "1:27.798"
-      },
-      {
-        "position": 2,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "q1": "1:29.099",
-        "q2": "1:28.116",
-        "q3": "1:27.964"
-      },
-      {
-        "position": 3,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "q1": "1:28.938",
-        "q2": "1:28.315",
-        "q3": "1:28.143"
-      },
-      {
-        "position": 4,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "q1": "1:29.183",
-        "q2": "1:28.920",
-        "q3": "1:28.183"
-      },
-      {
-        "position": 5,
-        "driver": "George Russell",
-        "team": "Mercedes",
-        "q1": "1:29.492",
-        "q2": "1:28.477",
-        "q3": "1:28.197"
-      },
-      {
-        "position": 6,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "q1": "1:29.483",
-        "q2": "1:28.477",
-        "q3": "1:28.319"
-      },
-      {
-        "position": 7,
-        "driver": "Oscar Piastri",
-        "team": "McLaren",
-        "q1": "1:29.920",
-        "q2": "1:28.332",
-        "q3": "1:28.500"
-      },
-      {
-        "position": 8,
-        "driver": "Franco Colapinto",
-        "team": "Alpine F1 Team",
-        "q1": "1:29.584",
-        "q2": "1:28.975",
-        "q3": "1:28.762"
-      },
-      {
-        "position": 9,
-        "driver": "Isack Hadjar",
-        "team": "Red Bull",
-        "q1": "",
-        "q2": "1:28.941",
-        "q3": "1:28.789"
-      },
-      {
-        "position": 9,
-        "driver": "Pierre Gasly",
-        "team": "Alpine F1 Team",
-        "q1": "1:29.914",
-        "q2": "1:29.070",
-        "q3": "1:28.810"
-      }
-    ]
-  },
-  "last_sprint": {
-    "race_name": "Miami Grand Prix",
-    "round": "4",
-    "date": "2026-05-03T20:00:00Z",
-    "results": [
-      {
-        "position": 1,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "points": "8"
-      },
-      {
-        "position": 2,
-        "driver": "Oscar Piastri",
-        "team": "McLaren",
-        "points": "7"
-      },
-      {
-        "position": 3,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "points": "6"
-      },
-      {
-        "position": 4,
-        "driver": "George Russell",
-        "team": "Mercedes",
-        "points": "5"
-      },
-      {
-        "position": 5,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "points": "4"
-      },
-      {
-        "position": 6,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "points": "3"
-      },
-      {
-        "position": 7,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "points": "2"
-      },
-      {
-        "position": 8,
-        "driver": "Pierre Gasly",
-        "team": "Alpine F1 Team",
-        "points": "1"
-      }
-    ]
-  },
+  "last_qualifying": null,
+  "last_sprint": null,
   "next_race_sessions": {
     "race_name": "Canadian Grand Prix",
     "round": "5",

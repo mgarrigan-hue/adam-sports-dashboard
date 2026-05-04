@@ -1127,16 +1127,6 @@
       "involves_smc": true
     }
   ],
-  "fixtures": [
-    {
-      "date": "2026-05-04T17:30:00+01:00",
-      "home": "SMTC",
-      "away": "Malahide",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths U16 Metro Cup",
-      "involves_smc": true
-    }
-  ],
-  "fetched_at": "2026-05-04T22:52:57+00:00"
+  "fixtures": [],
+  "fetched_at": "2026-05-04T23:49:30+00:00"
 }

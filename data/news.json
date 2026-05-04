@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-05-04T02:25:57Z",
+  "generated_at": "2026-05-04T05:48:27Z",
   "items": [
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry is joined by Damon Hill and Juan Pablo Montoya to review the Miami Grand Prix",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nj5vkv?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-04T02:41:00Z"
+    },
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Johann van Graan chats to Chris & Paul Grayson in Bordeaux after Bath’s semi-final defeat",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nj5tj4?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-04T01:00:00Z"
+    },
     {
       "title": "Antonelli steps up his level in dramatic fashion",
       "summary": "Kimi Antonelli's first season in F1 showed occasional promise, but nothing that suggested this was going to come next, writes Andrew Benson.",
@@ -66,6 +82,14 @@
       "published": "2026-05-03T12:26:16Z"
     },
     {
+      "title": "Jackman: Media right to be a bit sceptical of Leinster",
+      "summary": "Leo Cullen may be trying to instil a siege mentality after defending his Leinster team against perceived unjustified media commentary, according to Bernard Jackman.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0503/1571546-jackman-media-right-to-be-a-bit-sceptical-of-leinster/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-03T11:32:51Z"
+    },
+    {
       "title": "Feyi-Waboso withdrawal 'perplexing' - Baxter",
       "summary": "Exeter boss Rob Baxter says the process behind Immanuel Feyi-Waboso's withdrawal from their Challenge Cup exit was \"perplexing\".",
       "url": "https://www.bbc.com/sport/rugby-union/articles/cwy25v0vk8vo?at_medium=RSS&at_campaign=rss",
@@ -88,14 +112,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-03T05:28:33Z"
-    },
-    {
-      "title": "F1: Chequered Flag",
-      "summary": "Harry and the team look back at a busy Saturday in Miami",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nj2gqs?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-05-03T04:20:00Z"
     },
     {
       "title": "Miami race brought forward because of storm threat",
@@ -298,14 +314,6 @@
       "published": "2026-05-01T15:43:19Z"
     },
     {
-      "title": "Spencer returns but Bath missing Ojomoh & Cokanasiga for semi-final",
-      "summary": "First-choice scrum-half Ben Spencer recovers from injury to take his place in Bath's starting line-up as they travel to Bordeaux-Begles in Sunday's Champions Cup semi-final.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c4g4xzxdq1po?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-01T12:02:54Z"
-    },
-    {
       "title": "Young Artist Announced As Winner Of IRFU Creative Jersey Design Competition",
       "summary": "The Irish Rugby Football Union (IRFU) has today announced Jack Smyth a pupil from St Patrick’s in Longford, as the winner of its nationwide creative jersey design competition, launched earlier this ye…",
       "url": "https://www.irishrugby.ie/2026/05/01/young-artist-announced-as-winner-of-irfu-creative-jersey-design-competition/",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-04-30T11:37:16Z"
-    },
-    {
-      "title": "Albon on preparing for the Miami GP - and his 14 cats",
-      "summary": "The Williams driver is ready to race again this weekend after the unexpected five-week break.",
-      "url": "https://www.bbc.com/news/articles/c995evrg4e1o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-04-30T09:19:07Z"
     }
   ]
 }

@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-06T21:38:33Z",
+  "generated_at": "2026-05-06T22:44:34Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Sara, Kat Merchant and Philippa Tuttiett debate the size 4.5 ball and preview round four.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0njqzxz?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-06T21:00:00Z"
+    },
     {
       "title": "Bristol sign Davies as cover for hooker Oghre",
       "summary": "Bristol hooker Garbiel Oghre will miss the rest of the season with a knee injury, with Doncaster's Fred Davies joining on a temporary deal.",
@@ -472,14 +480,6 @@
       "source": "Irish Rugby",
       "category": "irish-rugby",
       "published": "2026-05-02T18:23:39Z"
-    },
-    {
-      "title": "Cullen says media 'love throwing the boot' into Leinster",
-      "summary": "Leo Cullen launched an impassioned defence of his Leinster team after their survived a late scare to see off Toulon and return to the Investec Champions Cup final.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0502/1571450-cullen-says-media-love-throwing-the-boot-into-leinster/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-02T18:09:48Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T12:27:28Z",
+  "generated_at": "2026-05-07T15:12:23Z",
   "items": [
     {
       "title": "Coming soon: Alex Batty vanished at 11 - now he tells his story",
@@ -8,6 +8,38 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-13T05:00:00Z"
+    },
+    {
+      "title": "McMillan 'proud' of reaction from Munster players",
+      "summary": "Munster head coach Clayton McMillan said he was proud his players in how they coped with the fallout of the cancellation of the appointment of Roger Randle as attack coach.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0507/1572200-mcmillan-proud-of-reaction-from-munster-players/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-07T14:50:38Z"
+    },
+    {
+      "title": "Higgins returns for Ireland to face Wales",
+      "summary": "Ireland head coach Scott Bemand makes one change to his starting XV for Saturday's Women's Six Nations home game against Wales.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c2e2rpmelv7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-07T13:38:39Z"
+    },
+    {
+      "title": "Crowley ruled out for Munster's crucial Connacht Interpro",
+      "summary": "Munster have been dealt a blow ahead of Saturday's United Rugby Championship meeting with Connacht, with Jack Crowley ruled out with a leg injury.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0507/1572179-crowley-ruled-out-for-munsters-crucial-connacht-interpro/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-07T13:26:54Z"
+    },
+    {
+      "title": "Scotland make seven changes for visit of France",
+      "summary": "Holland Bogan and Rachel Phillips make their first Scotland starts as head coach Sione Fukofuka makes seven changes for Saturday's Six Nations meeting with France in Edinburgh.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cy42v17j1j1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-07T12:39:34Z"
     },
     {
       "title": "Bemand: Ireland are ready to deliver 'big moments'",
@@ -50,14 +82,6 @@
       "published": "2026-05-07T11:03:12Z"
     },
     {
-      "title": "Higgins returns for Ireland to face Wales",
-      "summary": "Ireland head coach Scott Bemand makes one change to his starting XV for Saturday's Women's Six Nations home game against Wales.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c2e2rpmelv7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-07T10:17:40Z"
-    },
-    {
       "title": "Gloucester benefit from keeping things simple",
       "summary": "Freddie Thomas says Gloucester have simplified their gameplan which played more to the players' strengths.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/c0j2g84l8pwo?at_medium=RSS&at_campaign=rss",
@@ -91,7 +115,7 @@
     },
     {
       "title": "F1: Chequered Flag",
-      "summary": "Harry Benjamin looks into the efforts being made to create more opportunity in F1.",
+      "summary": "Harry Benjamin looks into the efforts by Lewis Hamilton to create more opportunity in F1.",
       "url": "https://www.bbc.co.uk/sounds/play/p0njt5g2?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
@@ -144,14 +168,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-06T18:33:00Z"
-    },
-    {
-      "title": "Bristol sign Davies as cover for hooker Oghre",
-      "summary": "Bristol hooker Garbiel Oghre will miss the rest of the season with a knee injury, with Doncaster's Fred Davies joining on a temporary deal.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cpqp29gy40lo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-06T16:30:18Z"
     },
     {
       "title": "Dalton: Ireland ready to hit 'another level' v Wales",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-03T22:05:42Z"
-    },
-    {
-      "title": "Bordeaux see off Bath to tee up final date with Leinster",
-      "summary": "Leinster will face Bordeaux-Begles in this year's Investec Champions Cup final in Bilbao after the reigning champions beat Bath 38-26 at the Stade Atlantique Bordeaux Metropole.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0503/1571517-bordeaux-see-off-bath-to-tee-up-final-date-with-leinster/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-03T16:44:07Z"
-    },
-    {
-      "title": "Montpellier book Challenge Cup final date with Ulster",
-      "summary": "Ulster will play Montpellier in the final of the Challenge Cup after the Top 14 side beat the Dragons 18-12 in France today.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0503/1571557-montpellier-book-challenge-cup-final-date-with-ulster/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-03T13:53:41Z"
     }
   ]
 }

@@ -1118,6 +1118,16 @@
       "involves_smc": true
     }
   ],
-  "fixtures": [],
-  "fetched_at": "2026-05-07T10:39:42+00:00"
+  "fixtures": [
+    {
+      "date": "2026-05-10T15:30:00+01:00",
+      "home": "Seapoint",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths U16 Metro Cup",
+      "involves_smc": true
+    }
+  ],
+  "fetched_at": "2026-05-07T12:27:19+00:00"
 }

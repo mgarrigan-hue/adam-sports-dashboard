@@ -1,6 +1,153 @@
 {
-  "generated_at": "2026-05-08T20:53:56Z",
+  "generated_at": "2026-05-08T21:55:32Z",
   "results": [
+    {
+      "date": "2026-05-08T18:45Z",
+      "home": "Ulster",
+      "away": "Stormers",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25962.png",
+      "competition": "URC",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 38,
+      "away_score": 38,
+      "half_time": "21-17",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Ulster",
+          "player": "W. Kok",
+          "type": "try"
+        },
+        {
+          "minute": "5'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "6'",
+          "team": "Stormers",
+          "player": "E. Roos",
+          "type": "try"
+        },
+        {
+          "minute": "7'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "9'",
+          "team": "Ulster",
+          "player": "I. Henderson",
+          "type": "red card"
+        },
+        {
+          "minute": "14'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "try"
+        },
+        {
+          "minute": "15'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "21'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "28'",
+          "team": "Ulster",
+          "player": "W. Kok",
+          "type": "try"
+        },
+        {
+          "minute": "29'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Ulster",
+          "player": "Z. Ward",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "45'",
+          "team": "Ulster",
+          "player": "M. Lowry",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Stormers",
+          "player": "I. Khan",
+          "type": "try"
+        },
+        {
+          "minute": "49'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "64'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "try"
+        },
+        {
+          "minute": "64'",
+          "team": "Stormers",
+          "player": "S. Feinberg-Mngomezulu",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "Ulster",
+          "player": "W. Kok",
+          "type": "try"
+        },
+        {
+          "minute": "75'",
+          "team": "Stormers",
+          "player": "J. Matthee",
+          "type": "yellow card"
+        },
+        {
+          "minute": "75'",
+          "team": "Ulster",
+          "player": "E. O'Sullivan",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "conversion"
+        },
+        {
+          "minute": "80'",
+          "team": "Ulster",
+          "player": "N. Doak",
+          "type": "yellow card"
+        }
+      ]
+    },
     {
       "date": "2026-05-02T14:00Z",
       "home": "Leinster",
@@ -2949,128 +3096,6 @@
           "team": "Munster",
           "player": "T. Butler",
           "type": "penalty goal"
-        }
-      ]
-    },
-    {
-      "date": "2026-01-17T17:30Z",
-      "home": "Munster",
-      "away": "Castres Olympique",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25916.png",
-      "competition": "Champions Cup",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 29,
-      "away_score": 31,
-      "scoring_summary": [
-        {
-          "minute": "3'",
-          "team": "Castres Olympique",
-          "player": "J. Fernandez",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "11'",
-          "team": "Castres Olympique",
-          "player": "V. Karawalevu",
-          "type": "try"
-        },
-        {
-          "minute": "12'",
-          "team": "Castres Olympique",
-          "player": "J. Fernandez",
-          "type": "conversion"
-        },
-        {
-          "minute": "18'",
-          "team": "Munster",
-          "player": "C. Casey",
-          "type": "try"
-        },
-        {
-          "minute": "19'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "conversion"
-        },
-        {
-          "minute": "35'",
-          "team": "Munster",
-          "player": "C. Casey",
-          "type": "try"
-        },
-        {
-          "minute": "39'",
-          "team": "Castres Olympique",
-          "player": "T. Chabouni",
-          "type": "try"
-        },
-        {
-          "minute": "40'",
-          "team": "Castres Olympique",
-          "player": "J. Fernandez",
-          "type": "conversion"
-        },
-        {
-          "minute": "47'",
-          "team": "Munster",
-          "player": "T. Abrahams",
-          "type": "try"
-        },
-        {
-          "minute": "60'",
-          "team": "Munster",
-          "player": "E. Edogbo",
-          "type": "try"
-        },
-        {
-          "minute": "64'",
-          "team": "Munster",
-          "player": "T. Farrell",
-          "type": "yellow card"
-        },
-        {
-          "minute": "68'",
-          "team": "Castres Olympique",
-          "player": "G. Palis",
-          "type": "try"
-        },
-        {
-          "minute": "69'",
-          "team": "Castres Olympique",
-          "player": "E. Herve",
-          "type": "conversion"
-        },
-        {
-          "minute": "73'",
-          "team": "Castres Olympique",
-          "player": "C. Ambadiang",
-          "type": "try"
-        },
-        {
-          "minute": "74'",
-          "team": "Castres Olympique",
-          "player": "E. Herve",
-          "type": "conversion"
-        },
-        {
-          "minute": "75'",
-          "team": "Castres Olympique",
-          "player": "L. Nakarawa",
-          "type": "yellow card"
-        },
-        {
-          "minute": "78'",
-          "team": "Munster",
-          "player": "E. Edogbo",
-          "type": "try"
-        },
-        {
-          "minute": "79'",
-          "team": "Munster",
-          "player": "J. Crowley",
-          "type": "conversion"
         }
       ]
     }

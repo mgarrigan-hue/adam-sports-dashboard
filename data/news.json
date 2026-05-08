@@ -1,13 +1,37 @@
 {
-  "generated_at": "2026-05-08T20:54:07Z",
+  "generated_at": "2026-05-08T21:55:42Z",
   "items": [
     {
-      "title": "Ulster v Stormers latest score",
-      "summary": "The latest score from the Ulster-Stormers URC clash",
-      "url": "https://www.rte.ie/sport/results/rugby/united-rugby-championship/26622/report-4792609/",
+      "title": "Atkinson scores two tries as Gloucester beat Sale",
+      "summary": "Gloucester fight back to beat Sale Sharks 21-15 at Kingsholm and secure their first back-to-back Prem wins of the season.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cn8px1vpnzlo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-08T21:48:37Z"
+    },
+    {
+      "title": "Stormers deny 14-man Ulster at death in thrilling draw",
+      "summary": "Wing Werner Kok scored a hat-trick as Ulster drew a URC thriller with league leaders Stormers 38-38 in Belfast.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0508/1572303-stormers-deny-14-man-ulster-at-death-in-thrilling-draw/",
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
-      "published": "2026-05-08T19:23:38Z"
+      "published": "2026-05-08T21:25:55Z"
+    },
+    {
+      "title": "Ulster and Stormers share spoils in dramatic draw",
+      "summary": "Ulster and Stormers produce an enthralling 38-38 draw in a United Rugby Championship game that featured 11 tries and a controversial ending at the Affidea Stadium.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c62ej8109w7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-08T21:21:35Z"
+    },
+    {
+      "title": "Glasgow beat Cardiff to move top of URC table",
+      "summary": "Glasgow Warriors cruise to a bonus-point victory over Cardiff to go top of the United Rugby Championship with one round of the regular season remaining.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c8r8gpx5xv2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-08T20:55:30Z"
     },
     {
       "title": "Wounded Ireland seeking redemption against Wales",
@@ -456,30 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-05-05T11:30:11Z"
-    },
-    {
-      "title": "Keenan Signs New Two-Year IRFU Contract",
-      "summary": "Hugo Keenan has signed a two-year contract extension with the Irish Rugby Football Union (IRFU) and Leinster Rugby until the end of the 2027/28 season. The UCD man has made 46 appearances to date for…",
-      "url": "https://www.irishrugby.ie/2026/05/05/keenan-signs-new-two-year-irfu-contract/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-05T10:55:41Z"
-    },
-    {
-      "title": "RFU backs Borthwick but flags multiple Six Nations failings",
-      "summary": "The Rugby Football Union demands improvement from England head coach Steve Borthwick after their worst-ever Six Nations campaign.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c5y7ve0v8y2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-05T10:22:36Z"
-    },
-    {
-      "title": "Connacht swoop for Leinster prop Jerry Cahir",
-      "summary": "Connacht have confirmed the signing of Leinster loosehead prop Jerry Cahir.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0505/1571761-connacht-swoop-for-leinster-prop-jerry-cahir/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-05T09:14:43Z"
     }
   ]
 }

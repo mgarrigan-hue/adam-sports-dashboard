@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-08T18:06:27Z",
+  "generated_at": "2026-05-08T19:52:53Z",
   "items": [
+    {
+      "title": "Ulster v Stormers latest score",
+      "summary": "The latest score from the Ulster-Stormers URC clash",
+      "url": "https://www.rte.ie/sport/results/rugby/united-rugby-championship/26622/report-4792609/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-08T19:23:38Z"
+    },
     {
       "title": "Wounded Ireland seeking redemption against Wales",
       "summary": "After a two-week break, the Women's Six Nations returns this weekend, with Ireland hosting Wales in Saturday's late kick-off.",
@@ -104,14 +112,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-08T06:37:49Z"
-    },
-    {
-      "title": "Stormers match is our immediate priority - Murphy",
-      "summary": "The immediate priority for Ulster is Friday's penultimate URC regular-season game against the Stormers, according to head coach Richie Murphy.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c9wepqqr892o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-08T06:36:55Z"
     },
     {
       "title": "Are Scotland suffering from a World Cup hangover?",
@@ -248,14 +248,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-07T11:11:34Z"
-    },
-    {
-      "title": "Bell back for Ulster's URC game against Stormers",
-      "summary": "Australian prop Angus Bell returns in one of five changes made by Richie Murphy for Ulster's United Rugby Championship game against the table-topping Stormers at Affidea Stadium on Friday (19:45 BST).",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c072zxrnv3po?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-07T11:03:12Z"
     },
     {
       "title": "Three changes in Wales starting XV to face Ireland",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-05T10:22:36Z"
+    },
+    {
+      "title": "Connacht swoop for Leinster prop Jerry Cahir",
+      "summary": "Connacht have confirmed the signing of Leinster loosehead prop Jerry Cahir.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0505/1571761-connacht-swoop-for-leinster-prop-jerry-cahir/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-05T09:14:43Z"
     }
   ]
 }

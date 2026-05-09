@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T23:52:28Z",
+  "generated_at": "2026-05-09T02:27:00Z",
   "results": [
     {
       "date": "2026-05-08T18:45Z",
@@ -12,7 +12,6 @@
       "status_state": "post",
       "home_score": 38,
       "away_score": 38,
-      "half_time": "21-17",
       "scoring_summary": [
         {
           "minute": "4'",
@@ -69,7 +68,7 @@
           "type": "try"
         },
         {
-          "minute": "29'",
+          "minute": "30'",
           "team": "Ulster",
           "player": "N. Doak",
           "type": "conversion"

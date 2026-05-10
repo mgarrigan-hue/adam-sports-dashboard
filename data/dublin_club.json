@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-05-10T15:30:00+01:00",
+      "home": "Seapoint",
+      "away": "SMTC",
+      "home_score": 12,
+      "away_score": 14,
+      "competition": "Leinster School Youths U16 Metro Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-05-04T17:30:00+01:00",
       "home": "SMTC",
       "away": "Malahide",
@@ -1064,16 +1073,6 @@
       "involves_smc": true
     }
   ],
-  "fixtures": [
-    {
-      "date": "2026-05-10T15:30:00+01:00",
-      "home": "Seapoint",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths U16 Metro Cup",
-      "involves_smc": true
-    }
-  ],
-  "fetched_at": "2026-05-10T15:47:00+00:00"
+  "fixtures": [],
+  "fetched_at": "2026-05-10T16:47:54+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T02:39:31Z",
+  "generated_at": "2026-05-11T06:34:25Z",
   "items": [
     {
       "title": "Quins humiliate Newcastle in meeting of bottom two",
@@ -24,6 +24,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-10T13:38:38Z"
+    },
+    {
+      "title": "Wales win tees up milestone week for Irish women's rugby",
+      "summary": "Having tried to keep a game by game focus for the last five weeks, Ireland can now embrace the build-up to their landmark Aviva Stadium date with Scotland.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0510/1572640-wales-win-tees-up-milestone-week-for-irish-womens-rugby/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-10T13:37:06Z"
     },
     {
       "title": "Wainwright bids farewell in final Dragons home game",
@@ -152,6 +160,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-09T18:32:57Z"
+    },
+    {
+      "title": "Departing hero Carty urges Connacht to 'keep it going'",
+      "summary": "Former Ireland out-half Jack Carty bid a fairytale goodbye to the Connacht faithful as his side beat Munster to keep their URC play-off hopes alive.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0509/1572560-departing-hero-carty-urges-connacht-to-keep-it-going/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-09T18:31:00Z"
     },
     {
       "title": "Leinster beat Lions to move third in URC table",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-05-07T12:26:12Z"
-    },
-    {
-      "title": "O’Connor Back On Familiar Ground As Ireland Feel Belfast Buzz",
-      "summary": "Just over twelve months since his last home appearance for Ulster before retiring, Alan O&#8217;Connor will return to Affidea Stadium as Ireland Women&#8217;s forwards coach when they play Wales on Sa…",
-      "url": "https://www.irishrugby.ie/2026/05/07/oconnor-back-on-familiar-ground-as-ireland-feel-belfast-buzz/",
-      "source": "Irish Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-07T11:27:37Z"
-    },
-    {
-      "title": "Prop Bell back from injury to start for Ulster",
-      "summary": "Ulster have been handed a timely boost as their season nears a climax with the return of props Angus Bell and Scott Wilson from injury.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0507/1572153-prop-bell-back-from-injury-to-start-for-ulster/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-07T11:25:41Z"
     }
   ]
 }

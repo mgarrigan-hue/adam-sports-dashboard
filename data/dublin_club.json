@@ -119,6 +119,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-04-17T00:00:00+01:00",
+      "home": "BL Rugby",
+      "away": "St Marys College RFC",
+      "home_score": 29,
+      "away_score": 17,
+      "competition": "Leinster School Youth U15 Div1 Finals",
+      "involves_smc": true
+    },
+    {
       "date": "2026-04-13T19:30:00+01:00",
       "home": "South Dublin Mountain Lions",
       "away": "St Marys College RFC",
@@ -1074,5 +1083,5 @@
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-05-12T15:58:39+00:00"
+  "fetched_at": "2026-05-12T18:02:55+00:00"
 }

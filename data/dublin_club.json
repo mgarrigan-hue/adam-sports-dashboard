@@ -1053,17 +1053,8 @@
       "away_score": 5,
       "competition": "Leinster School Youths 18s League Premier",
       "involves_smc": true
-    },
-    {
-      "date": "2025-12-13T12:30:00+01:00",
-      "home": "St Marys College RFC 4",
-      "away": "Terenure College RFC 4",
-      "home_score": 29,
-      "away_score": 16,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-05-13T21:53:11+00:00"
+  "fetched_at": "2026-05-13T23:01:24+00:00"
 }

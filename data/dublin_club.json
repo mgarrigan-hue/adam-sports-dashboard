@@ -1035,26 +1035,8 @@
       "away_score": 31,
       "competition": "Boys Schools U14 Friendly",
       "involves_smc": true
-    },
-    {
-      "date": "2025-12-14T14:00:00+01:00",
-      "home": "UCD U20",
-      "away": "St Marys College RFC U20",
-      "home_score": 22,
-      "away_score": 19,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-12-14T12:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "De La Salle Palmerston",
-      "home_score": 14,
-      "away_score": 5,
-      "competition": "Leinster School Youths 18s League Premier",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-05-14T22:05:25+00:00"
+  "fetched_at": "2026-05-14T23:27:30+00:00"
 }

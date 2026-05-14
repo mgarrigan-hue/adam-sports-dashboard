@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T08:06:32Z",
+  "generated_at": "2026-05-14T10:41:35Z",
   "items": [
     {
       "title": "Aviva Partners With Period Care Company Riley",
@@ -192,14 +192,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-13T06:30:39Z"
-    },
-    {
-      "title": "Alex Batty vanished at 11. Now he tells his story",
-      "summary": "At 11 years old, Alex thought he was going on holiday. Instead, he vanished for six years.",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m002w1yy?at_mid=7SCbIJCshY&at_campaign=Kidnapped_by_My_Mum&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m002w1yy&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Kidnapped_by_My_Mum&at_bbc_team=BBC&at_creation=news",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-05-13T05:00:00Z"
     },
     {
       "title": "Permutations: What do Connacht, Ulster and Munster need?",
@@ -480,6 +472,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-05-09T22:14:14Z"
+    },
+    {
+      "title": "'Loads' more to come from Ireland - Bemand",
+      "summary": "Scott Bemand insists there is still \"loads\" more to come from Ireland as they look to cap off their best Six Nations since 2020.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0509/1572563-loads-more-to-come-from-ireland-bemand/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-09T21:39:57Z"
     }
   ]
 }

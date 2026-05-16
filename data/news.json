@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T05:40:47Z",
+  "generated_at": "2026-05-16T07:57:12Z",
   "items": [
     {
       "title": "Saints humiliate Bristol 94-33 in record-breaking game",
@@ -42,7 +42,7 @@
       "published": "2026-05-15T20:56:41Z"
     },
     {
-      "title": "Cardiff clinch URC play-off spot with Stormers win",
+      "title": "Cardiff beat Stormers to clinch URC play-off spot",
       "summary": "Cardiff book their United Rugby Championship (URC) play-off spot with a bonus-point victory against Stormers at the Arms Park.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/c5yrq6100zgo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
@@ -88,6 +88,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-15T13:38:31Z"
+    },
+    {
+      "title": "Wafer: 'I want to be the most dominant'",
+      "summary": "Ireland number 8 Aoife Wafer talks 'dominance', improvements, and inspiring the next generation of Irish women's rugby players.",
+      "url": "https://www.rte.ie/sport/six-nations/2026/0515/1573554-wafer-i-want-to-be-the-most-dominant/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-15T13:35:51Z"
     },
     {
       "title": "Curry, Coles and Feyi-Waboso return in Prem",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-13T06:30:39Z"
-    },
-    {
-      "title": "Permutations: What do Connacht, Ulster and Munster need?",
-      "summary": "Four play-off spots remain, and five teams fighting for them. The final round of the United Rugby Championship regular season could hardly be teed up any better.",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0512/1573021-permutations-what-do-connacht-ulster-and-munster-need/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-12T21:06:06Z"
     }
   ]
 }

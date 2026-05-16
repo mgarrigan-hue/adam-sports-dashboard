@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T15:53:39Z",
+  "generated_at": "2026-05-16T16:53:19Z",
   "results": [
     {
       "date": "2026-05-15T18:45Z",
@@ -2979,16 +2979,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-05-16T16:15Z",
-      "home": "Leinster",
-      "away": "Ospreys",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25968.png",
-      "competition": "URC",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-05-16T18:45Z",
       "home": "Munster",

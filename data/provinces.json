@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T23:51:47Z",
+  "generated_at": "2026-05-16T02:29:38Z",
   "results": [
     {
       "date": "2026-05-15T18:45Z",
@@ -32,7 +32,7 @@
           "type": "try"
         },
         {
-          "minute": "22'",
+          "minute": "21'",
           "team": "Glasgow Warriors",
           "player": "N. McBeth",
           "type": "yellow card"
@@ -142,7 +142,7 @@
           "type": "conversion"
         },
         {
-          "minute": "60'",
+          "minute": "61'",
           "team": "Connacht",
           "player": "M. Devine",
           "type": "try"

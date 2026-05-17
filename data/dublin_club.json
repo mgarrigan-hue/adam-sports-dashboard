@@ -1017,26 +1017,8 @@
       "away_score": 38,
       "competition": "Leinster School Youth U15 Div1",
       "involves_smc": true
-    },
-    {
-      "date": "2025-12-17T12:00:00+01:00",
-      "home": "Castletroy College",
-      "away": "St Marys College",
-      "home_score": 35,
-      "away_score": 5,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": true
-    },
-    {
-      "date": "2025-12-17T12:00:00+01:00",
-      "home": "Castletroy College B",
-      "away": "St Marys College",
-      "home_score": 37,
-      "away_score": 31,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-05-17T22:13:21+00:00"
+  "fetched_at": "2026-05-17T23:28:10+00:00"
 }

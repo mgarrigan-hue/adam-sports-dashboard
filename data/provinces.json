@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T23:13:04Z",
+  "generated_at": "2026-05-17T00:12:22Z",
   "results": [
     {
       "date": "2026-05-16T18:45Z",
@@ -51,7 +51,7 @@
           "type": "yellow card"
         },
         {
-          "minute": "30'",
+          "minute": "31'",
           "team": "Munster",
           "player": "S. O'Brien",
           "type": "yellow card"
@@ -87,13 +87,13 @@
           "type": "try"
         },
         {
-          "minute": "54'",
+          "minute": "55'",
           "team": "Munster",
           "player": "J. Hanrahan",
           "type": "conversion"
         },
         {
-          "minute": "60'",
+          "minute": "61'",
           "team": "Lions",
           "player": "C. Smith",
           "type": "penalty goal"
@@ -3028,6 +3028,36 @@
       "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/143737.png",
       "competition": "Champions Cup",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-05-29T17:45Z",
+      "home": "Glasgow Warriors",
+      "away": "Connacht",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25952.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-05-30T10:00Z",
+      "home": "Bulls",
+      "away": "Munster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25953.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-05-30T18:00Z",
+      "home": "Leinster",
+      "away": "Lions",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25958.png",
+      "competition": "URC",
       "status": "STATUS_SCHEDULED",
       "status_state": "pre"
     }

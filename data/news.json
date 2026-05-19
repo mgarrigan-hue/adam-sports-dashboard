@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-19T04:40:05Z",
+  "generated_at": "2026-05-19T08:23:06Z",
   "items": [
+    {
+      "title": "Why don't drivers enter other series like Verstappen? F1 Q&A",
+      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions before the Canadian Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/c9d367vg7wdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-19T05:47:48Z"
+    },
     {
       "title": "Who makes Women's Six Nations team of the championship?",
       "summary": "How many players from Grand Slam winners England make the statisticians' Women's Six Nations team of the tournament?",
@@ -34,6 +42,14 @@
       "published": "2026-05-18T16:23:21Z"
     },
     {
+      "title": "Finals week bringing a greater 'edge' to Leinster prep",
+      "summary": "Having endured a deep injury crisis earlier this season, Robin McBryde believes Leinster are now reaping the rewards as they turn into the business end of the campaign.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0518/1573995-finals-week-bringing-a-greater-edge-to-leinster-prep/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-18T16:10:36Z"
+    },
+    {
       "title": "'Highly satisfying' finish caps off another W6N of growth",
       "summary": "Ireland took another step forward in the 2026 Guinness Women's Six Nations, according to centre Eve Higgins.",
       "url": "https://www.rte.ie/sport/rugby/2026/0518/1573923-highly-satisfying-finish-caps-off-another-w6n-of-growth/",
@@ -50,12 +66,28 @@
       "published": "2026-05-18T15:56:11Z"
     },
     {
+      "title": "Crucial for Irish rugby that Leinster get over the line",
+      "summary": "Leinster have fought their way into yet another Champions Cup final, where they will be hoping to rid themselves of previous frustrations in European competitions.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0518/1573992-leinster-european-glory-would-be-good-for-irish-rugby/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-18T15:54:12Z"
+    },
+    {
       "title": "O'Brien an injury worry for Leinster before final",
       "summary": "Leinster wing Tommy O'Brien is an injury doubt before Saturday's Champions Cup final against Bordeaux-Begles in Bilbao.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/cpvpdz9jrjvo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-18T14:53:30Z"
+    },
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "The team are joined by Andy Nicol to remember Scott Hastings, who died over the weekend.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nlxpbp?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-18T14:36:00Z"
     },
     {
       "title": "O'Brien the major injury doubt for Leinster's euro final",
@@ -442,44 +474,12 @@
       "published": "2026-05-16T12:27:19Z"
     },
     {
-      "title": "South African clubs could withdraw from European competitions",
-      "summary": "A major review into the schedule of South African rugby union could result in their clubs withdrawing from European club competitions.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cx21n3pe3nyo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-16T11:35:40Z"
-    },
-    {
       "title": "Bemand: It’s Hugely Positive For Players To Connect With Game’s Legends",
       "summary": "The past and present of Irish Women&#8217;s rugby will unite later today for a special jersey presentation, ahead of Ireland&#8217;s historic Aviva Stadium encounter with Scotland on Sunday afternoon…",
       "url": "https://www.irishrugby.ie/2026/05/16/bemand-its-hugely-positive-for-players-to-connect-with-games-legends/",
       "source": "Irish Rugby",
       "category": "irish-rugby",
       "published": "2026-05-16T07:23:52Z"
-    },
-    {
-      "title": "Ulster pipped by Warriors with play-off hopes in balance",
-      "summary": "Ulster missed out on the chance to seal their URC play-off spot as they fell to a 26-22 home loss to Glasgow Warriors, who go into the post-season as top seeds.",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0515/1573460-ulster-pipped-by-warriors-with-play-off-hopes-in-balance/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-15T21:13:21Z"
-    },
-    {
-      "title": "Connacht secure URC play-off with win at Edinburgh",
-      "summary": "Connacht secured their URC play-off place thanks to a 26-5 bonus-point win at Edinburgh, coupled with Ulster's loss at home to Glasgow Warriors.",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0515/1573461-connacht-secure-urc-play-off-with-win-at-edinburgh/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-15T21:06:45Z"
-    },
-    {
-      "title": "URC: Edinburgh v Connacht, Ulster v Glasgow recap",
-      "summary": "Connacht and Ulster were in action looking to book their places in the URC play-offs - relive all the action here.",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0515/1573573-urc-edinburgh-v-connacht-ulster-v-glasgow-updates/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-15T18:22:30Z"
     }
   ]
 }

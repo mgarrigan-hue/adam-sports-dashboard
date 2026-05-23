@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T13:26:25Z",
+  "generated_at": "2026-05-23T14:47:06Z",
   "results": [
     {
       "date": "2026-05-16T18:45Z",
@@ -3019,16 +3019,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-05-23T13:45Z",
-      "home": "Leinster",
-      "away": "Bordeaux Begles",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/143737.png",
-      "competition": "Champions Cup",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-05-29T18:45Z",
       "home": "Glasgow Warriors",

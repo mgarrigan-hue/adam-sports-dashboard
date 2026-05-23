@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T17:04:59Z",
+  "generated_at": "2026-05-23T18:32:29Z",
   "season": "2026",
   "upcoming": [
     {
@@ -246,49 +246,49 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "100",
+      "points": "106",
       "wins": "3"
     },
     {
       "position": "2",
       "driver": "George Russell",
       "team": "Mercedes",
-      "points": "80",
+      "points": "88",
       "wins": "1"
     },
     {
       "position": "3",
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "59",
+      "points": "63",
       "wins": "0"
     },
     {
       "position": "4",
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "51",
+      "points": "58",
       "wins": "0"
     },
     {
       "position": "5",
       "driver": "Lewis Hamilton",
       "team": "Ferrari",
-      "points": "51",
+      "points": "54",
       "wins": "0"
     },
     {
       "position": "6",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "43",
+      "points": "48",
       "wins": "0"
     },
     {
       "position": "7",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "26",
+      "points": "28",
       "wins": "0"
     },
     {
@@ -323,7 +323,7 @@
       "position": "12",
       "driver": "Arvid Lindblad",
       "team": "RB F1 Team",
-      "points": "4",
+      "points": "5",
       "wins": "0"
     },
     {
@@ -401,25 +401,25 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "180",
+      "points": "194",
       "wins": "4"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "110",
+      "points": "117",
       "wins": "0"
     },
     {
       "position": "3",
       "team": "McLaren",
-      "points": "94",
+      "points": "106",
       "wins": "0"
     },
     {
       "position": "4",
       "team": "Red Bull",
-      "points": "30",
+      "points": "32",
       "wins": "0"
     },
     {
@@ -437,7 +437,7 @@
     {
       "position": "7",
       "team": "RB F1 Team",
-      "points": "14",
+      "points": "15",
       "wins": "0"
     },
     {

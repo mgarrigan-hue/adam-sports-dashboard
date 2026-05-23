@@ -1,6 +1,134 @@
 {
-  "generated_at": "2026-05-23T15:58:40Z",
+  "generated_at": "2026-05-23T17:05:06Z",
   "results": [
+    {
+      "date": "2026-05-23T13:45Z",
+      "home": "Leinster",
+      "away": "Bordeaux Begles",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/143737.png",
+      "competition": "Champions Cup",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 19,
+      "away_score": 41,
+      "scoring_summary": [
+        {
+          "minute": "7'",
+          "team": "Leinster",
+          "player": "T. O'Brien",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Leinster",
+          "player": "H. Byrne",
+          "type": "conversion"
+        },
+        {
+          "minute": "14'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "try"
+        },
+        {
+          "minute": "15'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "Bordeaux Begles",
+          "player": "P. Uberti",
+          "type": "try"
+        },
+        {
+          "minute": "19'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "25'",
+          "team": "Bordeaux Begles",
+          "player": "L. Bielle-Biarrey",
+          "type": "try"
+        },
+        {
+          "minute": "26'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "36'",
+          "team": "Bordeaux Begles",
+          "player": "L. Bielle-Biarrey",
+          "type": "try"
+        },
+        {
+          "minute": "37'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "Bordeaux Begles",
+          "player": "Y. Moefana",
+          "type": "try"
+        },
+        {
+          "minute": "43'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "yellow card"
+        },
+        {
+          "minute": "46'",
+          "team": "Leinster",
+          "player": "J. McCarthy",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "65'",
+          "team": "Bordeaux Begles",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "72'",
+          "team": "Leinster",
+          "player": "G. Ringrose",
+          "type": "try"
+        },
+        {
+          "minute": "72'",
+          "team": "Leinster",
+          "player": "C. Frawley",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Bordeaux Begles",
+          "player": "U. Boniface",
+          "type": "yellow card"
+        }
+      ]
+    },
     {
       "date": "2026-05-16T18:45Z",
       "home": "Munster",
@@ -2939,80 +3067,6 @@
           "minute": "68'",
           "team": "Leinster",
           "player": "C. Tector",
-          "type": "conversion"
-        }
-      ]
-    },
-    {
-      "date": "2026-01-31T19:45Z",
-      "home": "Ulster",
-      "away": "Cardiff Blues",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25965.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 21,
-      "away_score": 14,
-      "scoring_summary": [
-        {
-          "minute": "12'",
-          "team": "Ulster",
-          "player": "S. Wilson",
-          "type": "try"
-        },
-        {
-          "minute": "12'",
-          "team": "Ulster",
-          "player": "J. Murphy",
-          "type": "conversion"
-        },
-        {
-          "minute": "19'",
-          "team": "Ulster",
-          "player": "A. Bell",
-          "type": "try"
-        },
-        {
-          "minute": "19'",
-          "team": "Ulster",
-          "player": "J. Murphy",
-          "type": "conversion"
-        },
-        {
-          "minute": "54'",
-          "team": "Cardiff Blues",
-          "player": "J. Mulder",
-          "type": "try"
-        },
-        {
-          "minute": "55'",
-          "team": "Cardiff Blues",
-          "player": "C. Sheedy",
-          "type": "conversion"
-        },
-        {
-          "minute": "66'",
-          "team": "Ulster",
-          "player": "C. Irvine",
-          "type": "try"
-        },
-        {
-          "minute": "67'",
-          "team": "Ulster",
-          "player": "J. Murphy",
-          "type": "conversion"
-        },
-        {
-          "minute": "68'",
-          "team": "Cardiff Blues",
-          "player": "S. Emanuel",
-          "type": "try"
-        },
-        {
-          "minute": "69'",
-          "team": "Cardiff Blues",
-          "player": "C. Sheedy",
           "type": "conversion"
         }
       ]

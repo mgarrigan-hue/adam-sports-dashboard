@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T22:13:06Z",
+  "generated_at": "2026-05-23T23:27:55Z",
   "results": [
     {
       "date": "2026-05-23T13:45Z",
@@ -12,15 +12,16 @@
       "status_state": "post",
       "home_score": 19,
       "away_score": 41,
+      "half_time": "7-28",
       "scoring_summary": [
         {
-          "minute": "7'",
+          "minute": "9'",
           "team": "Leinster",
           "player": "T. O'Brien",
           "type": "try"
         },
         {
-          "minute": "8'",
+          "minute": "10'",
           "team": "Leinster",
           "player": "H. Byrne",
           "type": "conversion"
@@ -62,7 +63,7 @@
           "type": "conversion"
         },
         {
-          "minute": "36'",
+          "minute": "37'",
           "team": "Bordeaux Begles",
           "player": "L. Bielle-Biarrey",
           "type": "try"
@@ -86,7 +87,7 @@
           "type": "conversion"
         },
         {
-          "minute": "42'",
+          "minute": "41'",
           "team": "Bordeaux Begles",
           "player": "M. Lucu",
           "type": "yellow card"

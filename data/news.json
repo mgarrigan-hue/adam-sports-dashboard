@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-25T02:53:53Z",
+  "generated_at": "2026-05-25T07:10:47Z",
   "items": [
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry Benjamin, Rebecca Clancy and Marc Priestley review a dramatic Canadian GP.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nn40hw?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-25T01:36:00Z"
+    },
     {
       "title": "The title battle finally came alive - then Antonelli took control",
       "summary": "The Formula 1 title battle caught light in Canada - but then took a potentially decisive turn, writes Andrew Benson.",
@@ -24,6 +32,22 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-24T21:42:49Z"
+    },
+    {
+      "title": "McNamara: Still room to improve for brilliant Bordeaux",
+      "summary": "Noel McNamara believes there is more to come from Bordeaux-Begles, after they made it back to back Investec Champions Cup titles on Saturday with a 41-19 win against Leinster.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0524/1575008-mcnamara-still-room-to-improve-for-brilliant-bordeaux/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-24T12:22:29Z"
+    },
+    {
+      "title": "Leinster in need of repairs even if they secure URC title",
+      "summary": "For Leinster, it's now the annual salvage mission to get something tangible to show for their season, after another crushing final defeat.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0524/1574962-leinster-in-need-of-repairs-even-if-they-secure-urc-title/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-24T08:04:17Z"
     },
     {
       "title": "'Not mentally doable to stay like this' - Verstappen renews quit threat",
@@ -456,30 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-21T09:57:03Z"
-    },
-    {
-      "title": "Heavily-invested Madigan hopes Leinster pain can inspire",
-      "summary": "Former Irish international Ian Madigan's interest levels in events in Bilbao over the weekend are an absolute given that three of his former clubs are chasing European glory.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0521/1574484-heavily-invested-madigan-hopes-leinster-pain-can-inspire/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-21T09:15:01Z"
-    },
-    {
-      "title": "'Accidental rugby coach' McNamara plotting Leinster fall",
-      "summary": "Clare native Noel McNamara is among the Bordeaux-Begles coaching staff charged with dealing Leinster more Champions Cup final heartbreak.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0521/1574477-accidental-rugby-coach-mcnamara-plotting-leinster-fall/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-21T08:15:15Z"
-    },
-    {
-      "title": "Meet the three Ellas racing through McLaren's F1 ranks",
-      "summary": "Ella Häkkinen, Ella Lloyd and Ella Stevens on horses, a Welsh dragon and their Rihanna-inspired nickname.",
-      "url": "https://www.bbc.com/news/articles/c172x8xg8k5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-05-21T08:12:36Z"
     }
   ]
 }

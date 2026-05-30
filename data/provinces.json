@@ -1,6 +1,123 @@
 {
-  "generated_at": "2026-05-30T14:25:55Z",
+  "generated_at": "2026-05-30T15:45:35Z",
   "results": [
+    {
+      "date": "2026-05-30T11:00Z",
+      "home": "Bulls",
+      "away": "Munster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25953.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
+      "competition": "URC",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 45,
+      "away_score": 14,
+      "half_time": "31-14",
+      "scoring_summary": [
+        {
+          "minute": "5'",
+          "team": "Bulls",
+          "player": "E. Papier",
+          "type": "try"
+        },
+        {
+          "minute": "5'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "8'",
+          "team": "Bulls",
+          "player": "K. Arendse",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "20'",
+          "team": "Munster",
+          "player": "J. O'Donoghue",
+          "type": "try"
+        },
+        {
+          "minute": "20'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "32'",
+          "team": "Munster",
+          "player": "A. Nankivell",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "Munster",
+          "player": "J. Hanrahan",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Bulls",
+          "player": "J. Grobbelaar",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "39'",
+          "team": "Bulls",
+          "player": "C. Hanekom",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "54'",
+          "team": "Bulls",
+          "player": "E. Papier",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        },
+        {
+          "minute": "59'",
+          "team": "Bulls",
+          "player": "S. Jacobs",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Bulls",
+          "player": "H. Pollard",
+          "type": "conversion"
+        }
+      ]
+    },
     {
       "date": "2026-05-29T18:45Z",
       "home": "Glasgow Warriors",
@@ -3079,62 +3196,6 @@
           "team": "Munster",
           "player": "J. Hanrahan",
           "type": "conversion"
-        }
-      ]
-    },
-    {
-      "date": "2026-02-28T15:00Z",
-      "home": "Connacht",
-      "away": "Glasgow Warriors",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25952.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 15,
-      "away_score": 10,
-      "scoring_summary": [
-        {
-          "minute": "25'",
-          "team": "Connacht",
-          "player": "S. Gilbert",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "57'",
-          "team": "Connacht",
-          "player": "J. Joyce",
-          "type": "yellow card"
-        },
-        {
-          "minute": "61'",
-          "team": "Glasgow Warriors",
-          "player": "K. Rowe",
-          "type": "try"
-        },
-        {
-          "minute": "67'",
-          "team": "Glasgow Warriors",
-          "player": "K. Rowe",
-          "type": "try"
-        },
-        {
-          "minute": "74'",
-          "team": "Connacht",
-          "player": "J. Murphy",
-          "type": "try"
-        },
-        {
-          "minute": "75'",
-          "team": "Connacht",
-          "player": "S. Gilbert",
-          "type": "conversion"
-        },
-        {
-          "minute": "81'",
-          "team": "Connacht",
-          "player": "S. Jansen",
-          "type": "try"
         }
       ]
     }

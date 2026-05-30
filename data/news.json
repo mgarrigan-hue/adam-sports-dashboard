@@ -1,9 +1,25 @@
 {
-  "generated_at": "2026-05-30T20:50:39Z",
+  "generated_at": "2026-05-30T21:56:17Z",
   "items": [
     {
+      "title": "Newcastle stun Sale Sharks with incredible comeback",
+      "summary": "Sale's Champions Cup hopes are dented as Newcastle complete a record-breaking comeback to win with the final play of the game.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cj0pn50mmeno?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-30T21:08:29Z"
+    },
+    {
+      "title": "Lowe sets record as Leinster stroll past Lions",
+      "summary": "There was no post-Bilbao hangover for Leinster as they made light work of a tired Lions side, 59-10, to secure their place in the semi-finals of the United Rugby Championship",
+      "url": "https://www.rte.ie/sport/rugby/2026/0530/1576011-lowe-sets-record-as-leinster-stroll-past-lions/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-05-30T20:51:13Z"
+    },
+    {
       "title": "United Rugby Championship recap: Leinster 59-10 Lions",
-      "summary": "Leinster host the Lions at Aviva Stadium looking to book their place in the semi-finals of the BKT United Rugby Championship.",
+      "summary": "Leinster hosted the Lions at Aviva Stadium looking to book their place in the semi-finals of the BKT United Rugby Championship. Relive all the action here.",
       "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0530/1576014-united-rugby-championship-leinster-v-lions-updates/",
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
@@ -19,7 +35,7 @@
     },
     {
       "title": "Stormers beat Cardiff to seal URC semi-final spot",
-      "summary": "Stormers will either face a trip to play Leinster in Dublin or a home tie against fellow South African side Lions next weekend.",
+      "summary": "John Dobson's South African side face a trip to play Leinster in Dublin next weekend.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/c74rg03e7k7o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-25T12:02:05Z"
-    },
-    {
-      "title": "F1: Chequered Flag",
-      "summary": "Harry Benjamin, Rebecca Clancy and Marc Priestley review a dramatic Canadian GP.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nn40hw?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-05-25T01:36:00Z"
-    },
-    {
-      "title": "The title battle finally came alive - then Antonelli took control",
-      "summary": "The Formula 1 title battle caught light in Canada - but then took a potentially decisive turn, writes Andrew Benson.",
-      "url": "https://www.bbc.com/sport/formula1/articles/czr2ed3zrr5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-05-25T00:59:57Z"
     }
   ]
 }

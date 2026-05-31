@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-05-31T15:00:29Z",
+  "generated_at": "2026-05-31T16:39:55Z",
   "items": [
+    {
+      "title": "Worcester beat Bedford in Champ play-off final",
+      "summary": "Worcester Warriors mark their first season back in English rugby by winning the Champ play-off final against Bedford Blues.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/c4g0501rle9o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-05-31T16:25:08Z"
+    },
     {
       "title": "Lowe future uncertain as contract expiry nears",
       "summary": "The future of Ireland and Leinster wing James Lowe remains uncertain after his record-breaking night against the Lions in the United Rugby Championship.",
@@ -194,14 +202,6 @@
       "published": "2026-05-29T11:58:36Z"
     },
     {
-      "title": "Bedford and Worcester set for Championship play-off final",
-      "summary": "Bedford Blues and Worcester Warriors go head-to-head in rugby union's Championship play-off final at Goldington Road this weekend.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c1e21p6zzq2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-29T11:15:05Z"
-    },
-    {
       "title": "'One of the best' Cornish Pirates - Stevens retires",
       "summary": "Long-serving Cornish Pirates forward John Stevens announces his retirement from professional rugby union, aged 31.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/cy724pxdrelo?at_medium=RSS&at_campaign=rss",
@@ -312,14 +312,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-28T08:18:19Z"
-    },
-    {
-      "title": "Bristol Bears legend Luatua extends deal",
-      "summary": "Bristol Bears legend Steven Luatua signs a new deal to take the former All Blacks international into his 10th season with the club.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/crkpv5x6zppo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-05-28T07:44:14Z"
     },
     {
       "title": "Ben Sulayem wants to scrap FIA presidency term limits",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-05-25T12:07:57Z"
+    },
+    {
+      "title": "Why it 'clicked' for Hamilton and Ferrari in Canada",
+      "summary": "On the Chequered Flag podcast, former McLaren mechanic Marc Priestley and F1 journalist Rebecca Clancy discuss Lewis Hamilton's drive at the Canadian Grand Prix in Quebec.",
+      "url": "https://www.bbc.com/sport/formula1/videos/c2022w7w35vo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-05-25T12:02:05Z"
     }
   ]
 }

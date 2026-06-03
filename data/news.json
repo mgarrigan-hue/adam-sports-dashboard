@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-06-03T02:05:52Z",
+  "generated_at": "2026-06-03T07:20:53Z",
   "items": [
+    {
+      "title": "Leclerc agrees to new long-term deal with Ferrari",
+      "summary": "Ferrari driver Charles Leclerc agrees a new long-term deal ahead of this weekend's Monaco Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cy02xy2815yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-03T07:17:11Z"
+    },
+    {
+      "title": "Will 2026's 'yo-yo racing' mean overtaking in Monaco?",
+      "summary": "Andrew Benson assesses whether the 2026 rules will change the character of the race where overtaking is most difficult.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cewpe9z7w09o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-03T05:48:40Z"
+    },
     {
       "title": "England full-back Kildunne to leave Harlequins",
       "summary": "England full-back Ellie Kildunne, a figurehead for the Red Roses' Rugby World Cup win last year, is to leave Harlequins.",
@@ -16,6 +32,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-02T10:53:35Z"
+    },
+    {
+      "title": "Keenan: Leinster won't forget about Bilbao",
+      "summary": "Losing Champions Cup finals doesn't get any easier, even if Leinster's latest heartbreak didn't have any of the late drama of their previous defeats.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0602/1576343-leinsters-keenan-we-wont-forget-about-bilbao/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-02T10:23:01Z"
     },
     {
       "title": "England's Carson extends stay with Gloucester-Hartpury",
@@ -456,30 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-05-27T13:54:56Z"
-    },
-    {
-      "title": "Barrett to miss Ireland clash due to back surgery",
-      "summary": "New Zealand captain Scott Barrett is set to miss the inaugural Nations Championship Tests, including the summer clash with Ireland, while sidelined for up to five months to recover from back surgery.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0527/1575520-barrett-to-miss-ireland-clash-due-to-back-surgery/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-27T13:40:35Z"
-    },
-    {
-      "title": "Just how did Leinster crumble in the Champions Cup final?",
-      "summary": "Neil Treacy is joined by Bernard Jackman and Gareth Steenson on this week's RTÉ Rugby podcast, as we look back on a pair of disappointing Champions and Challenge Cup final defeats for Leinster and Uls…",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0527/1575480-just-how-did-leinster-crumble-in-the-champions-cup-final/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-27T10:43:49Z"
-    },
-    {
-      "title": "Yapp set to lead first ever Lions women's tour",
-      "summary": "Jo Yapp will make rugby history when she leads the first ever British and Irish Lions women's team to New Zealand in 2027.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0527/1575488-yapp-set-to-lead-first-ever-lions-womens-tour/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-27T10:25:09Z"
     }
   ]
 }

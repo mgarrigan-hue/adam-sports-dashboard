@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-06-05T17:15:57Z",
+  "generated_at": "2026-06-05T19:15:19Z",
   "items": [
+    {
+      "title": "Hamilton fastest but Leclerc expects 'tight qualifying'",
+      "summary": "Lewis Hamilton sets the pace as Ferrari dominate Friday practice at the Monaco Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/clypyggd9g2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-05T17:56:53Z"
+    },
+    {
+      "title": "Farrell's new deal a statement of intent for Irish rugby",
+      "summary": "Andy Farrell's new four-year contract, which will keep the Ireland head coach in charge for a third Rugby World Cup, is a major statement of intent, both from Farrell and the IRFU.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0605/1577001-farrells-new-deal-a-statement-of-intent-for-irish-rugby/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-05T17:27:57Z"
+    },
     {
       "title": "How to follow Monaco Grand Prix on the BBC",
       "summary": "All the key BBC coverage details for the Monaco Grand Prix, which takes place from 5-7June.",
@@ -8,14 +24,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-05T17:03:31Z"
-    },
-    {
-      "title": "Hamilton fastest as Ferrari dominate Monaco practice",
-      "summary": "Lewis Hamilton sets the pace as Ferrari dominate Friday practice at the Monaco Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/clypyggd9g2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-05T16:47:09Z"
     },
     {
       "title": "Andrew Benson Q&A: Send us your questions",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-05-31T10:40:10Z"
-    },
-    {
-      "title": "Fears of Lowe's Leinster exit grow after try record",
-      "summary": "The prospect of James Lowe leaving Leinster appears be getting more real after Leo Cullen again declined to comment on the winger's future following their URC quarter-final win over Lions.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0530/1576075-fears-of-lowes-leinster-exit-grow-after-try-record/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-30T22:31:23Z"
     }
   ]
 }

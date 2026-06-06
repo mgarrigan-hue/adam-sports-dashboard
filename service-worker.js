@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v31-css-split-f1";
+const VERSION = "v32-full-sweep";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

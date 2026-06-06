@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v29-polish-wave";
+const VERSION = "v30-pwa-deluxe";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -8,9 +8,14 @@ const SHELL = [
   "index.html",
   "styles.css",
   "app.js",
+  "wc.js",
   "manifest.json",
   "icons/icon-192.svg",
   "icons/icon-512.svg",
+  "fonts/InterVariable.woff2",
+  "fonts/SpaceGrotesk-500.woff2",
+  "fonts/SpaceGrotesk-600.woff2",
+  "fonts/SpaceGrotesk-700.woff2",
 ];
 
 self.addEventListener("install", (e) => {
@@ -64,7 +69,7 @@ self.addEventListener("fetch", (e) => {
 
   // Network-first for the core shell assets (JS / CSS) so feature rollouts
   // don't get held back by yesterday's cache.
-  if (url.pathname.endsWith("/app.js") || url.pathname.endsWith("/styles.css") || url.pathname.endsWith("/manifest.json")) {
+  if (url.pathname.endsWith("/app.js") || url.pathname.endsWith("/wc.js") || url.pathname.endsWith("/styles.css") || url.pathname.endsWith("/manifest.json")) {
     e.respondWith(networkFirst(req, SHELL_CACHE));
     return;
   }

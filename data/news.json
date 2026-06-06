@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-06T04:34:38Z",
+  "generated_at": "2026-06-06T07:43:15Z",
   "items": [
     {
-      "title": "Hamilton fastest but Leclerc expects 'tight qualifying'",
+      "title": "Hamilton fastest but Leclerc expects qualifying to be tight",
       "summary": "Lewis Hamilton sets the pace as Ferrari dominate Friday practice at the Monaco Grand Prix.",
       "url": "https://www.bbc.com/sport/formula1/articles/clypyggd9g2o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
@@ -16,6 +16,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-05T17:27:57Z"
+    },
+    {
+      "title": "Storm warnings for Leinster ahead of URC semi-final",
+      "summary": "After a week dominated by Leo Cullen and Jacques Nienaber's press conferences, it's time for Leinster to do their talking on the pitch.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0605/1577015-storm-warnings-for-leinster-ahead-of-urc-semi-final/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-05T17:20:09Z"
     },
     {
       "title": "How to follow Monaco Grand Prix on the BBC",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-05-31T17:00:27Z"
-    },
-    {
-      "title": "Cullen snaps back at 'trolls' in tense exchange",
-      "summary": "A defiant Leo Cullen sent out a message on Saturday night: If you have a problem with him, say it to his face.",
-      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0531/1576111-cullen-snaps-back-at-trolls-in-tense-exchange/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-05-31T10:40:10Z"
     }
   ]
 }

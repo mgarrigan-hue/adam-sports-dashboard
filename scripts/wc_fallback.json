@@ -1,0 +1,2697 @@
+{
+  "source": "embedded-fallback",
+  "tournament": {
+    "name": "FIFA World Cup 2026",
+    "host_nations": [
+      "USA",
+      "Canada",
+      "Mexico"
+    ],
+    "start_date": "2026-06-11",
+    "end_date": "2026-07-19",
+    "current_stage": "pre-tournament",
+    "champion": null
+  },
+  "groups": [
+    {
+      "name": "A",
+      "teams": [
+        {
+          "name": "Mexico",
+          "code": "MEX",
+          "flag": "🇲🇽",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "South Africa",
+          "code": "RSA",
+          "flag": "🇿🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "South Korea",
+          "code": "KOR",
+          "flag": "🇰🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Czech Republic",
+          "code": "CZE",
+          "flag": "🇨🇿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "teams": [
+        {
+          "name": "Canada",
+          "code": "CAN",
+          "flag": "🇨🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Bosnia & Herzegovina",
+          "code": "BIH",
+          "flag": "🇧🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Qatar",
+          "code": "QAT",
+          "flag": "🇶🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Switzerland",
+          "code": "SUI",
+          "flag": "🇨🇭",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "teams": [
+        {
+          "name": "Brazil",
+          "code": "BRA",
+          "flag": "🇧🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Morocco",
+          "code": "MAR",
+          "flag": "🇲🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Haiti",
+          "code": "HAI",
+          "flag": "🇭🇹",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Scotland",
+          "code": "SCO",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "teams": [
+        {
+          "name": "USA",
+          "code": "USA",
+          "flag": "🇺🇸",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Paraguay",
+          "code": "PAR",
+          "flag": "🇵🇾",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Australia",
+          "code": "AUS",
+          "flag": "🇦🇺",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Türkiye",
+          "code": "TUR",
+          "flag": "🇹🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "teams": [
+        {
+          "name": "Germany",
+          "code": "GER",
+          "flag": "🇩🇪",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Curaçao",
+          "code": "CUW",
+          "flag": "🇨🇼",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Ivory Coast",
+          "code": "CIV",
+          "flag": "🇨🇮",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Ecuador",
+          "code": "ECU",
+          "flag": "🇪🇨",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "F",
+      "teams": [
+        {
+          "name": "Netherlands",
+          "code": "NED",
+          "flag": "🇳🇱",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Japan",
+          "code": "JPN",
+          "flag": "🇯🇵",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Sweden",
+          "code": "SWE",
+          "flag": "🇸🇪",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Tunisia",
+          "code": "TUN",
+          "flag": "🇹🇳",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "G",
+      "teams": [
+        {
+          "name": "Belgium",
+          "code": "BEL",
+          "flag": "🇧🇪",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Egypt",
+          "code": "EGY",
+          "flag": "🇪🇬",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Iran",
+          "code": "IRN",
+          "flag": "🇮🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "New Zealand",
+          "code": "NZL",
+          "flag": "🇳🇿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "H",
+      "teams": [
+        {
+          "name": "Spain",
+          "code": "ESP",
+          "flag": "🇪🇸",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Cape Verde",
+          "code": "CPV",
+          "flag": "🇨🇻",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Saudi Arabia",
+          "code": "KSA",
+          "flag": "🇸🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Uruguay",
+          "code": "URU",
+          "flag": "🇺🇾",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "I",
+      "teams": [
+        {
+          "name": "France",
+          "code": "FRA",
+          "flag": "🇫🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Senegal",
+          "code": "SEN",
+          "flag": "🇸🇳",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Iraq",
+          "code": "IRQ",
+          "flag": "🇮🇶",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Norway",
+          "code": "NOR",
+          "flag": "🇳🇴",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "J",
+      "teams": [
+        {
+          "name": "Argentina",
+          "code": "ARG",
+          "flag": "🇦🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Algeria",
+          "code": "ALG",
+          "flag": "🇩🇿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Austria",
+          "code": "AUT",
+          "flag": "🇦🇹",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Jordan",
+          "code": "JOR",
+          "flag": "🇯🇴",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "K",
+      "teams": [
+        {
+          "name": "Portugal",
+          "code": "POR",
+          "flag": "🇵🇹",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "DR Congo",
+          "code": "COD",
+          "flag": "🇨🇩",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Uzbekistan",
+          "code": "UZB",
+          "flag": "🇺🇿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Colombia",
+          "code": "COL",
+          "flag": "🇨🇴",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    },
+    {
+      "name": "L",
+      "teams": [
+        {
+          "name": "England",
+          "code": "ENG",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Croatia",
+          "code": "CRO",
+          "flag": "🇭🇷",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Ghana",
+          "code": "GHA",
+          "flag": "🇬🇭",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        },
+        {
+          "name": "Panama",
+          "code": "PAN",
+          "flag": "🇵🇦",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0,
+          "form": []
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "id": "wc-2026-001",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-11T19:00:00Z",
+      "venue": "Estadio Azteca, Mexico City",
+      "home": {
+        "name": "Mexico",
+        "code": "MEX",
+        "flag": "🇲🇽"
+      },
+      "away": {
+        "name": "South Africa",
+        "code": "RSA",
+        "flag": "🇿🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-002",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-12T02:00:00Z",
+      "venue": "Estadio Akron, Guadalajara",
+      "home": {
+        "name": "South Korea",
+        "code": "KOR",
+        "flag": "🇰🇷"
+      },
+      "away": {
+        "name": "Czech Republic",
+        "code": "CZE",
+        "flag": "🇨🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-003",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-12T19:00:00Z",
+      "venue": "BMO Field, Toronto",
+      "home": {
+        "name": "Canada",
+        "code": "CAN",
+        "flag": "🇨🇦"
+      },
+      "away": {
+        "name": "Bosnia & Herzegovina",
+        "code": "BIH",
+        "flag": "🇧🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-004",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-13T01:00:00Z",
+      "venue": "SoFi Stadium, Inglewood",
+      "home": {
+        "name": "USA",
+        "code": "USA",
+        "flag": "🇺🇸"
+      },
+      "away": {
+        "name": "Paraguay",
+        "code": "PAR",
+        "flag": "🇵🇾"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-005",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-13T16:00:00Z",
+      "venue": "Gillette Stadium, Foxborough",
+      "home": {
+        "name": "Brazil",
+        "code": "BRA",
+        "flag": "🇧🇷"
+      },
+      "away": {
+        "name": "Morocco",
+        "code": "MAR",
+        "flag": "🇲🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-006",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-13T19:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "Haiti",
+        "code": "HAI",
+        "flag": "🇭🇹"
+      },
+      "away": {
+        "name": "Scotland",
+        "code": "SCO",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-007",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-13T22:00:00Z",
+      "venue": "BC Place, Vancouver",
+      "home": {
+        "name": "Australia",
+        "code": "AUS",
+        "flag": "🇦🇺"
+      },
+      "away": {
+        "name": "Türkiye",
+        "code": "TUR",
+        "flag": "🇹🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-008",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-14T01:00:00Z",
+      "venue": "Levi's Stadium, Santa Clara",
+      "home": {
+        "name": "Qatar",
+        "code": "QAT",
+        "flag": "🇶🇦"
+      },
+      "away": {
+        "name": "Switzerland",
+        "code": "SUI",
+        "flag": "🇨🇭"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-009",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-14T16:00:00Z",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "home": {
+        "name": "Germany",
+        "code": "GER",
+        "flag": "🇩🇪"
+      },
+      "away": {
+        "name": "Curaçao",
+        "code": "CUW",
+        "flag": "🇨🇼"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-010",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-14T19:00:00Z",
+      "venue": "NRG Stadium, Houston",
+      "home": {
+        "name": "Ivory Coast",
+        "code": "CIV",
+        "flag": "🇨🇮"
+      },
+      "away": {
+        "name": "Ecuador",
+        "code": "ECU",
+        "flag": "🇪🇨"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-011",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-14T22:00:00Z",
+      "venue": "AT&T Stadium, Arlington",
+      "home": {
+        "name": "Netherlands",
+        "code": "NED",
+        "flag": "🇳🇱"
+      },
+      "away": {
+        "name": "Japan",
+        "code": "JPN",
+        "flag": "🇯🇵"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-012",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-15T01:00:00Z",
+      "venue": "Estadio BBVA, Monterrey",
+      "home": {
+        "name": "Sweden",
+        "code": "SWE",
+        "flag": "🇸🇪"
+      },
+      "away": {
+        "name": "Tunisia",
+        "code": "TUN",
+        "flag": "🇹🇳"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-013",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-15T16:00:00Z",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "home": {
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "🇪🇸"
+      },
+      "away": {
+        "name": "Cape Verde",
+        "code": "CPV",
+        "flag": "🇨🇻"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-014",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-15T19:00:00Z",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "home": {
+        "name": "Saudi Arabia",
+        "code": "KSA",
+        "flag": "🇸🇦"
+      },
+      "away": {
+        "name": "Uruguay",
+        "code": "URU",
+        "flag": "🇺🇾"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-015",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-15T22:00:00Z",
+      "venue": "SoFi Stadium, Inglewood",
+      "home": {
+        "name": "Belgium",
+        "code": "BEL",
+        "flag": "🇧🇪"
+      },
+      "away": {
+        "name": "Egypt",
+        "code": "EGY",
+        "flag": "🇪🇬"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-016",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-16T01:00:00Z",
+      "venue": "Lumen Field, Seattle",
+      "home": {
+        "name": "Iran",
+        "code": "IRN",
+        "flag": "🇮🇷"
+      },
+      "away": {
+        "name": "New Zealand",
+        "code": "NZL",
+        "flag": "🇳🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-017",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-16T16:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "France",
+        "code": "FRA",
+        "flag": "🇫🇷"
+      },
+      "away": {
+        "name": "Senegal",
+        "code": "SEN",
+        "flag": "🇸🇳"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-018",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-16T19:00:00Z",
+      "venue": "Gillette Stadium, Foxborough",
+      "home": {
+        "name": "Iraq",
+        "code": "IRQ",
+        "flag": "🇮🇶"
+      },
+      "away": {
+        "name": "Norway",
+        "code": "NOR",
+        "flag": "🇳🇴"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-019",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-16T22:00:00Z",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "home": {
+        "name": "Argentina",
+        "code": "ARG",
+        "flag": "🇦🇷"
+      },
+      "away": {
+        "name": "Algeria",
+        "code": "ALG",
+        "flag": "🇩🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-020",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-17T01:00:00Z",
+      "venue": "Levi's Stadium, Santa Clara",
+      "home": {
+        "name": "Austria",
+        "code": "AUT",
+        "flag": "🇦🇹"
+      },
+      "away": {
+        "name": "Jordan",
+        "code": "JOR",
+        "flag": "🇯🇴"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-021",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-17T16:00:00Z",
+      "venue": "BMO Field, Toronto",
+      "home": {
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+      },
+      "away": {
+        "name": "Croatia",
+        "code": "CRO",
+        "flag": "🇭🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-022",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-17T19:00:00Z",
+      "venue": "AT&T Stadium, Arlington",
+      "home": {
+        "name": "Ghana",
+        "code": "GHA",
+        "flag": "🇬🇭"
+      },
+      "away": {
+        "name": "Panama",
+        "code": "PAN",
+        "flag": "🇵🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-023",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-17T22:00:00Z",
+      "venue": "NRG Stadium, Houston",
+      "home": {
+        "name": "Portugal",
+        "code": "POR",
+        "flag": "🇵🇹"
+      },
+      "away": {
+        "name": "DR Congo",
+        "code": "COD",
+        "flag": "🇨🇩"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-024",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-18T01:00:00Z",
+      "venue": "Estadio Azteca, Mexico City",
+      "home": {
+        "name": "Uzbekistan",
+        "code": "UZB",
+        "flag": "🇺🇿"
+      },
+      "away": {
+        "name": "Colombia",
+        "code": "COL",
+        "flag": "🇨🇴"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-025",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-18T16:00:00Z",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "home": {
+        "name": "Czech Republic",
+        "code": "CZE",
+        "flag": "🇨🇿"
+      },
+      "away": {
+        "name": "South Africa",
+        "code": "RSA",
+        "flag": "🇿🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-026",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-18T19:00:00Z",
+      "venue": "SoFi Stadium, Inglewood",
+      "home": {
+        "name": "Switzerland",
+        "code": "SUI",
+        "flag": "🇨🇭"
+      },
+      "away": {
+        "name": "Bosnia & Herzegovina",
+        "code": "BIH",
+        "flag": "🇧🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-027",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-18T22:00:00Z",
+      "venue": "BC Place, Vancouver",
+      "home": {
+        "name": "Canada",
+        "code": "CAN",
+        "flag": "🇨🇦"
+      },
+      "away": {
+        "name": "Qatar",
+        "code": "QAT",
+        "flag": "🇶🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-028",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-19T01:00:00Z",
+      "venue": "Estadio Akron, Guadalajara",
+      "home": {
+        "name": "Mexico",
+        "code": "MEX",
+        "flag": "🇲🇽"
+      },
+      "away": {
+        "name": "South Korea",
+        "code": "KOR",
+        "flag": "🇰🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-029",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-19T16:00:00Z",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "home": {
+        "name": "Brazil",
+        "code": "BRA",
+        "flag": "🇧🇷"
+      },
+      "away": {
+        "name": "Haiti",
+        "code": "HAI",
+        "flag": "🇭🇹"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-030",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-19T19:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "Scotland",
+        "code": "SCO",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+      },
+      "away": {
+        "name": "Morocco",
+        "code": "MAR",
+        "flag": "🇲🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-031",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-19T22:00:00Z",
+      "venue": "Levi's Stadium, Santa Clara",
+      "home": {
+        "name": "Türkiye",
+        "code": "TUR",
+        "flag": "🇹🇷"
+      },
+      "away": {
+        "name": "Paraguay",
+        "code": "PAR",
+        "flag": "🇵🇾"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-032",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-20T01:00:00Z",
+      "venue": "Lumen Field, Seattle",
+      "home": {
+        "name": "USA",
+        "code": "USA",
+        "flag": "🇺🇸"
+      },
+      "away": {
+        "name": "Australia",
+        "code": "AUS",
+        "flag": "🇦🇺"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-033",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-20T16:00:00Z",
+      "venue": "BMO Field, Toronto",
+      "home": {
+        "name": "Germany",
+        "code": "GER",
+        "flag": "🇩🇪"
+      },
+      "away": {
+        "name": "Ivory Coast",
+        "code": "CIV",
+        "flag": "🇨🇮"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-034",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-20T19:00:00Z",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "home": {
+        "name": "Ecuador",
+        "code": "ECU",
+        "flag": "🇪🇨"
+      },
+      "away": {
+        "name": "Curaçao",
+        "code": "CUW",
+        "flag": "🇨🇼"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-035",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-20T22:00:00Z",
+      "venue": "NRG Stadium, Houston",
+      "home": {
+        "name": "Netherlands",
+        "code": "NED",
+        "flag": "🇳🇱"
+      },
+      "away": {
+        "name": "Sweden",
+        "code": "SWE",
+        "flag": "🇸🇪"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-036",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-21T01:00:00Z",
+      "venue": "Estadio BBVA, Monterrey",
+      "home": {
+        "name": "Tunisia",
+        "code": "TUN",
+        "flag": "🇹🇳"
+      },
+      "away": {
+        "name": "Japan",
+        "code": "JPN",
+        "flag": "🇯🇵"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-037",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-21T16:00:00Z",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "home": {
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "🇪🇸"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "code": "KSA",
+        "flag": "🇸🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-038",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-21T19:00:00Z",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "home": {
+        "name": "Uruguay",
+        "code": "URU",
+        "flag": "🇺🇾"
+      },
+      "away": {
+        "name": "Cape Verde",
+        "code": "CPV",
+        "flag": "🇨🇻"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-039",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-21T22:00:00Z",
+      "venue": "SoFi Stadium, Inglewood",
+      "home": {
+        "name": "Belgium",
+        "code": "BEL",
+        "flag": "🇧🇪"
+      },
+      "away": {
+        "name": "Iran",
+        "code": "IRN",
+        "flag": "🇮🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-040",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-22T01:00:00Z",
+      "venue": "BC Place, Vancouver",
+      "home": {
+        "name": "New Zealand",
+        "code": "NZL",
+        "flag": "🇳🇿"
+      },
+      "away": {
+        "name": "Egypt",
+        "code": "EGY",
+        "flag": "🇪🇬"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-041",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-22T16:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "France",
+        "code": "FRA",
+        "flag": "🇫🇷"
+      },
+      "away": {
+        "name": "Iraq",
+        "code": "IRQ",
+        "flag": "🇮🇶"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-042",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-22T19:00:00Z",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "home": {
+        "name": "Norway",
+        "code": "NOR",
+        "flag": "🇳🇴"
+      },
+      "away": {
+        "name": "Senegal",
+        "code": "SEN",
+        "flag": "🇸🇳"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-043",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-22T22:00:00Z",
+      "venue": "AT&T Stadium, Arlington",
+      "home": {
+        "name": "Argentina",
+        "code": "ARG",
+        "flag": "🇦🇷"
+      },
+      "away": {
+        "name": "Austria",
+        "code": "AUT",
+        "flag": "🇦🇹"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-044",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-23T01:00:00Z",
+      "venue": "Levi's Stadium, Santa Clara",
+      "home": {
+        "name": "Jordan",
+        "code": "JOR",
+        "flag": "🇯🇴"
+      },
+      "away": {
+        "name": "Algeria",
+        "code": "ALG",
+        "flag": "🇩🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-045",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-23T16:00:00Z",
+      "venue": "Gillette Stadium, Foxborough",
+      "home": {
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+      },
+      "away": {
+        "name": "Ghana",
+        "code": "GHA",
+        "flag": "🇬🇭"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-046",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-23T19:00:00Z",
+      "venue": "BMO Field, Toronto",
+      "home": {
+        "name": "Panama",
+        "code": "PAN",
+        "flag": "🇵🇦"
+      },
+      "away": {
+        "name": "Croatia",
+        "code": "CRO",
+        "flag": "🇭🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-047",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-23T22:00:00Z",
+      "venue": "NRG Stadium, Houston",
+      "home": {
+        "name": "Portugal",
+        "code": "POR",
+        "flag": "🇵🇹"
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "code": "UZB",
+        "flag": "🇺🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-048",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-24T01:00:00Z",
+      "venue": "Estadio Akron, Guadalajara",
+      "home": {
+        "name": "Colombia",
+        "code": "COL",
+        "flag": "🇨🇴"
+      },
+      "away": {
+        "name": "DR Congo",
+        "code": "COD",
+        "flag": "🇨🇩"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-049",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-24T16:00:00Z",
+      "venue": "Estadio Azteca, Mexico City",
+      "home": {
+        "name": "Mexico",
+        "code": "MEX",
+        "flag": "🇲🇽"
+      },
+      "away": {
+        "name": "Czech Republic",
+        "code": "CZE",
+        "flag": "🇨🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-050",
+      "stage": "group",
+      "group": "A",
+      "date": "2026-06-24T16:00:00Z",
+      "venue": "Estadio BBVA, Monterrey",
+      "home": {
+        "name": "South Korea",
+        "code": "KOR",
+        "flag": "🇰🇷"
+      },
+      "away": {
+        "name": "South Africa",
+        "code": "RSA",
+        "flag": "🇿🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-051",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-24T20:00:00Z",
+      "venue": "BC Place, Vancouver",
+      "home": {
+        "name": "Canada",
+        "code": "CAN",
+        "flag": "🇨🇦"
+      },
+      "away": {
+        "name": "Switzerland",
+        "code": "SUI",
+        "flag": "🇨🇭"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-052",
+      "stage": "group",
+      "group": "B",
+      "date": "2026-06-24T20:00:00Z",
+      "venue": "Lumen Field, Seattle",
+      "home": {
+        "name": "Bosnia & Herzegovina",
+        "code": "BIH",
+        "flag": "🇧🇦"
+      },
+      "away": {
+        "name": "Qatar",
+        "code": "QAT",
+        "flag": "🇶🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-053",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-25T00:00:00Z",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "home": {
+        "name": "Scotland",
+        "code": "SCO",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+      },
+      "away": {
+        "name": "Brazil",
+        "code": "BRA",
+        "flag": "🇧🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-054",
+      "stage": "group",
+      "group": "C",
+      "date": "2026-06-25T00:00:00Z",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "home": {
+        "name": "Morocco",
+        "code": "MAR",
+        "flag": "🇲🇦"
+      },
+      "away": {
+        "name": "Haiti",
+        "code": "HAI",
+        "flag": "🇭🇹"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-055",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-25T16:00:00Z",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "home": {
+        "name": "Ecuador",
+        "code": "ECU",
+        "flag": "🇪🇨"
+      },
+      "away": {
+        "name": "Germany",
+        "code": "GER",
+        "flag": "🇩🇪"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-056",
+      "stage": "group",
+      "group": "E",
+      "date": "2026-06-25T16:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "Curaçao",
+        "code": "CUW",
+        "flag": "🇨🇼"
+      },
+      "away": {
+        "name": "Ivory Coast",
+        "code": "CIV",
+        "flag": "🇨🇮"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-057",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-25T20:00:00Z",
+      "venue": "AT&T Stadium, Arlington",
+      "home": {
+        "name": "Tunisia",
+        "code": "TUN",
+        "flag": "🇹🇳"
+      },
+      "away": {
+        "name": "Netherlands",
+        "code": "NED",
+        "flag": "🇳🇱"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-058",
+      "stage": "group",
+      "group": "F",
+      "date": "2026-06-25T20:00:00Z",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "home": {
+        "name": "Japan",
+        "code": "JPN",
+        "flag": "🇯🇵"
+      },
+      "away": {
+        "name": "Sweden",
+        "code": "SWE",
+        "flag": "🇸🇪"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-059",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-26T00:00:00Z",
+      "venue": "SoFi Stadium, Inglewood",
+      "home": {
+        "name": "USA",
+        "code": "USA",
+        "flag": "🇺🇸"
+      },
+      "away": {
+        "name": "Türkiye",
+        "code": "TUR",
+        "flag": "🇹🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-060",
+      "stage": "group",
+      "group": "D",
+      "date": "2026-06-26T00:00:00Z",
+      "venue": "Levi's Stadium, Santa Clara",
+      "home": {
+        "name": "Paraguay",
+        "code": "PAR",
+        "flag": "🇵🇾"
+      },
+      "away": {
+        "name": "Australia",
+        "code": "AUS",
+        "flag": "🇦🇺"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-061",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-26T16:00:00Z",
+      "venue": "Gillette Stadium, Foxborough",
+      "home": {
+        "name": "Norway",
+        "code": "NOR",
+        "flag": "🇳🇴"
+      },
+      "away": {
+        "name": "France",
+        "code": "FRA",
+        "flag": "🇫🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-062",
+      "stage": "group",
+      "group": "I",
+      "date": "2026-06-26T16:00:00Z",
+      "venue": "BMO Field, Toronto",
+      "home": {
+        "name": "Senegal",
+        "code": "SEN",
+        "flag": "🇸🇳"
+      },
+      "away": {
+        "name": "Iraq",
+        "code": "IRQ",
+        "flag": "🇮🇶"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-063",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-26T20:00:00Z",
+      "venue": "Lumen Field, Seattle",
+      "home": {
+        "name": "New Zealand",
+        "code": "NZL",
+        "flag": "🇳🇿"
+      },
+      "away": {
+        "name": "Belgium",
+        "code": "BEL",
+        "flag": "🇧🇪"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-064",
+      "stage": "group",
+      "group": "G",
+      "date": "2026-06-26T20:00:00Z",
+      "venue": "BC Place, Vancouver",
+      "home": {
+        "name": "Egypt",
+        "code": "EGY",
+        "flag": "🇪🇬"
+      },
+      "away": {
+        "name": "Iran",
+        "code": "IRN",
+        "flag": "🇮🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-065",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-27T00:00:00Z",
+      "venue": "NRG Stadium, Houston",
+      "home": {
+        "name": "Uruguay",
+        "code": "URU",
+        "flag": "🇺🇾"
+      },
+      "away": {
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "🇪🇸"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-066",
+      "stage": "group",
+      "group": "H",
+      "date": "2026-06-27T00:00:00Z",
+      "venue": "Estadio Akron, Guadalajara",
+      "home": {
+        "name": "Cape Verde",
+        "code": "CPV",
+        "flag": "🇨🇻"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "code": "KSA",
+        "flag": "🇸🇦"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-067",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-27T16:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "home": {
+        "name": "Panama",
+        "code": "PAN",
+        "flag": "🇵🇦"
+      },
+      "away": {
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-068",
+      "stage": "group",
+      "group": "L",
+      "date": "2026-06-27T16:00:00Z",
+      "venue": "Lincoln Financial Field, Philadelphia",
+      "home": {
+        "name": "Croatia",
+        "code": "CRO",
+        "flag": "🇭🇷"
+      },
+      "away": {
+        "name": "Ghana",
+        "code": "GHA",
+        "flag": "🇬🇭"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-069",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-27T20:00:00Z",
+      "venue": "Arrowhead Stadium, Kansas City",
+      "home": {
+        "name": "Jordan",
+        "code": "JOR",
+        "flag": "🇯🇴"
+      },
+      "away": {
+        "name": "Argentina",
+        "code": "ARG",
+        "flag": "🇦🇷"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-070",
+      "stage": "group",
+      "group": "J",
+      "date": "2026-06-27T20:00:00Z",
+      "venue": "AT&T Stadium, Arlington",
+      "home": {
+        "name": "Algeria",
+        "code": "ALG",
+        "flag": "🇩🇿"
+      },
+      "away": {
+        "name": "Austria",
+        "code": "AUT",
+        "flag": "🇦🇹"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-071",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-28T00:00:00Z",
+      "venue": "Hard Rock Stadium, Miami Gardens",
+      "home": {
+        "name": "Colombia",
+        "code": "COL",
+        "flag": "🇨🇴"
+      },
+      "away": {
+        "name": "Portugal",
+        "code": "POR",
+        "flag": "🇵🇹"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    },
+    {
+      "id": "wc-2026-072",
+      "stage": "group",
+      "group": "K",
+      "date": "2026-06-28T00:00:00Z",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "home": {
+        "name": "DR Congo",
+        "code": "COD",
+        "flag": "🇨🇩"
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "code": "UZB",
+        "flag": "🇺🇿"
+      },
+      "score": null,
+      "status": "scheduled",
+      "broadcast": {
+        "uk": [
+          "BBC / ITV"
+        ],
+        "ie": [
+          "RTÉ / Virgin"
+        ]
+      }
+    }
+  ],
+  "knockout_bracket": null,
+  "top_scorers": []
+}

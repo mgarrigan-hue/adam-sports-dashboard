@@ -18,6 +18,7 @@ const DATA_FILES = {
   watch: "data/watch.json",
   club: "data/dublin_club.json",
   highlights: "data/highlights.json",
+  worldCup: "data/world_cup.json",
 };
 
 let WATCH = {};
@@ -212,6 +213,12 @@ const FAV_TEAM_PATTERNS = [
   { key: "smc",      re: /\b(st\.?\s*mary'?s|saint\s*mary'?s|smtc|smc|st mary's college)\b/i },
   { key: "leinster", re: /\bleinster\b/i },
 ];
+
+// World Cup — nations Adam is rooting for. Used by isAdamsWcTeam everywhere
+// we render WC content (today list, group ring highlight, hero on /#adam).
+const FAV_WC_NATIONS = ["Brazil"];
+const isAdamsWcTeam = (name) =>
+  !!name && FAV_WC_NATIONS.some(n => String(name).toLowerCase().includes(n.toLowerCase()));
 function matchSide(text) {
   if (!text) return null;
   for (const p of FAV_TEAM_PATTERNS) if (p.re.test(text)) return p.key;
@@ -1549,13 +1556,27 @@ function sportActivity(all) {
 function reorderSections(all) {
   const order = sportActivity(all);
 
+  // World Cup placement: pinned right after Adam during the tournament window,
+  // hidden via display:none on body.wc-phase-post (CSS rule below).
+  const phase = wcPhase();
+  const wcSection = document.getElementById("wc");
+  if (wcSection) {
+    if (phase === "post") {
+      wcSection.style.display = "none";
+    } else {
+      wcSection.style.display = "";
+      wcSection.style.setProperty("order", phase === "during" ? "2" : "12");
+    }
+  }
+
   // 1. Reorder the section panels via CSS `order`
   //    Home = 0, Adam = 1 (always right after Home), sports = 2..N, News trails.
   document.getElementById("home")?.style.setProperty("order", "0");
   document.getElementById("adam")?.style.setProperty("order", "1");
+  const sportBase = phase === "during" ? 3 : 2; // make room if WC pinned at 2
   order.forEach((it, i) => {
     const sec = document.getElementById(it.id);
-    if (sec) sec.style.order = String(i + 2);
+    if (sec) sec.style.order = String(i + sportBase);
   });
 
   // 2. Reorder the nav tabs (keep Home first, Upcoming + Adam pinned after Home, News last)
@@ -1564,6 +1585,7 @@ function reorderSections(all) {
     const indicator = document.getElementById("nav-indicator");
     const home = tabsWrap.querySelector('[data-target="home"]');
     const upcoming = tabsWrap.querySelector('[data-target="upcoming"]');
+    const wcTab = tabsWrap.querySelector('[data-target="wc"]');
     const adam = tabsWrap.querySelector('[data-target="adam"]');
     const news = tabsWrap.querySelector('[data-target="news"]');
     const sportTabs = order
@@ -1571,6 +1593,13 @@ function reorderSections(all) {
       .filter(Boolean);
     if (home) tabsWrap.appendChild(home);
     if (upcoming) tabsWrap.appendChild(upcoming);
+    if (wcTab) {
+      if (phase === "post") wcTab.style.display = "none";
+      else {
+        wcTab.style.display = "";
+        tabsWrap.appendChild(wcTab);
+      }
+    }
     if (adam) tabsWrap.appendChild(adam);
     sportTabs.forEach(t => tabsWrap.appendChild(t));
     if (news) tabsWrap.appendChild(news);
@@ -1595,6 +1624,286 @@ function reorderSections(all) {
   if (typeof window.__refreshNavIndicator === "function") {
     requestAnimationFrame(window.__refreshNavIndicator);
   }
+}
+
+// ---------- World Cup 2026 ----------
+const WC_START = new Date("2026-06-11T00:00:00Z");
+const WC_END   = new Date("2026-07-19T23:59:59Z");
+const WC_RECAP_UNTIL = new Date("2026-07-31T23:59:59Z");
+
+function wcPhase(now = new Date()) {
+  if (now < WC_START) return "pre";
+  if (now <= WC_END) return "during";
+  if (now <= WC_RECAP_UNTIL) return "recap";
+  return "post";
+}
+
+function wcCountdownString(target, from = new Date()) {
+  const ms = Math.max(0, target.getTime() - from.getTime());
+  const d = Math.floor(ms / 86400000);
+  const h = Math.floor((ms % 86400000) / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  if (d > 0) return `${d}d ${h}h`;
+  if (h > 0) return `${h}h ${m}m`;
+  return `${m}m`;
+}
+
+function wcKickoffLabel(iso) {
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  return d.toLocaleString("en-IE", {
+    weekday: "short", day: "numeric", month: "short",
+    hour: "2-digit", minute: "2-digit",
+  });
+}
+
+function wcBroadcastBadge(b) {
+  if (!b) return "";
+  const ie = (b.ie || []).join(" / ");
+  if (!ie) return "";
+  return `<span class="wc-broadcast">📺 ${escapeHtml(ie)}</span>`;
+}
+
+function wcMatchHasTeam(match, name) {
+  return isAdamsWcTeam(match?.home?.name) || isAdamsWcTeam(match?.away?.name);
+}
+
+function renderWcMatchCard(match, opts = {}) {
+  if (!match) return "";
+  const isBrazil = wcMatchHasTeam(match);
+  const live = match.status === "live";
+  const done = match.status === "complete" || match.status === "complete-unknown";
+  const cls = [
+    "wc-match-card",
+    live ? "wc-match-card--live" : "",
+    isBrazil ? "wc-match-card--brazil" : "",
+    done ? "wc-match-card--done" : "",
+  ].filter(Boolean).join(" ");
+  const score = match.score
+    ? `<span class="wc-score">${escapeHtml(String(match.score.home))}–${escapeHtml(String(match.score.away))}</span>`
+    : live
+      ? `<span class="wc-live-dot">● LIVE</span>`
+      : `<span class="wc-vs">vs</span>`;
+  const groupTag = match.group ? `<span class="wc-group-tag">Group ${escapeHtml(match.group)}</span>` : "";
+  const stageTag = match.stage && match.stage !== "group"
+    ? `<span class="wc-group-tag wc-stage-tag">${escapeHtml(match.stage.replace(/-/g, " "))}</span>`
+    : "";
+  return `
+    <article class="${cls}" data-match-id="${escapeAttr(match.id)}">
+      <div class="wc-match-head">
+        ${groupTag}${stageTag}
+        <span class="wc-kickoff">${escapeHtml(wcKickoffLabel(match.date))}</span>
+      </div>
+      <div class="wc-match-teams">
+        <span class="wc-team wc-team--home${isAdamsWcTeam(match.home?.name) ? " is-brazil" : ""}">
+          <span class="wc-flag" aria-hidden="true">${escapeHtml(match.home?.flag || "")}</span>
+          <span class="wc-team-name">${escapeHtml(match.home?.name || "TBD")}</span>
+        </span>
+        <span class="wc-score-wrap">${score}</span>
+        <span class="wc-team wc-team--away${isAdamsWcTeam(match.away?.name) ? " is-brazil" : ""}">
+          <span class="wc-flag" aria-hidden="true">${escapeHtml(match.away?.flag || "")}</span>
+          <span class="wc-team-name">${escapeHtml(match.away?.name || "TBD")}</span>
+        </span>
+      </div>
+      <div class="wc-match-foot">
+        <span class="wc-venue">${escapeHtml(match.venue || "")}</span>
+        ${wcBroadcastBadge(match.broadcast)}
+      </div>
+    </article>`;
+}
+
+function wcMatchesToday(matches, now = new Date()) {
+  const y = now.getFullYear(), mo = now.getMonth(), da = now.getDate();
+  return (matches || []).filter(m => {
+    const d = new Date(m.date);
+    if (isNaN(d)) return false;
+    return d.getFullYear() === y && d.getMonth() === mo && d.getDate() === da;
+  }).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function wcNextBrazilMatch(matches, now = new Date()) {
+  return (matches || [])
+    .filter(m => wcMatchHasTeam(m) && new Date(m.date).getTime() >= now.getTime())
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0] || null;
+}
+
+function renderWcCountdown(tournament, matches) {
+  const start = new Date(tournament.start_date + "T16:00:00Z"); // ~opener kickoff
+  const cd = wcCountdownString(start);
+  const brazil = wcNextBrazilMatch(matches);
+  const brazilHtml = brazil ? `
+    <div class="wc-countdown-brazil">
+      <span class="wc-flag" aria-hidden="true">🇧🇷</span>
+      Brazil's opener: <strong>${escapeHtml(brazil.home?.name)} vs ${escapeHtml(brazil.away?.name)}</strong>
+      · ${escapeHtml(wcKickoffLabel(brazil.date))}
+      <span class="wc-cd-mini">in ${escapeHtml(wcCountdownString(new Date(brazil.date)))}</span>
+    </div>` : "";
+  return `
+    <div class="wc-countdown-hero">
+      <div class="wc-countdown-eyebrow">⚽ FIFA World Cup 2026</div>
+      <div class="wc-countdown-big">Kicks off in <span class="wc-cd-num">${escapeHtml(cd)}</span></div>
+      <div class="wc-countdown-meta">11 Jun – 19 Jul · USA · Canada · Mexico</div>
+      ${brazilHtml}
+    </div>`;
+}
+
+function renderWcToday(matches) {
+  const today = wcMatchesToday(matches);
+  if (!today.length) return "";
+  // Brazil pinned to top
+  today.sort((a, b) => {
+    const ba = wcMatchHasTeam(a) ? 0 : 1;
+    const bb = wcMatchHasTeam(b) ? 0 : 1;
+    if (ba !== bb) return ba - bb;
+    return new Date(a.date) - new Date(b.date);
+  });
+  return `
+    <section class="wc-today">
+      <h3 class="wc-subheading">⚽ Today's matches <span class="wc-count">${today.length}</span></h3>
+      <div class="wc-today-grid">${today.map(m => renderWcMatchCard(m)).join("")}</div>
+    </section>`;
+}
+
+function renderWcGroups(groups) {
+  if (!groups || !groups.length) return "";
+  const tables = groups.map(g => {
+    const hasBrazil = (g.teams || []).some(t => isAdamsWcTeam(t.name));
+    const rows = (g.teams || []).map(t => {
+      const fav = isAdamsWcTeam(t.name) ? " is-brazil-row" : "";
+      return `<tr class="${fav}">
+        <td class="wc-tn"><span class="wc-flag">${escapeHtml(t.flag || "")}</span> ${escapeHtml(t.name)}</td>
+        <td>${t.played|0}</td><td>${t.won|0}</td><td>${t.drawn|0}</td><td>${t.lost|0}</td>
+        <td>${t.gd|0}</td><td><strong>${t.points|0}</strong></td>
+      </tr>`;
+    }).join("");
+    return `<div class="wc-group-table${hasBrazil ? " wc-group-table--brazil" : ""}">
+      <div class="wc-group-name">Group ${escapeHtml(g.name)}</div>
+      <table><thead><tr><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    </div>`;
+  }).join("");
+  return `<section class="wc-groups">
+    <h3 class="wc-subheading">Groups</h3>
+    <div class="wc-groups-grid">${tables}</div>
+  </section>`;
+}
+
+function renderWcBracket(bracket) {
+  if (bracket == null) return "";
+  // Placeholder structure — populated once knockout starts.
+  return `<section class="wc-bracket">
+    <h3 class="wc-subheading">Knockout bracket</h3>
+    <p class="empty">Bracket appears once Round of 32 begins.</p>
+  </section>`;
+}
+
+function renderWcScorers(scorers) {
+  if (!scorers || !scorers.length) return "";
+  const rows = scorers.slice(0, 10).map((s, i) => `<li>
+    <span class="wc-scorer-rank">${i + 1}</span>
+    <span class="wc-flag">${escapeHtml(s.flag || "")}</span>
+    <span class="wc-scorer-name">${escapeHtml(s.name)}</span>
+    <span class="wc-scorer-team">${escapeHtml(s.team || "")}</span>
+    <span class="wc-scorer-goals">${(s.goals|0)} ⚽</span>
+  </li>`).join("");
+  return `<section class="wc-scorers">
+    <h3 class="wc-subheading">Top scorers</h3>
+    <ol>${rows}</ol>
+  </section>`;
+}
+
+function renderWorldCup(data) {
+  const root = document.getElementById("wc-body");
+  if (!root) return null;
+  const wc = data?.worldCup;
+  if (!wc || !wc.tournament) {
+    root.innerHTML = `<p class="empty">World Cup data unavailable.</p>`;
+    return null;
+  }
+  const phase = wcPhase();
+  document.body.classList.toggle("wc-phase-pre", phase === "pre");
+  document.body.classList.toggle("wc-phase-during", phase === "during");
+  document.body.classList.toggle("wc-phase-recap", phase === "recap");
+  document.body.classList.toggle("wc-phase-post", phase === "post");
+
+  if (phase === "post") {
+    root.innerHTML = "";
+    return null;
+  }
+
+  const t = wc.tournament;
+  let html = "";
+  if (phase === "pre") {
+    html += renderWcCountdown(t, wc.matches);
+  } else if (phase === "during") {
+    html += renderWcCountdown(t, wc.matches);
+    html += renderWcToday(wc.matches);
+    html += renderWcGroups(wc.groups);
+    html += renderWcBracket(wc.knockout_bracket);
+    html += renderWcScorers(wc.top_scorers);
+  } else { // recap
+    const champ = t.champion ? `<div class="wc-countdown-big">🏆 Champions: ${escapeHtml(t.champion)}</div>` : "";
+    html += `<div class="wc-countdown-hero">
+      <div class="wc-countdown-eyebrow">⚽ World Cup 2026 — wrap</div>
+      ${champ}
+      <div class="wc-countdown-meta">Group + bracket archive below</div>
+    </div>`;
+    html += renderWcGroups(wc.groups);
+    html += renderWcScorers(wc.top_scorers);
+  }
+  root.innerHTML = html;
+  return phase;
+}
+
+function renderWcTopbarChip(data) {
+  const chip = document.getElementById("wc-topbar-chip");
+  if (!chip) return;
+  const wc = data?.worldCup;
+  const phase = wcPhase();
+  if (!wc || phase === "post") { chip.hidden = true; chip.textContent = ""; return; }
+  if (phase === "pre") {
+    const start = new Date((wc.tournament.start_date || "2026-06-11") + "T16:00:00Z");
+    chip.hidden = false;
+    chip.textContent = `⚽ kicks off in ${wcCountdownString(start)}`;
+    chip.title = "World Cup countdown — tap to view";
+    return;
+  }
+  if (phase === "during") {
+    const today = wcMatchesToday(wc.matches);
+    chip.hidden = false;
+    chip.textContent = today.length
+      ? `⚽ ${today.length} match${today.length === 1 ? "" : "es"} today`
+      : `⚽ World Cup live`;
+    chip.title = "Jump to the World Cup section";
+    return;
+  }
+  // recap
+  chip.hidden = false;
+  chip.textContent = `⚽ WC 2026 wrap`;
+}
+
+function renderWcAdamHero(data) {
+  // Inject a Brazil hero ABOVE the existing rugby hero on #adam, only when
+  // Brazil is playing today during the tournament window.
+  const wrap = document.getElementById("adam-body");
+  if (!wrap) return;
+  // Remove any prior injection so this is idempotent across rerenders.
+  wrap.querySelectorAll(".adam-next--wc").forEach(n => n.remove());
+  if (wcPhase() !== "during") return;
+  const wc = data?.worldCup;
+  if (!wc) return;
+  const today = wcMatchesToday(wc.matches).filter(wcMatchHasTeam);
+  if (!today.length) return;
+  const m = today[0];
+  const cd = wcCountdownString(new Date(m.date));
+  const html = `
+    <div class="adam-next adam-next--wc">
+      <div class="adam-next-eyebrow">🇧🇷 Brazil today — World Cup</div>
+      <div class="adam-next-title">${escapeHtml(m.home?.name)} v ${escapeHtml(m.away?.name)}</div>
+      <div class="adam-next-meta">${escapeHtml(wcKickoffLabel(m.date))} · ${escapeHtml(m.venue || "")}</div>
+      <div class="adam-next-meta">${wcBroadcastBadge(m.broadcast) || ""} <span class="wc-cd-mini">Kickoff in ${escapeHtml(cd)}</span></div>
+    </div>`;
+  wrap.insertAdjacentHTML("afterbegin", html);
 }
 
 // ---------- Boot ----------
@@ -1663,11 +1972,14 @@ function rerenderAll() {
   renderFeed(buildFeed(DATA));
   renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true });
   renderAdam(DATA);
+  renderWcAdamHero(DATA);
   renderF1(DATA.f1);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
   renderClub(DATA.club);
+  renderWorldCup(DATA);
+  renderWcTopbarChip(DATA);
   reorderSections(DATA);
 }
 
@@ -1676,7 +1988,7 @@ function rerenderAll() {
   bindInstallPrompt();
   registerSW();
 
-  const [f1, intl, prov, schools, news, watch, club, highlights] = await Promise.all([
+  const [f1, intl, prov, schools, news, watch, club, highlights, worldCup] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.intl),
     loadJson(DATA_FILES.prov),
@@ -1685,12 +1997,13 @@ function rerenderAll() {
     loadJson(DATA_FILES.watch),
     loadJson(DATA_FILES.club),
     loadJson(DATA_FILES.highlights),
+    loadJson(DATA_FILES.worldCup),
   ]);
-  DATA = { f1, intl, prov, schools, news, club };
+  DATA = { f1, intl, prov, schools, news, club, worldCup };
   WATCH = watch || {};
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
-  const stamps = [f1, intl, prov, schools, news, club].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
+  const stamps = [f1, intl, prov, schools, news, club, worldCup].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   LATEST_STAMP = stamps.length ? stamps.sort().pop() : null;
   renderTopbarFreshness();
   startFreshnessTicker();

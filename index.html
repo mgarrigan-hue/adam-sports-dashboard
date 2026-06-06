@@ -42,6 +42,7 @@
   <nav class="nav-tabs" id="nav-tabs" role="tablist" aria-label="Sections">
     <a class="nav-tab active" data-target="home"     href="#home"     role="tab" aria-selected="true">Home</a>
     <a class="nav-tab nav-tab--upcoming" data-target="upcoming" data-nav-inline href="#upcoming" role="tab"><span aria-hidden="true">📅</span> Upcoming</a>
+    <a class="nav-tab nav-tab--wc" data-target="wc" href="#wc" role="tab"><span aria-hidden="true">⚽</span> World Cup</a>
     <a class="nav-tab nav-tab--adam" data-target="adam" href="#adam" role="tab"><span aria-hidden="true">🟢⚪</span> Adam</a>
     <a class="nav-tab"        data-target="f1"       href="#f1"       role="tab">F1</a>
     <a class="nav-tab"        data-target="rugby"  href="#rugby"  role="tab">Rugby</a>
@@ -53,6 +54,7 @@
   <div class="topbar-actions">
     <button id="install-btn" class="btn btn-ghost" hidden>⬇️ Install</button>
     <button id="settings-btn" class="btn btn-icon" aria-label="Following / favorites" title="Following / favorites">⚙️</button>
+    <a href="#wc" id="wc-topbar-chip" class="wc-topbar-chip" hidden></a>
     <div class="last-updated" id="last-updated">Loading…</div>
   </div>
 </header>
@@ -101,6 +103,20 @@
         <li class="empty">Loading upcoming fixtures…</li>
       </ul>
     </section>
+  </div>
+</section>
+
+<!-- WORLD CUP ========================================================= -->
+<section class="section section-wc" id="wc">
+  <div class="section-head section-head--page">
+    <div class="section-title">
+      <span class="accent-bar accent-bar--wc"></span>
+      <h2>⚽ FIFA World Cup 2026</h2>
+    </div>
+    <p class="section-sub">USA · Canada · Mexico · 11 Jun – 19 Jul · 🇧🇷 Adam backs Brazil</p>
+  </div>
+  <div id="wc-body">
+    <p class="empty">Loading World Cup…</p>
   </div>
 </section>
 

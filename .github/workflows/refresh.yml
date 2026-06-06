@@ -39,6 +39,7 @@ jobs:
           python scripts/fetch_schools.py
           python scripts/fetch_dublin_club.py
           python scripts/fetch_news.py
+          python scripts/fetch_world_cup.py
           exit 0
 
       - name: Validate links (warn-only)

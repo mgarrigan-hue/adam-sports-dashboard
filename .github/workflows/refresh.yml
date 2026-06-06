@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: refresh-data
@@ -50,6 +51,13 @@ jobs:
           # Warn-only: never fails the data refresh, but surfaces broken
           # YouTube handles in the run log so we notice early.
           python scripts/validate_links.py || echo "::warning::validate_links.py reported broken link(s) — see log."
+
+      - name: Freshness check (opens / closes data-freshness issues)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/check_freshness.py || echo "::warning::freshness check failed — see log."
 
       - name: Commit refreshed data
         run: |

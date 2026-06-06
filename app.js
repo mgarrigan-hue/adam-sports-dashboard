@@ -283,6 +283,70 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) { return escapeHtml(s); }
 
+// ===== DEEP LINKING =====
+// Stable per-match anchor id, derived from home|away|date so it's consistent
+// across refreshes (no UUIDs in source data for non-WC matches). Used by the
+// share buttons + Cmd-K search to scroll-and-glow a specific match card.
+function stableMatchId(prefix, m) {
+  const key = `${m?.home || m?.home_team || ""}__${m?.away || m?.away_team || ""}__${m?.date || ""}`;
+  let h = 0;
+  for (let i = 0; i < key.length; i++) { h = ((h << 5) - h) + key.charCodeAt(i); h |= 0; }
+  return `${prefix}-${Math.abs(h).toString(36)}`;
+}
+
+// Inline 🔗 button — same UX as the WC share buttons (clipboard + flash).
+// Click handler is wired by bindGlobalShareButtons() once per page.
+function shareBtnHtml(anchorId) {
+  if (!anchorId) return "";
+  return `<button type="button" class="wc-share-btn share-btn-inline" data-share-id="${escapeAttr(anchorId)}" aria-label="Copy link to this fixture" title="Copy link">🔗</button>`;
+}
+
+// Idempotent: re-runs after every rerender. Adds 🔗 click → clipboard.
+function bindGlobalShareButtons() {
+  document.querySelectorAll(".share-btn-inline").forEach(btn => {
+    if (btn.__bound) return;
+    btn.__bound = true;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const id = btn.getAttribute("data-share-id");
+      if (!id) return;
+      const url = `${location.origin}${location.pathname}#${id}`;
+      const orig = btn.textContent;
+      const restore = () => { btn.textContent = orig; };
+      const flash = (txt) => { btn.textContent = txt; setTimeout(restore, 1200); };
+      if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(url).then(() => flash("✅"), () => flash("⚠️"));
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = url; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); flash("✅"); } catch { flash("⚠️"); }
+        ta.remove();
+      }
+    });
+  });
+}
+
+// Scroll to + briefly highlight whatever element matches location.hash. Fires
+// on hashchange + on initial render once data is in. Safe to call any time.
+function handleDeepLink() {
+  const hash = location.hash.replace(/^#/, "");
+  if (!hash) return;
+  const el = document.getElementById(hash);
+  if (!el) return;
+  // Open any <details> ancestor (WC fixtures use <details> per matchday).
+  let p = el.parentElement;
+  while (p) {
+    if (p.tagName === "DETAILS" && !p.open) p.open = true;
+    p = p.parentElement;
+  }
+  el.scrollIntoView({ behavior: "smooth", block: "center" });
+  el.classList.remove("glow-scroll");
+  // Force reflow so the animation restarts on repeated jumps to same anchor.
+  void el.offsetWidth;
+  el.classList.add("glow-scroll");
+  setTimeout(() => el.classList.remove("glow-scroll"), 2200);
+}
+
 // Whitelist of trusted hosts for team/competition logos. We only render
 // images served over https from these domains; anything else (including
 // javascript:/data: URIs from a hypothetical compromised upstream API) is
@@ -1193,9 +1257,10 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     const scorers = scorerTimelineHtml(m.scoring_summary, isFav(m));
     const ht = m.half_time ? `<span class="ht-chip">HT ${escapeHtml(m.half_time)}</span>` : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : "", scorers].filter(Boolean).join("");
+    const anchorId = stableMatchId("rugby-m", m);
     return `
-    <tr class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""} ${outcomeClass(m)}">
-      <td>${m.date ? fmtDate(m.date) : ""}</td>
+    <tr id="${anchorId}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""} ${outcomeClass(m)}">
+      <td>${m.date ? fmtDate(m.date) : ""} ${shareBtnHtml(anchorId)}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
       <td class="score">${outcomeBadge(m)}${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
       <td>${teamCell(m.away, m.away_logo)}</td>
@@ -1203,9 +1268,10 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
   }).join("");
   const upc = (d.fixtures || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label);
+    const anchorId = stableMatchId("rugby-m", m);
     return `
-    <tr class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
-      <td>${m.date ? fmtDate(m.date) : "TBD"}</td>
+    <tr id="${anchorId}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
+      <td>${m.date ? fmtDate(m.date) : "TBD"} ${shareBtnHtml(anchorId)}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
   }).join("");
@@ -1314,9 +1380,11 @@ function renderClub(d) {
     const ageBand = adamsAgeBand(m.competition);
     const u14Tag = ageBand ? `<span class="u14-pill">${escapeHtml(ageBand)}</span>` : "";
     const badge = isResult ? outcomeBadge(m) : "";
+    const anchorPrefix = isU14(m.competition) ? "u15-m" : "club-m";
+    const anchorId = stableMatchId(anchorPrefix, m);
     return `
-    <tr class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
-      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")}</td>
+    <tr id="${anchorId}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
+      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${shareBtnHtml(anchorId)}</td>
       <td>${escapeHtml(normTeam(m.home))}</td>
       <td class="score">${badge}${score}</td>
       <td>${escapeHtml(normTeam(m.away))}</td>
@@ -1441,6 +1509,307 @@ function registerSW() {
 }
 
 // ---------- Sticky nav: scroll-spy + sliding indicator ----------
+// ===== CMD-K SEARCH =====
+// Lightweight global search overlay (no library). Indexes sections, WC + club
+// fixtures, F1 races, rugby matches. Substring scoring with a small recency
+// bias for matches that haven't happened yet. Esc closes, ↑/↓ navigate,
+// Enter jumps to the anchor (and triggers the deep-link glow).
+let SEARCH_ITEMS = [];
+let SEARCH_RESULTS = [];
+let SEARCH_SELECTED = 0;
+let SEARCH_PREV_FOCUS = null;
+
+function buildSearchIndex(all) {
+  const out = [];
+  // Sections
+  const sections = [
+    { id: "home",     title: "Home",        type: "section", icon: "🏠", desc: "Hero + latest action" },
+    { id: "upcoming", title: "Upcoming",    type: "section", icon: "📅", desc: "Upcoming fixtures" },
+    { id: "wc",       title: "World Cup",   type: "section", icon: "⚽", desc: "FIFA World Cup 2026" },
+    { id: "adam",     title: "Adam",        type: "section", icon: "🟢⚪", desc: "Adam's next match + form" },
+    { id: "f1",       title: "Formula 1",   type: "section", icon: "🏎️", desc: "F1 race weekend + standings" },
+    { id: "rugby",    title: "Rugby",       type: "section", icon: "🏉", desc: "International, provinces, schools" },
+    { id: "club",     title: "Adam's Club", type: "section", icon: "🟢⚪", desc: "St Mary's College RFC" },
+    { id: "news",     title: "News",        type: "section", icon: "📰", desc: "Headlines across F1 + rugby" },
+  ];
+  for (const s of sections) out.push({ kind: "section", anchor: s.id, label: s.title, sub: s.desc, icon: s.icon, search: `${s.title} ${s.desc}` });
+
+  // WC matches
+  for (const m of (all?.worldCup?.matches || [])) {
+    if (!m.id) continue;
+    out.push({
+      kind: "wc",
+      anchor: `wc-m-${m.id}`,
+      label: `${m.home?.name || "TBD"} vs ${m.away?.name || "TBD"}`,
+      sub: `${wcKickoffLabel(m.date)}${m.group ? ` · Group ${m.group}` : ""}${m.stage && m.stage !== "group" ? ` · ${m.stage}` : ""}`,
+      icon: "⚽",
+      search: `${m.home?.name || ""} ${m.away?.name || ""} ${m.stage || ""} ${m.group || ""} ${m.venue || ""}`,
+      ts: new Date(m.date).getTime(),
+    });
+  }
+
+  // Club matches (results + fixtures) — only Adam's (involves_smc !== false)
+  const clubMatches = [
+    ...((all?.club?.results) || []).map(m => ({ m, isResult: true })),
+    ...((all?.club?.fixtures) || []).map(m => ({ m, isResult: false })),
+  ];
+  for (const { m, isResult } of clubMatches) {
+    if (!isAdamsMatch(m)) continue;
+    const prefix = isU14(m.competition) ? "u15-m" : "club-m";
+    out.push({
+      kind: isU14(m.competition) ? "u15" : "club",
+      anchor: stableMatchId(prefix, m),
+      label: `${normTeam(m.home)} v ${normTeam(m.away)}`,
+      sub: `${m.competition || "Club"}${m.date ? ` · ${fmtDate(m.date)}` : ""}${isResult && m.home_score != null ? ` · ${m.home_score}-${m.away_score}` : ""}`,
+      icon: isU14(m.competition) ? "🟢⚪" : "🏉",
+      search: `${m.home || ""} ${m.away || ""} ${m.competition || ""}`,
+      ts: m.date ? new Date(m.date).getTime() : 0,
+    });
+  }
+
+  // Rugby (intl, prov, schools)
+  for (const bucket of [
+    { data: all?.intl,    icon: "🌍" },
+    { data: all?.prov,    icon: "☘️" },
+    { data: all?.schools, icon: "🎓" },
+  ]) {
+    if (!bucket.data) continue;
+    const all2 = [
+      ...((bucket.data.results) || []).map(m => ({ m, isResult: true })),
+      ...((bucket.data.fixtures) || []).map(m => ({ m, isResult: false })),
+    ];
+    for (const { m, isResult } of all2) {
+      out.push({
+        kind: "rugby",
+        anchor: stableMatchId("rugby-m", m),
+        label: `${m.home || "TBD"} v ${m.away || "TBD"}`,
+        sub: `${m.competition || "Rugby"}${m.date ? ` · ${fmtDate(m.date)}` : ""}${isResult && m.home_score != null ? ` · ${m.home_score}-${m.away_score}` : ""}`,
+        icon: bucket.icon,
+        search: `${m.home || ""} ${m.away || ""} ${m.competition || ""}`,
+        ts: m.date ? new Date(m.date).getTime() : 0,
+      });
+    }
+  }
+
+  // F1 next race + recent
+  for (const r of (all?.f1?.upcoming || []).slice(0, 5)) {
+    out.push({
+      kind: "f1",
+      anchor: "f1",
+      label: r.name || "F1 race",
+      sub: `${r.circuit || ""}${r.date ? ` · ${fmtDate(r.date)}` : ""}`,
+      icon: "🏎️",
+      search: `${r.name || ""} ${r.circuit || ""} F1 race`,
+      ts: r.date ? new Date(r.date).getTime() : 0,
+    });
+  }
+
+  SEARCH_ITEMS = out;
+}
+
+function scoreSearchItem(item, q) {
+  const hay = (item.label + " " + (item.sub || "") + " " + (item.search || "")).toLowerCase();
+  const needle = q.toLowerCase();
+  if (!hay.includes(needle)) {
+    // Fall back to per-word match — every word must appear somewhere
+    const words = needle.split(/\s+/).filter(Boolean);
+    if (!words.every(w => hay.includes(w))) return -1;
+  }
+  let score = 0;
+  // Strong: needle is a prefix of the label
+  if (item.label.toLowerCase().startsWith(needle)) score += 100;
+  // Medium: needle appears in label
+  if (item.label.toLowerCase().includes(needle)) score += 40;
+  // Light: needle appears anywhere
+  score += 10;
+  // Sections bubble up slightly so "rugby" finds the section, not a random match
+  if (item.kind === "section") score += 20;
+  // Recency tiebreak — upcoming/recent matches before ancient history
+  if (item.ts) {
+    const ageDays = (Date.now() - item.ts) / 86400000;
+    if (ageDays > 0 && ageDays < 30) score += 5;  // recent past
+    if (ageDays < 0 && ageDays > -30) score += 8; // upcoming
+  }
+  return score;
+}
+
+function renderSearchResults(q) {
+  const list = document.getElementById("search-results");
+  if (!list) return;
+  if (!q || q.length < 1) {
+    // Empty query: show sections + next few upcoming as quick jumps
+    SEARCH_RESULTS = SEARCH_ITEMS
+      .filter(i => i.kind === "section")
+      .concat(
+        SEARCH_ITEMS
+          .filter(i => i.kind !== "section" && i.ts > Date.now())
+          .sort((a, b) => a.ts - b.ts)
+          .slice(0, 6)
+      );
+  } else {
+    SEARCH_RESULTS = SEARCH_ITEMS
+      .map(i => ({ i, s: scoreSearchItem(i, q) }))
+      .filter(x => x.s >= 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 20)
+      .map(x => x.i);
+  }
+  SEARCH_SELECTED = 0;
+  if (!SEARCH_RESULTS.length) {
+    list.innerHTML = `<li class="search-empty">No matches for "${escapeHtml(q)}"</li>`;
+    return;
+  }
+  list.innerHTML = SEARCH_RESULTS.map((r, i) => `
+    <li class="search-result${i === 0 ? " is-selected" : ""}" role="option" data-idx="${i}" data-anchor="${escapeAttr(r.anchor)}">
+      <span class="search-result-icon">${r.icon || ""}</span>
+      <span class="search-result-body">
+        <span class="search-result-label">${escapeHtml(r.label)}</span>
+        ${r.sub ? `<span class="search-result-sub">${escapeHtml(r.sub)}</span>` : ""}
+      </span>
+      <span class="search-result-kind">${escapeHtml(r.kind)}</span>
+    </li>`).join("");
+  // Click-to-pick
+  list.querySelectorAll(".search-result").forEach(el => {
+    el.addEventListener("click", () => {
+      const idx = Number(el.getAttribute("data-idx"));
+      SEARCH_SELECTED = idx;
+      pickSearchResult();
+    });
+    el.addEventListener("mouseenter", () => {
+      list.querySelectorAll(".search-result.is-selected").forEach(n => n.classList.remove("is-selected"));
+      el.classList.add("is-selected");
+      SEARCH_SELECTED = Number(el.getAttribute("data-idx"));
+    });
+  });
+}
+
+function pickSearchResult() {
+  const r = SEARCH_RESULTS[SEARCH_SELECTED];
+  if (!r) return;
+  closeSearch();
+  // Use hash navigation so handleDeepLink runs + URL is shareable.
+  if (r.anchor && r.anchor !== location.hash.replace(/^#/, "")) {
+    location.hash = r.anchor;
+  } else {
+    handleDeepLink();
+  }
+}
+
+function moveSearchSelection(delta) {
+  const list = document.getElementById("search-results");
+  if (!list || !SEARCH_RESULTS.length) return;
+  SEARCH_SELECTED = (SEARCH_SELECTED + delta + SEARCH_RESULTS.length) % SEARCH_RESULTS.length;
+  list.querySelectorAll(".search-result").forEach((el, i) => {
+    el.classList.toggle("is-selected", i === SEARCH_SELECTED);
+    if (i === SEARCH_SELECTED) el.scrollIntoView({ block: "nearest" });
+  });
+}
+
+function openSearch() {
+  const overlay = document.getElementById("search-overlay");
+  const input = document.getElementById("search-input");
+  if (!overlay || !input) return;
+  buildSearchIndex(DATA);
+  SEARCH_PREV_FOCUS = document.activeElement;
+  overlay.hidden = false;
+  document.body.classList.add("search-open");
+  input.value = "";
+  renderSearchResults("");
+  // requestAnimationFrame so the transition + autofocus play well together
+  requestAnimationFrame(() => input.focus());
+}
+
+function closeSearch() {
+  const overlay = document.getElementById("search-overlay");
+  if (!overlay) return;
+  overlay.hidden = true;
+  document.body.classList.remove("search-open");
+  if (SEARCH_PREV_FOCUS && typeof SEARCH_PREV_FOCUS.focus === "function") SEARCH_PREV_FOCUS.focus();
+}
+
+function bindSearch() {
+  const overlay = document.getElementById("search-overlay");
+  const input = document.getElementById("search-input");
+  const backdrop = document.getElementById("search-backdrop");
+  const btn = document.getElementById("search-btn");
+  if (!overlay || !input) return;
+
+  btn?.addEventListener("click", openSearch);
+  backdrop?.addEventListener("click", closeSearch);
+
+  input.addEventListener("input", (e) => renderSearchResults(e.target.value.trim()));
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { e.preventDefault(); closeSearch(); return; }
+    if (e.key === "ArrowDown") { e.preventDefault(); moveSearchSelection(1); return; }
+    if (e.key === "ArrowUp")   { e.preventDefault(); moveSearchSelection(-1); return; }
+    if (e.key === "Enter")     { e.preventDefault(); pickSearchResult(); return; }
+  });
+
+  // Global Ctrl+K / Cmd+K shortcut
+  window.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && (e.key === "k" || e.key === "K")) {
+      e.preventDefault();
+      if (overlay.hidden) openSearch(); else closeSearch();
+    }
+    // Plain "/" also opens search, unless typing in a field
+    if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      const t = e.target;
+      const inField = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
+      if (!inField && overlay.hidden) { e.preventDefault(); openSearch(); }
+    }
+  });
+}
+
+// ===== THEME TOGGLE (Wave 3) =====
+// Tri-state: light / dark / auto (auto follows prefers-color-scheme).
+// Persisted in localStorage; applied to <html data-theme="..."> on boot
+// + on user toggle. Default = auto.
+const THEME_KEY = "adam-theme";
+const THEME_CYCLE = ["auto", "light", "dark"];
+const THEME_ICONS = { auto: "🌓", light: "☀️", dark: "🌙" };
+const THEME_LABELS = { auto: "Theme: Auto", light: "Theme: Light", dark: "Theme: Dark" };
+
+function applyTheme(theme) {
+  const t = THEME_CYCLE.includes(theme) ? theme : "auto";
+  // `auto` removes the attribute so prefers-color-scheme rules in CSS apply.
+  if (t === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", t);
+  // Keep the iOS / Android status bar in sync with whatever's actually on screen
+  const mql = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+  const effective = t === "auto" ? (mql && mql.matches ? "light" : "dark") : t;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", effective === "light" ? "#f3f5fb" : "#0a0d18");
+  const btn = document.getElementById("theme-btn");
+  if (btn) {
+    btn.textContent = THEME_ICONS[t];
+    btn.setAttribute("aria-label", THEME_LABELS[t]);
+    btn.setAttribute("title", THEME_LABELS[t]);
+  }
+}
+
+function loadTheme() {
+  try { return localStorage.getItem(THEME_KEY) || "auto"; } catch { return "auto"; }
+}
+
+function bindThemeToggle() {
+  applyTheme(loadTheme());
+  const btn = document.getElementById("theme-btn");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const cur = loadTheme();
+    const next = THEME_CYCLE[(THEME_CYCLE.indexOf(cur) + 1) % THEME_CYCLE.length];
+    try { localStorage.setItem(THEME_KEY, next); } catch {}
+    applyTheme(next);
+  });
+  // Auto-mode should react when the OS pref changes
+  if (window.matchMedia) {
+    const mql = window.matchMedia("(prefers-color-scheme: light)");
+    const onChange = () => { if (loadTheme() === "auto") applyTheme("auto"); };
+    if (mql.addEventListener) mql.addEventListener("change", onChange);
+    else if (mql.addListener) mql.addListener(onChange);
+  }
+}
+
 function bindNav() {
   const tabs = Array.from(document.querySelectorAll(".nav-tab"));
   const indicator = document.getElementById("nav-indicator");
@@ -2260,9 +2629,12 @@ function rerenderAll() {
   renderWorldCup(DATA);
   renderWcTopbarChip(DATA);
   reorderSections(DATA);
+  bindGlobalShareButtons();
+  buildSearchIndex(DATA);
 }
 
 (async function main() {
+  bindThemeToggle();
   bindNewsFilters();
   bindInstallPrompt();
   registerSW();
@@ -2292,7 +2664,14 @@ function rerenderAll() {
   rerenderAll();
   bindSettings(rerenderAll);
   bindNav();
+  bindSearch();
   applyFadeIn();
+
+  // Deep-link support: if the user landed with #wc-m-XYZ or any other anchor,
+  // scroll-and-glow once the initial render is done. Also react to subsequent
+  // hashchange events (e.g. share-button copy → paste-and-go).
+  window.addEventListener("hashchange", handleDeepLink);
+  setTimeout(handleDeepLink, 250);
 
   // Render the greeting in the dedicated row below the topbar — never inside
   // the brand <a> (where it bloated the brand column, clipped nav tabs on

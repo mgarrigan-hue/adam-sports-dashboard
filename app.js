@@ -566,6 +566,9 @@ async function setReminderFromPayload(btn, payload, offsetId) {
   renderRemindersPanel();
   updateRemindBadge();
   maybeShowIosPwaTip();
+  // Reminder intent = high; surface the install banner now (iOS in particular
+  // needs PWA install for reliable background notifications).
+  setTimeout(() => maybeShowInstallBanner({ reason: "reminder" }), 1800);
   if (!ok) {
     // We can still fire while the page is open via the in-page timeout
     // (already scheduled). Tell the user honestly.
@@ -2235,6 +2238,9 @@ function bindInstallPrompt() {
     e.preventDefault();
     deferred = e;
     btn.hidden = false;
+    // Stash for the banner branch too — same event can drive both surfaces.
+    INSTALL_DEFERRED_PROMPT = e;
+    maybeShowInstallBanner({ reason: "beforeinstall" });
   });
   btn.addEventListener("click", async () => {
     if (!deferred) return;
@@ -2242,8 +2248,152 @@ function bindInstallPrompt() {
     deferred.prompt();
     try { await deferred.userChoice; } catch {}
     deferred = null;
+    INSTALL_DEFERRED_PROMPT = null;
   });
-  window.addEventListener("appinstalled", () => { btn.hidden = true; });
+  window.addEventListener("appinstalled", () => {
+    btn.hidden = true;
+    hideInstallBanner({ persistent: true });
+  });
+}
+
+// ===== INSTALL BANNER (Item 2) =====
+// Proactively prompt Adam to install the PWA so:
+//   - iOS web push works (only fires on installed PWAs)
+//   - Better offline + native-app feel
+// Triggers (smart, NOT annoying):
+//   - Skip if already standalone (Android display-mode OR iOS navigator.standalone)
+//   - Skip if user dismissed within last 7 days
+//   - DO show right after a Remind Me is set (notification intent = high)
+//   - DO show after the user has visited 3+ distinct UTC days
+//   - Never show on the very first visit (first impression = dashboard)
+const INSTALL_DISMISS_KEY = "adam-install-banner-dismissed-at";
+const INSTALL_VISIT_COUNT_KEY = "adam-visit-count";
+const INSTALL_LAST_VISIT_KEY = "adam-last-visit-utc";
+const INSTALL_DISMISS_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
+let INSTALL_DEFERRED_PROMPT = null;
+let INSTALL_BANNER_OPEN = false;
+
+function isPwaStandalone() {
+  try {
+    if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return true;
+  } catch {}
+  return !!(("standalone" in navigator) && navigator.standalone);
+}
+
+function isIosSafariLike() {
+  const ua = navigator.userAgent || "";
+  // iPadOS 13+ reports as Mac in UA; combine with touch + non-Chrome to catch it.
+  const isMac = /Macintosh/.test(ua);
+  const hasTouch = (navigator.maxTouchPoints || 0) > 1;
+  const isIosUa = /iPad|iPhone|iPod/.test(ua);
+  const isWebkit = /AppleWebKit/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+  return isWebkit && (isIosUa || (isMac && hasTouch));
+}
+
+function bumpVisitCount() {
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    const last = localStorage.getItem(INSTALL_LAST_VISIT_KEY);
+    if (last === today) return Number(localStorage.getItem(INSTALL_VISIT_COUNT_KEY) || 0);
+    const n = Number(localStorage.getItem(INSTALL_VISIT_COUNT_KEY) || 0) + 1;
+    localStorage.setItem(INSTALL_VISIT_COUNT_KEY, String(n));
+    localStorage.setItem(INSTALL_LAST_VISIT_KEY, today);
+    return n;
+  } catch { return 0; }
+}
+
+function installBannerWasRecentlyDismissed() {
+  try {
+    const at = Number(localStorage.getItem(INSTALL_DISMISS_KEY) || 0);
+    if (!at) return false;
+    return (Date.now() - at) < INSTALL_DISMISS_COOLDOWN_MS;
+  } catch { return false; }
+}
+
+function maybeShowInstallBanner({ reason } = {}) {
+  if (INSTALL_BANNER_OPEN) return;
+  if (isPwaStandalone()) return;
+  if (installBannerWasRecentlyDismissed()) return;
+  const visits = Number((() => { try { return localStorage.getItem(INSTALL_VISIT_COUNT_KEY); } catch { return 0; } })() || 0);
+  const allow = reason === "reminder" || visits >= 3 || reason === "beforeinstall-forced";
+  if (!allow) return;
+  // beforeinstallprompt branch: only show if visits >=3 OR reminder; pure
+  // first-load beforeinstall fires don't get auto-promoted.
+  if (reason === "beforeinstall" && visits < 3) return;
+  showInstallBanner();
+}
+
+function showInstallBanner() {
+  const banner = document.getElementById("install-banner");
+  if (!banner) return;
+  INSTALL_BANNER_OPEN = true;
+  const ios = isIosSafariLike() && !INSTALL_DEFERRED_PROMPT;
+  banner.classList.toggle("install-banner--ios", ios);
+  document.body.classList.add("banner-visible");
+  document.body.classList.toggle("banner-visible--ios", ios);
+  if (ios) {
+    banner.innerHTML = `
+      <span class="install-banner__icon" aria-hidden="true">📲</span>
+      <div class="install-banner__text">
+        <p class="install-banner__title" id="install-banner-title">Add to Home Screen</p>
+        <p class="install-banner__sub" id="install-banner-sub">Installs the dashboard like an app — lets reminders buzz your phone even when Safari is closed.</p>
+        <div class="install-banner__ios-steps" aria-hidden="false">
+          <span>1.</span><span>Tap the <b>Share</b> icon ⬆️ at the bottom of Safari</span>
+          <span>2.</span><span>Scroll &amp; tap <b>Add to Home Screen</b></span>
+          <span>3.</span><span>Tap <b>Add</b> — that's it.</span>
+        </div>
+      </div>
+      <button class="install-banner__later" type="button" id="install-banner-later" aria-label="Maybe later">Maybe later</button>
+      <svg class="install-banner__ios-arrow" viewBox="0 0 38 70" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="ios-arrow-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#38b6f1"/>
+            <stop offset="100%" stop-color="#2dd078"/>
+          </linearGradient>
+        </defs>
+        <path d="M19 4 L19 56 M6 44 L19 60 L32 44" stroke="url(#ios-arrow-grad)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+  } else {
+    const supports = !!INSTALL_DEFERRED_PROMPT;
+    banner.innerHTML = `
+      <span class="install-banner__icon" aria-hidden="true">📲</span>
+      <div class="install-banner__text">
+        <p class="install-banner__title" id="install-banner-title">Install Adam's Dashboard</p>
+        <p class="install-banner__sub" id="install-banner-sub">${supports ? "One tap to install — faster launches and reliable reminders." : "Use your browser menu → \"Install\" / \"Add to Home Screen\" to install."}</p>
+      </div>
+      <button class="install-banner__cta" type="button" id="install-banner-install"${supports ? "" : " disabled"}>📲 Install</button>
+      <button class="install-banner__later" type="button" id="install-banner-later" aria-label="Maybe later">Maybe later</button>`;
+  }
+  banner.hidden = false;
+  // Focus the install / "later" button for keyboard-first users.
+  const focusable = banner.querySelector(".install-banner__cta, .install-banner__later");
+  if (focusable) try { focusable.focus({ preventScroll: true }); } catch {}
+  banner.querySelector("#install-banner-later")?.addEventListener("click", () => hideInstallBanner({ persistent: true }));
+  banner.querySelector("#install-banner-install")?.addEventListener("click", async () => {
+    if (!INSTALL_DEFERRED_PROMPT) return;
+    try {
+      INSTALL_DEFERRED_PROMPT.prompt();
+      const choice = await INSTALL_DEFERRED_PROMPT.userChoice;
+      INSTALL_DEFERRED_PROMPT = null;
+      if (choice && choice.outcome === "accepted") {
+        hideInstallBanner({ persistent: true });
+      } else {
+        hideInstallBanner({ persistent: true }); // user chose "no" — respect 7d cooldown
+      }
+    } catch { hideInstallBanner({ persistent: true }); }
+  });
+}
+
+function hideInstallBanner({ persistent = false } = {}) {
+  const banner = document.getElementById("install-banner");
+  if (!banner) return;
+  banner.hidden = true;
+  banner.innerHTML = "";
+  document.body.classList.remove("banner-visible", "banner-visible--ios");
+  INSTALL_BANNER_OPEN = false;
+  if (persistent) {
+    try { localStorage.setItem(INSTALL_DISMISS_KEY, String(Date.now())); } catch {}
+  }
 }
 
 function registerSW() {
@@ -2945,6 +3095,7 @@ function rerenderAll() {
   bindNewsFilters();
   bindInstallPrompt();
   registerSW();
+  bumpVisitCount();
 
   const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, worldCup, rugbyTables] = await Promise.all([
     loadJson(DATA_FILES.f1),
@@ -2994,4 +3145,9 @@ function rerenderAll() {
   // Boot the reminders system: rehydrate from IndexedDB, schedule in-page
   // timers, fire anything overdue, tell the SW, and render the panel/badge.
   bootReminders();
+
+  // Smart install banner check (3+ visits → eligible; reminder set → eligible).
+  // We do this after the dashboard has rendered so it's never the first thing
+  // Adam sees on a brand-new device.
+  setTimeout(() => maybeShowInstallBanner({ reason: "boot" }), 1500);
 })();

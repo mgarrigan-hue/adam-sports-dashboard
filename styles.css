@@ -1481,3 +1481,64 @@ img.wc-flag {
 .wc-day-brazil img.wc-flag { width: 18px; height: 13px; vertical-align: -2px; margin-right: 4px; }
 .wc-countdown-brazil img.wc-flag { width: 24px; height: 18px; vertical-align: -4px; margin-right: 6px; }
 .adam-next--wc img.wc-flag { width: 22px; height: 16px; vertical-align: -3px; margin-right: 4px; }
+
+/* ===== Wave 1 — match-day polish ===== */
+/* Pulse the actual score numerals during a live match, in addition to the
+   existing red border on .wc-match-card--live. */
+.wc-score--pulse {
+  animation: wc-pulse 1.4s ease-in-out infinite;
+  color: #ff6b6b;
+}
+.wc-match-card--brazil .wc-score--pulse { color: #ffe177; }
+
+/* Per-card 🔗 share button (also used by Wave 2 deep-linking). */
+.wc-share-btn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-2); border-radius: 999px;
+  width: 26px; height: 26px; padding: 0; margin-left: 4px;
+  cursor: pointer; font-size: 13px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.wc-share-btn:hover { background: var(--surface-strong); color: var(--text); border-color: var(--border-strong); }
+
+/* Brazil match-day takeover hero — kickoff/score/broadcast/form pills.
+   Sits on top of the rugby hero on /#adam during a Brazil match-day. */
+.wc-hero-takeover { padding-bottom: 16px; }
+.wc-hero-takeover .wc-hero-opp { display: inline-flex; align-items: center; gap: 6px; margin-left: 4px; }
+.wc-hero-venue { color: var(--text-2); margin-left: 8px; }
+.wc-hero-bcast { display: flex; flex-wrap: wrap; gap: 6px; }
+.wc-hero-cd-row { font-size: 18px; font-weight: 700; margin-top: 4px; }
+.wc-hero-cd-row .wc-cd-mini { font-size: 18px; }
+.wc-hero-cd-row .wc-hero-cd-num { color: #ffe177; }
+.wc-hero-form {
+  display: inline-flex; gap: 4px; margin-top: 10px;
+  align-items: center;
+}
+.wc-hero-form::before {
+  content: "Form:"; color: var(--muted); font-size: 11px;
+  letter-spacing: 0.6px; text-transform: uppercase; margin-right: 6px;
+}
+.wc-form-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 6px;
+  font-size: 11px; font-weight: 800; line-height: 1;
+}
+.wc-form-pill--w { background: rgba(45,208,120,0.22); color: #6cf2a3; border: 1px solid rgba(45,208,120,0.5); }
+.wc-form-pill--l { background: rgba(255,77,109,0.22); color: #ff8aa0; border: 1px solid rgba(255,77,109,0.5); }
+.wc-form-pill--d { background: rgba(255,203,5,0.20);  color: #ffe27a; border: 1px solid rgba(255,203,5,0.5); }
+.wc-hero-jump {
+  display: inline-block; margin-top: 10px;
+  color: #ffe177; text-decoration: none; font-weight: 600; font-size: 13px;
+}
+.wc-hero-jump:hover { text-decoration: underline; }
+
+.wc-scorers--empty .empty {
+  padding: 14px; color: var(--text-2); text-align: center;
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+.wc-scorers--empty ol:empty { display: block; } /* override the global ":empty hides" rule for the empty-state copy */
+@media (prefers-reduced-motion: reduce) {
+  .wc-score--pulse, .wc-match-card--live .wc-live-dot { animation: none; }
+}

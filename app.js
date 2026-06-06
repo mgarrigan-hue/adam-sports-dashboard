@@ -1668,6 +1668,30 @@ function wcMatchHasTeam(match, name) {
   return isAdamsWcTeam(match?.home?.name) || isAdamsWcTeam(match?.away?.name);
 }
 
+// Windows renders flag emoji as styled "country code" boxes (MX, ZA, KR…)
+// rather than actual flag pictures. To get consistent flags everywhere we
+// resolve the ISO 2-letter code from the flag's regional-indicator code points
+// and render a real <img> from flagcdn.com.
+function flagToCC(flag) {
+  if (!flag) return null;
+  const cps = [...flag].map(c => c.codePointAt(0));
+  if (cps.length < 2) return null;
+  const A = 0x1F1E6;
+  if (cps[0] < A || cps[0] > A + 25 || cps[1] < A || cps[1] > A + 25) return null;
+  return String.fromCharCode(cps[0] - A + 97, cps[1] - A + 97);
+}
+
+function wcFlagImg(team, opts = {}) {
+  const flag = team?.flag || "";
+  const cc = flagToCC(flag);
+  const cls = "wc-flag" + (opts.extraClass ? " " + opts.extraClass : "");
+  if (!cc) {
+    return `<span class="${cls}" aria-hidden="true">${escapeHtml(flag)}</span>`;
+  }
+  const alt = team?.name ? `${team.name} flag` : "";
+  return `<img class="${cls}" src="https://flagcdn.com/${cc}.svg" alt="${escapeAttr(alt)}" loading="lazy" decoding="async" />`;
+}
+
 function renderWcMatchCard(match, opts = {}) {
   if (!match) return "";
   const isBrazil = wcMatchHasTeam(match);
@@ -1696,12 +1720,12 @@ function renderWcMatchCard(match, opts = {}) {
       </div>
       <div class="wc-match-teams">
         <span class="wc-team wc-team--home${isAdamsWcTeam(match.home?.name) ? " is-brazil" : ""}">
-          <span class="wc-flag" aria-hidden="true">${escapeHtml(match.home?.flag || "")}</span>
+          ${wcFlagImg(match.home)}
           <span class="wc-team-name">${escapeHtml(match.home?.name || "TBD")}</span>
         </span>
         <span class="wc-score-wrap">${score}</span>
         <span class="wc-team wc-team--away${isAdamsWcTeam(match.away?.name) ? " is-brazil" : ""}">
-          <span class="wc-flag" aria-hidden="true">${escapeHtml(match.away?.flag || "")}</span>
+          ${wcFlagImg(match.away)}
           <span class="wc-team-name">${escapeHtml(match.away?.name || "TBD")}</span>
         </span>
       </div>
@@ -1760,7 +1784,7 @@ function renderWcFixtures(matches, opts = {}) {
       <summary>
         <span class="wc-day-label">${escapeHtml(wcMatchdayLabel(day.date))}</span>
         <span class="wc-day-count">${day.items.length} match${day.items.length === 1 ? "" : "es"}</span>
-        ${hasBrazil ? '<span class="wc-day-brazil">🇧🇷 Brazil</span>' : ""}
+        ${hasBrazil ? `<span class="wc-day-brazil">${wcFlagImg({flag:'🇧🇷', name:'Brazil'})} Brazil</span>` : ""}
       </summary>
       <div class="wc-day-grid">${day.items.map(m => renderWcMatchCard(m)).join("")}</div>
     </details>`;
@@ -1777,7 +1801,7 @@ function renderWcCountdown(tournament, matches) {
   const brazil = wcNextBrazilMatch(matches);
   const brazilHtml = brazil ? `
     <div class="wc-countdown-brazil">
-      <span class="wc-flag" aria-hidden="true">🇧🇷</span>
+      ${wcFlagImg({flag:'🇧🇷', name:'Brazil'})}
       Brazil's opener: <strong>${escapeHtml(brazil.home?.name)} vs ${escapeHtml(brazil.away?.name)}</strong>
       · ${escapeHtml(wcKickoffLabel(brazil.date))}
       <span class="wc-cd-mini">in ${escapeHtml(wcCountdownString(new Date(brazil.date)))}</span>
@@ -1815,7 +1839,7 @@ function renderWcGroups(groups) {
     const rows = (g.teams || []).map(t => {
       const fav = isAdamsWcTeam(t.name) ? " is-brazil-row" : "";
       return `<tr class="${fav}">
-        <td class="wc-tn"><span class="wc-flag">${escapeHtml(t.flag || "")}</span> ${escapeHtml(t.name)}</td>
+        <td class="wc-tn">${wcFlagImg(t)} ${escapeHtml(t.name)}</td>
         <td>${t.played|0}</td><td>${t.won|0}</td><td>${t.drawn|0}</td><td>${t.lost|0}</td>
         <td>${t.gd|0}</td><td><strong>${t.points|0}</strong></td>
       </tr>`;
@@ -1845,7 +1869,7 @@ function renderWcScorers(scorers) {
   if (!scorers || !scorers.length) return "";
   const rows = scorers.slice(0, 10).map((s, i) => `<li>
     <span class="wc-scorer-rank">${i + 1}</span>
-    <span class="wc-flag">${escapeHtml(s.flag || "")}</span>
+    ${wcFlagImg(s)}
     <span class="wc-scorer-name">${escapeHtml(s.name)}</span>
     <span class="wc-scorer-team">${escapeHtml(s.team || "")}</span>
     <span class="wc-scorer-goals">${(s.goals|0)} ⚽</span>
@@ -1945,7 +1969,7 @@ function renderWcAdamHero(data) {
   const cd = wcCountdownString(new Date(m.date));
   const html = `
     <div class="adam-next adam-next--wc">
-      <div class="adam-next-eyebrow">🇧🇷 Brazil today — World Cup</div>
+      <div class="adam-next-eyebrow">${wcFlagImg({flag:'🇧🇷', name:'Brazil'})} Brazil today — World Cup</div>
       <div class="adam-next-title">${escapeHtml(m.home?.name)} v ${escapeHtml(m.away?.name)}</div>
       <div class="adam-next-meta">${escapeHtml(wcKickoffLabel(m.date))} · ${escapeHtml(m.venue || "")}</div>
       <div class="adam-next-meta">${wcBroadcastBadge(m.broadcast) || ""} <span class="wc-cd-mini">Kickoff in ${escapeHtml(cd)}</span></div>

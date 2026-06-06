@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v26-wc-fixtures";
+const VERSION = "v27-flag-images";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

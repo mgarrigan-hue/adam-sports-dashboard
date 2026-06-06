@@ -1420,3 +1420,20 @@ body.wc-phase-post .nav-tab--wc { display: none; }
   .wc-day > summary { padding: 12px 12px; }
   .wc-day-grid { padding: 0 8px 10px 8px; grid-template-columns: 1fr; }
 }
+/* Flag images (replaces emoji-flag rendering which Windows shows as letter pairs).
+   Span.wc-flag remains for emoji fallback (TBD teams in knockout). */
+img.wc-flag {
+  width: 22px; height: 16px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.10);
+  object-fit: cover;
+  vertical-align: -3px;
+  display: inline-block;
+  background: rgba(255,255,255,0.04);
+}
+.wc-team img.wc-flag { margin-right: 8px; }
+.wc-tn img.wc-flag { margin-right: 6px; }
+.wc-scorers li img.wc-flag { margin-right: 6px; }
+.wc-day-brazil img.wc-flag { width: 18px; height: 13px; vertical-align: -2px; margin-right: 4px; }
+.wc-countdown-brazil img.wc-flag { width: 24px; height: 18px; vertical-align: -4px; margin-right: 6px; }
+.adam-next--wc img.wc-flag { width: 22px; height: 16px; vertical-align: -3px; margin-right: 4px; }

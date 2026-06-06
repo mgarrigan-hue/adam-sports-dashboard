@@ -68,6 +68,20 @@ self.addEventListener("periodicsync", (e) => {
   if (e.tag === "refresh-data") e.waitUntil(refreshDataCache());
 });
 
+// Click on a local/push notification → open the dashboard at the deep link
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const url = e.notification?.data?.url || "/";
+  e.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(list => {
+      for (const c of list) {
+        if (c.url.includes(self.location.host)) { c.focus(); c.navigate(url); return; }
+      }
+      return self.clients.openWindow(url);
+    })
+  );
+});
+
 // Network-first with cache fallback. Lets us update HTML/JS/CSS without
 // the user being stuck on a stale shell — iOS PWAs in particular cling to
 // the old cached HTML for hours otherwise.

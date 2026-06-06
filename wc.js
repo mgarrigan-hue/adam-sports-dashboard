@@ -388,6 +388,10 @@ function renderWorldCup(data) {
 
   const t = wc.tournament;
   let html = "";
+  // Push notification CTA — shown only during the tournament window.
+  if (phase === "during" || phase === "pre") {
+    html += renderWcPushButton();
+  }
   if (phase === "pre") {
     html += renderWcCountdown(t, wc.matches);
     html += renderWcGroups(wc.groups, wc.matches);
@@ -395,6 +399,7 @@ function renderWorldCup(data) {
   } else if (phase === "during") {
     html += renderWcCountdown(t, wc.matches);
     html += renderWcToday(wc.matches);
+    html += renderWcCommentary(wc);
     html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcBracket(wc.knockout_bracket);
     html += renderWcScorers(wc.top_scorers, { showEmpty: true });
@@ -411,12 +416,155 @@ function renderWorldCup(data) {
   }
   root.innerHTML = html;
   bindWcShareButtons(root);
+  bindWcPushButton();
 
   // Kick off (or stop) the 60s live refresh based on whether any match is live.
   if (phase === "during" && wcAnyLive(wc.matches)) startWcLiveRefresh();
   else stopWcLiveRefresh();
 
   return phase;
+}
+
+// ===== LIVE COMMENTARY (Item K) =====
+// UI shell. Source data lives in wc.matches[].commentary[] (array of
+// {minute, type, text}) — currently empty in the schedule fallback, but
+// the WC fetcher will populate it once BBC live JSON parsing lands.
+// We render whatever's there for any live Brazil match; if commentary is
+// empty we show a friendly placeholder so the UI still acknowledges the
+// match is live.
+function renderWcCommentary(wc) {
+  if (!wc?.matches?.length) return "";
+  const live = wc.matches.filter(wcIsLive);
+  if (!live.length) return "";
+  // Prefer Adam's team's match, fall back to the first live match
+  const target = live.find(wcMatchHasTeam) || live[0];
+  const home = target.home?.name || "TBD";
+  const away = target.away?.name || "TBD";
+  const events = Array.isArray(target.commentary) ? target.commentary : [];
+  const items = events.length
+    ? events.slice(-25).reverse().map(ev =>
+        `<li><span class="wc-commentary-min">${escapeHtml(String(ev.minute || ev.time || "—"))}</span> ${escapeHtml(ev.text || ev.description || "")}</li>`
+      ).join("")
+    : `<li class="wc-commentary-empty">Live commentary will appear here as the match develops.<br/><small>Source: BBC live JSON — populated by the next data refresh.</small></li>`;
+  return `<section class="wc-commentary" data-match-id="${escapeAttr(target.id || "")}">
+    <div class="wc-commentary-head">📡 Live · ${escapeHtml(home)} vs ${escapeHtml(away)}</div>
+    <ul class="wc-commentary-list">${items}</ul>
+  </section>`;
+}
+
+// ===== PUSH NOTIFICATIONS SCAFFOLD (Item M) =====
+// Client-only. Two modes:
+//  1) If a real push server is reachable, register a PushManager subscription
+//     and POST it. The server-side (Cloudflare Worker + VAPID) is a separate
+//     setup task — endpoint is a placeholder constant below.
+//  2) Fallback for everyone else: listen for visibilitychange + a per-minute
+//     timer; if a Brazil match kicks off in the next 30 min, fire a LOCAL
+//     notification via registration.showNotification() (no server needed).
+//
+// VAPID public key placeholder — once the Worker is deployed, paste its
+// base64url-encoded VAPID public key here and the subscribe() call will
+// upgrade automatically. Until then, button shows "Local alerts only".
+const VAPID_PUBLIC_KEY = ""; // PLACEHOLDER — see notes/push-server-todo.md
+const PUSH_SERVER_URL = "https://push.garrigan.me/subscribe";
+
+function renderWcPushButton() {
+  if (typeof Notification === "undefined") return "";
+  const perm = Notification.permission;
+  const label = perm === "granted"
+    ? "🔔 Brazil alerts: enabled"
+    : perm === "denied"
+      ? "🔕 Notifications blocked"
+      : "🔔 Enable Brazil match alerts";
+  const cls = perm === "granted" ? " is-enabled" : "";
+  const disabled = perm === "denied" ? " disabled" : "";
+  return `<button type="button" class="wc-push-btn${cls}" id="wc-push-btn"${disabled} aria-label="Enable Brazil match alerts">${label}</button>`;
+}
+
+function bindWcPushButton() {
+  const btn = document.getElementById("wc-push-btn");
+  if (!btn || btn.__bound) return;
+  btn.__bound = true;
+  btn.addEventListener("click", async () => {
+    if (typeof Notification === "undefined" || Notification.permission === "denied") return;
+    try {
+      const perm = Notification.permission === "granted"
+        ? "granted"
+        : await Notification.requestPermission();
+      if (perm !== "granted") return;
+
+      // Register a server push subscription IF we have a VAPID key.
+      const reg = await navigator.serviceWorker?.ready;
+      if (reg && "pushManager" in reg && VAPID_PUBLIC_KEY) {
+        try {
+          const sub = await reg.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: vapidToUint8(VAPID_PUBLIC_KEY),
+          });
+          // Best-effort POST — server may not exist yet.
+          fetch(PUSH_SERVER_URL, {
+            method: "POST", mode: "cors",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ subscription: sub, tag: "brazil-wc" }),
+          }).catch(() => { /* server not deployed yet — local fallback still works */ });
+        } catch (err) {
+          console.warn("Push subscribe failed (Worker not deployed?)", err);
+        }
+      }
+
+      // Start the local fallback ticker — fires showNotification() when
+      // a Brazil match is < 30 min from kickoff. Works without any server.
+      startLocalWcAlerts();
+      btn.classList.add("is-enabled");
+      btn.textContent = "🔔 Brazil alerts: enabled";
+    } catch (err) {
+      console.warn("requestPermission failed", err);
+    }
+  });
+}
+
+function vapidToUint8(b64) {
+  const padding = "=".repeat((4 - b64.length % 4) % 4);
+  const base64 = (b64 + padding).replace(/-/g, "+").replace(/_/g, "/");
+  const raw = atob(base64);
+  const arr = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) arr[i] = raw.charCodeAt(i);
+  return arr;
+}
+
+let WC_LOCAL_ALERT_TIMER = null;
+const WC_LOCAL_ALERT_INTERVAL = 60 * 1000; // check once per minute
+const WC_LOCAL_ALERT_WINDOW = 30 * 60 * 1000; // 30 min before kickoff
+const WC_LOCAL_ALERT_FIRED = new Set(); // match ids already alerted
+
+function startLocalWcAlerts() {
+  if (WC_LOCAL_ALERT_TIMER) return;
+  const tick = async () => {
+    if (typeof Notification === "undefined" || Notification.permission !== "granted") return;
+    const reg = await navigator.serviceWorker?.ready;
+    if (!reg || typeof reg.showNotification !== "function") return;
+    const matches = DATA?.worldCup?.matches || [];
+    const now = Date.now();
+    for (const m of matches) {
+      if (!wcMatchHasTeam(m) || !m.id || WC_LOCAL_ALERT_FIRED.has(m.id)) continue;
+      const t = new Date(m.date).getTime();
+      if (!isFinite(t)) continue;
+      const delta = t - now;
+      if (delta > 0 && delta <= WC_LOCAL_ALERT_WINDOW) {
+        WC_LOCAL_ALERT_FIRED.add(m.id);
+        const home = m.home?.name || "TBD";
+        const away = m.away?.name || "TBD";
+        reg.showNotification("⚽ Brazil kicks off soon!", {
+          body: `${home} vs ${away} · ${wcKickoffLabel(m.date)}`,
+          tag: `brazil-${m.id}`,
+          icon: "icons/icon-192.svg",
+          badge: "icons/icon-192.svg",
+          data: { url: `${location.origin}${location.pathname}#wc-m-${m.id}` },
+        }).catch(() => {});
+      }
+    }
+  };
+  tick();
+  WC_LOCAL_ALERT_TIMER = setInterval(tick, WC_LOCAL_ALERT_INTERVAL);
 }
 
 // ----- Live auto-refresh -----

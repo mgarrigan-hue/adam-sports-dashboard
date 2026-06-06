@@ -34,12 +34,15 @@ jobs:
         run: |
           set +e
           python scripts/fetch_f1.py
+          python scripts/fetch_f1_standings.py
           python scripts/fetch_intl_rugby.py
           python scripts/fetch_provinces.py
           python scripts/fetch_schools.py
           python scripts/fetch_dublin_club.py
           python scripts/fetch_news.py
           python scripts/fetch_world_cup.py
+          python scripts/fetch_rugby_tables.py
+          python scripts/fetch_weather.py
           exit 0
 
       - name: Validate links (warn-only)

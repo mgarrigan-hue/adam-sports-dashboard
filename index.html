@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="Adam's Sports"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <!-- frame-ancestors is intentionally omitted: browsers ignore it when delivered via <meta> (logs a console error). Enforced via HTTP headers / Pages config instead. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.jolpi.ca https://api.open-meteo.com https://geocoding-api.open-meteo.com; base-uri 'self'; form-action 'none'; object-src 'none';"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="x-dns-prefetch-control" content="on"/>
 <meta name="description" content="A personal sports dashboard — F1, International Rugby, Irish Provinces and Leinster Schools."/>
@@ -185,6 +185,10 @@
       <div class="panel-body" id="schools-body"><div aria-busy="true"><span class="skeleton skeleton-block lg"></span><span class="skeleton skeleton-block"></span><span class="skeleton skeleton-block"></span></div></div>
     </section>
   </div>
+  <section class="card card-wide" id="panel-rugby-tables" style="margin-top:18px">
+    <div class="card-head"><h3>📊 Standings</h3></div>
+    <div class="panel-body" id="rugby-tables-body"><div aria-busy="true"><span class="skeleton skeleton-block lg"></span><span class="skeleton skeleton-block"></span></div></div>
+  </section>
 </section>
 
 <!-- CLUB ============================================================== -->

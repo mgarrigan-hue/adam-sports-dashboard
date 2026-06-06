@@ -11,6 +11,7 @@ const F1_TEAM_ALT = ["red bull", "rb", "vcarb", "racing bulls"];
 
 const DATA_FILES = {
   f1: "data/f1.json",
+  f1Standings: "data/f1_standings.json",
   intl: "data/intl_rugby.json",
   prov: "data/provinces.json",
   schools: "data/schools.json",
@@ -19,6 +20,7 @@ const DATA_FILES = {
   club: "data/dublin_club.json",
   highlights: "data/highlights.json",
   worldCup: "data/world_cup.json",
+  rugbyTables: "data/rugby_tables.json",
 };
 
 let WATCH = {};
@@ -1271,19 +1273,27 @@ function startCountdown(target) {
 }
 
 // ---------- F1 panel ----------
-function renderF1(d) {
+function renderF1(d, standings) {
   const el = document.getElementById("f1-body");
   if (!d) { el.textContent = "No F1 data yet."; return; }
 
-  const driverRows = (d.driver_standings || []).slice(0, 10).map((s, i) => `
+  // Prefer dedicated standings file (fetched fresh from Jolpica) over the
+  // partial standings embedded in d.json. Fall back to inline if unavailable.
+  const driversList = (standings?.drivers?.length ? standings.drivers
+                        : (d.driver_standings || []).map((s, i) => ({ rank: i + 1, driver: s.driver, team: s.team, points: s.points, wins: 0 })));
+  const consList    = (standings?.constructors?.length ? standings.constructors
+                        : (d.constructor_standings || []).map((s, i) => ({ rank: i + 1, team: s.team, points: s.points, wins: 0 })));
+
+  const driverRows = driversList.slice(0, 10).map(s => `
     <tr data-team="${escapeAttr((s.team || "").toLowerCase())}" class="${isFavF1(s.driver) ? "fav-row" : ""}">
-      <td>${i + 1}</td><td>${escapeHtml(s.driver)}</td>
-      <td>${escapeHtml(s.team || "")}</td><td>${s.points ?? ""}</td>
+      <td>${s.rank ?? ""}</td><td>${escapeHtml(s.driver || "")}</td>
+      <td>${escapeHtml(s.team || "")}</td><td>${s.points ?? ""}</td><td>${s.wins ?? ""}</td>
     </tr>`).join("");
-  const teamRows = (d.constructor_standings || []).slice(0, 10).map((s, i) => `
+  const teamRows = consList.slice(0, 10).map(s => `
     <tr data-team="${escapeAttr((s.team || "").toLowerCase())}" class="${(s.team || "").toLowerCase().includes("red bull") || (s.team || "").toLowerCase().includes("racing bull") ? "fav-row" : ""}">
-      <td>${i + 1}</td><td>${escapeHtml(s.team)}</td><td>${s.points ?? ""}</td>
+      <td>${s.rank ?? ""}</td><td>${escapeHtml(s.team || "")}</td><td>${s.points ?? ""}</td><td>${s.wins ?? ""}</td>
     </tr>`).join("");
+  const stSource = standings?.source ? `<span class="muted small">via ${escapeHtml(standings.source)}</span>` : "";
 
   // Weekend timeline
   let timelineHtml = "";
@@ -1401,16 +1411,99 @@ function renderF1(d) {
     ${recentHtml}
     <div class="standings-grid">
       <div>
-        <div class="sub">Driver standings</div>
-        <table class="standings"><tr><th>#</th><th>Driver</th><th>Team</th><th>Pts</th></tr>${driverRows || `<tr><td colspan="4">—</td></tr>`}</table>
+        <div class="sub">Driver standings ${stSource}</div>
+        <table class="standings"><tr><th>#</th><th>Driver</th><th>Team</th><th>Pts</th><th>Wins</th></tr>${driverRows || `<tr><td colspan="5">—</td></tr>`}</table>
       </div>
       <div>
-        <div class="sub">Constructors</div>
-        <table class="standings"><tr><th>#</th><th>Team</th><th>Pts</th></tr>${teamRows || `<tr><td colspan="3">—</td></tr>`}</table>
+        <div class="sub">Constructors ${stSource}</div>
+        <table class="standings"><tr><th>#</th><th>Team</th><th>Pts</th><th>Wins</th></tr>${teamRows || `<tr><td colspan="4">—</td></tr>`}</table>
       </div>
     </div>
   `;
 }
+
+// ===== FORM SPARKLINES (Item C) =====
+// Takes an array of "W"/"L"/"D" (or full words) and returns 5 colored pills.
+// Used on standings rows, team cards, and (existing) Brazil opponent block.
+function formSparkline(results, opts = {}) {
+  if (!Array.isArray(results) || !results.length) return "";
+  const limit = opts.limit || 5;
+  const pills = results.slice(-limit).map(r => {
+    const c = String(r || "").trim().toUpperCase().charAt(0);
+    const cls = c === "W" ? "spark-w" : c === "L" ? "spark-l" : c === "D" ? "spark-d" : "";
+    return `<span class="form-spark-dot ${cls}" title="${escapeAttr(String(r))}">${escapeHtml(c || "·")}</span>`;
+  }).join("");
+  return `<span class="form-spark" aria-label="Recent form">${pills}</span>`;
+}
+
+// Derive last-N W/L/D from a results array (each item has home/away/home_score/away_score)
+// for a specific team. Used by club + rugby cards where source data has no
+// pre-baked form array.
+function computeFormFor(results, teamName, limit = 5) {
+  if (!Array.isArray(results) || !teamName) return [];
+  const out = [];
+  for (const m of results) {
+    if (out.length >= limit) break;
+    if (m.home_score == null || m.away_score == null) continue;
+    const isHome = sameTeam(m.home, teamName);
+    const isAway = sameTeam(m.away, teamName);
+    if (!isHome && !isAway) continue;
+    const us = isHome ? Number(m.home_score) : Number(m.away_score);
+    const them = isHome ? Number(m.away_score) : Number(m.home_score);
+    if (!isFinite(us) || !isFinite(them)) continue;
+    out.push(us > them ? "W" : us < them ? "L" : "D");
+  }
+  return out;
+}
+
+// ===== RUGBY STANDINGS (Item J) =====
+function renderRugbyTables(data) {
+  const el = document.getElementById("rugby-tables-body");
+  if (!el) return;
+  const tables = data?.rugbyTables?.tables;
+  if (!tables) {
+    el.innerHTML = `<p class="empty">Standings data unavailable.</p>`;
+    return;
+  }
+  const snap = data.rugbyTables.snapshot_date || "";
+  const snapAge = snap ? Math.floor((Date.now() - new Date(snap).getTime()) / 86400000) : null;
+  const staleBadge = (snapAge != null && snapAge > 7)
+    ? `<span class="stale-warn" title="Snapshot from ${escapeAttr(snap)} — may be stale">⚠️ ${snapAge}d old</span>`
+    : (snap ? `<span class="muted small">snapshot: ${escapeHtml(snap)}</span>` : "");
+
+  const renderOne = (key, table) => {
+    if (!table?.teams?.length) return "";
+    const rows = table.teams.map(t => {
+      const isFav = isFavRugby(t.team);
+      return `<tr class="${isFav ? "fav-row" : ""}">
+        <td>${t.rank}</td>
+        <td>${escapeHtml(t.team)}</td>
+        <td>${t.p ?? "-"}</td>
+        <td>${t.w ?? "-"}</td>
+        <td>${t.d ?? "-"}</td>
+        <td>${t.l ?? "-"}</td>
+        <td>${t.bp ?? "-"}</td>
+        <td><strong>${t.pts ?? "-"}</strong></td>
+      </tr>`;
+    }).join("");
+    return `<div>
+      <div class="sub">${escapeHtml(table.name)} <span class="muted small">${escapeHtml(table.season || "")}</span></div>
+      <table class="rugby-standings">
+        <thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>BP</th><th>Pts</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  };
+
+  el.innerHTML = `
+    <div class="standings-grid">
+      ${renderOne("urc", tables.urc)}
+      ${renderOne("six_nations", tables.six_nations)}
+    </div>
+    <div class="muted small" style="margin-top:10px">${staleBadge}</div>
+  `;
+}
+
 
 // ---------- Rugby panels ----------
 function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = false } = {}) {
@@ -2351,10 +2444,11 @@ function rerenderAll() {
   renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true });
   renderAdam(DATA);
   renderWcAdamHero(DATA);
-  renderF1(DATA.f1);
+  renderF1(DATA.f1, DATA.f1Standings);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
+  renderRugbyTables(DATA);
   renderClub(DATA.club);
   renderWorldCup(DATA);
   renderWcTopbarChip(DATA);
@@ -2370,8 +2464,9 @@ function rerenderAll() {
   bindInstallPrompt();
   registerSW();
 
-  const [f1, intl, prov, schools, news, watch, club, highlights, worldCup] = await Promise.all([
+  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, worldCup, rugbyTables] = await Promise.all([
     loadJson(DATA_FILES.f1),
+    loadJson(DATA_FILES.f1Standings),
     loadJson(DATA_FILES.intl),
     loadJson(DATA_FILES.prov),
     loadJson(DATA_FILES.schools),
@@ -2380,8 +2475,9 @@ function rerenderAll() {
     loadJson(DATA_FILES.club),
     loadJson(DATA_FILES.highlights),
     loadJson(DATA_FILES.worldCup),
+    loadJson(DATA_FILES.rugbyTables),
   ]);
-  DATA = { f1, intl, prov, schools, news, club, worldCup };
+  DATA = { f1, f1Standings, intl, prov, schools, news, club, worldCup, rugbyTables };
   WATCH = watch || {};
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 

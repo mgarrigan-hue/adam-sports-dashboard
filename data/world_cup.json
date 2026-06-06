@@ -19,7 +19,7 @@
         {
           "name": "Mexico",
           "code": "MEX",
-          "flag": "\ud83c\uddf2\ud83c\uddfd",
+          "flag": "🇲🇽",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -33,7 +33,7 @@
         {
           "name": "South Africa",
           "code": "RSA",
-          "flag": "\ud83c\uddff\ud83c\udde6",
+          "flag": "🇿🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -47,7 +47,7 @@
         {
           "name": "South Korea",
           "code": "KOR",
-          "flag": "\ud83c\uddf0\ud83c\uddf7",
+          "flag": "🇰🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -61,7 +61,7 @@
         {
           "name": "Czech Republic",
           "code": "CZE",
-          "flag": "\ud83c\udde8\ud83c\uddff",
+          "flag": "🇨🇿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -80,7 +80,7 @@
         {
           "name": "Canada",
           "code": "CAN",
-          "flag": "\ud83c\udde8\ud83c\udde6",
+          "flag": "🇨🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -94,7 +94,7 @@
         {
           "name": "Bosnia & Herzegovina",
           "code": "BIH",
-          "flag": "\ud83c\udde7\ud83c\udde6",
+          "flag": "🇧🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -108,7 +108,7 @@
         {
           "name": "Qatar",
           "code": "QAT",
-          "flag": "\ud83c\uddf6\ud83c\udde6",
+          "flag": "🇶🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -122,7 +122,7 @@
         {
           "name": "Switzerland",
           "code": "SUI",
-          "flag": "\ud83c\udde8\ud83c\udded",
+          "flag": "🇨🇭",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -141,7 +141,7 @@
         {
           "name": "Brazil",
           "code": "BRA",
-          "flag": "\ud83c\udde7\ud83c\uddf7",
+          "flag": "🇧🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -155,7 +155,7 @@
         {
           "name": "Morocco",
           "code": "MAR",
-          "flag": "\ud83c\uddf2\ud83c\udde6",
+          "flag": "🇲🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -169,7 +169,7 @@
         {
           "name": "Haiti",
           "code": "HAI",
-          "flag": "\ud83c\udded\ud83c\uddf9",
+          "flag": "🇭🇹",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -183,7 +183,7 @@
         {
           "name": "Scotland",
           "code": "SCO",
-          "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
+          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -202,7 +202,7 @@
         {
           "name": "USA",
           "code": "USA",
-          "flag": "\ud83c\uddfa\ud83c\uddf8",
+          "flag": "🇺🇸",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -216,7 +216,7 @@
         {
           "name": "Paraguay",
           "code": "PAR",
-          "flag": "\ud83c\uddf5\ud83c\uddfe",
+          "flag": "🇵🇾",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -230,7 +230,7 @@
         {
           "name": "Australia",
           "code": "AUS",
-          "flag": "\ud83c\udde6\ud83c\uddfa",
+          "flag": "🇦🇺",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -242,9 +242,9 @@
           "form": []
         },
         {
-          "name": "T\u00fcrkiye",
+          "name": "Türkiye",
           "code": "TUR",
-          "flag": "\ud83c\uddf9\ud83c\uddf7",
+          "flag": "🇹🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -263,7 +263,7 @@
         {
           "name": "Germany",
           "code": "GER",
-          "flag": "\ud83c\udde9\ud83c\uddea",
+          "flag": "🇩🇪",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -275,9 +275,9 @@
           "form": []
         },
         {
-          "name": "Cura\u00e7ao",
+          "name": "Curaçao",
           "code": "CUW",
-          "flag": "\ud83c\udde8\ud83c\uddfc",
+          "flag": "🇨🇼",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -291,7 +291,7 @@
         {
           "name": "Ivory Coast",
           "code": "CIV",
-          "flag": "\ud83c\udde8\ud83c\uddee",
+          "flag": "🇨🇮",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -305,7 +305,7 @@
         {
           "name": "Ecuador",
           "code": "ECU",
-          "flag": "\ud83c\uddea\ud83c\udde8",
+          "flag": "🇪🇨",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -324,7 +324,7 @@
         {
           "name": "Netherlands",
           "code": "NED",
-          "flag": "\ud83c\uddf3\ud83c\uddf1",
+          "flag": "🇳🇱",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -338,7 +338,7 @@
         {
           "name": "Japan",
           "code": "JPN",
-          "flag": "\ud83c\uddef\ud83c\uddf5",
+          "flag": "🇯🇵",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -352,7 +352,7 @@
         {
           "name": "Sweden",
           "code": "SWE",
-          "flag": "\ud83c\uddf8\ud83c\uddea",
+          "flag": "🇸🇪",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -366,7 +366,7 @@
         {
           "name": "Tunisia",
           "code": "TUN",
-          "flag": "\ud83c\uddf9\ud83c\uddf3",
+          "flag": "🇹🇳",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -385,7 +385,7 @@
         {
           "name": "Belgium",
           "code": "BEL",
-          "flag": "\ud83c\udde7\ud83c\uddea",
+          "flag": "🇧🇪",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -399,7 +399,7 @@
         {
           "name": "Egypt",
           "code": "EGY",
-          "flag": "\ud83c\uddea\ud83c\uddec",
+          "flag": "🇪🇬",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -413,7 +413,7 @@
         {
           "name": "Iran",
           "code": "IRN",
-          "flag": "\ud83c\uddee\ud83c\uddf7",
+          "flag": "🇮🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -427,7 +427,7 @@
         {
           "name": "New Zealand",
           "code": "NZL",
-          "flag": "\ud83c\uddf3\ud83c\uddff",
+          "flag": "🇳🇿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -446,7 +446,7 @@
         {
           "name": "Spain",
           "code": "ESP",
-          "flag": "\ud83c\uddea\ud83c\uddf8",
+          "flag": "🇪🇸",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -460,7 +460,7 @@
         {
           "name": "Cape Verde",
           "code": "CPV",
-          "flag": "\ud83c\udde8\ud83c\uddfb",
+          "flag": "🇨🇻",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -474,7 +474,7 @@
         {
           "name": "Saudi Arabia",
           "code": "KSA",
-          "flag": "\ud83c\uddf8\ud83c\udde6",
+          "flag": "🇸🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -488,7 +488,7 @@
         {
           "name": "Uruguay",
           "code": "URU",
-          "flag": "\ud83c\uddfa\ud83c\uddfe",
+          "flag": "🇺🇾",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -507,7 +507,7 @@
         {
           "name": "France",
           "code": "FRA",
-          "flag": "\ud83c\uddeb\ud83c\uddf7",
+          "flag": "🇫🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -521,7 +521,7 @@
         {
           "name": "Senegal",
           "code": "SEN",
-          "flag": "\ud83c\uddf8\ud83c\uddf3",
+          "flag": "🇸🇳",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -535,7 +535,7 @@
         {
           "name": "Iraq",
           "code": "IRQ",
-          "flag": "\ud83c\uddee\ud83c\uddf6",
+          "flag": "🇮🇶",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -549,7 +549,7 @@
         {
           "name": "Norway",
           "code": "NOR",
-          "flag": "\ud83c\uddf3\ud83c\uddf4",
+          "flag": "🇳🇴",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -568,7 +568,7 @@
         {
           "name": "Argentina",
           "code": "ARG",
-          "flag": "\ud83c\udde6\ud83c\uddf7",
+          "flag": "🇦🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -582,7 +582,7 @@
         {
           "name": "Algeria",
           "code": "ALG",
-          "flag": "\ud83c\udde9\ud83c\uddff",
+          "flag": "🇩🇿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -596,7 +596,7 @@
         {
           "name": "Austria",
           "code": "AUT",
-          "flag": "\ud83c\udde6\ud83c\uddf9",
+          "flag": "🇦🇹",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -610,7 +610,7 @@
         {
           "name": "Jordan",
           "code": "JOR",
-          "flag": "\ud83c\uddef\ud83c\uddf4",
+          "flag": "🇯🇴",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -629,7 +629,7 @@
         {
           "name": "Portugal",
           "code": "POR",
-          "flag": "\ud83c\uddf5\ud83c\uddf9",
+          "flag": "🇵🇹",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -643,7 +643,7 @@
         {
           "name": "DR Congo",
           "code": "COD",
-          "flag": "\ud83c\udde8\ud83c\udde9",
+          "flag": "🇨🇩",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -657,7 +657,7 @@
         {
           "name": "Uzbekistan",
           "code": "UZB",
-          "flag": "\ud83c\uddfa\ud83c\uddff",
+          "flag": "🇺🇿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -671,7 +671,7 @@
         {
           "name": "Colombia",
           "code": "COL",
-          "flag": "\ud83c\udde8\ud83c\uddf4",
+          "flag": "🇨🇴",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -690,7 +690,7 @@
         {
           "name": "England",
           "code": "ENG",
-          "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -704,7 +704,7 @@
         {
           "name": "Croatia",
           "code": "CRO",
-          "flag": "\ud83c\udded\ud83c\uddf7",
+          "flag": "🇭🇷",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -718,7 +718,7 @@
         {
           "name": "Ghana",
           "code": "GHA",
-          "flag": "\ud83c\uddec\ud83c\udded",
+          "flag": "🇬🇭",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -732,7 +732,7 @@
         {
           "name": "Panama",
           "code": "PAN",
-          "flag": "\ud83c\uddf5\ud83c\udde6",
+          "flag": "🇵🇦",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -756,12 +756,12 @@
       "home": {
         "name": "Mexico",
         "code": "MEX",
-        "flag": "\ud83c\uddf2\ud83c\uddfd"
+        "flag": "🇲🇽"
       },
       "away": {
         "name": "South Africa",
         "code": "RSA",
-        "flag": "\ud83c\uddff\ud83c\udde6"
+        "flag": "🇿🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -770,7 +770,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -783,12 +783,12 @@
       "home": {
         "name": "South Korea",
         "code": "KOR",
-        "flag": "\ud83c\uddf0\ud83c\uddf7"
+        "flag": "🇰🇷"
       },
       "away": {
         "name": "Czech Republic",
         "code": "CZE",
-        "flag": "\ud83c\udde8\ud83c\uddff"
+        "flag": "🇨🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -797,7 +797,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -810,12 +810,12 @@
       "home": {
         "name": "Canada",
         "code": "CAN",
-        "flag": "\ud83c\udde8\ud83c\udde6"
+        "flag": "🇨🇦"
       },
       "away": {
         "name": "Bosnia & Herzegovina",
         "code": "BIH",
-        "flag": "\ud83c\udde7\ud83c\udde6"
+        "flag": "🇧🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -824,7 +824,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -837,12 +837,12 @@
       "home": {
         "name": "USA",
         "code": "USA",
-        "flag": "\ud83c\uddfa\ud83c\uddf8"
+        "flag": "🇺🇸"
       },
       "away": {
         "name": "Paraguay",
         "code": "PAR",
-        "flag": "\ud83c\uddf5\ud83c\uddfe"
+        "flag": "🇵🇾"
       },
       "score": null,
       "status": "scheduled",
@@ -851,7 +851,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -864,12 +864,12 @@
       "home": {
         "name": "Brazil",
         "code": "BRA",
-        "flag": "\ud83c\udde7\ud83c\uddf7"
+        "flag": "🇧🇷"
       },
       "away": {
         "name": "Morocco",
         "code": "MAR",
-        "flag": "\ud83c\uddf2\ud83c\udde6"
+        "flag": "🇲🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -878,7 +878,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -891,12 +891,12 @@
       "home": {
         "name": "Haiti",
         "code": "HAI",
-        "flag": "\ud83c\udded\ud83c\uddf9"
+        "flag": "🇭🇹"
       },
       "away": {
         "name": "Scotland",
         "code": "SCO",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
       },
       "score": null,
       "status": "scheduled",
@@ -905,7 +905,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -918,12 +918,12 @@
       "home": {
         "name": "Australia",
         "code": "AUS",
-        "flag": "\ud83c\udde6\ud83c\uddfa"
+        "flag": "🇦🇺"
       },
       "away": {
-        "name": "T\u00fcrkiye",
+        "name": "Türkiye",
         "code": "TUR",
-        "flag": "\ud83c\uddf9\ud83c\uddf7"
+        "flag": "🇹🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -932,7 +932,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -945,12 +945,12 @@
       "home": {
         "name": "Qatar",
         "code": "QAT",
-        "flag": "\ud83c\uddf6\ud83c\udde6"
+        "flag": "🇶🇦"
       },
       "away": {
         "name": "Switzerland",
         "code": "SUI",
-        "flag": "\ud83c\udde8\ud83c\udded"
+        "flag": "🇨🇭"
       },
       "score": null,
       "status": "scheduled",
@@ -959,7 +959,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -972,12 +972,12 @@
       "home": {
         "name": "Germany",
         "code": "GER",
-        "flag": "\ud83c\udde9\ud83c\uddea"
+        "flag": "🇩🇪"
       },
       "away": {
-        "name": "Cura\u00e7ao",
+        "name": "Curaçao",
         "code": "CUW",
-        "flag": "\ud83c\udde8\ud83c\uddfc"
+        "flag": "🇨🇼"
       },
       "score": null,
       "status": "scheduled",
@@ -986,7 +986,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -999,12 +999,12 @@
       "home": {
         "name": "Ivory Coast",
         "code": "CIV",
-        "flag": "\ud83c\udde8\ud83c\uddee"
+        "flag": "🇨🇮"
       },
       "away": {
         "name": "Ecuador",
         "code": "ECU",
-        "flag": "\ud83c\uddea\ud83c\udde8"
+        "flag": "🇪🇨"
       },
       "score": null,
       "status": "scheduled",
@@ -1013,7 +1013,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1026,12 +1026,12 @@
       "home": {
         "name": "Netherlands",
         "code": "NED",
-        "flag": "\ud83c\uddf3\ud83c\uddf1"
+        "flag": "🇳🇱"
       },
       "away": {
         "name": "Japan",
         "code": "JPN",
-        "flag": "\ud83c\uddef\ud83c\uddf5"
+        "flag": "🇯🇵"
       },
       "score": null,
       "status": "scheduled",
@@ -1040,7 +1040,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1053,12 +1053,12 @@
       "home": {
         "name": "Sweden",
         "code": "SWE",
-        "flag": "\ud83c\uddf8\ud83c\uddea"
+        "flag": "🇸🇪"
       },
       "away": {
         "name": "Tunisia",
         "code": "TUN",
-        "flag": "\ud83c\uddf9\ud83c\uddf3"
+        "flag": "🇹🇳"
       },
       "score": null,
       "status": "scheduled",
@@ -1067,7 +1067,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1080,12 +1080,12 @@
       "home": {
         "name": "Spain",
         "code": "ESP",
-        "flag": "\ud83c\uddea\ud83c\uddf8"
+        "flag": "🇪🇸"
       },
       "away": {
         "name": "Cape Verde",
         "code": "CPV",
-        "flag": "\ud83c\udde8\ud83c\uddfb"
+        "flag": "🇨🇻"
       },
       "score": null,
       "status": "scheduled",
@@ -1094,7 +1094,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1107,12 +1107,12 @@
       "home": {
         "name": "Saudi Arabia",
         "code": "KSA",
-        "flag": "\ud83c\uddf8\ud83c\udde6"
+        "flag": "🇸🇦"
       },
       "away": {
         "name": "Uruguay",
         "code": "URU",
-        "flag": "\ud83c\uddfa\ud83c\uddfe"
+        "flag": "🇺🇾"
       },
       "score": null,
       "status": "scheduled",
@@ -1121,7 +1121,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1134,12 +1134,12 @@
       "home": {
         "name": "Belgium",
         "code": "BEL",
-        "flag": "\ud83c\udde7\ud83c\uddea"
+        "flag": "🇧🇪"
       },
       "away": {
         "name": "Egypt",
         "code": "EGY",
-        "flag": "\ud83c\uddea\ud83c\uddec"
+        "flag": "🇪🇬"
       },
       "score": null,
       "status": "scheduled",
@@ -1148,7 +1148,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1161,12 +1161,12 @@
       "home": {
         "name": "Iran",
         "code": "IRN",
-        "flag": "\ud83c\uddee\ud83c\uddf7"
+        "flag": "🇮🇷"
       },
       "away": {
         "name": "New Zealand",
         "code": "NZL",
-        "flag": "\ud83c\uddf3\ud83c\uddff"
+        "flag": "🇳🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -1175,7 +1175,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1188,12 +1188,12 @@
       "home": {
         "name": "France",
         "code": "FRA",
-        "flag": "\ud83c\uddeb\ud83c\uddf7"
+        "flag": "🇫🇷"
       },
       "away": {
         "name": "Senegal",
         "code": "SEN",
-        "flag": "\ud83c\uddf8\ud83c\uddf3"
+        "flag": "🇸🇳"
       },
       "score": null,
       "status": "scheduled",
@@ -1202,7 +1202,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1215,12 +1215,12 @@
       "home": {
         "name": "Iraq",
         "code": "IRQ",
-        "flag": "\ud83c\uddee\ud83c\uddf6"
+        "flag": "🇮🇶"
       },
       "away": {
         "name": "Norway",
         "code": "NOR",
-        "flag": "\ud83c\uddf3\ud83c\uddf4"
+        "flag": "🇳🇴"
       },
       "score": null,
       "status": "scheduled",
@@ -1229,7 +1229,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1242,12 +1242,12 @@
       "home": {
         "name": "Argentina",
         "code": "ARG",
-        "flag": "\ud83c\udde6\ud83c\uddf7"
+        "flag": "🇦🇷"
       },
       "away": {
         "name": "Algeria",
         "code": "ALG",
-        "flag": "\ud83c\udde9\ud83c\uddff"
+        "flag": "🇩🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -1256,7 +1256,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1269,12 +1269,12 @@
       "home": {
         "name": "Austria",
         "code": "AUT",
-        "flag": "\ud83c\udde6\ud83c\uddf9"
+        "flag": "🇦🇹"
       },
       "away": {
         "name": "Jordan",
         "code": "JOR",
-        "flag": "\ud83c\uddef\ud83c\uddf4"
+        "flag": "🇯🇴"
       },
       "score": null,
       "status": "scheduled",
@@ -1283,7 +1283,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1296,12 +1296,12 @@
       "home": {
         "name": "England",
         "code": "ENG",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "away": {
         "name": "Croatia",
         "code": "CRO",
-        "flag": "\ud83c\udded\ud83c\uddf7"
+        "flag": "🇭🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -1310,7 +1310,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1323,12 +1323,12 @@
       "home": {
         "name": "Ghana",
         "code": "GHA",
-        "flag": "\ud83c\uddec\ud83c\udded"
+        "flag": "🇬🇭"
       },
       "away": {
         "name": "Panama",
         "code": "PAN",
-        "flag": "\ud83c\uddf5\ud83c\udde6"
+        "flag": "🇵🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1337,7 +1337,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1350,12 +1350,12 @@
       "home": {
         "name": "Portugal",
         "code": "POR",
-        "flag": "\ud83c\uddf5\ud83c\uddf9"
+        "flag": "🇵🇹"
       },
       "away": {
         "name": "DR Congo",
         "code": "COD",
-        "flag": "\ud83c\udde8\ud83c\udde9"
+        "flag": "🇨🇩"
       },
       "score": null,
       "status": "scheduled",
@@ -1364,7 +1364,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1377,12 +1377,12 @@
       "home": {
         "name": "Uzbekistan",
         "code": "UZB",
-        "flag": "\ud83c\uddfa\ud83c\uddff"
+        "flag": "🇺🇿"
       },
       "away": {
         "name": "Colombia",
         "code": "COL",
-        "flag": "\ud83c\udde8\ud83c\uddf4"
+        "flag": "🇨🇴"
       },
       "score": null,
       "status": "scheduled",
@@ -1391,7 +1391,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1404,12 +1404,12 @@
       "home": {
         "name": "Czech Republic",
         "code": "CZE",
-        "flag": "\ud83c\udde8\ud83c\uddff"
+        "flag": "🇨🇿"
       },
       "away": {
         "name": "South Africa",
         "code": "RSA",
-        "flag": "\ud83c\uddff\ud83c\udde6"
+        "flag": "🇿🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1418,7 +1418,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1431,12 +1431,12 @@
       "home": {
         "name": "Switzerland",
         "code": "SUI",
-        "flag": "\ud83c\udde8\ud83c\udded"
+        "flag": "🇨🇭"
       },
       "away": {
         "name": "Bosnia & Herzegovina",
         "code": "BIH",
-        "flag": "\ud83c\udde7\ud83c\udde6"
+        "flag": "🇧🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1445,7 +1445,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1458,12 +1458,12 @@
       "home": {
         "name": "Canada",
         "code": "CAN",
-        "flag": "\ud83c\udde8\ud83c\udde6"
+        "flag": "🇨🇦"
       },
       "away": {
         "name": "Qatar",
         "code": "QAT",
-        "flag": "\ud83c\uddf6\ud83c\udde6"
+        "flag": "🇶🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1472,7 +1472,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1485,12 +1485,12 @@
       "home": {
         "name": "Mexico",
         "code": "MEX",
-        "flag": "\ud83c\uddf2\ud83c\uddfd"
+        "flag": "🇲🇽"
       },
       "away": {
         "name": "South Korea",
         "code": "KOR",
-        "flag": "\ud83c\uddf0\ud83c\uddf7"
+        "flag": "🇰🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -1499,7 +1499,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1512,12 +1512,12 @@
       "home": {
         "name": "Brazil",
         "code": "BRA",
-        "flag": "\ud83c\udde7\ud83c\uddf7"
+        "flag": "🇧🇷"
       },
       "away": {
         "name": "Haiti",
         "code": "HAI",
-        "flag": "\ud83c\udded\ud83c\uddf9"
+        "flag": "🇭🇹"
       },
       "score": null,
       "status": "scheduled",
@@ -1526,7 +1526,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1539,12 +1539,12 @@
       "home": {
         "name": "Scotland",
         "code": "SCO",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
       },
       "away": {
         "name": "Morocco",
         "code": "MAR",
-        "flag": "\ud83c\uddf2\ud83c\udde6"
+        "flag": "🇲🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1553,7 +1553,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1564,14 +1564,14 @@
       "date": "2026-06-19T22:00:00Z",
       "venue": "Levi's Stadium, Santa Clara",
       "home": {
-        "name": "T\u00fcrkiye",
+        "name": "Türkiye",
         "code": "TUR",
-        "flag": "\ud83c\uddf9\ud83c\uddf7"
+        "flag": "🇹🇷"
       },
       "away": {
         "name": "Paraguay",
         "code": "PAR",
-        "flag": "\ud83c\uddf5\ud83c\uddfe"
+        "flag": "🇵🇾"
       },
       "score": null,
       "status": "scheduled",
@@ -1580,7 +1580,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1593,12 +1593,12 @@
       "home": {
         "name": "USA",
         "code": "USA",
-        "flag": "\ud83c\uddfa\ud83c\uddf8"
+        "flag": "🇺🇸"
       },
       "away": {
         "name": "Australia",
         "code": "AUS",
-        "flag": "\ud83c\udde6\ud83c\uddfa"
+        "flag": "🇦🇺"
       },
       "score": null,
       "status": "scheduled",
@@ -1607,7 +1607,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1620,12 +1620,12 @@
       "home": {
         "name": "Germany",
         "code": "GER",
-        "flag": "\ud83c\udde9\ud83c\uddea"
+        "flag": "🇩🇪"
       },
       "away": {
         "name": "Ivory Coast",
         "code": "CIV",
-        "flag": "\ud83c\udde8\ud83c\uddee"
+        "flag": "🇨🇮"
       },
       "score": null,
       "status": "scheduled",
@@ -1634,7 +1634,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1647,12 +1647,12 @@
       "home": {
         "name": "Ecuador",
         "code": "ECU",
-        "flag": "\ud83c\uddea\ud83c\udde8"
+        "flag": "🇪🇨"
       },
       "away": {
-        "name": "Cura\u00e7ao",
+        "name": "Curaçao",
         "code": "CUW",
-        "flag": "\ud83c\udde8\ud83c\uddfc"
+        "flag": "🇨🇼"
       },
       "score": null,
       "status": "scheduled",
@@ -1661,7 +1661,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1674,12 +1674,12 @@
       "home": {
         "name": "Netherlands",
         "code": "NED",
-        "flag": "\ud83c\uddf3\ud83c\uddf1"
+        "flag": "🇳🇱"
       },
       "away": {
         "name": "Sweden",
         "code": "SWE",
-        "flag": "\ud83c\uddf8\ud83c\uddea"
+        "flag": "🇸🇪"
       },
       "score": null,
       "status": "scheduled",
@@ -1688,7 +1688,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1701,12 +1701,12 @@
       "home": {
         "name": "Tunisia",
         "code": "TUN",
-        "flag": "\ud83c\uddf9\ud83c\uddf3"
+        "flag": "🇹🇳"
       },
       "away": {
         "name": "Japan",
         "code": "JPN",
-        "flag": "\ud83c\uddef\ud83c\uddf5"
+        "flag": "🇯🇵"
       },
       "score": null,
       "status": "scheduled",
@@ -1715,7 +1715,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1728,12 +1728,12 @@
       "home": {
         "name": "Spain",
         "code": "ESP",
-        "flag": "\ud83c\uddea\ud83c\uddf8"
+        "flag": "🇪🇸"
       },
       "away": {
         "name": "Saudi Arabia",
         "code": "KSA",
-        "flag": "\ud83c\uddf8\ud83c\udde6"
+        "flag": "🇸🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -1742,7 +1742,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1755,12 +1755,12 @@
       "home": {
         "name": "Uruguay",
         "code": "URU",
-        "flag": "\ud83c\uddfa\ud83c\uddfe"
+        "flag": "🇺🇾"
       },
       "away": {
         "name": "Cape Verde",
         "code": "CPV",
-        "flag": "\ud83c\udde8\ud83c\uddfb"
+        "flag": "🇨🇻"
       },
       "score": null,
       "status": "scheduled",
@@ -1769,7 +1769,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1782,12 +1782,12 @@
       "home": {
         "name": "Belgium",
         "code": "BEL",
-        "flag": "\ud83c\udde7\ud83c\uddea"
+        "flag": "🇧🇪"
       },
       "away": {
         "name": "Iran",
         "code": "IRN",
-        "flag": "\ud83c\uddee\ud83c\uddf7"
+        "flag": "🇮🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -1796,7 +1796,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1809,12 +1809,12 @@
       "home": {
         "name": "New Zealand",
         "code": "NZL",
-        "flag": "\ud83c\uddf3\ud83c\uddff"
+        "flag": "🇳🇿"
       },
       "away": {
         "name": "Egypt",
         "code": "EGY",
-        "flag": "\ud83c\uddea\ud83c\uddec"
+        "flag": "🇪🇬"
       },
       "score": null,
       "status": "scheduled",
@@ -1823,7 +1823,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1836,12 +1836,12 @@
       "home": {
         "name": "France",
         "code": "FRA",
-        "flag": "\ud83c\uddeb\ud83c\uddf7"
+        "flag": "🇫🇷"
       },
       "away": {
         "name": "Iraq",
         "code": "IRQ",
-        "flag": "\ud83c\uddee\ud83c\uddf6"
+        "flag": "🇮🇶"
       },
       "score": null,
       "status": "scheduled",
@@ -1850,7 +1850,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1863,12 +1863,12 @@
       "home": {
         "name": "Norway",
         "code": "NOR",
-        "flag": "\ud83c\uddf3\ud83c\uddf4"
+        "flag": "🇳🇴"
       },
       "away": {
         "name": "Senegal",
         "code": "SEN",
-        "flag": "\ud83c\uddf8\ud83c\uddf3"
+        "flag": "🇸🇳"
       },
       "score": null,
       "status": "scheduled",
@@ -1877,7 +1877,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1890,12 +1890,12 @@
       "home": {
         "name": "Argentina",
         "code": "ARG",
-        "flag": "\ud83c\udde6\ud83c\uddf7"
+        "flag": "🇦🇷"
       },
       "away": {
         "name": "Austria",
         "code": "AUT",
-        "flag": "\ud83c\udde6\ud83c\uddf9"
+        "flag": "🇦🇹"
       },
       "score": null,
       "status": "scheduled",
@@ -1904,7 +1904,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1917,12 +1917,12 @@
       "home": {
         "name": "Jordan",
         "code": "JOR",
-        "flag": "\ud83c\uddef\ud83c\uddf4"
+        "flag": "🇯🇴"
       },
       "away": {
         "name": "Algeria",
         "code": "ALG",
-        "flag": "\ud83c\udde9\ud83c\uddff"
+        "flag": "🇩🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -1931,7 +1931,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1944,12 +1944,12 @@
       "home": {
         "name": "England",
         "code": "ENG",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "away": {
         "name": "Ghana",
         "code": "GHA",
-        "flag": "\ud83c\uddec\ud83c\udded"
+        "flag": "🇬🇭"
       },
       "score": null,
       "status": "scheduled",
@@ -1958,7 +1958,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1971,12 +1971,12 @@
       "home": {
         "name": "Panama",
         "code": "PAN",
-        "flag": "\ud83c\uddf5\ud83c\udde6"
+        "flag": "🇵🇦"
       },
       "away": {
         "name": "Croatia",
         "code": "CRO",
-        "flag": "\ud83c\udded\ud83c\uddf7"
+        "flag": "🇭🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -1985,7 +1985,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -1998,12 +1998,12 @@
       "home": {
         "name": "Portugal",
         "code": "POR",
-        "flag": "\ud83c\uddf5\ud83c\uddf9"
+        "flag": "🇵🇹"
       },
       "away": {
         "name": "Uzbekistan",
         "code": "UZB",
-        "flag": "\ud83c\uddfa\ud83c\uddff"
+        "flag": "🇺🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -2012,7 +2012,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2025,12 +2025,12 @@
       "home": {
         "name": "Colombia",
         "code": "COL",
-        "flag": "\ud83c\udde8\ud83c\uddf4"
+        "flag": "🇨🇴"
       },
       "away": {
         "name": "DR Congo",
         "code": "COD",
-        "flag": "\ud83c\udde8\ud83c\udde9"
+        "flag": "🇨🇩"
       },
       "score": null,
       "status": "scheduled",
@@ -2039,7 +2039,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2052,12 +2052,12 @@
       "home": {
         "name": "Mexico",
         "code": "MEX",
-        "flag": "\ud83c\uddf2\ud83c\uddfd"
+        "flag": "🇲🇽"
       },
       "away": {
         "name": "Czech Republic",
         "code": "CZE",
-        "flag": "\ud83c\udde8\ud83c\uddff"
+        "flag": "🇨🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -2066,7 +2066,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2079,12 +2079,12 @@
       "home": {
         "name": "South Korea",
         "code": "KOR",
-        "flag": "\ud83c\uddf0\ud83c\uddf7"
+        "flag": "🇰🇷"
       },
       "away": {
         "name": "South Africa",
         "code": "RSA",
-        "flag": "\ud83c\uddff\ud83c\udde6"
+        "flag": "🇿🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -2093,7 +2093,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2106,12 +2106,12 @@
       "home": {
         "name": "Canada",
         "code": "CAN",
-        "flag": "\ud83c\udde8\ud83c\udde6"
+        "flag": "🇨🇦"
       },
       "away": {
         "name": "Switzerland",
         "code": "SUI",
-        "flag": "\ud83c\udde8\ud83c\udded"
+        "flag": "🇨🇭"
       },
       "score": null,
       "status": "scheduled",
@@ -2120,7 +2120,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2133,12 +2133,12 @@
       "home": {
         "name": "Bosnia & Herzegovina",
         "code": "BIH",
-        "flag": "\ud83c\udde7\ud83c\udde6"
+        "flag": "🇧🇦"
       },
       "away": {
         "name": "Qatar",
         "code": "QAT",
-        "flag": "\ud83c\uddf6\ud83c\udde6"
+        "flag": "🇶🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -2147,7 +2147,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2160,12 +2160,12 @@
       "home": {
         "name": "Scotland",
         "code": "SCO",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
       },
       "away": {
         "name": "Brazil",
         "code": "BRA",
-        "flag": "\ud83c\udde7\ud83c\uddf7"
+        "flag": "🇧🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -2174,7 +2174,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2187,12 +2187,12 @@
       "home": {
         "name": "Morocco",
         "code": "MAR",
-        "flag": "\ud83c\uddf2\ud83c\udde6"
+        "flag": "🇲🇦"
       },
       "away": {
         "name": "Haiti",
         "code": "HAI",
-        "flag": "\ud83c\udded\ud83c\uddf9"
+        "flag": "🇭🇹"
       },
       "score": null,
       "status": "scheduled",
@@ -2201,7 +2201,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2214,12 +2214,12 @@
       "home": {
         "name": "Ecuador",
         "code": "ECU",
-        "flag": "\ud83c\uddea\ud83c\udde8"
+        "flag": "🇪🇨"
       },
       "away": {
         "name": "Germany",
         "code": "GER",
-        "flag": "\ud83c\udde9\ud83c\uddea"
+        "flag": "🇩🇪"
       },
       "score": null,
       "status": "scheduled",
@@ -2228,7 +2228,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2239,14 +2239,14 @@
       "date": "2026-06-25T16:00:00Z",
       "venue": "MetLife Stadium, East Rutherford",
       "home": {
-        "name": "Cura\u00e7ao",
+        "name": "Curaçao",
         "code": "CUW",
-        "flag": "\ud83c\udde8\ud83c\uddfc"
+        "flag": "🇨🇼"
       },
       "away": {
         "name": "Ivory Coast",
         "code": "CIV",
-        "flag": "\ud83c\udde8\ud83c\uddee"
+        "flag": "🇨🇮"
       },
       "score": null,
       "status": "scheduled",
@@ -2255,7 +2255,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2268,12 +2268,12 @@
       "home": {
         "name": "Tunisia",
         "code": "TUN",
-        "flag": "\ud83c\uddf9\ud83c\uddf3"
+        "flag": "🇹🇳"
       },
       "away": {
         "name": "Netherlands",
         "code": "NED",
-        "flag": "\ud83c\uddf3\ud83c\uddf1"
+        "flag": "🇳🇱"
       },
       "score": null,
       "status": "scheduled",
@@ -2282,7 +2282,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2295,12 +2295,12 @@
       "home": {
         "name": "Japan",
         "code": "JPN",
-        "flag": "\ud83c\uddef\ud83c\uddf5"
+        "flag": "🇯🇵"
       },
       "away": {
         "name": "Sweden",
         "code": "SWE",
-        "flag": "\ud83c\uddf8\ud83c\uddea"
+        "flag": "🇸🇪"
       },
       "score": null,
       "status": "scheduled",
@@ -2309,7 +2309,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2322,12 +2322,12 @@
       "home": {
         "name": "USA",
         "code": "USA",
-        "flag": "\ud83c\uddfa\ud83c\uddf8"
+        "flag": "🇺🇸"
       },
       "away": {
-        "name": "T\u00fcrkiye",
+        "name": "Türkiye",
         "code": "TUR",
-        "flag": "\ud83c\uddf9\ud83c\uddf7"
+        "flag": "🇹🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -2336,7 +2336,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2349,12 +2349,12 @@
       "home": {
         "name": "Paraguay",
         "code": "PAR",
-        "flag": "\ud83c\uddf5\ud83c\uddfe"
+        "flag": "🇵🇾"
       },
       "away": {
         "name": "Australia",
         "code": "AUS",
-        "flag": "\ud83c\udde6\ud83c\uddfa"
+        "flag": "🇦🇺"
       },
       "score": null,
       "status": "scheduled",
@@ -2363,7 +2363,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2376,12 +2376,12 @@
       "home": {
         "name": "Norway",
         "code": "NOR",
-        "flag": "\ud83c\uddf3\ud83c\uddf4"
+        "flag": "🇳🇴"
       },
       "away": {
         "name": "France",
         "code": "FRA",
-        "flag": "\ud83c\uddeb\ud83c\uddf7"
+        "flag": "🇫🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -2390,7 +2390,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2403,12 +2403,12 @@
       "home": {
         "name": "Senegal",
         "code": "SEN",
-        "flag": "\ud83c\uddf8\ud83c\uddf3"
+        "flag": "🇸🇳"
       },
       "away": {
         "name": "Iraq",
         "code": "IRQ",
-        "flag": "\ud83c\uddee\ud83c\uddf6"
+        "flag": "🇮🇶"
       },
       "score": null,
       "status": "scheduled",
@@ -2417,7 +2417,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2430,12 +2430,12 @@
       "home": {
         "name": "New Zealand",
         "code": "NZL",
-        "flag": "\ud83c\uddf3\ud83c\uddff"
+        "flag": "🇳🇿"
       },
       "away": {
         "name": "Belgium",
         "code": "BEL",
-        "flag": "\ud83c\udde7\ud83c\uddea"
+        "flag": "🇧🇪"
       },
       "score": null,
       "status": "scheduled",
@@ -2444,7 +2444,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2457,12 +2457,12 @@
       "home": {
         "name": "Egypt",
         "code": "EGY",
-        "flag": "\ud83c\uddea\ud83c\uddec"
+        "flag": "🇪🇬"
       },
       "away": {
         "name": "Iran",
         "code": "IRN",
-        "flag": "\ud83c\uddee\ud83c\uddf7"
+        "flag": "🇮🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -2471,7 +2471,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2484,12 +2484,12 @@
       "home": {
         "name": "Uruguay",
         "code": "URU",
-        "flag": "\ud83c\uddfa\ud83c\uddfe"
+        "flag": "🇺🇾"
       },
       "away": {
         "name": "Spain",
         "code": "ESP",
-        "flag": "\ud83c\uddea\ud83c\uddf8"
+        "flag": "🇪🇸"
       },
       "score": null,
       "status": "scheduled",
@@ -2498,7 +2498,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2511,12 +2511,12 @@
       "home": {
         "name": "Cape Verde",
         "code": "CPV",
-        "flag": "\ud83c\udde8\ud83c\uddfb"
+        "flag": "🇨🇻"
       },
       "away": {
         "name": "Saudi Arabia",
         "code": "KSA",
-        "flag": "\ud83c\uddf8\ud83c\udde6"
+        "flag": "🇸🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -2525,7 +2525,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2538,12 +2538,12 @@
       "home": {
         "name": "Panama",
         "code": "PAN",
-        "flag": "\ud83c\uddf5\ud83c\udde6"
+        "flag": "🇵🇦"
       },
       "away": {
         "name": "England",
         "code": "ENG",
-        "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": null,
       "status": "scheduled",
@@ -2552,7 +2552,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2565,12 +2565,12 @@
       "home": {
         "name": "Croatia",
         "code": "CRO",
-        "flag": "\ud83c\udded\ud83c\uddf7"
+        "flag": "🇭🇷"
       },
       "away": {
         "name": "Ghana",
         "code": "GHA",
-        "flag": "\ud83c\uddec\ud83c\udded"
+        "flag": "🇬🇭"
       },
       "score": null,
       "status": "scheduled",
@@ -2579,7 +2579,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2592,12 +2592,12 @@
       "home": {
         "name": "Jordan",
         "code": "JOR",
-        "flag": "\ud83c\uddef\ud83c\uddf4"
+        "flag": "🇯🇴"
       },
       "away": {
         "name": "Argentina",
         "code": "ARG",
-        "flag": "\ud83c\udde6\ud83c\uddf7"
+        "flag": "🇦🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -2606,7 +2606,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2619,12 +2619,12 @@
       "home": {
         "name": "Algeria",
         "code": "ALG",
-        "flag": "\ud83c\udde9\ud83c\uddff"
+        "flag": "🇩🇿"
       },
       "away": {
         "name": "Austria",
         "code": "AUT",
-        "flag": "\ud83c\udde6\ud83c\uddf9"
+        "flag": "🇦🇹"
       },
       "score": null,
       "status": "scheduled",
@@ -2633,7 +2633,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2646,12 +2646,12 @@
       "home": {
         "name": "Colombia",
         "code": "COL",
-        "flag": "\ud83c\udde8\ud83c\uddf4"
+        "flag": "🇨🇴"
       },
       "away": {
         "name": "Portugal",
         "code": "POR",
-        "flag": "\ud83c\uddf5\ud83c\uddf9"
+        "flag": "🇵🇹"
       },
       "score": null,
       "status": "scheduled",
@@ -2660,7 +2660,7 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     },
@@ -2673,12 +2673,12 @@
       "home": {
         "name": "DR Congo",
         "code": "COD",
-        "flag": "\ud83c\udde8\ud83c\udde9"
+        "flag": "🇨🇩"
       },
       "away": {
         "name": "Uzbekistan",
         "code": "UZB",
-        "flag": "\ud83c\uddfa\ud83c\uddff"
+        "flag": "🇺🇿"
       },
       "score": null,
       "status": "scheduled",
@@ -2687,12 +2687,12 @@
           "BBC / ITV"
         ],
         "ie": [
-          "RT\u00c9 / Virgin"
+          "RTÉ / Virgin"
         ]
       }
     }
   ],
   "knockout_bracket": null,
   "top_scorers": [],
-  "generated_at": "2026-06-06T14:01:24Z"
+  "generated_at": "2026-06-06T14:05:44Z"
 }

@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v33-remind-me";
+const VERSION = "v34-tournament-ready";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

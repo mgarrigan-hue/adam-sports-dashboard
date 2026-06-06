@@ -1,17 +1,33 @@
 {
-  "generated_at": "2026-06-06T15:39:36Z",
+  "generated_at": "2026-06-06T16:04:28Z",
   "items": [
     {
-      "title": "Antonelli pips Verstappen to Monaco pole",
+      "title": "United Rugby Championship: Leinster v Stormers updates",
+      "summary": "Leo Cullen's side are favourites to secure a place in the final as they look to retain their title.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0606/1577078-united-rugby-championship-leinster-v-stormers-updates/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-06T15:59:40Z"
+    },
+    {
+      "title": "Bulls seal comeback win to await Leinster or Stormers",
+      "summary": "Glasgow squandered a 21-3 lead as their United Rugby Championship hopes were quashed in a 22-21 semi-final defeat by the Bulls at Murrayfield.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0606/1577120-bulls-seal-comeback-win-to-await-leinster-or-stormers/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-06T15:47:19Z"
+    },
+    {
+      "title": "Antonelli's 'magic lap' pips Verstappen to Monaco pole",
       "summary": "Mercedes' Kimi Antonelli beats Red Bull's Max Verstappen to pole position in a gripping qualifying session at the Monaco Grand Prix.",
       "url": "https://www.bbc.com/sport/formula1/articles/ckgpkggrwzno?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-06-06T15:34:58Z"
+      "published": "2026-06-06T15:42:12Z"
     },
     {
       "title": "Glasgow stunned by Bulls fightback in URC semi-final",
-      "summary": "Glasgow Warriors endured more trophy disappointment as Bulls recovered from an 18-point deficit to win their URC play-off semi-final.",
+      "summary": "Glasgow Warriors endure more heartbreak as the Bulls recover from an 18-point deficit to win their URC play-off semi-final.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/crlwrk8k307o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-01T12:34:41Z"
-    },
-    {
-      "title": "Stormers hit with Feinberg-Mngomezulu injury",
-      "summary": "Leinster's opponents Stormers have been dealt a major blow ahead of Saturday's BKT United Rugby Championship semi-final, with star out-half Sacha Feinberg-Mngomezulu sidelined with a long-term ankle i…",
-      "url": "https://www.rte.ie/sport/rugby/2026/0601/1576208-stormers-hit-with-feinberg-mngomezulu-injury/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-01T11:23:38Z"
-    },
-    {
-      "title": "Classic Monaco Grand Prix images through the years",
-      "summary": "A selection of the best images of the Monaco Grand Prix, starting with the first F1 championship season in 1950.",
-      "url": "https://www.bbc.com/sport/formula1/articles/c9v3x4m0peko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-01T07:14:33Z"
     }
   ]
 }

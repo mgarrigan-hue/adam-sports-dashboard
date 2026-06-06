@@ -648,6 +648,68 @@ function buildAdamItem(m, isResult) {
   };
 }
 
+// Returns the opponent's display name from a match where one side is SMC.
+// Uses matchSide() (fav-team patterns) so it handles every SMC alias upstream.
+function opponentName(m) {
+  if (!m) return null;
+  const homeIsSmc = !!matchSide(m.home);
+  const awayIsSmc = !!matchSide(m.away);
+  if (homeIsSmc && !awayIsSmc) return normTeam(m.away);
+  if (awayIsSmc && !homeIsSmc) return normTeam(m.home);
+  return null;
+}
+
+// Compute outcome (W/L/D) of a match from `teamName`'s perspective.
+// Returns "win" | "loss" | "draw" | null. Fuzzy match via normTeam, plus a
+// case-insensitive substring fallback for stray aliases.
+function outcomeForTeam(m, teamName) {
+  if (!m || !teamName || m.home_score == null || m.away_score == null) return null;
+  const target = normTeam(teamName).toLowerCase();
+  const home = normTeam(m.home || "").toLowerCase();
+  const away = normTeam(m.away || "").toLowerCase();
+  const homeMatch = home === target || home.includes(target) || target.includes(home);
+  const awayMatch = away === target || away.includes(target) || target.includes(away);
+  if (homeMatch === awayMatch) return null; // neither side or both — skip
+  const us  = homeMatch ? Number(m.home_score) : Number(m.away_score);
+  const them = homeMatch ? Number(m.away_score) : Number(m.home_score);
+  if (!isFinite(us) || !isFinite(them)) return null;
+  if (us > them) return "win";
+  if (us < them) return "loss";
+  return "draw";
+}
+
+// Renders an "Opponent · last 3: W L W" strip under the next-match opponent.
+// Returns "" (empty) when no opponent results are found — keeps the hero clean.
+function renderOpponentForm(nextMatch, club) {
+  const opp = opponentName(nextMatch);
+  if (!opp || !club) return "";
+  const target = opp.toLowerCase();
+  const hasDate = (m) => m?.date && !isNaN(new Date(m.date));
+  const oppResults = (club.results || [])
+    .filter(m => {
+      if (!hasDate(m)) return false;
+      const h = normTeam(m.home || "").toLowerCase();
+      const a = normTeam(m.away || "").toLowerCase();
+      return h === target || a === target || h.includes(target) || a.includes(target);
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
+  if (!oppResults.length) return "";
+  // oldest → newest reads naturally left-to-right
+  const pills = oppResults.slice().reverse().map(m => {
+    const o = outcomeForTeam(m, opp);
+    const letter = o === "win" ? "W" : o === "loss" ? "L" : o === "draw" ? "D" : "·";
+    const cls = o ? `form-${o}` : "form-unknown";
+    const tip = `${normTeam(m.home)} ${m.home_score ?? "-"}–${m.away_score ?? "-"} ${normTeam(m.away)}`;
+    return `<span class="form-pill ${cls}" title="${escapeHtml(tip)}">${letter}</span>`;
+  }).join("");
+  return `
+    <div class="opp-form">
+      <span class="opp-form-label">${escapeHtml(opp)} · last 3:</span>
+      <span class="opp-form-pills">${pills}</span>
+    </div>`;
+}
+
 function renderAdam(all) {
   const wrap = document.getElementById("adam-body");
   if (!wrap) return;
@@ -675,11 +737,13 @@ function renderAdam(all) {
     const when = new Date(nextMatch.date);
     const title = `${normTeam(nextMatch.home)} v ${normTeam(nextMatch.away)}`;
     const u14Tag = isU14(nextMatch.competition) ? ` · U14` : "";
+    const oppHtml = renderOpponentForm(nextMatch, club);
     nextHtml = `
       <div class="adam-next">
         <div class="adam-next-eyebrow">🟢⚪ Adam's next match${u14Tag}</div>
         <div class="adam-next-title">${escapeHtml(title)}</div>
         <div class="adam-next-meta">${escapeHtml(nextMatch.competition || "")} · ${escapeHtml(when.toLocaleString(undefined, { weekday: "long", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</div>
+        ${oppHtml}
       </div>`;
   } else {
     nextHtml = `<div class="adam-next empty"><div class="adam-next-eyebrow">🟢⚪ Adam's next match</div><div class="adam-next-meta">No upcoming SMC fixtures right now — enjoy the off-season. 🌴</div></div>`;
@@ -1536,6 +1600,64 @@ function reorderSections(all) {
 // ---------- Boot ----------
 let DATA = {};
 
+// Freshness state: latest data stamp + ticker handle. Recomputed every 30s
+// so the topbar "Updated Nm ago" + 🟢/🟡/🔴 chip stay honest without a reload.
+let LATEST_STAMP = null;
+let FRESHNESS_TIMER = null;
+
+// "Updated 2 min ago" / "3 h ago" / "2 d ago" — short, scannable.
+function renderRelativeTime(iso) {
+  if (!iso) return "Awaiting first data refresh";
+  const d = new Date(iso);
+  if (isNaN(d)) return "Awaiting first data refresh";
+  const diffMs = Math.max(0, Date.now() - d.getTime());
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return "Updated just now";
+  if (mins < 60) return `Updated ${mins} min ago`;
+  const hours = Math.floor(diffMs / 3600000);
+  if (hours < 24) return `Updated ${hours} h ago`;
+  const days = Math.floor(diffMs / 86400000);
+  return `Updated ${days} d ago`;
+}
+
+// 🟢 <1h, 🟡 <6h, 🔴 ≥6h. Returns null when no stamp is known yet.
+function freshnessLevel(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (isNaN(d)) return null;
+  const ageMs = Date.now() - d.getTime();
+  if (ageMs < 60 * 60 * 1000) return "fresh";
+  if (ageMs < 6 * 60 * 60 * 1000) return "stale";
+  return "old";
+}
+
+function renderTopbarFreshness() {
+  const el = document.getElementById("last-updated");
+  if (!el) return;
+  const rel = renderRelativeTime(LATEST_STAMP);
+  const level = freshnessLevel(LATEST_STAMP);
+  let chip = "";
+  if (level === "fresh") chip = `<span class="fresh-chip fresh-chip--fresh" title="Data refreshed in the last hour">🟢 Fresh</span>`;
+  else if (level === "stale") chip = `<span class="fresh-chip fresh-chip--stale" title="Data is between 1 and 6 hours old">🟡 ⚠ Slightly stale</span>`;
+  else if (level === "old") chip = `<span class="fresh-chip fresh-chip--old" title="Refresh job may be failing — data is over 6 hours old">🔴 ⚠ Data stale — refresh job may be failing</span>`;
+  el.innerHTML = `<span class="updated-rel">${escapeHtml(rel)}</span>${chip}`;
+}
+
+// Tick the freshness UI every 30s. Pause when the tab is hidden — saves
+// battery on phones (this is a PWA) and prevents needless DOM writes.
+function startFreshnessTicker() {
+  if (FRESHNESS_TIMER) return;
+  FRESHNESS_TIMER = setInterval(renderTopbarFreshness, 30000);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (FRESHNESS_TIMER) { clearInterval(FRESHNESS_TIMER); FRESHNESS_TIMER = null; }
+    } else {
+      renderTopbarFreshness();
+      if (!FRESHNESS_TIMER) FRESHNESS_TIMER = setInterval(renderTopbarFreshness, 30000);
+    }
+  });
+}
+
 function rerenderAll() {
   renderHero(DATA);
   renderFeed(buildFeed(DATA));
@@ -1569,9 +1691,9 @@ function rerenderAll() {
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
   const stamps = [f1, intl, prov, schools, news, club].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
-  document.getElementById("last-updated").textContent = stamps.length
-    ? `Updated ${relTime(stamps.sort().pop())}`
-    : "Awaiting first data refresh";
+  LATEST_STAMP = stamps.length ? stamps.sort().pop() : null;
+  renderTopbarFreshness();
+  startFreshnessTicker();
 
   NEWS_ITEMS = (news?.items || []);
   renderNews();

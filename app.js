@@ -1589,8 +1589,11 @@ function reorderSections(all) {
 
   // 1. Reorder the section panels via CSS `order`
   //    Home = 0, Adam = 1 (always right after Home), sports = 2..N, News trails.
+  //    News MUST be assigned an order explicitly: otherwise it inherits `0`
+  //    (same as Home) and renders right after the hero — a visible regression.
   document.getElementById("home")?.style.setProperty("order", "0");
   document.getElementById("adam")?.style.setProperty("order", "1");
+  document.getElementById("news")?.style.setProperty("order", "100");
   const sportBase = phase === "during" ? 3 : 2; // make room if WC pinned at 2
   order.forEach((it, i) => {
     const sec = document.getElementById(it.id);
@@ -1854,7 +1857,15 @@ function renderWcGroups(groups) {
   if (!groups || !groups.length) return "";
   const tables = groups.map(g => {
     const hasBrazil = (g.teams || []).some(t => isAdamsWcTeam(t.name));
-    const rows = (g.teams || []).map(t => {
+    // Sort: pts DESC, gd DESC, gf DESC — standard FIFA tiebreak order. The
+    // fetcher writes teams in the published group draw order; we re-sort on
+    // render so the live table reflects standings during the tournament.
+    const sortedTeams = (g.teams || []).slice().sort((a, b) =>
+      (b.points|0) - (a.points|0) ||
+      (b.gd|0)     - (a.gd|0)     ||
+      (b.gf|0)     - (a.gf|0)
+    );
+    const rows = sortedTeams.map(t => {
       const fav = isAdamsWcTeam(t.name) ? " is-brazil-row" : "";
       return `<tr class="${fav}">
         <td class="wc-tn">${wcFlagImg(t)} ${escapeHtml(t.name)}</td>
@@ -2104,8 +2115,12 @@ function rerenderAll() {
   bindNav();
   applyFadeIn();
 
-  const greet = document.createElement("div");
-  greet.className = "adam-greet";
-  greet.innerHTML = `Hi Adam 👋 — Go <strong>Leinster</strong> 💙, come on <strong>St Mary's</strong> 🟢⚪, and <strong>Go Hadjar</strong> 🏎️`;
-  document.querySelector(".tagline").after(greet);
+  // Render the greeting in the dedicated row below the topbar — never inside
+  // the brand <a> (where it bloated the brand column, clipped nav tabs on
+  // desktop, and turned the entire greeting into a clickable link target).
+  const greetRow = document.getElementById("adam-greet-row");
+  if (greetRow) {
+    greetRow.innerHTML = `<span class="adam-greet">Hi Adam 👋 — Go <strong>Leinster</strong> 💙, come on <strong>St Mary's</strong> 🟢⚪, and <strong>Go Hadjar</strong> 🏎️</span>`;
+    greetRow.hidden = false;
+  }
 })();

@@ -9,7 +9,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Adam's Sports"/>
 <meta name="mobile-web-app-capable" content="yes"/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
+<!-- frame-ancestors is intentionally omitted: browsers ignore it when delivered via <meta> (logs a console error). Enforced via HTTP headers / Pages config instead. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="x-dns-prefetch-control" content="on"/>
 <meta name="description" content="A personal sports dashboard — F1, International Rugby, Irish Provinces and Leinster Schools."/>
@@ -52,12 +53,15 @@
   </nav>
 
   <div class="topbar-actions">
-    <button id="install-btn" class="btn btn-ghost" hidden>⬇️ Install</button>
+    <a href="#wc" id="wc-topbar-chip" class="wc-topbar-chip" hidden aria-label="World Cup countdown — jump to World Cup section"></a>
+    <button id="install-btn" class="btn btn-ghost" hidden aria-label="Install this dashboard as an app">⬇️ Install</button>
     <button id="settings-btn" class="btn btn-icon" aria-label="Following / favorites" title="Following / favorites">⚙️</button>
-    <a href="#wc" id="wc-topbar-chip" class="wc-topbar-chip" hidden></a>
-    <div class="last-updated" id="last-updated">Loading…</div>
+    <div class="last-updated" id="last-updated" aria-live="polite">Loading…</div>
   </div>
 </header>
+
+<!-- Sub-greeting: lives below the topbar so it doesn't bloat the brand column / steal space from the nav tabs. Hidden inside .brand link previously caused the entire greeting text to be a link target + clipped nav tabs on desktop. -->
+<div class="adam-greet-row" id="adam-greet-row" hidden></div>
 
 <main>
 
@@ -113,7 +117,7 @@
       <span class="accent-bar accent-bar--wc"></span>
       <h2>⚽ FIFA World Cup 2026</h2>
     </div>
-    <p class="section-sub">USA · Canada · Mexico · 11 Jun – 19 Jul · 🇧🇷 Adam backs Brazil</p>
+    <p class="section-sub">USA · Canada · Mexico · 11 Jun – 19 Jul · <img class="wc-flag wc-flag--inline" src="https://flagcdn.com/br.svg" alt="Brazil flag" loading="lazy" decoding="async"/> Adam backs Brazil</p>
   </div>
   <div id="wc-body">
     <p class="empty">Loading World Cup…</p>

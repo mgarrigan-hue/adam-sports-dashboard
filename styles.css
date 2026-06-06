@@ -102,6 +102,25 @@ h1, h2, h3, .display, .hero-title, .hero-countdown, .score, .stat-num {
   -webkit-backdrop-filter: saturate(140%) blur(14px);
 }
 
+/* Greeting row pinned just below the sticky topbar — extracted from the
+   brand link so it stops bloating the brand column (which previously clipped
+   nav tabs on desktop) and stops being a clickable link target. */
+.adam-greet-row {
+  position: sticky;
+  top: calc(85px + env(safe-area-inset-top, 0px));
+  z-index: 39;
+  padding: 6px 24px 8px;
+  padding-left: calc(24px + env(safe-area-inset-left, 0px));
+  padding-right: calc(24px + env(safe-area-inset-right, 0px));
+  background: rgba(10, 13, 24, 0.55);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.adam-greet-row[hidden] { display: none; }
+.adam-greet-row .adam-greet { margin: 0; }
+
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .brand-mark {
   position: relative; width: 42px; height: 42px;
@@ -119,13 +138,18 @@ h1, h2, h3, .display, .hero-title, .hero-countdown, .score, .stat-num {
 
 .nav-tabs {
   position: relative;
-  display: flex; gap: 4px; justify-content: center;
+  display: flex; gap: 4px; justify-content: flex-start;
   padding: 4px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
   overflow-x: auto;
   scrollbar-width: none;
+  /* Right-edge fade hints that more tabs exist when the nav overflows.
+     The transparent stop is at 96% so the fade is only visible when there's
+     content underneath it (i.e. when scrolling reveals it). */
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 96%, transparent 100%);
+          mask-image: linear-gradient(90deg, #000 0, #000 96%, transparent 100%);
 }
 .nav-tabs::-webkit-scrollbar { display: none; }
 
@@ -722,8 +746,9 @@ footer {
    Mobile
    ===================================================================== */
 @media (max-width: 880px) {
-  /* Sticky topbar is now 2 rows tall — bump anchor-jump offset to clear it */
-  html { scroll-padding-top: calc(130px + env(safe-area-inset-top, 0px)); }
+  /* Sticky topbar is now 2 rows tall — bump anchor-jump offset to clear it
+     PLUS the sub-greeting row underneath. */
+  html { scroll-padding-top: calc(170px + env(safe-area-inset-top, 0px)); }
   .topbar {
     grid-template-columns: 1fr auto;
     grid-template-areas: "brand actions" "nav nav";
@@ -736,6 +761,7 @@ footer {
   .topbar-actions { grid-area: actions; }
   .nav-tabs { grid-area: nav; justify-content: flex-start; }
   .last-updated { display: none; }
+  .adam-greet-row { top: calc(128px + env(safe-area-inset-top, 0px)); }
 }
 @media (max-width: 640px) {
   main {
@@ -974,17 +1000,35 @@ tr.fav-draw td:first-child { box-shadow: inset 4px 0 0 rgba(234,179,8,0.6); }
 /* If a U14 row is also a win, show both stripes */
 tr.u14-row.fav-win td:first-child { box-shadow: inset 4px 0 0 #22c55e, inset 8px 0 0 rgba(76,175,80,0.55); }
 
-/* ====== Adam's greeting (header) — easy to read ====== */
+/* Mobile / tighter-desktop tagline + greet sizing. The long tagline starts
+   to squeeze the nav-tabs around 1100px; hide it before that point so Home
+   stays visible without horizontal scrolling. */
+@media (max-width: 1100px) {
+  .brand-text .tagline { display: none; }
+}
+
 .adam-greet {
-  margin-top: 6px;
+  margin-top: 0;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-2);
   letter-spacing: 0.01em;
+  display: inline-block;
 }
 .adam-greet strong {
   color: var(--text);
   font-weight: 700;
+}
+
+img.wc-flag.wc-flag--inline {
+  width: 18px; height: 13px;
+  vertical-align: -2px;
+  margin: 0 2px;
+}
+
+@media (max-width: 640px) {
+  .adam-greet-row { padding: 5px 12px 6px; }
+  .adam-greet { font-size: 12.5px; }
 }
 
 /* ====== Favourite-team highlighting (TODO 2) ====== */

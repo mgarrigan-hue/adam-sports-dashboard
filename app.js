@@ -1727,6 +1727,50 @@ function wcNextBrazilMatch(matches, now = new Date()) {
     .sort((a, b) => new Date(a.date) - new Date(b.date))[0] || null;
 }
 
+function wcMatchdayLabel(d) {
+  return d.toLocaleDateString("en-IE", { weekday: "long", day: "numeric", month: "long" });
+}
+
+function renderWcFixtures(matches, opts = {}) {
+  if (!matches || !matches.length) return "";
+  const fromIso = opts.fromIso || null;
+  const stageFilter = opts.stage || null;
+  const heading = opts.heading || "All fixtures";
+  const buckets = new Map();
+  for (const m of matches) {
+    if (stageFilter && m.stage !== stageFilter) continue;
+    const d = new Date(m.date);
+    if (isNaN(d)) continue;
+    if (fromIso && d.toISOString() < fromIso) continue;
+    const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+    if (!buckets.has(key)) buckets.set(key, { date: d, items: [] });
+    buckets.get(key).items.push(m);
+  }
+  if (!buckets.size) return "";
+  const days = [...buckets.values()].sort((a, b) => a.date - b.date);
+  const dayHtml = days.map(day => {
+    day.items.sort((a, b) => {
+      const ba = wcMatchHasTeam(a) ? 0 : 1;
+      const bb = wcMatchHasTeam(b) ? 0 : 1;
+      if (ba !== bb) return ba - bb;
+      return new Date(a.date) - new Date(b.date);
+    });
+    const hasBrazil = day.items.some(wcMatchHasTeam);
+    return `<details class="wc-day${hasBrazil ? " wc-day--brazil" : ""}" ${hasBrazil ? "open" : ""}>
+      <summary>
+        <span class="wc-day-label">${escapeHtml(wcMatchdayLabel(day.date))}</span>
+        <span class="wc-day-count">${day.items.length} match${day.items.length === 1 ? "" : "es"}</span>
+        ${hasBrazil ? '<span class="wc-day-brazil">🇧🇷 Brazil</span>' : ""}
+      </summary>
+      <div class="wc-day-grid">${day.items.map(m => renderWcMatchCard(m)).join("")}</div>
+    </details>`;
+  }).join("");
+  return `<section class="wc-fixtures">
+    <h3 class="wc-subheading">${escapeHtml(heading)} <span class="wc-count">${matches.length}</span></h3>
+    ${dayHtml}
+  </section>`;
+}
+
 function renderWcCountdown(tournament, matches) {
   const start = new Date(tournament.start_date + "T16:00:00Z"); // ~opener kickoff
   const cd = wcCountdownString(start);
@@ -1835,12 +1879,15 @@ function renderWorldCup(data) {
   let html = "";
   if (phase === "pre") {
     html += renderWcCountdown(t, wc.matches);
+    html += renderWcGroups(wc.groups);
+    html += renderWcFixtures(wc.matches, { heading: "All fixtures" });
   } else if (phase === "during") {
     html += renderWcCountdown(t, wc.matches);
     html += renderWcToday(wc.matches);
     html += renderWcGroups(wc.groups);
     html += renderWcBracket(wc.knockout_bracket);
     html += renderWcScorers(wc.top_scorers);
+    html += renderWcFixtures(wc.matches, { fromIso: new Date(Date.now() + 24*60*60*1000).toISOString(), heading: "Upcoming fixtures" });
   } else { // recap
     const champ = t.champion ? `<div class="wc-countdown-big">🏆 Champions: ${escapeHtml(t.champion)}</div>` : "";
     html += `<div class="wc-countdown-hero">

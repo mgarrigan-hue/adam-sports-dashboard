@@ -1370,3 +1370,53 @@ body.wc-phase-post .nav-tab--wc { display: none; }
   .wc-score-wrap { min-width: 44px; font-size: 16px; }
   .wc-kickoff { font-size: 10.5px; }
 }
+/* WC fixtures (all-matches browser, used pre and during tournament) */
+.wc-fixtures { margin-top: 24px; }
+.wc-day {
+  margin: 12px 0;
+  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  overflow: hidden;
+}
+.wc-day[open] { background: rgba(255,255,255,0.04); }
+.wc-day > summary {
+  list-style: none; cursor: pointer; user-select: none;
+  padding: 14px 16px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.wc-day > summary:hover { background: rgba(255,255,255,0.04); }
+.wc-day > summary::-webkit-details-marker { display: none; }
+.wc-day > summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.15s;
+  color: var(--text-2, #aaa);
+  margin-right: 4px;
+}
+.wc-day[open] > summary::before { transform: rotate(90deg); }
+.wc-day-label { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.wc-day-count {
+  font-size: 12px; font-weight: 500;
+  padding: 2px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.06); color: var(--text-2, #aaa);
+}
+.wc-day-brazil {
+  font-size: 12px; font-weight: 600;
+  padding: 2px 10px; border-radius: 999px;
+  background: linear-gradient(135deg, rgba(254,205,7,0.22), rgba(0,156,59,0.28));
+  color: #d9fbe2;
+}
+.wc-day--brazil { border-color: rgba(0,156,59,0.28); }
+.wc-day-grid {
+  padding: 0 12px 14px 12px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+@media (max-width: 640px) {
+  .wc-day > summary { padding: 12px 12px; }
+  .wc-day-grid { padding: 0 8px 10px 8px; grid-template-columns: 1fr; }
+}

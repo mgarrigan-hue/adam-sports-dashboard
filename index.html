@@ -10,17 +10,15 @@
 <meta name="apple-mobile-web-app-title" content="Adam's Sports"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <!-- frame-ancestors is intentionally omitted: browsers ignore it when delivered via <meta> (logs a console error). Enforced via HTTP headers / Pages config instead. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none';"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="x-dns-prefetch-control" content="on"/>
 <meta name="description" content="A personal sports dashboard — F1, International Rugby, Irish Provinces and Leinster Schools."/>
 <meta name="robots" content="noindex, nofollow"/>
 <title>Adam's Sports Dashboard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
 <link rel="preload" href="styles.css" as="style" fetchpriority="high"/>
 <link rel="preload" href="app.js" as="script" fetchpriority="high"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg"/>

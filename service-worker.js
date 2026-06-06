@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v32-full-sweep";
+const VERSION = "v33-remind-me";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -30,7 +30,7 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(keys.filter((k) => k !== SHELL_CACHE && k !== DATA_CACHE).map((k) => caches.delete(k)))
-    ).then(() => self.clients.claim())
+    ).then(() => self.clients.claim()).then(() => checkAndFireReminders())
   );
 });
 
@@ -39,7 +39,86 @@ self.addEventListener("message", (e) => {
   if (e.data === "SKIP_WAITING" || (e.data && e.data.type === "SKIP_WAITING")) {
     self.skipWaiting();
   }
+  if (e.data && e.data.type === "CHECK_REMINDERS") {
+    e.waitUntil(checkAndFireReminders());
+  }
 });
+
+// ===== REMINDERS (IndexedDB-backed, fired from SW) =====
+// App and SW both read/write the same store. Schema must match app.js.
+const REMIND_DB_NAME = "adam-reminders-db";
+const REMIND_DB_VERSION = 1;
+const REMIND_STORE = "reminders";
+
+function swOpenRemindDb() {
+  return new Promise((resolve, reject) => {
+    if (!("indexedDB" in self)) { reject(new Error("no idb")); return; }
+    const req = indexedDB.open(REMIND_DB_NAME, REMIND_DB_VERSION);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(REMIND_STORE)) {
+        db.createObjectStore(REMIND_STORE, { keyPath: "key" });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function swRemindGetAll() {
+  try {
+    const db = await swOpenRemindDb();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction(REMIND_STORE, "readonly");
+      const r = tx.objectStore(REMIND_STORE).getAll();
+      r.onsuccess = () => res(r.result || []);
+      r.onerror = () => rej(r.error);
+    });
+  } catch { return []; }
+}
+async function swRemindPut(rem) {
+  try {
+    const db = await swOpenRemindDb();
+    await new Promise((res, rej) => {
+      const tx = db.transaction(REMIND_STORE, "readwrite");
+      const r = tx.objectStore(REMIND_STORE).put(rem);
+      r.onsuccess = () => res();
+      r.onerror = () => rej(r.error);
+    });
+  } catch { /* swallow */ }
+}
+
+async function checkAndFireReminders() {
+  const list = await swRemindGetAll();
+  const now = Date.now();
+  for (const rem of list) {
+    if (rem.fired) continue;
+    if (rem.fireAt > now) continue;
+    // Skip ancient overdue reminders (>2h late) — the fixture has probably
+    // already started; firing now would be more noisy than helpful.
+    if (now - rem.fireAt > 2 * 60 * 60 * 1000) {
+      rem.fired = true;
+      rem.firedAt = now;
+      rem.skipped = "stale";
+      await swRemindPut(rem);
+      continue;
+    }
+    try {
+      await self.registration.showNotification(rem.title || "Adam's Sports", {
+        body: rem.body || "Match starting soon",
+        tag: `remind-${rem.key}`,
+        icon: "icons/icon-192.svg",
+        badge: "icons/icon-192.svg",
+        data: { url: rem.url || "/" },
+      });
+      rem.fired = true;
+      rem.firedAt = Date.now();
+      await swRemindPut(rem);
+    } catch (err) {
+      // Notification permission missing or registration not ready — leave
+      // the reminder unfired so the in-page fallback can pick it up.
+    }
+  }
+}
 
 // ===== PERIODIC BACKGROUND SYNC (Item N) =====
 // Supported in Chromium-based browsers behind an installed PWA + permission.
@@ -65,7 +144,7 @@ async function refreshDataCache() {
 }
 
 self.addEventListener("periodicsync", (e) => {
-  if (e.tag === "refresh-data") e.waitUntil(refreshDataCache());
+  if (e.tag === "refresh-data") e.waitUntil(Promise.all([refreshDataCache(), checkAndFireReminders()]));
 });
 
 // Click on a local/push notification → open the dashboard at the deep link

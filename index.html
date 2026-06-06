@@ -17,11 +17,11 @@
 <meta name="robots" content="noindex, nofollow"/>
 <title>Adam's Sports Dashboard</title>
 <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-<link rel="preload" href="styles.css?v=32a" as="style" fetchpriority="high"/>
-<link rel="preload" href="wc.css?v=32a" as="style"/>
+<link rel="preload" href="styles.css?v=33a" as="style" fetchpriority="high"/>
+<link rel="preload" href="wc.css?v=33a" as="style"/>
 <link rel="preload" href="app.js" as="script" fetchpriority="high"/>
-<link rel="stylesheet" href="styles.css?v=32a"/>
-<link rel="stylesheet" href="wc.css?v=32a"/>
+<link rel="stylesheet" href="styles.css?v=33a"/>
+<link rel="stylesheet" href="wc.css?v=33a"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg"/>
 <link rel="apple-touch-icon" href="icons/icon-192.svg"/>
@@ -55,6 +55,7 @@
   <div class="topbar-actions">
     <a href="#wc" id="wc-topbar-chip" class="wc-topbar-chip" hidden aria-label="World Cup countdown — jump to World Cup section"></a>
     <button id="search-btn" class="btn btn-icon" aria-label="Search (Ctrl+K)" title="Search (Ctrl+K)">🔍</button>
+    <button id="reminders-btn" class="btn btn-icon" data-count="0" aria-label="My reminders" title="My reminders">🔔</button>
     <button id="theme-btn" class="btn btn-icon" aria-label="Toggle theme" title="Toggle theme">🌓</button>
     <button id="install-btn" class="btn btn-ghost" hidden aria-label="Install this dashboard as an app">⬇️ Install</button>
     <button id="settings-btn" class="btn btn-icon" aria-label="Following / favorites" title="Following / favorites">⚙️</button>
@@ -243,6 +244,19 @@
     <div class="search-foot">
       <kbd>↑</kbd><kbd>↓</kbd> navigate <kbd>↵</kbd> jump <kbd>esc</kbd> close
     </div>
+  </div>
+</aside>
+
+<aside id="reminders-panel" class="reminders-panel" hidden role="dialog" aria-modal="false" aria-labelledby="reminders-panel-title">
+  <div class="reminders-panel__backdrop" id="reminders-backdrop"></div>
+  <div class="reminders-panel__card">
+    <div class="reminders-panel__head">
+      <h3 id="reminders-panel-title">🔔 My reminders</h3>
+      <button class="btn btn-icon" id="reminders-close" aria-label="Close reminders panel">✕</button>
+    </div>
+    <ul class="reminders-panel__body" id="reminders-panel-body" role="list">
+      <li class="muted" style="padding:14px">Loading…</li>
+    </ul>
   </div>
 </aside>
 

@@ -1452,19 +1452,142 @@ body.search-open { overflow: hidden; }
 #theme-btn, #search-btn { font-size: 18px; }
 
 
-/* ===== v32 sweep: ICS button, SW toast, tier-aware chips, filter chips, modal, weather, sparklines, commentary ===== */
+/* ===== v33 remind-me: per-fixture 🔔 button, timing picker, my-reminders panel ===== */
 
-/* ICS calendar button — mirrors .wc-share-btn / .share-btn-inline visuals */
-.ics-btn-inline {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 26px; height: 26px; padding: 0; margin-left: 2px;
+/* Inline 🔔 Remind me button — sits next to the share button on every
+   fixture card / row. Mirrors share-button height; expands its label on
+   wider rows but stays icon-only on narrow ones via :where() */
+.remind-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  height: 26px; padding: 0 8px; margin-left: 2px;
   background: transparent; border: 1px solid var(--border);
-  border-radius: 8px; cursor: pointer; font-size: 13px;
-  color: var(--text-2);
-  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  border-radius: 8px; cursor: pointer; font: inherit; font-size: 12px;
+  color: var(--text-2); line-height: 1; white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
 }
-.ics-btn-inline:hover { background: var(--surface-strong); border-color: var(--border-strong); transform: scale(1.06); }
-.ics-btn-inline:active { transform: scale(0.96); }
+.remind-btn:hover { background: var(--surface-strong); border-color: var(--border-strong); color: var(--text); transform: scale(1.04); }
+.remind-btn:active { transform: scale(0.96); }
+.remind-btn:focus-visible { outline: 2px solid var(--accent, #5eead4); outline-offset: 2px; }
+.remind-btn__icon { font-size: 13px; }
+.remind-btn--active,
+.remind-btn[aria-pressed="true"] {
+  background: var(--surface-strong, rgba(94,234,212,0.12));
+  border-color: var(--accent, #5eead4);
+  color: var(--text);
+}
+.remind-btn--inline .remind-btn__label { font-weight: 500; }
+@media (max-width: 480px) {
+  .remind-btn--inline .remind-btn__label { display: none; }
+  .remind-btn--inline { padding: 0; width: 28px; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .remind-btn, .remind-btn:hover, .remind-btn:active { transition: none; transform: none; }
+}
+
+/* Timing picker popover */
+.remind-btn__popover {
+  position: fixed; z-index: 9500;
+  background: var(--bg-2, #11162a); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+  padding: 6px; min-width: 200px;
+  display: flex; flex-direction: column; gap: 2px;
+  animation: remind-pop-in 0.14s ease-out;
+}
+@keyframes remind-pop-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .remind-btn__popover { animation: none; } }
+.remind-opt {
+  display: block; width: 100%; text-align: left;
+  padding: 9px 12px; background: transparent; border: 0; border-radius: 8px;
+  color: inherit; font: inherit; font-size: 14px; cursor: pointer;
+}
+.remind-opt:hover:not(:disabled) { background: var(--surface-strong); }
+.remind-opt:disabled, .remind-opt--past { opacity: 0.45; cursor: not-allowed; }
+.remind-opt .muted { opacity: 0.6; font-size: 12px; }
+
+/* Inline toast for tips + permission-denied messages */
+.remind-toast {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(20px);
+  background: var(--bg-2, #11162a); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 14px;
+  padding: 10px 16px; font-size: 14px; max-width: calc(100vw - 36px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 9700;
+}
+.remind-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (prefers-reduced-motion: reduce) { .remind-toast { transition: opacity 0.1s linear; } }
+
+/* Topbar 🔔 button + badge */
+#reminders-btn { position: relative; }
+#reminders-btn[data-count]:not([data-count="0"])::after {
+  content: attr(data-count);
+  position: absolute; top: -4px; right: -4px;
+  min-width: 16px; height: 16px; padding: 0 4px;
+  background: var(--accent, #ef4444); color: #fff;
+  border-radius: 9px; font-size: 10px; line-height: 16px;
+  font-weight: 700; text-align: center;
+  box-shadow: 0 0 0 2px var(--bg, #0a0d18);
+}
+#reminders-btn.has-reminders { color: var(--accent, #5eead4); }
+
+/* My Reminders panel — mirrors settings-panel structure */
+.reminders-panel { position: fixed; inset: 0; z-index: 9600; }
+.reminders-panel[hidden] { display: none; }
+.reminders-panel__backdrop {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+}
+.reminders-panel__card {
+  position: absolute; right: 12px; top: 64px;
+  width: min(360px, calc(100vw - 24px));
+  max-height: calc(100vh - 84px);
+  display: flex; flex-direction: column;
+  background: var(--bg-2, #11162a); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.reminders-panel__head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px; border-bottom: 1px solid var(--border);
+}
+.reminders-panel__head h3 { margin: 0; font-size: 16px; }
+.reminders-panel__body { overflow-y: auto; padding: 6px; }
+.reminders-panel__item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 10px; border-radius: 10px;
+  list-style: none;
+}
+.reminders-panel__item + .reminders-panel__item { border-top: 1px solid var(--border); border-radius: 0; }
+.reminders-panel__item.is-fired { opacity: 0.55; }
+.reminders-panel__main { flex: 1; min-width: 0; }
+.reminders-panel__title { font-weight: 600; font-size: 14px; line-height: 1.3; word-break: break-word; }
+.reminders-panel__meta { font-size: 12px; color: var(--text-2); margin-top: 2px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.reminders-panel__chip {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  background: var(--surface-strong); border: 1px solid var(--border);
+  font-size: 11px;
+}
+.reminders-panel__chip.is-fired { background: rgba(94,234,212,0.12); border-color: var(--accent, #5eead4); }
+.reminders-panel__chip.is-overdue { background: rgba(239,68,68,0.12); border-color: #ef4444; color: #ef4444; }
+.reminders-panel__cancel {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-2); cursor: pointer; font-size: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.reminders-panel__cancel:hover { background: var(--surface-strong); color: var(--text); }
+
+/* Light theme parity (mirrors what styles.css does for other panels) */
+:root[data-theme="light"] .remind-btn__popover,
+:root[data-theme="light"] .reminders-panel__card,
+:root[data-theme="light"] .remind-toast { background: #ffffff; color: #111827; }
+:root[data-theme="light"] #reminders-btn[data-count]:not([data-count="0"])::after { box-shadow: 0 0 0 2px #ffffff; }
 
 /* SW update toast — fixed bottom-right, fades in */
 .sw-toast {

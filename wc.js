@@ -165,14 +165,13 @@ function renderWcMatchCard(match, opts = {}) {
     .concat((match.broadcast?.uk || []).map(b => `UK: ${b}`))
     .concat((match.broadcast?.ie || []).map(b => `IE: ${b}`))
     .join(" · ");
-  const icsBtn = (typeof icsBtnHtml === "function" && match.date)
-    ? icsBtnHtml({
-        uid: match.id ? `wc-${match.id}` : "",
+  const remindBtn = (typeof remindBtnHtml === "function" && match.date)
+    ? remindBtnHtml({
+        eventKey: match.id ? `wc-${match.id}` : `wc-${(match.home?.name||"")}-${(match.away?.name||"")}-${match.date}`,
+        kickoffISO: match.date,
         title: shareTitle,
-        dtStart: match.date,
-        durationMin: 120,
-        venue: match.venue || "",
-        description: `${shareText}${bcastList ? "\n📺 " + bcastList : ""}\nhttps://adam.garrigan.me/#${anchorId}`,
+        body: `${wcKickoffLabel(match.date)}${bcastList ? " · " + bcastList : ""}`,
+        url: anchorId ? `/#${anchorId}` : "/",
       })
     : "";
   return `
@@ -180,7 +179,7 @@ function renderWcMatchCard(match, opts = {}) {
       <div class="wc-match-head">
         ${groupTag}${stageTag}
         <span class="wc-kickoff">${escapeHtml(wcKickoffLabel(match.date))}</span>
-        ${icsBtn}${shareBtn}
+        ${remindBtn}${shareBtn}
       </div>
       <div class="wc-match-teams">
         <span class="wc-team wc-team--home${isAdamsWcTeam(match.home?.name) ? " is-brazil" : ""}">
@@ -587,14 +586,12 @@ function stopWcLiveRefresh() {
   if (WC_LIVE_TIMER) { clearInterval(WC_LIVE_TIMER); WC_LIVE_TIMER = null; }
 }
 
-// Wire up the per-card 🔗 share button. As of the v32 sweep, app.js's
-// bindGlobalShareButtons() handles both .share-btn-inline AND .wc-share-btn
-// via the Web Share API (with clipboard fallback). This binder is kept as
-// a delegating shim so older call sites (renderWorldCup) still work, but
-// the real logic lives in app.js.
+// Wire up the per-card 🔗 share + 🔔 remind buttons. As of v33,
+// bindGlobalFixtureButtons() in app.js owns both. This binder is a shim
+// kept for the renderWorldCup call site.
 function bindWcShareButtons(scope) {
-  if (typeof bindGlobalShareButtons === "function") bindGlobalShareButtons();
-  if (typeof bindGlobalIcsButtons === "function") bindGlobalIcsButtons();
+  if (typeof bindGlobalFixtureButtons === "function") bindGlobalFixtureButtons();
+  else if (typeof bindGlobalShareButtons === "function") bindGlobalShareButtons();
 }
 
 function renderWcTopbarChip(data) {

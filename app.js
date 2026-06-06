@@ -379,105 +379,417 @@ function bindGlobalShareButtons() {
   });
 }
 
-// ===== ICS CALENDAR EXPORT =====
-// Generates a one-event .ics file for a fixture and triggers download via
-// an in-memory blob. iOS Safari auto-opens in Calendar; desktop saves to
-// Downloads. No external libs — RFC 5545 is small for a single VEVENT.
-function icsBtnHtml(opts) {
-  if (!opts || !opts.dtStart || !opts.title) return "";
-  const payload = {
-    u: opts.uid || "",
+// ===== REMIND ME (client-scheduled local notifications) =====
+// Replaces the v32 .ics calendar export. Adam taps 🔔 on a fixture, picks
+// 30 min / 2 h / morning-of, and we store the reminder in IndexedDB (so
+// the service worker can read it too). The SW checks the store on every
+// activate, on `periodicsync`, and whenever the page posts CHECK_REMINDERS,
+// firing `registration.showNotification()` for any reminder whose fireAt
+// has passed and that hasn't been fired yet. No server / no VAPID needed.
+//
+// Honest support matrix:
+//   iOS PWA (added to home screen, iOS 16.4+) ✅ — periodic SW wakes fire
+//     the notification close to its scheduled time
+//   iOS Safari (not installed) 🟡 — only fires when the user reopens the
+//     tab; we show a one-time "add to home screen" tip
+//   Android Chrome (installed) ✅ — periodicSync + SW backgrounding fires
+//     within a few minutes of fireAt
+//   Desktop Chrome/Edge/Firefox ✅ — fires while the browser is running
+//   Desktop Safari 🟡 — fires when a window with the site is open
+
+const REMINDER_OFFSETS = [
+  { id: "30m",  label: "30 min before",  minutes: 30 },
+  { id: "2h",   label: "2 hours before", minutes: 120 },
+  { id: "day",  label: "Morning of (09:00)", morning: true },
+];
+const REMINDER_DEFAULT_ID = "30m";
+
+// ---- IndexedDB wrapper (shared shape with service-worker.js) ----
+const REMIND_DB_NAME = "adam-reminders-db";
+const REMIND_DB_VERSION = 1;
+const REMIND_STORE = "reminders";
+
+function remindOpenDb() {
+  return new Promise((resolve, reject) => {
+    if (!("indexedDB" in self)) { reject(new Error("no idb")); return; }
+    const req = indexedDB.open(REMIND_DB_NAME, REMIND_DB_VERSION);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(REMIND_STORE)) {
+        db.createObjectStore(REMIND_STORE, { keyPath: "key" });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function remindGetAll() {
+  try {
+    const db = await remindOpenDb();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction(REMIND_STORE, "readonly");
+      const r = tx.objectStore(REMIND_STORE).getAll();
+      r.onsuccess = () => res(r.result || []);
+      r.onerror = () => rej(r.error);
+    });
+  } catch { return []; }
+}
+async function remindPut(rem) {
+  const db = await remindOpenDb();
+  return new Promise((res, rej) => {
+    const tx = db.transaction(REMIND_STORE, "readwrite");
+    const r = tx.objectStore(REMIND_STORE).put(rem);
+    r.onsuccess = () => res();
+    r.onerror = () => rej(r.error);
+  });
+}
+async function remindDelete(key) {
+  try {
+    const db = await remindOpenDb();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction(REMIND_STORE, "readwrite");
+      const r = tx.objectStore(REMIND_STORE).delete(key);
+      r.onsuccess = () => res();
+      r.onerror = () => rej(r.error);
+    });
+  } catch { /* swallow — UI keeps working */ }
+}
+
+// ---- Public button ----
+// Required: opts.eventKey (stable id), opts.kickoffISO, opts.title.
+// Optional: opts.body, opts.url (deep link, default current page hash).
+function remindBtnHtml(opts) {
+  if (!opts || !opts.eventKey || !opts.kickoffISO || !opts.title) return "";
+  const when = new Date(opts.kickoffISO).getTime();
+  if (!isFinite(when)) return "";
+  // Don't render the button for fixtures that have already kicked off.
+  if (when - Date.now() < -2 * 60 * 60 * 1000) return "";
+  const data = {
+    k: opts.eventKey,
+    w: opts.kickoffISO,
     t: opts.title,
-    s: opts.dtStart,
-    d: opts.durationMin || 120,
-    v: opts.venue || "",
-    x: opts.description || "",
+    b: opts.body || "",
+    u: opts.url || "",
   };
-  // JSON.stringify + escapeAttr keeps quotes safe inside the single-quoted
-  // attribute. getAttribute() un-escapes &quot; back to " before JSON.parse.
-  const data = escapeAttr(JSON.stringify(payload));
-  return `<button type="button" class="ics-btn-inline" data-ics='${data}' aria-label="Add to calendar" title="Add to calendar">📅</button>`;
+  const json = escapeAttr(JSON.stringify(data));
+  return `<button type="button" class="remind-btn remind-btn--inline" data-remind='${json}' aria-label="Remind me about ${escapeAttr(opts.title)}" aria-pressed="false" title="Remind me">
+    <span class="remind-btn__icon" aria-hidden="true">🔔</span><span class="remind-btn__label">Remind me</span>
+  </button>`;
 }
 
-function icsFormatDate(iso) {
-  // RFC 5545 DATE-TIME in UTC: YYYYMMDDTHHMMSSZ
-  const d = new Date(iso);
-  if (isNaN(d)) return null;
-  const pad = (n) => String(n).padStart(2, "0");
-  return `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;
+// Compute fireAt (ms epoch) given a kickoff ISO and offset id.
+function reminderFireAt(kickoffISO, offsetId) {
+  const off = REMIND_OFFSETS_BY_ID[offsetId] || REMIND_OFFSETS_BY_ID[REMINDER_DEFAULT_ID];
+  const k = new Date(kickoffISO).getTime();
+  if (!isFinite(k)) return null;
+  if (off.morning) {
+    // 09:00 local on the day of the fixture.
+    const d = new Date(kickoffISO);
+    d.setHours(9, 0, 0, 0);
+    return d.getTime();
+  }
+  return k - off.minutes * 60 * 1000;
+}
+const REMIND_OFFSETS_BY_ID = REMINDER_OFFSETS.reduce((m, o) => (m[o.id] = o, m), {});
+
+// Render the small popover with the 3 offset choices, anchored to the
+// triggering button. One popover at a time — re-opening closes the prior.
+function openRemindPopover(btn, payload) {
+  closeRemindPopover();
+  const pop = document.createElement("div");
+  pop.className = "remind-btn__popover";
+  pop.setAttribute("role", "menu");
+  pop.innerHTML = REMINDER_OFFSETS.map(o => {
+    const fa = reminderFireAt(payload.w, o.id);
+    const past = fa != null && fa <= Date.now();
+    const cls = past ? "remind-opt remind-opt--past" : "remind-opt";
+    const sub = past ? " <span class=\"muted\">(too late)</span>" : "";
+    return `<button type="button" class="${cls}" role="menuitem" data-off="${o.id}"${past ? " disabled" : ""}>${escapeHtml(o.label)}${sub}</button>`;
+  }).join("");
+  document.body.appendChild(pop);
+  const r = btn.getBoundingClientRect();
+  pop.style.position = "fixed";
+  pop.style.top = `${Math.min(window.innerHeight - 160, r.bottom + 6)}px`;
+  pop.style.left = `${Math.min(window.innerWidth - 220, Math.max(8, r.left))}px`;
+  pop.__anchor = btn;
+  pop.addEventListener("click", async (e) => {
+    const opt = e.target.closest(".remind-opt");
+    if (!opt || opt.disabled) return;
+    const offId = opt.getAttribute("data-off");
+    await setReminderFromPayload(btn, payload, offId);
+    closeRemindPopover();
+  });
+  // Dismiss on outside click + Esc.
+  setTimeout(() => {
+    document.addEventListener("click", remindPopoverOutsideClick, true);
+    document.addEventListener("keydown", remindPopoverKey, true);
+  }, 0);
+}
+function remindPopoverOutsideClick(e) {
+  const pop = document.querySelector(".remind-btn__popover");
+  if (!pop) return;
+  if (pop.contains(e.target) || e.target === pop.__anchor) return;
+  closeRemindPopover();
+}
+function remindPopoverKey(e) { if (e.key === "Escape") closeRemindPopover(); }
+function closeRemindPopover() {
+  document.querySelectorAll(".remind-btn__popover").forEach(p => p.remove());
+  document.removeEventListener("click", remindPopoverOutsideClick, true);
+  document.removeEventListener("keydown", remindPopoverKey, true);
 }
 
-function icsEscape(text) {
-  // RFC 5545: escape backslashes, commas, semicolons, and newlines.
-  return String(text || "")
-    .replace(/\\/g, "\\\\")
-    .replace(/\n/g, "\\n")
-    .replace(/,/g, "\\,")
-    .replace(/;/g, "\\;");
+async function setReminderFromPayload(btn, payload, offsetId) {
+  // Ask permission only when the user has actually committed to a reminder.
+  const ok = await ensureNotificationPermission();
+  const fireAt = reminderFireAt(payload.w, offsetId);
+  if (!fireAt) return;
+  const off = REMIND_OFFSETS_BY_ID[offsetId];
+  const reminder = {
+    key: `${payload.k}-${offsetId}`,
+    eventKey: payload.k,
+    fireAt,
+    kickoffISO: payload.w,
+    title: payload.t,
+    body: payload.b || `Kickoff at ${fmtTime(payload.w)}`,
+    url: payload.u || `${location.pathname}${location.hash || ""}`,
+    offsetId,
+    offsetLabel: off.label,
+    createdAt: Date.now(),
+    fired: false,
+    // permissionGranted=false means we'll only manage to fire via in-page setTimeout
+    permissionGranted: ok,
+  };
+  await remindPut(reminder);
+  postRemindersToSW();
+  scheduleInPageTimeout(reminder);
+  flashRemindButton(btn, ok ? "✅ I'll remind you" : "📌 Saved");
+  renderRemindersPanel();
+  updateRemindBadge();
+  maybeShowIosPwaTip();
+  if (!ok) {
+    // We can still fire while the page is open via the in-page timeout
+    // (already scheduled). Tell the user honestly.
+    showInlineToast("📌 We'll remind you next time you open the dashboard if it's still time.");
+  }
 }
 
-function buildIcsString({ uid, title, dtStart, durationMin, venue, description }) {
-  const dt = icsFormatDate(dtStart);
-  if (!dt) return null;
-  const end = new Date(new Date(dtStart).getTime() + (durationMin || 120) * 60 * 1000);
-  const dtEnd = icsFormatDate(end.toISOString());
-  const now = icsFormatDate(new Date().toISOString());
-  // Fold lines >75 chars per spec? Optional for short events — skip.
-  return [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Adam Sports Dashboard//EN",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
-    `UID:${uid || (dt + "-" + Math.random().toString(36).slice(2))}@adam.garrigan.me`,
-    `DTSTAMP:${now}`,
-    `DTSTART:${dt}`,
-    `DTEND:${dtEnd}`,
-    `SUMMARY:${icsEscape(title)}`,
-    venue ? `LOCATION:${icsEscape(venue)}` : null,
-    description ? `DESCRIPTION:${icsEscape(description)}` : null,
-    "END:VEVENT",
-    "END:VCALENDAR",
-    "",
-  ].filter(Boolean).join("\r\n");
+async function ensureNotificationPermission() {
+  if (typeof Notification === "undefined") return false;
+  if (Notification.permission === "granted") return true;
+  if (Notification.permission === "denied") return false;
+  try {
+    const p = await Notification.requestPermission();
+    return p === "granted";
+  } catch { return false; }
 }
 
-function slugify(s) {
-  return String(s || "fixture")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60) || "fixture";
+function flashRemindButton(btn, msg) {
+  if (!btn) return;
+  const orig = btn.innerHTML;
+  btn.classList.add("remind-btn--active");
+  btn.setAttribute("aria-pressed", "true");
+  btn.innerHTML = `<span class="remind-btn__icon" aria-hidden="true">✅</span><span class="remind-btn__label">${escapeHtml(msg)}</span>`;
+  setTimeout(() => {
+    btn.innerHTML = orig.replace(/aria-pressed="false"/, 'aria-pressed="true"');
+  }, 2000);
 }
 
-function bindGlobalIcsButtons() {
-  document.querySelectorAll(".ics-btn-inline").forEach(btn => {
-    if (btn.__bound) return;
-    btn.__bound = true;
+function showInlineToast(msg) {
+  let host = document.getElementById("remind-inline-toast");
+  if (!host) {
+    host = document.createElement("div");
+    host.id = "remind-inline-toast";
+    host.className = "remind-toast";
+    host.setAttribute("role", "status");
+    host.setAttribute("aria-live", "polite");
+    document.body.appendChild(host);
+  }
+  host.textContent = msg;
+  host.classList.add("is-visible");
+  clearTimeout(host.__t);
+  host.__t = setTimeout(() => host.classList.remove("is-visible"), 4200);
+}
+
+let _iosTipShown = false;
+function maybeShowIosPwaTip() {
+  if (_iosTipShown) return;
+  try { if (localStorage.getItem("adam-ios-tip-shown")) { _iosTipShown = true; return; } } catch {}
+  const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent || "");
+  const standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches)
+    || ("standalone" in navigator && navigator.standalone);
+  if (isIos && !standalone) {
+    _iosTipShown = true;
+    try { localStorage.setItem("adam-ios-tip-shown", "1"); } catch {}
+    setTimeout(() => showInlineToast("💡 Add this site to your home screen for reminders that work even when the app is closed."), 800);
+  }
+}
+
+// In-page fallback firing: while the page is open we set a setTimeout for
+// each reminder so it fires even on platforms with no background SW.
+const REMIND_INPAGE_TIMERS = new Map(); // key → timeoutId
+function scheduleInPageTimeout(rem) {
+  if (!rem || rem.fired) return;
+  const delta = rem.fireAt - Date.now();
+  if (delta < -5 * 60 * 1000) return; // skipped — too far in the past
+  if (REMIND_INPAGE_TIMERS.has(rem.key)) clearTimeout(REMIND_INPAGE_TIMERS.get(rem.key));
+  const wait = Math.max(0, delta);
+  const id = setTimeout(() => fireReminderInPage(rem.key), wait);
+  REMIND_INPAGE_TIMERS.set(rem.key, id);
+}
+async function fireReminderInPage(key) {
+  const all = await remindGetAll();
+  const rem = all.find(r => r.key === key);
+  if (!rem || rem.fired) return;
+  await showReminderNotification(rem);
+  rem.fired = true;
+  rem.firedAt = Date.now();
+  await remindPut(rem);
+  postRemindersToSW();
+  renderRemindersPanel();
+  updateRemindBadge();
+}
+async function showReminderNotification(rem) {
+  try {
+    const reg = await navigator.serviceWorker?.ready;
+    const opts = {
+      body: rem.body,
+      tag: `remind-${rem.key}`,
+      icon: "icons/icon-192.svg",
+      badge: "icons/icon-192.svg",
+      data: { url: rem.url || "/" },
+    };
+    if (reg && typeof reg.showNotification === "function" && Notification.permission === "granted") {
+      await reg.showNotification(rem.title, opts);
+      return;
+    }
+    if (typeof Notification !== "undefined" && Notification.permission === "granted") {
+      // eslint-disable-next-line no-new
+      new Notification(rem.title, opts);
+      return;
+    }
+    // Last resort: in-app toast.
+    showInlineToast(`🔔 ${rem.title} — ${rem.body}`);
+  } catch {
+    showInlineToast(`🔔 ${rem.title} — ${rem.body}`);
+  }
+}
+
+// Tell the SW about the current reminder list so it can read from IDB too.
+// (The SW reads IDB directly; this message is a hint to wake it up.)
+function postRemindersToSW() {
+  try {
+    navigator.serviceWorker?.controller?.postMessage({ type: "CHECK_REMINDERS" });
+  } catch {}
+}
+
+// Boot: on every page load, schedule in-page timers for any pending reminders,
+// fire any that are already due (SW may have missed them on Safari), and ask
+// the SW to do the same.
+async function bootReminders() {
+  const all = await remindGetAll();
+  const now = Date.now();
+  for (const rem of all) {
+    if (rem.fired) continue;
+    if (rem.fireAt <= now) {
+      // overdue — fire right away (with a small stagger).
+      setTimeout(() => fireReminderInPage(rem.key), 250);
+    } else {
+      scheduleInPageTimeout(rem);
+    }
+  }
+  postRemindersToSW();
+  // Re-check on visibility (page returning from background → maybe overdue).
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      postRemindersToSW();
+      remindGetAll().then(list => {
+        const t = Date.now();
+        list.forEach(r => {
+          if (!r.fired && r.fireAt <= t) fireReminderInPage(r.key);
+          else if (!r.fired) scheduleInPageTimeout(r);
+        });
+      });
+    }
+  });
+  renderRemindersPanel();
+  updateRemindBadge();
+}
+
+// ---- My Reminders panel (topbar 🔔) ----
+function updateRemindBadge() {
+  const btn = document.getElementById("reminders-btn");
+  if (!btn) return;
+  remindGetAll().then(list => {
+    const active = list.filter(r => !r.fired && r.fireAt > Date.now() - 60 * 1000);
+    btn.dataset.count = String(active.length);
+    btn.setAttribute("aria-label", active.length ? `My reminders (${active.length} active)` : "My reminders");
+    btn.classList.toggle("has-reminders", active.length > 0);
+  });
+}
+
+function renderRemindersPanel() {
+  const body = document.getElementById("reminders-panel-body");
+  if (!body) return;
+  remindGetAll().then(list => {
+    list.sort((a, b) => a.fireAt - b.fireAt);
+    if (!list.length) {
+      body.innerHTML = `<p class="muted" style="padding:14px">No reminders yet. Tap 🔔 Remind me on any fixture.</p>`;
+      return;
+    }
+    body.innerHTML = list.map(r => {
+      const past = r.fired || r.fireAt < Date.now();
+      const when = new Date(r.fireAt);
+      const whenStr = `${when.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" })} · ${when.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}`;
+      const statusChip = r.fired ? `<span class="reminders-panel__chip is-fired">Sent</span>`
+        : past ? `<span class="reminders-panel__chip is-overdue">Overdue</span>`
+        : `<span class="reminders-panel__chip">${escapeHtml(r.offsetLabel || "")}</span>`;
+      return `<li class="reminders-panel__item${r.fired ? " is-fired" : ""}">
+        <div class="reminders-panel__main">
+          <div class="reminders-panel__title">${escapeHtml(r.title || "Reminder")}</div>
+          <div class="reminders-panel__meta">${escapeHtml(whenStr)} ${statusChip}</div>
+        </div>
+        <button type="button" class="reminders-panel__cancel" data-cancel-key="${escapeAttr(r.key)}" aria-label="Cancel reminder">✕</button>
+      </li>`;
+    }).join("");
+  });
+}
+
+function bindRemindersPanel() {
+  const btn = document.getElementById("reminders-btn");
+  const panel = document.getElementById("reminders-panel");
+  const closeBtn = document.getElementById("reminders-close");
+  const backdrop = document.getElementById("reminders-backdrop");
+  if (!btn || !panel) return;
+  if (btn.__bound) return; btn.__bound = true;
+  const open = () => { panel.hidden = false; renderRemindersPanel(); };
+  const close = () => { panel.hidden = true; };
+  btn.addEventListener("click", () => panel.hidden ? open() : close());
+  closeBtn?.addEventListener("click", close);
+  backdrop?.addEventListener("click", close);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) close(); });
+  panel.addEventListener("click", async (e) => {
+    const c = e.target.closest("[data-cancel-key]");
+    if (!c) return;
+    await remindDelete(c.getAttribute("data-cancel-key"));
+    postRemindersToSW();
+    renderRemindersPanel();
+    updateRemindBadge();
+  });
+}
+
+// ---- Generalized binder (replaces bindGlobalShareButtons + would-be
+// bindGlobalRemindButtons). Idempotent. Handles share + remind + any
+// future per-card button class.
+function bindGlobalFixtureButtons() {
+  bindGlobalShareButtons();
+  document.querySelectorAll(".remind-btn--inline").forEach(btn => {
+    if (btn.__bound) return; btn.__bound = true;
     btn.addEventListener("click", (e) => {
       e.preventDefault(); e.stopPropagation();
-      const raw = btn.getAttribute("data-ics");
-      if (!raw) return;
-      let p;
-      try { p = JSON.parse(raw); } catch { return; }
-      const ics = buildIcsString({
-        uid: p.u, title: p.t, dtStart: p.s,
-        durationMin: p.d, venue: p.v, description: p.x,
-      });
-      if (!ics) return;
-      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      const datePart = (p.s || "").slice(0, 10);
-      a.href = url;
-      a.download = `adam-${slugify(p.t)}-${datePart}.ics`;
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
-      const orig = btn.textContent;
-      btn.textContent = "✅";
-      setTimeout(() => { btn.textContent = orig; }, 1200);
+      let payload;
+      try { payload = JSON.parse(btn.getAttribute("data-remind") || "{}"); } catch { return; }
+      if (!payload.k || !payload.w || !payload.t) return;
+      openRemindPopover(btn, payload);
     });
   });
 }
@@ -1304,19 +1616,18 @@ function renderF1(d, standings) {
     const raceSess = (ns.sessions || []).find(s => /race/i.test(s.name)) || ns.sessions[ns.sessions.length - 1];
     const shareTitle = `F1 — ${ns.race_name || "Race"}${ns.circuit ? " · " + ns.circuit : ""}`;
     const share = shareBtnHtml(nsAnchor, { title: shareTitle, text: shareTitle + (raceSess?.datetime ? ` · ${fmtTime(raceSess.datetime)}` : "") });
-    const ics = (raceSess?.datetime)
-      ? icsBtnHtml({
-          uid: `f1-${nsAnchor}`,
+    const remind = (raceSess?.datetime)
+      ? remindBtnHtml({
+          eventKey: `f1-${nsAnchor}`,
+          kickoffISO: raceSess.datetime,
           title: shareTitle,
-          dtStart: raceSess.datetime,
-          durationMin: 120,
-          venue: ns.circuit || "",
-          description: `${shareTitle}\nhttps://adam.garrigan.me/#${nsAnchor}`,
+          body: `Lights out at ${fmtTime(raceSess.datetime)}${ns.circuit ? " · " + ns.circuit : ""}`,
+          url: `/#${nsAnchor}`,
         })
       : "";
     timelineHtml = `
       <article id="${nsAnchor}" class="f1-race f1-race--weekend">
-      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${ics}${share}</div>
+      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${remind}${share}</div>
       ${watch}
       <ul class="timeline">
         ${(() => {
@@ -1620,12 +1931,17 @@ function openMatchDialog(matchId) {
     ${bcastHtml}
     <div class="match-dialog-actions">
       <button type="button" data-action="share">🔗 Share</button>
-      <button type="button" data-action="ics">📅 Add to calendar</button>
+      ${remindBtnHtml({
+        eventKey: `wc-${match.id}`,
+        kickoffISO: match.date,
+        title: `${home} vs ${away} — World Cup 2026`,
+        body: `Kickoff ${wcKickoffLabel(match.date)}${match.venue ? " · " + match.venue : ""}`,
+        url: anchorId ? `/#${anchorId}` : "/",
+      })}
     </div>
   `;
   // Wire action buttons
   const shareBtn = dlg.querySelector('[data-action="share"]');
-  const icsBtn = dlg.querySelector('[data-action="ics"]');
   shareBtn?.addEventListener("click", async () => {
     if (navigator.share) {
       try { await navigator.share({ title: `${home} vs ${away}`, text: `${home} vs ${away} — World Cup 2026`, url: shareUrl }); return; } catch { /* fall through */ }
@@ -1633,35 +1949,18 @@ function openMatchDialog(matchId) {
     try { await navigator.clipboard.writeText(shareUrl); shareBtn.textContent = "✅ Copied"; setTimeout(() => shareBtn.textContent = "🔗 Share", 1200); }
     catch {}
   });
-  icsBtn?.addEventListener("click", () => {
-    const ics = buildIcsString({
-      uid: `wc-${match.id}`,
-      title: `${home} vs ${away} — World Cup 2026`,
-      dtStart: match.date,
-      durationMin: 120,
-      venue: match.venue || "",
-      description: `${home} vs ${away} — ${wcKickoffLabel(match.date)}`,
-    });
-    if (!ics) return;
-    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `adam-${slugify(home + "-vs-" + away)}-${(match.date || "").slice(0, 10)}.ics`;
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
-  });
+  // Remind-me button inside the dialog is wired by the global binder below.
+  bindGlobalFixtureButtons();
   if (typeof dlg.showModal === "function") dlg.showModal();
   else dlg.setAttribute("open", "");
 }
 
-// Delegate clicks on WC cards (anywhere outside the share/ics buttons) → modal.
+// Delegate clicks on WC cards (anywhere outside the share/remind buttons) → modal.
 function bindMatchCardClicks() {
   if (document.__matchClickBound) return;
   document.__matchClickBound = true;
   document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".wc-share-btn, .ics-btn-inline, .share-btn-inline");
+    const btn = e.target.closest(".wc-share-btn, .remind-btn, .share-btn-inline, .remind-btn__popover");
     if (btn) return; // let the button handlers run
     const card = e.target.closest(".wc-match-card");
     if (!card) return;
@@ -1701,17 +2000,16 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     const watch = watchChipsHtml(m.competition || label);
     const anchorId = stableMatchId("rugby-m", m);
     const shareTitle = `${m.home || "TBD"} v ${m.away || "TBD"} — ${m.competition || label}`;
-    const ics = m.date ? icsBtnHtml({
-      uid: `rugby-${anchorId}`,
+    const remind = m.date ? remindBtnHtml({
+      eventKey: `rugby-${anchorId}`,
+      kickoffISO: m.date,
       title: shareTitle,
-      dtStart: m.date,
-      durationMin: 110,
-      venue: m.venue || "",
-      description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
+      body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
+      url: `/#${anchorId}`,
     }) : "";
     return `
     <tr id="${anchorId}" data-comp="${escapeAttr(m.competition || label)}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
-      <td>${m.date ? fmtDate(m.date) : "TBD"} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
+      <td>${m.date ? fmtDate(m.date) : "TBD"} ${remind}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
   }).join("");
@@ -1823,17 +2121,16 @@ function renderClub(d) {
     const anchorPrefix = isU14(m.competition) ? "u15-m" : "club-m";
     const anchorId = stableMatchId(anchorPrefix, m);
     const shareTitle = `${normTeam(m.home)} v ${normTeam(m.away)} — ${m.competition || "Club"}`;
-    const ics = (!isResult && m.date) ? icsBtnHtml({
-      uid: `club-${anchorId}`,
+    const remind = (!isResult && m.date) ? remindBtnHtml({
+      eventKey: `club-${anchorId}`,
+      kickoffISO: m.date,
       title: shareTitle,
-      dtStart: m.date,
-      durationMin: 90,
-      venue: m.venue || "",
-      description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
+      body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
+      url: `/#${anchorId}`,
     }) : "";
     return `
     <tr id="${anchorId}" data-side="${isAdamsMatch(m) ? "adam" : "other"}" data-comp="${escapeAttr(m.competition || "Club")}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
-      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
+      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${remind}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${escapeHtml(normTeam(m.home))}</td>
       <td class="score">${badge}${score}</td>
       <td>${escapeHtml(normTeam(m.away))}</td>
@@ -2632,9 +2929,9 @@ function rerenderAll() {
   renderWorldCup(DATA);
   renderWcTopbarChip(DATA);
   reorderSections(DATA);
-  bindGlobalShareButtons();
-  bindGlobalIcsButtons();
+  bindGlobalFixtureButtons();
   bindMatchCardClicks();
+  bindRemindersPanel();
   // Filter chips per section. Run AFTER rendering so DOM rows exist.
   applyFilterChips({ containerSelector: "#intl-body",    attr: "data-comp", storageKey: "adam-flt-intl",    allLabel: "All" });
   applyFilterChips({ containerSelector: "#prov-body",    attr: "data-comp", storageKey: "adam-flt-prov",    allLabel: "All" });
@@ -2693,4 +2990,8 @@ function rerenderAll() {
     greetRow.innerHTML = `<span class="adam-greet">Hi Adam 👋 — Go <strong>Leinster</strong> 💙, come on <strong>St Mary's</strong> 🟢⚪, and <strong>Go Hadjar</strong> 🏎️</span>`;
     greetRow.hidden = false;
   }
+
+  // Boot the reminders system: rehydrate from IndexedDB, schedule in-page
+  // timers, fire anything overdue, tell the SW, and render the panel/badge.
+  bootReminders();
 })();

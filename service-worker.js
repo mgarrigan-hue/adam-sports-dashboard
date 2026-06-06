@@ -41,6 +41,33 @@ self.addEventListener("message", (e) => {
   }
 });
 
+// ===== PERIODIC BACKGROUND SYNC (Item N) =====
+// Supported in Chromium-based browsers behind an installed PWA + permission.
+// We refresh every data/*.json file and update the DATA_CACHE so the next
+// app load is instantly fresh. Graceful no-op everywhere else.
+const DATA_URLS = [
+  "data/f1.json", "data/f1_standings.json",
+  "data/intl_rugby.json", "data/provinces.json", "data/schools.json",
+  "data/dublin_club.json", "data/news.json", "data/watch.json",
+  "data/highlights.json", "data/world_cup.json", "data/rugby_tables.json",
+];
+
+async function refreshDataCache() {
+  try {
+    const cache = await caches.open(DATA_CACHE);
+    await Promise.all(DATA_URLS.map(async (u) => {
+      try {
+        const res = await fetch(u, { cache: "no-store" });
+        if (res && res.ok) await cache.put(u, res.clone());
+      } catch { /* ignore individual failures — best-effort */ }
+    }));
+  } catch { /* cache open failed; nothing to do */ }
+}
+
+self.addEventListener("periodicsync", (e) => {
+  if (e.tag === "refresh-data") e.waitUntil(refreshDataCache());
+});
+
 // Network-first with cache fallback. Lets us update HTML/JS/CSS without
 // the user being stuck on a stale shell — iOS PWAs in particular cling to
 // the old cached HTML for hours otherwise.

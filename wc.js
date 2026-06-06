@@ -195,6 +195,7 @@ function renderWcMatchCard(match, opts = {}) {
       </div>
       <div class="wc-match-foot">
         <span class="wc-venue">${escapeHtml(match.venue || "")}</span>
+        ${match.weather ? `<span class="weather-chip" title="${escapeAttr((match.weather.condition||"") + " · " + (match.weather.precip_mm||0) + "mm precip")}">🌤️ ${escapeHtml(String(match.weather.temp_c ?? "—"))}°C · ${escapeHtml(String(match.weather.wind_kph ?? ""))}km/h</span>` : ""}
         ${wcBroadcastBadge(match.broadcast)}
       </div>
     </article>`;
@@ -508,6 +509,7 @@ function renderWcAdamHero(data) {
 
   const bcast = wcBroadcastBadge(m.broadcast, { bothRegions: true });
   const venueHtml = m.venue ? `<span class="wc-hero-venue">📍 ${escapeHtml(m.venue)}</span>` : "";
+  const weatherHtml = m.weather ? `<span class="weather-chip" title="${escapeAttr((m.weather.condition||"") + " · " + (m.weather.precip_mm||0) + "mm precip")}">🌤️ ${escapeHtml(String(m.weather.temp_c ?? "—"))}°C · ${escapeHtml(String(m.weather.wind_kph ?? ""))}km/h ${escapeHtml(m.weather.condition || "")}</span>` : "";
 
   // The countdown/score span is updated in place by the per-second ticker.
   const cdInit = live && hasScore
@@ -521,7 +523,7 @@ function renderWcAdamHero(data) {
     <div class="adam-next adam-next--wc wc-hero-takeover" data-match-id="${escapeAttr(m.id || "")}">
       <div class="adam-next-eyebrow">${wcFlagImg({flag:'🇧🇷', name:'Brazil'})} Brazil today — World Cup</div>
       <div class="adam-next-title">${escapeHtml(m.home?.name)} ${oppHtml ? "v" : ""} ${escapeHtml(m.away?.name)}</div>
-      <div class="adam-next-meta">${escapeHtml(wcKickoffLabel(m.date))} ${venueHtml}</div>
+      <div class="adam-next-meta">${escapeHtml(wcKickoffLabel(m.date))} ${venueHtml} ${weatherHtml}</div>
       <div class="adam-next-meta wc-hero-bcast">${bcast}</div>
       <div class="adam-next-meta wc-hero-cd-row" data-iso="${escapeAttr(m.date)}" data-match-id="${escapeAttr(m.id || "")}">${cdInit}</div>
       ${formHtml}

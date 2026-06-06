@@ -1953,7 +1953,7 @@ function registerSW() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol === "file:") return;
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js").then(reg => {
+    navigator.serviceWorker.register("service-worker.js").then(async (reg) => {
       // ===== SW UPDATE TOAST =====
       // First install: SW.skipWaiting() runs at install time so the user
       // immediately gets the fresh shell on the NEXT load. On subsequent
@@ -1987,6 +1987,19 @@ function registerSW() {
         reloaded = true;
         window.location.reload();
       });
+
+      // ===== PERIODIC BACKGROUND SYNC (Item N) =====
+      // Supported: Chromium-based browsers (Android Chrome, Edge), only after
+      // the user installs the PWA AND grants periodic-background-sync
+      // permission. Hard no-op on Safari/Firefox. Min interval: 12 hours.
+      try {
+        if ("periodicSync" in reg) {
+          const status = await navigator.permissions?.query({ name: "periodic-background-sync" });
+          if (!status || status.state === "granted") {
+            await reg.periodicSync.register("refresh-data", { minInterval: 12 * 60 * 60 * 1000 });
+          }
+        }
+      } catch (err) { /* graceful: permission denied or unsupported */ }
     }).catch(err => console.warn("SW register failed", err));
   });
 }

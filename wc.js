@@ -296,7 +296,7 @@ function renderWcToday(matches) {
     </section>`;
 }
 
-function renderWcGroups(groups) {
+function renderWcGroups(groups, allMatches) {
   if (!groups || !groups.length) return "";
   const tables = groups.map(g => {
     const hasBrazil = (g.teams || []).some(t => isAdamsWcTeam(t.name));
@@ -310,8 +310,13 @@ function renderWcGroups(groups) {
     );
     const rows = sortedTeams.map(t => {
       const fav = isAdamsWcTeam(t.name) ? " is-brazil-row" : "";
+      let sparkHtml = "";
+      if (typeof formSparkline === "function" && typeof wcFormPills === "function" && allMatches) {
+        const form = wcFormPills(allMatches, t.name, 5);
+        if (form.length) sparkHtml = formSparkline(form.map(f => f.result));
+      }
       return `<tr class="${fav}">
-        <td class="wc-tn">${wcFlagImg(t)} ${escapeHtml(t.name)}</td>
+        <td class="wc-tn">${wcFlagImg(t)} ${escapeHtml(t.name)} ${sparkHtml}</td>
         <td>${t.played|0}</td><td>${t.won|0}</td><td>${t.drawn|0}</td><td>${t.lost|0}</td>
         <td>${t.gd|0}</td><td><strong>${t.points|0}</strong></td>
       </tr>`;
@@ -384,12 +389,12 @@ function renderWorldCup(data) {
   let html = "";
   if (phase === "pre") {
     html += renderWcCountdown(t, wc.matches);
-    html += renderWcGroups(wc.groups);
+    html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcFixtures(wc.matches, { heading: "All fixtures" });
   } else if (phase === "during") {
     html += renderWcCountdown(t, wc.matches);
     html += renderWcToday(wc.matches);
-    html += renderWcGroups(wc.groups);
+    html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcBracket(wc.knockout_bracket);
     html += renderWcScorers(wc.top_scorers, { showEmpty: true });
     html += renderWcFixtures(wc.matches, { fromIso: new Date(Date.now() + 24*60*60*1000).toISOString(), heading: "Upcoming fixtures" });
@@ -400,7 +405,7 @@ function renderWorldCup(data) {
       ${champ}
       <div class="wc-countdown-meta">Group + bracket archive below</div>
     </div>`;
-    html += renderWcGroups(wc.groups);
+    html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcScorers(wc.top_scorers);
   }
   root.innerHTML = html;

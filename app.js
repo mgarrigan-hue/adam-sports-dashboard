@@ -1505,6 +1505,172 @@ function renderRugbyTables(data) {
 }
 
 
+// ===== FILTER CHIPS (Item E) =====
+// Generic post-render helper. Looks at the rows inside `containerSelector`,
+// extracts unique values from `attr` (e.g. data-comp), draws a chip row at
+// the top, and toggles row visibility on click. Persists active filter in
+// sessionStorage keyed by storageKey.
+function applyFilterChips({ containerSelector, attr, storageKey, allLabel = "All", before = null, labelMap = null }) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+  // Remove any prior chip strip we may have injected from a previous render
+  const prior = container.querySelector(":scope > .filter-chips");
+  if (prior) prior.remove();
+
+  const rows = Array.from(container.querySelectorAll(`[${attr}]`));
+  if (!rows.length) return;
+  const values = Array.from(new Set(rows.map(r => r.getAttribute(attr)).filter(Boolean)));
+  if (values.length < 2) return; // pointless if only one value
+
+  const saved = sessionStorage.getItem(storageKey) || "__all";
+  const chipHtml = `<div class="filter-chips" role="tablist">
+    <button class="filter-chip${saved === "__all" ? " is-active" : ""}" data-filter="__all">${escapeHtml(allLabel)}</button>
+    ${values.map(v => `<button class="filter-chip${saved === v ? " is-active" : ""}" data-filter="${escapeAttr(v)}">${escapeHtml((labelMap && labelMap[v]) || v)}</button>`).join("")}
+  </div>`;
+  const strip = document.createRange().createContextualFragment(chipHtml).firstElementChild;
+  if (before && container.querySelector(before)) {
+    container.insertBefore(strip, container.querySelector(before));
+  } else {
+    container.insertBefore(strip, container.firstChild);
+  }
+
+  const apply = (filter) => {
+    rows.forEach(r => {
+      const v = r.getAttribute(attr);
+      const show = (filter === "__all") || v === filter;
+      r.style.display = show ? "" : "none";
+      // Hide trailing watch-sub helper rows too (rugby/club have a follow-up
+      // <tr class="watch-sub"> immediately after each match row).
+      const next = r.nextElementSibling;
+      if (next && next.classList && next.classList.contains("watch-sub")) {
+        next.style.display = show ? "" : "none";
+      }
+    });
+  };
+  apply(saved);
+
+  strip.querySelectorAll(".filter-chip").forEach(b => b.addEventListener("click", () => {
+    const f = b.getAttribute("data-filter");
+    strip.querySelectorAll(".filter-chip").forEach(c => c.classList.toggle("is-active", c === b));
+    sessionStorage.setItem(storageKey, f);
+    apply(f);
+  }));
+}
+
+// ===== MATCH DETAIL MODAL (Item F) =====
+// One shared <dialog> reused for every match. Click handler is attached
+// globally to .wc-match-card; we read data-match-id, look up the match
+// in DATA.worldCup.matches, render details, and dialog.showModal().
+function ensureMatchDialog() {
+  let dlg = document.getElementById("match-dialog");
+  if (dlg) return dlg;
+  dlg = document.createElement("dialog");
+  dlg.id = "match-dialog";
+  dlg.className = "match-dialog";
+  dlg.setAttribute("aria-modal", "true");
+  dlg.setAttribute("aria-labelledby", "match-dialog-title");
+  dlg.innerHTML = `
+    <div class="match-dialog-card">
+      <div class="match-dialog-head">
+        <h3 class="match-dialog-title" id="match-dialog-title">Match</h3>
+        <button type="button" class="match-dialog-close" aria-label="Close">✕</button>
+      </div>
+      <div class="match-dialog-body"></div>
+    </div>`;
+  document.body.appendChild(dlg);
+  dlg.querySelector(".match-dialog-close").addEventListener("click", () => dlg.close());
+  // Backdrop click → close (native dialog doesn't do this by default)
+  dlg.addEventListener("click", (e) => {
+    const r = dlg.getBoundingClientRect();
+    const inDialog = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    if (!inDialog) dlg.close();
+  });
+  return dlg;
+}
+
+function openMatchDialog(matchId) {
+  if (!matchId) return;
+  const match = (DATA?.worldCup?.matches || []).find(m => m.id === matchId);
+  if (!match) return;
+  const dlg = ensureMatchDialog();
+  const home = match.home?.name || "TBD";
+  const away = match.away?.name || "TBD";
+  const score = (match.score && match.score.home != null && match.score.away != null)
+    ? `<div class="match-dialog-score" style="font-size:28px;font-weight:700;text-align:center;margin:8px 0">${escapeHtml(home)} ${match.score.home}–${match.score.away} ${escapeHtml(away)}</div>`
+    : `<div class="match-dialog-score" style="font-size:18px;font-weight:600;text-align:center;margin:8px 0">${escapeHtml(home)} vs ${escapeHtml(away)}</div>`;
+  const weatherHtml = match.weather
+    ? `<span class="weather-chip">🌤️ ${escapeHtml(match.weather.temp_c ?? "")}°C · ${escapeHtml(match.weather.wind_kph ?? "")}km/h ${escapeHtml(match.weather.condition || "")}</span>`
+    : "";
+  const ukLines = (match.broadcast?.uk || []).map(b => `<li>🇬🇧 ${escapeHtml(b)}</li>`).join("");
+  const ieLines = (match.broadcast?.ie || []).map(b => `<li>🇮🇪 ${escapeHtml(b)}</li>`).join("");
+  const bcastHtml = (ukLines || ieLines)
+    ? `<div class="match-dialog-section"><h4>Where to watch</h4><ul style="margin:0;padding-left:18px">${ukLines}${ieLines}</ul></div>`
+    : "";
+  const anchorId = match.id ? `wc-m-${match.id}` : "";
+  const shareUrl = anchorId ? `${location.origin}${location.pathname}#${anchorId}` : "";
+
+  dlg.querySelector(".match-dialog-title").textContent = `${home} vs ${away}`;
+  dlg.querySelector(".match-dialog-body").innerHTML = `
+    ${score}
+    <div style="text-align:center;color:var(--text-2);font-size:13px;margin-bottom:6px">
+      ${escapeHtml(wcKickoffLabel(match.date))}${match.venue ? " · 📍 " + escapeHtml(match.venue) : ""}
+    </div>
+    ${weatherHtml ? `<div style="text-align:center">${weatherHtml}</div>` : ""}
+    ${match.group ? `<div class="match-dialog-section"><h4>Stage</h4>Group ${escapeHtml(match.group)}${match.stage && match.stage !== "group" ? " · " + escapeHtml(match.stage) : ""}</div>` : ""}
+    ${bcastHtml}
+    <div class="match-dialog-actions">
+      <button type="button" data-action="share">🔗 Share</button>
+      <button type="button" data-action="ics">📅 Add to calendar</button>
+    </div>
+  `;
+  // Wire action buttons
+  const shareBtn = dlg.querySelector('[data-action="share"]');
+  const icsBtn = dlg.querySelector('[data-action="ics"]');
+  shareBtn?.addEventListener("click", async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: `${home} vs ${away}`, text: `${home} vs ${away} — World Cup 2026`, url: shareUrl }); return; } catch { /* fall through */ }
+    }
+    try { await navigator.clipboard.writeText(shareUrl); shareBtn.textContent = "✅ Copied"; setTimeout(() => shareBtn.textContent = "🔗 Share", 1200); }
+    catch {}
+  });
+  icsBtn?.addEventListener("click", () => {
+    const ics = buildIcsString({
+      uid: `wc-${match.id}`,
+      title: `${home} vs ${away} — World Cup 2026`,
+      dtStart: match.date,
+      durationMin: 120,
+      venue: match.venue || "",
+      description: `${home} vs ${away} — ${wcKickoffLabel(match.date)}`,
+    });
+    if (!ics) return;
+    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `adam-${slugify(home + "-vs-" + away)}-${(match.date || "").slice(0, 10)}.ics`;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+  });
+  if (typeof dlg.showModal === "function") dlg.showModal();
+  else dlg.setAttribute("open", "");
+}
+
+// Delegate clicks on WC cards (anywhere outside the share/ics buttons) → modal.
+function bindMatchCardClicks() {
+  if (document.__matchClickBound) return;
+  document.__matchClickBound = true;
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".wc-share-btn, .ics-btn-inline, .share-btn-inline");
+    if (btn) return; // let the button handlers run
+    const card = e.target.closest(".wc-match-card");
+    if (!card) return;
+    const id = card.getAttribute("data-match-id");
+    if (id) openMatchDialog(id);
+  });
+}
+
+
 // ---------- Rugby panels ----------
 function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = false } = {}) {
   const el = document.getElementById(elId);
@@ -1524,7 +1690,7 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : "", scorers].filter(Boolean).join("");
     const anchorId = stableMatchId("rugby-m", m);
     return `
-    <tr id="${anchorId}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""} ${outcomeClass(m)}">
+    <tr id="${anchorId}" data-comp="${escapeAttr(m.competition || label)}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""} ${outcomeClass(m)}">
       <td>${m.date ? fmtDate(m.date) : ""} ${shareBtnHtml(anchorId)}</td>
       <td>${teamCell(m.home, m.home_logo)}</td>
       <td class="score">${outcomeBadge(m)}${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"} ${ht}</td>
@@ -1544,7 +1710,7 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
       description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
     }) : "";
     return `
-    <tr id="${anchorId}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
+    <tr id="${anchorId}" data-comp="${escapeAttr(m.competition || label)}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
       <td>${m.date ? fmtDate(m.date) : "TBD"} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
@@ -1666,7 +1832,7 @@ function renderClub(d) {
       description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
     }) : "";
     return `
-    <tr id="${anchorId}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
+    <tr id="${anchorId}" data-side="${isAdamsMatch(m) ? "adam" : "other"}" data-comp="${escapeAttr(m.competition || "Club")}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
       <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${escapeHtml(normTeam(m.home))}</td>
       <td class="score">${badge}${score}</td>
@@ -2455,6 +2621,12 @@ function rerenderAll() {
   reorderSections(DATA);
   bindGlobalShareButtons();
   bindGlobalIcsButtons();
+  bindMatchCardClicks();
+  // Filter chips per section. Run AFTER rendering so DOM rows exist.
+  applyFilterChips({ containerSelector: "#intl-body",    attr: "data-comp", storageKey: "adam-flt-intl",    allLabel: "All" });
+  applyFilterChips({ containerSelector: "#prov-body",    attr: "data-comp", storageKey: "adam-flt-prov",    allLabel: "All" });
+  applyFilterChips({ containerSelector: "#schools-body", attr: "data-comp", storageKey: "adam-flt-schools", allLabel: "All" });
+  applyFilterChips({ containerSelector: "#club-body",    attr: "data-side", storageKey: "adam-flt-club",    allLabel: "All teams", labelMap: { adam: "🟢⚪ Adam's squad", other: "Other XVs" } });
   buildSearchIndex(DATA);
 }
 

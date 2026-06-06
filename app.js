@@ -293,6 +293,17 @@ function stableMatchId(prefix, m) {
   return `${prefix}-${Math.abs(h).toString(36)}`;
 }
 
+// F1 races don't have home/away — derive a stable id from race_name + date
+// (with round as a tiebreaker for the rare case of name collisions across seasons).
+function stableF1Id(r) {
+  if (!r) return "";
+  return stableMatchId("f1-r", {
+    home: r.race_name || r.name || "",
+    away: r.round != null ? String(r.round) : (r.circuit || ""),
+    date: r.date || "",
+  });
+}
+
 // Inline 🔗 button — same UX as the WC share buttons (clipboard + flash).
 // Click handler is wired by bindGlobalShareButtons() once per page.
 function shareBtnHtml(anchorId) {
@@ -1135,8 +1146,11 @@ function renderF1(d) {
   if (d.next_race_sessions?.sessions?.length) {
     const ns = d.next_race_sessions;
     const watch = watchChipsHtml("Formula 1");
+    const nsAnchor = stableF1Id({ race_name: ns.race_name, round: ns.round, circuit: ns.circuit, date: ns.sessions?.[ns.sessions.length - 1]?.datetime || ns.sessions?.[0]?.datetime || "" });
+    const share = shareBtnHtml(nsAnchor);
     timelineHtml = `
-      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""}</div>
+      <article id="${nsAnchor}" class="f1-race f1-race--weekend">
+      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${share}</div>
       ${watch}
       <ul class="timeline">
         ${(() => {
@@ -1152,7 +1166,8 @@ function renderF1(d) {
             </li>`;
           }).join("");
         })()}
-      </ul>`;
+      </ul>
+      </article>`;
   }
 
   // Last qualifying
@@ -1205,14 +1220,16 @@ function renderF1(d) {
         const teamLc = (t.team || "").toLowerCase();
         return `<li data-team="${escapeAttr(teamLc)}"><span class="pos">P${t.position}</span> <span class="drv">${escapeHtml(t.driver)}</span> <span class="muted">${escapeHtml(t.team || "")}</span> <span class="gap tabular">${escapeHtml(t.time || "")}</span></li>`;
       }).join("");
-      return `<div class="f1-race-card">
+      const anchorId = stableF1Id(r);
+      const share = shareBtnHtml(anchorId);
+      return `<article id="${anchorId}" class="f1-race f1-race-card">
         <div class="f1-race-head">
-          <div class="f1-race-name">🏆 ${escapeHtml(r.race_name)}</div>
+          <div class="f1-race-name">🏆 ${escapeHtml(r.race_name)} ${share}</div>
           <div class="muted small">${fmtDate(r.date)}</div>
         </div>
         ${detail ? `<div class="f1-race-detail">${escapeHtml(detail)}</div>` : ""}
         ${top3 ? `<ol class="f1-podium">${top3}</ol>` : ""}
-      </div>`;
+      </article>`;
     }).join("");
     recentHtml = `<div class="sub">Recent races</div><div class="f1-races">${items}</div>`;
   }
@@ -1590,15 +1607,29 @@ function buildSearchIndex(all) {
     }
   }
 
-  // F1 next race + recent
+  // F1 next race + recent — each gets a stable per-race anchor so deep links
+  // land on the specific race card / weekend block (not just the F1 panel).
   for (const r of (all?.f1?.upcoming || []).slice(0, 5)) {
+    const anchor = stableF1Id(r);
     out.push({
       kind: "f1",
-      anchor: "f1",
-      label: r.name || "F1 race",
+      anchor,
+      label: `F1${r.round ? " R" + r.round : ""} — ${r.race_name || r.name || "race"}`,
       sub: `${r.circuit || ""}${r.date ? ` · ${fmtDate(r.date)}` : ""}`,
       icon: "🏎️",
-      search: `${r.name || ""} ${r.circuit || ""} F1 race`,
+      search: `${r.race_name || r.name || ""} ${r.circuit || ""} F1 race round ${r.round || ""}`,
+      ts: r.date ? new Date(r.date).getTime() : 0,
+    });
+  }
+  for (const r of (all?.f1?.recent_results || []).slice(0, 6)) {
+    const anchor = stableF1Id(r);
+    out.push({
+      kind: "f1",
+      anchor,
+      label: `F1 — ${r.race_name || "race"}${r.winner ? " · " + r.winner : ""}`,
+      sub: `${r.date ? fmtDate(r.date) : ""}${r.winner_team ? ` · ${r.winner_team}` : ""}`,
+      icon: "🏁",
+      search: `${r.race_name || ""} ${r.winner || ""} ${r.winner_team || ""} F1 result`,
       ts: r.date ? new Date(r.date).getTime() : 0,
     });
   }

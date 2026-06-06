@@ -174,12 +174,22 @@ function renderWcMatchCard(match, opts = {}) {
         url: anchorId ? `/#${anchorId}` : "/",
       })
     : "";
+  const phoneBtn = (typeof phoneBtnHtml === "function" && match.date)
+    ? phoneBtnHtml({
+        eventKey: match.id ? `wc-${match.id}` : `wc-${(match.home?.name||"")}-${(match.away?.name||"")}-${match.date}`,
+        kickoffISO: match.date,
+        title: shareTitle,
+        body: `${wcKickoffLabel(match.date)}${bcastList ? " · " + bcastList : ""}`,
+        url: anchorId ? `/#${anchorId}` : "/",
+        venue: match.venue || "",
+      })
+    : "";
   return `
     <article class="${cls}"${anchorId ? ` id="${anchorId}"` : ""} data-match-id="${escapeAttr(match.id || "")}">
       <div class="wc-match-head">
         ${groupTag}${stageTag}
         <span class="wc-kickoff">${escapeHtml(wcKickoffLabel(match.date))}</span>
-        ${remindBtn}${shareBtn}
+        ${remindBtn}${phoneBtn}${shareBtn}
       </div>
       <div class="wc-match-teams">
         <span class="wc-team wc-team--home${isAdamsWcTeam(match.home?.name) ? " is-brazil" : ""}">

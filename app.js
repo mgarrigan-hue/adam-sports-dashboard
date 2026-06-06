@@ -477,6 +477,189 @@ function remindBtnHtml(opts) {
   </button>`;
 }
 
+// ===== ADD TO PHONE (Item 3) =====
+// Pragmatic alternative to Apple Wallet .pkpass. We don't have an Apple
+// Developer cert ($99/yr), and fake-signed passes are rejected by iOS.
+// Instead, on tap we open a small sheet with three native hand-offs:
+//
+//   1. Apple Calendar — download a clean .ics with a VALARM TRIGGER -PT30M
+//      (gives iPhone Calendar a 30-min-before lock-screen alert). Includes
+//      proper UTC DTSTART/DTEND, SUMMARY, LOCATION, DESCRIPTION, URL.
+//   2. Google Calendar — opens calendar.google.com/calendar/render?... in
+//      a new tab, pre-filling the add-event form. Works iOS/Android/desktop.
+//   3. Share — same Web Share API / clipboard pathway as the 🔗 button.
+//
+// Same opts shape as remindBtnHtml + optional venue, durationHours, url.
+function phoneBtnHtml(opts) {
+  if (!opts || !opts.eventKey || !opts.kickoffISO || !opts.title) return "";
+  const when = new Date(opts.kickoffISO).getTime();
+  if (!isFinite(when)) return "";
+  if (when - Date.now() < -2 * 60 * 60 * 1000) return "";
+  const data = {
+    k: opts.eventKey,
+    w: opts.kickoffISO,
+    t: opts.title,
+    b: opts.body || "",
+    u: opts.url || "",
+    v: opts.venue || "",
+    d: opts.durationHours || 0,
+  };
+  const json = escapeAttr(JSON.stringify(data));
+  return `<button type="button" class="phone-btn-inline" data-phone='${json}' aria-label="Add ${escapeAttr(opts.title)} to your phone" title="Add to phone">📲</button>`;
+}
+
+function _icsPad(n) { return String(n).padStart(2, "0"); }
+function _icsDate(d) {
+  return `${d.getUTCFullYear()}${_icsPad(d.getUTCMonth() + 1)}${_icsPad(d.getUTCDate())}T${_icsPad(d.getUTCHours())}${_icsPad(d.getUTCMinutes())}${_icsPad(d.getUTCSeconds())}Z`;
+}
+function _icsEscape(s) {
+  return String(s || "")
+    .replace(/\\/g, "\\\\")
+    .replace(/\n/g, "\\n")
+    .replace(/,/g, "\\,")
+    .replace(/;/g, "\\;");
+}
+function _icsSlug(s) {
+  return String(s || "event")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "event";
+}
+
+// Build a single-event ICS string with a -30min DISPLAY VALARM. The URL
+// property gives iOS Calendar a tap-through back to the dashboard fixture.
+function buildICS(payload) {
+  const start = new Date(payload.w);
+  if (isNaN(start)) return null;
+  const defaultHours = /grand prix|formula 1|f1/i.test(payload.t || "") ? 1.5 : 2;
+  const hours = Number(payload.d) || defaultHours;
+  const end = new Date(start.getTime() + hours * 60 * 60 * 1000);
+  const dtstamp = _icsDate(new Date());
+  const uid = `${payload.k}@adam.garrigan.me`;
+  const deepUrl = payload.u
+    ? (payload.u.startsWith("http") ? payload.u : `${location.origin}${payload.u.replace(/^\//, "/")}`)
+    : `${location.origin}${location.pathname}`;
+  const desc = [payload.b || "", deepUrl].filter(Boolean).join("\\n\\n");
+  // Calendar clients (including iOS) require strict CRLF line endings.
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//adam.garrigan.me//Sports Dashboard//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    `UID:${uid}`,
+    `DTSTAMP:${dtstamp}`,
+    `DTSTART:${_icsDate(start)}`,
+    `DTEND:${_icsDate(end)}`,
+    `SUMMARY:${_icsEscape(payload.t || "Fixture")}`,
+    payload.v ? `LOCATION:${_icsEscape(payload.v)}` : "",
+    `DESCRIPTION:${_icsEscape(desc)}`,
+    `URL:${_icsEscape(deepUrl)}`,
+    "BEGIN:VALARM",
+    "ACTION:DISPLAY",
+    `DESCRIPTION:${_icsEscape(payload.t || "Fixture")} starts in 30 minutes`,
+    "TRIGGER:-PT30M",
+    "END:VALARM",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].filter(Boolean);
+  return lines.join("\r\n") + "\r\n";
+}
+
+function googleCalUrl(payload) {
+  const start = new Date(payload.w);
+  if (isNaN(start)) return "";
+  const defaultHours = /grand prix|formula 1|f1/i.test(payload.t || "") ? 1.5 : 2;
+  const hours = Number(payload.d) || defaultHours;
+  const end = new Date(start.getTime() + hours * 60 * 60 * 1000);
+  const fmt = (d) => `${d.getUTCFullYear()}${_icsPad(d.getUTCMonth()+1)}${_icsPad(d.getUTCDate())}T${_icsPad(d.getUTCHours())}${_icsPad(d.getUTCMinutes())}${_icsPad(d.getUTCSeconds())}Z`;
+  const deepUrl = payload.u
+    ? (payload.u.startsWith("http") ? payload.u : `${location.origin}${payload.u.replace(/^\//, "/")}`)
+    : `${location.origin}${location.pathname}`;
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: payload.t || "Fixture",
+    dates: `${fmt(start)}/${fmt(end)}`,
+    details: [(payload.b || ""), deepUrl].filter(Boolean).join("\n\n"),
+    location: payload.v || "",
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+function phoneSheetHtml(payload) {
+  const title = escapeHtml(payload.t || "Fixture");
+  const when = escapeHtml(new Date(payload.w).toLocaleString("en-IE", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }));
+  const venue = payload.v ? `<div class="phone-sheet__note">📍 ${escapeHtml(payload.v)}</div>` : "";
+  return `
+    <div class="phone-sheet__card" role="document">
+      <div class="phone-sheet__head">
+        <h3>📲 Add to phone</h3>
+        <button type="button" class="phone-sheet__close" data-phone-close aria-label="Close">✕</button>
+      </div>
+      <div class="phone-sheet__note"><strong>${title}</strong><br/>${when}</div>
+      ${venue}
+      <p class="phone-sheet__note">We'll add this match with a 30-minute lock-screen alert before kickoff.</p>
+      <div class="phone-sheet__actions">
+        <button type="button" class="phone-sheet__btn" data-phone-ics>
+          <span class="phone-sheet__btn-icon" aria-hidden="true">📅</span>
+          <span class="phone-sheet__btn-text"><span>Apple Calendar</span><span class="phone-sheet__btn-sub">Downloads an .ics with a 30-min alert</span></span>
+        </button>
+        <a class="phone-sheet__btn" data-phone-gcal target="_blank" rel="noopener" href="#">
+          <span class="phone-sheet__btn-icon" aria-hidden="true">📆</span>
+          <span class="phone-sheet__btn-text"><span>Google Calendar</span><span class="phone-sheet__btn-sub">Opens pre-filled add-event form</span></span>
+        </a>
+        <button type="button" class="phone-sheet__btn" data-phone-share>
+          <span class="phone-sheet__btn-icon" aria-hidden="true">🔗</span>
+          <span class="phone-sheet__btn-text"><span>Share link</span><span class="phone-sheet__btn-sub">Native share sheet · clipboard fallback</span></span>
+        </a>
+      </div>
+    </div>`;
+}
+
+function openPhoneSheet(payload) {
+  if (!payload || !payload.k || !payload.w || !payload.t) return;
+  let dlg = document.getElementById("phone-sheet");
+  if (!dlg) {
+    dlg = document.createElement("dialog");
+    dlg.id = "phone-sheet";
+    dlg.className = "phone-sheet";
+    document.body.appendChild(dlg);
+    // Click on backdrop (i.e. the dialog itself, not the inner card) closes it.
+    dlg.addEventListener("click", (e) => {
+      if (e.target === dlg) { try { dlg.close(); } catch {} }
+    });
+  }
+  dlg.innerHTML = phoneSheetHtml(payload);
+  dlg.querySelector("[data-phone-close]")?.addEventListener("click", () => { try { dlg.close(); } catch {} });
+  dlg.querySelector("[data-phone-ics]")?.addEventListener("click", () => {
+    const ics = buildICS(payload);
+    if (!ics) return;
+    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const date = String(payload.w).slice(0, 10);
+    a.download = `adam-${_icsSlug(payload.t)}-${date}.ics`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+  });
+  const gcal = dlg.querySelector("[data-phone-gcal]");
+  if (gcal) gcal.href = googleCalUrl(payload);
+  dlg.querySelector("[data-phone-share]")?.addEventListener("click", async () => {
+    const deepUrl = payload.u
+      ? (payload.u.startsWith("http") ? payload.u : `${location.origin}${payload.u.replace(/^\//, "/")}`)
+      : `${location.origin}${location.pathname}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: payload.t, text: payload.t, url: deepUrl }); return; } catch (err) { if (err && err.name === "AbortError") return; }
+    }
+    if (navigator.clipboard?.writeText) {
+      try { await navigator.clipboard.writeText(deepUrl); } catch {}
+    }
+  });
+  if (typeof dlg.showModal === "function") { try { dlg.showModal(); } catch {} }
+  else dlg.setAttribute("open", "");
+}
+
+
 // Compute fireAt (ms epoch) given a kickoff ISO and offset id.
 function reminderFireAt(kickoffISO, offsetId) {
   const off = REMIND_OFFSETS_BY_ID[offsetId] || REMIND_OFFSETS_BY_ID[REMINDER_DEFAULT_ID];
@@ -793,6 +976,16 @@ function bindGlobalFixtureButtons() {
       try { payload = JSON.parse(btn.getAttribute("data-remind") || "{}"); } catch { return; }
       if (!payload.k || !payload.w || !payload.t) return;
       openRemindPopover(btn, payload);
+    });
+  });
+  document.querySelectorAll(".phone-btn-inline").forEach(btn => {
+    if (btn.__bound) return; btn.__bound = true;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      let payload;
+      try { payload = JSON.parse(btn.getAttribute("data-phone") || "{}"); } catch { return; }
+      if (!payload.k || !payload.w || !payload.t) return;
+      openPhoneSheet(payload);
     });
   });
 }
@@ -1628,9 +1821,20 @@ function renderF1(d, standings) {
           url: `/#${nsAnchor}`,
         })
       : "";
+    const phone = (raceSess?.datetime)
+      ? phoneBtnHtml({
+          eventKey: `f1-${nsAnchor}`,
+          kickoffISO: raceSess.datetime,
+          title: shareTitle,
+          body: `Lights out at ${fmtTime(raceSess.datetime)}${ns.circuit ? " · " + ns.circuit : ""}`,
+          url: `/#${nsAnchor}`,
+          venue: ns.circuit || "",
+          durationHours: 1.5,
+        })
+      : "";
     timelineHtml = `
       <article id="${nsAnchor}" class="f1-race f1-race--weekend">
-      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${remind}${share}</div>
+      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${remind}${phone}${share}</div>
       ${watch}
       <ul class="timeline">
         ${(() => {
@@ -1941,6 +2145,14 @@ function openMatchDialog(matchId) {
         body: `Kickoff ${wcKickoffLabel(match.date)}${match.venue ? " · " + match.venue : ""}`,
         url: anchorId ? `/#${anchorId}` : "/",
       })}
+      ${phoneBtnHtml({
+        eventKey: `wc-${match.id}`,
+        kickoffISO: match.date,
+        title: `${home} vs ${away} — World Cup 2026`,
+        body: `Kickoff ${wcKickoffLabel(match.date)}${match.venue ? " · " + match.venue : ""}`,
+        url: anchorId ? `/#${anchorId}` : "/",
+        venue: match.venue || "",
+      })}
     </div>
   `;
   // Wire action buttons
@@ -1963,7 +2175,7 @@ function bindMatchCardClicks() {
   if (document.__matchClickBound) return;
   document.__matchClickBound = true;
   document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".wc-share-btn, .remind-btn, .share-btn-inline, .remind-btn__popover");
+    const btn = e.target.closest(".wc-share-btn, .remind-btn, .share-btn-inline, .remind-btn__popover, .phone-btn-inline");
     if (btn) return; // let the button handlers run
     const card = e.target.closest(".wc-match-card");
     if (!card) return;
@@ -2010,9 +2222,17 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
       body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
       url: `/#${anchorId}`,
     }) : "";
+    const phone = m.date ? phoneBtnHtml({
+      eventKey: `rugby-${anchorId}`,
+      kickoffISO: m.date,
+      title: shareTitle,
+      body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
+      url: `/#${anchorId}`,
+      venue: m.venue || "",
+    }) : "";
     return `
     <tr id="${anchorId}" data-comp="${escapeAttr(m.competition || label)}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
-      <td>${m.date ? fmtDate(m.date) : "TBD"} ${remind}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
+      <td>${m.date ? fmtDate(m.date) : "TBD"} ${remind}${phone}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
   }).join("");
@@ -2131,9 +2351,17 @@ function renderClub(d) {
       body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
       url: `/#${anchorId}`,
     }) : "";
+    const phone = (!isResult && m.date) ? phoneBtnHtml({
+      eventKey: `club-${anchorId}`,
+      kickoffISO: m.date,
+      title: shareTitle,
+      body: `Kickoff ${fmtTime(m.date)}${m.venue ? " · " + m.venue : ""}`,
+      url: `/#${anchorId}`,
+      venue: m.venue || "",
+    }) : "";
     return `
     <tr id="${anchorId}" data-side="${isAdamsMatch(m) ? "adam" : "other"}" data-comp="${escapeAttr(m.competition || "Club")}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
-      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${remind}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
+      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${remind}${phone}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${escapeHtml(normTeam(m.home))}</td>
       <td class="score">${badge}${score}</td>
       <td>${escapeHtml(normTeam(m.away))}</td>

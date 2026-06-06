@@ -154,15 +154,33 @@ function renderWcMatchCard(match, opts = {}) {
     ? `<span class="wc-group-tag wc-stage-tag">${escapeHtml(match.stage.replace(/-/g, " "))}</span>`
     : "";
   const anchorId = match.id ? `wc-m-${escapeAttr(match.id)}` : "";
+  const homeName = match.home?.name || "TBD";
+  const awayName = match.away?.name || "TBD";
+  const shareTitle = `${homeName} vs ${awayName} — World Cup 2026`;
+  const shareText = `${shareTitle} · ${wcKickoffLabel(match.date)}`;
   const shareBtn = match.id
-    ? `<button type="button" class="wc-share-btn" data-share-id="${anchorId}" aria-label="Copy link to this match" title="Copy link">🔗</button>`
+    ? `<button type="button" class="wc-share-btn" data-share-id="${anchorId}" data-share-title="${escapeAttr(shareTitle)}" data-share-text="${escapeAttr(shareText)}" aria-label="Share this match" title="Share match">🔗</button>`
+    : "";
+  const bcastList = []
+    .concat((match.broadcast?.uk || []).map(b => `UK: ${b}`))
+    .concat((match.broadcast?.ie || []).map(b => `IE: ${b}`))
+    .join(" · ");
+  const icsBtn = (typeof icsBtnHtml === "function" && match.date)
+    ? icsBtnHtml({
+        uid: match.id ? `wc-${match.id}` : "",
+        title: shareTitle,
+        dtStart: match.date,
+        durationMin: 120,
+        venue: match.venue || "",
+        description: `${shareText}${bcastList ? "\n📺 " + bcastList : ""}\nhttps://adam.garrigan.me/#${anchorId}`,
+      })
     : "";
   return `
     <article class="${cls}"${anchorId ? ` id="${anchorId}"` : ""} data-match-id="${escapeAttr(match.id || "")}">
       <div class="wc-match-head">
         ${groupTag}${stageTag}
         <span class="wc-kickoff">${escapeHtml(wcKickoffLabel(match.date))}</span>
-        ${shareBtn}
+        ${icsBtn}${shareBtn}
       </div>
       <div class="wc-match-teams">
         <span class="wc-team wc-team--home${isAdamsWcTeam(match.home?.name) ? " is-brazil" : ""}">
@@ -415,32 +433,14 @@ function stopWcLiveRefresh() {
   if (WC_LIVE_TIMER) { clearInterval(WC_LIVE_TIMER); WC_LIVE_TIMER = null; }
 }
 
-// Wire up the per-card 🔗 share button: copies a deep link to clipboard,
-// flashes "Copied!" on the button. Used by Wave 2 deep-linking too.
+// Wire up the per-card 🔗 share button. As of the v32 sweep, app.js's
+// bindGlobalShareButtons() handles both .share-btn-inline AND .wc-share-btn
+// via the Web Share API (with clipboard fallback). This binder is kept as
+// a delegating shim so older call sites (renderWorldCup) still work, but
+// the real logic lives in app.js.
 function bindWcShareButtons(scope) {
-  (scope || document).querySelectorAll(".wc-share-btn").forEach(btn => {
-    if (btn.__bound) return;
-    btn.__bound = true;
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const id = btn.getAttribute("data-share-id");
-      if (!id) return;
-      const url = `${location.origin}${location.pathname}#${id}`;
-      const orig = btn.textContent;
-      const restore = () => { btn.textContent = orig; };
-      const flash = (txt) => { btn.textContent = txt; setTimeout(restore, 1200); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(() => flash("✅"), () => flash("⚠️"));
-      } else {
-        // Legacy fallback for older Safari
-        const ta = document.createElement("textarea");
-        ta.value = url; document.body.appendChild(ta); ta.select();
-        try { document.execCommand("copy"); flash("✅"); } catch { flash("⚠️"); }
-        ta.remove();
-      }
-    });
-  });
+  if (typeof bindGlobalShareButtons === "function") bindGlobalShareButtons();
+  if (typeof bindGlobalIcsButtons === "function") bindGlobalIcsButtons();
 }
 
 function renderWcTopbarChip(data) {

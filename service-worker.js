@@ -20,9 +20,10 @@ const SHELL = [
 ];
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(SHELL_CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())
-  );
+  // Don't call skipWaiting() at install time — let the client decide when
+  // to upgrade (via the SW update toast in app.js). The first-ever install
+  // has no controller, so the new SW activates immediately anyway.
+  e.waitUntil(caches.open(SHELL_CACHE).then((c) => c.addAll(SHELL)));
 });
 
 self.addEventListener("activate", (e) => {
@@ -34,7 +35,10 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("message", (e) => {
-  if (e.data === "SKIP_WAITING") self.skipWaiting();
+  // Accept both raw string and {type: "SKIP_WAITING"} object format
+  if (e.data === "SKIP_WAITING" || (e.data && e.data.type === "SKIP_WAITING")) {
+    self.skipWaiting();
+  }
 });
 
 // Network-first with cache fallback. Lets us update HTML/JS/CSS without

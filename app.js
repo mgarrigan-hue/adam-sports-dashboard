@@ -260,14 +260,36 @@ function outcomeBadge(m) {
 // this normalisation is purely for DISPLAY consistency. Never mutate source.
 const CLUB_ALIASES = {
   "SMTC": "St Mary's College RFC",
+  "SMC": "St Mary's College RFC",
   "St Marys College RFC": "St Mary's College RFC",
   "St Mary's College": "St Mary's College RFC",
   "St Marys College": "St Mary's College RFC",
+  "St. Mary's College": "St Mary's College RFC",
+  "St. Mary's College RFC": "St Mary's College RFC",
+  "Saint Mary's College": "St Mary's College RFC",
+  "Saint Mary's College RFC": "St Mary's College RFC",
+  "St Mary's": "St Mary's College RFC",
+  "St Marys": "St Mary's College RFC",
 };
+// Fuzzy alias resolution: trims, lowercases, and tries each alias key
+// case-insensitively before falling back to display-as-given.
 function normTeam(name) {
   if (!name) return name;
   const trimmed = String(name).trim();
-  return CLUB_ALIASES[trimmed] || trimmed;
+  if (CLUB_ALIASES[trimmed]) return CLUB_ALIASES[trimmed];
+  const lc = trimmed.toLowerCase();
+  for (const k of Object.keys(CLUB_ALIASES)) {
+    if (k.toLowerCase() === lc) return CLUB_ALIASES[k];
+  }
+  return trimmed;
+}
+// Canonical form (lowercase, punctuation-stripped) for equality checks.
+function canonTeamKey(name) {
+  return String(name || "").toLowerCase().replace(/[.'’`]/g, "").replace(/\s+/g, " ").trim();
+}
+function sameTeam(a, b) {
+  if (!a || !b) return false;
+  return canonTeamKey(normTeam(a)) === canonTeamKey(normTeam(b));
 }
 // Single-source-of-truth matcher for "is this Adam's club match?".
 // Wrapping the flag keeps future upstream changes (e.g. renamed field) local.
@@ -306,32 +328,154 @@ function stableF1Id(r) {
 
 // Inline 🔗 button — same UX as the WC share buttons (clipboard + flash).
 // Click handler is wired by bindGlobalShareButtons() once per page.
-function shareBtnHtml(anchorId) {
+function shareBtnHtml(anchorId, opts = {}) {
   if (!anchorId) return "";
-  return `<button type="button" class="wc-share-btn share-btn-inline" data-share-id="${escapeAttr(anchorId)}" aria-label="Copy link to this fixture" title="Copy link">🔗</button>`;
+  const t = opts.title ? ` data-share-title="${escapeAttr(opts.title)}"` : "";
+  const x = opts.text  ? ` data-share-text="${escapeAttr(opts.text)}"`   : "";
+  return `<button type="button" class="wc-share-btn share-btn-inline" data-share-id="${escapeAttr(anchorId)}"${t}${x} aria-label="Share this fixture" title="Share">🔗</button>`;
 }
 
-// Idempotent: re-runs after every rerender. Adds 🔗 click → clipboard.
+// Idempotent: re-runs after every rerender. Adds 🔗 click → Web Share API,
+// with clipboard fallback. share-btn carries optional data-share-title / -text.
 function bindGlobalShareButtons() {
-  document.querySelectorAll(".share-btn-inline").forEach(btn => {
+  document.querySelectorAll(".share-btn-inline, .wc-share-btn").forEach(btn => {
     if (btn.__bound) return;
     btn.__bound = true;
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async (e) => {
       e.preventDefault(); e.stopPropagation();
       const id = btn.getAttribute("data-share-id");
       if (!id) return;
       const url = `${location.origin}${location.pathname}#${id}`;
+      const title = btn.getAttribute("data-share-title") || "Adam's Sports Dashboard";
+      const text = btn.getAttribute("data-share-text") || title;
       const orig = btn.textContent;
       const restore = () => { btn.textContent = orig; };
       const flash = (txt) => { btn.textContent = txt; setTimeout(restore, 1200); };
+      // Prefer Web Share API on mobile (single tap → native share sheet)
+      if (navigator.share) {
+        try {
+          await navigator.share({ title, text, url });
+          flash("✅");
+          return;
+        } catch (err) {
+          // AbortError = user cancelled — don't fall back to clipboard, that
+          // would silently copy something they explicitly dismissed.
+          if (err && err.name === "AbortError") return;
+          // Anything else (NotAllowedError on iOS without HTTPS, etc.) → clipboard
+        }
+      }
       if (navigator.clipboard?.writeText) {
-        navigator.clipboard.writeText(url).then(() => flash("✅"), () => flash("⚠️"));
+        try { await navigator.clipboard.writeText(url); flash("✅"); }
+        catch { flash("⚠️"); }
       } else {
         const ta = document.createElement("textarea");
         ta.value = url; document.body.appendChild(ta); ta.select();
         try { document.execCommand("copy"); flash("✅"); } catch { flash("⚠️"); }
         ta.remove();
       }
+    });
+  });
+}
+
+// ===== ICS CALENDAR EXPORT =====
+// Generates a one-event .ics file for a fixture and triggers download via
+// an in-memory blob. iOS Safari auto-opens in Calendar; desktop saves to
+// Downloads. No external libs — RFC 5545 is small for a single VEVENT.
+function icsBtnHtml(opts) {
+  if (!opts || !opts.dtStart || !opts.title) return "";
+  const payload = {
+    u: opts.uid || "",
+    t: opts.title,
+    s: opts.dtStart,
+    d: opts.durationMin || 120,
+    v: opts.venue || "",
+    x: opts.description || "",
+  };
+  // JSON.stringify + escapeAttr keeps quotes safe inside the single-quoted
+  // attribute. getAttribute() un-escapes &quot; back to " before JSON.parse.
+  const data = escapeAttr(JSON.stringify(payload));
+  return `<button type="button" class="ics-btn-inline" data-ics='${data}' aria-label="Add to calendar" title="Add to calendar">📅</button>`;
+}
+
+function icsFormatDate(iso) {
+  // RFC 5545 DATE-TIME in UTC: YYYYMMDDTHHMMSSZ
+  const d = new Date(iso);
+  if (isNaN(d)) return null;
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;
+}
+
+function icsEscape(text) {
+  // RFC 5545: escape backslashes, commas, semicolons, and newlines.
+  return String(text || "")
+    .replace(/\\/g, "\\\\")
+    .replace(/\n/g, "\\n")
+    .replace(/,/g, "\\,")
+    .replace(/;/g, "\\;");
+}
+
+function buildIcsString({ uid, title, dtStart, durationMin, venue, description }) {
+  const dt = icsFormatDate(dtStart);
+  if (!dt) return null;
+  const end = new Date(new Date(dtStart).getTime() + (durationMin || 120) * 60 * 1000);
+  const dtEnd = icsFormatDate(end.toISOString());
+  const now = icsFormatDate(new Date().toISOString());
+  // Fold lines >75 chars per spec? Optional for short events — skip.
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Adam Sports Dashboard//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    `UID:${uid || (dt + "-" + Math.random().toString(36).slice(2))}@adam.garrigan.me`,
+    `DTSTAMP:${now}`,
+    `DTSTART:${dt}`,
+    `DTEND:${dtEnd}`,
+    `SUMMARY:${icsEscape(title)}`,
+    venue ? `LOCATION:${icsEscape(venue)}` : null,
+    description ? `DESCRIPTION:${icsEscape(description)}` : null,
+    "END:VEVENT",
+    "END:VCALENDAR",
+    "",
+  ].filter(Boolean).join("\r\n");
+}
+
+function slugify(s) {
+  return String(s || "fixture")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60) || "fixture";
+}
+
+function bindGlobalIcsButtons() {
+  document.querySelectorAll(".ics-btn-inline").forEach(btn => {
+    if (btn.__bound) return;
+    btn.__bound = true;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const raw = btn.getAttribute("data-ics");
+      if (!raw) return;
+      let p;
+      try { p = JSON.parse(raw); } catch { return; }
+      const ics = buildIcsString({
+        uid: p.u, title: p.t, dtStart: p.s,
+        durationMin: p.d, venue: p.v, description: p.x,
+      });
+      if (!ics) return;
+      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      const datePart = (p.s || "").slice(0, 10);
+      a.href = url;
+      a.download = `adam-${slugify(p.t)}-${datePart}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+      const orig = btn.textContent;
+      btn.textContent = "✅";
+      setTimeout(() => { btn.textContent = orig; }, 1200);
     });
   });
 }
@@ -1147,10 +1291,22 @@ function renderF1(d) {
     const ns = d.next_race_sessions;
     const watch = watchChipsHtml("Formula 1");
     const nsAnchor = stableF1Id({ race_name: ns.race_name, round: ns.round, circuit: ns.circuit, date: ns.sessions?.[ns.sessions.length - 1]?.datetime || ns.sessions?.[0]?.datetime || "" });
-    const share = shareBtnHtml(nsAnchor);
+    const raceSess = (ns.sessions || []).find(s => /race/i.test(s.name)) || ns.sessions[ns.sessions.length - 1];
+    const shareTitle = `F1 — ${ns.race_name || "Race"}${ns.circuit ? " · " + ns.circuit : ""}`;
+    const share = shareBtnHtml(nsAnchor, { title: shareTitle, text: shareTitle + (raceSess?.datetime ? ` · ${fmtTime(raceSess.datetime)}` : "") });
+    const ics = (raceSess?.datetime)
+      ? icsBtnHtml({
+          uid: `f1-${nsAnchor}`,
+          title: shareTitle,
+          dtStart: raceSess.datetime,
+          durationMin: 120,
+          venue: ns.circuit || "",
+          description: `${shareTitle}\nhttps://adam.garrigan.me/#${nsAnchor}`,
+        })
+      : "";
     timelineHtml = `
       <article id="${nsAnchor}" class="f1-race f1-race--weekend">
-      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${share}</div>
+      <div class="sub">Race weekend · ${escapeHtml(ns.race_name || "")}${ns.circuit ? " · " + escapeHtml(ns.circuit) : ""} ${ics}${share}</div>
       ${watch}
       <ul class="timeline">
         ${(() => {
@@ -1285,9 +1441,18 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
   const upc = (d.fixtures || []).slice(0, 5).map(m => {
     const watch = watchChipsHtml(m.competition || label);
     const anchorId = stableMatchId("rugby-m", m);
+    const shareTitle = `${m.home || "TBD"} v ${m.away || "TBD"} — ${m.competition || label}`;
+    const ics = m.date ? icsBtnHtml({
+      uid: `rugby-${anchorId}`,
+      title: shareTitle,
+      dtStart: m.date,
+      durationMin: 110,
+      venue: m.venue || "",
+      description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
+    }) : "";
     return `
     <tr id="${anchorId}" class="${isFav(m) ? "fav-row" : ""} ${isFavTeamRow(m) ? "fav-team-row" : ""}">
-      <td>${m.date ? fmtDate(m.date) : "TBD"} ${shareBtnHtml(anchorId)}</td>
+      <td>${m.date ? fmtDate(m.date) : "TBD"} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${teamCell(m.home, m.home_logo)}</td><td>v</td><td>${teamCell(m.away, m.away_logo)}</td>
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
   }).join("");
@@ -1398,9 +1563,18 @@ function renderClub(d) {
     const badge = isResult ? outcomeBadge(m) : "";
     const anchorPrefix = isU14(m.competition) ? "u15-m" : "club-m";
     const anchorId = stableMatchId(anchorPrefix, m);
+    const shareTitle = `${normTeam(m.home)} v ${normTeam(m.away)} — ${m.competition || "Club"}`;
+    const ics = (!isResult && m.date) ? icsBtnHtml({
+      uid: `club-${anchorId}`,
+      title: shareTitle,
+      dtStart: m.date,
+      durationMin: 90,
+      venue: m.venue || "",
+      description: `${shareTitle}\nhttps://adam.garrigan.me/#${anchorId}`,
+    }) : "";
     return `
     <tr id="${anchorId}" class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
-      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${shareBtnHtml(anchorId)}</td>
+      <td>${m.date ? fmtDate(m.date) : (isResult ? "" : "TBD")} ${ics}${shareBtnHtml(anchorId, { title: shareTitle })}</td>
       <td>${escapeHtml(normTeam(m.home))}</td>
       <td class="score">${badge}${score}</td>
       <td>${escapeHtml(normTeam(m.away))}</td>
@@ -1520,8 +1694,69 @@ function registerSW() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol === "file:") return;
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js").catch(err => console.warn("SW register failed", err));
+    navigator.serviceWorker.register("service-worker.js").then(reg => {
+      // ===== SW UPDATE TOAST =====
+      // First install: SW.skipWaiting() runs at install time so the user
+      // immediately gets the fresh shell on the NEXT load. On subsequent
+      // updates we want to surface a toast: "new version ready — refresh?".
+      // We persist a flag so the very first install doesn't pop a toast.
+      const FIRST_INSTALL_KEY = "adam-sw-installed";
+      const isFirstInstall = !localStorage.getItem(FIRST_INSTALL_KEY);
+      if (isFirstInstall) localStorage.setItem(FIRST_INSTALL_KEY, "1");
+
+      // Detect a freshly installed waiting worker on this load.
+      if (reg.waiting && navigator.serviceWorker.controller && !isFirstInstall) {
+        showSwUpdateToast(reg.waiting);
+      }
+
+      // Future updates: fire when a new worker enters installing → installed.
+      reg.addEventListener("updatefound", () => {
+        const sw = reg.installing;
+        if (!sw) return;
+        sw.addEventListener("statechange", () => {
+          if (sw.state === "installed" && navigator.serviceWorker.controller) {
+            showSwUpdateToast(sw);
+          }
+        });
+      });
+
+      // When the new SW takes control, refresh exactly once (guarded so we
+      // don't loop on browsers that fire this on initial install too).
+      let reloaded = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (reloaded) return;
+        reloaded = true;
+        window.location.reload();
+      });
+    }).catch(err => console.warn("SW register failed", err));
   });
+}
+
+function showSwUpdateToast(waitingSw) {
+  if (document.getElementById("sw-toast")) return;
+  const toast = document.createElement("div");
+  toast.id = "sw-toast";
+  toast.className = "sw-toast";
+  toast.setAttribute("role", "status");
+  toast.setAttribute("aria-live", "polite");
+  toast.innerHTML = `
+    <span class="sw-toast-msg">✨ Dashboard updated</span>
+    <button type="button" class="sw-toast-btn" id="sw-toast-refresh">Refresh</button>
+    <button type="button" class="sw-toast-close" id="sw-toast-close" aria-label="Dismiss">✕</button>
+  `;
+  document.body.appendChild(toast);
+  const dismiss = () => toast.remove();
+  document.getElementById("sw-toast-close").addEventListener("click", dismiss);
+  document.getElementById("sw-toast-refresh").addEventListener("click", () => {
+    if (waitingSw && waitingSw.postMessage) {
+      waitingSw.postMessage({ type: "SKIP_WAITING" });
+    } else {
+      window.location.reload();
+    }
+  });
+  // Auto-dismiss after 30s if the user ignores it — keeps things tidy on
+  // long-lived PWA sessions where they just won't notice.
+  setTimeout(dismiss, 30000);
 }
 
 // ---------- Sticky nav: scroll-spy + sliding indicator ----------
@@ -2125,6 +2360,7 @@ function rerenderAll() {
   renderWcTopbarChip(DATA);
   reorderSections(DATA);
   bindGlobalShareButtons();
+  bindGlobalIcsButtons();
   buildSearchIndex(DATA);
 }
 

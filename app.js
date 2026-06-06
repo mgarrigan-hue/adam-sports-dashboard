@@ -610,7 +610,10 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
     const rel = i.date ? relTime(i.date) : "";
     const livePill = i.live ? `<span class="live-pill" aria-label="Live now">🔴 LIVE</span> ` : "";
     const adamsPill = i.adamsTeam ? `<span class="adams-pill" aria-label="Adam's team">🟢⚪ My team</span> ` : "";
-    const u14Pill = i.u14 ? `<span class="u14-pill" aria-label="U14 squad">U14</span> ` : "";
+    const u14Pill = i.u14 ? (() => {
+      const band = adamsAgeBand(i.competition || i.meta || "") || "U15";
+      return `<span class="u14-pill" aria-label="${escapeAttr(band)} squad">${escapeHtml(band)}</span> `;
+    })() : "";
     const soonPill = withSoonPills && !isPast ? soonPillHtml(i.date) : "";
     const titleSearch = (i.title || "") + " " + (i.titleHtml || "") + " " + (i.meta || "");
     const favStar = (isFavF1(titleSearch) || isFavRugby(titleSearch)) ? `<span class="fav-star" aria-label="Favourite">⭐</span> ` : "";
@@ -630,7 +633,7 @@ function renderFeed(items, targetId = "latest-feed", emptyMsg = "No data yet —
   }).join("");
 }
 
-// ---------- Adam page (focused view: Adam's club + U14 + form) ----------
+// ---------- Adam page (focused view: Adam's club + age-group squad + form) ----------
 function buildAdamItem(m, isResult) {
   const homeCell = `<span class="team-cell">${escapeHtml(normTeam(m.home))}</span>`;
   const awayCell = `<span class="team-cell">${escapeHtml(normTeam(m.away))}</span>`;
@@ -743,7 +746,7 @@ function renderAdam(all) {
   if (nextMatch) {
     const when = new Date(nextMatch.date);
     const title = `${normTeam(nextMatch.home)} v ${normTeam(nextMatch.away)}`;
-    const u14Tag = isU14(nextMatch.competition) ? ` · U14` : "";
+    const u14Tag = isU14(nextMatch.competition) ? ` · ${adamsAgeBand(nextMatch.competition) || "U15"}` : "";
     const oppHtml = renderOpponentForm(nextMatch, club);
     nextHtml = `
       <div class="adam-next">
@@ -921,16 +924,18 @@ function renderHero(all) {
 
   HERO_EVENTS = future.slice(0, 3);
 
-  // Always pin Adam's next team match into the rotation. Prefer U14 if one
-  // exists within the soonest 3 club fixtures (so we don't leap past a more
-  // imminent senior game just to reach a far-future U14 one).
+  // Always pin Adam's next team match into the rotation. Prefer his age-group
+  // (U14 historical or U15 current) fixture if one exists within the soonest 3
+  // club fixtures (so we don't leap past a more imminent senior game just to
+  // reach a far-future age-group one).
   const adamsFixtures = future.filter(e => e.isAdamsTeam);
   if (adamsFixtures.length) {
     const soonest3 = adamsFixtures.slice(0, 3);
     const u14Pick = soonest3.find(e => e.isU14);
     const adamPick = u14Pick || adamsFixtures[0];
+    const ageBand = adamsAgeBand(adamPick.meta || adamPick.competition || "") || "U15";
     adamPick.label = adamPick.isU14
-      ? "🟢⚪ Adam's U14 — Next match"
+      ? `🟢⚪ Adam's ${ageBand} — Next match`
       : "🟢⚪ Adam's team — Next match";
     if (!HERO_EVENTS.includes(adamPick)) {
       // Replace the last slot so the two soonest events still lead.
@@ -1236,10 +1241,22 @@ function clubQuickStats(d) {
 }
 
 function isU14(competition) {
-  return /\bU\s?14\b/i.test(competition || "");
+  // Adam moved from U14 → U15 in mid-2026. Historical results stay tagged
+  // U14 (when they happened); upcoming fixtures will be U15. Treat both as
+  // "Adam's age group" so detection keeps working across the transition.
+  // Function name preserved for blast-radius reasons; see adamsAgeBand() for
+  // the actual display label per match.
+  return /\bU\s?1[45]\b/i.test(competition || "");
+}
+
+function adamsAgeBand(competition) {
+  const m = /\bU\s?(14|15)\b/i.exec(competition || "");
+  return m ? `U${m[1]}` : "";
 }
 
 function clubU14Stats(d) {
+  // Aggregates Adam's age-group (U14 historical + U15 current) results over
+  // the last 90 days. Keeps function name for blast-radius reasons.
   if (!d || !Array.isArray(d.results) || !d.results.length) {
     return { html: "", html2: "", count: 0, scored: 0, conceded: 0, diff: 0, streak: 0 };
   }
@@ -1269,7 +1286,7 @@ function clubU14Stats(d) {
   const diffStr = (diff >= 0 ? "+" : "") + diff;
   const html = `
     <div class="club-strip u14-strip">
-      <div class="club-strip-title">🟢⚪ My squad — U14 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
+      <div class="club-strip-title">🟢⚪ My squad — U15 <small>· last 90 days · ${recent.length} match${recent.length === 1 ? "" : "es"}</small></div>
       <div class="club-stat win"><div class="stat-num">${w}</div><div class="stat-lbl">Wins</div></div>
       <div class="club-stat loss"><div class="stat-num">${l}</div><div class="stat-lbl">Losses</div></div>
       <div class="club-stat draw"><div class="stat-num">${dr}</div><div class="stat-lbl">Draws</div></div>
@@ -1294,7 +1311,8 @@ function renderClub(d) {
     const hl = isResult ? highlightsChipHtml(m.competition || "Dublin Club") : "";
     const subContent = [watch, hl ? `<div class="watch-row">${hl}</div>` : ""].filter(Boolean).join("");
     const score = isResult ? `${m.home_score ?? "-"}<span class="vs">v</span>${m.away_score ?? "-"}` : "v";
-    const u14Tag = isU14(m.competition) ? `<span class="u14-pill">U14</span>` : "";
+    const ageBand = adamsAgeBand(m.competition);
+    const u14Tag = ageBand ? `<span class="u14-pill">${escapeHtml(ageBand)}</span>` : "";
     const badge = isResult ? outcomeBadge(m) : "";
     return `
     <tr class="${isAdamsMatch(m) ? "fav-row" : ""} ${isU14(m.competition) ? "u14-row" : ""} ${isResult ? outcomeClass(m) : ""}">
@@ -1306,7 +1324,7 @@ function renderClub(d) {
     </tr>${subContent ? `<tr class="watch-sub"><td colspan="5">${subContent}</td></tr>` : ""}`;
   };
 
-  // Adam's U14 squad — pinned card at top
+  // Adam's age-group squad (U14 historical + U15 current) — pinned card at top
   const u14Results = (d.results || []).filter(m => isU14(m.competition) && isAdamsMatch(m));
   const u14Fixtures = (d.fixtures || []).filter(m => isU14(m.competition) && isAdamsMatch(m));
   const u14Stats = clubU14Stats(d);
@@ -1315,13 +1333,13 @@ function renderClub(d) {
   const u14Card = (u14Results.length || u14Fixtures.length) ? `
     <section class="u14-card">
       <div class="u14-card-head">
-        <h3>🟢⚪ My U14 squad</h3>
+        <h3>🟢⚪ My U15 squad</h3>
         <span class="muted small">St Mary's College RFC</span>
       </div>
       ${u14Stats.html}
       ${u14Stats.html2}
-      ${u14RecRows ? `<div class="sub">Recent U14 results</div><table>${u14RecRows}</table>` : ""}
-      ${u14UpcRows ? `<div class="sub">Upcoming U14 fixtures</div><table>${u14UpcRows}</table>` : ""}
+      ${u14RecRows ? `<div class="sub">Recent results</div><table>${u14RecRows}</table>` : ""}
+      ${u14UpcRows ? `<div class="sub">Upcoming fixtures</div><table>${u14UpcRows}</table>` : ""}
     </section>` : "";
 
   const recRows = (d.results || []).slice(0, 8).map(m => fmtRow(m, true)).join("");

@@ -424,13 +424,46 @@ function renderWorldCup(data) {
   return phase;
 }
 
-// ===== LIVE COMMENTARY (Item K) =====
-// UI shell. Source data lives in wc.matches[].commentary[] (array of
-// {minute, type, text}) — currently empty in the schedule fallback, but
-// the WC fetcher will populate it once BBC live JSON parsing lands.
+// ===== LIVE COMMENTARY (Item K — v34 wired to real fetcher) =====
+// Source data lives in wc.matches[].commentary[]. Populated by
+// scripts/fetch_wc_live.py from TheSportsDB v1 (primary), ESPN
+// (secondary), or BBC (best-effort tertiary). Schema per event:
+//   { minute, type, team, player, detail, text }
 // We render whatever's there for any live Brazil match; if commentary is
-// empty we show a friendly placeholder so the UI still acknowledges the
-// match is live.
+// still empty we show a friendly placeholder so the UI still acknowledges
+// the match is live.
+const WC_COMMENTARY_ICONS = {
+  goal: "⚽",
+  yellow: "🟨",
+  red: "🟥",
+  sub: "↔️",
+  kickoff: "🎬",
+  halftime: "⏸️",
+  fulltime: "⏹️",
+  info: "•",
+};
+
+function wcCommentaryEventHtml(ev, isBrazil) {
+  const icon = WC_COMMENTARY_ICONS[ev?.type] || WC_COMMENTARY_ICONS.info;
+  const minute = String(ev?.minute || ev?.time || "—");
+  const player = ev?.player ? `<strong>${escapeHtml(ev.player)}</strong>` : "";
+  const detail = ev?.detail ? escapeHtml(ev.detail) : "";
+  const fallback = ev?.text ? escapeHtml(ev.text) : "";
+  const teamTag = ev?.team ? `<span class="wc-commentary-team">${escapeHtml(ev.team)}</span>` : "";
+  const body = [player, detail].filter(Boolean).join(" — ") || fallback || (ev?.type || "");
+  const cls = [
+    "wc-commentary-item",
+    `wc-commentary-item--${ev?.type || "info"}`,
+    isBrazil ? "wc-commentary-item--brazil" : "",
+  ].filter(Boolean).join(" ");
+  return `<li class="${cls}">
+    <span class="wc-commentary-min">${escapeHtml(minute)}</span>
+    <span class="wc-commentary-icon" aria-hidden="true">${icon}</span>
+    <span class="wc-commentary-body">${body}</span>
+    ${teamTag}
+  </li>`;
+}
+
 function renderWcCommentary(wc) {
   if (!wc?.matches?.length) return "";
   const live = wc.matches.filter(wcIsLive);
@@ -440,13 +473,24 @@ function renderWcCommentary(wc) {
   const home = target.home?.name || "TBD";
   const away = target.away?.name || "TBD";
   const events = Array.isArray(target.commentary) ? target.commentary : [];
+  const source = target.commentary_source || null;
+  const fetched = target.commentary_fetched_at || null;
+  // Newest-first slice for visual freshness.
   const items = events.length
-    ? events.slice(-25).reverse().map(ev =>
-        `<li><span class="wc-commentary-min">${escapeHtml(String(ev.minute || ev.time || "—"))}</span> ${escapeHtml(ev.text || ev.description || "")}</li>`
-      ).join("")
-    : `<li class="wc-commentary-empty">Live commentary will appear here as the match develops.<br/><small>Source: BBC live JSON — populated by the next data refresh.</small></li>`;
+    ? events.slice(-25).reverse().map(ev => {
+        const team = (ev?.team || "").toLowerCase();
+        const isBR = team.includes("brazil") || team.includes("brasil") || team === "bra";
+        return wcCommentaryEventHtml(ev, isBR);
+      }).join("")
+    : `<li class="wc-commentary-empty">Awaiting commentary source confirmation. Live ticker will populate once the next data refresh picks up events from BBC / TheSportsDB / ESPN.</li>`;
+  const stamp = fetched
+    ? `<span class="wc-commentary-stamp" title="Last fetched">last update: ${escapeHtml(new Date(fetched).toLocaleTimeString("en-IE", { hour: "2-digit", minute: "2-digit" }))}${source ? " · " + escapeHtml(source) : ""}</span>`
+    : "";
   return `<section class="wc-commentary" data-match-id="${escapeAttr(target.id || "")}">
-    <div class="wc-commentary-head">📡 Live · ${escapeHtml(home)} vs ${escapeHtml(away)}</div>
+    <div class="wc-commentary-head">
+      <span>📡 Live · ${escapeHtml(home)} vs ${escapeHtml(away)}</span>
+      ${stamp}
+    </div>
     <ul class="wc-commentary-list">${items}</ul>
   </section>`;
 }

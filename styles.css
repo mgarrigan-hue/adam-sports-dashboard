@@ -1742,3 +1742,118 @@ body.search-open { overflow: hidden; }
   border: 1px solid rgba(234,179,8,0.35);
   font-size: 11px; margin-left: 6px;
 }
+
+/* ===== v34 commentary polish + install banner + phone sheet ===== */
+.wc-commentary-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.wc-commentary-stamp { font-size: 10.5px; color: var(--muted); font-weight: 500; text-transform: none; letter-spacing: 0; }
+.wc-commentary-item { display: flex; align-items: baseline; gap: 8px; }
+.wc-commentary-icon { font-size: 14px; min-width: 18px; text-align: center; }
+.wc-commentary-body { flex: 1; }
+.wc-commentary-team { font-size: 11px; color: var(--text-2); padding: 1px 6px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); }
+.wc-commentary-item--goal { background: linear-gradient(90deg, rgba(45,208,120,0.18), transparent 60%); border-radius: 6px; padding-left: 6px; }
+.wc-commentary-item--goal .wc-commentary-body { font-weight: 600; }
+.wc-commentary-item--brazil { background: linear-gradient(90deg, rgba(0,156,59,0.22), transparent 65%); border-radius: 6px; padding-left: 6px; }
+.wc-commentary-item--brazil .wc-commentary-min { color: #ffe177; }
+.wc-commentary-item--yellow .wc-commentary-icon { filter: drop-shadow(0 0 2px rgba(234,179,8,0.6)); }
+.wc-commentary-item--red .wc-commentary-icon { filter: drop-shadow(0 0 3px rgba(255,77,109,0.7)); }
+@keyframes wc-commentary-slide-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.wc-commentary-list > li:first-child { animation: wc-commentary-slide-in 280ms ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .wc-commentary-list > li:first-child { animation: none; }
+}
+
+/* ===== PWA install banner (Item 2) ===== */
+.install-banner {
+  position: fixed; left: 12px; right: 12px; bottom: 12px;
+  z-index: 950;
+  background: linear-gradient(135deg, rgba(56,139,253,0.16), rgba(45,208,120,0.16));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(56,139,253,0.45);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 12px;
+  animation: install-banner-up 320ms ease-out;
+  max-width: 720px; margin: 0 auto;
+}
+@keyframes install-banner-up { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+.install-banner__icon { font-size: 26px; }
+.install-banner__title { font-weight: 700; font-size: 15px; line-height: 1.2; margin: 0 0 2px; }
+.install-banner__sub { color: var(--text-2); font-size: 12.5px; margin: 0; }
+.install-banner__cta {
+  background: linear-gradient(135deg, #2dd078, #38b6f1); color: #0a0d18;
+  border: 0; font-weight: 700; font-size: 14px;
+  padding: 10px 18px; border-radius: 10px; cursor: pointer;
+  white-space: nowrap;
+}
+.install-banner__cta:hover { filter: brightness(1.06); }
+.install-banner__cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.install-banner__later {
+  background: transparent; color: var(--text-2);
+  border: 0; font-size: 12.5px; cursor: pointer; padding: 6px 8px;
+}
+.install-banner__later:hover { color: var(--text); }
+.install-banner--ios { grid-template-columns: auto 1fr auto; }
+.install-banner__ios-steps {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 8px;
+  margin-top: 8px; font-size: 12.5px; color: var(--text-2);
+}
+.install-banner__ios-steps b { color: var(--text); }
+.install-banner__ios-arrow {
+  position: fixed; left: 50%; bottom: 0;
+  width: 38px; height: 70px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: install-arrow-bounce 1.4s ease-in-out infinite;
+}
+@keyframes install-arrow-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .install-banner { animation: none; }
+  .install-banner__ios-arrow { animation: none; }
+}
+body.banner-visible { padding-bottom: 120px; }
+body.banner-visible.banner-visible--ios { padding-bottom: 180px; }
+@media (max-width: 540px) {
+  .install-banner { grid-template-columns: auto 1fr; grid-template-areas: "icon text" "cta cta" "later later"; }
+  .install-banner__icon { grid-area: icon; }
+  .install-banner__text { grid-area: text; }
+  .install-banner__cta { grid-area: cta; width: 100%; }
+  .install-banner__later { grid-area: later; }
+}
+
+/* ===== Add-to-Phone sheet (Item 3) ===== */
+.phone-btn-inline {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 999px;
+  font-size: 12px; width: 28px; height: 28px;
+  cursor: pointer; margin-left: 4px;
+}
+.phone-btn-inline:hover { background: var(--surface-strong); color: var(--text); border-color: var(--border-strong); }
+.phone-sheet { border: 0; padding: 0; background: transparent; max-width: min(420px, calc(100vw - 32px)); }
+.phone-sheet::backdrop { background: rgba(8,10,18,0.66); backdrop-filter: blur(4px); }
+.phone-sheet__card {
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px;
+  padding: 18px 18px 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+  color: var(--text);
+}
+.phone-sheet__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.phone-sheet__head h3 { margin: 0; font-size: 16px; }
+.phone-sheet__close { background: transparent; border: 0; color: var(--text-2); font-size: 18px; cursor: pointer; }
+.phone-sheet__note { font-size: 12.5px; color: var(--text-2); margin: 0 0 12px; }
+.phone-sheet__actions { display: grid; gap: 8px; }
+.phone-sheet__btn {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 12px 14px; border-radius: 12px;
+  background: var(--surface-strong); color: var(--text);
+  border: 1px solid var(--border); cursor: pointer;
+  font-size: 14px; font-weight: 600; text-align: left;
+  text-decoration: none;
+}
+.phone-sheet__btn:hover { background: rgba(56,139,253,0.12); border-color: rgba(56,139,253,0.45); }
+.phone-sheet__btn-icon { font-size: 20px; }
+.phone-sheet__btn-text { display: flex; flex-direction: column; }
+.phone-sheet__btn-sub { font-size: 11.5px; color: var(--text-2); font-weight: 500; }

@@ -42,6 +42,8 @@ jobs:
           python scripts/fetch_dublin_club.py
           python scripts/fetch_news.py
           python scripts/fetch_world_cup.py
+          # Live commentary: self-gates to Brazil matches in-window. Cheap no-op otherwise.
+          python scripts/fetch_wc_live.py
           python scripts/fetch_rugby_tables.py
           python scripts/fetch_weather.py
           exit 0

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T11:44:12Z",
+  "generated_at": "2026-06-07T13:41:15Z",
   "items": [
     {
       "title": "Lam hopes Bears' 'fight' will bear fruit next year",
@@ -330,14 +330,6 @@
       "published": "2026-06-04T22:02:55Z"
     },
     {
-      "title": "Predict the final standings of the Monaco Grand Prix",
-      "summary": "Can you arrange the drivers to correctly predict the final standings of this weekend's Monaco Grand Prix?",
-      "url": "https://www.bbc.com/sport/formula1/articles/c78qyjvwl48o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-04T21:31:36Z"
-    },
-    {
       "title": "'Drop me a message' - Kildunne open to offers after Quins exit",
       "summary": "England star Ellie Kildunne says she did not want or plan to leave Harlequins and does not know where she will play her rugby next season.",
       "url": "https://www.bbc.com/sport/rugby-union/articles/c0r2rnkwgzjo?at_medium=RSS&at_campaign=rss",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-03T05:48:40Z"
+    },
+    {
+      "title": "Keenan: Leinster won't forget about Bilbao",
+      "summary": "Losing Champions Cup finals doesn't get any easier, even if Leinster's latest heartbreak didn't have any of the late drama of their previous defeats.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0602/1576343-leinsters-keenan-we-wont-forget-about-bilbao/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-02T10:23:01Z"
     }
   ]
 }

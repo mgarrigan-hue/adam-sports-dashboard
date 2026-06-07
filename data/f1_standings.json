@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T18:00:14.706184+00:00",
+  "generated_at": "2026-06-07T19:53:07.933644+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,11 +8,20 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 131.0,
-      "wins": 4
+      "points": 156.0,
+      "wins": 5
     },
     {
       "rank": 2,
+      "driver": "Lewis Hamilton",
+      "code": "HAM",
+      "nationality": "British",
+      "team": "Ferrari",
+      "points": 90.0,
+      "wins": 0
+    },
+    {
+      "rank": 3,
       "driver": "George Russell",
       "code": "RUS",
       "nationality": "British",
@@ -21,7 +30,7 @@
       "wins": 1
     },
     {
-      "rank": 3,
+      "rank": 4,
       "driver": "Charles Leclerc",
       "code": "LEC",
       "nationality": "Monegasque",
@@ -30,30 +39,21 @@
       "wins": 0
     },
     {
-      "rank": 4,
-      "driver": "Lewis Hamilton",
-      "code": "HAM",
-      "nationality": "British",
-      "team": "Ferrari",
-      "points": 72.0,
+      "rank": 5,
+      "driver": "Oscar Piastri",
+      "code": "PIA",
+      "nationality": "Australian",
+      "team": "McLaren",
+      "points": 60.0,
       "wins": 0
     },
     {
-      "rank": 5,
+      "rank": 6,
       "driver": "Lando Norris",
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
       "points": 58.0,
-      "wins": 0
-    },
-    {
-      "rank": 6,
-      "driver": "Oscar Piastri",
-      "code": "PIA",
-      "nationality": "Australian",
-      "team": "McLaren",
-      "points": 48.0,
       "wins": 0
     },
     {
@@ -67,15 +67,33 @@
     },
     {
       "rank": 8,
-      "driver": "Pierre Gasly",
-      "code": "GAS",
+      "driver": "Isack Hadjar",
+      "code": "HAD",
       "nationality": "French",
-      "team": "Alpine F1 Team",
-      "points": 20.0,
+      "team": "Red Bull",
+      "points": 29.0,
       "wins": 0
     },
     {
       "rank": 9,
+      "driver": "Liam Lawson",
+      "code": "LAW",
+      "nationality": "New Zealander",
+      "team": "RB F1 Team",
+      "points": 26.0,
+      "wins": 0
+    },
+    {
+      "rank": 10,
+      "driver": "Pierre Gasly",
+      "code": "GAS",
+      "nationality": "French",
+      "team": "Alpine F1 Team",
+      "points": 26.0,
+      "wins": 0
+    },
+    {
+      "rank": 11,
       "driver": "Oliver Bearman",
       "code": "BEA",
       "nationality": "British",
@@ -84,16 +102,7 @@
       "wins": 0
     },
     {
-      "rank": 10,
-      "driver": "Liam Lawson",
-      "code": "LAW",
-      "nationality": "New Zealander",
-      "team": "RB F1 Team",
-      "points": 16.0,
-      "wins": 0
-    },
-    {
-      "rank": 11,
+      "rank": 12,
       "driver": "Franco Colapinto",
       "code": "COL",
       "nationality": "Argentine",
@@ -102,16 +111,16 @@
       "wins": 0
     },
     {
-      "rank": 12,
-      "driver": "Isack Hadjar",
-      "code": "HAD",
-      "nationality": "French",
-      "team": "Red Bull",
-      "points": 14.0,
+      "rank": 13,
+      "driver": "Arvid Lindblad",
+      "code": "LIN",
+      "nationality": "British",
+      "team": "RB F1 Team",
+      "points": 13.0,
       "wins": 0
     },
     {
-      "rank": 13,
+      "rank": 14,
       "driver": "Carlos Sainz",
       "code": "SAI",
       "nationality": "Spanish",
@@ -120,21 +129,12 @@
       "wins": 0
     },
     {
-      "rank": 14,
-      "driver": "Arvid Lindblad",
-      "code": "LIN",
-      "nationality": "British",
-      "team": "RB F1 Team",
-      "points": 5.0,
-      "wins": 0
-    },
-    {
       "rank": 15,
-      "driver": "Gabriel Bortoleto",
-      "code": "BOR",
-      "nationality": "Brazilian",
-      "team": "Audi",
-      "points": 2.0,
+      "driver": "Alexander Albon",
+      "code": "ALB",
+      "nationality": "Thai",
+      "team": "Williams",
+      "points": 5.0,
       "wins": 0
     },
     {
@@ -143,20 +143,29 @@
       "code": "OCO",
       "nationality": "French",
       "team": "Haas F1 Team",
-      "points": 1.0,
+      "points": 3.0,
       "wins": 0
     },
     {
       "rank": 17,
-      "driver": "Alexander Albon",
-      "code": "ALB",
-      "nationality": "Thai",
-      "team": "Williams",
-      "points": 1.0,
+      "driver": "Gabriel Bortoleto",
+      "code": "BOR",
+      "nationality": "Brazilian",
+      "team": "Audi",
+      "points": 2.0,
       "wins": 0
     },
     {
       "rank": 18,
+      "driver": "Sergio Pérez",
+      "code": "PER",
+      "nationality": "Mexican",
+      "team": "Cadillac F1 Team",
+      "points": 1.0,
+      "wins": 0
+    },
+    {
+      "rank": 19,
       "driver": "Nico Hülkenberg",
       "code": "HUL",
       "nationality": "German",
@@ -165,7 +174,16 @@
       "wins": 0
     },
     {
-      "rank": 19,
+      "rank": 20,
+      "driver": "Fernando Alonso",
+      "code": "ALO",
+      "nationality": "Spanish",
+      "team": "Aston Martin",
+      "points": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 21,
       "driver": "Valtteri Bottas",
       "code": "BOT",
       "nationality": "Finnish",
@@ -174,28 +192,10 @@
       "wins": 0
     },
     {
-      "rank": 20,
-      "driver": "Sergio Pérez",
-      "code": "PER",
-      "nationality": "Mexican",
-      "team": "Cadillac F1 Team",
-      "points": 0.0,
-      "wins": 0
-    },
-    {
-      "rank": 21,
+      "rank": 22,
       "driver": "Lance Stroll",
       "code": "STR",
       "nationality": "Canadian",
-      "team": "Aston Martin",
-      "points": 0.0,
-      "wins": 0
-    },
-    {
-      "rank": 22,
-      "driver": "Fernando Alonso",
-      "code": "ALO",
-      "nationality": "Spanish",
       "team": "Aston Martin",
       "points": 0.0,
       "wins": 0
@@ -206,56 +206,56 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 219.0,
-      "wins": 5
+      "points": 244.0,
+      "wins": 6
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 147.0,
+      "points": 165.0,
       "wins": 0
     },
     {
       "rank": 3,
       "team": "McLaren",
       "nationality": "British",
-      "points": 106.0,
+      "points": 118.0,
       "wins": 0
     },
     {
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 57.0,
+      "points": 72.0,
       "wins": 0
     },
     {
       "rank": 5,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 35.0,
+      "points": 41.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 21.0,
+      "points": 39.0,
       "wins": 0
     },
     {
       "rank": 7,
       "team": "Haas F1 Team",
       "nationality": "American",
-      "points": 19.0,
+      "points": 21.0,
       "wins": 0
     },
     {
       "rank": 8,
       "team": "Williams",
       "nationality": "British",
-      "points": 7.0,
+      "points": 11.0,
       "wins": 0
     },
     {
@@ -269,7 +269,7 @@
       "rank": 10,
       "team": "Cadillac F1 Team",
       "nationality": "American",
-      "points": 0.0,
+      "points": 1.0,
       "wins": 0
     },
     {

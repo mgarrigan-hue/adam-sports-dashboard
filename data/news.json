@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-06-07T15:20:53Z",
+  "generated_at": "2026-06-07T16:52:33Z",
   "items": [
+    {
+      "title": "Antonelli wins Monaco from Hamilton after dramatic ending",
+      "summary": "Kimi Antonelli wins the Monaco Grand Prix from Lewis Hamilton after a chaotic ending that featured two safety cars and a red flag.",
+      "url": "https://www.bbc.com/sport/formula1/articles/ckgpgp5q3z7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-07T16:29:17Z"
+    },
     {
       "title": "Lam hopes Bears' 'fight' will bear fruit next year",
       "summary": "Director of rugby Pat Lam says Bristol Bears can benefit from the adversity they have faced during this injury-hit season.",
@@ -88,14 +96,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-06T17:39:05Z"
-    },
-    {
-      "title": "How to follow Monaco Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Monaco Grand Prix, which takes place from 5-7June.",
-      "url": "https://www.bbc.com/sport/formula1/articles/cd9p38gz878o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-06T17:36:06Z"
     },
     {
       "title": "Sale beat weakened Bristol to secure Champions Cup place",
@@ -458,6 +458,14 @@
       "published": "2026-06-03T10:58:00Z"
     },
     {
+      "title": "Guernsey and Jersey ready for league rivalry",
+      "summary": "Guernsey director of rugby Jordan Reynolds says playing Jersey in National Three East league games will match the intensity of the Siam Cup.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cdep1d2zl96o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-06-03T09:14:20Z"
+    },
+    {
       "title": "Will 2026's 'yo-yo racing' mean overtaking in Monaco?",
       "summary": "Andrew Benson assesses whether the 2026 rules will change the character of the race where overtaking is most difficult.",
       "url": "https://www.bbc.com/sport/formula1/articles/cewpe9z7w09o?at_medium=RSS&at_campaign=rss",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-02T10:23:01Z"
-    },
-    {
-      "title": "Will Monaco suit Ferrari more than rivals? F1 Q&A",
-      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions before the Monaco Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/cx21v8pv4j8o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-02T07:53:02Z"
     }
   ]
 }

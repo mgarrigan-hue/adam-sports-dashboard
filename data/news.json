@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T13:41:15Z",
+  "generated_at": "2026-06-07T15:20:53Z",
   "items": [
     {
       "title": "Lam hopes Bears' 'fight' will bear fruit next year",
@@ -426,14 +426,6 @@
       "published": "2026-06-04T07:05:20Z"
     },
     {
-      "title": "Rugby Union Weekly: Mark McCall: End of an era after 17 years at Saracens",
-      "summary": "Chris and Ashy head to the Saracens training base for a special pod about Mark McCall.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0npym76?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-04T00:00:00Z"
-    },
-    {
       "title": "Jackman: Leinster and Ireland will be weaker without Lowe",
       "summary": "Bernard Jackman believes Leinster and Irish rugby will be poorer for the loss of James Lowe next season.",
       "url": "https://www.rte.ie/sport/rugby/2026/0603/1576610-jackman-leinster-and-ireland-will-be-weaker-without-lowe/",
@@ -480,6 +472,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-02T10:23:01Z"
+    },
+    {
+      "title": "Will Monaco suit Ferrari more than rivals? F1 Q&A",
+      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions before the Monaco Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cx21v8pv4j8o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-02T07:53:02Z"
     }
   ]
 }

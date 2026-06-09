@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T02:38:03Z",
+  "generated_at": "2026-06-09T06:44:13Z",
   "items": [
     {
       "title": "Saracens investigate nightclub incident involving cricketers Stokes & Atkinson",
@@ -24,6 +24,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-08T15:27:51Z"
+    },
+    {
+      "title": "Leinster deserve credit for sticking to their guns",
+      "summary": "Leinster will get little credit if they win the United Rugby Championship in a fortnight, though they should be praised for sticking to their guns and overcoming their disappointment in Europe, should…",
+      "url": "https://www.rte.ie/sport/rugby/2026/0608/1577396-leinster-deserve-credit-for-sticking-to-their-guns/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-08T14:23:37Z"
     },
     {
       "title": "Long-time IRFU chief executive Philip Browne dies",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-04T11:30:57Z"
-    },
-    {
-      "title": "Former Ireland rugby captain Fergus Slattery dies aged 77",
-      "summary": "Former Ireland rugby captain Fergus Slattery has died at the age of 77, his club Blackrock College RFC has announced.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0604/1576744-former-ireland-rugby-captain-slattery-dies-aged-77/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-04T10:55:00Z"
     }
   ]
 }

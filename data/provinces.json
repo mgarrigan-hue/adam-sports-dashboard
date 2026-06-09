@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T23:44:19Z",
+  "generated_at": "2026-06-09T02:37:55Z",
   "results": [
     {
       "date": "2026-06-06T16:30Z",
@@ -3471,6 +3471,36 @@
       "away": "Leinster",
       "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25968.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-12-05T15:00Z",
+      "home": "Cardiff Blues",
+      "away": "Ulster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25965.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-12-05T17:15Z",
+      "home": "Scarlets",
+      "away": "Connacht",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25966.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-12-05T19:45Z",
+      "home": "Zebre",
+      "away": "Munster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/167124.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
       "competition": "URC",
       "status": "STATUS_SCHEDULED",
       "status_state": "pre"

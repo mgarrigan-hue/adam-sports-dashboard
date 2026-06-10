@@ -810,35 +810,8 @@
       "away_score": 12,
       "competition": "Leinster School Youth U15 Div1",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-10T14:30:00+01:00",
-      "home": "Lansdowne 3",
-      "away": "St Marys College RFC 3",
-      "home_score": 40,
-      "away_score": 12,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-10T14:30:00+01:00",
-      "home": "Clontarf 4",
-      "away": "St Marys College RFC 4",
-      "home_score": 15,
-      "away_score": 31,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-10T14:30:00+01:00",
-      "home": "St Marys College RFC 5",
-      "away": "CYM 1",
-      "home_score": 40,
-      "away_score": 10,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-10T22:25:07+00:00"
+  "fetched_at": "2026-06-10T23:55:17+00:00"
 }

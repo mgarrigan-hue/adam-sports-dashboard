@@ -882,26 +882,8 @@
       "away_score": 24,
       "competition": "Leinster School Youth U15 Div1",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-11T13:30:00+01:00",
-      "home": "SMTC",
-      "away": "LD Barbarians",
-      "home_score": 23,
-      "away_score": 15,
-      "competition": "Leinster School Youth  U16 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-11T12:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "BL Rugby",
-      "home_score": 7,
-      "away_score": 12,
-      "competition": "Leinster School Youth U15 Div1",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-11T21:56:43+00:00"
+  "fetched_at": "2026-06-11T23:20:15+00:00"
 }

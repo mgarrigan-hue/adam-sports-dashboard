@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T17:20:19.060417+00:00",
+  "generated_at": "2026-06-12T19:27:55.696646+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -44,7 +44,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 60.0,
+      "points": 58.0,
       "wins": 0
     },
     {
@@ -67,29 +67,29 @@
     },
     {
       "rank": 8,
-      "driver": "Isack Hadjar",
-      "code": "HAD",
+      "driver": "Pierre Gasly",
+      "code": "GAS",
       "nationality": "French",
-      "team": "Red Bull",
-      "points": 29.0,
+      "team": "Alpine F1 Team",
+      "points": 35.0,
       "wins": 0
     },
     {
       "rank": 9,
-      "driver": "Liam Lawson",
-      "code": "LAW",
-      "nationality": "New Zealander",
-      "team": "RB F1 Team",
+      "driver": "Isack Hadjar",
+      "code": "HAD",
+      "nationality": "French",
+      "team": "Red Bull",
       "points": 26.0,
       "wins": 0
     },
     {
       "rank": 10,
-      "driver": "Pierre Gasly",
-      "code": "GAS",
-      "nationality": "French",
-      "team": "Alpine F1 Team",
-      "points": 26.0,
+      "driver": "Liam Lawson",
+      "code": "LAW",
+      "nationality": "New Zealander",
+      "team": "RB F1 Team",
+      "points": 24.0,
       "wins": 0
     },
     {
@@ -116,7 +116,7 @@
       "code": "LIN",
       "nationality": "British",
       "team": "RB F1 Team",
-      "points": 13.0,
+      "points": 11.0,
       "wins": 0
     },
     {
@@ -220,28 +220,28 @@
       "rank": 3,
       "team": "McLaren",
       "nationality": "British",
-      "points": 118.0,
+      "points": 116.0,
       "wins": 0
     },
     {
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 72.0,
+      "points": 69.0,
       "wins": 0
     },
     {
       "rank": 5,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 41.0,
+      "points": 50.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 39.0,
+      "points": 35.0,
       "wins": 0
     },
     {

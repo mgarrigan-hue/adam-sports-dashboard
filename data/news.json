@@ -1,9 +1,25 @@
 {
-  "generated_at": "2026-06-12T17:20:33Z",
+  "generated_at": "2026-06-12T19:28:09Z",
   "items": [
     {
+      "title": "Norris hopeful McLaren will be stronger in Barcelona",
+      "summary": "McLaren's Lando Norris just edges Mercedes' George Russell in Friday practice for the Barcelona-Catalunya Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/c8r2j40x707o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-12T17:23:43Z"
+    },
+    {
+      "title": "Powell re-signs with Harlequins after Kildunne exit",
+      "summary": "Wales international Kayleigh Powell will spend another season at The Stoop after signing a new contract with Harlequins.",
+      "url": "https://www.bbc.com/sport/rugby-union/articles/cx2jpj0p1glo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-06-12T17:07:51Z"
+    },
+    {
       "title": "How to follow Barcelona-Catalunya Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Barcelona-Catalunya Grand Prix, which takes place from 12-14June.",
+      "summary": "All the key BBC coverage details for the Barcelona-Catalunya Grand Prix, which takes place from 12-14 June.",
       "url": "https://www.bbc.com/sport/formula1/articles/cvgj5rp05p5o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
@@ -16,14 +32,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-12T16:16:26Z"
-    },
-    {
-      "title": "Norris heads Russell in Barcelona practice",
-      "summary": "McLaren's Lando Norris just edges Mercedes' George Russell in Friday practice for the Barcelona-Catalunya Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/c8r2j40x707o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-12T16:14:59Z"
     },
     {
       "title": "Meet 'the Ostrich' - Exeter's flying wing from out of Africa",
@@ -266,22 +274,6 @@
       "published": "2026-06-10T15:05:17Z"
     },
     {
-      "title": "Harlequins 'perfect fit' for Packer after Saracens exit",
-      "summary": "Two-time Women's Rugby World Cup-winner Marlie Packer agrees to join Harlequins for next season when she leaves Saracens.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c0ryg0x54dno?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-10T12:02:02Z"
-    },
-    {
-      "title": "From fan to fulcrum - the family story of Dingwall's Prem title quest",
-      "summary": "Fraser Dingwall has enjoyed a remarkable journey from fan to Prem title winner - and he wants a second crown with Northampton.",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/cvgdee48vg5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-10T10:20:50Z"
-    },
-    {
       "title": "Leinster weather a Storm and four more years for Farrell",
       "summary": "Neil Treacy is joined by Bernard Jackman and Gareth Steenson, as we look back on Leinster's URC semi-final win against the Stormers, and break down the big stories of the week in Irish rugby.",
       "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0610/1577705-leinster-weather-a-storm-and-four-more-years-for-farrell/",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-06T19:19:23Z"
+    },
+    {
+      "title": "Leinster weather Stormers to set up Bulls final rematch",
+      "summary": "For the second year in a row, Leinster will host the Bulls at Croke Park in the BKT United Rugby Championship final.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0606/1577076-leinster-weather-stormers-to-set-up-bulls-final-rematch/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-06T18:32:08Z"
     }
   ]
 }

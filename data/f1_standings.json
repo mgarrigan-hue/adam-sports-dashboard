@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T16:18:02.173935+00:00",
+  "generated_at": "2026-06-14T17:55:42.324868+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -206,42 +206,42 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 244.0,
+      "points": 262.0,
       "wins": 6
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 165.0,
-      "wins": 0
+      "points": 190.0,
+      "wins": 1
     },
     {
       "rank": 3,
       "team": "McLaren",
       "nationality": "British",
-      "points": 116.0,
+      "points": 141.0,
       "wins": 0
     },
     {
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 69.0,
+      "points": 89.0,
       "wins": 0
     },
     {
       "rank": 5,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 50.0,
+      "points": 60.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 35.0,
+      "points": 38.0,
       "wins": 0
     },
     {

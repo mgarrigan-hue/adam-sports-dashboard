@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T14:38:09.675478+00:00",
+  "generated_at": "2026-06-14T16:18:02.173935+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -17,8 +17,8 @@
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 90.0,
-      "wins": 0
+      "points": 115.0,
+      "wins": 1
     },
     {
       "rank": 3,
@@ -26,7 +26,7 @@
       "code": "RUS",
       "nationality": "British",
       "team": "Mercedes",
-      "points": 88.0,
+      "points": 106.0,
       "wins": 1
     },
     {
@@ -40,20 +40,20 @@
     },
     {
       "rank": 5,
-      "driver": "Oscar Piastri",
-      "code": "PIA",
-      "nationality": "Australian",
-      "team": "McLaren",
-      "points": 58.0,
-      "wins": 0
-    },
-    {
-      "rank": 6,
       "driver": "Lando Norris",
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 58.0,
+      "points": 73.0,
+      "wins": 0
+    },
+    {
+      "rank": 6,
+      "driver": "Oscar Piastri",
+      "code": "PIA",
+      "nationality": "Australian",
+      "team": "McLaren",
+      "points": 68.0,
       "wins": 0
     },
     {
@@ -62,7 +62,7 @@
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 43.0,
+      "points": 55.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 35.0,
+      "points": 41.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 26.0,
+      "points": 34.0,
       "wins": 0
     },
     {
@@ -89,11 +89,20 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 24.0,
+      "points": 26.0,
       "wins": 0
     },
     {
       "rank": 11,
+      "driver": "Franco Colapinto",
+      "code": "COL",
+      "nationality": "Argentine",
+      "team": "Alpine F1 Team",
+      "points": 19.0,
+      "wins": 0
+    },
+    {
+      "rank": 12,
       "driver": "Oliver Bearman",
       "code": "BEA",
       "nationality": "British",
@@ -102,21 +111,12 @@
       "wins": 0
     },
     {
-      "rank": 12,
-      "driver": "Franco Colapinto",
-      "code": "COL",
-      "nationality": "Argentine",
-      "team": "Alpine F1 Team",
-      "points": 15.0,
-      "wins": 0
-    },
-    {
       "rank": 13,
       "driver": "Arvid Lindblad",
       "code": "LIN",
       "nationality": "British",
       "team": "RB F1 Team",
-      "points": 11.0,
+      "points": 12.0,
       "wins": 0
     },
     {

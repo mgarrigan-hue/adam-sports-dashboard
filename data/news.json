@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-06-14T17:55:53Z",
+  "generated_at": "2026-06-14T19:20:06Z",
   "items": [
     {
-      "title": "Mercedes ask for right of review over Gasly penalty",
+      "title": "Hamilton says Barcelona win beyond wildest dreams",
+      "summary": "Lewis Hamilton says he was struggling to find the words to express how much his first victory for Ferrari meant to him in Barcelona.",
+      "url": "https://www.bbc.com/sport/formula1/articles/cx24k2vpmpyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-14T18:18:19Z"
+    },
+    {
+      "title": "Mercedes ask for right of review of Gasly penalty",
       "summary": "Mercedes ask the FIA for a right of review of the decision to overturn Pierre Gasly's penalty at the Monaco Grand Prix.",
       "url": "https://www.bbc.com/sport/formula1/articles/c3vypgq52yqo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-14T17:53:22Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Jennie and the team react to Lewis Hamilton claiming his first win for Ferrari",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nrzgkj?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-14T17:17:00Z"
     },
     {
       "title": "Perfect 10 for Hamilton and Norris keeps fighting - driver ratings",
@@ -88,14 +104,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-13T17:40:58Z"
-    },
-    {
-      "title": "F1: Chequered Flag",
-      "summary": "Alice, Andrew and Abbi look back at qualifying in Barcelona as George Russell took pole",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nrvzkz?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-13T17:01:00Z"
     },
     {
       "title": "Russell beats Hamilton to Barcelona pole",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-07T21:00:00Z"
-    },
-    {
-      "title": "Monaco great for Hamilton but no fairytale for Leclerc - driver ratings",
-      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Monaco Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/cd0m51ljzj5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-07T20:39:47Z"
     }
   ]
 }

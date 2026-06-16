@@ -531,17 +531,8 @@
       "away_score": 19,
       "competition": "Leinster School Youth  U16 Premier",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-16T20:00:00+01:00",
-      "home": "Suttonians",
-      "away": "St Marys College RFC",
-      "home_score": 31,
-      "away_score": 24,
-      "competition": "Leinster School Youth U15 Div1",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-16T22:07:07+00:00"
+  "fetched_at": "2026-06-16T23:54:05+00:00"
 }

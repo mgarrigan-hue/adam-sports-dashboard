@@ -504,35 +504,8 @@
       "away_score": 16,
       "competition": "Energia All Ireland League 1A 25/26",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-18T12:00:00+01:00",
-      "home": "SMTC",
-      "away": "Greystones",
-      "home_score": 10,
-      "away_score": 17,
-      "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-18T11:30:00+01:00",
-      "home": "Bective Rangers A",
-      "away": "St Marys College RFC A",
-      "home_score": 22,
-      "away_score": 20,
-      "competition": "U13 Leinster SY League Boys Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-18T11:00:00+01:00",
-      "home": "MU Barnhall",
-      "away": "SMTC",
-      "home_score": 43,
-      "away_score": 19,
-      "competition": "Leinster School Youth  U16 Premier",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-18T21:20:42+00:00"
+  "fetched_at": "2026-06-18T23:15:57+00:00"
 }

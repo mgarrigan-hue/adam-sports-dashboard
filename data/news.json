@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T16:13:55Z",
+  "generated_at": "2026-06-20T17:53:01Z",
   "items": [
     {
       "title": "Northampton beat Exeter to win Prem Rugby title",
@@ -7,7 +7,15 @@
       "url": "https://www.bbc.com/sport/rugby-union/articles/c872jn540p5o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
-      "published": "2026-06-20T16:13:08Z"
+      "published": "2026-06-20T17:49:28Z"
+    },
+    {
+      "title": "Northampton win Prem title with comeback win over Exeter",
+      "summary": "Northampton Saints were crowned Gallagher Prem champions with a 26-17 victory over Exeter Chiefs at Allianz Stadium, Twickenham with George Hendy's late quick-fire brace of tries sealing the win for P…",
+      "url": "https://www.rte.ie/sport/rugby/2026/0620/1579442-northampton-win-prem-title-with-comeback-win-over-exeter/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-20T16:20:09Z"
     },
     {
       "title": "Captain Doris ruled out of Ireland matches",
@@ -186,14 +194,6 @@
       "published": "2026-06-19T06:31:32Z"
     },
     {
-      "title": "Can Exeter complete remarkable title-winning turnaround?",
-      "summary": "Can the Chiefs complete a remarkable turnaround from their worst-ever season to become Prem champions?",
-      "url": "https://www.bbc.com/sport/rugby-union/articles/c0my9kevrd7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-19T06:21:57Z"
-    },
-    {
       "title": "Andrew Benson Q&A: Send us your questions",
       "summary": "Our F1 correspondent Andrew Benson is doing a weekly Q&A this season, so get your questions in now.",
       "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o?at_medium=RSS&at_campaign=rss",
@@ -224,14 +224,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-18T16:06:25Z"
-    },
-    {
-      "title": "Rugby Union Weekly",
-      "summary": "Chris and Ashy look ahead to the Prem final between Northampton and Exeter",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nssqds?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-18T14:55:00Z"
     },
     {
       "title": "Scrum battle could decide evenly poised URC Grand Final",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-14T18:18:19Z"
+    },
+    {
+      "title": "Perfect 10 for Hamilton and Norris keeps fighting - driver ratings",
+      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Barcelona-Catalunya Grand Prix.",
+      "url": "https://www.bbc.com/sport/formula1/articles/c70v0d272kzo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-14T17:10:17Z"
     }
   ]
 }

@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-06-20T17:53:01Z",
+  "generated_at": "2026-06-20T19:17:10Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Reaction from Twickenham has Northampton win their second Prem title in three yearss",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nt62x1?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-06-20T19:03:00Z"
+    },
     {
       "title": "Northampton beat Exeter to win Prem Rugby title",
       "summary": "George Hendy's two tries secure Northampton Saints the Prem title with victory over Exeter Chiefs at Allianz Stadium.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-14T18:18:19Z"
-    },
-    {
-      "title": "Perfect 10 for Hamilton and Norris keeps fighting - driver ratings",
-      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Barcelona-Catalunya Grand Prix.",
-      "url": "https://www.bbc.com/sport/formula1/articles/c70v0d272kzo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-14T17:10:17Z"
     }
   ]
 }

@@ -756,53 +756,8 @@
       "away_score": 12,
       "competition": "Metro League - Division 11",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-25T15:30:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "Blackrock College RFC U20",
-      "home_score": 52,
-      "away_score": 14,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-25T15:00:00+01:00",
-      "home": "Clontarf 2",
-      "away": "St Marys College RFC 2",
-      "home_score": 68,
-      "away_score": 19,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-25T13:00:00+01:00",
-      "home": "SMTC",
-      "away": "Cill Dara",
-      "home_score": 17,
-      "away_score": 32,
-      "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-25T10:30:00+01:00",
-      "home": "Malahide",
-      "away": "St Marys College RFC",
-      "home_score": 47,
-      "away_score": 46,
-      "competition": "Leinster School Youth U15 Div1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-25T09:00:00+01:00",
-      "home": "St Marys College RFC B",
-      "away": "Clontarf B",
-      "home_score": 17,
-      "away_score": 47,
-      "competition": "U13 Leinster SY League Boys Division 3",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-25T22:17:21+00:00"
+  "fetched_at": "2026-06-25T23:50:40+00:00"
 }

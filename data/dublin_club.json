@@ -801,17 +801,8 @@
       "away_score": 47,
       "competition": "U13 Leinster SY League Boys Division 3",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-24T15:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Ballynahinch",
-      "home_score": 16,
-      "away_score": 16,
-      "competition": "Energia All Ireland League 1A 25/26",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-24T22:45:04+00:00"
+  "fetched_at": "2026-06-25T00:04:10+00:00"
 }

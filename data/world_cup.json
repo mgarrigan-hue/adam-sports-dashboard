@@ -2168,7 +2168,7 @@
         "flag": "🇧🇷"
       },
       "score": null,
-      "status": "scheduled",
+      "status": "live",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -2195,7 +2195,7 @@
         "flag": "🇭🇹"
       },
       "score": null,
-      "status": "scheduled",
+      "status": "live",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -2694,5 +2694,5 @@
   ],
   "knockout_bracket": null,
   "top_scorers": [],
-  "generated_at": "2026-06-24T22:45:12Z"
+  "generated_at": "2026-06-25T00:04:17Z"
 }

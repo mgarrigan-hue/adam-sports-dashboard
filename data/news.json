@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-06-25T08:19:31Z",
+  "generated_at": "2026-06-25T11:12:52Z",
   "items": [
+    {
+      "title": "Cardiff captain Belcher out of Wales summer games",
+      "summary": "Cardiff hooker Liam Belcher is out of Wales' summer matches because of a neck injury.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c75y1z3pw1no?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-06-25T09:52:07Z"
+    },
+    {
+      "title": "Austrian GP declared heat-hazard race amid heatwave",
+      "summary": "This weekend's Austrian Grand Prix is declared a heat-hazard race by Formula 1's governing body the FIA.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/crelx8d3ye1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-25T09:23:20Z"
+    },
     {
       "title": "The Welsh hooker preparing to play against Wales",
       "summary": "Dragons hooker Elliot Dee will start for Barbarians against Wales at the Allianz Stadium on Saturday.",
@@ -40,14 +56,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-24T14:30:14Z"
-    },
-    {
-      "title": "North on Barbarians bench for farewell against Wales",
-      "summary": "George North to come off the Barbarians bench for the last game of his professional rugby career against Wales at Twickenham.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cly7q0p5192o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-24T13:00:10Z"
     },
     {
       "title": "Lewis revives Wales career in problem position",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-17T09:02:27Z"
-    },
-    {
-      "title": "Ulster confirm signings of Mullins, Knox and Bello",
-      "summary": "Ulster have confirmed the signing of former Connacht winger Chay Mullins and former Munster prop Keynan Knox on one and two year deals respectively.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0616/1578794-ulster-confirm-signing-of-ex-connacht-winger-mullins/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-16T17:28:02Z"
     }
   ]
 }

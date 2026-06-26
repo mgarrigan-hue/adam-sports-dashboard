@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-06-26T02:49:11Z",
+  "generated_at": "2026-06-26T06:50:42Z",
   "items": [
+    {
+      "title": "How to follow Austrian Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Austrian Grand Prix, which takes place from 26-28 June.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c2eynpdpr91o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-26T05:26:18Z"
+    },
+    {
+      "title": "Scarlets sign New Zealand forward Grace",
+      "summary": "Once-capped New Zealand forward Cullen Grace will join Scarlets from Super Rugby side Crusaders in October.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/czx5k09vjl8o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-06-26T03:26:56Z"
+    },
     {
       "title": "Saracens' Auvaa not punished for Stokes incident",
       "summary": "Saracens forward Totoa Auvaa is not sanctioned after he was involved in a nightclub incident with England cricket captain Ben Stokes.",
@@ -224,14 +240,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-23T06:59:53Z"
-    },
-    {
-      "title": "How to follow Austrian Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Austrian Grand Prix, which takes place from 26-28 June.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c2eynpdpr91o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-23T06:39:08Z"
     },
     {
       "title": "Oli Jager's retirement highlights how harsh rugby can be",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-17T19:53:46Z"
-    },
-    {
-      "title": "Cullen backing Cahir and Usanov to deliver against Bulls",
-      "summary": "Leo Cullen insists he has \"huge faith\" his side will be able to cope without Andrew Porter in Friday night's BKT United Rugby Championship final at Croke Park.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0617/1578974-cullen-backing-cahir-and-usanov-to-deliver-against-bulls/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-17T17:01:22Z"
     }
   ]
 }

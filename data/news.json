@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T04:09:58Z",
+  "generated_at": "2026-06-27T07:34:20Z",
   "items": [
     {
       "title": "How to follow Austrian Grand Prix on the BBC",
@@ -16,6 +16,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-26T17:38:04Z"
+    },
+    {
+      "title": "Injuries giving Farrell plenty to think about in Sydney",
+      "summary": "The World Cup run-in starts with the inaugural Nations Championship, the new format which will essentially put a competition format on the traditional July and November Test windows, and culminating i…",
+      "url": "https://www.rte.ie/sport/rugby/2026/0626/1580563-injuries-giving-farrell-plenty-to-think-about-in-sydney/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-26T16:58:55Z"
     },
     {
       "title": "Andrew Benson Q&A: Send us your questions",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-19T06:40:42Z"
-    },
-    {
-      "title": "The Chequered Flag Podcast",
-      "summary": "Harry Benjamin & Becky Evans visit the go-kart track & unpick the week’s big F1 stories.",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m002ydrd?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-18T17:00:00Z"
     }
   ]
 }

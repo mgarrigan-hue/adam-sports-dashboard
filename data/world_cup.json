@@ -9,7 +9,7 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "group",
+    "current_stage": "round-of-32",
     "champion": null
   },
   "groups": [
@@ -2654,7 +2654,7 @@
         "flag": "🇵🇹"
       },
       "score": null,
-      "status": "scheduled",
+      "status": "live",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -2681,7 +2681,7 @@
         "flag": "🇺🇿"
       },
       "score": null,
-      "status": "scheduled",
+      "status": "live",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -2694,5 +2694,5 @@
   ],
   "knockout_bracket": null,
   "top_scorers": [],
-  "generated_at": "2026-06-27T23:06:42Z"
+  "generated_at": "2026-06-28T01:32:18Z"
 }

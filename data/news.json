@@ -1,13 +1,37 @@
 {
-  "generated_at": "2026-06-28T18:01:19Z",
+  "generated_at": "2026-06-28T19:52:37Z",
   "items": [
     {
-      "title": "Saracens win record fourth title with emphatic victory",
+      "title": "How to follow the British Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the British Grand Prix, which takes place from 3-5 July.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cy8dp72k9exo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-28T19:20:22Z"
+    },
+    {
+      "title": "Relief for Russell as he returns to winning ways",
+      "summary": "After winning the Austrian Grand Prix, George Russell has another victory to his name in 2026, and the relief in him was almost palpable, says Andrew Benson.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c14yr0kpjy1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-28T18:58:34Z"
+    },
+    {
+      "title": "Packer's dream farewell as Saracens win record fourth title",
       "summary": "Marlie Packer scores two tries on her final Saracens appearance as the north London side secure a record fourth league title with a comprehensive 52-14 win over Trailfinders at Twickenham Stoop.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ce8mgd8gy4zo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
-      "published": "2026-06-28T16:27:24Z"
+      "published": "2026-06-28T18:21:15Z"
+    },
+    {
+      "title": "Russell impresses and Verstappen bounces back - driver ratings",
+      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Austrian Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4gy3xqdg0jo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-06-28T18:08:43Z"
     },
     {
       "title": "Russell holds nerve to seal victory in Austria",
@@ -88,14 +112,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-27T08:16:02Z"
-    },
-    {
-      "title": "How to follow Austrian Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Austrian Grand Prix, with the race taking place on Sunday.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c2eynpdpr91o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-26T17:46:30Z"
     },
     {
       "title": "Mercedes' Antonelli tops Friday practice in Austria",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-20T12:20:20Z"
-    },
-    {
-      "title": "Cullen thrilled by 'exceptional' Leinster's performance",
-      "summary": "A delighted Leo Cullen said there was \"so much to love\" about his side's display, as they made it back-to-back BKT United Rugby Championship titles.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0619/1579406-cullen-thrilled-by-exceptional-leinsters-performance/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-19T22:46:45Z"
-    },
-    {
-      "title": "Deja vu as Leinster hammer Bulls to retain URC title",
-      "summary": "The BKT United Rugby Championship trophy is staying in Dublin, after Leinster retained their title with yet another Grand Final hammering of the Bulls at Croke Park.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0619/1579397-deja-vu-as-leinster-hammer-bulls-to-retain-urc-title/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-19T20:39:13Z"
     }
   ]
 }

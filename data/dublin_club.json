@@ -20,15 +20,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-26T16:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Clontarf",
-      "home_score": 46,
-      "away_score": 31,
-      "competition": "AIL Final",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-26T10:00:00+01:00",
       "home": "MU Barnhall",
       "away": "SMTC",
@@ -110,15 +101,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-18T14:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Terenure College RFC",
-      "home_score": 20,
-      "away_score": 13,
-      "competition": "Energia AIL Mens Div 1A S/F",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-17T00:00:00+01:00",
       "home": "BL Rugby",
       "away": "St Marys College RFC",
@@ -155,15 +137,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-04T14:30:00+01:00",
-      "home": "Clontarf",
-      "away": "St Marys College RFC",
-      "home_score": 10,
-      "away_score": 14,
-      "competition": "Energia All Ireland League 1A 25/26",
-      "involves_smc": true
-    },
-    {
       "date": "2026-03-30T20:00:00+01:00",
       "home": "St Marys College RFC 2",
       "away": "Blackrock College RFC 2",
@@ -197,15 +170,6 @@
       "home_score": 24,
       "away_score": 10,
       "competition": "Leinster SY U13 League Boys DIV1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-28T14:30:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Young Munster",
-      "home_score": 20,
-      "away_score": 22,
-      "competition": "Energia All Ireland League 1A 25/26",
       "involves_smc": true
     },
     {
@@ -287,15 +251,6 @@
       "home_score": 46,
       "away_score": 17,
       "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-21T14:30:00+01:00",
-      "home": "Old Belvedere",
-      "away": "St Marys College RFC",
-      "home_score": 21,
-      "away_score": 14,
-      "competition": "Energia All Ireland League 1A 25/26",
       "involves_smc": true
     },
     {
@@ -434,15 +389,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-03-07T14:30:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "UCD",
-      "home_score": 59,
-      "away_score": 12,
-      "competition": "Energia All Ireland League 1A 25/26",
-      "involves_smc": true
-    },
-    {
       "date": "2026-03-07T12:30:00+01:00",
       "home": "Seapoint 3",
       "away": "St Marys College RFC 4",
@@ -521,15 +467,6 @@
       "home_score": 58,
       "away_score": 15,
       "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-28T15:00:00+01:00",
-      "home": "Cork Constitution",
-      "away": "St Marys College RFC",
-      "home_score": 19,
-      "away_score": 57,
-      "competition": "Energia All Ireland League 1A 25/26",
       "involves_smc": true
     },
     {
@@ -686,15 +623,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-02-07T15:00:00+01:00",
-      "home": "St Marys College RFC",
-      "away": "Terenure College RFC",
-      "home_score": 28,
-      "away_score": 21,
-      "competition": "Energia All Ireland League 1A 25/26",
-      "involves_smc": true
-    },
-    {
       "date": "2026-02-01T16:00:00+01:00",
       "home": "Terenure College RFC 2",
       "away": "St Marys College RFC 2",
@@ -740,15 +668,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-01-31T14:30:00+01:00",
-      "home": "Nenagh Ormond",
-      "away": "St Marys College RFC",
-      "home_score": 27,
-      "away_score": 49,
-      "competition": "Energia All Ireland League 1A 25/26",
-      "involves_smc": true
-    },
-    {
       "date": "2026-01-30T20:00:00+01:00",
       "home": "Parkmore",
       "away": "St Marys College RFC",
@@ -759,5 +678,5 @@
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-30T10:52:34+00:00"
+  "fetched_at": "2026-06-30T13:07:36+00:00"
 }

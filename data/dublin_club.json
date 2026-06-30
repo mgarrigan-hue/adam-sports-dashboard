@@ -92,15 +92,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-04-18T15:00:00+01:00",
-      "home": "Greystones 4",
-      "away": "St Marys College RFC 4",
-      "home_score": 20,
-      "away_score": 19,
-      "competition": "Winters Cup (Metro J4)",
-      "involves_smc": true
-    },
-    {
       "date": "2026-04-17T00:00:00+01:00",
       "home": "BL Rugby",
       "away": "St Marys College RFC",
@@ -125,33 +116,6 @@
       "home_score": 8,
       "away_score": 14,
       "competition": "Leinster School Youth U16 Prem Final",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-04-11T15:00:00+01:00",
-      "home": "Dublin University 3",
-      "away": "St Marys College RFC 4",
-      "home_score": 12,
-      "away_score": 65,
-      "competition": "Winters Cup (Metro J4)",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-30T20:00:00+01:00",
-      "home": "St Marys College RFC 2",
-      "away": "Blackrock College RFC 2",
-      "home_score": 34,
-      "away_score": 20,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-29T15:00:00+01:00",
-      "home": "De La Salle Palmerston U20",
-      "away": "St Marys College RFC U20 2",
-      "home_score": 31,
-      "away_score": 15,
-      "competition": "Harry Gale Cup (U20s)",
       "involves_smc": true
     },
     {
@@ -191,24 +155,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-03-22T15:00:00+01:00",
-      "home": "UCD U20",
-      "away": "St Marys College RFC U20",
-      "home_score": 50,
-      "away_score": 18,
-      "competition": "McCorry Cup (U20s)",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-22T15:00:00+01:00",
-      "home": "St Marys College RFC U20 2",
-      "away": "Sharks U20 (Ashbourne and Ratoath)",
-      "home_score": 14,
-      "away_score": 38,
-      "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": true
-    },
-    {
       "date": "2026-03-22T13:00:00+01:00",
       "home": "SMTC",
       "away": "Birr",
@@ -236,24 +182,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-03-21T15:00:00+01:00",
-      "home": "St Marys College RFC 6",
-      "away": "Bective Rangers 4",
-      "home_score": 5,
-      "away_score": 59,
-      "competition": "Guilfoyle-James Cup (Metro J6)",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-21T15:00:00+01:00",
-      "home": "St Marys College RFC 4",
-      "away": "Greystones 4",
-      "home_score": 46,
-      "away_score": 17,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
       "date": "2026-03-20T20:00:00+01:00",
       "home": "St Marys College RFC",
       "away": "Malahide",
@@ -269,24 +197,6 @@
       "home_score": 41,
       "away_score": 51,
       "competition": "Leinster School Youth U15 Div1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-15T15:00:00+01:00",
-      "home": "St Marys College RFC 2",
-      "away": "Dublin University 2",
-      "home_score": 19,
-      "away_score": 40,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-15T14:00:00+01:00",
-      "home": "Corinthians U20",
-      "away": "St Marys College RFC U20",
-      "home_score": 20,
-      "away_score": 22,
-      "competition": "McCorry Cup (U20s)",
       "involves_smc": true
     },
     {
@@ -317,48 +227,12 @@
       "involves_smc": true
     },
     {
-      "date": "2026-03-13T20:00:00+01:00",
-      "home": "BGF Ravens 1",
-      "away": "St Marys College RFC 5",
-      "home_score": 7,
-      "away_score": 27,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-13T20:00:00+01:00",
-      "home": "St Marys College RFC 5",
-      "away": "BGF Ravens 1",
-      "home_score": 27,
-      "away_score": 7,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-08T15:00:00+01:00",
-      "home": "St Marys College RFC 2",
-      "away": "Old Wesley 2",
-      "home_score": 21,
-      "away_score": 60,
-      "competition": "Metropolitan Cup (J1)",
-      "involves_smc": true
-    },
-    {
       "date": "2026-03-08T12:45:00+01:00",
       "home": "Blackrock College RFC",
       "away": "SMTC",
       "home_score": 37,
       "away_score": 7,
       "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-08T12:30:00+01:00",
-      "home": "St Marys College RFC U20 2",
-      "away": "MU Barnhall U20 2",
-      "home_score": 26,
-      "away_score": 45,
-      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -377,42 +251,6 @@
       "home_score": 7,
       "away_score": 19,
       "competition": "Leinster SY U13 League Boys DIV1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-07T15:00:00+01:00",
-      "home": "MU Barnhall 3",
-      "away": "St Marys College RFC 3",
-      "home_score": 19,
-      "away_score": 36,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-07T12:30:00+01:00",
-      "home": "Seapoint 3",
-      "away": "St Marys College RFC 4",
-      "home_score": 21,
-      "away_score": 38,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-07T12:30:00+01:00",
-      "home": "St Marys College RFC 4",
-      "away": "Seapoint 3",
-      "home_score": 38,
-      "away_score": 21,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-01T15:00:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "Clontarf U20",
-      "home_score": 28,
-      "away_score": 19,
-      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": true
     },
     {
@@ -452,33 +290,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-02-28T15:00:00+01:00",
-      "home": "St Marys College RFC 3",
-      "away": "Terenure College RFC 3",
-      "home_score": 29,
-      "away_score": 28,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-28T15:00:00+01:00",
-      "home": "St Marys College RFC 4",
-      "away": "Dublin University 3",
-      "home_score": 58,
-      "away_score": 15,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-28T12:30:00+01:00",
-      "home": "St Marys College RFC 5",
-      "away": "Blackrock College RFC 3",
-      "home_score": 39,
-      "away_score": 25,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
-    },
-    {
       "date": "2026-02-27T20:00:00+01:00",
       "home": "St Marys College RFC",
       "away": "Suttonians",
@@ -494,24 +305,6 @@
       "home_score": 52,
       "away_score": 12,
       "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-22T15:00:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "UCD U20",
-      "home_score": 27,
-      "away_score": 42,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-22T15:00:00+01:00",
-      "home": "Wicklow U20",
-      "away": "St Marys College RFC U20 2",
-      "home_score": 22,
-      "away_score": 27,
-      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -542,24 +335,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-02-21T11:00:00+01:00",
-      "home": "St Marys College RFC 4",
-      "away": "Stillorgan-Rathfarnham 1",
-      "home_score": 15,
-      "away_score": 23,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-20T20:00:00+01:00",
-      "home": "St Marys College RFC 5",
-      "away": "Old Belvedere 4",
-      "home_score": 10,
-      "away_score": 7,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
-    },
-    {
       "date": "2026-02-20T20:00:00+01:00",
       "home": "St Marys College RFC",
       "away": "Coolmine",
@@ -587,57 +362,12 @@
       "involves_smc": true
     },
     {
-      "date": "2026-02-08T15:30:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "Old Belvedere U20",
-      "home_score": 34,
-      "away_score": 25,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": true
-    },
-    {
       "date": "2026-02-08T11:15:00+01:00",
       "home": "Blackrock College RFC Blue",
       "away": "St Marys College RFC A",
       "home_score": 12,
       "away_score": 17,
       "competition": "U13 Leinster SY League Boys Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-07T15:00:00+01:00",
-      "home": "Greystones 4",
-      "away": "St Marys College RFC 4",
-      "home_score": 21,
-      "away_score": 18,
-      "competition": "Metro League - Division 6",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-07T15:00:00+01:00",
-      "home": "Old Belvedere 4",
-      "away": "St Marys College RFC 5",
-      "home_score": 22,
-      "away_score": 15,
-      "competition": "Metro League - Division 7",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-01T16:00:00+01:00",
-      "home": "Terenure College RFC 2",
-      "away": "St Marys College RFC 2",
-      "home_score": 47,
-      "away_score": 27,
-      "competition": "Metro League - Premier 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-01T15:00:00+01:00",
-      "home": "Vikings U20 (Suttonians & Coolmine)",
-      "away": "St Marys College RFC U20 2",
-      "home_score": 7,
-      "away_score": 24,
-      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -657,26 +387,8 @@
       "away_score": 34,
       "competition": "Leinster School Youth U14 Premier",
       "involves_smc": true
-    },
-    {
-      "date": "2026-01-31T14:30:00+01:00",
-      "home": "St Marys College RFC 3",
-      "away": "Clontarf 3",
-      "home_score": 17,
-      "away_score": 27,
-      "competition": "Metro League - Division 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-01-30T20:00:00+01:00",
-      "home": "Parkmore",
-      "away": "St Marys College RFC",
-      "home_score": 31,
-      "away_score": 12,
-      "competition": "Metro League - Division 11",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-06-30T13:07:36+00:00"
+  "fetched_at": "2026-06-30T16:00:21+00:00"
 }

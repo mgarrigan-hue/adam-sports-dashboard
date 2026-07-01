@@ -369,26 +369,8 @@
       "away_score": 17,
       "competition": "U13 Leinster SY League Boys Premier",
       "involves_smc": true
-    },
-    {
-      "date": "2026-02-01T12:00:00+01:00",
-      "home": "Newbridge",
-      "away": "St Marys College RFC",
-      "home_score": 29,
-      "away_score": 12,
-      "competition": "Leinster School Youths 18s League Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-01T09:20:00+01:00",
-      "home": "SMTC",
-      "away": "Donnybrook Rangers",
-      "home_score": 33,
-      "away_score": 34,
-      "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
     }
   ],
   "fixtures": [],
-  "fetched_at": "2026-07-01T21:58:02+00:00"
+  "fetched_at": "2026-07-01T23:17:47+00:00"
 }

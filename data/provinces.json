@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T23:05:37Z",
+  "generated_at": "2026-07-01T01:38:00Z",
   "results": [
     {
       "date": "2026-06-19T18:30Z",
@@ -3507,6 +3507,26 @@
       "away": "Edinburgh",
       "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25951.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-12-27T17:30Z",
+      "home": "Ulster",
+      "away": "Connacht",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
+      "competition": "URC",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-12-27T19:45Z",
+      "home": "Munster",
+      "away": "Leinster",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25925.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
       "competition": "URC",
       "status": "STATUS_SCHEDULED",
       "status_state": "pre"

@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-07-02T20:40:07Z",
+  "generated_at": "2026-07-02T22:02:28Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "England captain Jamie George is on the pod and we chat to Springbok fly-half Manie Libbok",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nwjsg7?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-02T19:31:00Z"
+    },
     {
       "title": "Historic win against Boks can revitalise England regime",
       "summary": "Will a win against double world champions South Africa in their spiritual home of Ellis Park in Johannesburg, a place where England haven't won in 54 years, revitalise Steve Borthwick's England regime…",
@@ -66,7 +74,7 @@
       "published": "2026-07-02T12:45:45Z"
     },
     {
-      "title": "Tandy pleased player dispute over before Fiji opener",
+      "title": "Tandy pleased Wales pay dispute over before Fiji opener",
       "summary": "Head coach Steve Tandy says he is glad the latest dispute between Wales players and the Welsh Rugby Union (WRU) has been resolved.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c04y306vp4eo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
@@ -354,14 +362,6 @@
       "published": "2026-06-29T13:06:37Z"
     },
     {
-      "title": "Morgan backs Lake's Wales captaincy credentials",
-      "summary": "Flanker Jac Morgan says he will back up \"brilliant\" captain Dewi Lake after the hooker retained the Wales leadership role.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c8021rm9n23o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-29T03:20:46Z"
-    },
-    {
       "title": "Russell impresses and Verstappen bounces back - driver ratings",
       "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Austrian Grand Prix.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c4gy3xqdg0jo?at_medium=RSS&at_campaign=rss",
@@ -408,14 +408,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-06-28T18:21:15Z"
-    },
-    {
-      "title": "Wales set to reduce squad for Nations Championship",
-      "summary": "Head coach Steve Tandy says the Wales squad for the Nations Championship will be cut to between 32 and 34 players early next week.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cevl8n032nvo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-28T03:39:25Z"
     },
     {
       "title": "How Russell's quick thinking produced unexpected pole",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-25T12:58:30Z"
+    },
+    {
+      "title": "O'Shea at 10 for Ireland Under-20s World Cup opener",
+      "summary": "Munster out-half Charlie O'Shea has been handed the number ten shirt for the Ireland Under-20s Junior World Cup opener with England on Saturday.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0625/1580303-oshea-at-ten-for-ireland-under-20-world-cup-opener/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-06-25T11:48:53Z"
     }
   ]
 }

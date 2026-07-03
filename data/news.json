@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-07-03T19:12:37Z",
+  "generated_at": "2026-07-03T20:36:46Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Chris and Paul Grayson take you through the opening round of the Nations Championship.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nwrxgg?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-03T19:16:00Z"
+    },
     {
       "title": "Hamilton takes pole for Silverstone sprint race",
       "summary": "Ferrari's Lewis Hamilton pips Mercedes' Kimi Antonelli to a stunning pole position for the sprint race at the British Grand Prix.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-06-28T20:03:13Z"
-    },
-    {
-      "title": "Russell's win showed 'maturity and experience'",
-      "summary": "BBC F1 correspondent Andrew Benson says the manner of George Russell's victory in the Austrian Grand Prix will the give the Mercedes driver confidence heading into his home race at Silverstone.",
-      "url": "https://www.bbc.co.uk/sport/formula1/videos/cpv37m0j4y4o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-28T19:56:21Z"
     }
   ]
 }

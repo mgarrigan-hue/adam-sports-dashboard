@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T19:43:28Z",
+  "generated_at": "2026-07-04T20:49:45Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,139 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
       "competition": "Nations Championship",
       "venue": "Ellis Park, Johannesburg",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 24,
-      "away_score": 14
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 45,
+      "away_score": 21,
+      "half_time": "17-7",
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "South Africa",
+          "player": "T. du Toit",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "try"
+        },
+        {
+          "minute": "7'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "conversion"
+        },
+        {
+          "minute": "12'",
+          "team": "South Africa",
+          "player": "K. Arendse",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "South Africa",
+          "player": "K. Arendse",
+          "type": "yellow card"
+        },
+        {
+          "minute": "36'",
+          "team": "England",
+          "player": "E. Genge",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "England",
+          "player": "G. Martin",
+          "type": "try"
+        },
+        {
+          "minute": "42'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "45'",
+          "team": "South Africa",
+          "player": "G. Williams",
+          "type": "try"
+        },
+        {
+          "minute": "46'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "South Africa",
+          "player": "J. Kriel",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "conversion"
+        },
+        {
+          "minute": "68'",
+          "team": "England",
+          "player": "A. Coles",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "70'",
+          "team": "England",
+          "player": "T. Freeman",
+          "type": "yellow card"
+        },
+        {
+          "minute": "72'",
+          "team": "England",
+          "player": "G. Pepper",
+          "type": "yellow card"
+        },
+        {
+          "minute": "73'",
+          "team": "South Africa",
+          "player": "M. Marx",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "conversion"
+        },
+        {
+          "minute": "79'",
+          "team": "South Africa",
+          "player": "B. Dixon",
+          "type": "try"
+        },
+        {
+          "minute": "80'",
+          "team": "South Africa",
+          "player": "C. Kolbe",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-04T13:10Z",
@@ -209,7 +338,7 @@
           "type": "try"
         },
         {
-          "minute": "42'",
+          "minute": "43'",
           "team": "Ireland",
           "player": "S. Prendergast",
           "type": "conversion"

@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v41-premium";
+const VERSION = "v42-premium";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -14,6 +14,7 @@ const SHELL = [
   "manifest.json",
   "icons/icon-192.svg",
   "icons/icon-512.svg",
+  "icons/apple-touch-icon.png",
   "fonts/InterVariable.woff2",
   "fonts/SpaceGrotesk-500.woff2",
   "fonts/SpaceGrotesk-600.woff2",

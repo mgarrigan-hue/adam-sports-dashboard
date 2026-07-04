@@ -512,12 +512,17 @@ main {
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: 18px;
 }
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .main-grid { grid-template-columns: 1fr; }
   /* When stacked, promote "Upcoming fixtures" above "Latest action" — 
      it's the more actionable glanceable content on small screens. */
   .main-grid > .card-feed:nth-of-type(1) { order: 2; }
   .main-grid > .card-feed:nth-of-type(2) { order: 1; }
+}
+/* Hide the wide "Updated X min ago" text once space gets tight so the
+   single-row desktop topbar keeps fitting down to ~760px. */
+@media (max-width: 980px) {
+  .last-updated { display: none; }
 }
 
 .grid {
@@ -670,7 +675,7 @@ main {
 .f1-weekend { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 22px; margin-bottom: 8px; }
 .f1-tables { display: grid; gap: 14px; }
 .standings-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
-@media (max-width: 880px) { .f1-weekend { grid-template-columns: 1fr; } .standings-grid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .f1-weekend { grid-template-columns: 1fr; } .standings-grid { grid-template-columns: 1fr; } }
 
 .timeline {
   position: relative; padding-left: 22px; margin: 6px 0 0;
@@ -871,7 +876,7 @@ footer {
 /* =====================================================================
    Mobile
    ===================================================================== */
-@media (max-width: 880px) {
+@media (max-width: 760px) {
   /* Sticky topbar is now 2 rows tall — bump anchor-jump offset to clear it
      PLUS the sub-greeting row underneath. */
   html { scroll-padding-top: calc(170px + env(safe-area-inset-top, 0px)); }
@@ -886,7 +891,6 @@ footer {
   .brand { grid-area: brand; }
   .topbar-actions { grid-area: actions; }
   .nav-tabs { grid-area: nav; justify-content: flex-start; }
-  .last-updated { display: none; }
   .adam-greet-row { top: calc(128px + env(safe-area-inset-top, 0px)); }
 }
 @media (max-width: 640px) {
@@ -1329,7 +1333,7 @@ tr.fav-team-row td:first-child {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 18px;
 }
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .adam-grid { grid-template-columns: 1fr; }
 }
 

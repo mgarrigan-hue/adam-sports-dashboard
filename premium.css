@@ -5,6 +5,10 @@
    wc.js (renderWcBracket). Reversible by removing one <link>.
    ===================================================================== */
 
+/* ---- GLOBAL: never let the page scroll sideways (clip keeps sticky working;
+   the nav-tabs and knockout bracket keep their own internal overflow scroll) ---- */
+html { overflow-x: clip; }
+
 /* ---- GLOBAL: one reduced-motion guard (replaces scattered blocks) ---- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -279,10 +283,7 @@ tr[data-zone="drop"] td { background: var(--qual-drop-bg); }
   /* Tighten table cell padding on phones so team names aren't clipped. */
   .panel-body table td, .panel-body table th { padding-left: 6px; padding-right: 6px; }
   .panel-body .team-cell { gap: 5px; }
-  /* Page-level backstop so no stray wide chip/table can scroll the whole page
-     sideways. clip (not hidden) keeps the sticky topbar working, and it must
-     sit on the root element (that's where the document scroll lives). */
-  html { overflow-x: clip; }
+  /* Page-level sideways-scroll backstop is now global (see top of file). */
 }
 
 /* ---- WC NOW/NEXT HERO (forward-looking, replaces stale countdown) ---- */

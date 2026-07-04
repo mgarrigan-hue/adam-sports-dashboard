@@ -266,6 +266,25 @@ tr[data-zone="drop"] td { background: var(--qual-drop-bg); }
   .wc-ko-tab { min-height: 40px; }
 }
 
+/* ---- MOBILE TOPBAR POLISH (fit the action row on phones) ---- */
+@media (max-width: 640px) {
+  /* The "matches today" chip duplicates the World Cup tab — drop it on phones
+     so the action row never overflows the viewport. */
+  .wc-topbar-chip { display: none !important; }
+  /* Install button becomes icon-only (the install banner covers the prompt). */
+  #install-btn .btn-label { display: none; }
+  .topbar-actions { gap: 6px; }
+  /* Wide data tables scroll inside their card instead of pushing the page. */
+  .panel-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* Tighten table cell padding on phones so team names aren't clipped. */
+  .panel-body table td, .panel-body table th { padding-left: 6px; padding-right: 6px; }
+  .panel-body .team-cell { gap: 5px; }
+  /* Page-level backstop so no stray wide chip/table can scroll the whole page
+     sideways. clip (not hidden) keeps the sticky topbar working, and it must
+     sit on the root element (that's where the document scroll lives). */
+  html { overflow-x: clip; }
+}
+
 /* ---- WC NOW/NEXT HERO (forward-looking, replaces stale countdown) ---- */
 .wc-nownext {
   display: flex; flex-direction: column; gap: var(--space-2);

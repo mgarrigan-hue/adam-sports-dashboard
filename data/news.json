@@ -1,13 +1,37 @@
 {
-  "generated_at": "2026-07-04T15:39:55Z",
+  "generated_at": "2026-07-04T16:58:53Z",
   "items": [
     {
+      "title": "Antonelli beats Leclerc & Hamilton to Silverstone pole",
+      "summary": "Mercedes' Kimi Antonelli takes pole position for the British Grand Prix, beating the Ferraris and team-mate George Russell.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cj3g73x2ggeo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-04T16:40:32Z"
+    },
+    {
+      "title": "James seals important Wales win",
+      "summary": "James seals important Wales win",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/videos/cdejpxwdl29o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-04T16:06:36Z"
+    },
+    {
       "title": "Six-try Wales beat Fiji in Nations Championship opener",
-      "summary": "Six-try Wales defeat Fiji 39-24 in the Nations Championship opener at the Cardiff City stadium.",
+      "summary": "Six-try Wales defeat Fiji 39-24 in their Nations Championship opener at the Cardiff City stadium.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c0my2xvzg3do?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-04T15:35:31Z"
+    },
+    {
+      "title": "'Game-changer' Keenan shines on Ireland return",
+      "summary": "Hugo Keenan produces an outstanding display on his Ireland return to help Andy Farrell's side snatch a dramatic 33-31 win over Australia.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c79y4xdzgrqo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-04T15:19:02Z"
     },
     {
       "title": "Furbank out of South Africa Test with appendicitis",
@@ -330,14 +354,6 @@
       "published": "2026-07-02T14:22:52Z"
     },
     {
-      "title": "Furbank to face Boks in first start in nearly two years",
-      "summary": "George Furbank will make his first England appearance in nearly two years in Saturday's Nations Championship opener against South Africa in Johannesburg.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c621kdzvvp2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-07-02T13:01:14Z"
-    },
-    {
       "title": "No Russell but Gray back for Scotland in Argentina",
       "summary": "Finn Russell will not feature for Scotland in their opening Nations Championship match of the summer series against Argentina, while Jonny Gray makes his return after missing this year's Six Nations.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/clywjz18ke1o?at_medium=RSS&at_campaign=rss",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-30T10:36:15Z"
-    },
-    {
-      "title": "North v South - the battle for global supremacy is tighter than ever",
-      "summary": "The new Nations Championship pits the northern hemisphere against the south. Traditionally there would only be one winner in such a contest. Perhaps things are different now...",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c20y58ndlgeo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-06-30T10:10:35Z"
-    },
-    {
-      "title": "Aston Martin to have big upgrade for Hungarian GP",
-      "summary": "Team boss Adrian Newey says Aston Martin's first big performance upgrade of the season will be introduced at the Hungarian Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c0lyjp8dj5ro?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-06-30T09:22:03Z"
     }
   ]
 }

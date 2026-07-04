@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-04T18:04:30Z",
+  "generated_at": "2026-07-04T19:43:28Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3591,10 +3591,10 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 3
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3821,10 +3821,9 @@
         "placeholder": "Round of 16 1 Winner"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Round of 16 2 Winner"
+        "name": "Morocco",
+        "code": "MAR",
+        "flag": "🇲🇦"
       },
       "score": null,
       "status": "scheduled",
@@ -4078,10 +4077,10 @@
             },
             "score": {
               "home": 0,
-              "away": 0
+              "away": 3
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           },
@@ -4242,10 +4241,9 @@
               "placeholder": "Round of 16 1 Winner"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Round of 16 2 Winner"
+              "name": "Morocco",
+              "code": "MAR",
+              "flag": "🇲🇦"
             },
             "score": null,
             "status": "scheduled",

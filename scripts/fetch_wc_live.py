@@ -279,7 +279,7 @@ def fetch_for_match(match: dict) -> tuple[str, list[dict]]:
 
 def main() -> int:
     if not OUT.exists():
-        print(f"  · {OUT} missing — run fetch_world_cup.py first.")
+        print(f"  · {OUT} missing — run fetch_world_cup.mjs first.")
         return 0
     try:
         payload = json.loads(OUT.read_text(encoding="utf-8"))

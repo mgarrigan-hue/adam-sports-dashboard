@@ -8,8 +8,8 @@ recency across every sport so the most recent action is always at the top.
 
 ## How it works
 - 100% static site (HTML / CSS / vanilla JS) hosted on GitHub Pages.
-- A scheduled GitHub Action (every 30 min) runs Python fetchers that pull data
-  from public APIs / pages and writes JSON files into `data/`.
+- A scheduled GitHub Action (every 30 min) runs Python + Node fetchers that pull
+  data from public APIs / pages and writes JSON files into `data/`.
 - The frontend reads `data/*.json` at page load and renders the dashboard.
 
 ## Data sources
@@ -19,6 +19,7 @@ recency across every sport so the most recent action is always at the top.
 | International rugby | BBC Sport rugby union pages |
 | Irish provinces (URC) | BBC Sport rugby union pages |
 | Leinster schools | leinsterrugby.ie + schoolsrugby.ie |
+| FIFA World Cup 2026 | ESPN hidden API (`soccer/fifa.world`) — live scores, knockout bracket, penalties |
 
 ## Local development
 ```bash
@@ -27,6 +28,7 @@ python scripts/fetch_f1.py
 python scripts/fetch_intl_rugby.py
 python scripts/fetch_provinces.py
 python scripts/fetch_schools.py
+node scripts/fetch_world_cup.mjs   # World Cup (real ESPN data, Node ≥18)
 
 # 2. serve the site
 python -m http.server 8000

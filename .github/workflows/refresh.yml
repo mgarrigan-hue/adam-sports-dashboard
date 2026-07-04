@@ -28,6 +28,10 @@ jobs:
         with:
           python-version: "3.12"
 
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af  # v4.1.0
+        with:
+          node-version: "20"
+
       - name: Install Python deps
         run: pip install --quiet defusedxml
 
@@ -41,7 +45,7 @@ jobs:
           python scripts/fetch_schools.py
           python scripts/fetch_dublin_club.py
           python scripts/fetch_news.py
-          python scripts/fetch_world_cup.py
+          node scripts/fetch_world_cup.mjs
           # Live commentary: self-gates to Brazil matches in-window. Cheap no-op otherwise.
           python scripts/fetch_wc_live.py
           python scripts/fetch_rugby_tables.py

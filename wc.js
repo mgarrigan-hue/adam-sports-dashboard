@@ -324,14 +324,16 @@ function renderWcGroups(groups, allMatches) {
       (b.gd|0)     - (a.gd|0)     ||
       (b.gf|0)     - (a.gf|0)
     );
-    const rows = sortedTeams.map(t => {
+    const rows = sortedTeams.map((t, i) => {
       const fav = isAdamsWcTeam(t.name) ? " is-brazil-row" : "";
+      // Top 2 auto-qualify (green); 3rd goes to the best-thirds cut (blue).
+      const zone = i < 2 ? "auto" : i === 2 ? "play" : "";
       let sparkHtml = "";
       if (typeof formSparkline === "function" && typeof wcFormPills === "function" && allMatches) {
         const form = wcFormPills(allMatches, t.name, 5);
         if (form.length) sparkHtml = formSparkline(form.map(f => f.result));
       }
-      return `<tr class="${fav}">
+      return `<tr class="${fav}"${zone ? ` data-zone="${zone}"` : ""}>
         <td class="wc-tn">${wcFlagImg(t)} ${escapeHtml(t.name)} ${sparkHtml}</td>
         <td>${t.played|0}</td><td>${t.won|0}</td><td>${t.drawn|0}</td><td>${t.lost|0}</td>
         <td>${t.gd|0}</td><td><strong>${t.points|0}</strong></td>
@@ -346,6 +348,10 @@ function renderWcGroups(groups, allMatches) {
   return `<section class="wc-groups">
     <h3 class="wc-subheading">Groups</h3>
     <div class="wc-groups-grid">${tables}</div>
+    <div class="qual-legend">
+      <span><i class="z-auto"></i> Top 2 — through</span>
+      <span><i class="z-play"></i> 3rd — best-thirds cut</span>
+    </div>
   </section>`;
 }
 

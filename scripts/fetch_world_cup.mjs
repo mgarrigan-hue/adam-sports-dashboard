@@ -263,6 +263,38 @@ function bracketMatch(m) {
   };
 }
 
+// Aggregate top scorers straight from the scoreboard scoring plays (goals),
+// so we need no extra requests. Own goals are excluded.
+function computeTopScorers(events, refs) {
+  const tally = new Map(); // key -> { name, goals, team, flag }
+  for (const ev of events) {
+    const comp = (ev.competitions || [])[0] || {};
+    // Map ESPN numeric team id -> resolved team (name/flag) for this event.
+    const idToTeam = {};
+    for (const c of comp.competitors || []) {
+      const t = resolveTeam(c, refs.codeToTeam);
+      idToTeam[String(c.team?.id)] = t;
+    }
+    for (const d of comp.details || []) {
+      if (d.scoringPlay !== true) continue;
+      const typ = ((d.type || {}).text || '').toLowerCase();
+      if (!typ.includes('goal') || typ.includes('own goal')) continue;
+      const ath = (d.athletesInvolved || [])[0];
+      if (!ath) continue;
+      const name = ath.displayName || ath.shortName || ath.fullName;
+      if (!name) continue;
+      const team = idToTeam[String((d.team || {}).id)] || {};
+      const key = `${name}|${team.code || ''}`;
+      const cur = tally.get(key) || { name, goals: 0, team: team.name || '', flag: team.flag || '' };
+      cur.goals += 1;
+      tally.set(key, cur);
+    }
+  }
+  return [...tally.values()]
+    .sort((a, b) => b.goals - a.goals || a.name.localeCompare(b.name))
+    .slice(0, 10);
+}
+
 function computeStageAndChampion(matches) {
   const finalM = matches.find(m => m.stage === 'final');
   let champion = null;
@@ -320,6 +352,7 @@ async function main() {
   const groups = computeGroups(fb, matches);
   const knockout_bracket = buildBracket(matches);
   const { current_stage, champion } = computeStageAndChampion(matches);
+  const top_scorers = computeTopScorers(events, refs);
 
   const payload = {
     source: 'espn',
@@ -334,7 +367,7 @@ async function main() {
     groups,
     matches,
     knockout_bracket,
-    top_scorers: Array.isArray(fb.top_scorers) ? fb.top_scorers : [],
+    top_scorers,
   };
 
   // Validate before write.

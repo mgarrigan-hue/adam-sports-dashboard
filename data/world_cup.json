@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-04T10:50:42Z",
+  "generated_at": "2026-07-04T11:17:18Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -4423,5 +4423,66 @@
       }
     ]
   },
-  "top_scorers": []
+  "top_scorers": [
+    {
+      "name": "Lionel Messi",
+      "goals": 7,
+      "team": "Argentina",
+      "flag": "🇦🇷"
+    },
+    {
+      "name": "Kylian Mbappé",
+      "goals": 6,
+      "team": "France",
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Erling Haaland",
+      "goals": 5,
+      "team": "Norway",
+      "flag": "🇳🇴"
+    },
+    {
+      "name": "Harry Kane",
+      "goals": 4,
+      "team": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    },
+    {
+      "name": "Ismaïla Sarr",
+      "goals": 4,
+      "team": "Senegal",
+      "flag": "🇸🇳"
+    },
+    {
+      "name": "Mikel Oyarzabal",
+      "goals": 4,
+      "team": "Spain",
+      "flag": "🇪🇸"
+    },
+    {
+      "name": "Ousmane Dembélé",
+      "goals": 4,
+      "team": "France",
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Vinícius Júnior",
+      "goals": 4,
+      "team": "Brazil",
+      "flag": "🇧🇷"
+    },
+    {
+      "name": "Brian Brobbey",
+      "goals": 3,
+      "team": "Netherlands",
+      "flag": "🇳🇱"
+    },
+    {
+      "name": "Cody Gakpo",
+      "goals": 3,
+      "team": "Netherlands",
+      "flag": "🇳🇱"
+    }
+  ]
 }

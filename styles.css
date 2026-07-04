@@ -36,42 +36,135 @@
 }
 
 :root {
-  --bg: #0a0d18;
-  --bg-2: #0e1322;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-2: rgba(255, 255, 255, 0.06);
-  --surface-strong: rgba(255, 255, 255, 0.08);
+  /* ---- NEUTRAL / SURFACE RAMP (dark-first) ---- */
+  --bg: #070910;
+  --bg-2: #0c1020;
+  --bg-sunken: #04060c;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.055);
+  --surface-strong: rgba(255, 255, 255, 0.09);
+  --surface-solid: #111527;
+  --elevated: #171d31;
+  --border-hair: rgba(255, 255, 255, 0.05);
   --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.16);
 
-  --text: #eef1fb;
-  --text-2: #c9cee0;
-  --muted: #8089a8;
+  /* ---- TEXT ---- */
+  --text: #f2f4fd;
+  --text-2: #c3c9df;
+  --muted: #8b93b4;
+  --on-accent: #1a1400;
+  --on-dark: #f2f4fd;
 
+  /* ---- BRAND + PER-SPORT ACCENTS ---- */
   --accent: #ffcb05;
   --accent-2: #ffe27a;
-
-  --f1: #ff3b30;
-  --f1-2: #ff7a6e;
-  --rugby: #2dd078;
+  --f1: #ff2d3c;
+  --f1-2: #ff6b6b;
+  --rugby: #22d07f;
   --rugby-2: #6cf2a3;
+  --football: #3aa0ff;
+  --football-2: #7cc4ff;
   --club: #5fa8e6;
   --club-2: #8ec3ee;
   --news: #b07aff;
+  --news-2: #d8b8ff;
+  --wc-a: #fecd07;
+  --wc-b: #009c3b;
 
   --redbull: #1e41ff;
   --leinster: #003c71;
 
-  --good: #2dd078;
-  --bad: #ff4d6d;
+  /* ---- SEMANTIC (states) ---- */
+  --live: #ff3b57;
+  --live-2: #ff7a8c;
+  --win: #22c55e;
+  --draw: #eab308;
+  --loss: #ef4444;
+  --win-fg: #bbf7d0;
+  --draw-fg: #fef08a;
+  --loss-fg: #fecaca;
+  --live-fg: #ffd0d8;
+  --win-bg: rgba(34, 197, 94, 0.16);
+  --draw-bg: rgba(234, 179, 8, 0.16);
+  --loss-bg: rgba(239, 68, 68, 0.16);
+  --live-bg: rgba(255, 59, 87, 0.14);
+  /* back-compat aliases */
+  --good: var(--win);
+  --bad: var(--live);
 
-  --radius-lg: 18px;
-  --radius-md: 14px;
+  /* ---- QUALIFICATION ZONES ---- */
+  --qual-auto: #22c55e;
+  --qual-play: #3aa0ff;
+  --qual-drop: #ef4444;
+  --qual-auto-bg: rgba(34, 197, 94, 0.10);
+  --qual-play-bg: rgba(58, 160, 255, 0.10);
+  --qual-drop-bg: rgba(239, 68, 68, 0.10);
+
+  /* ---- RADII ---- */
+  --radius-xs: 6px;
   --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.45);
+  /* ---- SPACING (4px base) ---- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-7: 32px; --space-8: 40px;
+  --space-9: 48px; --space-10: 64px;
+
+  /* ---- TYPE ---- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --fs-eyebrow: 0.6875rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.75rem;
+  --fs-hero: clamp(2rem, 1.2rem + 3.2vw, 3.25rem);
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --tracking-eyebrow: 0.14em;
+  --tracking-tight: -0.01em;
+
+  /* ---- ELEVATION / SHADOW ---- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.32), 0 12px 32px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.44), 0 4px 10px rgba(0, 0, 0, 0.30);
+  --shadow-xl: 0 28px 70px rgba(0, 0, 0, 0.55);
+  --ring-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --glow-accent: 0 6px 22px rgba(255, 203, 5, 0.30);
+  --glow-live: 0 0 0 1px rgba(255, 59, 87, 0.40), 0 10px 30px rgba(255, 59, 87, 0.22);
+
+  /* ---- GRADIENTS ---- */
+  --grad-accent: linear-gradient(135deg, var(--accent), var(--accent-2));
+  --grad-f1: linear-gradient(135deg, #ff2d3c 0%, #6f0a05 55%, #160404 100%);
+  --grad-rugby: linear-gradient(135deg, #003c71 0%, #02244a 55%, #0a1530 100%);
+  --grad-football: linear-gradient(135deg, #0b5cff 0%, #0a2b6b 55%, #0a1530 100%);
+  --grad-wc: linear-gradient(135deg, #fecd07 0%, #019e3c 60%, #014d20 100%);
+  --grad-card-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 40%);
+  --grad-app-bg:
+    radial-gradient(1400px 700px at 8% -10%, rgba(30, 65, 255, 0.18), transparent 55%),
+    radial-gradient(1100px 600px at 110% 5%, rgba(176, 122, 255, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 50% 100%, rgba(45, 208, 120, 0.10), transparent 60%);
+
+  /* ---- Z-INDEX ---- */
+  --z-base: 0; --z-raised: 10; --z-sticky: 40; --z-nav: 41;
+  --z-overlay: 100; --z-modal: 110; --z-toast: 120; --z-max: 999;
+
+  /* ---- MOTION ---- */
+  --dur-instant: 80ms; --dur-fast: 140ms; --dur: 220ms; --dur-slow: 360ms; --dur-slower: 600ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-spring: cubic-bezier(0.5, 1.5, 0.4, 1);
+  --ease-emph: cubic-bezier(0.2, 0.9, 0.1, 1);
 }
 
 * { box-sizing: border-box; }
@@ -1342,19 +1435,26 @@ body.search-open { overflow: hidden; }
    driven by either [data-theme="light"] (explicit toggle) OR
    prefers-color-scheme:light when no explicit attribute is set. */
 :root[data-theme="light"] {
-  --bg: #f3f5fb;
+  --bg: #eef1f8;
   --bg-2: #ffffff;
+  --bg-sunken: #e6eaf3;
   --surface: rgba(15, 23, 42, 0.04);
   --surface-2: rgba(15, 23, 42, 0.06);
   --surface-strong: rgba(15, 23, 42, 0.10);
+  --surface-solid: #ffffff;
+  --elevated: #ffffff;
+  --border-hair: rgba(15, 23, 42, 0.05);
   --border: rgba(15, 23, 42, 0.10);
   --border-strong: rgba(15, 23, 42, 0.18);
   --text: #0f172a;
   --text-2: #334155;
-  --muted: #64748b;
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 8px 28px rgba(15, 23, 42, 0.10);
-  --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.16);
+  --muted: #5a6577;
+  --on-dark: #0f172a;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 2px 8px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.16);
+  --ring-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --grad-card-sheen: linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0) 40%);
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {

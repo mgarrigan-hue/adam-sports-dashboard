@@ -234,12 +234,18 @@ function renderWcFixtures(matches, opts = {}) {
   const fromIso = opts.fromIso || null;
   const stageFilter = opts.stage || null;
   const heading = opts.heading || "All fixtures";
+  const knownOnly = !!opts.knownOnly;
+  const untilIso = (fromIso && opts.limitDays)
+    ? new Date(new Date(fromIso).getTime() + opts.limitDays * 24 * 60 * 60 * 1000).toISOString()
+    : null;
   const buckets = new Map();
   for (const m of matches) {
     if (stageFilter && m.stage !== stageFilter) continue;
+    if (knownOnly && (!m.home?.name || !m.away?.name)) continue;
     const d = new Date(m.date);
     if (isNaN(d)) continue;
     if (fromIso && d.toISOString() < fromIso) continue;
+    if (untilIso && d.toISOString() > untilIso) continue;
     const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
     if (!buckets.has(key)) buckets.set(key, { date: d, items: [] });
     buckets.get(key).items.push(m);
@@ -343,13 +349,171 @@ function renderWcGroups(groups, allMatches) {
   </section>`;
 }
 
+// ---- Knockout bracket (real, data-driven) ----
+function wcRoundShort(key) {
+  return ({
+    "round-of-32": "R32", "round-of-16": "R16", "quarter-final": "QF",
+    "semi-final": "SF", "third-place": "3rd", "final": "Final",
+  })[key] || key;
+}
+function wcStageName(stage) {
+  return ({
+    "group": "Group stage", "round-of-32": "Round of 32", "round-of-16": "Round of 16",
+    "quarter-final": "Quarter-finals", "semi-final": "Semi-finals",
+    "third-place": "Third-place play-off", "final": "Final", "complete": "Complete",
+  })[stage] || stage;
+}
+function wcShortPlaceholder(txt) {
+  if (!txt) return "TBD";
+  return String(txt)
+    .replace(/Round of 16/i, "R16")
+    .replace(/Quarterfinals?|Quarter-finals?/i, "QF")
+    .replace(/Semifinals?|Semi-finals?/i, "SF")
+    .replace(/\s*Winner/i, " W")
+    .replace(/\s*Loser/i, " L")
+    .trim();
+}
+function wcKoTeamRow(team, opts) {
+  const tbd = !team || !team.name;
+  const cls = ["wc-ko-team",
+    opts.isWinner ? "is-winner" : "",
+    opts.isOut ? "is-out" : "",
+    tbd ? "is-tbd" : ""].filter(Boolean).join(" ");
+  const flag = tbd ? `<span class="wc-flag" aria-hidden="true">🏳️</span>` : wcFlagImg(team);
+  const name = tbd
+    ? escapeHtml(team && team.placeholder ? wcShortPlaceholder(team.placeholder) : "TBD")
+    : escapeHtml(team.name);
+  const score = opts.score == null ? "" :
+    `<span class="wc-ko-team__score">${escapeHtml(String(opts.score))}` +
+    `${opts.pens != null ? `<span class="wc-ko-team__pens">(${escapeHtml(String(opts.pens))})</span>` : ""}</span>`;
+  return `<div class="${cls}">${flag}<span class="wc-ko-team__name">${name}</span>${score}</div>`;
+}
+function renderWcKoTie(m) {
+  const live = wcIsLive(m);
+  const hasScore = m.score && m.score.home != null && m.score.away != null;
+  const homeWin = m.winner === "home", awayWin = m.winner === "away";
+  const brazil = wcMatchHasTeam(m);
+  const bothTbd = !(m.home && m.home.name) && !(m.away && m.away.name);
+  let penH = null, penA = null;
+  if (m.pens && typeof m.pens === "string" && m.pens.includes("-")) {
+    const [a, b] = m.pens.split("-");
+    if (homeWin) { penH = a; penA = b; }
+    else if (awayWin) { penH = b; penA = a; }
+  }
+  const cls = ["wc-ko-tie",
+    live ? "is-live" : "",
+    brazil ? "has-brazil" : "",
+    bothTbd ? "wc-ko-tie--tbd" : ""].filter(Boolean).join(" ");
+  const homeRow = wcKoTeamRow(m.home, { isWinner: homeWin, isOut: awayWin, score: hasScore ? m.score.home : null, pens: penH });
+  const awayRow = wcKoTeamRow(m.away, { isWinner: awayWin, isOut: homeWin, score: hasScore ? m.score.away : null, pens: penA });
+  let meta = "";
+  if (live) meta = `<div class="wc-ko-tie__meta"><span class="wc-live-dot">● LIVE</span></div>`;
+  else if (m.status === "scheduled") meta = `<div class="wc-ko-tie__meta">${escapeHtml(wcKickoffLabel(m.date))}</div>`;
+  else if (m.pens) meta = `<div class="wc-ko-tie__meta">after penalties</div>`;
+  else if (m.aet) meta = `<div class="wc-ko-tie__meta">after extra time</div>`;
+  return `<article class="${cls}" data-match-id="${escapeAttr(m.id || "")}">${homeRow}${awayRow}${meta}</article>`;
+}
 function renderWcBracket(bracket) {
-  if (bracket == null) return "";
-  // Placeholder structure — populated once knockout starts.
+  const rounds = bracket && Array.isArray(bracket.rounds) ? bracket.rounds : [];
+  if (!rounds.length) {
+    return `<section class="wc-bracket">
+      <h3 class="wc-subheading">🏆 Knockout bracket</h3>
+      <p class="empty">Bracket appears once the knockout stage begins.</p>
+    </section>`;
+  }
+  // Champion crown from a completed final.
+  let champHtml = "";
+  const finalRound = rounds.find(r => r.key === "final");
+  if (finalRound && finalRound.matches.length) {
+    const fm = finalRound.matches[0];
+    if (fm.status === "complete" && fm.winner) {
+      const champ = fm.winner === "home" ? fm.home : fm.away;
+      if (champ && champ.name) {
+        champHtml = `<div class="wc-ko-champion">
+          <div class="wc-ko-champion__eyebrow">World Champions</div>
+          <div class="wc-ko-champion__trophy">🏆</div>
+          <div class="wc-ko-champion__name">${wcFlagImg(champ)} ${escapeHtml(champ.name)}</div>
+        </div>`;
+      }
+    }
+  }
+  // Mobile active round = earliest round still containing an unfinished tie.
+  let activeKey = rounds[0].key;
+  for (const r of rounds) {
+    if (r.matches.some(m => m.status !== "complete")) { activeKey = r.key; break; }
+    activeKey = r.key;
+  }
+  const tabs = rounds.map(r =>
+    `<button type="button" class="wc-ko-tab${r.key === activeKey ? " is-active" : ""}" data-round="${escapeAttr(r.key)}">${escapeHtml(wcRoundShort(r.key))}</button>`
+  ).join("");
+  const cols = rounds.map(r =>
+    `<div class="wc-ko-round${r.key === activeKey ? " is-active" : ""}" data-round="${escapeAttr(r.key)}">
+      <div class="wc-ko-round__label">${escapeHtml(r.name)}</div>
+      <div class="wc-ko-ties">${r.matches.map(renderWcKoTie).join("")}</div>
+    </div>`
+  ).join("");
   return `<section class="wc-bracket">
-    <h3 class="wc-subheading">Knockout bracket</h3>
-    <p class="empty">Bracket appears once Round of 32 begins.</p>
+    <div class="wc-bracket__head">
+      <h3 class="wc-subheading">🏆 Knockout bracket</h3>
+      <div class="wc-ko-tabs" role="tablist">${tabs}</div>
+    </div>
+    <div class="wc-bracket__rounds">${cols}</div>
+    ${champHtml}
   </section>`;
+}
+
+// Bind the mobile round-selector tabs (desktop shows every round at once).
+function bindWcBracketTabs(root) {
+  root.querySelectorAll(".wc-bracket").forEach(br => {
+    const tabs = [...br.querySelectorAll(".wc-ko-tab")];
+    const rounds = [...br.querySelectorAll(".wc-ko-round")];
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const key = tab.getAttribute("data-round");
+        tabs.forEach(t => t.classList.toggle("is-active", t === tab));
+        rounds.forEach(r => r.classList.toggle("is-active", r.getAttribute("data-round") === key));
+      });
+    });
+  });
+}
+
+// Forward-looking hero (during the tournament) — replaces the stale
+// "kicks off in" pre-tournament countdown once matches are under way.
+function renderWcNowNext(t, matches) {
+  const now = new Date();
+  const stageNice = wcStageName(t.current_stage);
+  const finalMatch = (matches || []).find(m => m.stage === "final");
+  const brazilNext = wcNextBrazilMatch(matches, now);
+
+  let brazilLine;
+  if (t.champion) {
+    brazilLine = `<div class="wc-nownext__row wc-nownext__row--champ">🏆 <span>Champions: <strong>${escapeHtml(t.champion)}</strong></span></div>`;
+  } else if (brazilNext) {
+    const opp = isAdamsWcTeam(brazilNext.home?.name) ? brazilNext.away : brazilNext.home;
+    brazilLine = `<div class="wc-nownext__row wc-nownext__row--brazil">
+      ${wcFlagImg({ flag: "🇧🇷", name: "Brazil" })}
+      <span>Brazil · <strong>${escapeHtml(wcStageName(brazilNext.stage))}</strong> vs ${escapeHtml(opp?.name || "TBD")}
+      · ${escapeHtml(wcKickoffLabel(brazilNext.date))}</span>
+      <span class="wc-nownext__cd">in ${escapeHtml(wcCountdownString(new Date(brazilNext.date)))}</span>
+    </div>`;
+  } else {
+    brazilLine = `<div class="wc-nownext__row wc-nownext__row--brazil">
+      ${wcFlagImg({ flag: "🇧🇷", name: "Brazil" })}<span>No upcoming Brazil fixture</span></div>`;
+  }
+
+  let finalLine = "";
+  if (finalMatch && !t.champion) {
+    finalLine = `<div class="wc-nownext__row wc-nownext__row--final">
+      🏆 <span>Final · ${escapeHtml(wcKickoffLabel(finalMatch.date))}</span>
+      <span class="wc-nownext__cd">in ${escapeHtml(wcCountdownString(new Date(finalMatch.date)))}</span>
+    </div>`;
+  }
+
+  return `<div class="wc-nownext">
+    <div class="wc-nownext__eyebrow">⚽ FIFA World Cup 2026 · ${escapeHtml(stageNice)}</div>
+    ${brazilLine}
+    ${finalLine}
+  </div>`;
 }
 
 function renderWcScorers(scorers, opts = {}) {
@@ -406,13 +570,13 @@ function renderWorldCup(data) {
     html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcFixtures(wc.matches, { heading: "All fixtures" });
   } else if (phase === "during") {
-    html += renderWcCountdown(t, wc.matches);
+    html += renderWcNowNext(t, wc.matches);
     html += renderWcToday(wc.matches);
     html += renderWcCommentary(wc);
-    html += renderWcGroups(wc.groups, wc.matches);
     html += renderWcBracket(wc.knockout_bracket);
-    html += renderWcScorers(wc.top_scorers, { showEmpty: true });
-    html += renderWcFixtures(wc.matches, { fromIso: new Date(Date.now() + 24*60*60*1000).toISOString(), heading: "Upcoming fixtures" });
+    html += renderWcFixtures(wc.matches, { fromIso: new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString(), heading: "Coming up", knownOnly: true, limitDays: 4 });
+    html += renderWcScorers(wc.top_scorers, { showEmpty: false });
+    html += `<details class="wc-groups-archive"><summary>Final group tables</summary>${renderWcGroups(wc.groups, wc.matches)}</details>`;
   } else { // recap
     const champ = t.champion ? `<div class="wc-countdown-big">🏆 Champions: ${escapeHtml(t.champion)}</div>` : "";
     html += `<div class="wc-countdown-hero">
@@ -426,6 +590,7 @@ function renderWorldCup(data) {
   root.innerHTML = html;
   bindWcShareButtons(root);
   bindWcPushButton();
+  bindWcBracketTabs(root);
 
   // Kick off (or stop) the 60s live refresh based on whether any match is live.
   if (phase === "during" && wcAnyLive(wc.matches)) startWcLiveRefresh();

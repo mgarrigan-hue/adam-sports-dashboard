@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T10:41:26Z",
+  "generated_at": "2026-07-04T10:42:02Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -13,7 +13,7 @@
       "venue": "Allianz Stadium, Sydney",
       "status": "STATUS_FIRST_HALF",
       "status_state": "in",
-      "home_score": 17,
+      "home_score": 24,
       "away_score": 12
     },
     {

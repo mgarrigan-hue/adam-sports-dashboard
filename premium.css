@@ -320,8 +320,7 @@ tr[data-zone="drop"] td { background: var(--qual-drop-bg); }
 .wc-nownext__row--final .wc-nownext__cd { color: var(--accent-2); background: rgba(255, 203, 5, 0.14); }
 .wc-nownext__row--champ { font-size: var(--fs-lg); color: var(--accent-2); font-weight: 800; }
 
-/* ---- WC groups demoted to a collapsed archive during knockouts ---- */
-.wc-groups-archive {
+/* ---- WC groups demoted to a collapsed archive during knockouts ---- */.wc-groups-archive {
   margin-top: var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -338,3 +337,33 @@ tr[data-zone="drop"] td { background: var(--qual-drop-bg); }
 .wc-groups-archive[open] > summary::before { transform: rotate(90deg); }
 .wc-groups-archive > summary:hover { color: var(--text); }
 .wc-groups-archive .wc-groups { padding: 0 var(--space-4) var(--space-4); }
+
+/* ---- Rugby result/fixture lists: side-by-side on wide cards ---- */
+.rugby-split { display: grid; gap: var(--space-2) var(--space-7); }
+.rugby-split .rugby-col > .sub:first-child { margin-top: 0; }
+@media (min-width: 900px) {
+  .card-wide .rugby-split { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+/* Hug the centre score so wide rows don't spread into empty gaps.
+   Desktop-only — on phones the natural compact layout fits better. */
+@media (min-width: 700px) {
+  .rugby-col table td:nth-child(2) { text-align: right; }
+  .rugby-col table td:nth-child(2) .team-cell { flex-direction: row-reverse; }
+  .rugby-col table td.score, .rugby-col table td:nth-child(3) { text-align: center; white-space: nowrap; width: 1%; }
+  .rugby-col table td:first-child { white-space: nowrap; width: 1%; color: var(--muted); }
+}
+
+/* ---- LIGHT-THEME CONTRAST FIXES ---- */
+/* The hero is always a dark colored gradient surface, so its text must stay
+   light in BOTH themes (it was inheriting the dark light-mode --text). */
+.hero-card { color: #fff; }
+.hero-card .hero-label { color: rgba(255, 255, 255, 0.92); }
+.hero-card .hero-countdown { color: #fff; }
+/* Tinted chips use pale accent text that washes out on white — darken it in
+   light mode while keeping the coloured tint + border for meaning. */
+:root[data-theme="light"] .feed-tag,
+:root[data-theme="light"] .watch-chip,
+:root[data-theme="light"] .chip-tier,
+:root[data-theme="light"] .wc-group-tag,
+:root[data-theme="light"] .badge { color: #1f2937; }
+:root[data-theme="light"] .feed-tag { border-color: rgba(15, 23, 42, 0.16); }

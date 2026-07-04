@@ -2240,10 +2240,10 @@ function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = fa
     </tr>${watch ? `<tr class="watch-sub"><td colspan="4">${watch}</td></tr>` : ""}`;
   }).join("");
   el.innerHTML = `
-    <div class="sub">Recent results</div>
-    <table>${rec || `<tr><td>—</td></tr>`}</table>
-    <div class="sub">Upcoming fixtures</div>
-    <table>${upc || `<tr><td>—</td></tr>`}</table>
+    <div class="rugby-split">
+      <div class="rugby-col"><div class="sub">Recent results</div><table>${rec || `<tr><td>—</td></tr>`}</table></div>
+      <div class="rugby-col"><div class="sub">Upcoming fixtures</div><table>${upc || `<tr><td>—</td></tr>`}</table></div>
+    </div>
   `;
 }
 

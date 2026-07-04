@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-07-04T16:58:53Z",
+  "generated_at": "2026-07-04T18:04:30Z",
   "items": [
+    {
+      "title": "How to follow British Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the British Grand Prix, which takes place from 3-5 July.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cy8dp72k9exo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-04T17:53:28Z"
+    },
+    {
+      "title": "England outclassed by seven-try South Africa",
+      "summary": "South Africa reassert their dominance over England with a commanding victory at Ellis Park in the opening round of games in the new Nations Championship.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cvglz11w29xo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-04T17:48:55Z"
+    },
     {
       "title": "Antonelli beats Leclerc & Hamilton to Silverstone pole",
       "summary": "Mercedes' Kimi Antonelli takes pole position for the British Grand Prix, beating the Ferraris and team-mate George Russell.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/cj3g73x2ggeo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-07-04T16:40:32Z"
+      "published": "2026-07-04T17:07:06Z"
     },
     {
       "title": "James seals important Wales win",
@@ -168,14 +184,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-03T17:25:07Z"
-    },
-    {
-      "title": "How to follow British Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the British Grand Prix, which takes place from 3-5 July.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cy8dp72k9exo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-03T17:22:02Z"
     },
     {
       "title": "Ireland out to spoil Schmidt's Australian farewell tour",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-06-30T12:17:23Z"
-    },
-    {
-      "title": "Will the Nations Championship prove to be a success?",
-      "summary": "Neil Treacy is joined by Bernard Jackman and Gareth Steenson as we preview the start of Ireland's Nations Championship campaign against Australia in Sydney.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0630/1581029-will-the-nations-championship-prove-to-be-a-success/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-06-30T10:36:15Z"
     }
   ]
 }

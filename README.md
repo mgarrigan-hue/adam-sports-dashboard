@@ -1,10 +1,24 @@
-# Adam's Sports Dashboard 🏁🏉
+# Adam's Sports Dashboard 🏁🏉⚽
 
-A personal sports dashboard for Adam — tracking Formula 1, international rugby,
-the Irish provinces (URC), and Leinster schools rugby. Items are sorted by
-recency across every sport so the most recent action is always at the top.
+A personal, install-as-an-app sports dashboard for Adam — tracking Formula 1,
+international & Irish rugby, the FIFA World Cup 2026, and the 2026 rugby Nations
+Championship. Everything is sorted by recency so the most recent action is always
+at the top, with Adam's teams highlighted throughout.
 
-**Live site:** https://mgarrigan-hue.github.io/adam-sports-dashboard/
+**Live site:** https://adam.garrigan.me
+(also https://mgarrigan-hue.github.io/adam-sports-dashboard/)
+
+## Features
+- ⚽ **World Cup 2026** — forward-looking view: current-stage hero (Brazil's next
+  match + countdown to the final), today's matches, a real knockout bracket
+  (Round of 16 → Final) with penalty results and TBD slots, group standings with
+  qualification-zone colours, and a live top-scorers table.
+- 🏉 **Rugby** — international, Irish provinces (URC), Leinster schools, Adam's
+  club (St Mary's College RFC), plus the 2026 Nations Championship.
+- 🏎️ **Formula 1** — race-weekend timeline, standings, recent races.
+- 📱 **Installable PWA** — add to Home Screen on iPhone/Android, offline-capable,
+  match reminders.
+- 🎨 Premium, responsive UI (dark/light) that works on phone and desktop.
 
 ## How it works
 - 100% static site (HTML / CSS / vanilla JS) hosted on GitHub Pages.
@@ -29,7 +43,8 @@ python scripts/fetch_f1.py
 python scripts/fetch_intl_rugby.py
 python scripts/fetch_provinces.py
 python scripts/fetch_schools.py
-node scripts/fetch_world_cup.mjs   # World Cup (real ESPN data, Node ≥18)
+node scripts/fetch_world_cup.mjs             # World Cup (real ESPN data, Node ≥18)
+node scripts/fetch_nations_championship.mjs  # Nations Championship (ESPN rugby)
 
 # 2. serve the site
 python -m http.server 8000
@@ -37,6 +52,7 @@ python -m http.server 8000
 ```
 
 ## Personalization
-Adam's favourites are highlighted automatically:
+Adam's teams are highlighted automatically:
 - 🏎️ F1: **Red Bull / VCARB / Isack Hadjar**
-- 🏉 Rugby: **Leinster**
+- 🏉 Rugby: **Leinster** (provinces) · **Ireland** (Nations Championship)
+- ⚽ World Cup: **Brazil**

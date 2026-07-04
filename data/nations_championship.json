@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T14:07:52Z",
+  "generated_at": "2026-07-04T15:39:55Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,120 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
       "competition": "Nations Championship",
       "venue": "Allianz Stadium, Sydney",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 24,
-      "away_score": 26
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 31,
+      "away_score": 33,
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Australia",
+          "player": "D. Pietsch",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Ireland",
+          "player": "C. Prendergast",
+          "type": "try"
+        },
+        {
+          "minute": "11'",
+          "team": "Ireland",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "14'",
+          "team": "Australia",
+          "player": "J. Campbell",
+          "type": "try"
+        },
+        {
+          "minute": "19'",
+          "team": "Ireland",
+          "player": "J. van der Flier",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "Australia",
+          "player": "J. Canham",
+          "type": "try"
+        },
+        {
+          "minute": "25'",
+          "team": "Australia",
+          "player": "C. Gordon",
+          "type": "conversion"
+        },
+        {
+          "minute": "27'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Australia",
+          "player": "C. Gordon",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "Ireland",
+          "player": "J. Gibson-Park",
+          "type": "try"
+        },
+        {
+          "minute": "42'",
+          "team": "Ireland",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "Ireland",
+          "player": "H. Keenan",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Ireland",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        },
+        {
+          "minute": "53'",
+          "team": "Australia",
+          "player": "T. McDermott",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "Australia",
+          "player": "C. Gordon",
+          "type": "conversion"
+        },
+        {
+          "minute": "76'",
+          "team": "Australia",
+          "player": "L. Shaw",
+          "type": "yellow card"
+        },
+        {
+          "minute": "77'",
+          "team": "Ireland",
+          "player": "T. Clarkson",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "Ireland",
+          "player": "S. Prendergast",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-04T08:40Z",

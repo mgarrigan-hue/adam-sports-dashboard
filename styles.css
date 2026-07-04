@@ -1881,6 +1881,10 @@ body.search-open { overflow: hidden; }
   max-width: 720px; margin: 0 auto;
 }
 @keyframes install-banner-up { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+/* The banner is toggled via the [hidden] attribute in JS, but display:grid
+   above overrides the UA [hidden] rule — so hidden must be re-asserted or the
+   empty banner renders as a stray box at the bottom of the screen. */
+.install-banner[hidden] { display: none !important; }
 .install-banner__icon { font-size: 26px; }
 .install-banner__title { font-weight: 700; font-size: 15px; line-height: 1.2; margin: 0 0 2px; }
 .install-banner__sub { color: var(--text-2); font-size: 12.5px; margin: 0; }

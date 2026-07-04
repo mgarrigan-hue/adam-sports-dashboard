@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-04T20:49:45Z",
+  "generated_at": "2026-07-04T21:53:15Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-04T19:10Z",
+      "home": "Argentina",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Mario Alberto Kempes, Cordoba",
+      "status": "STATUS_FIRST_HALF",
+      "status_state": "in",
+      "home_score": 7,
+      "away_score": 12
+    },
     {
       "date": "2026-07-04T15:40Z",
       "home": "South Africa",
@@ -601,17 +614,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-04T19:10Z",
-      "home": "Argentina",
-      "away": "Scotland",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
-      "competition": "Nations Championship",
-      "venue": "Estadio Mario Alberto Kempes, Cordoba",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-11T05:10Z",
       "home": "New Zealand",

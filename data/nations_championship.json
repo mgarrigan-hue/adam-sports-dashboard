@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T22:53:01Z",
+  "generated_at": "2026-07-04T23:56:55Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,169 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
       "competition": "Nations Championship",
       "venue": "Estadio Mario Alberto Kempes, Cordoba",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 24,
-      "away_score": 40
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 38,
+      "away_score": 47,
+      "half_time": "10-19",
+      "scoring_summary": [
+        {
+          "minute": "7'",
+          "team": "Argentina",
+          "player": "J. Oviedo",
+          "type": "try"
+        },
+        {
+          "minute": "8'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "Scotland",
+          "player": "S. Tuipulotu",
+          "type": "try"
+        },
+        {
+          "minute": "19'",
+          "team": "Scotland",
+          "player": "F. Burke",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "Scotland",
+          "player": "P. Schoeman",
+          "type": "try"
+        },
+        {
+          "minute": "34'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "36'",
+          "team": "Scotland",
+          "player": "R. Hutchinson",
+          "type": "try"
+        },
+        {
+          "minute": "38'",
+          "team": "Scotland",
+          "player": "T. Jordan",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "Argentina",
+          "player": "R. Isgro",
+          "type": "try"
+        },
+        {
+          "minute": "43'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "52'",
+          "team": "Scotland",
+          "player": "G. Brown",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Scotland",
+          "player": "T. Jordan",
+          "type": "conversion"
+        },
+        {
+          "minute": "56'",
+          "team": "Scotland",
+          "player": "S. Cummings",
+          "type": "try"
+        },
+        {
+          "minute": "57'",
+          "team": "Scotland",
+          "player": "T. Jordan",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "Scotland",
+          "player": "J. Dobie",
+          "type": "yellow card"
+        },
+        {
+          "minute": "66'",
+          "team": "Argentina",
+          "player": "T. Rapetti",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "Scotland",
+          "player": "G. Hiddleston",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "Argentina",
+          "player": "J. Moro",
+          "type": "yellow card"
+        },
+        {
+          "minute": "70'",
+          "team": "Scotland",
+          "player": "F. Burke",
+          "type": "conversion"
+        },
+        {
+          "minute": "74'",
+          "team": "Scotland",
+          "player": "K. Rowe",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "Scotland",
+          "player": "F. Burke",
+          "type": "conversion"
+        },
+        {
+          "minute": "77'",
+          "team": "Argentina",
+          "player": "L. Cinti",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "79'",
+          "team": "Argentina",
+          "player": "A. Moyano",
+          "type": "try"
+        },
+        {
+          "minute": "79'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-04T15:40Z",
@@ -203,7 +362,7 @@
           "type": "penalty goal"
         },
         {
-          "minute": "45'",
+          "minute": "44'",
           "team": "Wales",
           "player": "R. Carre",
           "type": "try"

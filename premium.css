@@ -365,5 +365,6 @@ tr[data-zone="drop"] td { background: var(--qual-drop-bg); }
 :root[data-theme="light"] .watch-chip,
 :root[data-theme="light"] .chip-tier,
 :root[data-theme="light"] .wc-group-tag,
+:root[data-theme="light"] .cat-badge,
 :root[data-theme="light"] .badge { color: #1f2937; }
 :root[data-theme="light"] .feed-tag { border-color: rgba(15, 23, 42, 0.16); }

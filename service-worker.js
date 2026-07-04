@@ -130,6 +130,7 @@ const DATA_URLS = [
   "data/intl_rugby.json", "data/provinces.json", "data/schools.json",
   "data/dublin_club.json", "data/news.json", "data/watch.json",
   "data/highlights.json", "data/world_cup.json", "data/rugby_tables.json",
+  "data/nations_championship.json",
 ];
 
 async function refreshDataCache() {

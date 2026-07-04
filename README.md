@@ -20,6 +20,7 @@ recency across every sport so the most recent action is always at the top.
 | Irish provinces (URC) | BBC Sport rugby union pages |
 | Leinster schools | leinsterrugby.ie + schoolsrugby.ie |
 | FIFA World Cup 2026 | ESPN hidden API (`soccer/fifa.world`) — live scores, knockout bracket, penalties |
+| Nations Championship 2026 | ESPN hidden API (`rugby/17567`) — results, fixtures, live scores |
 
 ## Local development
 ```bash

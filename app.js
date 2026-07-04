@@ -21,6 +21,7 @@ const DATA_FILES = {
   highlights: "data/highlights.json",
   worldCup: "data/world_cup.json",
   rugbyTables: "data/rugby_tables.json",
+  nations: "data/nations_championship.json",
 };
 
 let WATCH = {};
@@ -2186,11 +2187,13 @@ function bindMatchCardClicks() {
 
 
 // ---------- Rugby panels ----------
-function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = false } = {}) {
+function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = false, favTeams = [] } = {}) {
   const el = document.getElementById(elId);
+  if (!el) return;
   if (!d) { el.textContent = `No ${label} data yet.`; return; }
-  const isFav = (m) => isFavRugby(m.home) || isFavRugby(m.away) || (schoolsFav && (isFavSchool(m.home) || isFavSchool(m.away)));
-  const isFavTeamRow = (m) => isFavRugby(m.home) || isFavRugby(m.away);
+  const extraFav = (name) => !!name && favTeams.some(f => String(name).toLowerCase().includes(String(f).toLowerCase()));
+  const isFav = (m) => isFavRugby(m.home) || isFavRugby(m.away) || extraFav(m.home) || extraFav(m.away) || (schoolsFav && (isFavSchool(m.home) || isFavSchool(m.away)));
+  const isFavTeamRow = (m) => isFavRugby(m.home) || isFavRugby(m.away) || extraFav(m.home) || extraFav(m.away);
 
   const teamCell = (name, logo) => withLogos
     ? `<span class="team-cell">${logoImg(logo)}${escapeHtml(name)}</span>`
@@ -3300,6 +3303,7 @@ function rerenderAll() {
   renderWcAdamHero(DATA);
   renderF1(DATA.f1, DATA.f1Standings);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
+  renderRugbyMatches("nations-body", DATA.nations, "Nations Championship", { withLogos: true, favTeams: ["Ireland"] });
   renderRugbyMatches("prov-body", DATA.prov, "URC", { withLogos: true });
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
   renderRugbyTables(DATA);
@@ -3325,7 +3329,7 @@ function rerenderAll() {
   registerSW();
   bumpVisitCount();
 
-  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, worldCup, rugbyTables] = await Promise.all([
+  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, worldCup, rugbyTables, nations] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.f1Standings),
     loadJson(DATA_FILES.intl),
@@ -3337,12 +3341,13 @@ function rerenderAll() {
     loadJson(DATA_FILES.highlights),
     loadJson(DATA_FILES.worldCup),
     loadJson(DATA_FILES.rugbyTables),
+    loadJson(DATA_FILES.nations),
   ]);
-  DATA = { f1, f1Standings, intl, prov, schools, news, club, worldCup, rugbyTables };
+  DATA = { f1, f1Standings, intl, prov, schools, news, club, worldCup, rugbyTables, nations };
   WATCH = watch || {};
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
-  const stamps = [f1, intl, prov, schools, news, club, worldCup].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
+  const stamps = [f1, intl, prov, schools, news, club, worldCup, nations].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   LATEST_STAMP = stamps.length ? stamps.sort().pop() : null;
   renderTopbarFreshness();
   startFreshnessTicker();

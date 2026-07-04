@@ -1,0 +1,597 @@
+{
+  "generated_at": "2026-07-04T10:41:26Z",
+  "competition": "Nations Championship",
+  "league_id": "17567",
+  "results": [
+    {
+      "date": "2026-07-04T10:10Z",
+      "home": "Australia",
+      "away": "Ireland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "competition": "Nations Championship",
+      "venue": "Allianz Stadium, Sydney",
+      "status": "STATUS_FIRST_HALF",
+      "status_state": "in",
+      "home_score": 17,
+      "away_score": 12
+    },
+    {
+      "date": "2026-07-04T08:40Z",
+      "home": "Japan",
+      "away": "Italy",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "competition": "Nations Championship",
+      "venue": "Prince Chichibu Memorial Stadium, Tokyo",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 27,
+      "away_score": 10,
+      "half_time": "17-7",
+      "scoring_summary": [
+        {
+          "minute": "5'",
+          "team": "Italy",
+          "player": "J. Brex",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "Italy",
+          "player": "P. Garbisi",
+          "type": "conversion"
+        },
+        {
+          "minute": "11'",
+          "team": "Japan",
+          "player": "W. Dearns",
+          "type": "try"
+        },
+        {
+          "minute": "12'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "17'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "try"
+        },
+        {
+          "minute": "17'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "25'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "44'",
+          "team": "Italy",
+          "player": "P. Garbisi",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "47'",
+          "team": "Japan",
+          "player": "B. Gunter",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "penalty goal"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-04T07:10Z",
+      "home": "New Zealand",
+      "away": "France",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "competition": "Nations Championship",
+      "venue": "One NZ Stadium, Christchurch",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 34,
+      "away_score": 32,
+      "half_time": "17-13",
+      "scoring_summary": [
+        {
+          "minute": "2'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "yellow card"
+        },
+        {
+          "minute": "2'",
+          "team": "France",
+          "player": "D. Penaud",
+          "type": "try"
+        },
+        {
+          "minute": "3'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "8'",
+          "team": "New Zealand",
+          "player": "W. Jordan",
+          "type": "try"
+        },
+        {
+          "minute": "15'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "21'",
+          "team": "New Zealand",
+          "player": "P. Lakai",
+          "type": "try"
+        },
+        {
+          "minute": "21'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "30'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "40'",
+          "team": "New Zealand",
+          "player": "C. Roigard",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "47'",
+          "team": "France",
+          "player": "A. Hastoy",
+          "type": "try"
+        },
+        {
+          "minute": "48'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "50'",
+          "team": "New Zealand",
+          "player": "C. Roigard",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "59'",
+          "team": "France",
+          "player": "T. Attissogbe",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "71'",
+          "team": "New Zealand",
+          "player": "W. Jordan",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "France",
+          "player": "M. Jalibert",
+          "type": "try"
+        },
+        {
+          "minute": "78'",
+          "team": "France",
+          "player": "A. Hastoy",
+          "type": "conversion"
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-07-04T13:10Z",
+      "home": "Fiji",
+      "away": "Wales",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "competition": "Nations Championship",
+      "venue": "Cardiff City Stadium, Cardiff",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-04T15:40Z",
+      "home": "South Africa",
+      "away": "England",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "competition": "Nations Championship",
+      "venue": "Ellis Park, Johannesburg",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-04T19:10Z",
+      "home": "Argentina",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Mario Alberto Kempes, Cordoba",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T05:10Z",
+      "home": "New Zealand",
+      "away": "Italy",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "competition": "Nations Championship",
+      "venue": "Hnry Stadium, Wellington",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T07:40Z",
+      "home": "Australia",
+      "away": "France",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "competition": "Nations Championship",
+      "venue": "Suncorp Stadium, Brisbane",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T10:10Z",
+      "home": "Japan",
+      "away": "Ireland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "competition": "Nations Championship",
+      "venue": "McDonald Jones Stadium, Newcastle",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T13:10Z",
+      "home": "Fiji",
+      "away": "England",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "competition": "Nations Championship",
+      "venue": "Hill Dickinson Stadium",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T15:40Z",
+      "home": "South Africa",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Loftus Versfeld, Pretoria",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-11T19:10Z",
+      "home": "Argentina",
+      "away": "Wales",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Bicentenario, San Juan",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T07:10Z",
+      "home": "New Zealand",
+      "away": "Ireland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "competition": "Nations Championship",
+      "venue": "Eden Park, Auckland",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T08:40Z",
+      "home": "Japan",
+      "away": "France",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "competition": "Nations Championship",
+      "venue": "MUFG Stadium, Tokyo",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T10:10Z",
+      "home": "Australia",
+      "away": "Italy",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "competition": "Nations Championship",
+      "venue": "HBF Park, Perth",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T13:10Z",
+      "home": "Fiji",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T15:40Z",
+      "home": "South Africa",
+      "away": "Wales",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "competition": "Nations Championship",
+      "venue": "Hollywoodbets Kings Park, Durban",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-07-18T19:10Z",
+      "home": "Argentina",
+      "away": "England",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Único Madre de Ciudades",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-06T20:10Z",
+      "home": "Ireland",
+      "away": "Argentina",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "competition": "Nations Championship",
+      "venue": "Aviva Stadium, Dublin",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-07T11:40Z",
+      "home": "Italy",
+      "away": "South Africa",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "competition": "Nations Championship",
+      "venue": "Allianz Stadium",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-07T14:10Z",
+      "home": "Scotland",
+      "away": "New Zealand",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "competition": "Nations Championship",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-07T16:40Z",
+      "home": "Wales",
+      "away": "Japan",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "competition": "Nations Championship",
+      "venue": "Principality Stadium, Cardiff",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-07T20:10Z",
+      "home": "France",
+      "away": "Fiji",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "competition": "Nations Championship",
+      "venue": "Groupama Stadium, Lyon",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-08T15:10Z",
+      "home": "England",
+      "away": "Australia",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "competition": "Nations Championship",
+      "venue": "Allianz Stadium, London",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-13T20:10Z",
+      "home": "France",
+      "away": "South Africa",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "competition": "Nations Championship",
+      "venue": "Stade de France, Saint-Denis",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-14T11:40Z",
+      "home": "Italy",
+      "away": "Argentina",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "competition": "Nations Championship",
+      "venue": "Stadio Luigi Ferraris, Genova",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-14T14:10Z",
+      "home": "Wales",
+      "away": "New Zealand",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "competition": "Nations Championship",
+      "venue": "Principality Stadium, Cardiff",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-14T16:40Z",
+      "home": "England",
+      "away": "Japan",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "competition": "Nations Championship",
+      "venue": "Allianz Stadium, London",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-14T20:10Z",
+      "home": "Ireland",
+      "away": "Fiji",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "competition": "Nations Championship",
+      "venue": "Aviva Stadium, Dublin",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-15T15:10Z",
+      "home": "Scotland",
+      "away": "Australia",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "competition": "Nations Championship",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T14:10Z",
+      "home": "England",
+      "away": "New Zealand",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "competition": "Nations Championship",
+      "venue": "Allianz Stadium, London",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T14:10Z",
+      "home": "Scotland",
+      "away": "Japan",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "competition": "Nations Championship",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T16:40Z",
+      "home": "Ireland",
+      "away": "South Africa",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "competition": "Nations Championship",
+      "venue": "Aviva Stadium, Dublin",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T16:40Z",
+      "home": "Italy",
+      "away": "Fiji",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "competition": "Nations Championship",
+      "venue": "Bluenergy Stadium, Udine",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T20:10Z",
+      "home": "France",
+      "away": "Argentina",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "competition": "Nations Championship",
+      "venue": "Stade de France, Saint-Denis",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    },
+    {
+      "date": "2026-11-21T20:10Z",
+      "home": "Wales",
+      "away": "Australia",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "competition": "Nations Championship",
+      "venue": "Principality Stadium, Cardiff",
+      "status": "STATUS_SCHEDULED",
+      "status_state": "pre"
+    }
+  ]
+}

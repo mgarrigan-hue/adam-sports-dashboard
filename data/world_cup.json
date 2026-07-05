@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-05T21:33:23Z",
+  "generated_at": "2026-07-05T22:57:11Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3654,11 +3654,11 @@
         "flag": "🇳🇴"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3881,10 +3881,9 @@
       "date": "2026-07-11T21:00Z",
       "venue": "Hard Rock Stadium, Miami Gardens, Florida",
       "home": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Round of 16 3 Winner"
+        "name": "Norway",
+        "code": "NOR",
+        "flag": "🇳🇴"
       },
       "away": {
         "name": null,
@@ -4127,11 +4126,11 @@
               "flag": "🇳🇴"
             },
             "score": {
-              "home": 0,
-              "away": 0
+              "home": 1,
+              "away": 2
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           },
@@ -4288,10 +4287,9 @@
             "date": "2026-07-11T21:00Z",
             "venue": "Hard Rock Stadium, Miami Gardens, Florida",
             "home": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Round of 16 3 Winner"
+              "name": "Norway",
+              "code": "NOR",
+              "flag": "🇳🇴"
             },
             "away": {
               "name": null,
@@ -4439,6 +4437,12 @@
   },
   "top_scorers": [
     {
+      "name": "Erling Haaland",
+      "goals": 7,
+      "team": "Norway",
+      "flag": "🇳🇴"
+    },
+    {
       "name": "Lionel Messi",
       "goals": 7,
       "team": "Argentina",
@@ -4449,12 +4453,6 @@
       "goals": 6,
       "team": "France",
       "flag": "🇫🇷"
-    },
-    {
-      "name": "Erling Haaland",
-      "goals": 5,
-      "team": "Norway",
-      "flag": "🇳🇴"
     },
     {
       "name": "Harry Kane",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T23:56:45Z",
+  "generated_at": "2026-07-05T02:57:30Z",
   "results": [
     {
       "date": "2026-03-14T20:10Z",
@@ -679,99 +679,6 @@
           "team": "France",
           "player": "T. Ramos",
           "type": "conversion"
-        }
-      ]
-    },
-    {
-      "date": "2026-03-06T20:10Z",
-      "home": "Ireland",
-      "away": "Wales",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
-      "competition": "Six Nations",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 27,
-      "away_score": 17,
-      "half_time": "12-10",
-      "scoring_summary": [
-        {
-          "minute": "6'",
-          "team": "Ireland",
-          "player": "J. Stockdale",
-          "type": "try"
-        },
-        {
-          "minute": "7'",
-          "team": "Ireland",
-          "player": "J. Crowley",
-          "type": "conversion"
-        },
-        {
-          "minute": "17'",
-          "team": "Wales",
-          "player": "D. Edwards",
-          "type": "penalty goal"
-        },
-        {
-          "minute": "37'",
-          "team": "Ireland",
-          "player": "J. Crowley",
-          "type": "try"
-        },
-        {
-          "minute": "42'",
-          "team": "Wales",
-          "player": "R. Carre",
-          "type": "try"
-        },
-        {
-          "minute": "43'",
-          "team": "Wales",
-          "player": "D. Edwards",
-          "type": "conversion"
-        },
-        {
-          "minute": "44'",
-          "team": "Ireland",
-          "player": "J. Conan",
-          "type": "try"
-        },
-        {
-          "minute": "45'",
-          "team": "Ireland",
-          "player": "J. Crowley",
-          "type": "conversion"
-        },
-        {
-          "minute": "63'",
-          "team": "Wales",
-          "player": "J. Botham",
-          "type": "try"
-        },
-        {
-          "minute": "63'",
-          "team": "Wales",
-          "player": "D. Edwards",
-          "type": "conversion"
-        },
-        {
-          "minute": "68'",
-          "team": "Wales",
-          "player": "T. Williams",
-          "type": "yellow card"
-        },
-        {
-          "minute": "68'",
-          "team": "Ireland",
-          "player": "J. Osborne",
-          "type": "try"
-        },
-        {
-          "minute": "77'",
-          "team": "Ireland",
-          "player": "J. Crowley",
-          "type": "penalty goal"
         }
       ]
     }

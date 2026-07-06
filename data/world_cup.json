@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-05T22:57:11Z",
+  "generated_at": "2026-07-06T00:04:57Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3673,7 +3673,7 @@
       "espn_id": "760505",
       "stage": "round-of-16",
       "group": null,
-      "date": "2026-07-06T00:00Z",
+      "date": "2026-07-06T01:00Z",
       "venue": "Estadio Banorte, Mexico City",
       "home": {
         "name": "Mexico",
@@ -4136,7 +4136,7 @@
           },
           {
             "id": "wc-2026-e760505",
-            "date": "2026-07-06T00:00Z",
+            "date": "2026-07-06T01:00Z",
             "venue": "Estadio Banorte, Mexico City",
             "home": {
               "name": "Mexico",

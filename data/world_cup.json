@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-06T00:04:57Z",
+  "generated_at": "2026-07-06T04:49:24Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3685,9 +3685,12 @@
         "code": "ENG",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
-      "score": null,
-      "status": "scheduled",
-      "winner": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3886,10 +3889,9 @@
         "flag": "🇳🇴"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Round of 16 4 Winner"
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": null,
       "status": "scheduled",
@@ -4148,9 +4150,12 @@
               "code": "ENG",
               "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
-            "score": null,
-            "status": "scheduled",
-            "winner": null,
+            "score": {
+              "home": 2,
+              "away": 3
+            },
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           },
@@ -4292,10 +4297,9 @@
               "flag": "🇳🇴"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Round of 16 4 Winner"
+              "name": "England",
+              "code": "ENG",
+              "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "score": null,
             "status": "scheduled",
@@ -4467,6 +4471,18 @@
       "flag": "🇸🇳"
     },
     {
+      "name": "Jude Bellingham",
+      "goals": 4,
+      "team": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    },
+    {
+      "name": "Julián Quiñones",
+      "goals": 4,
+      "team": "Mexico",
+      "flag": "🇲🇽"
+    },
+    {
       "name": "Mikel Oyarzabal",
       "goals": 4,
       "team": "Spain",
@@ -4483,18 +4499,6 @@
       "goals": 4,
       "team": "Brazil",
       "flag": "🇧🇷"
-    },
-    {
-      "name": "Brian Brobbey",
-      "goals": 3,
-      "team": "Netherlands",
-      "flag": "🇳🇱"
-    },
-    {
-      "name": "Cody Gakpo",
-      "goals": 3,
-      "team": "Netherlands",
-      "flag": "🇳🇱"
     }
   ]
 }

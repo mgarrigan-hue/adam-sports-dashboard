@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-07-06T16:15:38Z",
+  "generated_at": "2026-07-06T18:25:08Z",
   "items": [
+    {
+      "title": "Formula 1 and my autistic son - navigating noise, crowds and chaos",
+      "summary": "My autistic son loves Formula 1 - and Silverstone have made it viable for him to go and watch it live.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4g7glkj614o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-06T16:28:31Z"
+    },
+    {
+      "title": "The wrong man (of the match) - De Allende picks up Willemse's award",
+      "summary": "Damian Willemse missed out on the individual award after beating England after a mix-up meant it was presented to team-mate Damian de Allende instead.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/czxqqqrd6pyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-06T16:17:04Z"
+    },
     {
       "title": "Roebuck in for Furbank as England face back-three juggle",
       "summary": "Sale wing Tom Roebuck has been drafted into the England try to balance back-three options amid a raft of injuries.",
@@ -434,14 +450,6 @@
       "published": "2026-07-03T09:21:05Z"
     },
     {
-      "title": "Ireland's Jones re-signs with Gloucester-Hartpury",
-      "summary": "Ireland hooker Neve Jones signs a contract extension with Gloucester-Hartpury to stay with the club into the 2026-27 season.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c75ykg0w7g6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-07-03T08:51:16Z"
-    },
-    {
       "title": "Sheehan confident Ireland can kick on from Six Nations",
       "summary": "Dan Sheehan will lead Ireland out for the third time tomorrow, as Andy Farrell's side begin their Nations Championship campaign against Australia in Sydney.",
       "url": "https://www.rte.ie/sport/rugby/2026/0703/1581542-sheehan-confident-ireland-can-kick-on-from-six-nations/",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-03T03:23:17Z"
-    },
-    {
-      "title": "Ireland U20s semi-final hopes scotched by ruthless Pumas",
-      "summary": "Ireland's hopes of progression in the Junior World Championship ended after they shipped a comfortable defeat to a thrilling Argentina side in Tbilisi.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0702/1581515-ireland-u20s-semi-final-hopes-scotched-by-ruthless-pumas/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-02T22:33:35Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-07T01:14:50Z",
+  "generated_at": "2026-07-07T05:31:23Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3751,10 +3751,10 @@
       },
       "score": {
         "home": 1,
-        "away": 2
+        "away": 4
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3864,10 +3864,9 @@
         "flag": "🇪🇸"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Round of 16 6 Winner"
+        "name": "Belgium",
+        "code": "BEL",
+        "flag": "🇧🇪"
       },
       "score": null,
       "status": "scheduled",
@@ -4203,10 +4202,10 @@
             },
             "score": {
               "home": 1,
-              "away": 2
+              "away": 4
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           },
@@ -4286,10 +4285,9 @@
               "flag": "🇪🇸"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Round of 16 6 Winner"
+              "name": "Belgium",
+              "code": "BEL",
+              "flag": "🇧🇪"
             },
             "score": null,
             "status": "scheduled",

@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-07T22:35:48Z",
+  "generated_at": "2026-07-07T23:53:39Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -10,7 +10,7 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "round-of-16",
+    "current_stage": "quarter-final",
     "champion": null
   },
   "groups": [
@@ -3817,8 +3817,8 @@
         "home": 0,
         "away": 0
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "home",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3826,7 +3826,9 @@
         "ie": [
           "RTÉ / Virgin"
         ]
-      }
+      },
+      "pens": "4-3",
+      "pens_text": "Switzerland advance 4-3 on penalties"
     },
     {
       "id": "wc-2026-e760510",
@@ -3928,10 +3930,9 @@
         "flag": "🇦🇷"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Round of 16 8 Winner"
+        "name": "Switzerland",
+        "code": "SUI",
+        "flag": "🇨🇭"
       },
       "score": null,
       "status": "scheduled",
@@ -4255,9 +4256,9 @@
               "home": 0,
               "away": 0
             },
-            "status": "live",
-            "winner": null,
-            "pens": null,
+            "status": "complete",
+            "winner": "home",
+            "pens": "4-3",
             "aet": false
           }
         ]
@@ -4336,10 +4337,9 @@
               "flag": "🇦🇷"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Round of 16 8 Winner"
+              "name": "Switzerland",
+              "code": "SUI",
+              "flag": "🇨🇭"
             },
             "score": null,
             "status": "scheduled",

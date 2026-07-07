@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-07T15:23:32Z",
+  "generated_at": "2026-07-07T17:31:33Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3781,8 +3781,11 @@
         "code": "EGY",
         "flag": "🇪🇬"
       },
-      "score": null,
-      "status": "scheduled",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "status": "live",
       "winner": null,
       "broadcast": {
         "uk": [
@@ -4223,8 +4226,11 @@
               "code": "EGY",
               "flag": "🇪🇬"
             },
-            "score": null,
-            "status": "scheduled",
+            "score": {
+              "home": 0,
+              "away": 1
+            },
+            "status": "live",
             "winner": null,
             "pens": null,
             "aet": false

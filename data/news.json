@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T05:34:50Z",
+  "generated_at": "2026-07-08T08:16:35Z",
   "items": [
     {
       "title": "Hooper extends Exeter contract before Australia return",
@@ -40,6 +40,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-07T15:04:21Z"
+    },
+    {
+      "title": "O'Brien sees 'opportunity' after Leinster 'frustration'",
+      "summary": "Jimmy O'Brien says he was \"delighted\" to get back into a major Test squad with Ireland last week, as he targets another start in Saturday's Nations Championship meeting with Japan.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0707/1582202-obrien-sees-opportunity-after-leinster-frustration/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-07-07T12:18:05Z"
     },
     {
       "title": "Cunningham-South replaces injured England wing Murley",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-03T16:33:07Z"
-    },
-    {
-      "title": "Hamilton fastest in Silverstone practice session",
-      "summary": "Ferrari's Lewis Hamilton leads the way in practice at the British Grand Prix before sprint qualifying later on Friday.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c75yk24rrd7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-03T12:42:35Z"
     }
   ]
 }

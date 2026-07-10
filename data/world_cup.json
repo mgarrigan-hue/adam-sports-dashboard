@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-10T20:21:23Z",
+  "generated_at": "2026-07-10T21:33:24Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3880,11 +3880,11 @@
         "flag": "🇧🇪"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "home",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3965,10 +3965,9 @@
         "flag": "🇫🇷"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Quarterfinal 2 Winner"
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "🇪🇸"
       },
       "score": null,
       "status": "scheduled",
@@ -4310,11 +4309,11 @@
               "flag": "🇧🇪"
             },
             "score": {
-              "home": 1,
+              "home": 2,
               "away": 1
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "home",
             "pens": null,
             "aet": false
           },
@@ -4374,10 +4373,9 @@
               "flag": "🇫🇷"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Quarterfinal 2 Winner"
+              "name": "Spain",
+              "code": "ESP",
+              "flag": "🇪🇸"
             },
             "score": null,
             "status": "scheduled",

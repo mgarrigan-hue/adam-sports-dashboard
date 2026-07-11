@@ -1,8 +1,138 @@
 {
-  "generated_at": "2026-07-11T05:25:11Z",
+  "generated_at": "2026-07-11T07:23:23Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-11T05:10Z",
+      "home": "New Zealand",
+      "away": "Italy",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "competition": "Nations Championship",
+      "venue": "Hnry Stadium, Wellington",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 47,
+      "away_score": 17,
+      "half_time": "14-10",
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "Italy",
+          "player": "T. Menoncello",
+          "type": "try"
+        },
+        {
+          "minute": "4'",
+          "team": "Italy",
+          "player": "T. Allan",
+          "type": "conversion"
+        },
+        {
+          "minute": "8'",
+          "team": "New Zealand",
+          "player": "S. Darry",
+          "type": "try"
+        },
+        {
+          "minute": "9'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "Italy",
+          "player": "T. Allan",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "30'",
+          "team": "New Zealand",
+          "player": "W. Jordan",
+          "type": "try"
+        },
+        {
+          "minute": "31'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "42'",
+          "team": "New Zealand",
+          "player": "C. Roigard",
+          "type": "try"
+        },
+        {
+          "minute": "43'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "48'",
+          "team": "New Zealand",
+          "player": "E. de Groot",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Italy",
+          "player": "N. Cannone",
+          "type": "red card"
+        },
+        {
+          "minute": "51'",
+          "team": "New Zealand",
+          "player": "W. Jordan",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "54'",
+          "team": "New Zealand",
+          "player": "W. Jordan",
+          "type": "try"
+        },
+        {
+          "minute": "55'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "Italy",
+          "player": "L. Marin",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "Italy",
+          "player": "P. Garbisi",
+          "type": "conversion"
+        },
+        {
+          "minute": "81'",
+          "team": "New Zealand",
+          "player": "T. Vaa'i",
+          "type": "try"
+        },
+        {
+          "minute": "82'",
+          "team": "New Zealand",
+          "player": "R. Love",
+          "type": "conversion"
+        }
+      ]
+    },
     {
       "date": "2026-07-04T19:10Z",
       "home": "Argentina",
@@ -769,17 +899,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-11T05:10Z",
-      "home": "New Zealand",
-      "away": "Italy",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
-      "competition": "Nations Championship",
-      "venue": "Hnry Stadium, Wellington",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-11T07:40Z",
       "home": "Australia",

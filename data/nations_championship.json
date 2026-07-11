@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-11T10:40:11Z",
+  "generated_at": "2026-07-11T11:47:51Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-11T10:10Z",
+      "home": "Japan",
+      "away": "Ireland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "competition": "Nations Championship",
+      "venue": "McDonald Jones Stadium, Newcastle",
+      "status": "STATUS_FIRST_HALF",
+      "status_state": "in",
+      "home_score": 10,
+      "away_score": 12
+    },
     {
       "date": "2026-07-11T07:40Z",
       "home": "Australia",
@@ -11,10 +24,133 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
       "competition": "Nations Championship",
       "venue": "Suncorp Stadium, Brisbane",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 21,
-      "away_score": 34
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 26,
+      "away_score": 42,
+      "half_time": "21-12",
+      "scoring_summary": [
+        {
+          "minute": "3'",
+          "team": "France",
+          "player": "E. Meafou",
+          "type": "try"
+        },
+        {
+          "minute": "4'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "10'",
+          "team": "Australia",
+          "player": "B. Paenga-Amosa",
+          "type": "try"
+        },
+        {
+          "minute": "11'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "France",
+          "player": "A. Grandidier-Nkanang",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "France",
+          "player": "E. Meafou",
+          "type": "yellow card"
+        },
+        {
+          "minute": "27'",
+          "team": "Australia",
+          "player": "F. McReight",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "34'",
+          "team": "Australia",
+          "player": "F. McReight",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "46'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "50'",
+          "team": "Australia",
+          "player": "T. Wright",
+          "type": "yellow card"
+        },
+        {
+          "minute": "50'",
+          "team": "France",
+          "player": "A. Grandidier-Nkanang",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "France",
+          "player": "R. Ntamack",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "57'",
+          "team": "France",
+          "player": "F. Verhaeghe",
+          "type": "try"
+        },
+        {
+          "minute": "58'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "63'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "73'",
+          "team": "France",
+          "player": "T. Attissogbe",
+          "type": "try"
+        },
+        {
+          "minute": "77'",
+          "team": "Australia",
+          "player": "J. Williams",
+          "type": "try"
+        }
+      ]
     },
     {
       "date": "2026-07-11T05:10Z",
@@ -912,17 +1048,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-11T10:10Z",
-      "home": "Japan",
-      "away": "Ireland",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/23.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
-      "competition": "Nations Championship",
-      "venue": "McDonald Jones Stadium, Newcastle",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-11T13:10Z",
       "home": "Fiji",

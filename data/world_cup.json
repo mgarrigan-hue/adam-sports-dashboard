@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-11T21:13:06Z",
+  "generated_at": "2026-07-11T22:12:28Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3912,8 +3912,8 @@
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "status": "live",
       "winner": null,
@@ -4335,8 +4335,8 @@
               "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "score": {
-              "home": 0,
-              "away": 0
+              "home": 1,
+              "away": 1
             },
             "status": "live",
             "winner": null,
@@ -4491,6 +4491,12 @@
       "flag": "🇫🇷"
     },
     {
+      "name": "Jude Bellingham",
+      "goals": 5,
+      "team": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    },
+    {
       "name": "Ousmane Dembélé",
       "goals": 5,
       "team": "France",
@@ -4507,12 +4513,6 @@
       "goals": 4,
       "team": "Senegal",
       "flag": "🇸🇳"
-    },
-    {
-      "name": "Jude Bellingham",
-      "goals": 4,
-      "team": "England",
-      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     {
       "name": "Julián Quiñones",

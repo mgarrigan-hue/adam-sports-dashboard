@@ -1,21 +1,8 @@
 {
-  "generated_at": "2026-07-11T21:13:06Z",
+  "generated_at": "2026-07-11T22:12:29Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
-    {
-      "date": "2026-07-11T19:10Z",
-      "home": "Argentina",
-      "away": "Wales",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
-      "competition": "Nations Championship",
-      "venue": "Estadio Bicentenario, San Juan",
-      "status": "STATUS_HALFTIME",
-      "status_state": "in",
-      "home_score": 28,
-      "away_score": 14
-    },
     {
       "date": "2026-07-11T15:40Z",
       "home": "South Africa",
@@ -417,7 +404,7 @@
           "type": "penalty goal"
         },
         {
-          "minute": "77'",
+          "minute": "78'",
           "team": "Japan",
           "player": "H. Era",
           "type": "yellow card"

@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-11T15:49:50Z",
+  "generated_at": "2026-07-11T16:50:34Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-11T15:40Z",
+      "home": "South Africa",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Loftus Versfeld, Pretoria",
+      "status": "STATUS_SECOND_HALF",
+      "status_state": "in",
+      "home_score": 14,
+      "away_score": 14
+    },
     {
       "date": "2026-07-11T13:10Z",
       "home": "Fiji",
@@ -11,10 +24,157 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
       "competition": "Nations Championship",
       "venue": "Hill Dickinson Stadium",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 3,
-      "away_score": 35
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 8,
+      "away_score": 73,
+      "half_time": "3-35",
+      "scoring_summary": [
+        {
+          "minute": "6'",
+          "team": "England",
+          "player": "M. Smith",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "13'",
+          "team": "Fiji",
+          "player": "C. Muntz",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "15'",
+          "team": "England",
+          "player": "J. George",
+          "type": "try"
+        },
+        {
+          "minute": "16'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "27'",
+          "team": "Fiji",
+          "player": "L. Botia",
+          "type": "yellow card"
+        },
+        {
+          "minute": "28'",
+          "team": "England",
+          "player": "G. Pepper",
+          "type": "try"
+        },
+        {
+          "minute": "29'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "England",
+          "player": "B. Janse van Rensburg",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "38'",
+          "team": "England",
+          "player": "S. Atkinson",
+          "type": "try"
+        },
+        {
+          "minute": "39'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "43'",
+          "team": "Fiji",
+          "player": "S. Kuruvoli",
+          "type": "red card"
+        },
+        {
+          "minute": "48'",
+          "team": "Fiji",
+          "player": "T. Ikanivere",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "England",
+          "player": "I. Feyi-Waboso",
+          "type": "try"
+        },
+        {
+          "minute": "54'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "55'",
+          "team": "England",
+          "player": "H. Pollock",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "England",
+          "player": "H. Slade",
+          "type": "try"
+        },
+        {
+          "minute": "61'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "65'",
+          "team": "England",
+          "player": "N. Caluori",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "England",
+          "player": "H. Pollock",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "80'",
+          "team": "England",
+          "player": "H. Pollock",
+          "type": "try"
+        },
+        {
+          "minute": "81'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-11T10:10Z",
@@ -1166,17 +1326,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-11T15:40Z",
-      "home": "South Africa",
-      "away": "Scotland",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
-      "competition": "Nations Championship",
-      "venue": "Loftus Versfeld, Pretoria",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-11T19:10Z",
       "home": "Argentina",

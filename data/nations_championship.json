@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T13:05:45Z",
+  "generated_at": "2026-07-11T14:34:44Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,115 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
       "competition": "Nations Championship",
       "venue": "McDonald Jones Stadium, Newcastle",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
       "home_score": 20,
-      "away_score": 26
+      "away_score": 36,
+      "half_time": "13-19",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Japan",
+          "player": "T. Main",
+          "type": "try"
+        },
+        {
+          "minute": "5'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "9'",
+          "team": "Ireland",
+          "player": "N. Timoney",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Ireland",
+          "player": "C. Frawley",
+          "type": "conversion"
+        },
+        {
+          "minute": "18'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "21'",
+          "team": "Ireland",
+          "player": "T. O'Toole",
+          "type": "try"
+        },
+        {
+          "minute": "28'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "35'",
+          "team": "Ireland",
+          "player": "R. Henshaw",
+          "type": "try"
+        },
+        {
+          "minute": "35'",
+          "team": "Ireland",
+          "player": "C. Frawley",
+          "type": "conversion"
+        },
+        {
+          "minute": "51'",
+          "team": "Ireland",
+          "player": "S. Jansen",
+          "type": "try"
+        },
+        {
+          "minute": "51'",
+          "team": "Ireland",
+          "player": "C. Frawley",
+          "type": "conversion"
+        },
+        {
+          "minute": "59'",
+          "team": "Japan",
+          "player": "H. Era",
+          "type": "try"
+        },
+        {
+          "minute": "60'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "71'",
+          "team": "Ireland",
+          "player": "H. Byrne",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "78'",
+          "team": "Japan",
+          "player": "H. Era",
+          "type": "yellow card"
+        },
+        {
+          "minute": "80'",
+          "team": "Ireland",
+          "player": "T. Stewart",
+          "type": "try"
+        },
+        {
+          "minute": "81'",
+          "team": "Ireland",
+          "player": "H. Byrne",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-11T07:40Z",

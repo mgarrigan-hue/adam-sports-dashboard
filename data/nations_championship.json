@@ -1,8 +1,120 @@
 {
-  "generated_at": "2026-07-11T22:12:29Z",
+  "generated_at": "2026-07-11T23:23:52Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-11T19:10Z",
+      "home": "Argentina",
+      "away": "Wales",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Bicentenario, San Juan",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 35,
+      "away_score": 21,
+      "half_time": "28-14",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Wales",
+          "player": "D. Lake",
+          "type": "try"
+        },
+        {
+          "minute": "5'",
+          "team": "Wales",
+          "player": "S. Costelow",
+          "type": "conversion"
+        },
+        {
+          "minute": "6'",
+          "team": "Argentina",
+          "player": "J. Oviedo",
+          "type": "try"
+        },
+        {
+          "minute": "7'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "15'",
+          "team": "Argentina",
+          "player": "J. Piccardo",
+          "type": "try"
+        },
+        {
+          "minute": "16'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "24'",
+          "team": "Wales",
+          "player": "R. Carre",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "Wales",
+          "player": "S. Costelow",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Argentina",
+          "player": "M. Kremer",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "39'",
+          "team": "Argentina",
+          "player": "S. Carreras",
+          "type": "try"
+        },
+        {
+          "minute": "40'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "48'",
+          "team": "Argentina",
+          "player": "J. Oviedo",
+          "type": "try"
+        },
+        {
+          "minute": "49'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "67'",
+          "team": "Wales",
+          "player": "B. Warren",
+          "type": "try"
+        },
+        {
+          "minute": "68'",
+          "team": "Wales",
+          "player": "S. Costelow",
+          "type": "conversion"
+        }
+      ]
+    },
     {
       "date": "2026-07-11T15:40Z",
       "home": "South Africa",
@@ -404,7 +516,7 @@
           "type": "penalty goal"
         },
         {
-          "minute": "78'",
+          "minute": "77'",
           "team": "Japan",
           "player": "H. Era",
           "type": "yellow card"

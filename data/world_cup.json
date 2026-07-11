@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-11T22:12:28Z",
+  "generated_at": "2026-07-11T23:23:52Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3913,7 +3913,7 @@
       },
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "status": "live",
       "winner": null,
@@ -4336,7 +4336,7 @@
             },
             "score": {
               "home": 1,
-              "away": 1
+              "away": 2
             },
             "status": "live",
             "winner": null,
@@ -4492,7 +4492,7 @@
     },
     {
       "name": "Jude Bellingham",
-      "goals": 5,
+      "goals": 6,
       "team": "England",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },

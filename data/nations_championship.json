@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T11:54:39Z",
+  "generated_at": "2026-07-12T13:06:45Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -681,7 +681,6 @@
       "status_state": "post",
       "home_score": 47,
       "away_score": 17,
-      "half_time": "14-10",
       "scoring_summary": [
         {
           "minute": "3'",

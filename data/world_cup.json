@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-12T01:02:17Z",
+  "generated_at": "2026-07-12T04:48:48Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -10,7 +10,7 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "quarter-final",
+    "current_stage": "semi-final",
     "champion": null
   },
   "groups": [
@@ -3945,11 +3945,11 @@
         "flag": "🇨🇭"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 3,
+        "away": 1
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "home",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3957,7 +3957,8 @@
         "ie": [
           "RTÉ / Virgin"
         ]
-      }
+      },
+      "aet": true
     },
     {
       "id": "wc-2026-e760514",
@@ -4001,10 +4002,9 @@
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Quarterfinal 4 Winner"
+        "name": "Argentina",
+        "code": "ARG",
+        "flag": "🇦🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -4361,13 +4361,13 @@
               "flag": "🇨🇭"
             },
             "score": {
-              "home": 0,
-              "away": 0
+              "home": 3,
+              "away": 1
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "home",
             "pens": null,
-            "aet": false
+            "aet": true
           }
         ]
       },
@@ -4405,10 +4405,9 @@
               "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Quarterfinal 4 Winner"
+              "name": "Argentina",
+              "code": "ARG",
+              "flag": "🇦🇷"
             },
             "score": null,
             "status": "scheduled",

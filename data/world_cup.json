@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-11T23:23:52Z",
+  "generated_at": "2026-07-12T01:02:17Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -3915,8 +3915,8 @@
         "home": 1,
         "away": 2
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -3924,7 +3924,8 @@
         "ie": [
           "RTÉ / Virgin"
         ]
-      }
+      },
+      "aet": true
     },
     {
       "id": "wc-2026-e760513",
@@ -3943,8 +3944,11 @@
         "code": "SUI",
         "flag": "🇨🇭"
       },
-      "score": null,
-      "status": "scheduled",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "status": "live",
       "winner": null,
       "broadcast": {
         "uk": [
@@ -3992,10 +3996,9 @@
       "date": "2026-07-15T19:00Z",
       "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
       "home": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Quarterfinal 3 Winner"
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "away": {
         "name": null,
@@ -4338,10 +4341,10 @@
               "home": 1,
               "away": 2
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
-            "aet": false
+            "aet": true
           },
           {
             "id": "wc-2026-e760513",
@@ -4357,8 +4360,11 @@
               "code": "SUI",
               "flag": "🇨🇭"
             },
-            "score": null,
-            "status": "scheduled",
+            "score": {
+              "home": 0,
+              "away": 0
+            },
+            "status": "live",
             "winner": null,
             "pens": null,
             "aet": false
@@ -4394,10 +4400,9 @@
             "date": "2026-07-15T19:00Z",
             "venue": "Mercedes-Benz Stadium, Atlanta, Georgia",
             "home": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Quarterfinal 3 Winner"
+              "name": "England",
+              "code": "ENG",
+              "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "away": {
               "name": null,

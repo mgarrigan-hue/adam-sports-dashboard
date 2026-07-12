@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T23:23:42Z",
+  "generated_at": "2026-07-12T01:02:10Z",
   "results": [
     {
       "date": "2026-06-19T18:30Z",
@@ -3169,92 +3169,6 @@
           "minute": "76'",
           "team": "Ulster",
           "player": "J. Murphy",
-          "type": "conversion"
-        }
-      ]
-    },
-    {
-      "date": "2026-03-13T19:45Z",
-      "home": "Connacht",
-      "away": "Scarlets",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25966.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 31,
-      "away_score": 14,
-      "scoring_summary": [
-        {
-          "minute": "16'",
-          "team": "Connacht",
-          "player": "S. Jansen",
-          "type": "try"
-        },
-        {
-          "minute": "17'",
-          "team": "Connacht",
-          "player": "S. Naughton",
-          "type": "conversion"
-        },
-        {
-          "minute": "37'",
-          "team": "Connacht",
-          "player": "S. Jansen",
-          "type": "try"
-        },
-        {
-          "minute": "46'",
-          "team": "Connacht",
-          "player": "J. Aungier",
-          "type": "try"
-        },
-        {
-          "minute": "47'",
-          "team": "Connacht",
-          "player": "S. Naughton",
-          "type": "conversion"
-        },
-        {
-          "minute": "49'",
-          "team": "Scarlets",
-          "player": "J. Roberts",
-          "type": "try"
-        },
-        {
-          "minute": "50'",
-          "team": "Scarlets",
-          "player": "C. Leggatt-Jones",
-          "type": "conversion"
-        },
-        {
-          "minute": "53'",
-          "team": "Scarlets",
-          "player": "I. Jones",
-          "type": "try"
-        },
-        {
-          "minute": "54'",
-          "team": "Scarlets",
-          "player": "C. Leggatt-Jones",
-          "type": "conversion"
-        },
-        {
-          "minute": "57'",
-          "team": "Connacht",
-          "player": "F. Barrett",
-          "type": "try"
-        },
-        {
-          "minute": "69'",
-          "team": "Connacht",
-          "player": "E. de Buitlear",
-          "type": "try"
-        },
-        {
-          "minute": "70'",
-          "team": "Connacht",
-          "player": "S. Naughton",
           "type": "conversion"
         }
       ]

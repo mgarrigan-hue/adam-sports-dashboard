@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-07-13T04:55:59Z",
+  "generated_at": "2026-07-13T08:13:36Z",
   "items": [
+    {
+      "title": "How to follow Belgian Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Belgian Grand Prix at Spa-Francorchamps, from 17-19 July.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cr47gkqerdpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-13T06:34:49Z"
+    },
+    {
+      "title": "The hardest test - Wales need reaction in South Africa",
+      "summary": "Josh Adams says Wales face the toughest test of their progress under Steve Tandy when facing South Africa in the Nations Championship.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c04ywzp116wo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-13T05:14:42Z"
+    },
     {
       "title": "Wales took step back against Pumas - prop Carre",
       "summary": "Try-scoring prop Rhys Carre feels Wales took a step back with their performance in defeat against Argentina in the Nations Championship.",
@@ -24,6 +40,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-12T14:03:26Z"
+    },
+    {
+      "title": "Illo praises Lancaster influence after 'dream' debut",
+      "summary": "Sam Illo says he always believed he would be good enough to play for Ireland, even if he kept that dream quiet in the early stages of his career.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0712/1582953-illo-praises-lancaster-influence-after-dream-debut/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-07-12T07:20:08Z"
     },
     {
       "title": "Farrell: 'Performance of our lives' needed in Auckland",
@@ -282,6 +306,14 @@
       "published": "2026-07-10T10:04:58Z"
     },
     {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry and Becky are at Goodwood and chat to Oscar Piastri and Alisha Palmowski",
+      "url": "https://www.bbc.co.uk/sounds/play/p0ny007v?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-10T07:33:00Z"
+    },
+    {
       "title": "Beard aims to repeat Wales success in Argentina",
       "summary": "Wales lock Adam Beard is a man who has been to Argentina before and won as Steve Tandy's side aim to tame the Pumas.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cp9l3zy7r1xo?at_medium=RSS&at_campaign=rss",
@@ -410,14 +442,6 @@
       "published": "2026-07-08T21:46:20Z"
     },
     {
-      "title": "Rugby Union Weekly",
-      "summary": "Tom, Chris and Gareth are back to dig into the big talking points from the weekend",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nxmqvm?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-07-08T17:06:00Z"
-    },
-    {
       "title": "Exeter sign Worcester Warriors lock Nkwocha",
       "summary": "Exeter sign Worcester Warriors lock Obinna Nkwocha for the 2026-27 Prem season.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cgl3jj00w8no?at_medium=RSS&at_campaign=rss",
@@ -456,30 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-07T12:18:05Z"
-    },
-    {
-      "title": "O'Shea stars as Ireland U20s finish pool stages on a high",
-      "summary": "Munster out-half Charlie O'Shea and Connacht centre Sean Walsh led the way with a hat trick of tries as the Ireland Under-20s trashed USA by 73-22 in the final Pool C match of the 2026 Junior World Ch…",
-      "url": "https://www.rte.ie/sport/rugby/2026/0707/1582151-oshea-stars-as-ireland-u20s-finish-pool-stages-on-a-high/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-07T11:17:23Z"
-    },
-    {
-      "title": "Connacht's rookie props backed to deliver against Japan",
-      "summary": "Ireland scrum coach John Fogarty has backed uncapped Connacht props Billy Bohan and Sam Illo to deliver if they are called upon for debuts in Saturday's Nations Championship meeting with Japan.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0707/1582179-connachts-rookie-props-backed-to-deliver-against-japan/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-07T10:45:53Z"
-    },
-    {
-      "title": "Safety car finish and Verstappen's future - F1 Q&A",
-      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions after the British Grand Prix at Silverstone.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c30y2r72dg6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-07T06:57:30Z"
     }
   ]
 }

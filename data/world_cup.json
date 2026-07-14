@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-14T21:29:10Z",
+  "generated_at": "2026-07-14T22:31:24Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -4029,10 +4029,9 @@
       "date": "2026-07-18T21:00Z",
       "venue": "Hard Rock Stadium, Miami Gardens, Florida",
       "home": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Semifinal 1 Loser"
+        "name": "France",
+        "code": "FRA",
+        "flag": "🇫🇷"
       },
       "away": {
         "name": null,
@@ -4060,10 +4059,9 @@
       "date": "2026-07-19T19:00Z",
       "venue": "MetLife Stadium, East Rutherford, New Jersey",
       "home": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Semifinal 1 Winner"
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "🇪🇸"
       },
       "away": {
         "name": null,
@@ -4432,10 +4430,9 @@
             "date": "2026-07-18T21:00Z",
             "venue": "Hard Rock Stadium, Miami Gardens, Florida",
             "home": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Semifinal 1 Loser"
+              "name": "France",
+              "code": "FRA",
+              "flag": "🇫🇷"
             },
             "away": {
               "name": null,
@@ -4460,10 +4457,9 @@
             "date": "2026-07-19T19:00Z",
             "venue": "MetLife Stadium, East Rutherford, New Jersey",
             "home": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Semifinal 1 Winner"
+              "name": "Spain",
+              "code": "ESP",
+              "flag": "🇪🇸"
             },
             "away": {
               "name": null,

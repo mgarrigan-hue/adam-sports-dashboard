@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-15T19:02:32Z",
+  "generated_at": "2026-07-15T20:30:54Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -4010,7 +4010,7 @@
         "flag": "🇦🇷"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "status": "live",
@@ -4417,7 +4417,7 @@
               "flag": "🇦🇷"
             },
             "score": {
-              "home": 0,
+              "home": 1,
               "away": 0
             },
             "status": "live",

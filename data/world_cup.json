@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-15T20:30:54Z",
+  "generated_at": "2026-07-15T21:53:38Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -10,7 +10,7 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "semi-final",
+    "current_stage": "third-place",
     "champion": null
   },
   "groups": [
@@ -4011,10 +4011,10 @@
       },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -4037,10 +4037,9 @@
         "flag": "🇫🇷"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Semifinal 2 Loser"
+        "name": "England",
+        "code": "ENG",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": null,
       "status": "scheduled",
@@ -4067,10 +4066,9 @@
         "flag": "🇪🇸"
       },
       "away": {
-        "name": null,
-        "code": null,
-        "flag": null,
-        "placeholder": "Semifinal 2 Winner"
+        "name": "Argentina",
+        "code": "ARG",
+        "flag": "🇦🇷"
       },
       "score": null,
       "status": "scheduled",
@@ -4418,10 +4416,10 @@
             },
             "score": {
               "home": 1,
-              "away": 0
+              "away": 2
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           }
@@ -4441,10 +4439,9 @@
               "flag": "🇫🇷"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Semifinal 2 Loser"
+              "name": "England",
+              "code": "ENG",
+              "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "score": null,
             "status": "scheduled",
@@ -4468,10 +4465,9 @@
               "flag": "🇪🇸"
             },
             "away": {
-              "name": null,
-              "code": null,
-              "flag": null,
-              "placeholder": "Semifinal 2 Winner"
+              "name": "Argentina",
+              "code": "ARG",
+              "flag": "🇦🇷"
             },
             "score": null,
             "status": "scheduled",

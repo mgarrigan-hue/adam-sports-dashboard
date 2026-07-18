@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T13:01:44Z",
+  "generated_at": "2026-07-18T14:33:22Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,10 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
       "competition": "Nations Championship",
       "venue": "HBF Park, Perth",
-      "status": "STATUS_SECOND_HALF",
+      "status": "STATUS_FIRST_HALF",
       "status_state": "in",
-      "home_score": 50,
-      "away_score": 10
+      "home_score": 36,
+      "away_score": 5
     },
     {
       "date": "2026-07-18T08:40Z",

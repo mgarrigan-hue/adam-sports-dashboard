@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T18:54:55Z",
+  "generated_at": "2026-07-18T20:01:43Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,85 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/4.png",
       "competition": "Nations Championship",
       "venue": "Hollywoodbets Kings Park, Durban",
-      "status": "STATUS_FIRST_HALF",
-      "status_state": "in",
-      "home_score": 7,
-      "away_score": 0
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 43,
+      "away_score": 0,
+      "half_time": "14-0",
+      "scoring_summary": [
+        {
+          "minute": "5'",
+          "team": "South Africa",
+          "player": "J. Wiese",
+          "type": "try"
+        },
+        {
+          "minute": "6'",
+          "team": "South Africa",
+          "player": "V. Moyo",
+          "type": "conversion"
+        },
+        {
+          "minute": "14'",
+          "team": "South Africa",
+          "player": "C. Reinach",
+          "type": "try"
+        },
+        {
+          "minute": "15'",
+          "team": "South Africa",
+          "player": "V. Moyo",
+          "type": "conversion"
+        },
+        {
+          "minute": "41'",
+          "team": "South Africa",
+          "player": "J. Kriel",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "South Africa",
+          "player": "J. Williams",
+          "type": "try"
+        },
+        {
+          "minute": "42'",
+          "team": "South Africa",
+          "player": "V. Moyo",
+          "type": "conversion"
+        },
+        {
+          "minute": "63'",
+          "team": "Wales",
+          "player": "B. Warren",
+          "type": "yellow card"
+        },
+        {
+          "minute": "63'",
+          "team": "South Africa",
+          "player": "H. Jantjies",
+          "type": "try"
+        },
+        {
+          "minute": "69'",
+          "team": "South Africa",
+          "player": "K. Arendse",
+          "type": "try"
+        },
+        {
+          "minute": "80'",
+          "team": "South Africa",
+          "player": "P. de Villiers",
+          "type": "try"
+        },
+        {
+          "minute": "80'",
+          "team": "South Africa",
+          "player": "M. Libbok",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-18T13:10Z",

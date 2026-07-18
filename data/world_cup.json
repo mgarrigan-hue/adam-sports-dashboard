@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-18T21:12:15Z",
+  "generated_at": "2026-07-18T22:12:46Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -4042,8 +4042,8 @@
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 4
       },
       "status": "live",
       "winner": null,
@@ -4447,8 +4447,8 @@
               "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "score": {
-              "home": 0,
-              "away": 1
+              "home": 1,
+              "away": 4
             },
             "status": "live",
             "winner": null,
@@ -4487,6 +4487,12 @@
   },
   "top_scorers": [
     {
+      "name": "Kylian Mbappé",
+      "goals": 8,
+      "team": "France",
+      "flag": "🇫🇷"
+    },
+    {
       "name": "Lionel Messi",
       "goals": 8,
       "team": "Argentina",
@@ -4497,12 +4503,6 @@
       "goals": 7,
       "team": "Norway",
       "flag": "🇳🇴"
-    },
-    {
-      "name": "Kylian Mbappé",
-      "goals": 7,
-      "team": "France",
-      "flag": "🇫🇷"
     },
     {
       "name": "Jude Bellingham",

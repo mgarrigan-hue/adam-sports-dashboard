@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T14:33:22Z",
+  "generated_at": "2026-07-18T15:51:03Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,121 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
       "competition": "Nations Championship",
       "venue": "HBF Park, Perth",
-      "status": "STATUS_FIRST_HALF",
-      "status_state": "in",
-      "home_score": 36,
-      "away_score": 5
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 57,
+      "away_score": 10,
+      "half_time": "31-5",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "Australia",
+          "player": "J. Canham",
+          "type": "try"
+        },
+        {
+          "minute": "9'",
+          "team": "Australia",
+          "player": "T. Wright",
+          "type": "try"
+        },
+        {
+          "minute": "10'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "12'",
+          "team": "Australia",
+          "player": "B. Paenga-Amosa",
+          "type": "try"
+        },
+        {
+          "minute": "13'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "20'",
+          "team": "Italy",
+          "player": "M. Lamaro",
+          "type": "try"
+        },
+        {
+          "minute": "27'",
+          "team": "Australia",
+          "player": "J. Canham",
+          "type": "try"
+        },
+        {
+          "minute": "31'",
+          "team": "Australia",
+          "player": "A. Bell",
+          "type": "try"
+        },
+        {
+          "minute": "32'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "41'",
+          "team": "Australia",
+          "player": "L. Ikitau",
+          "type": "try"
+        },
+        {
+          "minute": "41'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "41'",
+          "team": "Italy",
+          "player": "M. Ioane",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "Australia",
+          "player": "J. Canham",
+          "type": "try"
+        },
+        {
+          "minute": "53'",
+          "team": "Australia",
+          "player": "R. Lonergan",
+          "type": "conversion"
+        },
+        {
+          "minute": "64'",
+          "team": "Australia",
+          "player": "B. Pollard",
+          "type": "try"
+        },
+        {
+          "minute": "66'",
+          "team": "Italy",
+          "player": "M. Riccioni",
+          "type": "red card"
+        },
+        {
+          "minute": "80'",
+          "team": "Australia",
+          "player": "B. Donaldson",
+          "type": "try"
+        },
+        {
+          "minute": "81'",
+          "team": "Australia",
+          "player": "B. Donaldson",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-18T08:40Z",

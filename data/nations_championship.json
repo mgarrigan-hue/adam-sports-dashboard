@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-18T15:51:03Z",
+  "generated_at": "2026-07-18T16:51:01Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-18T13:10Z",
+      "home": "Fiji",
+      "away": "Scotland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
+      "competition": "Nations Championship",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
+      "status": "STATUS_SECOND_HALF",
+      "status_state": "in",
+      "home_score": 17,
+      "away_score": 14
+    },
     {
       "date": "2026-07-18T10:10Z",
       "home": "Australia",
@@ -1941,17 +1954,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-18T13:10Z",
-      "home": "Fiji",
-      "away": "Scotland",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/2.png",
-      "competition": "Nations Championship",
-      "venue": "Scottish Gas Murrayfield, Edinburgh",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-18T15:40Z",
       "home": "South Africa",

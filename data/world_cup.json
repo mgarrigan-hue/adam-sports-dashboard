@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-18T22:12:46Z",
+  "generated_at": "2026-07-18T23:24:01Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -10,7 +10,7 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "third-place",
+    "current_stage": "final",
     "champion": null
   },
   "groups": [
@@ -4042,11 +4042,11 @@
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
       },
       "score": {
-        "home": 1,
-        "away": 4
+        "home": 4,
+        "away": 6
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "away",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -4447,11 +4447,11 @@
               "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
             },
             "score": {
-              "home": 1,
-              "away": 4
+              "home": 4,
+              "away": 6
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "away",
             "pens": null,
             "aet": false
           }
@@ -4488,7 +4488,7 @@
   "top_scorers": [
     {
       "name": "Kylian Mbappé",
-      "goals": 8,
+      "goals": 9,
       "team": "France",
       "flag": "🇫🇷"
     },
@@ -4506,13 +4506,13 @@
     },
     {
       "name": "Jude Bellingham",
-      "goals": 6,
+      "goals": 7,
       "team": "England",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     {
       "name": "Ousmane Dembélé",
-      "goals": 5,
+      "goals": 6,
       "team": "France",
       "flag": "🇫🇷"
     },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T22:12:46Z",
+  "generated_at": "2026-07-18T23:24:02Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -11,10 +11,133 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
       "competition": "Nations Championship",
       "venue": "Estadio Único Madre de Ciudades",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
-      "home_score": 17,
-      "away_score": 31
+      "status": "STATUS_FINAL",
+      "status_state": "post",
+      "home_score": 24,
+      "away_score": 31,
+      "half_time": "3-19",
+      "scoring_summary": [
+        {
+          "minute": "4'",
+          "team": "England",
+          "player": "T. Freeman",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "England",
+          "player": "B. Earl",
+          "type": "try"
+        },
+        {
+          "minute": "25'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "25'",
+          "team": "Argentina",
+          "player": "M. Carreras",
+          "type": "yellow card"
+        },
+        {
+          "minute": "30'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "33'",
+          "team": "England",
+          "player": "B. Earl",
+          "type": "try"
+        },
+        {
+          "minute": "33'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "43'",
+          "team": "Argentina",
+          "player": "M. Carreras",
+          "type": "try"
+        },
+        {
+          "minute": "44'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        },
+        {
+          "minute": "51'",
+          "team": "England",
+          "player": "J. van Poortvliet",
+          "type": "yellow card"
+        },
+        {
+          "minute": "55'",
+          "team": "England",
+          "player": "A. Coles",
+          "type": "yellow card"
+        },
+        {
+          "minute": "60'",
+          "team": "Argentina",
+          "player": "J. Oviedo",
+          "type": "yellow card"
+        },
+        {
+          "minute": "62'",
+          "team": "England",
+          "player": "M. Smith",
+          "type": "try"
+        },
+        {
+          "minute": "62'",
+          "team": "Argentina",
+          "player": "S. Carreras",
+          "type": "yellow card"
+        },
+        {
+          "minute": "63'",
+          "team": "England",
+          "player": "F. Smith",
+          "type": "conversion"
+        },
+        {
+          "minute": "69'",
+          "team": "England",
+          "player": "I. Feyi-Waboso",
+          "type": "try"
+        },
+        {
+          "minute": "74'",
+          "team": "England",
+          "player": "H. Pollock",
+          "type": "yellow card"
+        },
+        {
+          "minute": "77'",
+          "team": "England",
+          "player": "E. Iyogun",
+          "type": "yellow card"
+        },
+        {
+          "minute": "80'",
+          "team": "Argentina",
+          "player": "J. Piccardo",
+          "type": "try"
+        },
+        {
+          "minute": "80'",
+          "team": "Argentina",
+          "player": "T. Albornoz",
+          "type": "conversion"
+        }
+      ]
     },
     {
       "date": "2026-07-18T15:40Z",

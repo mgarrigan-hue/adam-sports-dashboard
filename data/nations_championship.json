@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-18T20:01:43Z",
+  "generated_at": "2026-07-18T21:12:16Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-18T19:10Z",
+      "home": "Argentina",
+      "away": "England",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
+      "competition": "Nations Championship",
+      "venue": "Estadio Único Madre de Ciudades",
+      "status": "STATUS_HALFTIME",
+      "status_state": "in",
+      "home_score": 3,
+      "away_score": 19
+    },
     {
       "date": "2026-07-18T15:40Z",
       "home": "South Africa",
@@ -396,7 +409,7 @@
           "type": "conversion"
         },
         {
-          "minute": "35'",
+          "minute": "36'",
           "team": "Japan",
           "player": "S. Otsuka",
           "type": "try"
@@ -2129,17 +2142,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-18T19:10Z",
-      "home": "Argentina",
-      "away": "England",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/1.png",
-      "competition": "Nations Championship",
-      "venue": "Estadio Único Madre de Ciudades",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-11-06T20:10Z",
       "home": "Ireland",

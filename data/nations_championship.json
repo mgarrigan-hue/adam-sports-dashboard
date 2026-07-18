@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-18T10:57:39Z",
+  "generated_at": "2026-07-18T11:52:37Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-18T10:10Z",
+      "home": "Australia",
+      "away": "Italy",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
+      "competition": "Nations Championship",
+      "venue": "HBF Park, Perth",
+      "status": "STATUS_SECOND_HALF",
+      "status_state": "in",
+      "home_score": 50,
+      "away_score": 10
+    },
     {
       "date": "2026-07-18T08:40Z",
       "home": "Japan",
@@ -11,10 +24,127 @@
       "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/9.png",
       "competition": "Nations Championship",
       "venue": "MUFG Stadium, Tokyo",
-      "status": "STATUS_SECOND_HALF",
-      "status_state": "in",
+      "status": "STATUS_FINAL",
+      "status_state": "post",
       "home_score": 15,
-      "away_score": 35
+      "away_score": 42,
+      "half_time": "15-28",
+      "scoring_summary": [
+        {
+          "minute": "2'",
+          "team": "France",
+          "player": "M. Lamothe",
+          "type": "try"
+        },
+        {
+          "minute": "3'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "10'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "penalty goal"
+        },
+        {
+          "minute": "15'",
+          "team": "Japan",
+          "player": "K. Ishida",
+          "type": "try"
+        },
+        {
+          "minute": "18'",
+          "team": "Japan",
+          "player": "H. Hockings",
+          "type": "yellow card"
+        },
+        {
+          "minute": "19'",
+          "team": "France",
+          "player": "M. Jalibert",
+          "type": "try"
+        },
+        {
+          "minute": "20'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "23'",
+          "team": "France",
+          "player": "A. Roumat",
+          "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "30'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "try"
+        },
+        {
+          "minute": "31'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "35'",
+          "team": "Japan",
+          "player": "S. Otsuka",
+          "type": "try"
+        },
+        {
+          "minute": "36'",
+          "team": "Japan",
+          "player": "T. Matsunaga",
+          "type": "conversion"
+        },
+        {
+          "minute": "43'",
+          "team": "France",
+          "player": "M. Jalibert",
+          "type": "try"
+        },
+        {
+          "minute": "44'",
+          "team": "France",
+          "player": "R. Ntamack",
+          "type": "conversion"
+        },
+        {
+          "minute": "51'",
+          "team": "France",
+          "player": "M. Lamothe",
+          "type": "try"
+        },
+        {
+          "minute": "52'",
+          "team": "France",
+          "player": "M. Lucu",
+          "type": "conversion"
+        },
+        {
+          "minute": "58'",
+          "team": "France",
+          "player": "M. Jalibert",
+          "type": "yellow card"
+        },
+        {
+          "minute": "77'",
+          "team": "France",
+          "player": "M. Gazzotti",
+          "type": "yellow card"
+        }
+      ]
     },
     {
       "date": "2026-07-18T07:10Z",
@@ -1700,17 +1830,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-18T10:10Z",
-      "home": "Australia",
-      "away": "Italy",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/20.png",
-      "competition": "Nations Championship",
-      "venue": "HBF Park, Perth",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-18T13:10Z",
       "home": "Fiji",

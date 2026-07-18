@@ -1,8 +1,21 @@
 {
-  "generated_at": "2026-07-18T05:59:56Z",
+  "generated_at": "2026-07-18T08:02:02Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
+    {
+      "date": "2026-07-18T07:10Z",
+      "home": "New Zealand",
+      "away": "Ireland",
+      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
+      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
+      "competition": "Nations Championship",
+      "venue": "Eden Park, Auckland",
+      "status": "STATUS_FIRST_HALF",
+      "status_state": "in",
+      "home_score": 26,
+      "away_score": 7
+    },
     {
       "date": "2026-07-11T19:10Z",
       "home": "Argentina",
@@ -1563,17 +1576,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-07-18T07:10Z",
-      "home": "New Zealand",
-      "away": "Ireland",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/8.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/3.png",
-      "competition": "Nations Championship",
-      "venue": "Eden Park, Auckland",
-      "status": "STATUS_SCHEDULED",
-      "status_state": "pre"
-    },
     {
       "date": "2026-07-18T08:40Z",
       "home": "Japan",

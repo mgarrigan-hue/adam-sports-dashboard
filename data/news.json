@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-07-18T16:51:01Z",
+  "generated_at": "2026-07-18T17:52:02Z",
   "items": [
+    {
+      "title": "How to follow Belgian Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Belgian Grand Prix at Spa-Francorchamps, from 17-19 July.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cr47gkqerdpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-18T17:19:06Z"
+    },
     {
       "title": "Antonelli takes Belgium pole from Verstappen",
       "summary": "Mercedes' Kimi Antonelli takes pole position at the Belgian Grand Prix, leaving team-mate George Russell trailing in fourth.",
@@ -8,6 +16,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-07-18T16:07:04Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry and Sam look back at qualifying from Spa",
+      "url": "https://www.bbc.co.uk/sounds/play/p0nzlg3r?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-18T15:52:00Z"
     },
     {
       "title": "Scotland flirt with defeat before overpowering Fiji",
@@ -50,12 +66,12 @@
       "published": "2026-07-18T10:50:22Z"
     },
     {
-      "title": "How to follow Belgian Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Belgian Grand Prix at Spa-Francorchamps, from 17-19 July.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cr47gkqerdpo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-18T09:57:20Z"
+      "title": "Ruthless New Zealand crush Ireland at Eden Park",
+      "summary": "Ruthless New Zealand crush Ireland at Eden Park",
+      "url": "https://www.bbc.co.uk/programmes/p0nzknhd?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-07-18T10:29:09Z"
     },
     {
       "title": "New Zealand shrug off Ireland to maintain Auckland streak",
@@ -208,14 +224,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-16T21:09:04Z"
-    },
-    {
-      "title": "F1: Chequered Flag",
-      "summary": "Harry, Jolyon and Andrew chat through the big talking points ahead of the race at Spa",
-      "url": "https://www.bbc.co.uk/sounds/play/p0nz8ttn?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-16T20:01:00Z"
     },
     {
       "title": "I've not found my feet back in rugby - Rees-Zammit",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-13T11:28:15Z"
-    },
-    {
-      "title": "All Blacks call up Ioane as Rennie calls for 'balance'",
-      "summary": "It's quite the coincidence for Rieko Ioane to be called into the squad this week, with the 88-cap centre drafted into the group as injury cover.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0713/1583034-all-blacks-call-up-ioane-as-rennie-calls-for-balance/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-13T09:00:05Z"
     }
   ]
 }

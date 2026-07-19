@@ -1,6 +1,6 @@
 {
   "source": "espn",
-  "generated_at": "2026-07-19T21:14:04Z",
+  "generated_at": "2026-07-19T22:23:30Z",
   "tournament": {
     "name": "FIFA World Cup 2026",
     "host_nations": [
@@ -10,8 +10,8 @@
     ],
     "start_date": "2026-06-11",
     "end_date": "2026-07-19",
-    "current_stage": "final",
-    "champion": null
+    "current_stage": "complete",
+    "champion": "Spain"
   },
   "groups": [
     {
@@ -4074,11 +4074,11 @@
         "flag": "🇦🇷"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
-      "status": "live",
-      "winner": null,
+      "status": "complete",
+      "winner": "home",
       "broadcast": {
         "uk": [
           "BBC / ITV"
@@ -4086,7 +4086,8 @@
         "ie": [
           "RTÉ / Virgin"
         ]
-      }
+      },
+      "aet": true
     }
   ],
   "knockout_bracket": {
@@ -4479,13 +4480,13 @@
               "flag": "🇦🇷"
             },
             "score": {
-              "home": 0,
+              "home": 1,
               "away": 0
             },
-            "status": "live",
-            "winner": null,
+            "status": "complete",
+            "winner": "home",
             "pens": null,
-            "aet": false
+            "aet": true
           }
         ]
       }

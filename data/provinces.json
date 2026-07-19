@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T23:23:53Z",
+  "generated_at": "2026-07-19T00:58:06Z",
   "results": [
     {
       "date": "2026-06-19T18:30Z",
@@ -3078,98 +3078,6 @@
           "team": "Sharks",
           "player": "M. Mapimpi",
           "type": "try"
-        }
-      ]
-    },
-    {
-      "date": "2026-03-20T19:45Z",
-      "home": "Ulster",
-      "away": "Connacht",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25926.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25923.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 19,
-      "away_score": 26,
-      "scoring_summary": [
-        {
-          "minute": "19'",
-          "team": "Connacht",
-          "player": "S. Jansen",
-          "type": "try"
-        },
-        {
-          "minute": "20'",
-          "team": "Connacht",
-          "player": "S. Naughton",
-          "type": "conversion"
-        },
-        {
-          "minute": "24'",
-          "team": "Ulster",
-          "player": "N. Doak",
-          "type": "try"
-        },
-        {
-          "minute": "25'",
-          "team": "Ulster",
-          "player": "N. Doak",
-          "type": "conversion"
-        },
-        {
-          "minute": "39'",
-          "team": "Connacht",
-          "player": "F. Bealham",
-          "type": "yellow card"
-        },
-        {
-          "minute": "57'",
-          "team": "Connacht",
-          "player": "F. Bealham",
-          "type": "try"
-        },
-        {
-          "minute": "58'",
-          "team": "Connacht",
-          "player": "S. Naughton",
-          "type": "conversion"
-        },
-        {
-          "minute": "61'",
-          "team": "Connacht",
-          "player": "F. Treacy",
-          "type": "try"
-        },
-        {
-          "minute": "65'",
-          "team": "Ulster",
-          "player": "Z. Ward",
-          "type": "try"
-        },
-        {
-          "minute": "68'",
-          "team": "Connacht",
-          "player": "F. Treacy",
-          "type": "try"
-        },
-        {
-          "minute": "70'",
-          "team": "Connacht",
-          "player": "S. Naughton",
-          "type": "conversion"
-        },
-        {
-          "minute": "76'",
-          "team": "Ulster",
-          "player": "A. Bell",
-          "type": "try"
-        },
-        {
-          "minute": "76'",
-          "team": "Ulster",
-          "player": "J. Murphy",
-          "type": "conversion"
         }
       ]
     }

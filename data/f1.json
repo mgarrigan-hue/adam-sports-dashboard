@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T15:52:10Z",
+  "generated_at": "2026-07-19T16:51:33Z",
   "season": "2026",
   "upcoming": [
     {
@@ -291,56 +291,56 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "179",
-      "wins": "5"
+      "points": "204",
+      "wins": "6"
     },
     {
       "position": "2",
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": "159",
+      "wins": "1"
+    },
+    {
+      "position": "3",
       "driver": "George Russell",
       "team": "Mercedes",
       "points": "154",
       "wins": "2"
     },
     {
-      "position": "3",
-      "driver": "Lewis Hamilton",
-      "team": "Ferrari",
-      "points": "147",
-      "wins": "1"
-    },
-    {
       "position": "4",
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "108",
+      "points": "126",
       "wins": "1"
     },
     {
       "position": "5",
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "97",
+      "points": "103",
       "wins": "0"
     },
     {
       "position": "6",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "82",
+      "points": "92",
       "wins": "0"
     },
     {
       "position": "7",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "76",
+      "points": "91",
       "wins": "0"
     },
     {
       "position": "8",
       "driver": "Isack Hadjar",
       "team": "Red Bull",
-      "points": "52",
+      "points": "60",
       "wins": "0"
     },
     {
@@ -361,20 +361,20 @@
       "position": "11",
       "driver": "Arvid Lindblad",
       "team": "RB F1 Team",
-      "points": "20",
+      "points": "22",
       "wins": "0"
     },
     {
       "position": "12",
-      "driver": "Oliver Bearman",
-      "team": "Haas F1 Team",
-      "points": "18",
+      "driver": "Franco Colapinto",
+      "team": "Alpine F1 Team",
+      "points": "19",
       "wins": "0"
     },
     {
       "position": "13",
-      "driver": "Franco Colapinto",
-      "team": "Alpine F1 Team",
+      "driver": "Oliver Bearman",
+      "team": "Haas F1 Team",
       "points": "18",
       "wins": "0"
     },
@@ -382,7 +382,7 @@
       "position": "14",
       "driver": "Gabriel Bortoleto",
       "team": "Audi",
-      "points": "6",
+      "points": "10",
       "wins": "0"
     },
     {
@@ -446,37 +446,37 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "333",
-      "wins": "7"
+      "points": "358",
+      "wins": "8"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "255",
+      "points": "285",
       "wins": "2"
     },
     {
       "position": "3",
       "team": "McLaren",
-      "points": "179",
+      "points": "195",
       "wins": "0"
     },
     {
       "position": "4",
       "team": "Red Bull",
-      "points": "128",
+      "points": "151",
       "wins": "0"
     },
     {
       "position": "5",
       "team": "Alpine F1 Team",
-      "points": "60",
+      "points": "61",
       "wins": "0"
     },
     {
       "position": "6",
       "team": "RB F1 Team",
-      "points": "59",
+      "points": "61",
       "wins": "0"
     },
     {
@@ -494,7 +494,7 @@
     {
       "position": "9",
       "team": "Audi",
-      "points": "6",
+      "points": "10",
       "wins": "0"
     },
     {

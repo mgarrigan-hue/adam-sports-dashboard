@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T15:52:11.756757+00:00",
+  "generated_at": "2026-07-19T16:51:33.944708+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,11 +8,20 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 179.0,
-      "wins": 5
+      "points": 204.0,
+      "wins": 6
     },
     {
       "rank": 2,
+      "driver": "Lewis Hamilton",
+      "code": "HAM",
+      "nationality": "British",
+      "team": "Ferrari",
+      "points": 159.0,
+      "wins": 1
+    },
+    {
+      "rank": 3,
       "driver": "George Russell",
       "code": "RUS",
       "nationality": "British",
@@ -21,21 +30,12 @@
       "wins": 2
     },
     {
-      "rank": 3,
-      "driver": "Lewis Hamilton",
-      "code": "HAM",
-      "nationality": "British",
-      "team": "Ferrari",
-      "points": 147.0,
-      "wins": 1
-    },
-    {
       "rank": 4,
       "driver": "Charles Leclerc",
       "code": "LEC",
       "nationality": "Monegasque",
       "team": "Ferrari",
-      "points": 108.0,
+      "points": 126.0,
       "wins": 1
     },
     {
@@ -44,7 +44,7 @@
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 97.0,
+      "points": 103.0,
       "wins": 0
     },
     {
@@ -53,7 +53,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 82.0,
+      "points": 92.0,
       "wins": 0
     },
     {
@@ -62,7 +62,7 @@
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 76.0,
+      "points": 91.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 52.0,
+      "points": 60.0,
       "wins": 0
     },
     {
@@ -98,24 +98,24 @@
       "code": "LIN",
       "nationality": "British",
       "team": "RB F1 Team",
-      "points": 20.0,
+      "points": 22.0,
       "wins": 0
     },
     {
       "rank": 12,
-      "driver": "Oliver Bearman",
-      "code": "BEA",
-      "nationality": "British",
-      "team": "Haas F1 Team",
-      "points": 18.0,
-      "wins": 0
-    },
-    {
-      "rank": 13,
       "driver": "Franco Colapinto",
       "code": "COL",
       "nationality": "Argentine",
       "team": "Alpine F1 Team",
+      "points": 19.0,
+      "wins": 0
+    },
+    {
+      "rank": 13,
+      "driver": "Oliver Bearman",
+      "code": "BEA",
+      "nationality": "British",
+      "team": "Haas F1 Team",
       "points": 18.0,
       "wins": 0
     },
@@ -125,7 +125,7 @@
       "code": "BOR",
       "nationality": "Brazilian",
       "team": "Audi",
-      "points": 6.0,
+      "points": 10.0,
       "wins": 0
     },
     {

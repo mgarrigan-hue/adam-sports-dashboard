@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T04:22:00Z",
+  "generated_at": "2026-07-19T07:03:32Z",
   "competition": "Nations Championship",
   "league_id": "17567",
   "results": [
@@ -15,13 +15,18 @@
       "status_state": "post",
       "home_score": 24,
       "away_score": 31,
-      "half_time": "3-19",
       "scoring_summary": [
         {
           "minute": "4'",
           "team": "England",
           "player": "T. Freeman",
           "type": "try"
+        },
+        {
+          "minute": "24'",
+          "team": "Argentina",
+          "player": "M. Carreras",
+          "type": "yellow card"
         },
         {
           "minute": "24'",
@@ -34,12 +39,6 @@
           "team": "England",
           "player": "F. Smith",
           "type": "conversion"
-        },
-        {
-          "minute": "25'",
-          "team": "Argentina",
-          "player": "M. Carreras",
-          "type": "yellow card"
         },
         {
           "minute": "30'",
@@ -84,9 +83,15 @@
           "type": "yellow card"
         },
         {
-          "minute": "60'",
+          "minute": "59'",
           "team": "Argentina",
           "player": "J. Oviedo",
+          "type": "yellow card"
+        },
+        {
+          "minute": "62'",
+          "team": "Argentina",
+          "player": "S. Carreras",
           "type": "yellow card"
         },
         {
@@ -94,12 +99,6 @@
           "team": "England",
           "player": "M. Smith",
           "type": "try"
-        },
-        {
-          "minute": "62'",
-          "team": "Argentina",
-          "player": "S. Carreras",
-          "type": "yellow card"
         },
         {
           "minute": "63'",
@@ -114,7 +113,7 @@
           "type": "try"
         },
         {
-          "minute": "74'",
+          "minute": "73'",
           "team": "England",
           "player": "H. Pollock",
           "type": "yellow card"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T02:06:53Z",
+  "generated_at": "2026-07-21T05:33:58Z",
   "items": [
     {
       "title": "Earl wants changes to 'brutal' Nations Championship format",
@@ -8,6 +8,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-20T22:16:19Z"
+    },
+    {
+      "title": "All Blacks hand Ireland harsh reality check",
+      "summary": "The All Blacks simply blew Andy Farrell's side away with their physicality in the contact area, writes Jonny Holland.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0720/1584295-all-blacks-hand-ireland-harsh-reality-check/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-07-20T19:54:46Z"
     },
     {
       "title": "Earl hopes for changes after 'brutal' travel demands",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-16T13:25:50Z"
-    },
-    {
-      "title": "Red Bull to change wing after Verstappen crashes",
-      "summary": "Red Bull are reverting to a conventional rear wing for the Belgian Grand Prix following high-speed crashes for Max Verstappen in the previous two races.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cr7kr0lx081o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-16T12:46:08Z"
     }
   ]
 }

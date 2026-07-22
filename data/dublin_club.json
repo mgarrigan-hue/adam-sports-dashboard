@@ -306,33 +306,6 @@
       "away_score": 12,
       "competition": "Leinster School Youth U14 Premier",
       "involves_smc": true
-    },
-    {
-      "date": "2026-02-22T12:00:00+01:00",
-      "home": "LD Barbarians",
-      "away": "SMTC",
-      "home_score": 10,
-      "away_score": 40,
-      "competition": "Leinster School Youth  U16 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-22T10:45:00+01:00",
-      "home": "Seapoint B",
-      "away": "St Marys College RFC B",
-      "home_score": 20,
-      "away_score": 31,
-      "competition": "Leinster School Youth U13 Cup",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-02-22T10:45:00+01:00",
-      "home": "De La Salle Palmerston",
-      "away": "St Marys College RFC",
-      "home_score": 24,
-      "away_score": 22,
-      "competition": "Leinster School Youths 18s League Premier",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -364,5 +337,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-07-22T22:00:35+00:00"
+  "fetched_at": "2026-07-22T23:28:01+00:00"
 }

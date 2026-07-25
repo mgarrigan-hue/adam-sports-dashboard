@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-07-25T11:41:33Z",
+  "generated_at": "2026-07-25T13:12:09Z",
   "items": [
+    {
+      "title": "Malaysia set to host F1 race in October",
+      "summary": "Malaysia is set to hold a grand prix in October as a replacement for the Bahrain race that was called off earlier this season.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c3w01yvp218o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-25T13:09:48Z"
+    },
     {
       "title": "Hamilton fastest as new Aston Martin makes encouraging debut",
       "summary": "Lewis Hamilton leads team-mate Charles Leclerc to a Ferrari one-two in Friday practice at the Hungarian Grand Prix.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-17T12:15:15Z"
-    },
-    {
-      "title": "Ireland will 'leave it all out there' against All Blacks",
-      "summary": "Dan Sheehan says Ireland will make sure to empty their tank against New Zealand in Auckland, as they look to finish their season on an almighty high.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0717/1583770-ireland-will-leave-it-all-out-there-against-all-blacks/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-17T12:02:30Z"
     }
   ]
 }

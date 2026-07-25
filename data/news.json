@@ -1,8 +1,16 @@
 {
-  "generated_at": "2026-07-25T14:45:08Z",
+  "generated_at": "2026-07-25T15:59:39Z",
   "items": [
     {
-      "title": "Malaysia set to host F1 race in October",
+      "title": "Norris beats Hamilton to Hungary pole",
+      "summary": "McLaren's Lando Norris takes his first grand prix pole position of 2026, beating Lewis Hamilton with the final lap of the session in Hungary.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4gv02vyzv4o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-25T15:56:15Z"
+    },
+    {
+      "title": "Malaysia set to host postponed Bahrain GP",
       "summary": "Malaysia is set to hold a grand prix in October as a replacement for the Bahrain race that was called off earlier this season.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c3w01yvp218o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-17T16:00:16Z"
-    },
-    {
-      "title": "Wales lock Pyrs re-signs with Gloucester-Hartpury",
-      "summary": "Wales lock Alaw Pyrs signs a new contract to keep her at Premiership Women's Rugby side Gloucester-Hartpury.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cyvly7p85l6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-07-17T12:15:15Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T23:55:03Z",
+  "generated_at": "2026-07-26T02:12:06Z",
   "results": [
     {
       "date": "2026-06-19T18:30Z",
@@ -2752,122 +2752,6 @@
           "team": "Munster",
           "player": "E. Edogbo",
           "type": "try"
-        }
-      ]
-    },
-    {
-      "date": "2026-03-27T19:45Z",
-      "home": "Leinster",
-      "away": "Scarlets",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25924.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25966.png",
-      "competition": "URC",
-      "status": "STATUS_FINAL",
-      "status_state": "post",
-      "home_score": 36,
-      "away_score": 19,
-      "scoring_summary": [
-        {
-          "minute": "17'",
-          "team": "Leinster",
-          "player": "B. Deeny",
-          "type": "yellow card"
-        },
-        {
-          "minute": "17'",
-          "team": "Scarlets",
-          "player": "J. Roberts",
-          "type": "try"
-        },
-        {
-          "minute": "18'",
-          "team": "Scarlets",
-          "player": "J. Hawkins",
-          "type": "conversion"
-        },
-        {
-          "minute": "23'",
-          "team": "Scarlets",
-          "player": "J. Roberts",
-          "type": "yellow card"
-        },
-        {
-          "minute": "28'",
-          "team": "Scarlets",
-          "player": "J. Taylor",
-          "type": "yellow card"
-        },
-        {
-          "minute": "29'",
-          "team": "Leinster",
-          "player": "G. Ringrose",
-          "type": "try"
-        },
-        {
-          "minute": "30'",
-          "team": "Leinster",
-          "player": "H. Byrne",
-          "type": "conversion"
-        },
-        {
-          "minute": "34'",
-          "team": "Leinster",
-          "player": "J. Kenny",
-          "type": "try"
-        },
-        {
-          "minute": "43'",
-          "team": "Leinster",
-          "player": "T. O'Brien",
-          "type": "try"
-        },
-        {
-          "minute": "46'",
-          "team": "Leinster",
-          "player": "T. O'Brien",
-          "type": "try"
-        },
-        {
-          "minute": "57'",
-          "team": "Scarlets",
-          "player": "T. Rogers",
-          "type": "try"
-        },
-        {
-          "minute": "67'",
-          "team": "Leinster",
-          "player": "M. Deegan",
-          "type": "try"
-        },
-        {
-          "minute": "67'",
-          "team": "Leinster",
-          "player": "H. Byrne",
-          "type": "conversion"
-        },
-        {
-          "minute": "72'",
-          "team": "Scarlets",
-          "player": "M. Douglas",
-          "type": "try"
-        },
-        {
-          "minute": "73'",
-          "team": "Scarlets",
-          "player": "J. Hawkins",
-          "type": "conversion"
-        },
-        {
-          "minute": "75'",
-          "team": "Leinster",
-          "player": "J. Kenny",
-          "type": "try"
-        },
-        {
-          "minute": "76'",
-          "team": "Leinster",
-          "player": "H. Byrne",
-          "type": "conversion"
         }
       ]
     }

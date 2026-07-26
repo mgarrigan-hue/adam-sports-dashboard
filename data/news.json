@@ -1,13 +1,21 @@
 {
-  "generated_at": "2026-07-26T17:01:05Z",
+  "generated_at": "2026-07-26T18:30:11Z",
   "items": [
+    {
+      "title": "Complete weekend for Norris but poor result for Sainz - driver ratings",
+      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Hungarian Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c74yr33vvy1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-26T17:16:23Z"
+    },
     {
       "title": "Norris wins his first grand prix of year in Hungary",
       "summary": "Lando Norris takes his and McLaren's first victory of the year in a compelling Hungarian Grand Prix.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/cm2gnkyl8j1o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-07-26T15:13:12Z"
+      "published": "2026-07-26T17:02:14Z"
     },
     {
       "title": "Malaysia to host postponed Bahrain GP",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-17T18:00:09Z"
-    },
-    {
-      "title": "Antonelli tops FP2 as Gasly crashes heavily at Spa",
-      "summary": "Alpine's Pierre causes a red flag with a heavy crash in Friday practice at the Belgian Grand Prix as Mercedes' Kimi Antonelli set out his stall for the weekend with fastest time.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm2g9z3pr3yo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-17T17:33:27Z"
     }
   ]
 }

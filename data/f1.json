@@ -1,14 +1,7 @@
 {
-  "generated_at": "2026-07-26T11:43:01Z",
+  "generated_at": "2026-07-26T13:07:01Z",
   "season": "2026",
   "upcoming": [
-    {
-      "round": "11",
-      "race_name": "Hungarian Grand Prix",
-      "circuit": "Hungaroring",
-      "location": "Budapest, Hungary",
-      "date": "2026-07-26T13:00:00Z"
-    },
     {
       "round": "12",
       "race_name": "Dutch Grand Prix",
@@ -57,6 +50,13 @@
       "circuit": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
       "location": "Mexico City, Mexico",
       "date": "2026-11-01T20:00:00Z"
+    },
+    {
+      "round": "19",
+      "race_name": "Brazilian Grand Prix",
+      "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+      "location": "S\u00e3o Paulo, Brazil",
+      "date": "2026-11-08T17:00:00Z"
     }
   ],
   "recent_results": [
@@ -511,117 +511,117 @@
     }
   ],
   "last_qualifying": {
-    "race_name": "Belgian Grand Prix",
-    "round": "10",
-    "date": "2026-07-19T13:00:00Z",
+    "race_name": "Hungarian Grand Prix",
+    "round": "11",
+    "date": "2026-07-26T13:00:00Z",
     "results": [
       {
         "position": 1,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "q1": "1:46.304",
-        "q2": "1:45.142",
-        "q3": "1:44.361"
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "q1": "1:18.277",
+        "q2": "1:17.456",
+        "q3": "1:17.207"
       },
       {
         "position": 2,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "q1": "1:45.930",
-        "q2": "1:45.589",
-        "q3": "1:44.678"
+        "driver": "Lewis Hamilton",
+        "team": "Ferrari",
+        "q1": "1:18.730",
+        "q2": "1:17.803",
+        "q3": "1:17.219"
       },
       {
         "position": 3,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "q1": "1:45.865",
-        "q2": "1:45.454",
-        "q3": "1:44.801"
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "q1": "1:18.984",
+        "q2": "1:17.626",
+        "q3": "1:17.445"
       },
       {
         "position": 4,
-        "driver": "George Russell",
+        "driver": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "q1": "1:46.185",
-        "q2": "1:45.689",
-        "q3": "1:44.869"
+        "q1": "1:18.726",
+        "q2": "1:18.393",
+        "q3": "1:17.479"
       },
       {
         "position": 5,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "q1": "1:46.278",
-        "q2": "1:45.397",
-        "q3": "1:44.893"
+        "driver": "Oscar Piastri",
+        "team": "McLaren",
+        "q1": "1:18.891",
+        "q2": "1:17.928",
+        "q3": "1:17.684"
       },
       {
         "position": 6,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "q1": "1:46.124",
-        "q2": "1:45.543",
-        "q3": "1:44.895"
+        "driver": "Max Verstappen",
+        "team": "Red Bull",
+        "q1": "1:18.656",
+        "q2": "1:18.249",
+        "q3": "1:17.725"
       },
       {
         "position": 7,
-        "driver": "Oscar Piastri",
-        "team": "McLaren",
-        "q1": "1:46.433",
-        "q2": "1:45.671",
-        "q3": "1:45.016"
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "q1": "1:18.856",
+        "q2": "1:18.445",
+        "q3": "1:17.760"
       },
       {
         "position": 8,
-        "driver": "Arvid Lindblad",
-        "team": "RB F1 Team",
-        "q1": "1:46.191",
-        "q2": "1:45.629",
-        "q3": "1:45.143"
+        "driver": "Isack Hadjar",
+        "team": "Red Bull",
+        "q1": "1:18.754",
+        "q2": "1:17.872",
+        "q3": "1:17.856"
       },
       {
         "position": 9,
-        "driver": "Gabriel Bortoleto",
-        "team": "Audi",
-        "q1": "1:46.609",
-        "q2": "1:46.082",
-        "q3": "1:45.628"
+        "driver": "Arvid Lindblad",
+        "team": "RB F1 Team",
+        "q1": "1:19.233",
+        "q2": "1:18.360",
+        "q3": "1:18.281"
       },
       {
         "position": 10,
-        "driver": "Isack Hadjar",
-        "team": "Red Bull",
-        "q1": "1:46.062",
-        "q2": "1:45.823",
-        "q3": ""
+        "driver": "Nico H\u00fclkenberg",
+        "team": "Audi",
+        "q1": "1:18.796",
+        "q2": "1:18.639",
+        "q3": "1:18.686"
       }
     ]
   },
   "last_sprint": null,
   "next_race_sessions": {
-    "race_name": "Hungarian Grand Prix",
-    "round": "11",
-    "circuit": "Hungaroring",
+    "race_name": "Dutch Grand Prix",
+    "round": "12",
+    "circuit": "Circuit Park Zandvoort",
     "sessions": [
       {
         "name": "Practice 1",
-        "datetime": "2026-07-24T11:30:00Z"
-      },
-      {
-        "name": "Practice 2",
-        "datetime": "2026-07-24T15:00:00Z"
-      },
-      {
-        "name": "Practice 3",
-        "datetime": "2026-07-25T10:30:00Z"
+        "datetime": "2026-08-21T10:30:00Z"
       },
       {
         "name": "Qualifying",
-        "datetime": "2026-07-25T14:00:00Z"
+        "datetime": "2026-08-22T14:00:00Z"
+      },
+      {
+        "name": "Sprint Qualifying",
+        "datetime": "2026-08-21T14:30:00Z"
+      },
+      {
+        "name": "Sprint",
+        "datetime": "2026-08-22T10:00:00Z"
       },
       {
         "name": "Race",
-        "datetime": "2026-07-26T13:00:00Z"
+        "datetime": "2026-08-23T13:00:00Z"
       }
     ]
   }

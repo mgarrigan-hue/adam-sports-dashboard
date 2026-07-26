@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-07-26T14:47:14Z",
+  "generated_at": "2026-07-26T15:57:35Z",
   "items": [
+    {
+      "title": "Norris wins his first grand prix of year in Hungary",
+      "summary": "Lando Norris takes his and McLaren's first victory of the year in a compelling Hungarian Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm2gnkyl8j1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-26T15:13:12Z"
+    },
     {
       "title": "Malaysia to host postponed Bahrain GP",
       "summary": "Malaysia is set to hold a grand prix in October as a replacement for the Bahrain race that was called off earlier this season.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-07-17T17:33:27Z"
-    },
-    {
-      "title": "Nations Championship recap: All Blacks 40-21 Ireland",
-      "summary": "A sloppy Ireland go down 40-21 to the All Blacks in Eden Park, Auckland.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0717/1583910-nations-championship-all-blacks-v-ireland-updates/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-17T16:19:45Z"
     }
   ]
 }

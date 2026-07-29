@@ -317,7 +317,34 @@
       "away_score": null,
       "competition": "Leinster Senior Cup Group 1",
       "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "Bective Rangers 2",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "St Marys College RFC 3",
+      "away": "Navan 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T15:00:00+01:00",
+      "home": "Old Wesley 2",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-07-29T11:03:52+00:00"
+  "fetched_at": "2026-07-29T13:12:46+00:00"
 }

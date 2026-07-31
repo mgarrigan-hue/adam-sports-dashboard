@@ -252,6 +252,42 @@
       "away_score": 19,
       "competition": "Leinster SY U13 League Boys DIV1",
       "involves_smc": true
+    },
+    {
+      "date": "2026-03-01T13:30:00+01:00",
+      "home": "St Marys College RFC B",
+      "away": "Suttonians",
+      "home_score": 10,
+      "away_score": 40,
+      "competition": "Leinster School Youth U13 Cup",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-03-01T13:20:00+01:00",
+      "home": "SMTC",
+      "away": "MU Barnhall",
+      "home_score": 19,
+      "away_score": 46,
+      "competition": "Leinster School Youth  U16 Premier",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-03-01T12:00:00+01:00",
+      "home": "SMTC",
+      "away": "Malahide",
+      "home_score": 33,
+      "away_score": 40,
+      "competition": "Leinster School Youth U14 Cup",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-03-01T12:00:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "MU Barnhall",
+      "home_score": 33,
+      "away_score": 24,
+      "competition": "Leinster School Youths 18s League Premier",
+      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -310,5 +346,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-07-31T22:54:36+00:00"
+  "fetched_at": "2026-07-31T23:56:51+00:00"
 }

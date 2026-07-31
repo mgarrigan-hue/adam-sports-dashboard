@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T05:48:35Z",
+  "generated_at": "2026-07-31T08:40:34Z",
   "season": "2026",
   "upcoming": [
     {
@@ -32,31 +32,31 @@
     },
     {
       "round": "16",
+      "race_name": "Bahrain Grand Prix in Malaysia",
+      "circuit": "Sepang International Circuit",
+      "location": "Kuala Lumpur, Malaysia",
+      "date": "2026-10-04T07:00:00Z"
+    },
+    {
+      "round": "17",
       "race_name": "Singapore Grand Prix",
       "circuit": "Marina Bay Street Circuit",
       "location": "Marina Bay, Singapore",
       "date": "2026-10-11T12:00:00Z"
     },
     {
-      "round": "17",
+      "round": "18",
       "race_name": "United States Grand Prix",
       "circuit": "Circuit of the Americas",
       "location": "Austin, USA",
       "date": "2026-10-25T20:00:00Z"
     },
     {
-      "round": "18",
+      "round": "19",
       "race_name": "Mexico City Grand Prix",
       "circuit": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
       "location": "Mexico City, Mexico",
       "date": "2026-11-01T20:00:00Z"
-    },
-    {
-      "round": "19",
-      "race_name": "Brazilian Grand Prix",
-      "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
-      "location": "S\u00e3o Paulo, Brazil",
-      "date": "2026-11-08T17:00:00Z"
     }
   ],
   "recent_results": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T05:00:08Z",
+  "generated_at": "2026-08-03T08:35:20Z",
   "items": [
     {
       "title": "Leicester back row Ilione out until 2027",
@@ -8,6 +8,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-01T12:02:37Z"
+    },
+    {
+      "title": "The Chequered Flag Podcast",
+      "summary": "Harry Benjamin and Nicola Hume dive into the biggest transfer rumours in Formula 1",
+      "url": "https://www.bbc.co.uk/iplayer/episode/m00305z5?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-07-31T17:00:00Z"
     },
     {
       "title": "Scarlets vow to remain at heart of west Wales",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-07-19T13:30:09Z"
-    },
-    {
-      "title": "Summer tour shows Ireland have ground to make up",
-      "summary": "Andy Farrell has put down six seasons in charge of Ireland, but none of the previous five have had such a disparity between the highs and the lows.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0719/1584066-summer-tour-shows-ireland-have-ground-to-make-up/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-19T11:02:20Z"
     }
   ]
 }

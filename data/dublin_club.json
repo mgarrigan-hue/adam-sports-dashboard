@@ -225,33 +225,6 @@
       "away_score": 24,
       "competition": "Leinster School Youth U13 Cup",
       "involves_smc": true
-    },
-    {
-      "date": "2026-03-08T12:45:00+01:00",
-      "home": "Blackrock College RFC",
-      "away": "SMTC",
-      "home_score": 37,
-      "away_score": 7,
-      "competition": "Leinster School Youth U14 Premier",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-08T12:00:00+01:00",
-      "home": "St Marys College RFC B",
-      "away": "Clondalkin",
-      "home_score": 19,
-      "away_score": 36,
-      "competition": "Leinster SY U13 League Boys DIV3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-03-08T10:30:00+01:00",
-      "home": "De La Salle Palmerston",
-      "away": "St Marys College RFC A",
-      "home_score": 7,
-      "away_score": 19,
-      "competition": "Leinster SY U13 League Boys DIV1",
-      "involves_smc": true
     }
   ],
   "fixtures": [
@@ -310,5 +283,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-08T22:55:51+00:00"
+  "fetched_at": "2026-08-08T23:23:42+00:00"
 }

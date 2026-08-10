@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-08-10T08:23:11Z",
+  "generated_at": "2026-08-10T09:55:55Z",
   "items": [
+    {
+      "title": "Gloucester decide against Villa Park return",
+      "summary": "Gloucester Rugby confirm they will not be returning to Villa Park to face Leicester Tigers in the Prem next season.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9d8vxdgqx7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-08-10T09:00:25Z"
+    },
     {
       "title": "Irish stars give Connacht the edge against Ulster",
       "summary": "Ireland internationals Anna McGann and Méabh Deely made the difference for Connacht in a tight 15-10 victory over Ulster at Affidea Stadium.",
@@ -32,6 +40,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-08T10:47:31Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Harry Benjamin & the team reflect on the first half of the season, parents evening style!",
+      "url": "https://www.bbc.co.uk/sounds/play/p0p2y85t?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-08-08T05:00:00Z"
     },
     {
       "title": "'Verstappen to McLaren!' - Mid-season F1 predictions",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-07-23T08:58:06Z"
-    },
-    {
-      "title": "Rugby bodies seek to throw out concussion lawsuits",
-      "summary": "World Rugby and England and Wales' governing bodies have sought to throw out nearly 380 former rugby union players' lawsuits over neurological injuries.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0722/1584611-rugby-bodies-seek-to-throw-out-concussion-lawsuits/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-07-22T14:17:47Z"
-    },
-    {
-      "title": "Scarratt joins England coaching team permanently",
-      "summary": "England's record points-scorer Emily Scarratt commits her long-term future to the Red Roses coaching team.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cg7mz9zvdr0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-07-22T12:55:44Z"
     }
   ]
 }

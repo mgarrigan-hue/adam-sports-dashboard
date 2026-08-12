@@ -49,7 +49,7 @@
     },
     {
       "date": "2026-10-10T15:00:00+01:00",
-      "home": "Old Wesley 2",
+      "home": "Old Wesley 3",
       "away": "St Marys College RFC 3",
       "home_score": null,
       "away_score": null,
@@ -57,5 +57,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-12T08:11:13+00:00"
+  "fetched_at": "2026-08-12T09:38:35+00:00"
 }

@@ -3,7 +3,7 @@
   "results": [],
   "fixtures": [
     {
-      "date": "2026-08-22T15:00:00+01:00",
+      "date": "2026-08-21T19:45:00+01:00",
       "home": "St Marys College RFC 1",
       "away": "Old Belvedere 1",
       "home_score": null,
@@ -174,5 +174,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-14T15:13:40+00:00"
+  "fetched_at": "2026-08-14T16:13:17+00:00"
 }

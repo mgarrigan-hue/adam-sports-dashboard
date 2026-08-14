@@ -19,7 +19,6 @@ const DATA_FILES = {
   watch: "data/watch.json",
   club: "data/dublin_club.json",
   highlights: "data/highlights.json",
-  worldCup: "data/world_cup.json",
   rugbyTables: "data/rugby_tables.json",
   nations: "data/nations_championship.json",
 };
@@ -220,7 +219,6 @@ const FAV_TEAM_PATTERNS = [
   { key: "leinster", re: /\bleinster\b/i },
 ];
 
-// World Cup helpers (FAV_WC_NATIONS, isAdamsWcTeam, wc*, render Wc*) live in wc.js
 function matchSide(text) {
   if (!text) return null;
   for (const p of FAV_TEAM_PATTERNS) if (p.re.test(text)) return p.key;
@@ -329,19 +327,19 @@ function stableF1Id(r) {
   });
 }
 
-// Inline 🔗 button — same UX as the WC share buttons (clipboard + flash).
+// Inline 🔗 button — clipboard + flash.
 // Click handler is wired by bindGlobalShareButtons() once per page.
 function shareBtnHtml(anchorId, opts = {}) {
   if (!anchorId) return "";
   const t = opts.title ? ` data-share-title="${escapeAttr(opts.title)}"` : "";
   const x = opts.text  ? ` data-share-text="${escapeAttr(opts.text)}"`   : "";
-  return `<button type="button" class="wc-share-btn share-btn-inline" data-share-id="${escapeAttr(anchorId)}"${t}${x} aria-label="Share this fixture" title="Share">🔗</button>`;
+  return `<button type="button" class="share-btn-inline" data-share-id="${escapeAttr(anchorId)}"${t}${x} aria-label="Share this fixture" title="Share">🔗</button>`;
 }
 
 // Idempotent: re-runs after every rerender. Adds 🔗 click → Web Share API,
 // with clipboard fallback. share-btn carries optional data-share-title / -text.
 function bindGlobalShareButtons() {
-  document.querySelectorAll(".share-btn-inline, .wc-share-btn").forEach(btn => {
+  document.querySelectorAll(".share-btn-inline").forEach(btn => {
     if (btn.__bound) return;
     btn.__bound = true;
     btn.addEventListener("click", async (e) => {
@@ -2076,115 +2074,6 @@ function applyFilterChips({ containerSelector, attr, storageKey, allLabel = "All
   }));
 }
 
-// ===== MATCH DETAIL MODAL (Item F) =====
-// One shared <dialog> reused for every match. Click handler is attached
-// globally to .wc-match-card; we read data-match-id, look up the match
-// in DATA.worldCup.matches, render details, and dialog.showModal().
-function ensureMatchDialog() {
-  let dlg = document.getElementById("match-dialog");
-  if (dlg) return dlg;
-  dlg = document.createElement("dialog");
-  dlg.id = "match-dialog";
-  dlg.className = "match-dialog";
-  dlg.setAttribute("aria-modal", "true");
-  dlg.setAttribute("aria-labelledby", "match-dialog-title");
-  dlg.innerHTML = `
-    <div class="match-dialog-card">
-      <div class="match-dialog-head">
-        <h3 class="match-dialog-title" id="match-dialog-title">Match</h3>
-        <button type="button" class="match-dialog-close" aria-label="Close">✕</button>
-      </div>
-      <div class="match-dialog-body"></div>
-    </div>`;
-  document.body.appendChild(dlg);
-  dlg.querySelector(".match-dialog-close").addEventListener("click", () => dlg.close());
-  // Backdrop click → close (native dialog doesn't do this by default)
-  dlg.addEventListener("click", (e) => {
-    const r = dlg.getBoundingClientRect();
-    const inDialog = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-    if (!inDialog) dlg.close();
-  });
-  return dlg;
-}
-
-function openMatchDialog(matchId) {
-  if (!matchId) return;
-  const match = (DATA?.worldCup?.matches || []).find(m => m.id === matchId);
-  if (!match) return;
-  const dlg = ensureMatchDialog();
-  const home = match.home?.name || "TBD";
-  const away = match.away?.name || "TBD";
-  const score = (match.score && match.score.home != null && match.score.away != null)
-    ? `<div class="match-dialog-score" style="font-size:28px;font-weight:700;text-align:center;margin:8px 0">${escapeHtml(home)} ${match.score.home}–${match.score.away} ${escapeHtml(away)}</div>`
-    : `<div class="match-dialog-score" style="font-size:18px;font-weight:600;text-align:center;margin:8px 0">${escapeHtml(home)} vs ${escapeHtml(away)}</div>`;
-  const weatherHtml = match.weather
-    ? `<span class="weather-chip">🌤️ ${escapeHtml(match.weather.temp_c ?? "")}°C · ${escapeHtml(match.weather.wind_kph ?? "")}km/h ${escapeHtml(match.weather.condition || "")}</span>`
-    : "";
-  const ukLines = (match.broadcast?.uk || []).map(b => `<li>🇬🇧 ${escapeHtml(b)}</li>`).join("");
-  const ieLines = (match.broadcast?.ie || []).map(b => `<li>🇮🇪 ${escapeHtml(b)}</li>`).join("");
-  const bcastHtml = (ukLines || ieLines)
-    ? `<div class="match-dialog-section"><h4>Where to watch</h4><ul style="margin:0;padding-left:18px">${ukLines}${ieLines}</ul></div>`
-    : "";
-  const anchorId = match.id ? `wc-m-${match.id}` : "";
-  const shareUrl = anchorId ? `${location.origin}${location.pathname}#${anchorId}` : "";
-
-  dlg.querySelector(".match-dialog-title").textContent = `${home} vs ${away}`;
-  dlg.querySelector(".match-dialog-body").innerHTML = `
-    ${score}
-    <div style="text-align:center;color:var(--text-2);font-size:13px;margin-bottom:6px">
-      ${escapeHtml(wcKickoffLabel(match.date))}${match.venue ? " · 📍 " + escapeHtml(match.venue) : ""}
-    </div>
-    ${weatherHtml ? `<div style="text-align:center">${weatherHtml}</div>` : ""}
-    ${match.group ? `<div class="match-dialog-section"><h4>Stage</h4>Group ${escapeHtml(match.group)}${match.stage && match.stage !== "group" ? " · " + escapeHtml(match.stage) : ""}</div>` : ""}
-    ${bcastHtml}
-    <div class="match-dialog-actions">
-      <button type="button" data-action="share">🔗 Share</button>
-      ${remindBtnHtml({
-        eventKey: `wc-${match.id}`,
-        kickoffISO: match.date,
-        title: `${home} vs ${away} — World Cup 2026`,
-        body: `Kickoff ${wcKickoffLabel(match.date)}${match.venue ? " · " + match.venue : ""}`,
-        url: anchorId ? `/#${anchorId}` : "/",
-      })}
-      ${phoneBtnHtml({
-        eventKey: `wc-${match.id}`,
-        kickoffISO: match.date,
-        title: `${home} vs ${away} — World Cup 2026`,
-        body: `Kickoff ${wcKickoffLabel(match.date)}${match.venue ? " · " + match.venue : ""}`,
-        url: anchorId ? `/#${anchorId}` : "/",
-        venue: match.venue || "",
-      })}
-    </div>
-  `;
-  // Wire action buttons
-  const shareBtn = dlg.querySelector('[data-action="share"]');
-  shareBtn?.addEventListener("click", async () => {
-    if (navigator.share) {
-      try { await navigator.share({ title: `${home} vs ${away}`, text: `${home} vs ${away} — World Cup 2026`, url: shareUrl }); return; } catch { /* fall through */ }
-    }
-    try { await navigator.clipboard.writeText(shareUrl); shareBtn.textContent = "✅ Copied"; setTimeout(() => shareBtn.textContent = "🔗 Share", 1200); }
-    catch {}
-  });
-  // Remind-me button inside the dialog is wired by the global binder below.
-  bindGlobalFixtureButtons();
-  if (typeof dlg.showModal === "function") dlg.showModal();
-  else dlg.setAttribute("open", "");
-}
-
-// Delegate clicks on WC cards (anywhere outside the share/remind buttons) → modal.
-function bindMatchCardClicks() {
-  if (document.__matchClickBound) return;
-  document.__matchClickBound = true;
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".wc-share-btn, .remind-btn, .share-btn-inline, .remind-btn__popover, .phone-btn-inline");
-    if (btn) return; // let the button handlers run
-    const card = e.target.closest(".wc-match-card");
-    if (!card) return;
-    const id = card.getAttribute("data-match-id");
-    if (id) openMatchDialog(id);
-  });
-}
-
 
 // ---------- Rugby panels ----------
 function renderRugbyMatches(elId, d, label, { withLogos = false, schoolsFav = false, favTeams = [] } = {}) {
@@ -2726,7 +2615,6 @@ function buildSearchIndex(all) {
   const sections = [
     { id: "home",     title: "Home",        type: "section", icon: "🏠", desc: "Hero + latest action" },
     { id: "upcoming", title: "Upcoming",    type: "section", icon: "📅", desc: "Upcoming fixtures" },
-    { id: "wc",       title: "World Cup",   type: "section", icon: "⚽", desc: "FIFA World Cup 2026" },
     { id: "adam",     title: "Adam",        type: "section", icon: "🟢⚪", desc: "Adam's next match + form" },
     { id: "f1",       title: "Formula 1",   type: "section", icon: "🏎️", desc: "F1 race weekend + standings" },
     { id: "rugby",    title: "Rugby",       type: "section", icon: "🏉", desc: "International, provinces, schools" },
@@ -2734,20 +2622,6 @@ function buildSearchIndex(all) {
     { id: "news",     title: "News",        type: "section", icon: "📰", desc: "Headlines across F1 + rugby" },
   ];
   for (const s of sections) out.push({ kind: "section", anchor: s.id, label: s.title, sub: s.desc, icon: s.icon, search: `${s.title} ${s.desc}` });
-
-  // WC matches
-  for (const m of (all?.worldCup?.matches || [])) {
-    if (!m.id) continue;
-    out.push({
-      kind: "wc",
-      anchor: `wc-m-${m.id}`,
-      label: `${m.home?.name || "TBD"} vs ${m.away?.name || "TBD"}`,
-      sub: `${wcKickoffLabel(m.date)}${m.group ? ` · Group ${m.group}` : ""}${m.stage && m.stage !== "group" ? ` · ${m.stage}` : ""}`,
-      icon: "⚽",
-      search: `${m.home?.name || ""} ${m.away?.name || ""} ${m.stage || ""} ${m.group || ""} ${m.venue || ""}`,
-      ts: new Date(m.date).getTime(),
-    });
-  }
 
   // Club matches (results + fixtures) — only Adam's (involves_smc !== false)
   const clubMatches = [
@@ -3158,19 +3032,6 @@ function sportActivity(all) {
 function reorderSections(all) {
   const order = sportActivity(all);
 
-  // World Cup placement: pinned right after Adam during the tournament window,
-  // hidden via display:none on body.wc-phase-post (CSS rule below).
-  const phase = wcPhase();
-  const wcSection = document.getElementById("wc");
-  if (wcSection) {
-    if (phase === "post") {
-      wcSection.style.display = "none";
-    } else {
-      wcSection.style.display = "";
-      wcSection.style.setProperty("order", phase === "during" ? "2" : "12");
-    }
-  }
-
   // 1. Reorder the section panels via CSS `order`
   //    Home = 0, Adam = 1 (always right after Home), sports = 2..N, News trails.
   //    News MUST be assigned an order explicitly: otherwise it inherits `0`
@@ -3178,7 +3039,7 @@ function reorderSections(all) {
   document.getElementById("home")?.style.setProperty("order", "0");
   document.getElementById("adam")?.style.setProperty("order", "1");
   document.getElementById("news")?.style.setProperty("order", "100");
-  const sportBase = phase === "during" ? 3 : 2; // make room if WC pinned at 2
+  const sportBase = 2;
   order.forEach((it, i) => {
     const sec = document.getElementById(it.id);
     if (sec) sec.style.order = String(i + sportBase);
@@ -3190,7 +3051,6 @@ function reorderSections(all) {
     const indicator = document.getElementById("nav-indicator");
     const home = tabsWrap.querySelector('[data-target="home"]');
     const upcoming = tabsWrap.querySelector('[data-target="upcoming"]');
-    const wcTab = tabsWrap.querySelector('[data-target="wc"]');
     const adam = tabsWrap.querySelector('[data-target="adam"]');
     const news = tabsWrap.querySelector('[data-target="news"]');
     const sportTabs = order
@@ -3198,13 +3058,6 @@ function reorderSections(all) {
       .filter(Boolean);
     if (home) tabsWrap.appendChild(home);
     if (upcoming) tabsWrap.appendChild(upcoming);
-    if (wcTab) {
-      if (phase === "post") wcTab.style.display = "none";
-      else {
-        wcTab.style.display = "";
-        tabsWrap.appendChild(wcTab);
-      }
-    }
     if (adam) tabsWrap.appendChild(adam);
     sportTabs.forEach(t => tabsWrap.appendChild(t));
     if (news) tabsWrap.appendChild(news);
@@ -3230,8 +3083,6 @@ function reorderSections(all) {
     requestAnimationFrame(window.__refreshNavIndicator);
   }
 }
-// ===== WORLD CUP =====
-// Extracted to wc.js in Wave 4 to keep this file under 2000 lines.
 
 
 // ---------- Boot ----------
@@ -3300,7 +3151,6 @@ function rerenderAll() {
   renderFeed(buildFeed(DATA));
   renderFeed(buildUpcoming(DATA), "upcoming-feed", "No upcoming fixtures — check back after the next refresh.", { withSoonPills: true });
   renderAdam(DATA);
-  renderWcAdamHero(DATA);
   renderF1(DATA.f1, DATA.f1Standings);
   renderRugbyMatches("intl-body", DATA.intl, "international rugby", { withLogos: true });
   renderRugbyMatches("nations-body", DATA.nations, "Nations Championship", { withLogos: true, favTeams: ["Ireland"] });
@@ -3308,11 +3158,8 @@ function rerenderAll() {
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
   renderRugbyTables(DATA);
   renderClub(DATA.club);
-  renderWorldCup(DATA);
-  renderWcTopbarChip(DATA);
   reorderSections(DATA);
   bindGlobalFixtureButtons();
-  bindMatchCardClicks();
   bindRemindersPanel();
   // Filter chips per section. Run AFTER rendering so DOM rows exist.
   applyFilterChips({ containerSelector: "#intl-body",    attr: "data-comp", storageKey: "adam-flt-intl",    allLabel: "All" });
@@ -3329,7 +3176,7 @@ function rerenderAll() {
   registerSW();
   bumpVisitCount();
 
-  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, worldCup, rugbyTables, nations] = await Promise.all([
+  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, rugbyTables, nations] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.f1Standings),
     loadJson(DATA_FILES.intl),
@@ -3339,15 +3186,14 @@ function rerenderAll() {
     loadJson(DATA_FILES.watch),
     loadJson(DATA_FILES.club),
     loadJson(DATA_FILES.highlights),
-    loadJson(DATA_FILES.worldCup),
     loadJson(DATA_FILES.rugbyTables),
     loadJson(DATA_FILES.nations),
   ]);
-  DATA = { f1, f1Standings, intl, prov, schools, news, club, worldCup, rugbyTables, nations };
+  DATA = { f1, f1Standings, intl, prov, schools, news, club, rugbyTables, nations };
   WATCH = watch || {};
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
-  const stamps = [f1, intl, prov, schools, news, club, worldCup, nations].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
+  const stamps = [f1, intl, prov, schools, news, club, nations].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   LATEST_STAMP = stamps.length ? stamps.sort().pop() : null;
   renderTopbarFreshness();
   startFreshnessTicker();
@@ -3360,7 +3206,7 @@ function rerenderAll() {
   bindSearch();
   applyFadeIn();
 
-  // Deep-link support: if the user landed with #wc-m-XYZ or any other anchor,
+  // Deep-link support: if the user landed with an anchor (e.g. #club-m-XYZ),
   // scroll-and-glow once the initial render is done. Also react to subsequent
   // hashchange events (e.g. share-button copy → paste-and-go).
   window.addEventListener("hashchange", handleDeepLink);

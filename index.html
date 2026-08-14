@@ -17,12 +17,10 @@
 <meta name="robots" content="noindex, nofollow"/>
 <title>Adam's Sports Dashboard</title>
 <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-<link rel="preload" href="styles.css?v=41" as="style" fetchpriority="high"/>
-<link rel="preload" href="wc.css?v=39" as="style"/>
+<link rel="preload" href="styles.css?v=43" as="style" fetchpriority="high"/>
 <link rel="preload" href="premium.css?v=40" as="style"/>
-<link rel="preload" href="app.js" as="script" fetchpriority="high"/>
-<link rel="stylesheet" href="styles.css?v=41"/>
-<link rel="stylesheet" href="wc.css?v=39"/>
+<link rel="preload" href="app.js?v=43" as="script" fetchpriority="high"/>
+<link rel="stylesheet" href="styles.css?v=43"/>
 <link rel="stylesheet" href="premium.css?v=40"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg"/>
@@ -45,7 +43,6 @@
   <nav class="nav-tabs" id="nav-tabs" role="tablist" aria-label="Sections">
     <a class="nav-tab active" data-target="home"     href="#home"     role="tab" aria-selected="true">Home</a>
     <a class="nav-tab nav-tab--upcoming" data-target="upcoming" data-nav-inline href="#upcoming" role="tab"><span aria-hidden="true">📅</span> Upcoming</a>
-    <a class="nav-tab nav-tab--wc" data-target="wc" href="#wc" role="tab"><span aria-hidden="true">⚽</span> World Cup</a>
     <a class="nav-tab nav-tab--adam" data-target="adam" href="#adam" role="tab"><span aria-hidden="true">🟢⚪</span> Adam</a>
     <a class="nav-tab"        data-target="f1"       href="#f1"       role="tab">F1</a>
     <a class="nav-tab"        data-target="rugby"  href="#rugby"  role="tab">Rugby</a>
@@ -55,7 +52,6 @@
   </nav>
 
   <div class="topbar-actions">
-    <a href="#wc" id="wc-topbar-chip" class="wc-topbar-chip" hidden aria-label="World Cup countdown — jump to World Cup section"></a>
     <button id="search-btn" class="btn btn-icon" aria-label="Search (Ctrl+K)" title="Search (Ctrl+K)">🔍</button>
     <button id="reminders-btn" class="btn btn-icon" data-count="0" aria-label="My reminders" title="My reminders">🔔</button>
     <button id="theme-btn" class="btn btn-icon" aria-label="Toggle theme" title="Toggle theme">🌓</button>
@@ -112,25 +108,6 @@
         <li class="empty">Loading upcoming fixtures…</li>
       </ul>
     </section>
-  </div>
-</section>
-
-<!-- WORLD CUP ========================================================= -->
-<section class="section section-wc" id="wc">
-  <div class="section-head section-head--page">
-    <div class="section-title">
-      <span class="accent-bar accent-bar--wc"></span>
-      <h2>⚽ FIFA World Cup 2026</h2>
-    </div>
-    <p class="section-sub">USA · Canada · Mexico · 11 Jun – 19 Jul · <img class="wc-flag wc-flag--inline" src="https://flagcdn.com/br.svg" alt="Brazil flag" loading="lazy" decoding="async"/> Adam backs Brazil</p>
-  </div>
-  <div id="wc-body">
-    <div class="skeleton-grid" aria-busy="true" aria-label="Loading World Cup">
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-    </div>
   </div>
 </section>
 
@@ -303,7 +280,6 @@
   <p>Built for Adam · refreshes every 30 min via GitHub Actions</p>
 </footer>
 
-<script src="wc.js?v=39" defer></script>
-<script src="app.js?v=39" defer></script>
+<script src="app.js?v=43" defer></script>
 </body>
 </html>

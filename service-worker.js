@@ -1,5 +1,5 @@
 // Adam's Sports Dashboard service worker
-const VERSION = "v42-premium";
+const VERSION = "v43-no-wc";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -7,10 +7,8 @@ const SHELL = [
   "./",
   "index.html",
   "styles.css",
-  "wc.css",
   "premium.css",
   "app.js",
-  "wc.js",
   "manifest.json",
   "icons/icon-192.svg",
   "icons/icon-512.svg",
@@ -130,7 +128,7 @@ const DATA_URLS = [
   "data/f1.json", "data/f1_standings.json",
   "data/intl_rugby.json", "data/provinces.json", "data/schools.json",
   "data/dublin_club.json", "data/news.json", "data/watch.json",
-  "data/highlights.json", "data/world_cup.json", "data/rugby_tables.json",
+  "data/highlights.json", "data/rugby_tables.json",
   "data/nations_championship.json",
 ];
 
@@ -197,7 +195,7 @@ self.addEventListener("fetch", (e) => {
 
   // Network-first for the core shell assets (JS / CSS) so feature rollouts
   // don't get held back by yesterday's cache.
-  if (url.pathname.endsWith("/app.js") || url.pathname.endsWith("/wc.js") || url.pathname.endsWith("/styles.css") || url.pathname.endsWith("/wc.css") || url.pathname.endsWith("/premium.css") || url.pathname.endsWith("/manifest.json")) {
+  if (url.pathname.endsWith("/app.js") || url.pathname.endsWith("/styles.css") || url.pathname.endsWith("/premium.css") || url.pathname.endsWith("/manifest.json")) {
     e.respondWith(networkFirst(req, SHELL_CACHE));
     return;
   }

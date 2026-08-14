@@ -1,7 +1,7 @@
-# Adam's Sports Dashboard 🏁🏉⚽
+# Adam's Sports Dashboard 🏁🏉
 
 A personal, install-as-an-app sports dashboard for Adam — tracking Formula 1,
-international & Irish rugby, the FIFA World Cup 2026, and the 2026 rugby Nations
+international & Irish rugby, and the 2026 rugby Nations
 Championship. Everything is sorted by recency so the most recent action is always
 at the top, with Adam's teams highlighted throughout.
 
@@ -9,10 +9,6 @@ at the top, with Adam's teams highlighted throughout.
 (also https://mgarrigan-hue.github.io/adam-sports-dashboard/)
 
 ## Features
-- ⚽ **World Cup 2026** — forward-looking view: current-stage hero (Brazil's next
-  match + countdown to the final), today's matches, a real knockout bracket
-  (Round of 16 → Final) with penalty results and TBD slots, group standings with
-  qualification-zone colours, and a live top-scorers table.
 - 🏉 **Rugby** — international, Irish provinces (URC), Leinster schools, Adam's
   club (St Mary's College RFC), plus the 2026 Nations Championship.
 - 🏎️ **Formula 1** — race-weekend timeline, standings, recent races.
@@ -33,7 +29,6 @@ at the top, with Adam's teams highlighted throughout.
 | International rugby | BBC Sport rugby union pages |
 | Irish provinces (URC) | BBC Sport rugby union pages |
 | Leinster schools | leinsterrugby.ie + schoolsrugby.ie |
-| FIFA World Cup 2026 | ESPN hidden API (`soccer/fifa.world`) — live scores, knockout bracket, penalties |
 | Nations Championship 2026 | ESPN hidden API (`rugby/17567`) — results, fixtures, live scores |
 
 ## Local development
@@ -43,7 +38,6 @@ python scripts/fetch_f1.py
 python scripts/fetch_intl_rugby.py
 python scripts/fetch_provinces.py
 python scripts/fetch_schools.py
-node scripts/fetch_world_cup.mjs             # World Cup (real ESPN data, Node ≥18)
 node scripts/fetch_nations_championship.mjs  # Nations Championship (ESPN rugby)
 
 # 2. serve the site
@@ -55,4 +49,3 @@ python -m http.server 8000
 Adam's teams are highlighted automatically:
 - 🏎️ F1: **Red Bull / VCARB / Isack Hadjar**
 - 🏉 Rugby: **Leinster** (provinces) · **Ireland** (Nations Championship)
-- ⚽ World Cup: **Brazil**

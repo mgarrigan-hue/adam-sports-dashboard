@@ -1941,6 +1941,17 @@ body.banner-visible.banner-visible--ios { padding-bottom: 180px; }
   cursor: pointer; margin-left: 4px;
 }
 .phone-btn-inline:hover { background: var(--surface-strong); color: var(--text); border-color: var(--border-strong); }
+
+/* Inline 🔗 share button (feeds, fixtures, deep-linking). */
+.share-btn-inline {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-2); border-radius: 999px;
+  width: 26px; height: 26px; padding: 0; margin-left: 4px;
+  cursor: pointer; font-size: 13px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.share-btn-inline:hover { background: var(--surface-strong); color: var(--text); border-color: var(--border-strong); }
 .phone-sheet { border: 0; padding: 0; background: transparent; max-width: min(420px, calc(100vw - 32px)); }
 .phone-sheet::backdrop { background: rgba(8,10,18,0.66); backdrop-filter: blur(4px); }
 .phone-sheet__card {

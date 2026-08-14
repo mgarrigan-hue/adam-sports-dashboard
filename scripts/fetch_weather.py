@@ -32,7 +32,6 @@ FORECAST = "https://api.open-meteo.com/v1/forecast"
 
 # Files we enrich. Each entry: (path, list keys, date key, venue key)
 TARGETS = [
-    (DATA / "world_cup.json", [("matches",)], "date", "venue"),
     (DATA / "intl_rugby.json", [("fixtures",)], "date", "venue"),
     (DATA / "provinces.json", [("fixtures",)], "date", "venue"),
     (DATA / "schools.json", [("fixtures",)], "date", "venue"),

@@ -45,11 +45,11 @@ jobs:
           python scripts/fetch_schools.py
           python scripts/fetch_dublin_club.py
           python scripts/fetch_news.py
-          node scripts/fetch_world_cup.mjs
           node scripts/fetch_nations_championship.mjs
-          # Live commentary: self-gates to Brazil matches in-window. Cheap no-op otherwise.
-          python scripts/fetch_wc_live.py
           python scripts/fetch_rugby_tables.py
+          # Must run after fetch_schools.py — "local" tournament sources are
+          # derived from the data files fetched above.
+          node scripts/fetch_tournaments.mjs
           python scripts/fetch_weather.py
           exit 0
 

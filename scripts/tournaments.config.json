@@ -1,0 +1,64 @@
+{
+  "_comment": [
+    "Config-driven 'big tournament' engine. Each entry auto-appears on the site as its",
+    "own section + nav tab when the tournament is approaching (see lead_days), stays pinned",
+    "while it is live, sticks around for a short recap, then retires itself automatically.",
+    "Nothing here needs a code change — add a row and the dashboard picks it up.",
+    "",
+    "Fields:",
+    "  id         unique slug (used for the DOM id + deep-link anchor)",
+    "  label      display name",
+    "  emoji      shown in the nav tab + section heading",
+    "  blurb      one-line subtitle under the heading",
+    "  start/end  YYYY-MM-DD, inclusive tournament window",
+    "  lead_days  how many days BEFORE start the section appears (countdown mode)",
+    "  recap_days how many days AFTER end the section lingers (results mode)",
+    "  fav_teams  teams to highlight in the fixture tables",
+    "  source     { type: 'espn', sport, league }  -> ESPN scoreboard API",
+    "             { type: 'local', file, match }   -> derive from an existing data/*.json",
+    "                                                by matching the competition name",
+    "",
+    "Verified ESPN rugby league IDs: 180659 Six Nations · 164205 Rugby World Cup ·",
+    "244293 The Rugby Championship · 17567 Nations Championship.",
+    "(Note 270559 is French Top 14, not the URC.) ESPN only publishes fixtures a few",
+    "months out, so an empty feed for a future tournament is expected, not a bug."
+  ],
+  "tournaments": [
+    {
+      "id": "six-nations-2027",
+      "label": "Six Nations 2027",
+      "emoji": "🏆",
+      "blurb": "Ireland's Championship campaign — five rounds, five weekends",
+      "start": "2027-02-06",
+      "end": "2027-03-20",
+      "lead_days": 45,
+      "recap_days": 14,
+      "fav_teams": ["Ireland"],
+      "source": { "type": "espn", "sport": "rugby", "league": "180659" }
+    },
+    {
+      "id": "leinster-schools-senior-cup-2027",
+      "label": "Leinster Schools Senior Cup 2027",
+      "emoji": "🎓",
+      "blurb": "The one that matters — St Mary's College road to Lansdowne Road",
+      "start": "2027-01-27",
+      "end": "2027-03-17",
+      "lead_days": 30,
+      "recap_days": 14,
+      "fav_teams": ["St Mary's College"],
+      "source": { "type": "local", "file": "schools.json", "match": "Senior Cup" }
+    },
+    {
+      "id": "rugby-world-cup-2027",
+      "label": "Rugby World Cup 2027",
+      "emoji": "🏆",
+      "blurb": "Australia · 24 teams · the big one",
+      "start": "2027-10-01",
+      "end": "2027-11-13",
+      "lead_days": 90,
+      "recap_days": 21,
+      "fav_teams": ["Ireland"],
+      "source": { "type": "espn", "sport": "rugby", "league": "164205" }
+    }
+  ]
+}

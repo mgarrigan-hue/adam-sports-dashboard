@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Adam's Sports Dashboard — Tournament Engine styles
+   --------------------------------------------------------------------------
+   Deliberately small. Tournament fixture tables reuse the existing rugby
+   renderer, so all we add here is the section identity (gold = "special
+   event") and the phase-aware hero.
+   ========================================================================== */
+
+/* Accent bar + nav tab — gold, matching the site's primary accent so a
+   tournament visually outranks the everyday sport sections. */
+.accent-bar--tourn {
+  background: linear-gradient(180deg, var(--accent, #ffcb05), #ff9f43);
+  box-shadow: 0 0 14px rgba(255, 203, 5, 0.45);
+}
+
+.nav-tab--tourn:not(.active) {
+  background: rgba(255, 203, 5, 0.13);
+  color: #ffe07a;
+  box-shadow: inset 0 0 0 1px rgba(255, 203, 5, 0.40);
+  font-weight: 600;
+}
+.nav-tab--tourn:not(.active):hover { background: rgba(255, 203, 5, 0.22); color: #fff2bd; }
+
+/* Feed tag for tournament matches in the Latest / Upcoming lists */
+.feed-tag.cup { background: rgba(255, 203, 5, 0.18); color: #ffe07a; border-color: rgba(255, 203, 5, 0.45); }
+
+/* -------------------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------------------- */
+.tourn-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 203, 5, 0.28);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(255, 203, 5, 0.16) 0%, rgba(255, 203, 5, 0) 60%),
+    var(--card, rgba(255, 255, 255, 0.04));
+}
+
+.tourn-hero-main { position: relative; z-index: 1; }
+
+.tourn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.tourn-pill--soon  { background: rgba(255, 203, 5, 0.16);  color: #ffe07a; box-shadow: inset 0 0 0 1px rgba(255, 203, 5, 0.40); }
+.tourn-pill--live  { background: rgba(255, 59, 48, 0.16);  color: #ff9a93; box-shadow: inset 0 0 0 1px rgba(255, 59, 48, 0.45); }
+.tourn-pill--recap { background: rgba(176, 122, 255, 0.16); color: #d8b8ff; box-shadow: inset 0 0 0 1px rgba(176, 122, 255, 0.40); }
+
+/* Pulsing dot on the LIVE pill */
+.tourn-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #ff3b30;
+  box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
+  animation: tourn-pulse 1.8s ease-out infinite;
+}
+@keyframes tourn-pulse {
+  70%  { box-shadow: 0 0 0 8px rgba(255, 59, 48, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+}
+
+/* Countdown number — the emotional centre of the "coming up" state */
+.tourn-count {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 10px 0 2px;
+}
+.tourn-count strong {
+  font-size: clamp(2.2rem, 8vw, 3.2rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--accent, #ffcb05), #ff9f43);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tourn-count span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted, #9aa4b8);
+}
+
+.tourn-hero-sub {
+  margin: 8px 0 0;
+  font-size: 0.86rem;
+  color: var(--muted, #9aa4b8);
+}
+.tourn-hero-line { margin: 8px 0 0; font-size: 0.92rem; }
+.tourn-hero-line--hot { color: #ff9a93; font-weight: 600; }
+
+.tourn-fav {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted, #9aa4b8);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Progress bar for a tournament in flight */
+.tourn-progress {
+  margin-top: 12px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.tourn-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent, #ffcb05), #ff9f43);
+  transition: width 0.6s ease;
+}
+
+/* Collapse a dead column: before the first match there are no results, and
+   months out there may be no published fixtures either. Scoped to tournament
+   sections so the regular rugby panels are untouched. */
+.section--tourn .panel-body[data-empty="results"] .rugby-col:first-child,
+.section--tourn .panel-body[data-empty="fixtures"] .rugby-col:last-child { display: none; }
+@media (min-width: 900px) {
+  .card-wide .panel-body[data-empty="results"] .rugby-split,
+  .card-wide .panel-body[data-empty="fixtures"] .rugby-split { grid-template-columns: 1fr; }
+}
+
+.tourn-empty {
+  margin: 0;
+  padding: 18px 4px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--muted, #9aa4b8);
+}
+
+/* Phase tints on the whole section head */
+.section--tourn[data-phase="live"]  .accent-bar--tourn { background: linear-gradient(180deg, #ff3b30, #ff9f43); box-shadow: 0 0 14px rgba(255, 59, 48, 0.45); }
+.section--tourn[data-phase="recap"] .accent-bar--tourn { background: linear-gradient(180deg, #b07aff, #d8b8ff); box-shadow: 0 0 14px rgba(176, 122, 255, 0.35); }
+.section--tourn[data-phase="live"]  .tourn-hero { border-color: rgba(255, 59, 48, 0.30); }
+.section--tourn[data-phase="recap"] .tourn-hero { border-color: rgba(176, 122, 255, 0.28); }
+
+/* Light theme */
+:root[data-theme="light"] .tourn-hero { border-color: rgba(214, 158, 0, 0.35); }
+:root[data-theme="light"] .tourn-count span,
+:root[data-theme="light"] .tourn-hero-sub { color: #5b6478; }
+:root[data-theme="light"] .nav-tab--tourn:not(.active) { color: #8a6d00; background: rgba(255, 203, 5, 0.22); }
+:root[data-theme="light"] .tourn-pill--soon { color: #8a6d00; }
+
+@media (max-width: 520px) {
+  .tourn-hero { padding: 15px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tourn-dot { animation: none; }
+  .tourn-progress > span { transition: none; }
+}

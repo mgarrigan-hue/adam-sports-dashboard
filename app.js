@@ -21,6 +21,7 @@ const DATA_FILES = {
   highlights: "data/highlights.json",
   rugbyTables: "data/rugby_tables.json",
   nations: "data/nations_championship.json",
+  tournaments: "data/tournaments.json",
 };
 
 let WATCH = {};
@@ -1188,6 +1189,25 @@ function _collectFeedItems(all) {
     (all.prov.results || []).forEach(m => pushRugby(m, "urc", "URC"));
     (all.prov.fixtures || []).forEach(m => pushRugby(m, "urc", "URC"));
   }
+  // Tournament spotlights feed the Latest + Upcoming lists too, so a big
+  // tournament is visible from the home screen without hunting for its tab.
+  // De-duplicated against the regular feeds, since e.g. the Rugby World Cup
+  // also arrives inside intl_rugby.json.
+  if (window.TournamentEngine) {
+    const mkey = (m) => `${String(m.date || "").slice(0, 10)}|${String(m.home || "").toLowerCase()}|${String(m.away || "").toLowerCase()}`;
+    const seen = new Set([
+      ...(all.intl?.results || []), ...(all.intl?.fixtures || []),
+      ...(all.prov?.results || []), ...(all.prov?.fixtures || []),
+      ...(all.schools?.results || []), ...(all.schools?.fixtures || []),
+      ...(all.nations?.results || []), ...(all.nations?.fixtures || []),
+    ].map(mkey));
+    for (const { m, t } of window.TournamentEngine.matches(all)) {
+      const k = mkey(m);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      pushRugby({ ...m, competition: m.competition || t.label }, "cup", t.label);
+    }
+  }
   if (all.schools) {
     (all.schools.results || []).forEach(m => items.push({
       date: m.date, tag: "schools",
@@ -1610,6 +1630,31 @@ function collectUpcoming(all) {
     isU14: isU14(m.competition || ""),
     watch: m.competition || "Dublin Club",
   }));
+  // Tournament fixtures ride the hero carousel + Upcoming list, deduped
+  // against the regular feeds so a match never shows twice.
+  if (window.TournamentEngine) {
+    const ukey = (m) => `${String(m.date || "").slice(0, 10)}|${String(m.home || "").toLowerCase()}|${String(m.away || "").toLowerCase()}`;
+    const seen = new Set([
+      ...(all.intl?.fixtures || []),
+      ...(all.prov?.fixtures || []),
+      ...(all.schools?.fixtures || []),
+      ...(all.nations?.fixtures || []),
+    ].map(ukey));
+    for (const { m, t, isResult } of window.TournamentEngine.matches(all)) {
+      if (isResult || seen.has(ukey(m))) continue;
+      seen.add(ukey(m));
+      const fav = (t.fav_teams || []).some(f =>
+        String(m.home || "").toLowerCase().includes(String(f).toLowerCase()) ||
+        String(m.away || "").toLowerCase().includes(String(f).toLowerCase()));
+      upcoming.push({
+        date: m.date, label: `Next Up · ${t.label}`, sport: "rugby",
+        title: `${t.emoji || "🏆"} ${m.home} v ${m.away}`,
+        meta: m.competition || t.label,
+        boost: fav,
+        watch: m.competition || t.label,
+      });
+    }
+  }
   return upcoming
     .filter(e => e.date && new Date(e.date).getTime() > Date.now())
     .sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -2623,6 +2668,31 @@ function buildSearchIndex(all) {
   ];
   for (const s of sections) out.push({ kind: "section", anchor: s.id, label: s.title, sub: s.desc, icon: s.icon, search: `${s.title} ${s.desc}` });
 
+  // Tournament spotlights — searchable as sections and as individual matches,
+  // so "world cup" jumps straight to the section while a team name finds the tie.
+  if (window.TournamentEngine) {
+    for (const { t, phase } of window.TournamentEngine.visible(all)) {
+      const anchor = window.TournamentEngine.sectionId(t);
+      out.push({
+        kind: "section", anchor, label: t.label,
+        sub: phase === "live" ? "On now" : phase === "soon" ? "Coming up" : "Just finished",
+        icon: t.emoji || "🏆",
+        search: `${t.label} ${t.blurb || ""} tournament cup`,
+      });
+      for (const m of [...(t.results || []), ...(t.fixtures || [])]) {
+        out.push({
+          kind: "rugby",
+          anchor: stableMatchId("rugby-m", m),
+          label: `${m.home || "TBD"} v ${m.away || "TBD"}`,
+          sub: `${m.competition || t.label}${m.date ? ` · ${fmtDate(m.date)}` : ""}${m.home_score != null ? ` · ${m.home_score}-${m.away_score}` : ""}`,
+          icon: t.emoji || "🏆",
+          search: `${m.home || ""} ${m.away || ""} ${m.competition || ""} ${t.label}`,
+          ts: m.date ? new Date(m.date).getTime() : 0,
+        });
+      }
+    }
+  }
+
   // Club matches (results + fixtures) — only Adam's (involves_smc !== false)
   const clubMatches = [
     ...((all?.club?.results) || []).map(m => ({ m, isResult: true })),
@@ -3025,6 +3095,26 @@ function sportActivity(all) {
     { id: "rugby", score: scoreFor(rugby.lastPast, rugby.nextFuture) },
     { id: "club",  score: scoreFor(club.lastPast,  club.nextFuture) },
   ];
+
+  // Tournament spotlights join the same ranking, so they get a real CSS
+  // `order`, a nav-tab position and the "Most active" chip for free. Without
+  // this they'd inherit order:0 and render directly under the hero.
+  //
+  // Ranked by phase rather than by nearest fixture: a World Cup that is
+  // actually under way is the most important thing on the page, and should
+  // outrank a regular sport that merely has a match today (-1).
+  if (window.TournamentEngine) {
+    const tNow = window.TournamentEngine.now().getTime();
+    for (const { t, phase } of window.TournamentEngine.visible(all)) {
+      const start = new Date(`${t.start}T00:00:00Z`).getTime();
+      let score;
+      if (phase === "live") score = -2;
+      else if (phase === "soon") score = Math.max(0, (start - tNow) / DAY) * 0.85;
+      else score = 3; // recap — recent, but yields to anything currently on
+      items.push({ id: window.TournamentEngine.sectionId(t), score });
+    }
+  }
+
   items.sort((a, b) => a.score - b.score);
   return items;
 }
@@ -3158,6 +3248,9 @@ function rerenderAll() {
   renderRugbyMatches("schools-body", DATA.schools, "schools", { withLogos: false, schoolsFav: true });
   renderRugbyTables(DATA);
   renderClub(DATA.club);
+  // Must run BEFORE reorderSections so freshly-injected tournament sections
+  // and nav tabs are present when ordering + the nav indicator are computed.
+  if (typeof renderTournaments === "function") renderTournaments(DATA);
   reorderSections(DATA);
   bindGlobalFixtureButtons();
   bindRemindersPanel();
@@ -3176,7 +3269,7 @@ function rerenderAll() {
   registerSW();
   bumpVisitCount();
 
-  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, rugbyTables, nations] = await Promise.all([
+  const [f1, f1Standings, intl, prov, schools, news, watch, club, highlights, rugbyTables, nations, tournaments] = await Promise.all([
     loadJson(DATA_FILES.f1),
     loadJson(DATA_FILES.f1Standings),
     loadJson(DATA_FILES.intl),
@@ -3188,12 +3281,13 @@ function rerenderAll() {
     loadJson(DATA_FILES.highlights),
     loadJson(DATA_FILES.rugbyTables),
     loadJson(DATA_FILES.nations),
+    loadJson(DATA_FILES.tournaments),
   ]);
-  DATA = { f1, f1Standings, intl, prov, schools, news, club, rugbyTables, nations };
+  DATA = { f1, f1Standings, intl, prov, schools, news, club, rugbyTables, nations, tournaments };
   WATCH = watch || {};
   HIGHLIGHTS = highlights || { competitions: {}, matches: {} };
 
-  const stamps = [f1, intl, prov, schools, news, club, nations].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
+  const stamps = [f1, intl, prov, schools, news, club, nations, tournaments].map(d => d?.generated_at || d?.fetched_at).filter(Boolean);
   LATEST_STAMP = stamps.length ? stamps.sort().pop() : null;
   renderTopbarFreshness();
   startFreshnessTicker();

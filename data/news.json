@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-08-17T08:05:46Z",
+  "generated_at": "2026-08-17T09:06:55Z",
   "items": [
+    {
+      "title": "How to follow Dutch Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Dutch Grand Prix at Zandvoort, from 21-23 August.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/clyeq93y903o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-08-17T09:01:42Z"
+    },
     {
       "title": "Dutch GP in pictures as F1 prepares for Zandvoort farewell",
       "summary": "A selection of images from the Dutch Grand Prix, as Zandvoort prepares to host a Formula 1 race for the final time.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-07-29T11:04:52Z"
-    },
-    {
-      "title": "Five things we've learned from first half of F1 season",
-      "summary": "BBC F1 correspondent Andrew Benson analyses the five key things we've learned from the 2026 season so far.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/clyj898j2p0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-07-29T07:29:19Z"
     }
   ]
 }

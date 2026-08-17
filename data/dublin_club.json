@@ -1,6 +1,178 @@
 {
   "club": "St Mary's College RFC",
   "results": [],
-  "fixtures": [],
-  "fetched_at": "2026-08-17T22:48:22+00:00"
+  "fixtures": [
+    {
+      "date": "2026-08-21T19:45:00+01:00",
+      "home": "St Marys College RFC 1",
+      "away": "Old Belvedere 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-08-26T20:00:00+01:00",
+      "home": "Dublin University 1",
+      "away": "St Marys College RFC 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-05T15:00:00+01:00",
+      "home": "Terenure College RFC 1",
+      "away": "St Marys College RFC 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T13:00:00+01:00",
+      "home": "Bective Rangers 2",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T14:30:00+01:00",
+      "home": "Lansdowne",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Clontarf",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "St Marys College RFC 3",
+      "away": "Navan 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T14:30:00+01:00",
+      "home": "Cork Constitution",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T15:00:00+01:00",
+      "home": "Old Wesley 3",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-24T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Terenure College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-31T14:30:00+01:00",
+      "home": "Old Wesley",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-07T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Young Munster",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-28T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "UCD",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:30:00+01:00",
+      "home": "Old Belvedere",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-12T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Ballynahinch",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-09T14:30:00+01:00",
+      "home": "Ballynahinch",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Old Belvedere",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-30T14:30:00+01:00",
+      "home": "UCD",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T14:30:00+01:00",
+      "home": "Young Munster",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    }
+  ],
+  "fetched_at": "2026-08-17T23:16:43+00:00"
 }

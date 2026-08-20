@@ -48,12 +48,30 @@
       "involves_smc": true
     },
     {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Greystones 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-03T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Clontarf",
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "Seapoint 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
       "involves_smc": true
     },
     {
@@ -84,6 +102,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Tullamore 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-24T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Terenure College RFC",
@@ -102,6 +129,24 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-31T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Blackrock College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-07T14:30:00+01:00",
+      "home": "Clontarf 4",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-07T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Young Munster",
@@ -111,12 +156,39 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-14T14:30:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Stillorgan-Rathfarnham 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-28T14:30:00+01:00",
+      "home": "Dublin University 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-28T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "UCD",
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:00:00+01:00",
+      "home": "Greystones 4",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
       "involves_smc": true
     },
     {
@@ -139,6 +211,15 @@
     },
     {
       "date": "2027-01-09T14:30:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Seapoint 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-09T14:30:00+01:00",
       "home": "Ballynahinch",
       "away": "St Marys College RFC",
       "home_score": null,
@@ -148,11 +229,29 @@
     },
     {
       "date": "2027-01-16T14:30:00+01:00",
+      "home": "Tullamore 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Old Belvedere",
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-30T14:30:00+01:00",
+      "home": "Blackrock College RFC 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
       "involves_smc": true
     },
     {
@@ -172,7 +271,16 @@
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
       "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Clontarf 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-20T13:41:06+00:00"
+  "fetched_at": "2026-08-20T14:29:30+00:00"
 }

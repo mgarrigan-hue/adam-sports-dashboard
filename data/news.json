@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-08-21T12:34:30Z",
+  "generated_at": "2026-08-21T13:39:57Z",
   "items": [
+    {
+      "title": "World Rugby loses bid to throw out concussion lawsuits",
+      "summary": "Hundreds of claims against rugby's governing bodies from players who allege they suffered brain injuries during their careers can continue to trial, the London High Court has ruled.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0821/1588781-world-rugby-loses-bid-to-throw-out-concussion-lawsuits/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-08-21T13:26:32Z"
+    },
     {
       "title": "Antonelli leads Norris in Dutch GP first practice",
       "summary": "Mercedes' Kimi Antonelli heads McLaren's Lando Norris in practice at the Dutch Grand Prix at Zandvoort.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-08-06T14:20:48Z"
-    },
-    {
-      "title": "The Chequered Flag Podcast",
-      "summary": "Harry Benjamin, Alice Powell and Andrew Benson assess the first half of the F1 season",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m0030f0m?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-06T12:15:00Z"
     }
   ]
 }

@@ -13,15 +13,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-08-21T19:45:00+01:00",
-      "home": "St Marys College RFC 1",
-      "away": "Old Belvedere 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Senior Cup Group 1",
-      "involves_smc": true
-    },
-    {
       "date": "2026-08-26T19:30:00+01:00",
       "home": "Dublin University 1",
       "away": "St Marys College RFC 1",
@@ -373,5 +364,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-21T21:17:41+00:00"
+  "fetched_at": "2026-08-21T21:46:46+00:00"
 }

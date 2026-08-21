@@ -12,7 +12,7 @@
       "involves_smc": true
     },
     {
-      "date": "2026-08-26T20:00:00+01:00",
+      "date": "2026-08-26T19:30:00+01:00",
       "home": "Dublin University 1",
       "away": "St Marys College RFC 1",
       "home_score": null,
@@ -282,5 +282,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-21T09:30:06+00:00"
+  "fetched_at": "2026-08-21T10:02:35+00:00"
 }

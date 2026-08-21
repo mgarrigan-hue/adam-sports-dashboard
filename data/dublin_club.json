@@ -1,6 +1,16 @@
 {
   "club": "St Mary's College RFC",
-  "results": [],
+  "results": [
+    {
+      "date": "2026-08-21T19:45:00+01:00",
+      "home": "St Marys College RFC 1",
+      "away": "Old Belvedere 1",
+      "home_score": 35,
+      "away_score": 21,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    }
+  ],
   "fixtures": [
     {
       "date": "2026-08-21T19:45:00+01:00",
@@ -363,5 +373,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-21T20:47:34+00:00"
+  "fetched_at": "2026-08-21T21:17:41+00:00"
 }

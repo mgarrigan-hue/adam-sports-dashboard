@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-08-22T10:47:23Z",
+  "generated_at": "2026-08-22T11:15:42Z",
   "items": [
+    {
+      "title": "Russell wins Dutch GP sprint from pole position",
+      "summary": "Mercedes' George Russell leads from start to finish to win the sprint race at the Dutch Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cn0n03rn711o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-08-22T10:45:13Z"
+    },
     {
       "title": "Russell takes pole position for Dutch GP sprint race",
       "summary": "Mercedes' George Russell secures pole position for the Dutch Grand Prix sprint race, ahead of Lando Norris and Charles Leclerc.",
@@ -42,14 +50,6 @@
       "published": "2026-08-21T13:26:32Z"
     },
     {
-      "title": "Antonelli leads Norris in Dutch GP first practice",
-      "summary": "Mercedes' Kimi Antonelli heads McLaren's Lando Norris in practice at the Dutch Grand Prix at Zandvoort.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cx2l701nxnxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-21T11:57:36Z"
-    },
-    {
       "title": "Exeter lock Zambonin to miss start of new season",
       "summary": "Exeter Chiefs' Italy international lock Andrea Zambonin is set to be out until the end of November following shoulder surgery.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cpd7w9l9n2eo?at_medium=RSS&at_campaign=rss",
@@ -64,6 +64,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-21T05:18:06Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "Jennie and the team react to Max Verstappen’s new Red Bull deal",
+      "url": "https://www.bbc.co.uk/sounds/play/p0p5kzpj?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-08-20T20:00:00Z"
     },
     {
       "title": "Exeter Chiefs women promote Bishop to head coach role",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-08-06T14:20:48Z"
-    },
-    {
-      "title": "The Chequered Flag Podcast",
-      "summary": "Harry Benjamin, Alice Powell and Andrew Benson assess the first half of the F1 season",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m0030f0m?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-06T12:15:00Z"
     }
   ]
 }

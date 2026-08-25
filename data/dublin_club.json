@@ -113,6 +113,15 @@
     },
     {
       "date": "2026-10-10T15:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "RCSI 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T15:00:00+01:00",
       "home": "Old Wesley 3",
       "away": "St Marys College RFC 3",
       "home_score": null,
@@ -127,6 +136,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "Stillorgan-Rathfarnham 2",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
       "involves_smc": true
     },
     {
@@ -175,6 +193,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-31T15:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Clondalkin 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-07T14:30:00+01:00",
       "home": "Clontarf 4",
       "away": "St Marys College RFC 4",
@@ -212,6 +239,15 @@
     },
     {
       "date": "2026-11-14T14:30:00+01:00",
+      "home": "Clontarf 5",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-14T14:30:00+01:00",
       "home": "St Marys College RFC 4",
       "away": "Stillorgan-Rathfarnham 1",
       "home_score": null,
@@ -239,6 +275,15 @@
     },
     {
       "date": "2026-11-28T14:30:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Arklow 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-28T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "UCD",
       "home_score": null,
@@ -262,6 +307,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:00:00+01:00",
+      "home": "Railway Union 2",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
       "involves_smc": true
     },
     {
@@ -293,6 +347,15 @@
     },
     {
       "date": "2027-01-09T14:30:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "MU Barnhall 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-09T14:30:00+01:00",
       "home": "St Marys College RFC 4",
       "away": "Seapoint 3",
       "home_score": null,
@@ -320,6 +383,15 @@
     },
     {
       "date": "2027-01-16T14:30:00+01:00",
+      "home": "UCD 4",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Old Belvedere",
       "home_score": null,
@@ -334,6 +406,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-30T14:30:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Emerald Warriors 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
       "involves_smc": true
     },
     {
@@ -356,6 +437,15 @@
     },
     {
       "date": "2027-02-06T15:00:00+01:00",
+      "home": "Dublin University 4",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T15:00:00+01:00",
       "home": "St Marys College RFC 4",
       "away": "Clontarf 4",
       "home_score": null,
@@ -364,5 +454,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-25T13:43:24+00:00"
+  "fetched_at": "2026-08-25T14:38:35+00:00"
 }

@@ -13,15 +13,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-08-26T19:30:00+01:00",
-      "home": "Dublin University 1",
-      "away": "St Marys College RFC 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Senior Cup Group 1",
-      "involves_smc": true
-    },
-    {
       "date": "2026-09-05T15:00:00+01:00",
       "home": "Terenure College RFC 1",
       "away": "St Marys College RFC 1",
@@ -533,7 +524,25 @@
       "away_score": null,
       "competition": "Metro League - Division 6",
       "involves_smc": true
+    },
+    {
+      "date": "2027-02-27T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Old Wesley",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-27T15:00:00+01:00",
+      "home": "Stillorgan-Rathfarnham 1",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-26T20:28:38+00:00"
+  "fetched_at": "2026-08-26T23:58:29+00:00"
 }

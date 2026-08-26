@@ -103,6 +103,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-04T15:00:00+01:00",
+      "home": "Lansdowne U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-10T14:30:00+01:00",
       "home": "Cork Constitution",
       "away": "St Marys College RFC",
@@ -130,6 +139,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-11T15:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Blackrock or Naas U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-17T15:00:00+01:00",
       "home": "CYM 1",
       "away": "St Marys College RFC 5",
@@ -154,6 +172,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-18T15:00:00+01:00",
+      "home": "Old Belvedere U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": true
     },
     {
@@ -202,6 +229,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-01T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Terenure College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-07T14:30:00+01:00",
       "home": "Clontarf 4",
       "away": "St Marys College RFC 4",
@@ -229,6 +265,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-08T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "UCD U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-13T20:00:00+01:00",
       "home": "St Marys College RFC 5",
       "away": "Navan 3",
@@ -253,6 +298,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-22T14:30:00+01:00",
+      "home": "Clontarf U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": true
     },
     {
@@ -292,6 +346,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-29T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Dublin University U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-12-05T14:00:00+01:00",
       "home": "Bective Rangers 3",
       "away": "St Marys College RFC 5",
@@ -328,12 +391,30 @@
       "involves_smc": true
     },
     {
+      "date": "2026-12-06T14:00:00+01:00",
+      "home": "Corinthians U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-12-12T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Ballynahinch",
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-13T14:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "MU Barnhall U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": true
     },
     {
@@ -454,5 +535,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-08-26T14:37:53+00:00"
+  "fetched_at": "2026-08-26T16:12:44+00:00"
 }

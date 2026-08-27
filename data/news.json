@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T23:58:36Z",
+  "generated_at": "2026-08-27T08:16:21Z",
   "items": [
     {
       "title": "Red Bull still have F1's most powerful engine",
@@ -8,6 +8,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-08-26T18:09:18Z"
+    },
+    {
+      "title": "Leinster to keep Spicer despite guilty plea for assault",
+      "summary": "Leinster Rugby has confirmed that second row Alan Spicer remains a member of the province's academy for this season, but he has been disciplined internally after appearing in court charged with assaul…",
+      "url": "https://www.rte.ie/sport/rugby/2026/0826/1589353-leinster-to-keep-spicer-despite-guilty-plea-for-assault/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-08-26T16:19:33Z"
     },
     {
       "title": "Leinster CEO coy on potential O'Gara appointment",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-15T09:27:50Z"
-    },
-    {
-      "title": "Davies calls for WRU board to step down",
-      "summary": "Former Wales captain Jonathan Davies calls for the Welsh Rugby Union board to step down.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c330yrpdlz0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-08-14T17:12:11Z"
     }
   ]
 }

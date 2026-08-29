@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T00:20:02Z",
+  "generated_at": "2026-08-29T07:14:27Z",
   "items": [
     {
       "title": "WRU posts pitch safety advice over hot, dry summer",
@@ -8,6 +8,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-28T15:57:02Z"
+    },
+    {
+      "title": "Preview: Munster out to continue Interpro dominance",
+      "summary": "Neil Treacy looks ahead to this afternoon's Vodafone Women's Interprovincial Championship final, defending champions Munster take on Leinster at Dexcom Stadium in Galway.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0828/1589616-preview-munster-out-to-continue-interpro-dominance/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-08-28T15:42:14Z"
     },
     {
       "title": "Two changes each in Munster and Leinster's Interpro final",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-19T08:57:50Z"
-    },
-    {
-      "title": "Antonelli - the boy 'born in a garage' who started driving on dad's lap",
-      "summary": "Kimi Antonelli was a natural driver at the age of three, according to his dad. Here's how he went on to lead the F1 drivers' championship at the age of 19.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c0rdvxdwwwwo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-19T06:06:58Z"
     }
   ]
 }

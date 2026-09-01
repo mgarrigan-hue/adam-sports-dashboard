@@ -22,12 +22,48 @@
       "involves_smc": true
     },
     {
+      "date": "2026-09-05T12:30:00+01:00",
+      "home": "Terenure College RFC 3",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
       "date": "2026-09-05T15:00:00+01:00",
       "home": "Terenure College RFC 1",
       "away": "St Marys College RFC 1",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-05T16:30:00+01:00",
+      "home": "Terenure College RFC 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-13T13:00:00+01:00",
+      "home": "Dublin University U20 2",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-13T15:00:00+01:00",
+      "home": "Dublin University U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
       "involves_smc": true
     },
     {
@@ -553,5 +589,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-01T07:11:33+00:00"
+  "fetched_at": "2026-09-01T12:39:28+00:00"
 }

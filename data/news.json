@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-09-01T17:06:45Z",
+  "generated_at": "2026-09-01T20:00:54Z",
   "items": [
+    {
+      "title": "Red Bull hire Aston Martin engineer McCullough as head of racing",
+      "summary": "Red Bull have head-hunted former Aston Martin performance director Tom McCullough to become their head of racing from 2027.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c74k38vxl40o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-01T18:38:40Z"
+    },
     {
       "title": "What does Norris deal mean for Piastri? F1 Q&A",
       "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions before the Italian Grand Prix.",
@@ -32,6 +40,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-31T10:26:58Z"
+    },
+    {
+      "title": "South African airline defends low-altitude aerial stunt over packed stadium",
+      "summary": "Airlink says the manoeuvre with two planes in close formation involved careful and precise planning.",
+      "url": "https://www.bbc.co.uk/news/articles/c3rew8jqny5o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-08-31T10:18:07Z"
     },
     {
       "title": "Losing Gloucester captaincy was 'brutal' - Ludlow",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-08-22T10:45:13Z"
-    },
-    {
-      "title": "Russell takes pole position for Dutch GP sprint race",
-      "summary": "Mercedes' George Russell secures pole position for the Dutch Grand Prix sprint race, ahead of Lando Norris and Charles Leclerc.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c8xn09wkw79o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-21T16:27:20Z"
-    },
-    {
-      "title": "High court allows rugby brain injury case to go on",
-      "summary": "The cases of hundreds of players in rugby's multi-million-pound concussion legal battle allowed to continue after High Court ruling.",
-      "url": "https://www.bbc.co.uk/sport/articles/c70g2n4w49lo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-08-21T16:23:44Z"
     }
   ]
 }

@@ -1,6 +1,602 @@
 {
   "club": "St Mary's College RFC",
-  "results": [],
-  "fixtures": [],
-  "fetched_at": "2026-09-02T00:46:00+00:00"
+  "results": [
+    {
+      "date": "2026-08-21T19:45:00+01:00",
+      "home": "St Marys College RFC 1",
+      "away": "Old Belvedere 1",
+      "home_score": 35,
+      "away_score": 21,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-09-03T20:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "De La Salle Palmerston U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-05T12:30:00+01:00",
+      "home": "Terenure College RFC 3",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-05T15:00:00+01:00",
+      "home": "Terenure College RFC 1",
+      "away": "St Marys College RFC 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-05T16:30:00+01:00",
+      "home": "Terenure College RFC 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-08T19:45:00+01:00",
+      "home": "MU Barnhall U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-13T13:00:00+01:00",
+      "home": "Dublin University U20 2",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-13T15:00:00+01:00",
+      "home": "Dublin University U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T13:00:00+01:00",
+      "home": "Bective Rangers 2",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T14:30:00+01:00",
+      "home": "Lansdowne",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Greystones 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "Lansdowne 5",
+      "away": "St Marys College RFC 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-02T20:00:00+01:00",
+      "home": "St Marys College RFC 5",
+      "away": "Guinness 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Clontarf",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "St Marys College RFC 3",
+      "away": "Navan 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "Seapoint 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-04T15:00:00+01:00",
+      "home": "Lansdowne U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-09T20:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "RCSI 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T14:30:00+01:00",
+      "home": "Cork Constitution",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-10T15:00:00+01:00",
+      "home": "Old Wesley 3",
+      "away": "St Marys College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-11T15:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Blackrock or Naas U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Tullamore 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "CYM 1",
+      "away": "St Marys College RFC 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "Stillorgan-Rathfarnham 2",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-18T15:00:00+01:00",
+      "home": "Old Belvedere U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-24T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Terenure College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-30T20:00:00+01:00",
+      "home": "St Marys College RFC 5",
+      "away": "BGF Ravens 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-30T20:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Clondalkin 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-31T14:30:00+01:00",
+      "home": "Old Wesley",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-31T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Blackrock College RFC 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-01T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Terenure College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-07T14:30:00+01:00",
+      "home": "Clontarf 4",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-07T14:30:00+01:00",
+      "home": "Co Carlow 3",
+      "away": "St Marys College RFC 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-07T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Young Munster",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-08T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "UCD U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-13T20:00:00+01:00",
+      "home": "St Marys College RFC 5",
+      "away": "Navan 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-14T14:30:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Stillorgan-Rathfarnham 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-14T14:30:00+01:00",
+      "home": "Clontarf 5",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-22T14:30:00+01:00",
+      "home": "Clontarf U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-27T20:00:00+01:00",
+      "home": "St Marys College RFC 5",
+      "away": "De La Salle Palmerston 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-27T20:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Arklow 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-28T14:30:00+01:00",
+      "home": "Dublin University 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-28T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "UCD",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-29T14:30:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "Dublin University U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:00:00+01:00",
+      "home": "Greystones 4",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:00:00+01:00",
+      "home": "Bective Rangers 3",
+      "away": "St Marys College RFC 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:00:00+01:00",
+      "home": "Railway Union 2",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-05T14:30:00+01:00",
+      "home": "Old Belvedere",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-06T14:00:00+01:00",
+      "home": "Corinthians U20",
+      "away": "St Marys College RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-12T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Ballynahinch",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-13T14:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "MU Barnhall U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-08T20:00:00+01:00",
+      "home": "St Marys College RFC 5",
+      "away": "Old Wesley 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-08T20:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "MU Barnhall 5",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-09T14:30:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Seapoint 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-09T14:30:00+01:00",
+      "home": "Ballynahinch",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
+      "home": "Tullamore 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
+      "home": "UCD 4",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-16T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Old Belvedere",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-29T20:00:00+01:00",
+      "home": "St Marys College RFC 6",
+      "away": "Emerald Warriors 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-30T14:30:00+01:00",
+      "home": "Blackrock College RFC 3",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-30T14:30:00+01:00",
+      "home": "UCD",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T14:30:00+01:00",
+      "home": "Young Munster",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Clontarf 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-06T15:00:00+01:00",
+      "home": "Dublin University 4",
+      "away": "St Marys College RFC 6",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-27T14:30:00+01:00",
+      "home": "St Marys College RFC",
+      "away": "Old Wesley",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-27T15:00:00+01:00",
+      "home": "Stillorgan-Rathfarnham 1",
+      "away": "St Marys College RFC 4",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
+    }
+  ],
+  "fetched_at": "2026-09-02T05:21:17+00:00"
 }

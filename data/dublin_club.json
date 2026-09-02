@@ -186,7 +186,7 @@
     {
       "date": "2026-10-11T15:00:00+01:00",
       "home": "St Marys College RFC U20",
-      "away": "Blackrock or Naas U20",
+      "away": "Blackrock College RFC U20",
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 1",
@@ -598,5 +598,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-02T09:47:15+00:00"
+  "fetched_at": "2026-09-02T14:00:29+00:00"
 }

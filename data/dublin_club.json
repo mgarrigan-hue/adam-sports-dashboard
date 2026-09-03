@@ -49,6 +49,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-09-06T12:30:00+01:00",
+      "home": "Malahide",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Friendlies",
+      "involves_smc": true
+    },
+    {
       "date": "2026-09-08T19:45:00+01:00",
       "home": "MU Barnhall U20",
       "away": "St Marys College RFC U20",
@@ -109,6 +118,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 7",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-27T15:00:00+01:00",
+      "home": "Lansdowne 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -185,6 +203,15 @@
     },
     {
       "date": "2026-10-11T15:00:00+01:00",
+      "home": "St Marys College RFC 2",
+      "away": "Naas 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-11T15:00:00+01:00",
       "home": "St Marys College RFC U20",
       "away": "Blackrock College RFC U20",
       "home_score": null,
@@ -217,6 +244,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-18T15:00:00+01:00",
+      "home": "Old Belvedere 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -275,6 +311,15 @@
     },
     {
       "date": "2026-11-01T14:30:00+01:00",
+      "home": "Old Wesley 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-01T14:30:00+01:00",
       "home": "St Marys College RFC U20",
       "away": "Terenure College RFC U20",
       "home_score": null,
@@ -307,6 +352,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-08T14:30:00+01:00",
+      "home": "St Marys College RFC 2",
+      "away": "MU Barnhall 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -392,6 +446,15 @@
     },
     {
       "date": "2026-11-29T14:30:00+01:00",
+      "home": "St Marys College RFC 2",
+      "away": "UCD 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-29T14:30:00+01:00",
       "home": "St Marys College RFC U20",
       "away": "Dublin University U20",
       "home_score": null,
@@ -433,6 +496,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-06T14:00:00+01:00",
+      "home": "Dublin University 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -499,6 +571,15 @@
       "involves_smc": true
     },
     {
+      "date": "2027-01-10T14:30:00+01:00",
+      "home": "Clontarf 2",
+      "away": "St Marys College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
       "date": "2027-01-16T14:30:00+01:00",
       "home": "Tullamore 3",
       "away": "St Marys College RFC 4",
@@ -523,6 +604,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-17T14:30:00+01:00",
+      "home": "St Marys College RFC 2",
+      "away": "Terenure College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -598,5 +688,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-03T10:00:34+00:00"
+  "fetched_at": "2026-09-03T14:40:11+00:00"
 }

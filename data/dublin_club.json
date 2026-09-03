@@ -13,15 +13,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-09-03T20:00:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "De La Salle Palmerston U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
-    {
       "date": "2026-09-05T12:30:00+01:00",
       "home": "Terenure College RFC 3",
       "away": "St Marys College RFC 3",
@@ -769,5 +760,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-03T21:11:07+00:00"
+  "fetched_at": "2026-09-03T23:23:27+00:00"
 }

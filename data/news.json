@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-09-03T00:57:20Z",
+  "generated_at": "2026-09-03T05:27:14Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Maro Itoje, Finn Russell & Benhard Janse van Rensburg chat to Chris and Ashy.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0p7n4dz?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-09-02T23:10:00Z"
+    },
     {
       "title": "Norris sets up junior team to help drivers to F1",
       "summary": "World champion Lando Norris is setting up his own junior team to support young drivers on their route to Formula 1.",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-23T04:49:04Z"
-    },
-    {
-      "title": "Munster beat Connacht to extend winning streak to seven",
-      "summary": "An already-qualified Munster will move on to the Vodafone Women's Interprovincial Championship final in unbeaten form following a 47-12 win away to Connacht.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0822/1588878-munster-beat-connacht-to-extend-winning-streak-to-seven/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-08-22T18:40:24Z"
     }
   ]
 }

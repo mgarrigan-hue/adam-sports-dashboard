@@ -167,6 +167,15 @@
     },
     {
       "date": "2026-10-04T15:00:00+01:00",
+      "home": "St Marys College RFC U20 2",
+      "away": "Ashbourne U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-04T15:00:00+01:00",
       "home": "Lansdowne U20",
       "away": "St Marys College RFC U20",
       "home_score": null,
@@ -199,6 +208,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro 2/3 Group C",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-11T15:00:00+01:00",
+      "home": "MU Barnhall U20 2",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -257,6 +275,15 @@
     },
     {
       "date": "2026-10-18T15:00:00+01:00",
+      "home": "St Marys College RFC U20 2",
+      "away": "Galwegians or University of Galway U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-18T15:00:00+01:00",
       "home": "Old Belvedere U20",
       "away": "St Marys College RFC U20",
       "home_score": null,
@@ -311,6 +338,15 @@
     },
     {
       "date": "2026-11-01T14:30:00+01:00",
+      "home": "Malahide U20",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-01T14:30:00+01:00",
       "home": "Old Wesley 2",
       "away": "St Marys College RFC 2",
       "home_score": null,
@@ -356,6 +392,15 @@
     },
     {
       "date": "2026-11-08T14:30:00+01:00",
+      "home": "St Marys College RFC U20 2",
+      "away": "Dublin University 2 or DLSP U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-08T14:30:00+01:00",
       "home": "St Marys College RFC 2",
       "away": "MU Barnhall 2",
       "home_score": null,
@@ -397,6 +442,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 12",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-22T14:30:00+01:00",
+      "home": "Suttonians U20",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -455,6 +509,15 @@
     },
     {
       "date": "2026-11-29T14:30:00+01:00",
+      "home": "Wicklow U20",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-29T14:30:00+01:00",
       "home": "St Marys College RFC U20",
       "away": "Dublin University U20",
       "home_score": null,
@@ -505,6 +568,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-06T14:00:00+01:00",
+      "home": "St Marys College RFC U20 2",
+      "away": "North Wexford U20s",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": true
     },
     {
@@ -608,6 +680,15 @@
     },
     {
       "date": "2027-01-17T14:30:00+01:00",
+      "home": "Coolmine U20",
+      "away": "St Marys College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-01-17T14:30:00+01:00",
       "home": "St Marys College RFC 2",
       "away": "Terenure College RFC 2",
       "home_score": null,
@@ -688,5 +769,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-03T14:40:11+00:00"
+  "fetched_at": "2026-09-03T18:17:27+00:00"
 }

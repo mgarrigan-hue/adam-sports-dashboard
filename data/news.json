@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-09-04T06:12:36Z",
+  "generated_at": "2026-09-04T11:32:54Z",
   "items": [
+    {
+      "title": "Gasly loses Monaco podium after McLaren and Red Bull win appeals",
+      "summary": "McLaren and Red Bull win their appeals against the result of the Monaco Grand Prix after a controversy over multiple incorrect pit-lane speeding penalties.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4gq26zglpzo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-04T11:24:17Z"
+    },
+    {
+      "title": "Why Caluori played on with detached wrist ligament",
+      "summary": "Wing sensation Noah Caluori says he played through the pain of a torn wrist ligament during his break-out season for Saracens and England",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c750d3z07p6o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-09-04T09:00:39Z"
+    },
+    {
+      "title": "O'Gara poised to sign new La Rochelle deal - report",
+      "summary": "Ronan O'Gara looks set to end speculation about his immediate future, with reports that he's close to signing a new contract with La Rochelle.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0904/1590297-ogara-poised-to-sign-new-la-rochelle-deal-report/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-04T08:44:27Z"
+    },
     {
       "title": "Obano to put England career on hold with Pau move",
       "summary": "Beno Obano will become the latest England player to put his Test career on ice after agreeing to join French side Pau at the end of the forthcoming season.",
@@ -8,6 +32,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-03T22:46:30Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "The team discuss Ferrari's dreams, Antonelli's charge and the fight for victory at Monza.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0p7vvj8?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-03T17:59:00Z"
     },
     {
       "title": "Ferrari upgrade a step but not all we need - Hamilton",
@@ -176,6 +208,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-30T05:45:26Z"
+    },
+    {
+      "title": "Go on an adventure with Paddington Bear, voiced by Ben Whishaw",
+      "summary": "A family favourite packed with humour, kindness and charm",
+      "url": "https://www.bbc.co.uk/iplayer/episode/m000csnj/?at_mid=JlvPjRm7u6&at_campaign=Paddington_2&at_medium=display_ad&at_campaign_type=owned&at_audience_id=SS&at_product=iplayer&at_brand=m000csnj&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Paddington_2&at_bbc_team=BBC",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-08-29T19:49:31Z"
     },
     {
       "title": "Springboks hit back to level series with All Blacks",
@@ -440,46 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-24T10:27:51Z"
-    },
-    {
-      "title": "The gay rugby player who feared rejection but got total support",
-      "summary": "Kyle Tayler-Woolston feared rejection as a gay man in rugby, but is flourishing in Super Rygbi Cymru thanks to the support at Newport.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c2lqv8k19qyo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-08-24T04:58:13Z"
-    },
-    {
-      "title": "Norris beats Antonelli to claim final Dutch GP win",
-      "summary": "Lando Norris and McLaren beats Mercedes' Kimi Antonelli to take a masterful strategic victory in a compelling Dutch Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/ce8l8jek1k1o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-23T20:29:10Z"
-    },
-    {
-      "title": "The Chequered Flag Podcast",
-      "summary": "Lando Norris makes it two wins in a row at a chaotic Dutch Grand Prix.",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m002zvgm?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-23T20:00:00Z"
-    },
-    {
-      "title": "Norris and McLaren 'don't have car' to fight for title",
-      "summary": "Lando Norris says he and McLaren \"don't have the car I need to fight for a championship\", despite a second consecutive win of the season at the Dutch Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c1e1e56q4w5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-23T19:23:43Z"
-    },
-    {
-      "title": "Ferrari delay in moving Leclerc costly - Hamilton",
-      "summary": "Lewis Hamilton says Ferrari's delay in moving team-mate Charles Leclerc out of his way could have cost him second place at the Dutch Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cvgvgvrg8m2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-08-23T18:39:27Z"
     }
   ]
 }

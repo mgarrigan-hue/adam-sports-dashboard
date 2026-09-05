@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-09-05T06:01:01Z",
+  "generated_at": "2026-09-05T10:48:05Z",
   "items": [
+    {
+      "title": "Antonelli 'disrupting rules of fandom' in Ferrari's Italy",
+      "summary": "BBC Sport heads to Monza to find out if Italians want Kimi Antonelli to win the F1 title or if it is all about Ferrari.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cj03m124lp3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T10:37:00Z"
+    },
+    {
+      "title": "FIA appeal court refutes Briatore impartiality claim",
+      "summary": "The FIA court of appeal refutes a claim by Alpine boss Flavio Briatore which it says \"question the independence and impartiality of the judges\".",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4g56x1xxn3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T10:02:46Z"
+    },
     {
       "title": "Kolisi urges Boks to channel spirit of Soweto to beat All Blacks",
       "summary": "Captain Siya Kolisi calls on the Springboks to summon inspiration from Soweto's pivotal part in South Africa's history as they host New Zealand on Saturday.",
@@ -152,6 +168,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-02T23:10:00Z"
+    },
+    {
+      "title": "Refreshed Van der Flier ready for World Cup year",
+      "summary": "Leinster and Ireland flanker Josh van der Flier knows that nothing is won in early September, but that doesn't mean that the 2027 Rugby World Cup escapes the imagination ahead of the start of the 2026…",
+      "url": "https://www.rte.ie/sport/rugby/2026/0902/1590141-refreshed-van-der-flier-ready-for-world-cup-year/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-02T20:08:15Z"
     },
     {
       "title": "Norris sets up junior team to help drivers to F1",
@@ -456,30 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-08-26T15:44:24Z"
-    },
-    {
-      "title": "Burns returns to Tigers in coaching role",
-      "summary": "Former England and Leicester Tigers fly-half Freddie Burns returns to the Prem club as kicking coach.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c62j821vd6do?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-08-25T18:57:32Z"
-    },
-    {
-      "title": "Leinster have point to prove after Munster mauling",
-      "summary": "Leinster have learned their lesson ahead of their rematch with Munster in the Vodafone Women's Interprovincial Championship final on Saturday, according to head coach Sana Govender.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0825/1589203-leinster-have-point-to-prove-after-munster-mauling/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-08-25T17:35:06Z"
-    },
-    {
-      "title": "WXV selection fight adds extra intrigue to Interpro final",
-      "summary": "Munster head coach Matt Brown believes Ireland's upcoming WXV Global Series will add an extra pinch of spice to Saturday's Vodafone Women's Interprovincial Series final against Leinster in Galway.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0825/1589195-wxv-selection-fight-adds-extra-intrigue-to-interpro-final/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-08-25T16:59:48Z"
     }
   ]
 }

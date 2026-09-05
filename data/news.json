@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-09-05T13:38:42Z",
+  "generated_at": "2026-09-05T16:28:52Z",
   "items": [
+    {
+      "title": "Alpine's Gasly beats Russell to stunning Monza pole",
+      "summary": "Alpine driver Pierre Gasly takes a stunning pole position at the Italian Grand Prix, ahead of Mercedes' George Russell.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c8d31qrg2neo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T16:28:00Z"
+    },
+    {
+      "title": "South Africa v New Zealand latest score",
+      "summary": "",
+      "url": "https://www.rte.ie/sport/results/rugby/international-matches/34216/fixtures/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-05T15:11:38Z"
+    },
     {
       "title": "Antonelli 'disrupting rules of fandom' in Ferrari's Italy",
       "summary": "BBC Sport heads to Monza to find out if Italians want Kimi Antonelli to win the F1 title or if it is all about Ferrari.",
@@ -16,14 +32,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-05T10:02:46Z"
-    },
-    {
-      "title": "Kolisi urges Boks to channel spirit of Soweto to beat All Blacks",
-      "summary": "Captain Siya Kolisi calls on the Springboks to summon inspiration from Soweto's pivotal part in South Africa's history as they host New Zealand on Saturday.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c5y5gnkvep8o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-04T20:26:59Z"
     },
     {
       "title": "Ferrari still behind Mercedes on straights - Hamilton",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-26T16:00:51Z"
-    },
-    {
-      "title": "PWR attendances rise by 23% after World Cup",
-      "summary": "Premiership Women's Rugby says average attendances rose by 23.4% during the 2025-26 season, which concluded in June with Saracens winning a record fourth title.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/clyrv4l5jjeo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-08-26T15:44:24Z"
     }
   ]
 }

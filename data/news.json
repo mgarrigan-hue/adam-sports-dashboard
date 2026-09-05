@@ -1,13 +1,37 @@
 {
-  "generated_at": "2026-09-05T16:28:52Z",
+  "generated_at": "2026-09-05T18:30:58Z",
   "items": [
+    {
+      "title": "How to follow Italian Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Italian Grand Prix, which takes place from 4-6 September.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c05q5qdrmz3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T17:38:44Z"
+    },
+    {
+      "title": "South Africa finish strongly to take 2-1 series lead against All Blacks",
+      "summary": "South Africa eventually overpower a spirited New Zealand as the world champions came on strong in the final quarter in Soweto to take a 2-1 series lead.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c7830m55lklo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-09-05T17:21:39Z"
+    },
+    {
+      "title": "F1: Chequered Flag",
+      "summary": "The team react to qualifying at the Italian GP where a huge shock was on the cards.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0p865fk?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T16:49:00Z"
+    },
     {
       "title": "Alpine's Gasly beats Russell to stunning Monza pole",
       "summary": "Alpine driver Pierre Gasly takes a stunning pole position at the Italian Grand Prix, ahead of Mercedes' George Russell.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c8d31qrg2neo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-09-05T16:28:00Z"
+      "published": "2026-09-05T16:46:01Z"
     },
     {
       "title": "South Africa v New Zealand latest score",
@@ -40,14 +64,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-04T17:09:35Z"
-    },
-    {
-      "title": "How to follow Italian Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Italian Grand Prix, which takes place from 4-6 September.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c05q5qdrmz3o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-04T16:10:15Z"
     },
     {
       "title": "Gasly loses Monaco podium after McLaren and Red Bull win appeals",
@@ -128,14 +144,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-03T22:46:30Z"
-    },
-    {
-      "title": "F1: Chequered Flag",
-      "summary": "The team discuss Ferrari's dreams, Antonelli's charge and the fight for victory at Monza.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0p7vvj8?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-03T17:59:00Z"
     },
     {
       "title": "Ferrari upgrade a step but not all we need - Hamilton",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-08-26T16:19:33Z"
-    },
-    {
-      "title": "Leinster CEO coy on potential O'Gara appointment",
-      "summary": "Leinster chief executive Shane Nolan says the process to appoint a new head coach is well underway, but he would not comment on any potential candidates, including Ronan O'Gara.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0826/1589341-leinster-ceo-coy-on-potential-ogara-appointment/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-08-26T16:00:51Z"
     }
   ]
 }

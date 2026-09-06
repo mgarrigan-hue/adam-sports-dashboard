@@ -1,53 +1,7 @@
 {
   "club": "St Mary's College RFC",
-  "results": [
-    {
-      "date": "2026-09-05T15:00:00+01:00",
-      "home": "Terenure College RFC 1",
-      "away": "St Marys College RFC 1",
-      "home_score": 21,
-      "away_score": 29,
-      "competition": "Leinster Senior Cup Group 1",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-09-03T20:00:00+01:00",
-      "home": "St Marys College RFC U20",
-      "away": "De La Salle Palmerston U20",
-      "home_score": 43,
-      "away_score": 7,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-08-21T19:45:00+01:00",
-      "home": "St Marys College RFC 1",
-      "away": "Old Belvedere 1",
-      "home_score": 35,
-      "away_score": 21,
-      "competition": "Leinster Senior Cup Group 1",
-      "involves_smc": true
-    }
-  ],
+  "results": [],
   "fixtures": [
-    {
-      "date": "2026-09-05T12:30:00+01:00",
-      "home": "Terenure College RFC 3",
-      "away": "St Marys College RFC 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-09-05T16:30:00+01:00",
-      "home": "Terenure College RFC 2",
-      "away": "St Marys College RFC 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
     {
       "date": "2026-09-06T12:30:00+01:00",
       "home": "Malahide",
@@ -767,7 +721,25 @@
       "away_score": null,
       "competition": "Metro League - Division 6",
       "involves_smc": true
+    },
+    {
+      "date": "2027-03-06T14:30:00+01:00",
+      "home": "Terenure College RFC",
+      "away": "St Marys College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All Ireland League 1A 26/27",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-03-06T15:00:00+01:00",
+      "home": "St Marys College RFC 4",
+      "away": "Dublin University 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-05T22:35:05+00:00"
+  "fetched_at": "2026-09-06T00:30:16+00:00"
 }

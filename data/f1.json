@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T20:42:07Z",
+  "generated_at": "2026-09-06T22:37:51Z",
   "season": "2026",
   "upcoming": [
     {
@@ -291,28 +291,28 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "242",
-      "wins": "6"
+      "points": "267",
+      "wins": "7"
     },
     {
       "position": "2",
       "driver": "George Russell",
       "team": "Mercedes",
-      "points": "183",
+      "points": "201",
       "wins": "2"
     },
     {
       "position": "3",
       "driver": "Lewis Hamilton",
       "team": "Ferrari",
-      "points": "183",
+      "points": "191",
       "wins": "1"
     },
     {
       "position": "4",
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "159",
+      "points": "171",
       "wins": "2"
     },
     {
@@ -326,14 +326,14 @@
       "position": "6",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "112",
+      "points": "127",
       "wins": "0"
     },
     {
       "position": "7",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "106",
+      "points": "116",
       "wins": "0"
     },
     {
@@ -354,21 +354,21 @@
       "position": "10",
       "driver": "Pierre Gasly",
       "team": "Alpine F1 Team",
-      "points": "35",
+      "points": "41",
       "wins": "0"
     },
     {
       "position": "11",
       "driver": "Arvid Lindblad",
       "team": "RB F1 Team",
-      "points": "25",
+      "points": "29",
       "wins": "0"
     },
     {
       "position": "12",
       "driver": "Franco Colapinto",
       "team": "Alpine F1 Team",
-      "points": "19",
+      "points": "21",
       "wins": "0"
     },
     {
@@ -424,7 +424,7 @@
       "position": "20",
       "driver": "Yuki Tsunoda",
       "team": "RB F1 Team",
-      "points": "0",
+      "points": "1",
       "wins": "0"
     },
     {
@@ -453,37 +453,37 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "425",
-      "wins": "8"
+      "points": "468",
+      "wins": "9"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "338",
+      "points": "346",
       "wins": "2"
     },
     {
       "position": "3",
       "team": "McLaren",
-      "points": "265",
+      "points": "287",
       "wins": "2"
     },
     {
       "position": "4",
       "team": "Red Bull",
-      "points": "189",
+      "points": "204",
       "wins": "0"
     },
     {
       "position": "5",
       "team": "RB F1 Team",
-      "points": "70",
+      "points": "75",
       "wins": "0"
     },
     {
       "position": "6",
       "team": "Alpine F1 Team",
-      "points": "54",
+      "points": "62",
       "wins": "0"
     },
     {

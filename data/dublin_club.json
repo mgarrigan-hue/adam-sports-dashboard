@@ -31,15 +31,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-09-06T12:30:00+01:00",
-      "home": "Malahide",
-      "away": "St Marys College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Friendlies",
-      "involves_smc": true
-    },
-    {
       "date": "2026-09-08T19:45:00+01:00",
       "home": "MU Barnhall U20",
       "away": "St Marys College RFC U20",
@@ -769,5 +760,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-06T16:22:13+00:00"
+  "fetched_at": "2026-09-06T18:29:12+00:00"
 }

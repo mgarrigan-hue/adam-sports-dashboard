@@ -1,14 +1,7 @@
 {
-  "generated_at": "2026-09-06T09:14:49Z",
+  "generated_at": "2026-09-06T13:01:02Z",
   "season": "2026",
   "upcoming": [
-    {
-      "round": "13",
-      "race_name": "Italian Grand Prix",
-      "circuit": "Autodromo Nazionale di Monza",
-      "location": "Monza, Italy",
-      "date": "2026-09-06T13:00:00Z"
-    },
     {
       "round": "14",
       "race_name": "Spanish Grand Prix",
@@ -57,6 +50,13 @@
       "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
       "location": "S\u00e3o Paulo, Brazil",
       "date": "2026-11-08T17:00:00Z"
+    },
+    {
+      "round": "21",
+      "race_name": "Las Vegas Grand Prix",
+      "circuit": "Las Vegas Strip Street Circuit",
+      "location": "Las Vegas, USA",
+      "date": "2026-11-22T04:00:00Z"
     }
   ],
   "recent_results": [
@@ -518,171 +518,117 @@
     }
   ],
   "last_qualifying": {
-    "race_name": "Dutch Grand Prix",
-    "round": "12",
-    "date": "2026-08-23T13:00:00Z",
+    "race_name": "Italian Grand Prix",
+    "round": "13",
+    "date": "2026-09-06T13:00:00Z",
     "results": [
       {
         "position": 1,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "q1": "1:12.695",
-        "q2": "1:11.628",
-        "q3": "1:11.163"
+        "driver": "Pierre Gasly",
+        "team": "Alpine F1 Team",
+        "q1": "1:22.612",
+        "q2": "1:22.077",
+        "q3": "1:21.786"
       },
       {
         "position": 2,
         "driver": "George Russell",
         "team": "Mercedes",
-        "q1": "1:12.924",
-        "q2": "1:11.959",
-        "q3": "1:11.265"
+        "q1": "1:22.779",
+        "q2": "1:22.161",
+        "q3": "1:21.846"
       },
       {
         "position": 3,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "q1": "1:13.022",
-        "q2": "1:11.915",
-        "q3": "1:11.296"
+        "driver": "Oscar Piastri",
+        "team": "McLaren",
+        "q1": "1:22.924",
+        "q2": "1:22.017",
+        "q3": "1:21.966"
       },
       {
         "position": 4,
-        "driver": "Oscar Piastri",
-        "team": "McLaren",
-        "q1": "1:12.610",
-        "q2": "1:11.641",
-        "q3": "1:11.305"
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "q1": "1:22.902",
+        "q2": "1:22.509",
+        "q3": "1:22.004"
       },
       {
         "position": 5,
         "driver": "Lewis Hamilton",
         "team": "Ferrari",
-        "q1": "1:12.673",
-        "q2": "1:11.970",
-        "q3": "1:11.494"
+        "q1": "1:22.847",
+        "q2": "1:22.516",
+        "q3": "1:22.011"
       },
       {
         "position": 6,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "q1": "1:13.064",
-        "q2": "1:11.910",
-        "q3": "1:11.558"
+        "driver": "Max Verstappen",
+        "team": "Red Bull",
+        "q1": "1:22.631",
+        "q2": "1:22.188",
+        "q3": "1:22.070"
       },
       {
         "position": 7,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "q1": "1:13.290",
-        "q2": "1:11.874",
-        "q3": "1:11.618"
+        "driver": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "q1": "1:22.758",
+        "q2": "1:21.882",
+        "q3": "1:22.093"
       },
       {
         "position": 8,
-        "driver": "Liam Lawson",
-        "team": "Red Bull",
-        "q1": "1:13.392",
-        "q2": "1:12.301",
-        "q3": "1:11.733"
+        "driver": "Franco Colapinto",
+        "team": "Alpine F1 Team",
+        "q1": "1:22.662",
+        "q2": "1:22.400",
+        "q3": "1:22.220"
       },
       {
         "position": 9,
-        "driver": "Gabriel Bortoleto",
-        "team": "Audi",
-        "q1": "1:13.142",
-        "q2": "1:12.433",
-        "q3": "1:12.079"
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "q1": "1:22.659",
+        "q2": "1:22.067",
+        "q3": "1:22.256"
       },
       {
         "position": 10,
         "driver": "Arvid Lindblad",
         "team": "RB F1 Team",
-        "q1": "1:13.074",
-        "q2": "1:12.525",
-        "q3": "1:12.185"
+        "q1": "1:22.727",
+        "q2": "1:22.345",
+        "q3": "1:22.286"
       }
     ]
   },
-  "last_sprint": {
-    "race_name": "Dutch Grand Prix",
-    "round": "12",
-    "date": "2026-08-23T13:00:00Z",
-    "results": [
-      {
-        "position": 1,
-        "driver": "George Russell",
-        "team": "Mercedes",
-        "points": "8"
-      },
-      {
-        "position": 2,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "points": "7"
-      },
-      {
-        "position": 3,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "points": "6"
-      },
-      {
-        "position": 4,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "points": "5"
-      },
-      {
-        "position": 5,
-        "driver": "Oscar Piastri",
-        "team": "McLaren",
-        "points": "4"
-      },
-      {
-        "position": 6,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "points": "3"
-      },
-      {
-        "position": 7,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "points": "2"
-      },
-      {
-        "position": 8,
-        "driver": "Pierre Gasly",
-        "team": "Alpine F1 Team",
-        "points": "1"
-      }
-    ]
-  },
+  "last_sprint": null,
   "next_race_sessions": {
-    "race_name": "Italian Grand Prix",
-    "round": "13",
-    "circuit": "Autodromo Nazionale di Monza",
+    "race_name": "Spanish Grand Prix",
+    "round": "14",
+    "circuit": "Madring",
     "sessions": [
       {
         "name": "Practice 1",
-        "datetime": "2026-09-04T10:30:00Z"
+        "datetime": "2026-09-11T11:30:00Z"
       },
       {
         "name": "Practice 2",
-        "datetime": "2026-09-04T14:00:00Z"
+        "datetime": "2026-09-11T15:00:00Z"
       },
       {
         "name": "Practice 3",
-        "datetime": "2026-09-05T10:30:00Z"
+        "datetime": "2026-09-12T10:30:00Z"
       },
       {
         "name": "Qualifying",
-        "datetime": "2026-09-05T14:00:00Z"
+        "datetime": "2026-09-12T14:00:00Z"
       },
       {
         "name": "Race",
-        "datetime": "2026-09-06T13:00:00Z"
+        "datetime": "2026-09-13T13:00:00Z"
       }
     ]
   }

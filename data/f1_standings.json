@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T18:29:08.569084+00:00",
+  "generated_at": "2026-09-06T20:42:08.680029+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 104.0,
+      "points": 106.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 68.0,
+      "points": 71.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 49.0,
+      "points": 51.0,
       "wins": 0
     },
     {
@@ -89,7 +89,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 44.0,
+      "points": 35.0,
       "wins": 0
     },
     {
@@ -98,7 +98,7 @@
       "code": "LIN",
       "nationality": "British",
       "team": "RB F1 Team",
-      "points": 23.0,
+      "points": 25.0,
       "wins": 0
     },
     {
@@ -229,28 +229,28 @@
       "rank": 3,
       "team": "McLaren",
       "nationality": "British",
-      "points": 263.0,
+      "points": 265.0,
       "wins": 2
     },
     {
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 186.0,
+      "points": 189.0,
       "wins": 0
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 66.0,
+      "points": 70.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 63.0,
+      "points": 54.0,
       "wins": 0
     },
     {

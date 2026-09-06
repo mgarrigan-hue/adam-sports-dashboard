@@ -1,6 +1,34 @@
 {
   "club": "St Mary's College RFC",
-  "results": [],
+  "results": [
+    {
+      "date": "2026-09-05T15:00:00+01:00",
+      "home": "Terenure College RFC 1",
+      "away": "St Marys College RFC 1",
+      "home_score": 21,
+      "away_score": 29,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-09-03T20:00:00+01:00",
+      "home": "St Marys College RFC U20",
+      "away": "De La Salle Palmerston U20",
+      "home_score": 43,
+      "away_score": 7,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-08-21T19:45:00+01:00",
+      "home": "St Marys College RFC 1",
+      "away": "Old Belvedere 1",
+      "home_score": 35,
+      "away_score": 21,
+      "competition": "Leinster Senior Cup Group 1",
+      "involves_smc": true
+    }
+  ],
   "fixtures": [
     {
       "date": "2026-09-06T12:30:00+01:00",
@@ -741,5 +769,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-06T00:30:16+00:00"
+  "fetched_at": "2026-09-06T04:59:46+00:00"
 }

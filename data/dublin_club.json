@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-09-08T19:45:00+01:00",
+      "home": "MU Barnhall U20",
+      "away": "St Marys College RFC U20",
+      "home_score": 29,
+      "away_score": 40,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
       "date": "2026-09-05T15:00:00+01:00",
       "home": "Terenure College RFC 1",
       "away": "St Marys College RFC 1",
@@ -30,15 +39,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-09-08T19:45:00+01:00",
-      "home": "MU Barnhall U20",
-      "away": "St Marys College RFC U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
     {
       "date": "2026-09-12T11:30:00+01:00",
       "home": "Christian Brothers Cork C",
@@ -850,5 +850,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-08T18:14:39+00:00"
+  "fetched_at": "2026-09-08T21:18:06+00:00"
 }

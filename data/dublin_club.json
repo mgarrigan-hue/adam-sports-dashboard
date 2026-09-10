@@ -508,6 +508,24 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-18T14:30:00+01:00",
+      "home": "St Marys College",
+      "away": "Castletroy College",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U16 Friendly",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-18T14:30:00+01:00",
+      "home": "St Marys College",
+      "away": "Castletroy College B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U16 Friendly",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-22T14:30:00+01:00",
       "home": "Suttonians U20",
       "away": "St Marys College RFC U20 2",
@@ -670,6 +688,24 @@
       "involves_smc": true
     },
     {
+      "date": "2026-12-16T14:30:00+01:00",
+      "home": "St Marys College",
+      "away": "Castletroy College",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U14 Friendly",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-16T14:30:00+01:00",
+      "home": "St Marys College",
+      "away": "Castletroy College B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U14 Friendly",
+      "involves_smc": true
+    },
+    {
       "date": "2027-01-08T20:00:00+01:00",
       "home": "St Marys College RFC 5",
       "away": "Old Wesley 5",
@@ -814,6 +850,24 @@
       "involves_smc": true
     },
     {
+      "date": "2027-02-10T14:30:00+01:00",
+      "home": "Castletroy College",
+      "away": "St Marys College",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U15 Friendly",
+      "involves_smc": true
+    },
+    {
+      "date": "2027-02-10T14:30:00+01:00",
+      "home": "Castletroy College B",
+      "away": "St Marys College",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U15 Friendly",
+      "involves_smc": true
+    },
+    {
       "date": "2027-02-27T14:30:00+01:00",
       "home": "St Marys College RFC",
       "away": "Old Wesley",
@@ -850,5 +904,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-10T12:37:29+00:00"
+  "fetched_at": "2026-09-10T16:51:04+00:00"
 }

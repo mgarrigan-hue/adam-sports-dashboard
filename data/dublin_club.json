@@ -195,7 +195,7 @@
     {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St Marys College RFC 5",
-      "away": "Guinness 1",
+      "away": "Tallaght/Guinness",
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 7",
@@ -850,5 +850,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-10T07:47:52+00:00"
+  "fetched_at": "2026-09-10T12:37:29+00:00"
 }

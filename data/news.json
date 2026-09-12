@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-09-12T11:54:14Z",
+  "generated_at": "2026-09-12T14:50:47Z",
   "items": [
+    {
+      "title": "How to follow Spanish Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Spanish Grand Prix, which takes place from 11-13 September at the new Madring circuit.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4g72gw7pkdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-12T13:11:54Z"
+    },
     {
       "title": "Donnell eyes Irish call-up after Ulster move",
       "summary": "New Ulster signing Ben Donnell says a motivating factor in his move to the province was the chance to force his way into the Ireland set-up and play international rugby.",
@@ -32,14 +40,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-11T17:03:48Z"
-    },
-    {
-      "title": "How to follow Spanish Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Spanish Grand Prix, which takes place from 11-13 September at the new Madring circuit.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4g72gw7pkdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-11T16:45:13Z"
     },
     {
       "title": "Andrew Benson Q&A: Send us your questions",
@@ -338,14 +338,6 @@
       "published": "2026-09-07T17:30:19Z"
     },
     {
-      "title": "Camborne impress in opening game in National One",
-      "summary": "Camborne are capable of taking on the top teams in National One after winning their first game since promotion, says coach Ricky Pellow.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cy0zwqk2kk7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-07T11:27:36Z"
-    },
-    {
       "title": "Smaller ball for women makes it 'harder to do my job'",
       "summary": "A smaller ball is being trialled in women's international rugby union for September and October's WXV Global Series - and it is dividing opinion.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwyz72pp22yo?at_medium=RSS&at_campaign=rss",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-04T14:27:34Z"
+    },
+    {
+      "title": "Leinster to return to Aviva for Munster clash in October",
+      "summary": "Leinster have confirmed their United Rugby Championship clash with Munster in October will be played at Aviva Stadium.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0904/1590334-leinster-to-return-to-aviva-for-munster-clash-in-october/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-04T11:57:27Z"
     }
   ]
 }

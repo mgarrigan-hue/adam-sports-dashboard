@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T20:02:08Z",
+  "generated_at": "2026-09-12T22:26:37Z",
   "items": [
     {
       "title": "Newcastle impress, Quins win again in Prem Cup",
@@ -26,8 +26,8 @@
       "published": "2026-09-12T17:50:01Z"
     },
     {
-      "title": "'Absolute joke' to be worried - Mitchell on England's half-time deficit",
-      "summary": "England produce dominant second-half performance to comfortably defeat Australia at CorpAcq Stadium in the opening game of the new WXV Global Series.",
+      "title": "'Absolute joke' to be worried - Mitchell on England trailing Australia at half-time",
+      "summary": "England trail at half-time but a dominant second-half performance helps them to an emphatic 48-15 victory over Australia at CorpAcq Stadium in the opening game of the new WXV Global Series.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cq8je0z88nzo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
@@ -200,14 +200,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-10T14:58:33Z"
-    },
-    {
-      "title": "Clarke & Gallagher start for Scotland against Canada",
-      "summary": "Scrum-half Rhea Clarke will make her first start when Scotland begin their WXV Series campaign against Canada, while Evie Gallagher returns on the openside flank.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c93v0gvppklo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-10T11:29:17Z"
     },
     {
       "title": "Dragons feel extra pressure after avoiding WRU cut",
@@ -480,6 +472,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-05T10:37:00Z"
+    },
+    {
+      "title": "FIA appeal court refutes Briatore impartiality claim",
+      "summary": "The FIA court of appeal refutes a claim by Alpine boss Flavio Briatore which it says \"question the independence and impartiality of the judges\".",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c4g56x1xxn3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-05T10:02:46Z"
     }
   ]
 }

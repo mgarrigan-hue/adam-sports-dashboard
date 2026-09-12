@@ -67,15 +67,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-09-12T12:30:00+01:00",
-      "home": "Christian Brothers Cork",
-      "away": "St Marys College",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": true
-    },
-    {
       "date": "2026-09-12T17:30:00+01:00",
       "home": "Lansdowne 1",
       "away": "St Marys College RFC 1",
@@ -904,5 +895,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-12T14:50:40+00:00"
+  "fetched_at": "2026-09-12T17:38:10+00:00"
 }

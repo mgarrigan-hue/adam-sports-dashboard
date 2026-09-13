@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-09-13T13:00:00+01:00",
+      "home": "Dublin University U20 2",
+      "away": "St Marys College RFC U20 2",
+      "home_score": 12,
+      "away_score": 40,
+      "competition": "Mens Friendlies",
+      "involves_smc": true
+    },
+    {
       "date": "2026-09-12T17:30:00+01:00",
       "home": "Lansdowne 1",
       "away": "St Marys College RFC 1",
@@ -32,8 +41,8 @@
       "date": "2026-09-12T11:30:00+01:00",
       "home": "Christian Brothers Cork D",
       "away": "St Marys College",
-      "home_score": 10,
-      "away_score": 29,
+      "home_score": 26,
+      "away_score": 19,
       "competition": "Boys Schools U14 Friendly",
       "involves_smc": true
     },
@@ -75,15 +84,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-09-13T13:00:00+01:00",
-      "home": "Dublin University U20 2",
-      "away": "St Marys College RFC U20 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Mens Friendlies",
-      "involves_smc": true
-    },
     {
       "date": "2026-09-13T15:00:00+01:00",
       "home": "Dublin University U20",
@@ -895,5 +895,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-13T10:26:09+00:00"
+  "fetched_at": "2026-09-13T14:32:05+00:00"
 }

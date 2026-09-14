@@ -139,12 +139,21 @@
       "involves_smc": true
     },
     {
+      "date": "2026-09-19T15:00:00+01:00",
+      "home": "St Marys College RFC 2",
+      "away": "Naas 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": true
+    },
+    {
       "date": "2026-09-20T14:00:00+01:00",
       "home": "Malahide",
       "away": "St Marys College RFC",
       "home_score": null,
       "away_score": null,
-      "competition": "Boys Friendlies",
+      "competition": "Boys Friendlies U16",
       "involves_smc": true
     },
     {
@@ -280,15 +289,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-10-11T15:00:00+01:00",
-      "home": "St Marys College RFC 2",
-      "away": "Naas 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 1",
       "involves_smc": true
     },
     {
@@ -904,5 +904,5 @@
       "involves_smc": true
     }
   ],
-  "fetched_at": "2026-09-14T11:30:53+00:00"
+  "fetched_at": "2026-09-14T17:26:56+00:00"
 }

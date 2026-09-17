@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T01:35:45Z",
+  "generated_at": "2026-09-17T07:03:24Z",
   "items": [
     {
       "title": "Verstappen passes 100 amateur karters in 14 laps in exhibition race",
@@ -7,7 +7,15 @@
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c50m3k7jk82jo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-09-16T18:11:19Z"
+      "published": "2026-09-17T06:12:30Z"
+    },
+    {
+      "title": "Ospreylia: How Welsh club turned to a land down under",
+      "summary": "Ospreys could field a side that is a third Australian after a summer recruitment drive that brought in four players from the southern hemisphere.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c5j9xrpljk0yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-09-17T03:18:26Z"
     },
     {
       "title": "Cantwell excited by 'massive' PWR merger opportunity",
@@ -210,6 +218,14 @@
       "published": "2026-09-13T15:00:47Z"
     },
     {
+      "title": "Munster pair keen to show provincial form in Irish green",
+      "summary": "If fortune favours the form lines, Munster duo Jane Clohessy and Beth Buttimer are likely to pick up a few caps for Ireland this autumn, and will be striving to show their club form in a green shirt.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0913/1591366-munster-pair-keen-to-show-provincial-form-in-irish-green/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-13T11:09:58Z"
+    },
+    {
       "title": "Wall revitalised as Ireland target five wins this window",
       "summary": "Ireland lock Dorothy Wall is injury-free and ready to hit the ground running as Ireland ramp up preparations for the WXV Global Series.",
       "url": "https://www.rte.ie/sport/rugby/2026/0913/1591355-wall-revitalised-as-ireland-target-five-wins-this-window/",
@@ -402,14 +418,6 @@
       "published": "2026-09-10T17:27:04Z"
     },
     {
-      "title": "Ireland joining elite only a matter of time - Wafer",
-      "summary": "Aoife Wafer says Ireland are capable of joining the world's elite teams as they build on progress made in recent years.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cr7d0214lpko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-10T16:40:40Z"
-    },
-    {
       "title": "Switch Six Nations fixture to USA to grow game – World Rugby",
       "summary": "World Rugby would help any nation which wants to switch a Six Nations match to the United States as it continues its drive to spread the game stateside.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c5ymg0pm1yno?at_medium=RSS&at_campaign=rss",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-09-08T07:57:41Z"
-    },
-    {
-      "title": "'Inspiration is all around' as Ireland prepare for WXV",
-      "summary": "As the Ireland women's rugby squad reconvene for their upcoming test window of WXV Global Series games, Fiona Tuite-O'Sullivan says she feels inspired by the trailblazers across Irish women's sport, e…",
-      "url": "https://www.rte.ie/sport/rugby/2026/0908/1590695-inspiration-is-all-around-as-ireland-prepare-for-wxv/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-08T06:53:03Z"
     }
   ]
 }

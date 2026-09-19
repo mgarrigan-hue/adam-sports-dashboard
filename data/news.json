@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T11:18:33Z",
+  "generated_at": "2026-09-19T14:36:43Z",
   "items": [
     {
       "title": "Wales deliver performance of serious promise",
@@ -21,8 +21,8 @@
       "title": "Inspired Wales seal stunning win over South Africa",
       "summary": "Wales return to winning ways in emphatic fashion with an eight-try victory over South Africa at Cardiff Arms Park.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cme3rg39xe7do?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
       "published": "2026-09-18T20:27:03Z"
     },
     {
@@ -258,14 +258,6 @@
       "published": "2026-09-16T18:06:55Z"
     },
     {
-      "title": "Leicester fly-half Searle agrees new contract",
-      "summary": "Leicester Tigers and England A fly-half Billy Searle signs a new contract with the Prem club.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/crje81jel3y0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-16T17:37:26Z"
-    },
-    {
       "title": "Bevan in fly-half switch for Wales' WXV opener",
       "summary": "Keira Bevan is to switch half-back roles after being selected to play at 10 for Wales' WXV opener against South Africa in Cardiff on Friday.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmd94enz5nqqo?at_medium=RSS&at_campaign=rss",
@@ -360,14 +352,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-14T14:11:04Z"
-    },
-    {
-      "title": "Women's rugby not to blame for region axe - WRU",
-      "summary": "The director of women's rugby at the Welsh Rugby Union hits back at \"embarrassing\" claims over why a men's region is being axed.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cpwl1w5288ko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-14T12:56:20Z"
     },
     {
       "title": "Honda changes F1 design boss after slow start to return",
@@ -480,6 +464,22 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-09-12T16:25:00Z"
+    },
+    {
+      "title": "O'Dowd determined to nail down starting shirt once again",
+      "summary": "Ireland prop Niamh O'Dowd is determined to win back the starting loosehead jersey in the upcoming test window, but knows that Ireland's strength in depth makes it a difficult task.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0912/1591285-odowd-determined-to-nail-down-starting-shirt-once-again/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-12T11:27:01Z"
+    },
+    {
+      "title": "Irish duo proving online personality enhances visibility",
+      "summary": "Ireland duo Eve Higgins and Anna McGann provide an antidote to rugby's personality problems, leaning into their own and finding an ever-growing community of followers online.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0912/1591272-irish-duo-proving-online-personality-enhances-visibility/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-12T07:57:04Z"
     }
   ]
 }

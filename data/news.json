@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T05:09:00Z",
+  "generated_at": "2026-09-20T09:56:25Z",
   "items": [
     {
       "title": "Mitchell predicts 'greater things' for England as winning streak ends",
@@ -56,6 +56,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-18T20:27:03Z"
+    },
+    {
+      "title": "Preview: Ireland out to keep ball rolling against USA",
+      "summary": "Neil Treacy looks ahead to Ireland's WXV Global Series opener against the USA, as Scott Bemand and his side look to pick up where they left off in the Six Nations.",
+      "url": "https://www.rte.ie/sport/rugby/2026/0918/1592114-preview-ireland-out-to-keep-ball-rolling-against-usa/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-18T15:15:36Z"
     },
     {
       "title": "Ireland v USA women: All you need to know",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-12T17:50:01Z"
-    },
-    {
-      "title": "Norris takes Madrid pole with 'gorgeous' lap",
-      "summary": "Lando Norris takes a superb pole position for McLaren at the Spanish Grand Prix, beating Mercedes' Kimi Antonelli and Red Bull's Max Verstappen.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c8r60g7nrn6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-12T17:00:06Z"
     }
   ]
 }

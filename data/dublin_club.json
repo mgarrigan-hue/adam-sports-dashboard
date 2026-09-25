@@ -266,8 +266,8 @@
     },
     {
       "date": "2026-10-02T00:00:00+01:00",
-      "home": "Terenure College RFC",
-      "away": "St. Mary’s College RFC",
+      "home": "St. Mary’s College RFC",
+      "away": "Bye",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Grading",
@@ -1048,5 +1048,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-25T14:31:23+00:00"
+  "fetched_at": "2026-09-25T19:04:54+00:00"
 }

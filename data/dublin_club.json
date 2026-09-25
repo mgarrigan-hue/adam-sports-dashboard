@@ -256,6 +256,24 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-02T00:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Terenure College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-02T00:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Terenure College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Navan RFC 2",
@@ -373,6 +391,24 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-09T00:00:00+01:00",
+      "home": "Lansdowne FC",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-09T00:00:00+01:00",
+      "home": "Old Belvedere RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-09T20:00:00+01:00",
       "home": "Old Wesley RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -415,6 +451,24 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-16T00:00:00+01:00",
+      "home": "Blackrock College RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-16T00:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Greystones RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1030,5 +1084,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-25T03:18:52+00:00"
+  "fetched_at": "2026-09-25T08:59:29+00:00"
 }

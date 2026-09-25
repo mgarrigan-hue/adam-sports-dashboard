@@ -257,8 +257,8 @@
     },
     {
       "date": "2026-10-02T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Terenure College RFC",
+      "home": "BW Rangers",
+      "away": "St. Mary’s College RFC",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Grading",
@@ -266,8 +266,8 @@
     },
     {
       "date": "2026-10-02T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Terenure College RFC",
+      "home": "Terenure College RFC",
+      "away": "St. Mary’s College RFC",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Grading",
@@ -391,24 +391,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-09T00:00:00+01:00",
-      "home": "Lansdowne FC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-09T00:00:00+01:00",
-      "home": "Old Belvedere RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-09T20:00:00+01:00",
       "home": "Old Wesley RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -454,24 +436,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-16T00:00:00+01:00",
-      "home": "Blackrock College RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-16T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Greystones RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-16T20:00:00+01:00",
       "home": "Old Belvedere RFC 2",
       "away": "St. Mary’s College RFC 2",
@@ -510,7 +474,7 @@
     {
       "date": "2026-10-18T15:00:00+01:00",
       "home": "St. Mary’s College RFC U20 2",
-      "away": "Galwegians or University of Galway U20",
+      "away": "University of Galway U20",
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
@@ -1084,5 +1048,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-25T08:59:29+00:00"
+  "fetched_at": "2026-09-25T14:31:23+00:00"
 }

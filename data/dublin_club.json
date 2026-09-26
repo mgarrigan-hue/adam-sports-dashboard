@@ -2,6 +2,33 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-09-26T17:00:00+01:00",
+      "home": "Lansdowne FC 2",
+      "away": "St. Mary’s College RFC 2",
+      "home_score": 31,
+      "away_score": 32,
+      "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "St. Mary’s College RFC 4",
+      "away": "Greystones RFC 4",
+      "home_score": 39,
+      "away_score": 5,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-09-26T15:00:00+01:00",
+      "home": "Lansdowne FC 5",
+      "away": "St. Mary’s College RFC 5",
+      "home_score": 29,
+      "away_score": 17,
+      "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
       "date": "2026-09-26T14:30:00+01:00",
       "home": "Lansdowne FC",
       "away": "St. Mary’s College RFC",
@@ -208,42 +235,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Boys Schools U19 Friendly",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-09-26T14:30:00+01:00",
-      "home": "Lansdowne FC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Energia All-Ireland League 1A 26/27",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-09-26T15:00:00+01:00",
-      "home": "St. Mary’s College RFC 4",
-      "away": "Greystones RFC 4",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-09-26T15:00:00+01:00",
-      "home": "Lansdowne FC 5",
-      "away": "St. Mary’s College RFC 5",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 7",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-09-26T17:00:00+01:00",
-      "home": "Lansdowne FC 2",
-      "away": "St. Mary’s College RFC 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 1",
       "involves_smc": false
     },
     {
@@ -1057,5 +1048,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-26T15:34:13+00:00"
+  "fetched_at": "2026-09-26T18:55:10+00:00"
 }

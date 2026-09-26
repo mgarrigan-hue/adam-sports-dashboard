@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-09-26T14:30:00+01:00",
+      "home": "Lansdowne FC",
+      "away": "St. Mary’s College RFC",
+      "home_score": 18,
+      "away_score": 19,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-09-26T13:00:00+01:00",
+      "home": "Bective Rangers 2",
+      "away": "St. Mary’s College RFC 3",
+      "home_score": 63,
+      "away_score": 26,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": false
+    },
+    {
       "date": "2026-09-25T19:45:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "MU Barnhall RFC U20",
@@ -190,15 +208,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Boys Schools U19 Friendly",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-09-26T13:00:00+01:00",
-      "home": "Bective Rangers 2",
-      "away": "St. Mary’s College RFC 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro 2/3 Group C",
       "involves_smc": false
     },
     {
@@ -1048,5 +1057,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-26T11:37:51+00:00"
+  "fetched_at": "2026-09-26T15:34:13+00:00"
 }

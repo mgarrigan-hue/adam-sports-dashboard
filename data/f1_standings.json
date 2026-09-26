@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T11:37:46.665683+00:00",
+  "generated_at": "2026-09-26T15:34:11.845059+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,7 +8,7 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 292.0,
+      "points": 302.0,
       "wins": 8
     },
     {
@@ -17,8 +17,8 @@
       "code": "RUS",
       "nationality": "British",
       "team": "Mercedes",
-      "points": 211.0,
-      "wins": 2
+      "points": 236.0,
+      "wins": 3
     },
     {
       "rank": 3,
@@ -26,7 +26,7 @@
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 191.0,
+      "points": 199.0,
       "wins": 1
     },
     {
@@ -44,7 +44,7 @@
       "code": "LEC",
       "nationality": "Monegasque",
       "team": "Ferrari",
-      "points": 167.0,
+      "points": 179.0,
       "wins": 1
     },
     {
@@ -53,7 +53,7 @@
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 145.0,
+      "points": 163.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 71.0,
+      "points": 86.0,
       "wins": 0
     },
     {
@@ -98,7 +98,7 @@
       "code": "LIN",
       "nationality": "British",
       "team": "RB F1 Team",
-      "points": 31.0,
+      "points": 37.0,
       "wins": 0
     },
     {
@@ -116,7 +116,7 @@
       "code": "BEA",
       "nationality": "British",
       "team": "Haas F1 Team",
-      "points": 18.0,
+      "points": 20.0,
       "wins": 0
     },
     {
@@ -139,29 +139,29 @@
     },
     {
       "rank": 16,
-      "driver": "Carlos Sainz",
-      "code": "SAI",
-      "nationality": "Spanish",
-      "team": "Williams",
-      "points": 6.0,
+      "driver": "Esteban Ocon",
+      "code": "OCO",
+      "nationality": "French",
+      "team": "Haas F1 Team",
+      "points": 7.0,
       "wins": 0
     },
     {
       "rank": 17,
+      "driver": "Carlos Sainz",
+      "code": "SAI",
+      "nationality": "Spanish",
+      "team": "Williams",
+      "points": 7.0,
+      "wins": 0
+    },
+    {
+      "rank": 18,
       "driver": "Alexander Albon",
       "code": "ALB",
       "nationality": "Thai",
       "team": "Williams",
       "points": 5.0,
-      "wins": 0
-    },
-    {
-      "rank": 18,
-      "driver": "Esteban Ocon",
-      "code": "OCO",
-      "nationality": "French",
-      "team": "Haas F1 Team",
-      "points": 3.0,
       "wins": 0
     },
     {
@@ -215,14 +215,14 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 503.0,
-      "wins": 10
+      "points": 538.0,
+      "wins": 11
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 358.0,
+      "points": 378.0,
       "wins": 2
     },
     {
@@ -236,14 +236,14 @@
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 230.0,
+      "points": 263.0,
       "wins": 0
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 77.0,
+      "points": 83.0,
       "wins": 0
     },
     {
@@ -257,7 +257,7 @@
       "rank": 7,
       "team": "Haas F1 Team",
       "nationality": "American",
-      "points": 21.0,
+      "points": 27.0,
       "wins": 0
     },
     {
@@ -271,7 +271,7 @@
       "rank": 9,
       "team": "Williams",
       "nationality": "British",
-      "points": 11.0,
+      "points": 12.0,
       "wins": 0
     },
     {

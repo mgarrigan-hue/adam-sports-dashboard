@@ -391,6 +391,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-10T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Christian Brothers Cork",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Schools U17 Friendly",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-10T14:30:00+01:00",
       "home": "Cork Constitution FC",
       "away": "St. Mary’s College RFC",
@@ -1039,5 +1048,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-27T05:30:36+00:00"
+  "fetched_at": "2026-09-27T11:12:49+00:00"
 }

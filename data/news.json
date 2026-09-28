@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-09-28T01:01:47Z",
+  "generated_at": "2026-09-28T07:13:23Z",
   "items": [
+    {
+      "title": "How to follow Bahrain Grand Prix in Malaysia on the BBC",
+      "summary": "All the key BBC coverage details for the Bahrain Grand Prix in Malaysia, which takes place from 2-4 October.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/ckz7zzy4d995o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-09-28T06:33:20Z"
+    },
+    {
+      "title": "The Welsh players that started strongly in URC and Prem",
+      "summary": "The talking points as Dragons draw, Ospreys lose and Cardiff take the derby bragging rights against Scarlets on the opening weekend of the URC.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cq70ddkw5e52o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-09-28T03:50:45Z"
+    },
     {
       "title": "Saracens edge out Leicester despite Isiekwe red",
       "summary": "Saracens overcome a second-half red card for Nick Isiekwe to begin the Brendan Venter era with a 40-38 win at Leicester Tigers.",
@@ -58,7 +74,7 @@
       "published": "2026-09-27T12:19:34Z"
     },
     {
-      "title": "Horner a distraction for Ferrari says Vasseur",
+      "title": "Horner a distraction for Ferrari, says Vasseur",
       "summary": "Christian Horner is proving a distraction for Ferrari by \"looking for a job\", team principal Frederic Vasseur says.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/cvwyz791096jo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
@@ -72,6 +88,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-09-27T11:25:29Z"
+    },
+    {
+      "title": "McMillan: Work needed to get Munster fans back on side",
+      "summary": "Munster head coach Clayton McMillan says he and his players have to \"work\" to get some supporters back on board, but the New Zealander is confident with the direction of travel, despite Saturday's 26-…",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/0927/1593100-mcmillan-work-needed-to-get-munster-fans-back-on-side/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-27T10:32:54Z"
     },
     {
       "title": "Shedding and raising pounds - Jones tackles longest run",
@@ -330,14 +354,6 @@
       "published": "2026-09-25T20:54:09Z"
     },
     {
-      "title": "Dragons draw URC opener at Benetton after late drama",
-      "summary": "Dragons draw their United Rugby Championship opener against Wayne Pivac's Benetton after Elliot Dee's late try.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c3kg88vv797zo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-25T20:44:49Z"
-    },
-    {
       "title": "URC: Defeats for Connacht and Ulster - recap",
       "summary": "Connacht and Ulster both get their BKT United Rugby Championship seasons under way this evening, with Connacht hosting Stormers and Ulster hosting Edinburgh",
       "url": "https://www.rte.ie/sport/rugby/2026/0925/1592981-connacht-v-stormers-and-ulster-v-edinburgh-updates/",
@@ -442,14 +458,6 @@
       "published": "2026-09-24T16:00:32Z"
     },
     {
-      "title": "Why is Azerbaijan Grand Prix taking place on a Saturday?",
-      "summary": "BBC Sport's Ask Me Anything team explains why the 2026 Azerbaijan Grand Prix in Baku is taking place on Saturday",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c3y0z7wvdel1o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-24T14:53:07Z"
-    },
-    {
       "title": "Cullen: Stormers defeat 'still very fresh'",
       "summary": "Leinster head coach Leo Cullen has said that last season's opening BKT United Rugby Championship weekend loss to the Stormers is still \"very fresh\" in his mind as his side prepares to take on the Lion…",
       "url": "https://www.rte.ie/sport/rugby/2026/0924/1592838-cullen-stormers-defeat-still-very-fresh/",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-24T13:07:11Z"
-    },
-    {
-      "title": "From ruin to a (Red) Bull market - how Prem became hot property",
-      "summary": "Prem Rugby seemed on the brink of disaster after Worcester, Wasps and London Irish went bust, but there is renewed confidence and fresh money in the league.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmg49dvg2gp7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-24T11:24:08Z"
     }
   ]
 }

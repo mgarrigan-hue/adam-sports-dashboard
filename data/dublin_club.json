@@ -256,6 +256,15 @@
   ],
   "fixtures": [
     {
+      "date": "2026-09-30T20:00:00+01:00",
+      "home": "De La Salle Palmerston",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Friendlies U15",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Navan RFC 2",
@@ -371,6 +380,15 @@
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": false
+    },
+    {
+      "date": "2026-10-09T00:00:00+01:00",
+      "home": "De La Salle Palmerston",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
     },
     {
       "date": "2026-10-09T20:00:00+01:00",
@@ -1048,5 +1066,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-28T15:42:32+00:00"
+  "fetched_at": "2026-09-28T21:31:00+00:00"
 }

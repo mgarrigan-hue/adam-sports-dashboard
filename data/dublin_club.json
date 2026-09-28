@@ -256,24 +256,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-02T00:00:00+01:00",
-      "home": "BW Rangers",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-02T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Liberty Saints",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Navan RFC 2",
@@ -319,33 +301,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-03T12:00:00+01:00",
-      "home": "Presentation Brothers Cork",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-03T12:00:00+01:00",
-      "home": "Presentation Brothers Cork B",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-03T12:00:00+01:00",
-      "home": "Presentation Brothers Cork C",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Schools U14 Friendly",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-03T14:30:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Clontarf FC",
@@ -366,11 +321,38 @@
     {
       "date": "2026-10-04T12:00:00+01:00",
       "home": "Greystones RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Friendlies - U17",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-04T12:00:00+01:00",
+      "home": "Greystones RFC",
       "away": "SMTC",
       "home_score": null,
       "away_score": null,
       "competition": "Boys Friendlies U15",
       "involves_smc": true
+    },
+    {
+      "date": "2026-10-04T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Liberty Saints",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-04T12:15:00+01:00",
+      "home": "BW Rangers",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
     },
     {
       "date": "2026-10-04T15:00:00+01:00",
@@ -1066,5 +1048,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-28T07:13:16+00:00"
+  "fetched_at": "2026-09-28T15:42:32+00:00"
 }

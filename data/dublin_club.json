@@ -382,15 +382,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-09T00:00:00+01:00",
-      "home": "De La Salle Palmerston",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Cup",
-      "involves_smc": true
-    },
-    {
       "date": "2026-10-09T20:00:00+01:00",
       "home": "Old Wesley RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -425,6 +416,15 @@
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
       "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T12:30:00+01:00",
+      "home": "De La Salle Palmerston",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
     },
     {
       "date": "2026-10-11T15:00:00+01:00",
@@ -1066,5 +1066,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-29T14:11:14+00:00"
+  "fetched_at": "2026-09-29T19:31:22+00:00"
 }

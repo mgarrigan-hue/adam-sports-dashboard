@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T00:04:14Z",
+  "generated_at": "2026-10-01T06:17:11Z",
   "items": [
     {
       "title": "O'Mahony's Munster worries, Irish URC shutout, WXV recap",
@@ -16,6 +16,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-09-30T18:03:40Z"
+    },
+    {
+      "title": "Second row O'Tighearnaigh on juggling medicine and rugby",
+      "summary": "Conor O'Tighearnaigh talks about juggling both medicine and rugby after starting Leinster's opening URC game against Lions",
+      "url": "https://www.rte.ie/sport/rugby/2026/0930/1593558-second-row-otighearnaigh-on-juggling-medicine-and-rugby/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-09-30T17:49:26Z"
     },
     {
       "title": "Saracens boss Venter skips more media duties",
@@ -472,14 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-26T13:16:13Z"
-    },
-    {
-      "title": "URC: Lions 27-26 Leinster recap",
-      "summary": "The defending champions have been defeated in Johannesburg in their season opener.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0926/1593049-urc-lions-v-leinster-updates/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-26T11:14:17Z"
     }
   ]
 }

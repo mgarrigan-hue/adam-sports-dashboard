@@ -455,15 +455,6 @@
     },
     {
       "date": "2026-10-09T00:00:00+01:00",
-      "home": "De La Marys",
-      "away": "Dundalk",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls Youths U18 Grading Group D",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-09T00:00:00+01:00",
       "home": "Arklow",
       "away": "De La Marys",
       "home_score": null,
@@ -487,6 +478,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 12",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-10T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Dundalk",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youths U18 Grading Group D",
       "involves_smc": false
     },
     {
@@ -1372,5 +1372,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-01T19:12:14+00:00"
+  "fetched_at": "2026-10-01T23:18:15+00:00"
 }

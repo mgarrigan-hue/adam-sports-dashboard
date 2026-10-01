@@ -256,15 +256,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-09-30T20:00:00+01:00",
-      "home": "De La Salle Palmerston",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Friendlies U15",
-      "involves_smc": true
-    },
-    {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Navan RFC 2",
@@ -1120,5 +1111,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-09-30T20:27:40+00:00"
+  "fetched_at": "2026-10-01T00:04:06+00:00"
 }

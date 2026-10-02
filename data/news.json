@@ -1,13 +1,45 @@
 {
-  "generated_at": "2026-10-02T20:02:31Z",
+  "generated_at": "2026-10-02T23:54:47Z",
   "items": [
     {
-      "title": "URC: Benetton v Connacht latest score",
-      "summary": "The latest score from Stadio Comunale di Monigo.",
-      "url": "https://www.rte.ie/sport/results/rugby/united-rugby-championship/34235/report-5650659/",
+      "title": "Frawley's debut try seals bonus-point win for Connacht",
+      "summary": "Connacht secure their first win of the season thanks to a late winner from debutant Ciaran Frawley against Benetton in Treviso.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cqly0n3pnv13o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-02T22:14:05Z"
+    },
+    {
+      "title": "Bath gain revenge on Exeter to win 11-try thriller",
+      "summary": "After losing to Exeter at home in the Prem semi-final last season, Bath beat the Chiefs 40-34 in another thriller.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c8r4vg227kvzo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-02T21:14:42Z"
+    },
+    {
+      "title": "Frawley marks Connacht debut with match-winning try",
+      "summary": "Debutant Ciarán Frawley's 77th-minute try helped Connacht open their account in the new United Rugby Championship with a 22-19 victory at Benetton.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1002/1593756-frawley-marks-connacht-debut-with-match-winning-try/",
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
-      "published": "2026-10-02T18:57:46Z"
+      "published": "2026-10-02T21:04:03Z"
+    },
+    {
+      "title": "McHaffie the hero as Edinburgh sink Stormers",
+      "summary": "Edinburgh made it two wins from two in the United Rugby Championship with a gritty 17-13 home success against Stormers.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmpdgllgeng7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-02T20:50:58Z"
+    },
+    {
+      "title": "Cardiff seal bonus-point victory against Zebre",
+      "summary": "Cardiff continue their promising start to the United Rugby Championship (URC) with a six-try 40-27 home victory against Zebre.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cxm23n4py5z6o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-02T20:41:36Z"
     },
     {
       "title": "MacGinty savouring Bristol return after long spell out",
@@ -242,14 +274,6 @@
       "published": "2026-09-30T19:13:00Z"
     },
     {
-      "title": "Gloucester fly-half Atkinson agrees new deal to 2029",
-      "summary": "Influential Gloucester fly-half Charlie Atkinson signs a new contract to stay at Kingsholm until the summer of 2029.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cr209v00qz4jo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-30T18:03:40Z"
-    },
-    {
       "title": "Second row O'Tighearnaigh on juggling medicine and rugby",
       "summary": "Conor O'Tighearnaigh talks about juggling both medicine and rugby after starting Leinster's opening URC game against Lions",
       "url": "https://www.rte.ie/sport/rugby/2026/0930/1593558-second-row-otighearnaigh-on-juggling-medicine-and-rugby/",
@@ -328,14 +352,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-30T10:24:02Z"
-    },
-    {
-      "title": "Iosefa-Scott set for France move when contract ends",
-      "summary": "Exeter boss Rob Baxter says prop Josh Iosefa-Scott is likely to move to France when his contract ends next summer.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cqrm9gr3j7k9o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-09-30T10:21:25Z"
     },
     {
       "title": "England's Underhill to miss autumn internationals",
@@ -464,22 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-09-27T13:43:18Z"
-    },
-    {
-      "title": "11-man Australia hold on to defeat South Africa",
-      "summary": "Australia held on with 11 men in a dramatic finish to beat a second-string South Africa outfit 42-38 at Perth Stadium on Sunday and extend their unbeaten run to five games since new coach Les Kiss too…",
-      "url": "https://www.rte.ie/sport/rugby/2026/0927/1593113-11-man-australia-hold-on-to-defeat-south-africa/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-27T13:43:07Z"
-    },
-    {
-      "title": "Horner a distraction for Ferrari, says Vasseur",
-      "summary": "Christian Horner is proving a distraction for Ferrari by \"looking for a job\", team principal Frederic Vasseur says.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cvwyz791096jo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-09-27T11:44:25Z"
     }
   ]
 }

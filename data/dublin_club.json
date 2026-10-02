@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-02T20:00:00+01:00",
+      "home": "St. Mary’s College RFC 3",
+      "away": "Navan RFC 2",
+      "home_score": 25,
+      "away_score": 27,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-02T20:00:00+01:00",
+      "home": "St. Mary’s College RFC 5",
+      "away": "Tallaght/Guinness",
+      "home_score": 22,
+      "away_score": 8,
+      "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
       "date": "2026-09-27T13:00:00+01:00",
       "home": "Co Carlow",
       "away": "Three Saints",
@@ -282,24 +300,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-02T20:00:00+01:00",
-      "home": "St. Mary’s College RFC 3",
-      "away": "Navan RFC 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro 2/3 Group C",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-02T20:00:00+01:00",
-      "home": "St. Mary’s College RFC 5",
-      "away": "Tallaght/Guinness",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 7",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-03T10:30:00+01:00",
       "home": "De La Marys",
@@ -1352,7 +1352,16 @@
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
       "involves_smc": false
+    },
+    {
+      "date": "2027-04-03T14:30:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Lansdowne FC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-02T20:02:24+00:00"
+  "fetched_at": "2026-10-02T23:54:40+00:00"
 }

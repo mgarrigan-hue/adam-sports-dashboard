@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-10-03T03:23:32Z",
+  "generated_at": "2026-10-03T09:20:25Z",
   "items": [
+    {
+      "title": "Verstappen on pole in Malaysia ahead of Hamilton",
+      "summary": "Max Verstappen takes his and Red Bull's first pole position of 2026 with an imperious performance in qualifying at the Bahrain Grand Prix in Malaysia ahead of Ferrari's Lewis Hamilton.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm1j3l9867jwo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-03T09:13:45Z"
+    },
     {
       "title": "Frawley's debut try seals bonus-point win for Connacht",
       "summary": "Connacht secure their first win of the season thanks to a late winner from debutant Ciaran Frawley against Benetton in Treviso.",
@@ -48,6 +56,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-02T15:26:02Z"
+    },
+    {
+      "title": "Japan rematch gives Ireland chance to prove a point",
+      "summary": "Through two games of this five-game international window, we've seen a bit of everything – both good and bad – from Ireland, writes Neil Treacy",
+      "url": "https://www.rte.ie/sport/rugby/2026/1002/1593820-japan-rematch-gives-ireland-chance-to-prove-a-point/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-02T13:55:01Z"
     },
     {
       "title": "Gloucester winger Cokanasiga out until January",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-09-28T10:11:33Z"
-    },
-    {
-      "title": "Parsons: History on home soil is 'really special'",
-      "summary": "In two Tests at Dexcom Stadium, Beibhinn Parsons has crossed for five Ireland tries, and this afternoon's two against Japan in Galway sent the winger into the record books.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0927/1593117-parsons-breaking-record-on-home-soil-is-really-special/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-27T15:13:44Z"
-    },
-    {
-      "title": "Parsons breaks record as Ireland hold off Japan in Galway",
-      "summary": "Beibhinn Parsons became Ireland's record tryscorer, as Scott Bemand's side returned to winning ways in the WXV Global Series.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0927/1593095-parsons-breaks-record-as-ireland-hold-off-japan-in-galway/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-27T13:43:18Z"
     }
   ]
 }

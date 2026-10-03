@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-03T15:00:00+01:00",
+      "home": "Seapoint 3",
+      "away": "St. Mary’s College RFC 4",
+      "home_score": 10,
+      "away_score": 34,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-03T14:30:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Clontarf FC",
+      "home_score": 36,
+      "away_score": 31,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-03T10:30:00+01:00",
       "home": "De La Marys",
       "away": "Seapoint",
@@ -334,24 +352,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Boys Schools U16 Friendly",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-03T14:30:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Clontarf FC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Energia All-Ireland League 1A 26/27",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-03T15:00:00+01:00",
-      "home": "Seapoint 3",
-      "away": "St. Mary’s College RFC 4",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
       "involves_smc": false
     },
     {
@@ -1363,5 +1363,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-03T14:22:15+00:00"
+  "fetched_at": "2026-10-03T18:05:32+00:00"
 }

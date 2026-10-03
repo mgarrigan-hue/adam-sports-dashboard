@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-03T10:30:00+01:00",
+      "home": "De La Marys",
+      "away": "Seapoint",
+      "home_score": 20,
+      "away_score": 5,
+      "competition": "Metro Girls 18s League",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-02T20:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Navan RFC 2",
@@ -300,15 +309,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-03T10:30:00+01:00",
-      "home": "De La Marys",
-      "away": "Seapoint",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro Girls 18s League",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-03T12:00:00+01:00",
       "home": "St. Mary’s College RFC",
@@ -1363,5 +1363,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-03T09:20:18+00:00"
+  "fetched_at": "2026-10-03T14:22:15+00:00"
 }

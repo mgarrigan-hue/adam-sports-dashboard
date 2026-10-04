@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-04T12:15:00+01:00",
+      "home": "BW Rangers",
+      "away": "St. Mary’s College RFC",
+      "home_score": 5,
+      "away_score": 24,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-04T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Liberty Saints",
+      "home_score": 43,
+      "away_score": 15,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-03T15:00:00+01:00",
       "home": "Seapoint 3",
       "away": "St. Mary’s College RFC 4",
@@ -373,33 +391,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-10-04T12:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Liberty Saints",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-04T12:15:00+01:00",
-      "home": "BW Rangers",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-04T13:30:00+01:00",
-      "home": "Three Saints",
-      "away": "Wanderers FC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Women's Leinster League Div 5",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-04T15:00:00+01:00",
       "home": "St. Mary’s College RFC U20 2",
       "away": "Ashbourne U20",
@@ -424,6 +415,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-09T00:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Westmanstown",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -469,6 +469,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Old Belvedere RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1354,5 +1363,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-04T12:40:51+00:00"
+  "fetched_at": "2026-10-04T17:14:05+00:00"
 }

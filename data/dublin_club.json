@@ -20,6 +20,24 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-03T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Presentation Brothers Cork B",
+      "home_score": 22,
+      "away_score": 26,
+      "competition": "Boys Schools U16 Friendly",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-03T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Presentation Brothers Cork C",
+      "home_score": 21,
+      "away_score": 21,
+      "competition": "Boys Schools U16 Friendly",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-03T10:30:00+01:00",
       "home": "De La Marys",
       "away": "Seapoint",
@@ -1336,5 +1354,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-04T06:08:18+00:00"
+  "fetched_at": "2026-10-04T12:40:51+00:00"
 }

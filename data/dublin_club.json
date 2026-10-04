@@ -2,12 +2,30 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-04T15:00:00+01:00",
+      "home": "Lansdowne FC U20",
+      "away": "St. Mary’s College RFC U20",
+      "home_score": 15,
+      "away_score": 33,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-04T12:15:00+01:00",
       "home": "BW Rangers",
       "away": "St. Mary’s College RFC",
       "home_score": 5,
       "away_score": 24,
       "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-04T12:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": 24,
+      "away_score": 19,
+      "competition": "Boys Friendlies - U17",
       "involves_smc": false
     },
     {
@@ -375,15 +393,6 @@
     {
       "date": "2026-10-04T12:00:00+01:00",
       "home": "Greystones RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Friendlies - U17",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-04T12:00:00+01:00",
-      "home": "Greystones RFC",
       "away": "SMTC",
       "home_score": null,
       "away_score": null,
@@ -397,15 +406,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-04T15:00:00+01:00",
-      "home": "Lansdowne FC U20",
-      "away": "St. Mary’s College RFC U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": false
     },
     {
@@ -1363,5 +1363,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-04T17:14:05+00:00"
+  "fetched_at": "2026-10-04T20:19:48+00:00"
 }

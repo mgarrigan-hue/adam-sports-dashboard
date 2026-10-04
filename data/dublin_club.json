@@ -382,33 +382,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-04T12:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Clondalkin",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Friendlies U14",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-04T12:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Boys Friendlies U15",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-10-04T15:00:00+01:00",
-      "home": "St. Mary’s College RFC U20 2",
-      "away": "Ashbourne U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-09T00:00:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Skerries RFC",
@@ -1363,5 +1336,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-04T20:19:48+00:00"
+  "fetched_at": "2026-10-04T23:23:52+00:00"
 }

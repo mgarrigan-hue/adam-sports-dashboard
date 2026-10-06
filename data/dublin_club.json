@@ -382,15 +382,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-09T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Westmanstown",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-09T20:00:00+01:00",
       "home": "Old Wesley RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -460,6 +451,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls U14 Grading Group A",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T13:30:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Westmanstown",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1327,5 +1327,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-06T14:19:33+00:00"
+  "fetched_at": "2026-10-06T19:38:34+00:00"
 }

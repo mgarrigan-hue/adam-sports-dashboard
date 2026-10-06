@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-10-06T00:32:16Z",
+  "generated_at": "2026-10-06T07:05:44Z",
   "items": [
+    {
+      "title": "F1 in the wet and the future of engines - Q&A",
+      "summary": "BBC Sport F1 correspondent Andrew Benson answers your latest questions after the Bahrain Grand Prix in Malaysia.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cr15j3z2npz9o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-06T06:47:43Z"
+    },
     {
       "title": "Bottas cycling from Malaysia to Singapore Grand Prix",
       "summary": "Cadillac driver Valtteri Bottas switches four wheels for two and opts to travel to the Singapore Grand Prix by bike.",
@@ -8,6 +16,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-05T19:00:23Z"
+    },
+    {
+      "title": "Frawley and O'Shea adding greater lust to out-half debate",
+      "summary": "It was a United Rugby Championship weekend where Ciarán Frawley and Charlie O'Shea excelled in the out-half berth for Connacht and Munster respectively.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1005/1594128-frawley-and-oshea-adding-greater-lust-to-out-half-debate/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-05T18:57:21Z"
     },
     {
       "title": "Saracens management letting players down - Care",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-01T10:32:50Z"
-    },
-    {
-      "title": "Andrew Benson Q&A: Send us your questions",
-      "summary": "Our F1 correspondent Andrew Benson is doing a weekly Q&A this season, so get your questions in now.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/ckg3y15zje8o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-01T09:27:36Z"
-    },
-    {
-      "title": "O'Mahony's Munster worries, Irish URC shutout, WXV recap",
-      "summary": "Neil Treacy is joined by Ian Keatley on this week's RTE Rugby podcast, as we look back on a tough start to the URC for the four Irish provinces.",
-      "url": "https://www.rte.ie/sport/rugby/2026/0930/1593564-omahonys-munster-worries-irish-urc-shutout-wxv-recap/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-09-30T20:14:19Z"
     }
   ]
 }

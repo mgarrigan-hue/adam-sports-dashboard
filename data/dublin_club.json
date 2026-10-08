@@ -734,15 +734,6 @@
     },
     {
       "date": "2026-11-08T14:30:00+01:00",
-      "home": "St. Mary’s College RFC U20 2",
-      "away": "Wanderers FC U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-08T14:30:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "University College Dublin Rugby U20",
       "home_score": null,
@@ -1327,5 +1318,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-08T09:16:17+00:00"
+  "fetched_at": "2026-10-08T16:43:06+00:00"
 }

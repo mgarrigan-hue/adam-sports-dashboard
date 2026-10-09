@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T01:39:28Z",
+  "generated_at": "2026-10-09T08:20:16Z",
   "items": [
     {
       "title": "5 Live Sport: All About...",
@@ -18,12 +18,28 @@
       "published": "2026-10-08T18:57:13Z"
     },
     {
+      "title": "F1: Chequered Flag",
+      "summary": "Software bugs, Russell’s penalty & a sprint weekend dominate the build-up in Singapore.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0pfrs29?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-08T17:50:00Z"
+    },
+    {
       "title": "Rees-Zammit reaping rewards of hard work, says Lam",
       "summary": "Wales winger Louis Rees-Zammit is reaping the rewards of the work he has put into training, said Bristol director of rugby Pat Lam.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ck4g12rvy3l8o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-08T17:20:15Z"
+    },
+    {
+      "title": "Cullen excited by return to Leinster's 'quirky' home",
+      "summary": "Just over 26 months and a €52m redevelopment later, Leo Cullen's side will finally get to run out at what is now called the Laya Arena, which is expected to come close to hitting it's 20,500 capacity.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/1008/1594618-cullen-excited-by-return-to-leinsters-quirky-home/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-08T15:56:25Z"
     },
     {
       "title": "Gloucester-Hartpury sign Australia prop O'Gorman",
@@ -144,6 +160,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-08T09:19:58Z"
+    },
+    {
+      "title": "United Rugby Championship Round 3: All You Need to Know",
+      "summary": "Kick-off times, team news, TV coverage and everything else you need to know ahead of this weekend's games in the BKT United Rugby Championship.",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/1008/1594529-united-rugby-championship-round-3-all-you-need-to-know/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-08T09:09:08Z"
     },
     {
       "title": "'Improving' James impresses Exeter boss Baxter",
@@ -456,30 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-10-03T19:08:47Z"
-    },
-    {
-      "title": "Ulster battle back for dramatic draw away to Glasgow",
-      "summary": "Ulster fought back to snatch a dramatic 33-33 draw against Glasgow with a late converted try from Juarno Augustus in a United Rugby Championship match at Scotstoun Stadium which saw five yellow cards…",
-      "url": "https://www.rte.ie/sport/rugby/2026/1003/1593878-ulster-battle-back-for-dramatic-draw-away-to-glasgow/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-03T19:05:44Z"
-    },
-    {
-      "title": "United Rugby Championship: Munster 26-22 Bulls recap",
-      "summary": "On his first pro start, out-half Charlie O'Leary delivers a player of the match performance as Munster get past the Bulls at Thomond Park. Here is how the game unfolded.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1003/1593883-urc-sharks-v-leinster-glasgow-v-ulster-updates/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-03T16:27:24Z"
-    },
-    {
-      "title": "Classy seven-try Ireland have far too much for Japan",
-      "summary": "Béibhinn Parsons and Brittany Hogan were back among the scorers as Ireland delivered an improved performance to record their second victory in seven days over Japan at Virgin Media Park.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1003/1593880-classy-seven-try-ireland-have-far-too-much-for-japan/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-03T15:46:48Z"
     }
   ]
 }

@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-09T15:26:34Z",
+  "generated_at": "2026-10-09T20:13:20Z",
   "items": [
+    {
+      "title": "Edwards joins Argentina as defence coach",
+      "summary": "Defence coach Shaun Edwards joins Argentina's coaching staff on a deal that runs until the end of the 2027 Rugby World Cup in Australia.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm9dz5e19jxjo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-09T16:43:14Z"
+    },
     {
       "title": "Verstappen on sprint pole after another settings issue",
       "summary": "Red Bull's Max Verstappen beats Mercedes driver George Russell to sprint pole at the Singapore Grand Prix.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/ck62y7jz1qqro?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
-      "published": "2026-10-09T15:06:19Z"
+      "published": "2026-10-09T15:48:28Z"
+    },
+    {
+      "title": "How to follow Singapore Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Singapore Grand Prix, the sixth and final sprint event of the season, which takes place from 9-11 October.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm2d6p4e3y93o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-09T15:44:50Z"
     },
     {
       "title": "'Ran through me' & 'good value in pub' - ex-NFL star Kelce tries rugby",
@@ -210,14 +226,6 @@
       "published": "2026-10-08T10:33:42Z"
     },
     {
-      "title": "How to follow Singapore Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Singapore Grand Prix, the sixth and final sprint event of the season, which takes place from 9-11 October.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm2d6p4e3y93o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-08T10:06:46Z"
-    },
-    {
       "title": "Gilmore says he expected difficult Quins start",
       "summary": "Harlequins head coach Jason Gilmore says he expected a difficult start to the season following a summer of changes.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c6qxn8z0rp19o?at_medium=RSS&at_campaign=rss",
@@ -330,14 +338,6 @@
       "published": "2026-10-06T18:05:21Z"
     },
     {
-      "title": "Exeter sign former Pau back-row forward Tuipulotu",
-      "summary": "Exeter Chiefs sign former Scarlets and Pau number eight Carwyn Tuipulotu for the remainder of the season.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c52e97jgx1r7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-06T15:31:02Z"
-    },
-    {
       "title": "Belfast defeat 'etched in the memory' of McMillan",
       "summary": "Munster will be without Michael Milne, Fineen Wycherley and Diarmuid Kilgallen for Saturday's URC interpro against Ulster in Belfast, although head coach Clayton McMillan is confident of getting a cou…",
       "url": "https://www.rte.ie/sport/rugby/2026/1006/1594289-belfast-defeat-etched-in-the-memory-of-mcmillan/",
@@ -360,22 +360,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-10-06T11:49:48Z"
-    },
-    {
-      "title": "Scott returns for Scotland's WXV Tests in Australia",
-      "summary": "Lucia Scott returns to the Scotland women squad for this month's WXV Global Series fixtures with Australia in Sydney and Canberra.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwkg5v7m847do?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-06T10:37:46Z"
-    },
-    {
-      "title": "England forward Packer to miss North America tour",
-      "summary": "Two-time World Cup winner Marlie Packer will not travel with England to North America this month for Tests against Canada and the United States.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmkgql5917y1o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-06T09:30:43Z"
     },
     {
       "title": "Cheetahs to play European games in Swansea",
@@ -480,6 +464,22 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-04T13:36:42Z"
+    },
+    {
+      "title": "Verstappen wins in Malaysia after long delays as Russell retires",
+      "summary": "Max Verstappen takes his and Red Bull's first win of the year with a dominant drive in a dramatic Bahrain Grand Prix in Malaysia that started amid chaotic and unprecedented scenes.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c5n49zx3zlvwo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-04T10:32:37Z"
+    },
+    {
+      "title": "McMillan: CEO search will be no distraction for Munster",
+      "summary": "Munster head coach Clayton McMillan doesn't believe the province's search for a new chief executive will be a distraction from his day-to-day business, as the hunt for Ian Flanagan's replacement begin…",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/1004/1593939-mcmillan-ceo-search-will-be-no-distraction-for-munster/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-04T09:48:23Z"
     }
   ]
 }

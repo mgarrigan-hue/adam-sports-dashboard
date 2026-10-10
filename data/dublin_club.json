@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-09T20:00:00+01:00",
+      "home": "Old Wesley RFC 3",
+      "away": "St. Mary’s College RFC 3",
+      "home_score": 24,
+      "away_score": 12,
+      "competition": "Metro 2/3 Group C",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-04T15:00:00+01:00",
       "home": "Lansdowne FC U20",
       "away": "St. Mary’s College RFC U20",
@@ -381,24 +390,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-09T20:00:00+01:00",
-      "home": "Old Wesley RFC 3",
-      "away": "St. Mary’s College RFC 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro 2/3 Group C",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-09T20:00:00+01:00",
-      "home": "St. Mary’s College RFC 6",
-      "away": "RCSI 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 12",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-10T11:00:00+01:00",
       "home": "De La Marys",
@@ -1318,5 +1309,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-09T20:13:13+00:00"
+  "fetched_at": "2026-10-10T00:10:06+00:00"
 }

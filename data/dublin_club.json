@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-10T14:30:00+01:00",
+      "home": "Cork Constitution FC",
+      "away": "St. Mary’s College RFC",
+      "home_score": 25,
+      "away_score": 24,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-10T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Dundalk",
+      "home_score": 30,
+      "away_score": 30,
+      "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-09T20:00:00+01:00",
       "home": "Old Wesley RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -399,24 +417,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-10T11:00:00+01:00",
-      "home": "De La Marys",
-      "away": "Dundalk",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls Youths U18 Grading Group D",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-10T14:30:00+01:00",
-      "home": "Cork Constitution FC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Energia All-Ireland League 1A 26/27",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-11T12:00:00+01:00",
       "home": "St. Mary’s College RFC",
@@ -1318,5 +1318,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-10T12:49:32+00:00"
+  "fetched_at": "2026-10-10T17:35:19+00:00"
 }

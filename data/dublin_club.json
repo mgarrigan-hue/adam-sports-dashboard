@@ -11,6 +11,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-09T20:00:00+01:00",
+      "home": "St. Mary’s College RFC 6",
+      "away": "RCSI 1",
+      "home_score": 17,
+      "away_score": 31,
+      "competition": "Metro League - Division 12",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-04T15:00:00+01:00",
       "home": "Lansdowne FC U20",
       "away": "St. Mary’s College RFC U20",
@@ -1309,5 +1318,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-10T06:09:23+00:00"
+  "fetched_at": "2026-10-10T12:49:32+00:00"
 }

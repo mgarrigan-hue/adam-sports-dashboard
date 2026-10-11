@@ -2,6 +2,33 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-11T15:00:00+01:00",
+      "home": "St. Mary’s College RFC U20",
+      "away": "Blackrock College RFC U20",
+      "home_score": 29,
+      "away_score": 40,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T13:30:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Westmanstown",
+      "home_score": 7,
+      "away_score": 37,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T12:30:00+01:00",
+      "home": "De La Salle Palmerston",
+      "away": "SMTC",
+      "home_score": 17,
+      "away_score": 40,
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-10T14:30:00+01:00",
       "home": "Cork Constitution FC",
       "away": "St. Mary’s College RFC",
@@ -427,33 +454,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-11T12:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Old Belvedere RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-11T12:30:00+01:00",
-      "home": "De La Salle Palmerston",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Cup",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-10-11T13:30:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Westmanstown",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-11T15:00:00+01:00",
       "home": "MU Barnhall RFC U20 2",
       "away": "St. Mary’s College RFC U20 2",
@@ -463,13 +463,13 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-11T15:00:00+01:00",
-      "home": "St. Mary’s College RFC U20",
-      "away": "Blackrock College RFC U20",
+      "date": "2026-10-16T00:00:00+01:00",
+      "home": "SMTC",
+      "away": "Skerries RFC",
       "home_score": null,
       "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": false
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
     },
     {
       "date": "2026-10-16T00:00:00+01:00",
@@ -478,6 +478,24 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-16T00:00:00+01:00",
+      "home": "Coolmine",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-16T00:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Monkstown FC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1309,5 +1327,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-11T13:13:19+00:00"
+  "fetched_at": "2026-10-11T18:14:30+00:00"
 }

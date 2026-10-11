@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T13:13:17.839147+00:00",
+  "generated_at": "2026-10-11T18:14:26.188963+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,7 +8,7 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 325.0,
+      "points": 340.0,
       "wins": 8
     },
     {
@@ -17,7 +17,7 @@
       "code": "RUS",
       "nationality": "British",
       "team": "Mercedes",
-      "points": 236.0,
+      "points": 238.0,
       "wins": 3
     },
     {
@@ -26,25 +26,25 @@
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 221.0,
+      "points": 229.0,
       "wins": 1
     },
     {
       "rank": 4,
-      "driver": "Charles Leclerc",
-      "code": "LEC",
-      "nationality": "Monegasque",
-      "team": "Ferrari",
-      "points": 197.0,
-      "wins": 1
-    },
-    {
-      "rank": 5,
       "driver": "Max Verstappen",
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 196.0,
+      "points": 221.0,
+      "wins": 2
+    },
+    {
+      "rank": 5,
+      "driver": "Charles Leclerc",
+      "code": "LEC",
+      "nationality": "Monegasque",
+      "team": "Ferrari",
+      "points": 215.0,
       "wins": 1
     },
     {
@@ -53,7 +53,7 @@
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 189.0,
+      "points": 201.0,
       "wins": 2
     },
     {
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 128.0,
+      "points": 138.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 96.0,
+      "points": 97.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 69.0,
+      "points": 75.0,
       "wins": 0
     },
     {
@@ -121,20 +121,20 @@
     },
     {
       "rank": 14,
+      "driver": "Nico Hülkenberg",
+      "code": "HUL",
+      "nationality": "German",
+      "team": "Audi",
+      "points": 13.0,
+      "wins": 0
+    },
+    {
+      "rank": 15,
       "driver": "Gabriel Bortoleto",
       "code": "BOR",
       "nationality": "Brazilian",
       "team": "Audi",
       "points": 10.0,
-      "wins": 0
-    },
-    {
-      "rank": 15,
-      "driver": "Nico Hülkenberg",
-      "code": "HUL",
-      "nationality": "German",
-      "team": "Audi",
-      "points": 9.0,
       "wins": 0
     },
     {
@@ -215,35 +215,35 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 561.0,
+      "points": 578.0,
       "wins": 11
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 418.0,
+      "points": 444.0,
       "wins": 2
     },
     {
       "rank": 3,
       "team": "McLaren",
       "nationality": "British",
-      "points": 317.0,
+      "points": 339.0,
       "wins": 2
     },
     {
       "rank": 4,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 306.0,
-      "wins": 1
+      "points": 332.0,
+      "wins": 2
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 94.0,
+      "points": 100.0,
       "wins": 0
     },
     {
@@ -264,7 +264,7 @@
       "rank": 8,
       "team": "Audi",
       "nationality": "German",
-      "points": 19.0,
+      "points": 23.0,
       "wins": 0
     },
     {

@@ -12,6 +12,15 @@
     },
     {
       "date": "2026-10-11T15:00:00+01:00",
+      "home": "MU Barnhall RFC U20 2",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": 24,
+      "away_score": 38,
+      "competition": "JP Fanagan (U20) - Premier 3 NEW",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T15:00:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Blackrock College RFC U20",
       "home_score": 29,
@@ -463,15 +472,6 @@
       "involves_smc": true
     },
     {
-      "date": "2026-10-16T00:00:00+01:00",
-      "home": "Coolmine",
-      "away": "St. Mary’s College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-16T20:00:00+01:00",
       "home": "Old Belvedere RFC 2",
       "away": "St. Mary’s College RFC 2",
@@ -514,6 +514,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 12",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-18T09:30:00+01:00",
+      "home": "Coolmine",
+      "away": "St. Mary’s College RFC B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1318,5 +1327,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-12T07:51:55+00:00"
+  "fetched_at": "2026-10-12T17:14:55+00:00"
 }

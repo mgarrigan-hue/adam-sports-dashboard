@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-10-12T07:52:02Z",
+  "generated_at": "2026-10-12T17:15:03Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Ugo, Danny and Chris talk tries, Christion Wade, Shaun Edwards and the perfect steak.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0pgb7h1?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-12T16:06:00Z"
+    },
+    {
+      "title": "Points pile-ups, old-school Saracens and a royal pint - Prem talking points",
+      "summary": "After a try-filled round of action, how high can scoreboard inflation climb and what is behind it?",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm4g19dj9xjdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-12T12:06:22Z"
+    },
+    {
+      "title": "WRU names businessman Faulkner as new chairman",
+      "summary": "Lyndon Faulkner, the nephew of Wales legend Charlie Faulkner, will take the role at the WRU's annual general meeting on 22 November.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ck4g10j2gd5yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-12T12:00:06Z"
+    },
     {
       "title": "Exeter examine extent of Feyi-Waboso injury",
       "summary": "England winger Immanuel Feyi-Waboso will have a scan on a hamstring injury he suffered in Exeter's win over Newcastle.",
@@ -40,6 +64,14 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-11T18:10:16Z"
+    },
+    {
+      "title": "Wade set to break Prem try-scoring record",
+      "summary": "Newcastle boss Dan McFarland is confident Christian Wade will break Prem Rugby's try-scoring record.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cw5ynr20k2r2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-11T17:43:05Z"
     },
     {
       "title": "Verstappen perfect and Antonelli hugely mature - driver ratings",
@@ -306,14 +338,6 @@
       "published": "2026-10-09T09:45:25Z"
     },
     {
-      "title": "In-form Carpenter aims to advance England case by outshining Furbank",
-      "summary": "In-form Sale full-back Joe Carpenter admits part of him is focused on outshining Harlequins' George Furbank this weekend to advance his case for an England recall.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c615jzgej9zko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-09T09:27:36Z"
-    },
-    {
       "title": "5 Live Sport: All About...",
       "summary": "Katie Smith is joined by Wake Up to Money’s Sean Farrington",
       "url": "https://www.bbc.co.uk/sounds/play/p0pfsdld?at_medium=RSS&at_campaign=rss",
@@ -434,28 +458,12 @@
       "published": "2026-10-08T09:09:08Z"
     },
     {
-      "title": "Rugby Union Weekly",
-      "summary": "Danny and Sara chat to Irish rugby legend Peter O’Mahony about his illustrious career.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0pfkj9v?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-08T00:00:00Z"
-    },
-    {
       "title": "Lenihan hopeful Lee can turn Munster's fortunes around",
       "summary": "Donal Lenihan tells RTÉ's Inside Sport that he's hopeful that Avan Lee's appointment as the Interim CEO of Munster Rugby can help the province to turn a corner after a tumultuous period.",
       "url": "https://www.rte.ie/sport/rugby/2026/1007/1594476-lenihan-hopeful-lee-can-turn-munsters-fortunes-around/",
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-10-07T18:59:01Z"
-    },
-    {
-      "title": "Compulsory media duties like something in an autocracy - Venter",
-      "summary": "Saracens' Brendan Venter compares Prem Rugby's media obligations to \"something from an autocratic land\" after reluctantly speaking at a press conference.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwg7xr9e1y78o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-07T15:53:11Z"
     },
     {
       "title": "New Munster CEO keen for O'Mahony input",
@@ -472,14 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-10-07T12:46:12Z"
-    },
-    {
-      "title": "Munster appoint New Zealander Lee as interim CEO",
-      "summary": "New Zealander Avan Lee has been appointed as interim CEO of Munster Rugby, following the resignation of chief executive Ian Flanagan las week.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1007/1594393-munster-appoint-new-zealander-lee-as-interim-ceo/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-07T11:00:05Z"
     }
   ]
 }

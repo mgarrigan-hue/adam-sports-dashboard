@@ -454,15 +454,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-11T12:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Skerries RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-16T00:00:00+01:00",
       "home": "SMTC",
       "away": "Skerries RFC",
@@ -1327,5 +1318,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-11T22:13:22+00:00"
+  "fetched_at": "2026-10-12T01:29:22+00:00"
 }

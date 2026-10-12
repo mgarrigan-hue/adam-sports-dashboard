@@ -463,15 +463,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-16T00:00:00+01:00",
-      "home": "SMTC",
-      "away": "Skerries RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Cup",
-      "involves_smc": true
-    },
-    {
       "date": "2026-10-16T20:00:00+01:00",
       "home": "Old Belvedere RFC 2",
       "away": "St. Mary’s College RFC 2",
@@ -524,6 +515,15 @@
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
+    },
+    {
+      "date": "2026-10-18T12:00:00+01:00",
+      "home": "SMTC",
+      "away": "Skerries RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
     },
     {
       "date": "2026-10-18T12:00:00+01:00",
@@ -1327,5 +1327,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-12T17:14:55+00:00"
+  "fetched_at": "2026-10-12T23:42:20+00:00"
 }

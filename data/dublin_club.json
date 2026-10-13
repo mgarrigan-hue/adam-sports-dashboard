@@ -38,6 +38,15 @@
       "involves_smc": true
     },
     {
+      "date": "2026-10-11T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Skerries RFC",
+      "home_score": 38,
+      "away_score": 28,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-10T14:30:00+01:00",
       "home": "Cork Constitution FC",
       "away": "St. Mary’s College RFC",
@@ -536,6 +545,15 @@
     },
     {
       "date": "2026-10-18T15:00:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "Coolmine U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-18T15:00:00+01:00",
       "home": "Old Belvedere RFC U20",
       "away": "St. Mary’s College RFC U20",
       "home_score": null,
@@ -643,6 +661,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-01T14:30:00+01:00",
+      "home": "Wicklow RFC U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-06T00:00:00+01:00",
       "home": "Greystones RFC",
       "away": "St. Mary’s College RFC",
@@ -712,6 +739,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T14:30:00+01:00",
+      "home": "University of Galway U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": false
     },
     {
@@ -815,6 +851,15 @@
     },
     {
       "date": "2026-11-22T14:30:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "North Wexford U20s",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T14:30:00+01:00",
       "home": "Clontarf FC U20",
       "away": "St. Mary’s College RFC U20",
       "home_score": null,
@@ -878,6 +923,15 @@
     },
     {
       "date": "2026-11-29T14:30:00+01:00",
+      "home": "Suttonians U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-29T14:30:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Dublin University FC U20",
       "home_score": null,
@@ -937,6 +991,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-06T14:00:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "Malahide RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": false
     },
     {
@@ -1076,6 +1139,15 @@
     },
     {
       "date": "2027-01-17T14:30:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "MU Barnhall RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-17T14:30:00+01:00",
       "home": "St. Mary’s College RFC 2",
       "away": "Terenure College RFC 2",
       "home_score": null,
@@ -1090,6 +1162,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Women's Leinster League Div 5",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-24T14:30:00+01:00",
+      "home": "Coolmine U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": false
     },
     {
@@ -1117,6 +1198,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-31T14:30:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "Wicklow RFC U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": false
     },
     {
@@ -1183,6 +1273,24 @@
       "involves_smc": false
     },
     {
+      "date": "2027-02-14T15:00:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "University of Galway U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-02-21T15:00:00+01:00",
+      "home": "North Wexford U20s",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
       "date": "2027-02-27T14:30:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Old Wesley RFC",
@@ -1207,6 +1315,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Women's Leinster League Div 5",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-02-28T15:00:00+01:00",
+      "home": "St. Mary’s College RFC U20 2",
+      "away": "Suttonians U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
       "involves_smc": false
     },
     {
@@ -1237,6 +1354,15 @@
       "involves_smc": false
     },
     {
+      "date": "2027-03-14T15:00:00+01:00",
+      "home": "Malahide RFC U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
       "date": "2027-03-20T14:30:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Cork Constitution FC",
@@ -1264,5 +1390,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-13T12:50:30+00:00"
+  "fetched_at": "2026-10-13T19:42:00+00:00"
 }

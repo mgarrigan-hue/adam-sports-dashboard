@@ -491,15 +491,6 @@
     },
     {
       "date": "2026-10-17T15:00:00+01:00",
-      "home": "St. Mary’s College RFC 4",
-      "away": "Tullamore 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-17T15:00:00+01:00",
       "home": "CYM 1",
       "away": "St. Mary’s College RFC 5",
       "home_score": null,
@@ -1363,6 +1354,15 @@
       "involves_smc": false
     },
     {
+      "date": "2027-02-13T12:00:00+01:00",
+      "home": "St. Mary’s College RFC 4",
+      "away": "Tullamore 3",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
       "date": "2027-02-14T13:00:00+01:00",
       "home": "Three Saints",
       "away": "Tallaght/Garda",
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-15T09:39:15+00:00"
+  "fetched_at": "2026-10-15T14:36:41+00:00"
 }

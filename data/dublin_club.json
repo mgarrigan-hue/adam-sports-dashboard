@@ -535,7 +535,7 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-18T13:00:00+01:00",
+      "date": "2026-10-18T12:30:00+01:00",
       "home": "Newbridge RFC",
       "away": "Three Saints",
       "home_score": null,
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-15T14:36:41+00:00"
+  "fetched_at": "2026-10-15T18:49:56+00:00"
 }

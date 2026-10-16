@@ -706,7 +706,7 @@
       "involves_smc": false
     },
     {
-      "date": "2026-11-06T00:00:00+01:00",
+      "date": "2026-11-07T11:00:00+01:00",
       "home": "De La Marys",
       "away": "Portlaoise",
       "home_score": null,
@@ -874,6 +874,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-21T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Sharks",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro Girls U14 League",
       "involves_smc": false
     },
     {
@@ -1525,5 +1534,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-16T04:16:29+00:00"
+  "fetched_at": "2026-10-16T09:10:10+00:00"
 }

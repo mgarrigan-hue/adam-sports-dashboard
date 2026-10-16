@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-16T20:00:00+01:00",
+      "home": "Old Belvedere RFC 2",
+      "away": "St. Mary’s College RFC 2",
+      "home_score": 35,
+      "away_score": 33,
+      "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-11T15:00:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Blackrock College RFC U20",
@@ -471,15 +480,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-16T20:00:00+01:00",
-      "home": "Old Belvedere RFC 2",
-      "away": "St. Mary’s College RFC 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 1",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-17T12:00:00+01:00",
       "home": "Naas RFC",
@@ -1534,5 +1534,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-16T18:14:36+00:00"
+  "fetched_at": "2026-10-16T21:27:58+00:00"
 }

@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "CYM 1",
+      "away": "St. Mary’s College RFC 5",
+      "home_score": 7,
+      "away_score": 69,
+      "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-17T15:00:00+01:00",
+      "home": "Stillorgan-Rathfarnham 2",
+      "away": "St. Mary’s College RFC 6",
+      "home_score": 14,
+      "away_score": 40,
+      "competition": "Metro League - Division 12",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-16T20:00:00+01:00",
       "home": "Old Belvedere RFC 2",
       "away": "St. Mary’s College RFC 2",
@@ -487,24 +505,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls Youths U18 Grading Group D",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-17T15:00:00+01:00",
-      "home": "CYM 1",
-      "away": "St. Mary’s College RFC 5",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 7",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-17T15:00:00+01:00",
-      "home": "Stillorgan-Rathfarnham 2",
-      "away": "St. Mary’s College RFC 6",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 12",
       "involves_smc": false
     },
     {
@@ -1534,5 +1534,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-17T14:48:59+00:00"
+  "fetched_at": "2026-10-17T17:42:06+00:00"
 }

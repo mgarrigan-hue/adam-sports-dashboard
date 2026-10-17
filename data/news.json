@@ -1,6 +1,38 @@
 {
-  "generated_at": "2026-10-17T17:42:14Z",
+  "generated_at": "2026-10-17T19:58:27Z",
   "items": [
+    {
+      "title": "Scintillating Connacht beat Saracens in Galway try-fest",
+      "summary": "Connacht produced a scintillating display to claim a famous victory over Saracens on a thrilling evening in Galway.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1017/1595745-scintillating-connacht-beat-saracens-in-galway-try-fest/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-17T19:30:55Z"
+    },
+    {
+      "title": "Tributes to Andrews before Champions Cup matches",
+      "summary": "Lions and Sale Sharks are among the clubs to pay tribute to Hyron Andrews at their matches on Saturday, following the South African's death aged 31.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cq5ynl4nvv5vo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-17T19:08:14Z"
+    },
+    {
+      "title": "Champions Cup updates: Munster v Racing 92",
+      "summary": "Live updates of Munster's opener against Racing 92 at SuperValu Páirc Uí Chaoimh.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1017/1595750-champions-cup-updates-munster-v-racing-92/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-17T18:40:30Z"
+    },
+    {
+      "title": "Seven-try Connacht beat Saracens in Champions Cup",
+      "summary": "Connacht produce a superb attacking performance to beat Saracens in their opening Champions Cup pool game.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cr86zgpyz464o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-17T18:33:05Z"
+    },
     {
       "title": "Leinster rout Clermont with slick second half display",
       "summary": "Leinster produced a fine second-half display to record a bonus-point 48-23 win against a limited Clermont side at Stade Marcel-Michelin.",
@@ -42,7 +74,7 @@
       "published": "2026-10-17T16:33:12Z"
     },
     {
-      "title": "Champions Cup updates: Connacht v Saracens",
+      "title": "Champions Cup: Connacht 45-36 Saracens recap",
       "summary": "Live updates of Connacht's Champions Cup opener against three-time champions Saracens at the Dexcom Stadium",
       "url": "https://www.rte.ie/sport/rugby/2026/1017/1595749-champions-cup-updates-connacht-v-saracens/",
       "source": "RTÉ - Rugby",
@@ -354,14 +386,6 @@
       "published": "2026-10-14T09:00:24Z"
     },
     {
-      "title": "Two punch-ups, two red cards, no chances left - Saracens sack Auvaa",
-      "summary": "Totoa Auvaa's young career has been derailed by a chaotic 14 months at Saracens which featured violence both on and off the pitch.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c84g13lq3r2lo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-13T22:12:16Z"
-    },
-    {
       "title": "Maul mania, Prendergast's form, and Champions Cup is back",
       "summary": "Neil Treacy is joined by Ian Keatley and former Leinster and Connacht centre Tom Daly on this week's RTÉ Rugby podcast, as we break down another mixed week for the Irish provinces in the BKT United Ru…",
       "url": "https://www.rte.ie/sport/rugby/2026/1013/1595281-maul-mania-prendergasts-form-and-champions-cup-is-back/",
@@ -456,30 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-11T18:32:19Z"
-    },
-    {
-      "title": "'They've thrown away a double podium' - what went wrong for Hamilton?",
-      "summary": "After a difficult day for Lewis Hamilton the Chequered Flag's Harry Benjamin, Alice Powell and Alisha Palmowski look at what went wrong with his and Ferrari's strategy at the Singapore Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/videos/c65yn0pm5xxko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-11T18:10:16Z"
-    },
-    {
-      "title": "Verstappen perfect and Antonelli hugely mature - driver ratings",
-      "summary": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Singapore Grand Prix.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c64g10qd44gjo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-11T17:26:05Z"
-    },
-    {
-      "title": "Verstappen dominates for first Singapore Grand Prix win",
-      "summary": "Red Bull's Max Verstappen secures his first win in the Singapore Grand Prix, ahead of Charles Leclerc and Kimi Antonelli.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c84g1p2ql9z5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-11T14:46:06Z"
     }
   ]
 }

@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-18T12:00:00+01:00",
+      "home": "SMTC",
+      "away": "Skerries RFC",
+      "home_score": 14,
+      "away_score": 27,
+      "competition": "Leinster School Youths u15s Cup",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-10-18T09:30:00+01:00",
+      "home": "Coolmine",
+      "away": "St. Mary’s College RFC B",
+      "home_score": 19,
+      "away_score": 15,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-17T15:00:00+01:00",
       "home": "CYM 1",
       "away": "St. Mary’s College RFC 5",
@@ -507,24 +525,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-18T09:30:00+01:00",
-      "home": "Coolmine",
-      "away": "St. Mary’s College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-18T12:00:00+01:00",
-      "home": "SMTC",
-      "away": "Skerries RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Cup",
-      "involves_smc": true
-    },
     {
       "date": "2026-10-18T12:00:00+01:00",
       "home": "St. Mary’s College RFC",
@@ -1534,5 +1534,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-18T09:16:59+00:00"
+  "fetched_at": "2026-10-18T13:24:39+00:00"
 }

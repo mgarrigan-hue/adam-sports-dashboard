@@ -562,15 +562,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-23T00:00:00+01:00",
-      "home": "North Kildare A",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth U17 Cup",
-      "involves_smc": true
-    },
-    {
       "date": "2026-10-24T12:00:00+01:00",
       "home": "Navan RFC",
       "away": "De La Marys",
@@ -589,21 +580,21 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-25T12:00:00+01:00",
+      "home": "North Kildare A",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth U17 Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-30T00:00:00+01:00",
       "home": "North Meath",
       "away": "St. Mary’s College RFC",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T00:00:00+01:00",
-      "home": "MU Barnhall RFC",
-      "away": "De La Marys",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls Youths U18 Grading Group D",
       "involves_smc": false
     },
     {
@@ -640,6 +631,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 12",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-31T11:30:00+01:00",
+      "home": "MU Barnhall RFC",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youths U18 Grading Group D",
       "involves_smc": false
     },
     {
@@ -1552,5 +1552,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-19T15:46:22+00:00"
+  "fetched_at": "2026-10-19T20:49:57+00:00"
 }

@@ -598,24 +598,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-10-30T00:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "Clontarf FC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T00:00:00+01:00",
-      "home": "St. Mary’s College RFC A",
-      "away": "Greystones RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-30T19:45:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Terenure College RFC U20",
@@ -676,6 +658,24 @@
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-01T12:00:00+01:00",
+      "home": "St. Mary’s College RFC B",
+      "away": "Clontarf FC B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-01T12:00:00+01:00",
+      "home": "St. Mary’s College RFC A",
+      "away": "Greystones RFC A",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Grading",
       "involves_smc": false
     },
     {
@@ -1543,5 +1543,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-19T02:51:41+00:00"
+  "fetched_at": "2026-10-19T08:23:06+00:00"
 }

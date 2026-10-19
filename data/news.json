@@ -1,6 +1,30 @@
 {
-  "generated_at": "2026-10-19T02:51:48Z",
+  "generated_at": "2026-10-19T08:23:13Z",
   "items": [
+    {
+      "title": "How to follow US Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the United States Grand Prix, which takes place from 23-25 October.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm0qk189q5dgo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-19T06:42:58Z"
+    },
+    {
+      "title": "Best images of F1 in the US through the years",
+      "summary": "A selection of images from F1 races in the US, from Indianapolis, Watkins Glen and Long Beach to the streets of Dallas and the Caesars Palace car park.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cqm24nezmy23o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-19T06:17:28Z"
+    },
+    {
+      "title": "The players that staked late claims for Wales spots",
+      "summary": "Dragons, Ospreys, Scarlets and Cardiff players give Wales boss Steve Tandy plenty to mull over before he names his Nations Championship squad on Tuesday.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm4g1dylle2eo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-19T03:30:23Z"
+    },
     {
       "title": "Northampton beat Cardiff for first English win in Champions Cup",
       "summary": "Northampton edge to a nervy Champions Cup pool win against tenacious Cardiff at Franklin's Gardens.",
@@ -354,14 +378,6 @@
       "published": "2026-10-15T14:22:57Z"
     },
     {
-      "title": "Bristol bring in hooker Gordon as injury cover",
-      "summary": "Bristol sign former Newcastle hooker Bryn Gordon as injury cover for their upcoming games.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/crz6538nddxjo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-15T09:34:54Z"
-    },
-    {
       "title": "The F1 pit stop that helped save lives",
       "summary": "How an F1 pit stop inspired changes to hospital care that have helped save lives ever since.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c6ly0q00gj5do?at_medium=RSS&at_campaign=rss",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-13T14:28:10Z"
-    },
-    {
-      "title": "World Cup-winning coach White takes reins at Fiji",
-      "summary": "South Africa's 2007 World Cup winning head coach Jake White has been appointed coach of Fiji less than a year out from the next World Cup in Australia.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1013/1595228-world-cup-winning-coach-white-takes-reins-in-fiji/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-13T13:30:00Z"
-    },
-    {
-      "title": "Rwanda to host F1's first race in Africa since 1993",
-      "summary": "Rwanda signs a 10-year deal with Formula 1 to host races in the African country, starting \"in the early 2030s\".",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c5rmy3v3mn9jo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-13T13:21:02Z"
     }
   ]
 }

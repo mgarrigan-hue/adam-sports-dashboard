@@ -562,6 +562,15 @@
   ],
   "fixtures": [
     {
+      "date": "2026-10-23T00:00:00+01:00",
+      "home": "North Kildare A",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth U17 Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-10-24T12:00:00+01:00",
       "home": "Navan RFC",
       "away": "De La Marys",
@@ -1543,5 +1552,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-19T08:23:06+00:00"
+  "fetched_at": "2026-10-19T15:46:22+00:00"
 }

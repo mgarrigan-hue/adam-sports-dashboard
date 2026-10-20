@@ -580,6 +580,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-10-25T00:00:00+01:00",
+      "home": "De La Salle Palmerston",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Boys Friendlies U13",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-25T12:00:00+01:00",
       "home": "North Kildare A",
       "away": "SMTC",
@@ -1552,5 +1561,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-20T05:04:40+00:00"
+  "fetched_at": "2026-10-20T10:14:55+00:00"
 }

@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-24T14:30:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Terenure College RFC",
+      "home_score": 12,
+      "away_score": 17,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-18T15:00:00+01:00",
       "home": "Old Belvedere RFC U20",
       "away": "St. Mary’s College RFC U20",
@@ -472,24 +481,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-24T12:00:00+01:00",
-      "home": "Navan RFC",
-      "away": "De La Marys",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls U14 Grading Group A",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-24T14:30:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Terenure College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Energia All-Ireland League 1A 26/27",
-      "involves_smc": false
-    },
-    {
       "date": "2026-10-25T10:30:00+01:00",
       "home": "De La Salle Palmerston",
       "away": "St. Mary’s College RFC",
@@ -634,7 +625,7 @@
       "involves_smc": false
     },
     {
-      "date": "2026-11-06T00:00:00+01:00",
+      "date": "2026-11-07T11:00:00+01:00",
       "home": "De La Marys",
       "away": "ABS Rugby",
       "home_score": null,
@@ -1417,5 +1408,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-24T13:47:27+00:00"
+  "fetched_at": "2026-10-24T17:08:55+00:00"
 }

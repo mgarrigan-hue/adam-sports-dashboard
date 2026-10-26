@@ -14,8 +14,8 @@
       "date": "2026-10-25T10:30:00+01:00",
       "home": "De La Salle Palmerston",
       "away": "St. Mary’s College RFC",
-      "home_score": 36,
-      "away_score": 19,
+      "home_score": 19,
+      "away_score": 36,
       "competition": "Boys Friendlies U13",
       "involves_smc": false
     },
@@ -1417,5 +1417,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-26T05:44:25+00:00"
+  "fetched_at": "2026-10-26T12:05:50+00:00"
 }

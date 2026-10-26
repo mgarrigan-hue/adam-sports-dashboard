@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T22:42:58.452663+00:00",
+  "generated_at": "2026-10-26T00:56:05.807127+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,8 +8,8 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 340.0,
-      "wins": 8
+      "points": 365.0,
+      "wins": 9
     },
     {
       "rank": 2,
@@ -17,7 +17,7 @@
       "code": "RUS",
       "nationality": "British",
       "team": "Mercedes",
-      "points": 238.0,
+      "points": 242.0,
       "wins": 3
     },
     {
@@ -26,7 +26,7 @@
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 229.0,
+      "points": 241.0,
       "wins": 1
     },
     {
@@ -35,7 +35,7 @@
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 221.0,
+      "points": 236.0,
       "wins": 2
     },
     {
@@ -44,7 +44,7 @@
       "code": "LEC",
       "nationality": "Monegasque",
       "team": "Ferrari",
-      "points": 215.0,
+      "points": 233.0,
       "wins": 1
     },
     {
@@ -53,7 +53,7 @@
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 201.0,
+      "points": 211.0,
       "wins": 2
     },
     {
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 138.0,
+      "points": 144.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 97.0,
+      "points": 105.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 75.0,
+      "points": 77.0,
       "wins": 0
     },
     {
@@ -89,7 +89,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 41.0,
+      "points": 42.0,
       "wins": 0
     },
     {
@@ -215,42 +215,42 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 578.0,
-      "wins": 11
+      "points": 607.0,
+      "wins": 12
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 444.0,
+      "points": 474.0,
       "wins": 2
     },
     {
       "rank": 3,
-      "team": "McLaren",
-      "nationality": "British",
-      "points": 339.0,
+      "team": "Red Bull",
+      "nationality": "Austrian",
+      "points": 355.0,
       "wins": 2
     },
     {
       "rank": 4,
-      "team": "Red Bull",
-      "nationality": "Austrian",
-      "points": 332.0,
+      "team": "McLaren",
+      "nationality": "British",
+      "points": 355.0,
       "wins": 2
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 100.0,
+      "points": 102.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 68.0,
+      "points": 69.0,
       "wins": 0
     },
     {

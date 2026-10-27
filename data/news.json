@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-10-27T01:55:22Z",
+  "generated_at": "2026-10-27T07:11:16Z",
   "items": [
+    {
+      "title": "How much of Antonelli's success is down to his ability? - F1 Q&A",
+      "summary": "BBC F1 correspondent Andrew Benson answers your latest questions after the United States Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/cmde8xjl3xpwo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-27T07:00:23Z"
+    },
+    {
+      "title": "Where are Wales internationals really made?",
+      "summary": "Where a player is born in only one part of the story - BBC Sport traces the playing journey of Wales' 100 most recent internationals.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmp3gy0n44k4o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-27T04:34:20Z"
+    },
     {
       "title": "Four games, no wins - Ulster aim for URC turnaround",
       "summary": "Head coach Richie Murphy says Ulster are \"small margins\" away from a first victory in the United Rugby Championship after a winless start in the league.",
@@ -112,6 +128,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-26T08:00:11Z"
+    },
+    {
+      "title": "Carbery's return to fitness and form timed to perfection",
+      "summary": "When Joey Carbery's time at Bordeaux had been ended by a torn ACL in February, it looked as though his return to Leinster would be significantly delayed",
+      "url": "https://www.rte.ie/sport/rugby/2026/1026/1596839-carberys-return-to-fitness-and-form-timed-to-perfection/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-10-26T07:53:47Z"
     },
     {
       "title": "F1: Chequered Flag",
@@ -362,14 +386,6 @@
       "published": "2026-10-24T09:22:07Z"
     },
     {
-      "title": "Wales great Faletau suffers fresh injury blow",
-      "summary": "Wales number eight Taulupe Faletau suffers another injury blow after just one game back with Cardiff.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cw5yn99z31elo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-24T07:00:16Z"
-    },
-    {
       "title": "Canada inflict back-to-back losses on England",
       "summary": "England suffer back-to-back defeats for the first time in a decade as Canada win 31-22 in Ottawa, including a hat-trick for captain Sophie de Goede.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm79p7x79wl9o?at_medium=RSS&at_campaign=rss",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-22T20:55:40Z"
-    },
-    {
-      "title": "King relishing a physical battle against the Boks",
-      "summary": "Erin King insists Ireland won't \"shy away\" from the physicality of South Africa when the sides meet in their first ever women's Test in Cape Town on Saturday.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1022/1596502-king-relishing-a-physical-battle-against-the-boks/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-22T17:29:08Z"
-    },
-    {
-      "title": "Rugby's data revolution - can Moneyball be oval?",
-      "summary": "Top rugby clubs are increasingly turning to data when they plan their moves to recruit talent.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c6kg7kejxvw5o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-22T16:47:46Z"
     }
   ]
 }

@@ -599,15 +599,6 @@
     },
     {
       "date": "2026-11-01T13:30:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "Clontarf FC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Grading",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-01T13:30:00+01:00",
       "home": "St. Mary’s College RFC A",
       "away": "Greystones RFC A",
       "home_score": null,
@@ -1417,5 +1408,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-30T16:08:25+00:00"
+  "fetched_at": "2026-10-30T20:57:14+00:00"
 }

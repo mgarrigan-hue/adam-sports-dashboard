@@ -2,6 +2,33 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-30T20:00:00+01:00",
+      "home": "Naas RFC 3",
+      "away": "St. Mary’s College RFC 3",
+      "home_score": 41,
+      "away_score": 24,
+      "competition": "Metro League - Division 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-30T20:00:00+01:00",
+      "home": "St. Mary’s College RFC 5",
+      "away": "BGF Ravens 1",
+      "home_score": 22,
+      "away_score": 22,
+      "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-30T19:45:00+01:00",
+      "home": "St. Mary’s College RFC U20",
+      "away": "Terenure College RFC U20",
+      "home_score": 22,
+      "away_score": 12,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-25T12:00:00+01:00",
       "home": "North Kildare A",
       "away": "SMTC",
@@ -498,51 +525,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-10-30T00:00:00+01:00",
-      "home": "North Meath",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T19:45:00+01:00",
-      "home": "St. Mary’s College RFC U20",
-      "away": "Terenure College RFC U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T20:00:00+01:00",
-      "home": "Naas RFC 3",
-      "away": "St. Mary’s College RFC 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T20:00:00+01:00",
-      "home": "St. Mary’s College RFC 5",
-      "away": "BGF Ravens 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 7",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-30T20:00:00+01:00",
-      "home": "St. Mary’s College RFC 6",
-      "away": "Clondalkin 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 12",
-      "involves_smc": false
-    },
     {
       "date": "2026-10-31T11:30:00+01:00",
       "home": "MU Barnhall RFC",
@@ -1408,5 +1390,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-30T20:57:14+00:00"
+  "fetched_at": "2026-10-31T00:24:50+00:00"
 }

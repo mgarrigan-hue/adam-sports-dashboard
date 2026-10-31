@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-10-31T15:00:00+01:00",
+      "home": "St. Mary’s College RFC 4",
+      "away": "Blackrock College RFC 3",
+      "home_score": 34,
+      "away_score": 14,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-31T14:30:00+01:00",
+      "home": "Old Wesley RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": 17,
+      "away_score": 26,
+      "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
       "date": "2026-10-30T20:00:00+01:00",
       "home": "Naas RFC 3",
       "away": "St. Mary’s College RFC 3",
@@ -541,24 +559,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-31T14:30:00+01:00",
-      "home": "Old Wesley RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Energia All-Ireland League 1A 26/27",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-31T15:00:00+01:00",
-      "home": "St. Mary’s College RFC 4",
-      "away": "Blackrock College RFC 3",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
       "involves_smc": false
     },
     {
@@ -1390,5 +1390,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-31T12:54:27+00:00"
+  "fetched_at": "2026-10-31T17:28:34+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T20:36:41.952451+00:00",
+  "generated_at": "2026-10-31T23:54:12.275666+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -206,6 +206,15 @@
       "code": "PER",
       "nationality": "Mexican",
       "team": "Cadillac F1 Team",
+      "points": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 24,
+      "driver": "Ryo Hirakawa",
+      "code": "",
+      "nationality": "",
+      "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0
     }

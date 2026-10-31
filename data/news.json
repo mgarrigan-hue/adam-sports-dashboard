@@ -1,8 +1,48 @@
 {
-  "generated_at": "2026-10-31T20:36:51Z",
+  "generated_at": "2026-10-31T23:54:18Z",
   "items": [
     {
-      "title": "Saints come from behind to beat in-form Gloucester",
+      "title": "Ocon denies reports of physical altercation behind dropping",
+      "summary": "Esteban Ocon denies reports that his being dropped by Haas at the Mexico City Grand Prix was a consequence of a row with team principal Ayao Komatsu descending into a physical confrontation.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c3n04vjjpkv4o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-31T23:43:41Z"
+    },
+    {
+      "title": "How to follow Mexico City Grand Prix on the BBC",
+      "summary": "All the key BBC coverage details for the Mexico City Grand Prix, which takes place from 30 October to 1 November.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c6wyrgejp0w8o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-31T23:23:03Z"
+    },
+    {
+      "title": "Hamilton takes first pole for Ferrari at Mexico City Grand Prix",
+      "summary": "Lewis Hamilton takes his first pole position for Ferrari and his first for more than three years at the Mexico City Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c6reyl8zp3jwo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-10-31T23:07:02Z"
+    },
+    {
+      "title": "Bowen double helps Cardiff beat pointless Ospreys",
+      "summary": "Cardiff lift themselves back into the top half of the United Rugby Championship (URC) by defeating Ospreys 26-0 in a scrappy Welsh derby at St Helen's.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm3el2gwlwwdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-31T21:44:20Z"
+    },
+    {
+      "title": "Second-half blitz helps Saracens beat Newcastle",
+      "summary": "Saracens take advantage of Newcastle Red Bulls indiscipline to overturn a 10-point half-time deficit to eventually win 39-31.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cvp8g198d2z6o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-10-31T20:36:38Z"
+    },
+    {
+      "title": "Saints rally to beat Gloucester but Mitchell hobbles off injured",
       "summary": "Late tries from George Hendy and Rory Hutchison gift Northampton Saints victory over stubborn Gloucester.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cj5ynk53x39eo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - Rugby Union",
@@ -48,14 +88,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-10-31T17:36:01Z"
-    },
-    {
-      "title": "Second-half blitz helps Saracens beat Newcastle",
-      "summary": "Saracens take advantage of Newcastle Red Bulls indiscipline to overturn a 10-point half-time deficit to eventually win 39-31.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cvp8g198d2z6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-31T17:20:53Z"
     },
     {
       "title": "Quins claim victory at Exeter in nine-try nailbiter",
@@ -298,14 +330,6 @@
       "published": "2026-10-29T17:25:00Z"
     },
     {
-      "title": "How to follow Mexico City Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Mexico City Grand Prix, which takes place from 30 October to 1 November.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/c6wyrgejp0w8o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-29T16:31:01Z"
-    },
-    {
       "title": "Benson proud of alternative route to the Ireland squad",
       "summary": "Out-half, first centre, second centre, full-back, neuroscientist. Jamie Benson can do it all.",
       "url": "https://www.rte.ie/sport/rugby/2026/1029/1597257-benson-proud-of-alternative-route-to-the-ireland-squad/",
@@ -456,30 +480,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-10-27T19:53:11Z"
-    },
-    {
-      "title": "Sexton 'very hopeful' Prendergast can shake off injury",
-      "summary": "Ireland remain hopeful that Sam Prendergast will be fit to play some part in next week's Nations Championship clash with Argentina, as the out-half battles a wrist injury.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1027/1597008-sexton-very-hopeful-prendergast-can-shake-off-injury/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-27T18:54:30Z"
-    },
-    {
-      "title": "Simpler, cheaper hybrid V8s proposed for next F1 rules",
-      "summary": "Formula 1's next engine regulations are set to introduce V8 turbo hybrid engines that are simplified and less expensive compared to the existing rules.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cw4g186011rdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-10-27T15:17:53Z"
-    },
-    {
-      "title": "McMillan: Coombes not dwelling on Furlong incident",
-      "summary": "Munster head coach Clayton McMillan has said that Gavin Coombes has returned to business as normal, following the incident in Saturday's defeat to Leinster that led to Tadhg Furlong getting cited.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1027/1596969-mcmillan-coombes-not-dwelling-on-furlong-incident/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-27T14:49:16Z"
     }
   ]
 }

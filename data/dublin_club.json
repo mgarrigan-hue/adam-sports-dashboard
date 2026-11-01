@@ -553,24 +553,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-10-31T11:30:00+01:00",
-      "home": "MU Barnhall RFC",
-      "away": "De La Marys",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls Youths U18 Grading Group D",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-10-31T14:30:00+01:00",
-      "home": "Wicklow RFC U20",
-      "away": "St. Mary’s College RFC U20 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-01T13:00:00+01:00",
       "home": "Three Saints",
       "away": "Port Dara Falcons",
@@ -1390,5 +1372,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-10-31T23:54:13+00:00"
+  "fetched_at": "2026-11-01T03:51:25+00:00"
 }

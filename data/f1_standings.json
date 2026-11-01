@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T10:58:25.148228+00:00",
+  "generated_at": "2026-11-01T17:01:14.209178+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -212,8 +212,8 @@
     {
       "rank": 24,
       "driver": "Ryo Hirakawa",
-      "code": "",
-      "nationality": "",
+      "code": "HIR",
+      "nationality": "Japanese",
       "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0

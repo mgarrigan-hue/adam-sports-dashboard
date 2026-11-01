@@ -21,6 +21,15 @@
     },
     {
       "date": "2026-10-31T14:30:00+01:00",
+      "home": "Wicklow RFC U20",
+      "away": "St. Mary’s College RFC U20 2",
+      "home_score": 13,
+      "away_score": 32,
+      "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-31T14:30:00+01:00",
       "home": "Old Wesley RFC",
       "away": "St. Mary’s College RFC",
       "home_score": 17,
@@ -1372,5 +1381,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-01T03:51:25+00:00"
+  "fetched_at": "2026-11-01T10:58:29+00:00"
 }

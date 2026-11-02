@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T00:56:34.232722+00:00",
+  "generated_at": "2026-11-02T07:12:25.417019+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,16 +8,16 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 365.0,
+      "points": 380.0,
       "wins": 9
     },
     {
       "rank": 2,
-      "driver": "George Russell",
-      "code": "RUS",
-      "nationality": "British",
-      "team": "Mercedes",
-      "points": 242.0,
+      "driver": "Max Verstappen",
+      "code": "VER",
+      "nationality": "Dutch",
+      "team": "Red Bull",
+      "points": 261.0,
       "wins": 3
     },
     {
@@ -26,17 +26,17 @@
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 241.0,
+      "points": 259.0,
       "wins": 1
     },
     {
       "rank": 4,
-      "driver": "Max Verstappen",
-      "code": "VER",
-      "nationality": "Dutch",
-      "team": "Red Bull",
-      "points": 236.0,
-      "wins": 2
+      "driver": "George Russell",
+      "code": "RUS",
+      "nationality": "British",
+      "team": "Mercedes",
+      "points": 250.0,
+      "wins": 3
     },
     {
       "rank": 5,
@@ -44,7 +44,7 @@
       "code": "LEC",
       "nationality": "Monegasque",
       "team": "Ferrari",
-      "points": 233.0,
+      "points": 245.0,
       "wins": 1
     },
     {
@@ -53,7 +53,7 @@
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 211.0,
+      "points": 221.0,
       "wins": 2
     },
     {
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 144.0,
+      "points": 150.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 77.0,
+      "points": 79.0,
       "wins": 0
     },
     {
@@ -89,7 +89,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 42.0,
+      "points": 43.0,
       "wins": 0
     },
     {
@@ -107,7 +107,7 @@
       "code": "COL",
       "nationality": "Argentine",
       "team": "Alpine F1 Team",
-      "points": 27.0,
+      "points": 31.0,
       "wins": 0
     },
     {
@@ -202,19 +202,19 @@
     },
     {
       "rank": 23,
-      "driver": "Sergio Pérez",
-      "code": "PER",
-      "nationality": "Mexican",
-      "team": "Cadillac F1 Team",
+      "driver": "Ryo Hirakawa",
+      "code": "HIR",
+      "nationality": "Japanese",
+      "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0
     },
     {
       "rank": 24,
-      "driver": "Ryo Hirakawa",
-      "code": "HIR",
-      "nationality": "Japanese",
-      "team": "Haas F1 Team",
+      "driver": "Sergio Pérez",
+      "code": "PER",
+      "nationality": "Mexican",
+      "team": "Cadillac F1 Team",
       "points": 0.0,
       "wins": 0
     }
@@ -224,42 +224,42 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 607.0,
+      "points": 630.0,
       "wins": 12
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 474.0,
+      "points": 504.0,
       "wins": 2
     },
     {
       "rank": 3,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 355.0,
-      "wins": 2
+      "points": 380.0,
+      "wins": 3
     },
     {
       "rank": 4,
       "team": "McLaren",
       "nationality": "British",
-      "points": 355.0,
+      "points": 371.0,
       "wins": 2
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 102.0,
+      "points": 104.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 69.0,
+      "points": 74.0,
       "wins": 0
     },
     {

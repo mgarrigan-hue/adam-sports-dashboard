@@ -716,15 +716,6 @@
     },
     {
       "date": "2026-11-13T00:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Grading Grp4",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-11-13T00:00:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Lansdowne FC",
       "home_score": null,
@@ -787,6 +778,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-15T12:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths u15s Grading Grp4",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-20T00:00:00+01:00",
       "home": "Coolmine",
       "away": "St. Mary’s College RFC",
@@ -823,21 +823,21 @@
       "involves_smc": false
     },
     {
-      "date": "2026-11-20T00:00:00+01:00",
-      "home": "Gorey",
-      "away": "De La Marys",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls Youths U18 Grading Group D",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-21T11:00:00+01:00",
       "home": "De La Marys",
       "away": "Sharks",
       "home_score": null,
       "away_score": null,
       "competition": "Metro Girls U14 League",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-21T11:00:00+01:00",
+      "home": "Gorey",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youths U18 Grading Group D",
       "involves_smc": false
     },
     {
@@ -883,15 +883,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-27T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Monkstown FC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
       "involves_smc": false
     },
     {
@@ -1552,5 +1543,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-02T17:18:01+00:00"
+  "fetched_at": "2026-11-02T23:57:56+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T17:17:57Z",
+  "generated_at": "2026-11-02T23:57:49Z",
   "season": "2026",
   "upcoming": [
     {
@@ -305,28 +305,28 @@
       "position": "7",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "150",
+      "points": "144",
       "wins": "0"
     },
     {
       "position": "8",
       "driver": "Isack Hadjar",
       "team": "Red Bull",
-      "points": "105",
+      "points": "107",
       "wins": "0"
     },
     {
       "position": "9",
       "driver": "Liam Lawson",
       "team": "RB F1 Team",
-      "points": "79",
+      "points": "83",
       "wins": "0"
     },
     {
       "position": "10",
       "driver": "Pierre Gasly",
       "team": "Alpine F1 Team",
-      "points": "43",
+      "points": "42",
       "wins": "0"
     },
     {
@@ -340,7 +340,7 @@
       "position": "12",
       "driver": "Franco Colapinto",
       "team": "Alpine F1 Team",
-      "points": "31",
+      "points": "27",
       "wins": "0"
     },
     {
@@ -352,16 +352,16 @@
     },
     {
       "position": "14",
-      "driver": "Nico H\u00fclkenberg",
+      "driver": "Gabriel Bortoleto",
       "team": "Audi",
-      "points": "13",
+      "points": "14",
       "wins": "0"
     },
     {
       "position": "15",
-      "driver": "Gabriel Bortoleto",
+      "driver": "Nico H\u00fclkenberg",
       "team": "Audi",
-      "points": "10",
+      "points": "13",
       "wins": "0"
     },
     {
@@ -401,22 +401,22 @@
     },
     {
       "position": "21",
+      "driver": "Ryo Hirakawa",
+      "team": "Haas F1 Team",
+      "points": "1",
+      "wins": "0"
+    },
+    {
+      "position": "22",
       "driver": "Lance Stroll",
       "team": "Aston Martin",
       "points": "0",
       "wins": "0"
     },
     {
-      "position": "22",
+      "position": "23",
       "driver": "Valtteri Bottas",
       "team": "Cadillac F1 Team",
-      "points": "0",
-      "wins": "0"
-    },
-    {
-      "position": "23",
-      "driver": "Ryo Hirakawa",
-      "team": "Haas F1 Team",
       "points": "0",
       "wins": "0"
     },
@@ -444,37 +444,37 @@
     {
       "position": "3",
       "team": "Red Bull",
-      "points": "380",
+      "points": "382",
       "wins": "3"
     },
     {
       "position": "4",
       "team": "McLaren",
-      "points": "371",
+      "points": "365",
       "wins": "2"
     },
     {
       "position": "5",
       "team": "RB F1 Team",
-      "points": "104",
+      "points": "108",
       "wins": "0"
     },
     {
       "position": "6",
       "team": "Alpine F1 Team",
-      "points": "74",
+      "points": "69",
       "wins": "0"
     },
     {
       "position": "7",
       "team": "Haas F1 Team",
-      "points": "30",
+      "points": "31",
       "wins": "0"
     },
     {
       "position": "8",
       "team": "Audi",
-      "points": "23",
+      "points": "27",
       "wins": "0"
     },
     {

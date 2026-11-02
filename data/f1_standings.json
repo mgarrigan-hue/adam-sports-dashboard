@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T17:17:59.233596+00:00",
+  "generated_at": "2026-11-02T23:57:51.409780+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 150.0,
+      "points": 144.0,
       "wins": 0
     },
     {
@@ -71,7 +71,7 @@
       "code": "HAD",
       "nationality": "French",
       "team": "Red Bull",
-      "points": 105.0,
+      "points": 107.0,
       "wins": 0
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 79.0,
+      "points": 83.0,
       "wins": 0
     },
     {
@@ -89,7 +89,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 43.0,
+      "points": 42.0,
       "wins": 0
     },
     {
@@ -107,7 +107,7 @@
       "code": "COL",
       "nationality": "Argentine",
       "team": "Alpine F1 Team",
-      "points": 31.0,
+      "points": 27.0,
       "wins": 0
     },
     {
@@ -121,20 +121,20 @@
     },
     {
       "rank": 14,
+      "driver": "Gabriel Bortoleto",
+      "code": "BOR",
+      "nationality": "Brazilian",
+      "team": "Audi",
+      "points": 14.0,
+      "wins": 0
+    },
+    {
+      "rank": 15,
       "driver": "Nico Hülkenberg",
       "code": "HUL",
       "nationality": "German",
       "team": "Audi",
       "points": 13.0,
-      "wins": 0
-    },
-    {
-      "rank": 15,
-      "driver": "Gabriel Bortoleto",
-      "code": "BOR",
-      "nationality": "Brazilian",
-      "team": "Audi",
-      "points": 10.0,
       "wins": 0
     },
     {
@@ -184,6 +184,15 @@
     },
     {
       "rank": 21,
+      "driver": "Ryo Hirakawa",
+      "code": "HIR",
+      "nationality": "Japanese",
+      "team": "Haas F1 Team",
+      "points": 1.0,
+      "wins": 0
+    },
+    {
+      "rank": 22,
       "driver": "Lance Stroll",
       "code": "STR",
       "nationality": "Canadian",
@@ -192,20 +201,11 @@
       "wins": 0
     },
     {
-      "rank": 22,
+      "rank": 23,
       "driver": "Valtteri Bottas",
       "code": "BOT",
       "nationality": "Finnish",
       "team": "Cadillac F1 Team",
-      "points": 0.0,
-      "wins": 0
-    },
-    {
-      "rank": 23,
-      "driver": "Ryo Hirakawa",
-      "code": "HIR",
-      "nationality": "Japanese",
-      "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0
     },
@@ -238,42 +238,42 @@
       "rank": 3,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 380.0,
+      "points": 382.0,
       "wins": 3
     },
     {
       "rank": 4,
       "team": "McLaren",
       "nationality": "British",
-      "points": 371.0,
+      "points": 365.0,
       "wins": 2
     },
     {
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 104.0,
+      "points": 108.0,
       "wins": 0
     },
     {
       "rank": 6,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 74.0,
+      "points": 69.0,
       "wins": 0
     },
     {
       "rank": 7,
       "team": "Haas F1 Team",
       "nationality": "American",
-      "points": 30.0,
+      "points": 31.0,
       "wins": 0
     },
     {
       "rank": 8,
       "team": "Audi",
       "nationality": "German",
-      "points": 23.0,
+      "points": 27.0,
       "wins": 0
     },
     {

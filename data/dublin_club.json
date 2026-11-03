@@ -581,15 +581,6 @@
   "fixtures": [
     {
       "date": "2026-11-06T00:00:00+01:00",
-      "home": "Balbriggan",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth U17 Cup",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-11-06T00:00:00+01:00",
       "home": "Greystones RFC",
       "away": "St. Mary’s College RFC",
       "home_score": null,
@@ -659,6 +650,15 @@
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Prem",
       "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T12:00:00+01:00",
+      "home": "Balbriggan",
+      "away": "SMTC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth U17 Cup",
+      "involves_smc": true
     },
     {
       "date": "2026-11-08T12:00:00+01:00",
@@ -797,15 +797,6 @@
     },
     {
       "date": "2026-11-20T00:00:00+01:00",
-      "home": "North Kildare",
-      "away": "St. Mary’s College RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-20T00:00:00+01:00",
       "home": "SMTC",
       "away": "Suttonians",
       "home_score": null,
@@ -838,6 +829,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T10:00:00+01:00",
+      "home": "North Kildare",
+      "away": "St. Mary’s College RFC A",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Prem",
       "involves_smc": false
     },
     {
@@ -1543,5 +1543,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-03T13:27:56+00:00"
+  "fetched_at": "2026-11-03T20:13:05+00:00"
 }

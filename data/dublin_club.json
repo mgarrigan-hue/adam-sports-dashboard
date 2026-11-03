@@ -598,15 +598,6 @@
       "involves_smc": false
     },
     {
-      "date": "2026-11-06T00:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "De La Salle Palmerston",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-07T11:00:00+01:00",
       "home": "De La Marys",
       "away": "ABS Rugby",
@@ -667,6 +658,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T12:00:00+01:00",
+      "home": "St. Mary’s College RFC B",
+      "away": "De La Salle Palmerston",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
     },
     {
@@ -751,21 +751,21 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-14T12:30:00+01:00",
+      "home": "St. Mary’s College RFC 4",
+      "away": "Stillorgan-Rathfarnham 1",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-14T14:30:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Terenure College RFC 3",
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-14T14:30:00+01:00",
-      "home": "St. Mary’s College RFC 4",
-      "away": "Stillorgan-Rathfarnham 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
       "involves_smc": false
     },
     {
@@ -1543,5 +1543,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-03T05:41:25+00:00"
+  "fetched_at": "2026-11-03T13:27:56+00:00"
 }

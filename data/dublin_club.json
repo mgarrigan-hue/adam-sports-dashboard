@@ -580,15 +580,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-06T00:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-07T11:00:00+01:00",
       "home": "De La Marys",
       "away": "ABS Rugby",
@@ -662,6 +653,15 @@
     },
     {
       "date": "2026-11-08T12:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T12:00:00+01:00",
       "home": "St. Mary’s College RFC B",
       "away": "De La Salle Palmerston",
       "home_score": null,
@@ -679,7 +679,7 @@
       "involves_smc": false
     },
     {
-      "date": "2026-11-08T14:30:00+01:00",
+      "date": "2026-11-08T14:00:00+01:00",
       "home": "St. Mary’s College RFC 2",
       "away": "MU Barnhall RFC 2",
       "home_score": null,
@@ -689,20 +689,20 @@
     },
     {
       "date": "2026-11-08T14:30:00+01:00",
-      "home": "St. Mary’s College RFC U20",
-      "away": "University College Dublin Rugby U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 1",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-08T14:30:00+01:00",
       "home": "University of Galway U20",
       "away": "St. Mary’s College RFC U20 2",
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T16:00:00+01:00",
+      "home": "St. Mary’s College RFC U20",
+      "away": "University College Dublin Rugby U20",
+      "home_score": null,
+      "away_score": null,
+      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": false
     },
     {
@@ -1543,5 +1543,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-04T15:37:25+00:00"
+  "fetched_at": "2026-11-04T21:40:24+00:00"
 }

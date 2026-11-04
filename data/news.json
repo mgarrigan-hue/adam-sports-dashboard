@@ -1,6 +1,78 @@
 {
-  "generated_at": "2026-11-04T07:10:10Z",
+  "generated_at": "2026-11-04T15:37:32Z",
   "items": [
+    {
+      "title": "Ocon dropped - is it the end of his F1 career?",
+      "summary": "Esteban Ocon's career as a Formula 1 race driver is over - at least for the foreseeable future - after falling out with Haas. Andrew Benson looks at what the future holds for the Frenchman.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c59vz9gdllxlo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-11-04T15:00:26Z"
+    },
+    {
+      "title": "Gibson-Park on Ireland bench as Casey, Jansen and Timoney start",
+      "summary": "Nick Timoney, Craig Casey and Sean Jansen will start for Ireland against Argentina in the Nations Championship on Friday night with Jamison Gibson-Park and Josh van der Flier on the bench at the Aviva…",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c615j8v2d2npo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-04T14:14:57Z"
+    },
+    {
+      "title": "Prendergast passed fit as Casey comes in to face Pumas",
+      "summary": "Sam Prendergast has been cleared to start for Ireland in their Nations Championship meeting with Argentina on Friday.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1104/1597965-prendergast-passed-fit-as-casey-comes-in-to-face-pumas/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-04T14:04:18Z"
+    },
+    {
+      "title": "Timoney, Stockdale and O'Toole sign new Ulster deal",
+      "summary": "Ulster have tied down five of their most important players to long term contracts, with Nick Timoney, Jacob Stockdale, Tom O'Toole, James Hume and Ethan McIlroy all signing three-year contract extensi…",
+      "url": "https://www.rte.ie/sport/united-rugby-championship/2026/1104/1597956-timoney-stockdale-and-otoole-sign-new-ulster-deal/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-04T12:41:44Z"
+    },
+    {
+      "title": "Conan on desire to keep playing and Farrell's influence",
+      "summary": "Jack Conan tells the Ireland Rugby Social podcast of Andy Farrell's influence in implementing a cultural shift in camp, his shoulder injury and desire to keep playing while he feels physically and men…",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwm23gggjp3po?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-04T11:56:51Z"
+    },
+    {
+      "title": "Contepomi: Pumas 'on the right track' after poor form",
+      "summary": "Felipe Contepomi insists performances are more important then records for his side, ahead of Friday night's meeting with Ireland at Aviva Stadium.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1104/1597943-contepomi-pumas-on-the-right-track-after-poor-form/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-04T11:52:35Z"
+    },
+    {
+      "title": "Cardiff sign Welsh lock Green from Harlequins",
+      "summary": "Cardiff bolster their second row with the signing of former Wales Under-20s forward.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwn8dmr88v0go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-04T11:00:08Z"
+    },
+    {
+      "title": "Exeter need to use cup for league momentum - Baxter",
+      "summary": "Exeter boss Rob Baxter says his side must use the Prem Rugby Cup break asa means to kickstart their league campaign.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c6073lz0988zo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-04T10:57:32Z"
+    },
+    {
+      "title": "More than the Score",
+      "summary": "The 20-year-old Italian is the youngest F1 world champion ever",
+      "url": "https://www.bbc.co.uk/sounds/play/w3ct9tp9?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-11-04T06:01:00Z"
+    },
     {
       "title": "Wales players in Prem doing nation proud - Smith",
       "summary": "Sale prop Nicky Smith says the Wales players in the English Prem are making the Welsh nation proud.",
@@ -74,7 +146,7 @@
       "published": "2026-11-03T16:31:32Z"
     },
     {
-      "title": "How sporting events are being impacted by Middle East conflict",
+      "title": "How sporting events are being affected by Middle East conflict",
       "summary": "BBC Sport takes a look at how the ongoing conflict in the Middle East has affected sporting events in Saudi Arabia, Qatar, Bahrain and the wider area.",
       "url": "https://www.bbc.co.uk/sport/articles/ck0j0l65nzlvo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
@@ -128,14 +200,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-11-03T11:27:51Z"
-    },
-    {
-      "title": "McNamara to succeed Cullen as Leinster head coach",
-      "summary": "Bordeaux Begles attack coach Noel McNamara will replace Leo Cullen as Leinster's head coach from next season, the Irish province announces.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ckly0vz73wn7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-03T09:24:48Z"
     },
     {
       "title": "Leinster confirm McNamara appointment as Cullen successor",
@@ -402,14 +466,6 @@
       "published": "2026-11-01T10:27:50Z"
     },
     {
-      "title": "Wales centre Hawkins determined to make World Cup",
-      "summary": "Wales centre Joe Hawkins says missing the previous World Cup has made him more determined to make the next global tournament in Australia in 12 months.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c8vgx0yn4kv0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-01T04:56:18Z"
-    },
-    {
       "title": "Hamilton takes first pole for Ferrari at Mexico City Grand Prix",
       "summary": "Lewis Hamilton takes his first pole position for Ferrari and his first for more than three years at the Mexico City Grand Prix.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c6reyl8zp3jwo?at_medium=RSS&at_campaign=rss",
@@ -418,68 +474,12 @@
       "published": "2026-11-01T01:37:50Z"
     },
     {
-      "title": "The iconic 2005 Oasis concert from the City of Manchester Stadium",
-      "summary": "One of the world's biggest touring bands pulls out all the stops on their 2005 world tour.",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m0033vld?at_mid=Rz7rKyFuqA&at_campaign=Oasis_Live_at_Manchester_City_Stadium&at_medium=display_ad&at_campaign_type=owned&at_nation=NET&at_audience_id=SS&at_product=iplayer&at_brand=m0033vld&at_ptr_name=bbc&at_ptr_type=media&at_format=image&at_objective=consumption&at_link_title=Oasis_Live_at_Manchester_City_Stadium&at_bbc_team=BBC",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-11-01T00:07:28Z"
-    },
-    {
       "title": "Ocon denies reports of physical altercation behind dropping",
       "summary": "Esteban Ocon denies reports that his being dropped by Haas at the Mexico City Grand Prix was a consequence of a row with team principal Ayao Komatsu descending into a physical confrontation.",
       "url": "https://www.bbc.co.uk/sport/formula1/articles/c3n04vjjpkv4o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-10-31T23:43:41Z"
-    },
-    {
-      "title": "Bowen double helps Cardiff beat pointless Ospreys",
-      "summary": "Cardiff lift themselves back into the top half of the United Rugby Championship (URC) by defeating Ospreys 26-0 in a scrappy Welsh derby at St Helen's.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm3el2gwlwwdo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-31T21:44:20Z"
-    },
-    {
-      "title": "Second-half blitz helps Saracens beat Newcastle",
-      "summary": "Saracens take advantage of Newcastle Red Bulls indiscipline to overturn a 10-point half-time deficit to eventually win 39-31.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cvp8g198d2z6o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-31T20:36:38Z"
-    },
-    {
-      "title": "Sharks stun off-colour Munster in damp Thomond affair",
-      "summary": "South African franchise the Sharks made it four wins on the bounce against Munster, as they defeated Clayton McMillan's men 3-15 on a wet and windy Saturday night in Thomond Park.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1031/1597469-sharks-stun-off-colour-munster-in-damp-thomond-affair/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-31T19:23:38Z"
-    },
-    {
-      "title": "Cokanasiga scores twice as Bath overcome Sale",
-      "summary": "Joe Cokanasiga scores twice as Bath ended a three-game winless run in all competitions with a 36-28 victory over Sale.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c3vgxjnew1w0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-31T18:50:34Z"
-    },
-    {
-      "title": "Edinburgh lose unbeaten URC record at hands of Benetton",
-      "summary": "Edinburgh's unbeaten start to this season's URC ends as they lose 31-12 to Benetton in Italy.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmx23w76krlro?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-10-31T18:19:19Z"
-    },
-    {
-      "title": "Parsons hat-trick propels Ireland to series win in SA",
-      "summary": "Béibhinn Parsons scored a hat-trick of tries as Ireland overcame South Africa to conclude their year on a winning note at the Athlone Sports Stadium in Cape Town.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1031/1597467-parsons-hat-trick-propels-ireland-to-series-win-in-sa/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-10-31T15:28:40Z"
     }
   ]
 }

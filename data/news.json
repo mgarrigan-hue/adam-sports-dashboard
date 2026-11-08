@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-11-08T10:59:20Z",
+  "generated_at": "2026-11-08T16:57:39Z",
   "items": [
+    {
+      "title": "Fixtures and standings as Nations Championship returns",
+      "summary": "What is the Nations Championship, who is leading the way and who plays who this weekend?",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cgrkpl5x70eo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-08T13:43:29Z"
+    },
     {
       "title": "Why Wales have a lot to prove despite beating Japan",
       "summary": "BBC Sport Wales analyses what went right and wrong for Wales in their uninspiring 28-21 win against Japan.",
@@ -24,14 +32,6 @@
       "source": "BBC Sport - F1",
       "category": "f1",
       "published": "2026-11-07T22:07:41Z"
-    },
-    {
-      "title": "How to follow Sao Paulo Grand Prix on the BBC",
-      "summary": "All the key BBC coverage details for the Sao Paulo Grand Prix, which takes place from 6-8 November.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cw0k0ylj6lj3o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-11-07T21:49:37Z"
     },
     {
       "title": "F1: Chequered Flag",
@@ -138,12 +138,12 @@
       "published": "2026-11-07T13:17:24Z"
     },
     {
-      "title": "Fixtures and standings as Nations Championship returns",
-      "summary": "What is the Nations Championship, who is leading the way and who plays who this weekend?",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cgrkpl5x70eo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-07T12:14:10Z"
+      "title": "Nations Championship: England v Australia live score",
+      "summary": "England play host to Australia in the Nations Championship",
+      "url": "https://www.rte.ie/sport/results/rugby/world-rugby-nations-championship/27310/report-5087123/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-07T12:15:07Z"
     },
     {
       "title": "'Shackles off' for Porter on return from Irish absence",
@@ -296,14 +296,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-06T11:31:50Z"
-    },
-    {
-      "title": "Scotland can be best and worst team in world - Dempsey",
-      "summary": "Jack Dempsey on his guilt over leaving Glasgow, coming up against Dave Rennie and Scotland's hopes of finally overcoming New Zealand.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmd934jpg59yo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-06T07:53:44Z"
     },
     {
       "title": "Jones - the smiling wind-up artist who refuses to fade away",
@@ -480,6 +472,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-11-03T20:33:20Z"
+    },
+    {
+      "title": "What will 'exciting' McNamara bring to Leinster?",
+      "summary": "After Noel McNamara's appointment to replace Leo Cullen at Leinster from next year, Hugo Keenan believes he is an \"exciting\" head coach.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cw3dj33899reo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-03T17:37:38Z"
     }
   ]
 }

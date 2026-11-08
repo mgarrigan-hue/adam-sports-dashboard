@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T23:45:41.518877+00:00",
+  "generated_at": "2026-11-08T03:55:03.196033+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -215,6 +215,15 @@
       "code": "PER",
       "nationality": "Mexican",
       "team": "Cadillac F1 Team",
+      "points": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 25,
+      "driver": "Rafael Camara",
+      "code": "",
+      "nationality": "",
+      "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0
     }

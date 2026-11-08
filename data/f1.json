@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T23:45:39Z",
+  "generated_at": "2026-11-08T03:55:01Z",
   "season": "2026",
   "upcoming": [
     {
@@ -424,6 +424,13 @@
       "position": "24",
       "driver": "Sergio P\u00e9rez",
       "team": "Cadillac F1 Team",
+      "points": "0",
+      "wins": "0"
+    },
+    {
+      "position": "25",
+      "driver": "Rafael Camara",
+      "team": "Haas F1 Team",
       "points": "0",
       "wins": "0"
     }

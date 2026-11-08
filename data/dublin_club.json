@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-08T09:00:00+01:00",
+      "home": "Clontarf FC A",
+      "away": "St. Mary’s College RFC A",
+      "home_score": 12,
+      "away_score": 32,
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-07T14:30:00+01:00",
       "home": "Clontarf FC 3",
       "away": "St. Mary’s College RFC 3",
@@ -35,6 +44,15 @@
       "home_score": 17,
       "away_score": 34,
       "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-07T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "ABS Rugby",
+      "home_score": 42,
+      "away_score": 21,
+      "competition": "Leinster Girls Youths U18 Grading Group D",
       "involves_smc": false
     },
     {
@@ -615,15 +633,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-11-08T09:00:00+01:00",
-      "home": "Clontarf FC A",
-      "away": "St. Mary’s College RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
     {
       "date": "2026-11-08T12:00:00+01:00",
       "home": "Balbriggan",
@@ -1525,5 +1534,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-08T03:55:04+00:00"
+  "fetched_at": "2026-11-08T10:59:12+00:00"
 }

@@ -1,14 +1,7 @@
 {
-  "generated_at": "2026-11-08T16:57:27Z",
+  "generated_at": "2026-11-08T20:57:56Z",
   "season": "2026",
   "upcoming": [
-    {
-      "round": "20",
-      "race_name": "Brazilian Grand Prix",
-      "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
-      "location": "S\u00e3o Paulo, Brazil",
-      "date": "2026-11-08T17:00:00Z"
-    },
     {
       "round": "21",
       "race_name": "Las Vegas Grand Prix",
@@ -263,63 +256,63 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "380",
+      "points": "390",
       "wins": "9"
     },
     {
       "position": "2",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "261",
+      "points": "279",
       "wins": "3"
     },
     {
       "position": "3",
-      "driver": "Lewis Hamilton",
-      "team": "Ferrari",
-      "points": "259",
-      "wins": "1"
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "points": "262",
+      "wins": "3"
     },
     {
       "position": "4",
-      "driver": "George Russell",
-      "team": "Mercedes",
-      "points": "250",
-      "wins": "3"
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": "261",
+      "wins": "1"
     },
     {
       "position": "5",
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "245",
+      "points": "251",
       "wins": "1"
     },
     {
       "position": "6",
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "221",
-      "wins": "2"
+      "points": "246",
+      "wins": "3"
     },
     {
       "position": "7",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "144",
+      "points": "152",
       "wins": "0"
     },
     {
       "position": "8",
       "driver": "Isack Hadjar",
       "team": "Red Bull",
-      "points": "107",
+      "points": "122",
       "wins": "0"
     },
     {
       "position": "9",
       "driver": "Liam Lawson",
       "team": "RB F1 Team",
-      "points": "83",
+      "points": "87",
       "wins": "0"
     },
     {
@@ -361,7 +354,7 @@
       "position": "15",
       "driver": "Nico H\u00fclkenberg",
       "team": "Audi",
-      "points": "13",
+      "points": "14",
       "wins": "0"
     },
     {
@@ -439,31 +432,31 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "630",
+      "points": "652",
       "wins": "12"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "504",
+      "points": "512",
       "wins": "2"
     },
     {
       "position": "3",
       "team": "Red Bull",
-      "points": "382",
+      "points": "415",
       "wins": "3"
     },
     {
       "position": "4",
       "team": "McLaren",
-      "points": "365",
-      "wins": "2"
+      "points": "398",
+      "wins": "3"
     },
     {
       "position": "5",
       "team": "RB F1 Team",
-      "points": "108",
+      "points": "112",
       "wins": "0"
     },
     {
@@ -481,7 +474,7 @@
     {
       "position": "8",
       "team": "Audi",
-      "points": "27",
+      "points": "28",
       "wins": "0"
     },
     {
@@ -504,117 +497,117 @@
     }
   ],
   "last_qualifying": {
-    "race_name": "Mexico City Grand Prix",
-    "round": "19",
-    "date": "2026-11-01T20:00:00Z",
+    "race_name": "Brazilian Grand Prix",
+    "round": "20",
+    "date": "2026-11-08T17:00:00Z",
     "results": [
       {
         "position": 1,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "q1": "1:17.341",
-        "q2": "1:16.953",
-        "q3": "1:16.514"
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 2,
         "driver": "George Russell",
         "team": "Mercedes",
-        "q1": "1:17.659",
-        "q2": "1:17.027",
-        "q3": "1:16.523"
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 3,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "q1": "1:17.506",
-        "q2": "1:16.944",
-        "q3": "1:16.633"
+        "driver": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 4,
-        "driver": "Max Verstappen",
-        "team": "Red Bull",
-        "q1": "1:17.942",
-        "q2": "1:16.876",
-        "q3": "1:16.692"
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 5,
-        "driver": "Andrea Kimi Antonelli",
-        "team": "Mercedes",
-        "q1": "1:17.918",
-        "q2": "1:17.133",
-        "q3": "1:16.707"
+        "driver": "Liam Lawson",
+        "team": "RB F1 Team",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 6,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "q1": "1:17.733",
-        "q2": "1:16.728",
-        "q3": "1:16.824"
+        "driver": "Nico H\u00fclkenberg",
+        "team": "Audi",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 7,
         "driver": "Isack Hadjar",
         "team": "Red Bull",
-        "q1": "1:17.385",
-        "q2": "1:17.047",
-        "q3": "1:16.900"
-      },
-      {
-        "position": 8,
-        "driver": "Arvid Lindblad",
-        "team": "RB F1 Team",
-        "q1": "1:18.210",
-        "q2": "1:17.135",
-        "q3": "1:17.117"
-      },
-      {
-        "position": 8,
-        "driver": "Liam Lawson",
-        "team": "RB F1 Team",
         "q1": "",
-        "q2": "1:17.207",
-        "q3": "1:17.029"
+        "q2": "",
+        "q3": ""
+      },
+      {
+        "position": 8,
+        "driver": "Oliver Bearman",
+        "team": "Haas F1 Team",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       },
       {
         "position": 9,
-        "driver": "Pierre Gasly",
-        "team": "Alpine F1 Team",
-        "q1": "1:18.194",
-        "q2": "1:17.278",
-        "q3": "1:17.153"
+        "driver": "Fernando Alonso",
+        "team": "Aston Martin",
+        "q1": "",
+        "q2": "",
+        "q3": ""
+      },
+      {
+        "position": 10,
+        "driver": "Alexander Albon",
+        "team": "Williams",
+        "q1": "",
+        "q2": "",
+        "q3": ""
       }
     ]
   },
   "last_sprint": null,
   "next_race_sessions": {
-    "race_name": "Brazilian Grand Prix",
-    "round": "20",
-    "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+    "race_name": "Las Vegas Grand Prix",
+    "round": "21",
+    "circuit": "Las Vegas Strip Street Circuit",
     "sessions": [
       {
         "name": "Practice 1",
-        "datetime": "2026-11-06T15:30:00Z"
+        "datetime": "2026-11-20T00:30:00Z"
       },
       {
         "name": "Practice 2",
-        "datetime": "2026-11-06T19:00:00Z"
+        "datetime": "2026-11-20T04:00:00Z"
       },
       {
         "name": "Practice 3",
-        "datetime": "2026-11-07T14:30:00Z"
+        "datetime": "2026-11-21T00:30:00Z"
       },
       {
         "name": "Qualifying",
-        "datetime": "2026-11-07T18:00:00Z"
+        "datetime": "2026-11-21T04:00:00Z"
       },
       {
         "name": "Race",
-        "datetime": "2026-11-08T17:00:00Z"
+        "datetime": "2026-11-22T04:00:00Z"
       }
     ]
   }

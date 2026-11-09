@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T20:57:58.159686+00:00",
+  "generated_at": "2026-11-09T00:36:00.694082+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -44,7 +44,7 @@
       "code": "LEC",
       "nationality": "Monegasque",
       "team": "Ferrari",
-      "points": 251.0,
+      "points": 249.0,
       "wins": 1
     },
     {
@@ -80,7 +80,7 @@
       "code": "LAW",
       "nationality": "New Zealander",
       "team": "RB F1 Team",
-      "points": 87.0,
+      "points": 89.0,
       "wins": 0
     },
     {
@@ -240,7 +240,7 @@
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 512.0,
+      "points": 510.0,
       "wins": 2
     },
     {
@@ -261,7 +261,7 @@
       "rank": 5,
       "team": "RB F1 Team",
       "nationality": "Italian",
-      "points": 112.0,
+      "points": 114.0,
       "wins": 0
     },
     {

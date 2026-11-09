@@ -688,15 +688,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-08T12:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-13T00:00:00+01:00",
       "home": "Clondalkin",
       "away": "St. Mary’s College RFC B",
@@ -1534,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-08T20:57:59+00:00"
+  "fetched_at": "2026-11-09T00:36:02+00:00"
 }

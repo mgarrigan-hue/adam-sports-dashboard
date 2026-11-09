@@ -698,15 +698,6 @@
     },
     {
       "date": "2026-11-13T00:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Lansdowne FC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-13T00:00:00+01:00",
       "home": "De La Marys",
       "away": "Mullingar RFC",
       "home_score": null,
@@ -758,6 +749,15 @@
       "away_score": null,
       "competition": "Leinster School Youths u15s Grading Grp4",
       "involves_smc": true
+    },
+    {
+      "date": "2026-11-15T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Lansdowne FC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
     },
     {
       "date": "2026-11-15T12:00:00+01:00",
@@ -967,6 +967,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-12-04T20:00:00+01:00",
+      "home": "Dublin University FC 2",
+      "away": "St. Mary’s College RFC 2",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Metro League - Division 1",
+      "involves_smc": false
+    },
+    {
       "date": "2026-12-05T14:00:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Old Belvedere RFC 3",
@@ -1018,15 +1027,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Women's Leinster League Div 5",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-12-06T14:00:00+01:00",
-      "home": "Dublin University FC 2",
-      "away": "St. Mary’s College RFC 2",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 1",
       "involves_smc": false
     },
     {
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-09T07:33:02+00:00"
+  "fetched_at": "2026-11-09T18:09:23+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T09:05:34.080444+00:00",
+  "generated_at": "2026-11-10T17:10:44.205710+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -221,8 +221,8 @@
     {
       "rank": 25,
       "driver": "Rafael Camara",
-      "code": "",
-      "nationality": "",
+      "code": "CAM",
+      "nationality": "Brazilian",
       "team": "Haas F1 Team",
       "points": 0.0,
       "wins": 0

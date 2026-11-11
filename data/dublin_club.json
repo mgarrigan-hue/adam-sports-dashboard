@@ -688,21 +688,21 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-13T00:00:00+01:00",
-      "home": "De La Marys",
-      "away": "Mullingar RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls U14 Grading Group A",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-13T20:00:00+01:00",
       "home": "St. Mary’s College RFC 5",
       "away": "Navan RFC 3",
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 7",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-14T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Mullingar RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Grading Group A",
       "involves_smc": false
     },
     {
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-11T09:40:50+00:00"
+  "fetched_at": "2026-11-11T17:38:18+00:00"
 }

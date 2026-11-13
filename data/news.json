@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-11-12T21:32:39Z",
+  "generated_at": "2026-11-13T02:19:28Z",
   "items": [
+    {
+      "title": "Rugby Union Weekly",
+      "summary": "Hear from George Ford and Eddie Jones as we preview round 5 of the Nations Championship.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0pmq3yl?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-12T19:30:00Z"
+    },
     {
       "title": "How and why Wales are relying on scrum-half Williams",
       "summary": "Wales head coach Steve Tandy says is a big demand on the workload of scrum-half Tomos Williams.",
@@ -256,14 +264,6 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-11-09T13:55:47Z"
-    },
-    {
-      "title": "Ireland's Jansen ruled out of Fiji and Bok games",
-      "summary": "Sean Jansen is ruled out of the remainder of Ireland's Nations Championship campaign with a knee injury, further depleting head coach Andy Farrell's options at number eight.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ck79p9d3gv2yo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-09T11:44:10Z"
     },
     {
       "title": "Irish captain Sheehan ruled out of Fiji game",

@@ -43,7 +43,7 @@
       "away": "SMTC",
       "home_score": 5,
       "away_score": 33,
-      "competition": "Leinster School Youth U17 Cup",
+      "competition": "Leinster U17 Combined Cup",
       "involves_smc": true
     },
     {
@@ -196,7 +196,7 @@
       "away": "SMTC",
       "home_score": 21,
       "away_score": 48,
-      "competition": "Leinster School Youth U17 Cup",
+      "competition": "Leinster U17 Combined Cup",
       "involves_smc": true
     },
     {
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-12T21:32:32+00:00"
+  "fetched_at": "2026-11-13T02:19:19+00:00"
 }

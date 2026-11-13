@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-11-13T02:19:28Z",
+  "generated_at": "2026-11-13T09:49:30Z",
   "items": [
+    {
+      "title": "Whatever happened to the diamond that went missing in F1 crash?",
+      "summary": "Whatever happened to the diamond that went missing after the Formula 1 car it was attached to crashed?",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c60735md0jrpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-11-13T06:12:20Z"
+    },
+    {
+      "title": "Cheating, scandal and drama - Wales agony v All Blacks",
+      "summary": "It is more than 70 years since Wales last beat New Zealand but the fixture has rarely failed to deliver drama.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cx5y131nlrvro?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-13T04:38:19Z"
+    },
     {
       "title": "Rugby Union Weekly",
       "summary": "Hear from George Ford and Eddie Jones as we preview round 5 of the Nations Championship.",
@@ -8,6 +24,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-12T19:30:00Z"
+    },
+    {
+      "title": "'Full steam ahead' as Ireland aim to lay down a mark",
+      "summary": "Last week, Andy Farrell was blunt in his assessment that if the tournament was happening right now, his side couldn't be contenders, but he still believes time is on their side to travel to Australia…",
+      "url": "https://www.rte.ie/sport/rugby/2026/1112/1599037-full-steam-ahead-as-ireland-aim-to-lay-down-a-mark/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-12T18:29:19Z"
     },
     {
       "title": "How and why Wales are relying on scrum-half Williams",
@@ -96,6 +120,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-12T12:00:28Z"
+    },
+    {
+      "title": "Ryan: 'We're not thinking about South Africa'",
+      "summary": "James Ryan insists Ireland are solely focused on Fiji, despite a crunch tie with South Africa looming next week.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1112/1598949-ryan-were-not-thinking-about-south-africa/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-12T11:18:44Z"
     },
     {
       "title": "F1: Chequered Flag",
@@ -448,38 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-06T23:05:27Z"
-    },
-    {
-      "title": "Keenan: Ireland moving in the right direction",
-      "summary": "Hat-trick hero Hugo Keenan believes Ireland are \"back in the right direction\" after a resounding home 42-12 success over Argentina in round four of the Nations Championship.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1106/1598327-keenan-ireland-moving-in-the-right-direction/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-11-06T22:58:06Z"
-    },
-    {
-      "title": "Ireland impress to make light work of poor Pumas",
-      "summary": "Ireland's Nations Championship campaign roared into life at Aviva Stadium, as Hugo Keenan's hat-trick sent them on their way to a 42-12 hammering of Argentina.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1106/1598215-ireland-impress-to-make-light-work-of-poor-pumas/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-11-06T22:09:27Z"
-    },
-    {
-      "title": "Ferrari's Hamilton-Leclerc problem - and other F1 stories to follow",
-      "summary": "This weekend's Sao Paulo Grand Prix is in many ways the first page of the first chapter of the next championship battle.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cm62y4283534o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-11-06T20:52:24Z"
-    },
-    {
-      "title": "Nations Championship: Ireland 42-12 Argentina recap",
-      "summary": "Andy Farrell's men got their November window off to a perfect start, dismantling Los Pumas of Argentina in round four of the Nations Championship.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1106/1598217-nations-championship-ireland-v-argentina-updates/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-11-06T19:28:47Z"
     }
   ]
 }

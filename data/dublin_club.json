@@ -742,6 +742,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-15T11:15:00+01:00",
+      "home": "St. Mary’s College RFC A",
+      "away": "Old Belvedere RFC A",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-15T12:00:00+01:00",
       "home": "Greystones RFC",
       "away": "SMTC",
@@ -757,15 +766,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-15T12:00:00+01:00",
-      "home": "St. Mary’s College RFC A",
-      "away": "Old Belvedere RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
       "involves_smc": false
     },
     {
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-13T02:19:19+00:00"
+  "fetched_at": "2026-11-13T09:49:22+00:00"
 }

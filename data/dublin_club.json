@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-14T12:30:00+01:00",
+      "home": "St. Mary’s College RFC 4",
+      "away": "Stillorgan-Rathfarnham 1",
+      "home_score": 20,
+      "away_score": 25,
+      "competition": "Metro League - Division 6",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-13T20:00:00+01:00",
       "home": "St. Mary’s College RFC 5",
       "away": "Navan RFC 3",
@@ -703,15 +712,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls U14 Grading Group A",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-14T12:30:00+01:00",
-      "home": "St. Mary’s College RFC 4",
-      "away": "Stillorgan-Rathfarnham 1",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 6",
       "involves_smc": false
     },
     {
@@ -1525,5 +1525,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-14T09:44:08+00:00"
+  "fetched_at": "2026-11-14T16:19:02+00:00"
 }

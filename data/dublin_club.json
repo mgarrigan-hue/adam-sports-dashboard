@@ -2,6 +2,24 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-15T12:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "SMTC",
+      "home_score": 48,
+      "away_score": 24,
+      "competition": "Leinster School Youths u15s Grading Grp4",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-11-15T12:00:00+01:00",
+      "home": "St. Mary’s College RFC",
+      "away": "Lansdowne FC",
+      "home_score": 17,
+      "away_score": 14,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-15T11:15:00+01:00",
       "home": "St. Mary’s College RFC A",
       "away": "Old Belvedere RFC A",
@@ -723,24 +741,6 @@
     }
   ],
   "fixtures": [
-    {
-      "date": "2026-11-15T12:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "SMTC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Grading Grp4",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-11-15T12:00:00+01:00",
-      "home": "St. Mary’s College RFC",
-      "away": "Lansdowne FC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
     {
       "date": "2026-11-20T00:00:00+01:00",
       "home": "Coolmine",
@@ -1498,5 +1498,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-15T14:54:26+00:00"
+  "fetched_at": "2026-11-15T20:05:04+00:00"
 }

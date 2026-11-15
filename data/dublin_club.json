@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-15T11:15:00+01:00",
+      "home": "St. Mary’s College RFC A",
+      "away": "Old Belvedere RFC A",
+      "home_score": 7,
+      "away_score": 15,
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-14T14:30:00+01:00",
       "home": "St. Mary’s College RFC 3",
       "away": "Terenure College RFC 3",
@@ -715,24 +724,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-15T11:15:00+01:00",
-      "home": "Clondalkin",
-      "away": "St. Mary’s College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-15T11:15:00+01:00",
-      "home": "St. Mary’s College RFC A",
-      "away": "Old Belvedere RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-15T12:00:00+01:00",
       "home": "Greystones RFC",
       "away": "SMTC",
@@ -1039,21 +1030,21 @@
       "involves_smc": false
     },
     {
-      "date": "2026-12-11T00:00:00+01:00",
-      "home": "Clontarf FC B",
-      "away": "St. Mary’s College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-12-12T14:30:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Ballynahinch RFC",
       "home_score": null,
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-13T09:00:00+01:00",
+      "home": "Clontarf FC B",
+      "away": "St. Mary’s College RFC B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
     },
     {
@@ -1507,5 +1498,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-15T07:26:48+00:00"
+  "fetched_at": "2026-11-15T14:54:26+00:00"
 }

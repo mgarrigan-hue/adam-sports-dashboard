@@ -715,24 +715,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-14T11:00:00+01:00",
-      "home": "De La Marys",
-      "away": "Mullingar RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster Girls U14 Grading Group A",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-14T14:30:00+01:00",
-      "home": "Clontarf FC 5",
-      "away": "St. Mary’s College RFC 6",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro League - Division 12",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-15T11:15:00+01:00",
       "home": "Clondalkin",
       "away": "St. Mary’s College RFC B",
@@ -1525,5 +1507,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-14T20:50:54+00:00"
+  "fetched_at": "2026-11-15T00:37:21+00:00"
 }

@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-11-17T00:37:00Z",
+  "generated_at": "2026-11-17T08:44:46Z",
   "items": [
+    {
+      "title": "Why Hamilton is key to Bearman's future - F1 Q&A",
+      "summary": "BBC F1 correspondent Andrew Benson answers your latest questions before the Las Vegas Grand Prix.",
+      "url": "https://www.bbc.co.uk/sport/formula1/articles/c9vg2l8240emo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - F1",
+      "category": "f1",
+      "published": "2026-11-17T07:45:02Z"
+    },
+    {
+      "title": "Key areas for Wales to build on historic win",
+      "summary": "After stunning New Zealand on a historic afternoon in Cardiff, Wales must return to earth against Australia in the Nations Championship.",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c6vg202j9dj0o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport - Rugby Union",
+      "category": "rugby",
+      "published": "2026-11-17T04:29:45Z"
+    },
     {
       "title": "'Is that not match-fixing?' - South Africa's Erasmus questions officiating",
       "summary": "South Africa head coach Rassie Erasmus predicts Ireland fly-half Sam Prendergast will not face a ban after being cited, and questions standards in officiating.",
@@ -8,6 +24,14 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-16T23:14:48Z"
+    },
+    {
+      "title": "Laws remain headline act despite weekend of excitement",
+      "summary": "Another week of international rugby matches has brought yet another distraction and focus on the laws rather than the quality of rugby on display, writes Jonny Holland.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1116/1599479-laws-remain-headline-act-despite-weekend-of-excitement/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-16T23:10:24Z"
     },
     {
       "title": "Inside Wales' dressing room - how Lake inspired history",
@@ -32,6 +56,14 @@
       "source": "RTÉ - Rugby",
       "category": "irish-rugby",
       "published": "2026-11-16T18:39:29Z"
+    },
+    {
+      "title": "Explosive Erasmus comments set the tone for Test week",
+      "summary": "By naming his team and holding a press conference on Monday, it was always likely that Rassie Erasmus would set the narrative of the week before the meeting of Ireland and South Africa on Saturday.",
+      "url": "https://www.rte.ie/sport/rugby/2026/1116/1599460-explosive-erasmus-comments-set-the-tone-for-test-week/",
+      "source": "RTÉ - Rugby",
+      "category": "irish-rugby",
+      "published": "2026-11-16T18:35:57Z"
     },
     {
       "title": "Five-try Joseph set to start for England against All Blacks",
@@ -322,14 +354,6 @@
       "published": "2026-11-14T22:12:00Z"
     },
     {
-      "title": "Comeback kid Joseph thrills as England eye All Blacks",
-      "summary": "Will Joseph's comeback after four years off the Test scene was worth waiting for. And there was plenty elsewhere to buoy England in a rout of Japan.",
-      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cq0l3pn5z20xo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - Rugby Union",
-      "category": "rugby",
-      "published": "2026-11-14T21:06:00Z"
-    },
-    {
       "title": "'One of the greatest wins' - Wales stun All Blacks to go from no-hopers to heroes",
       "summary": "Wales end a 73-year hoodoo against New Zealand with a win hailed as their greatest of all time.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmkg57rz2re9o?at_medium=RSS&at_campaign=rss",
@@ -418,14 +442,6 @@
       "published": "2026-11-13T13:22:29Z"
     },
     {
-      "title": "Andrew Benson Q&A: Send us your questions",
-      "summary": "Our F1 correspondent Andrew Benson is doing a weekly Q&A this season, so get your questions in now.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/ckg3y15zje8o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-11-13T11:30:39Z"
-    },
-    {
       "title": "The driving-maul try machine - why rugby's steamroller gained traction",
       "summary": "A kick to the corner is now a no-brainer for captains, with the driving maul a more potent weapon than ever.",
       "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmy0egy6zkk0o?at_medium=RSS&at_campaign=rss",
@@ -464,22 +480,6 @@
       "source": "BBC Sport - Rugby Union",
       "category": "rugby",
       "published": "2026-11-12T18:00:14Z"
-    },
-    {
-      "title": "Farrell backs McNabney to make his mark on Test rugby",
-      "summary": "Andy Farrell believes Ulster's James McNabney is ready to make the step up to Test level, after naming the 23-year-old in his squad for Saturday's Nations Championship meeting with Fiji.",
-      "url": "https://www.rte.ie/sport/rugby/2026/1112/1599033-farrell-backs-mcnabney-to-make-his-mark-on-test-rugby/",
-      "source": "RTÉ - Rugby",
-      "category": "irish-rugby",
-      "published": "2026-11-12T17:53:40Z"
-    },
-    {
-      "title": "Lindblad and Lawson to continue at Racing Bulls",
-      "summary": "Arvid Lindblad and Liam Lawson will continue as the drivers for Red Bull's second team Racing Bulls in 2027.",
-      "url": "https://www.bbc.co.uk/sport/formula1/articles/cw24epe29566o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport - F1",
-      "category": "f1",
-      "published": "2026-11-12T16:02:16Z"
     }
   ]
 }

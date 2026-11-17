@@ -743,15 +743,6 @@
   "fixtures": [
     {
       "date": "2026-11-20T00:00:00+01:00",
-      "home": "Coolmine",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-20T00:00:00+01:00",
       "home": "St. Mary’s College RFC B",
       "away": "Terenure College RFC B",
       "home_score": null,
@@ -775,6 +766,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T10:00:00+01:00",
+      "home": "Coolmine",
+      "away": "St. Mary’s College RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
       "involves_smc": false
     },
     {
@@ -1498,5 +1498,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-16T16:53:09+00:00"
+  "fetched_at": "2026-11-17T00:36:53+00:00"
 }

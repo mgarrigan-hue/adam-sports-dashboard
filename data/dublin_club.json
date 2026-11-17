@@ -2,6 +2,15 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-15T13:30:00+01:00",
+      "home": "SMT Bulls",
+      "away": "Clondalkin",
+      "home_score": 12,
+      "away_score": 13,
+      "competition": "Leinster Boys School Youth U16 Grading B",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-15T12:00:00+01:00",
       "home": "Greystones RFC",
       "away": "SMTC",
@@ -102,6 +111,15 @@
     },
     {
       "date": "2026-11-08T12:00:00+01:00",
+      "home": "South Dublin Mountain Lions",
+      "away": "SMT Bulls",
+      "home_score": 4,
+      "away_score": 22,
+      "competition": "Leinster Boys School Youth Under 16 Plate",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-08T12:00:00+01:00",
       "home": "St. Mary’s College RFC B",
       "away": "De La Salle Palmerston",
       "home_score": 48,
@@ -161,6 +179,15 @@
       "home_score": 42,
       "away_score": 21,
       "competition": "Leinster Girls Youths U18 Grading Group D",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-01T13:30:00+01:00",
+      "home": "SMT Bulls",
+      "away": "Newbridge",
+      "home_score": 23,
+      "away_score": 19,
+      "competition": "Leinster Boys School Youth Under 16 Plate",
       "involves_smc": false
     },
     {
@@ -377,6 +404,15 @@
       "home_score": 24,
       "away_score": 38,
       "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-10-11T13:30:00+01:00",
+      "home": "SMT Bulls",
+      "away": "MU Barnhall RFC",
+      "home_score": 26,
+      "away_score": 55,
+      "competition": "Leinster Boys School Youth Under 16 Cup",
       "involves_smc": false
     },
     {
@@ -742,15 +778,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-20T00:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "Terenure College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-21T11:00:00+01:00",
       "home": "De La Marys",
       "away": "Sharks",
@@ -796,12 +823,30 @@
       "involves_smc": true
     },
     {
+      "date": "2026-11-22T12:00:00+01:00",
+      "home": "St. Mary’s College RFC B",
+      "away": "Terenure College RFC B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-22T13:00:00+01:00",
       "home": "Three Saints",
       "away": "West Offaly Lions",
       "home_score": null,
       "away_score": null,
       "competition": "Women's Leinster League Div 5",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T14:00:00+01:00",
+      "home": "Birr",
+      "away": "SMT Bulls",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Boys School Youth U16 Grading B",
       "involves_smc": false
     },
     {
@@ -895,6 +940,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-29T00:00:00+01:00",
+      "home": "SMT Bulls",
+      "away": "Newbridge",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Boys School Youth U16 Grading B",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-29T14:30:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Dublin University FC U20",
@@ -949,9 +1003,9 @@
       "involves_smc": false
     },
     {
-      "date": "2026-12-05T14:00:00+01:00",
-      "home": "St. Mary’s College RFC 3",
-      "away": "Old Belvedere RFC 3",
+      "date": "2026-12-05T12:30:00+01:00",
+      "home": "Old Belvedere RFC 3",
+      "away": "St. Mary’s College RFC 3",
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 3",
@@ -991,6 +1045,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Energia All-Ireland League 1A 26/27",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-06T00:00:00+01:00",
+      "home": "SMT Bulls",
+      "away": "South Dublin Mountain Lions",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Boys School Youth U16 Grading B",
       "involves_smc": false
     },
     {
@@ -1081,6 +1144,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-20T00:00:00+01:00",
+      "home": "Donnybrook Babas",
+      "away": "SMT Bulls",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Boys School Youth U16 Grading B",
       "involves_smc": false
     },
     {
@@ -1427,8 +1499,8 @@
     },
     {
       "date": "2027-03-06T15:00:00+01:00",
-      "home": "Old Belvedere RFC 3",
-      "away": "St. Mary’s College RFC 3",
+      "home": "St. Mary’s College RFC 3",
+      "away": "Old Belvedere RFC 3",
       "home_score": null,
       "away_score": null,
       "competition": "Metro League - Division 3",
@@ -1498,5 +1570,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-17T08:44:39+00:00"
+  "fetched_at": "2026-11-17T18:03:17+00:00"
 }

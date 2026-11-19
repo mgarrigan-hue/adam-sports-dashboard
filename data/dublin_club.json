@@ -12,21 +12,21 @@
     },
     {
       "date": "2026-11-15T12:00:00+01:00",
-      "home": "Greystones RFC",
-      "away": "SMTC",
-      "home_score": 48,
-      "away_score": 24,
-      "competition": "Leinster School Youths u15s Grading Grp4",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-11-15T12:00:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Lansdowne FC",
       "home_score": 17,
       "away_score": 14,
       "competition": "Leinster School Youth Boys U14 Grading Grp4",
       "involves_smc": false
+    },
+    {
+      "date": "2026-11-15T12:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "SMTC",
+      "home_score": 48,
+      "away_score": 24,
+      "competition": "Leinster School Youths u15s Grading Grp4",
+      "involves_smc": true
     },
     {
       "date": "2026-11-15T11:15:00+01:00",
@@ -815,21 +815,21 @@
     },
     {
       "date": "2026-11-22T12:00:00+01:00",
-      "home": "SMTC",
-      "away": "Suttonians",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youths u15s Grading Grp4",
-      "involves_smc": true
-    },
-    {
-      "date": "2026-11-22T12:00:00+01:00",
       "home": "St. Mary’s College RFC B",
       "away": "Terenure College RFC B",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T12:00:00+01:00",
+      "home": "SMTC",
+      "away": "Suttonians",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youths u15s Grading Grp4",
+      "involves_smc": true
     },
     {
       "date": "2026-11-22T13:00:00+01:00",
@@ -977,12 +977,12 @@
     },
     {
       "date": "2026-12-04T00:00:00+01:00",
-      "home": "Balbriggan",
-      "away": "SMTC",
+      "home": "St. Mary’s College RFC A",
+      "away": "BW Rangers A",
       "home_score": null,
       "away_score": null,
-      "competition": "Leinster School Youths u15s Grading Grp4",
-      "involves_smc": true
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
     },
     {
       "date": "2026-12-04T00:00:00+01:00",
@@ -995,11 +995,20 @@
     },
     {
       "date": "2026-12-04T00:00:00+01:00",
-      "home": "St. Mary’s College RFC A",
-      "away": "BW Rangers A",
+      "home": "Balbriggan",
+      "away": "SMTC",
       "home_score": null,
       "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
+      "competition": "Leinster School Youths u15s Grading Grp4",
+      "involves_smc": true
+    },
+    {
+      "date": "2026-12-04T00:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Rugby Rebels",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
       "involves_smc": false
     },
     {
@@ -1102,6 +1111,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-12-11T00:00:00+01:00",
+      "home": "Arbo Rugby",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
+      "involves_smc": false
+    },
+    {
       "date": "2026-12-12T14:30:00+01:00",
       "home": "St. Mary’s College RFC",
       "away": "Ballynahinch RFC",
@@ -1139,20 +1157,20 @@
     },
     {
       "date": "2026-12-18T00:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "BW Rangers B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-12-18T00:00:00+01:00",
       "home": "St. Mary’s College RFC A",
       "away": "Terenure College RFC A",
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-18T00:00:00+01:00",
+      "home": "St. Mary’s College RFC B",
+      "away": "BW Rangers B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
     },
     {
@@ -1171,6 +1189,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Div 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-08T00:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Tullamore",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
       "involves_smc": false
     },
     {
@@ -1246,6 +1273,15 @@
       "involves_smc": false
     },
     {
+      "date": "2027-01-15T00:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Greystones RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
+      "involves_smc": false
+    },
+    {
       "date": "2027-01-16T14:30:00+01:00",
       "home": "Navan RFC 2",
       "away": "St. Mary’s College RFC 3",
@@ -1297,6 +1333,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-22T00:00:00+01:00",
+      "home": "Kilkenny",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
       "involves_smc": false
     },
     {
@@ -1360,6 +1405,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-02-05T00:00:00+01:00",
+      "home": "De La Marys",
+      "away": "OldPoint",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
       "involves_smc": false
     },
     {
@@ -1441,6 +1495,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-02-19T00:00:00+01:00",
+      "home": "Portlaoise",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls U14 Div 3",
       "involves_smc": false
     },
     {
@@ -1579,5 +1642,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-19T15:03:40+00:00"
+  "fetched_at": "2026-11-19T22:42:38+00:00"
 }

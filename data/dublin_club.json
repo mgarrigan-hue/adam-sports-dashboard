@@ -949,6 +949,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-29T10:00:00+01:00",
+      "home": "SMTC",
+      "away": "Greystones RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster U17 Combined Cup",
+      "involves_smc": true
+    },
+    {
       "date": "2026-11-29T14:30:00+01:00",
       "home": "St. Mary’s College RFC U20",
       "away": "Dublin University FC U20",
@@ -1570,5 +1579,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-19T05:33:03+00:00"
+  "fetched_at": "2026-11-19T15:03:40+00:00"
 }

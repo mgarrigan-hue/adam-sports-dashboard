@@ -3,6 +3,15 @@
   "results": [
     {
       "date": "2026-11-21T11:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Sharks",
+      "home_score": 12,
+      "away_score": 42,
+      "competition": "Metro Girls U14 League",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-21T11:00:00+01:00",
       "home": "Gorey",
       "away": "De La Marys",
       "home_score": 14,
@@ -787,15 +796,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-21T11:00:00+01:00",
-      "home": "De La Marys",
-      "away": "Sharks",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Metro Girls U14 League",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-22T10:00:00+01:00",
       "home": "Coolmine",
       "away": "St. Mary’s College RFC",
@@ -865,15 +865,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "JP Fanagan (U20) - Premier 3",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-27T00:00:00+01:00",
-      "home": "Greystones RFC A",
-      "away": "St. Mary’s College RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
       "involves_smc": false
     },
     {
@@ -956,6 +947,15 @@
       "away_score": null,
       "competition": "Leinster U17 Combined Cup",
       "involves_smc": true
+    },
+    {
+      "date": "2026-11-29T10:30:00+01:00",
+      "home": "Greystones RFC A",
+      "away": "St. Mary’s College RFC A",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
     },
     {
       "date": "2026-11-29T14:30:00+01:00",
@@ -1642,5 +1642,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-21T16:53:07+00:00"
+  "fetched_at": "2026-11-21T21:59:03+00:00"
 }

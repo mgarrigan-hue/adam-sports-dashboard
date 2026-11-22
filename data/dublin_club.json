@@ -2,6 +2,33 @@
   "club": "St Mary's College RFC",
   "results": [
     {
+      "date": "2026-11-22T14:30:00+01:00",
+      "home": "Clontarf FC U20",
+      "away": "St. Mary’s College RFC U20",
+      "home_score": 29,
+      "away_score": 21,
+      "competition": "JP Fanagan (U20) - Premier 1",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T10:00:00+01:00",
+      "home": "Coolmine",
+      "away": "St. Mary’s College RFC",
+      "home_score": 19,
+      "away_score": 47,
+      "competition": "Leinster School Youth Boys U14 Grading Grp4",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-11-22T10:00:00+01:00",
+      "home": "North Kildare",
+      "away": "St. Mary’s College RFC A",
+      "home_score": 17,
+      "away_score": 27,
+      "competition": "Leinster School Youth Boys U13 Prem",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-21T11:00:00+01:00",
       "home": "De La Marys",
       "away": "Sharks",
@@ -796,33 +823,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-22T10:00:00+01:00",
-      "home": "Coolmine",
-      "away": "St. Mary’s College RFC",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U14 Grading Grp4",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-22T10:00:00+01:00",
-      "home": "North Kildare",
-      "away": "St. Mary’s College RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-22T12:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "Terenure College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-22T12:00:00+01:00",
       "home": "SMTC",
       "away": "Suttonians",
@@ -847,15 +847,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Boys School Youth U16 Grading B",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-11-22T14:30:00+01:00",
-      "home": "Clontarf FC U20",
-      "away": "St. Mary’s College RFC U20",
-      "home_score": null,
-      "away_score": null,
-      "competition": "JP Fanagan (U20) - Premier 1",
       "involves_smc": false
     },
     {
@@ -1642,5 +1633,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-22T09:28:33+00:00"
+  "fetched_at": "2026-11-22T17:17:51+00:00"
 }

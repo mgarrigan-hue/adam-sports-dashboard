@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T09:28:32.829405+00:00",
+  "generated_at": "2026-11-22T17:17:50.529684+00:00",
   "source": "Jolpica F1 (Ergast successor)",
   "drivers": [
     {
@@ -8,7 +8,7 @@
       "code": "ANT",
       "nationality": "Italian",
       "team": "Mercedes",
-      "points": 390.0,
+      "points": 402.0,
       "wins": 9
     },
     {
@@ -17,44 +17,44 @@
       "code": "VER",
       "nationality": "Dutch",
       "team": "Red Bull",
-      "points": 279.0,
-      "wins": 3
+      "points": 304.0,
+      "wins": 4
     },
     {
       "rank": 3,
-      "driver": "George Russell",
-      "code": "RUS",
-      "nationality": "British",
-      "team": "Mercedes",
-      "points": 262.0,
-      "wins": 3
-    },
-    {
-      "rank": 4,
       "driver": "Lewis Hamilton",
       "code": "HAM",
       "nationality": "British",
       "team": "Ferrari",
-      "points": 261.0,
+      "points": 267.0,
       "wins": 1
+    },
+    {
+      "rank": 4,
+      "driver": "George Russell",
+      "code": "RUS",
+      "nationality": "British",
+      "team": "Mercedes",
+      "points": 264.0,
+      "wins": 3
     },
     {
       "rank": 5,
-      "driver": "Charles Leclerc",
-      "code": "LEC",
-      "nationality": "Monegasque",
-      "team": "Ferrari",
-      "points": 249.0,
-      "wins": 1
-    },
-    {
-      "rank": 6,
       "driver": "Lando Norris",
       "code": "NOR",
       "nationality": "British",
       "team": "McLaren",
-      "points": 246.0,
+      "points": 264.0,
       "wins": 3
+    },
+    {
+      "rank": 6,
+      "driver": "Charles Leclerc",
+      "code": "LEC",
+      "nationality": "Monegasque",
+      "team": "Ferrari",
+      "points": 250.0,
+      "wins": 1
     },
     {
       "rank": 7,
@@ -62,7 +62,7 @@
       "code": "PIA",
       "nationality": "Australian",
       "team": "McLaren",
-      "points": 152.0,
+      "points": 167.0,
       "wins": 0
     },
     {
@@ -89,7 +89,7 @@
       "code": "GAS",
       "nationality": "French",
       "team": "Alpine F1 Team",
-      "points": 42.0,
+      "points": 52.0,
       "wins": 0
     },
     {
@@ -107,7 +107,7 @@
       "code": "COL",
       "nationality": "Argentine",
       "team": "Alpine F1 Team",
-      "points": 27.0,
+      "points": 35.0,
       "wins": 0
     },
     {
@@ -139,6 +139,15 @@
     },
     {
       "rank": 16,
+      "driver": "Carlos Sainz",
+      "code": "SAI",
+      "nationality": "Spanish",
+      "team": "Williams",
+      "points": 11.0,
+      "wins": 0
+    },
+    {
+      "rank": 17,
       "driver": "Esteban Ocon",
       "code": "OCO",
       "nationality": "French",
@@ -147,20 +156,11 @@
       "wins": 0
     },
     {
-      "rank": 17,
+      "rank": 18,
       "driver": "Fernando Alonso",
       "code": "ALO",
       "nationality": "Spanish",
       "team": "Aston Martin",
-      "points": 7.0,
-      "wins": 0
-    },
-    {
-      "rank": 18,
-      "driver": "Carlos Sainz",
-      "code": "SAI",
-      "nationality": "Spanish",
-      "team": "Williams",
       "points": 7.0,
       "wins": 0
     },
@@ -233,28 +233,28 @@
       "rank": 1,
       "team": "Mercedes",
       "nationality": "German",
-      "points": 652.0,
+      "points": 666.0,
       "wins": 12
     },
     {
       "rank": 2,
       "team": "Ferrari",
       "nationality": "Italian",
-      "points": 510.0,
+      "points": 517.0,
       "wins": 2
     },
     {
       "rank": 3,
       "team": "Red Bull",
       "nationality": "Austrian",
-      "points": 415.0,
-      "wins": 3
+      "points": 440.0,
+      "wins": 4
     },
     {
       "rank": 4,
       "team": "McLaren",
       "nationality": "British",
-      "points": 398.0,
+      "points": 431.0,
       "wins": 3
     },
     {
@@ -268,7 +268,7 @@
       "rank": 6,
       "team": "Alpine F1 Team",
       "nationality": "French",
-      "points": 69.0,
+      "points": 87.0,
       "wins": 0
     },
     {
@@ -289,7 +289,7 @@
       "rank": 9,
       "team": "Williams",
       "nationality": "British",
-      "points": 12.0,
+      "points": 16.0,
       "wins": 0
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T09:28:31Z",
+  "generated_at": "2026-11-22T17:17:48Z",
   "season": "2026",
   "upcoming": [
     {
@@ -249,49 +249,49 @@
       "position": "1",
       "driver": "Andrea Kimi Antonelli",
       "team": "Mercedes",
-      "points": "390",
+      "points": "402",
       "wins": "9"
     },
     {
       "position": "2",
       "driver": "Max Verstappen",
       "team": "Red Bull",
-      "points": "279",
-      "wins": "3"
+      "points": "304",
+      "wins": "4"
     },
     {
       "position": "3",
-      "driver": "George Russell",
-      "team": "Mercedes",
-      "points": "262",
-      "wins": "3"
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": "267",
+      "wins": "1"
     },
     {
       "position": "4",
-      "driver": "Lewis Hamilton",
-      "team": "Ferrari",
-      "points": "261",
-      "wins": "1"
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "points": "264",
+      "wins": "3"
     },
     {
       "position": "5",
-      "driver": "Charles Leclerc",
-      "team": "Ferrari",
-      "points": "249",
-      "wins": "1"
+      "driver": "Lando Norris",
+      "team": "McLaren",
+      "points": "264",
+      "wins": "3"
     },
     {
       "position": "6",
-      "driver": "Lando Norris",
-      "team": "McLaren",
-      "points": "246",
-      "wins": "3"
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "points": "250",
+      "wins": "1"
     },
     {
       "position": "7",
       "driver": "Oscar Piastri",
       "team": "McLaren",
-      "points": "152",
+      "points": "167",
       "wins": "0"
     },
     {
@@ -312,7 +312,7 @@
       "position": "10",
       "driver": "Pierre Gasly",
       "team": "Alpine F1 Team",
-      "points": "42",
+      "points": "52",
       "wins": "0"
     },
     {
@@ -326,7 +326,7 @@
       "position": "12",
       "driver": "Franco Colapinto",
       "team": "Alpine F1 Team",
-      "points": "27",
+      "points": "35",
       "wins": "0"
     },
     {
@@ -352,22 +352,22 @@
     },
     {
       "position": "16",
+      "driver": "Carlos Sainz",
+      "team": "Williams",
+      "points": "11",
+      "wins": "0"
+    },
+    {
+      "position": "17",
       "driver": "Esteban Ocon",
       "team": "Haas F1 Team",
       "points": "7",
       "wins": "0"
     },
     {
-      "position": "17",
+      "position": "18",
       "driver": "Fernando Alonso",
       "team": "Aston Martin",
-      "points": "7",
-      "wins": "0"
-    },
-    {
-      "position": "18",
-      "driver": "Carlos Sainz",
-      "team": "Williams",
       "points": "7",
       "wins": "0"
     },
@@ -425,25 +425,25 @@
     {
       "position": "1",
       "team": "Mercedes",
-      "points": "652",
+      "points": "666",
       "wins": "12"
     },
     {
       "position": "2",
       "team": "Ferrari",
-      "points": "510",
+      "points": "517",
       "wins": "2"
     },
     {
       "position": "3",
       "team": "Red Bull",
-      "points": "415",
-      "wins": "3"
+      "points": "440",
+      "wins": "4"
     },
     {
       "position": "4",
       "team": "McLaren",
-      "points": "398",
+      "points": "431",
       "wins": "3"
     },
     {
@@ -455,7 +455,7 @@
     {
       "position": "6",
       "team": "Alpine F1 Team",
-      "points": "69",
+      "points": "87",
       "wins": "0"
     },
     {
@@ -473,7 +473,7 @@
     {
       "position": "9",
       "team": "Williams",
-      "points": "12",
+      "points": "16",
       "wins": "0"
     },
     {

@@ -850,6 +850,15 @@
       "involves_smc": false
     },
     {
+      "date": "2026-11-27T19:45:00+01:00",
+      "home": "OldPoint",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Girls Friendlies - U14",
+      "involves_smc": false
+    },
+    {
       "date": "2026-11-27T20:00:00+01:00",
       "home": "St. Mary’s College RFC 5",
       "away": "De La Salle Palmerston 3",
@@ -1624,5 +1633,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-24T01:07:39+00:00"
+  "fetched_at": "2026-11-24T11:18:56+00:00"
 }

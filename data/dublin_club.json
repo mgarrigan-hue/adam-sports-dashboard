@@ -420,7 +420,7 @@
       "home": "CYM 1",
       "away": "St. Mary’s College RFC 5",
       "home_score": 7,
-      "away_score": 69,
+      "away_score": 57,
       "competition": "Metro League - Division 7",
       "involves_smc": false
     },
@@ -841,15 +841,6 @@
   ],
   "fixtures": [
     {
-      "date": "2026-11-27T00:00:00+01:00",
-      "home": "St. Mary’s College RFC B",
-      "away": "Birr",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
-      "involves_smc": false
-    },
-    {
       "date": "2026-11-27T19:45:00+01:00",
       "home": "OldPoint",
       "away": "De La Marys",
@@ -929,6 +920,15 @@
       "away_score": null,
       "competition": "Leinster U17 Combined Cup",
       "involves_smc": true
+    },
+    {
+      "date": "2026-11-29T12:00:00+01:00",
+      "home": "St. Mary’s College RFC B",
+      "away": "Birr",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
+      "involves_smc": false
     },
     {
       "date": "2026-11-29T13:30:00+01:00",
@@ -1633,5 +1633,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-24T11:18:56+00:00"
+  "fetched_at": "2026-11-24T21:26:05+00:00"
 }

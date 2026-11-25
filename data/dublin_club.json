@@ -1085,15 +1085,6 @@
     },
     {
       "date": "2026-12-11T00:00:00+01:00",
-      "home": "Blackrock College RFC A",
-      "away": "St. Mary’s College RFC A",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-12-11T00:00:00+01:00",
       "home": "Arbo Rugby",
       "away": "De La Marys",
       "home_score": null,
@@ -1117,6 +1108,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Div 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-13T12:00:00+01:00",
+      "home": "Blackrock College RFC A",
+      "away": "St. Mary’s College RFC A",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Prem",
       "involves_smc": false
     },
     {
@@ -1633,5 +1633,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-25T14:46:24+00:00"
+  "fetched_at": "2026-11-25T23:26:45+00:00"
 }

@@ -1399,7 +1399,7 @@
       "involves_smc": false
     },
     {
-      "date": "2027-02-05T00:00:00+01:00",
+      "date": "2027-02-06T11:00:00+01:00",
       "home": "De La Marys",
       "away": "OldPoint",
       "home_score": null,
@@ -1633,5 +1633,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-26T05:17:09+00:00"
+  "fetched_at": "2026-11-26T15:33:12+00:00"
 }

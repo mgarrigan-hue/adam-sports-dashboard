@@ -959,6 +959,15 @@
     },
     {
       "date": "2026-12-04T00:00:00+01:00",
+      "home": "Kilkenny",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youth U18 Div 2",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-04T00:00:00+01:00",
       "home": "St. Mary’s College RFC A",
       "away": "BW Rangers A",
       "home_score": null,
@@ -1085,6 +1094,15 @@
     },
     {
       "date": "2026-12-11T00:00:00+01:00",
+      "home": "Greystones RFC",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youth U18 Div 2",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-11T00:00:00+01:00",
       "home": "Arbo Rugby",
       "away": "De La Marys",
       "home_score": null,
@@ -1171,6 +1189,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Boys School Youth U16 Grading B",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-08T00:00:00+01:00",
+      "home": "De La Marys",
+      "away": "Navan RFC",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youth U18 Div 2",
       "involves_smc": false
     },
     {
@@ -1333,6 +1360,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Girls U14 Div 3",
+      "involves_smc": false
+    },
+    {
+      "date": "2027-01-23T00:00:00+01:00",
+      "home": "Dundalk",
+      "away": "De La Marys",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster Girls Youth U18 Div 2",
       "involves_smc": false
     },
     {
@@ -1633,5 +1669,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-26T15:33:12+00:00"
+  "fetched_at": "2026-11-27T00:14:26+00:00"
 }

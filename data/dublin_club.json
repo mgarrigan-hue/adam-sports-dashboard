@@ -922,7 +922,7 @@
       "involves_smc": true
     },
     {
-      "date": "2026-11-29T12:00:00+01:00",
+      "date": "2026-11-29T12:30:00+01:00",
       "home": "St. Mary’s College RFC B",
       "away": "Birr",
       "home_score": null,
@@ -973,15 +973,6 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster School Youth Boys U13 Prem",
-      "involves_smc": false
-    },
-    {
-      "date": "2026-12-04T00:00:00+01:00",
-      "home": "Clane",
-      "away": "St. Mary’s College RFC B",
-      "home_score": null,
-      "away_score": null,
-      "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
     },
     {
@@ -1063,6 +1054,15 @@
       "home_score": null,
       "away_score": null,
       "competition": "Leinster Boys School Youth U16 Grading B",
+      "involves_smc": false
+    },
+    {
+      "date": "2026-12-06T10:00:00+01:00",
+      "home": "Clane",
+      "away": "St. Mary’s College RFC B",
+      "home_score": null,
+      "away_score": null,
+      "competition": "Leinster School Youth Boys U13 Div 3",
       "involves_smc": false
     },
     {
@@ -1669,5 +1669,5 @@
       "involves_smc": false
     }
   ],
-  "fetched_at": "2026-11-27T08:54:05+00:00"
+  "fetched_at": "2026-11-27T18:38:28+00:00"
 }
